@@ -4,6 +4,18 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    
+    <!--<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>-->
+    
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <AssemblyName>Desert Rage</AssemblyName>
     <Authors>Татаринцев Александр</Authors>
@@ -13,8 +25,16 @@
     <FileVersion>1.0.1.0</FileVersion>
     <NeutralLanguage>ru</NeutralLanguage>
     <PackageIcon>favicon.ico</PackageIcon>
+    <StartupObject>WpfApp1.App</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+    <Page Remove="bin\**" />
+  </ItemGroup>
+  
   <ItemGroup>
     <None Remove=".bmp" />
     <None Remove="AbilsButton.png" />
@@ -139,6 +159,7 @@
     <None Remove="PersonHurts1.png" />
     <None Remove="Pharaoh.png" />
     <None Remove="PharaohModel.png" />
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Remove="Quake.png" />
     <None Remove="Regen.png" />
     <None Remove="Remove.png" />
@@ -149,6 +170,7 @@
     <None Remove="Resources\Images\Autorize\Adventures3.png" />
     <None Remove="Resources\Images\Autorize\Adventures4.png" />
     <None Remove="Resources\Images\Autorize\Adventures5.png" />
+    <None Remove="Resources\Images\Autorize\IconShocked3.ico" />
     <None Remove="Resources\Images\Autorize\Skips1.png" />
     <None Remove="Resources\Images\Autorize\Skips2.png" />
     <None Remove="Resources\Images\Autorize\Wanted.png" />
@@ -845,6 +867,7 @@
     <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks1.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks2.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info3\Help1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info3\Help2.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction1.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction2.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder1.png" />
@@ -990,6 +1013,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\Autorize\IconShocked3.ico" />
     <Resource Include="Resources\Images\Fight\Options\GenocideAfterImg.png" />
     <Resource Include="Resources\Images\Fight\Options\GenocideBeforeImg.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
@@ -1244,7 +1268,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <EmbeddedResource Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2">
+      <GeneratePathProperty>false</GeneratePathProperty>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -1727,6 +1757,7 @@
     <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks2.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info3\Help1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info3\Help2.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction2.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder1.png" />
@@ -2630,5 +2661,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
+  
+  <Target Name="AfterResolveReferences">
+    <ItemGroup>
+      <EmbeddedResource Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)' == '.dll'">
+        <LogicalName>%(ReferenceCopyLocalPaths.DestinationSubDirectory)%(ReferenceCopyLocalPaths.Filename)%(ReferenceCopyLocalPaths.Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
 </Project>

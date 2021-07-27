@@ -21,6 +21,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Reflection;
 
 namespace WpfApp1
 {
@@ -1555,7 +1556,11 @@ namespace WpfApp1
 
             //[EN] Publishing local connection
             //[RU] Публикация с локальным подключением
-            return new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = "+ Environment.CurrentDirectory + @"\Resources\Database\DesertRageGame.mdf; Integrated Security = True");
+            //return new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = "+ Environment.CurrentDirectory + @"\Resources\Database\DesertRageGame.mdf; Integrated Security = True");
+
+            //[EN] Publishing experimental
+            //[RU] Публикация-эксперимент
+            return new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\Database\DesertRageGame.mdf; Integrated Security = True");
         }
         private void NewStoredProcedureBuild(in String ProcedureName) { Cmd = new SqlCommand(ProcedureName, Con) { CommandType = CommandType.StoredProcedure }; }
         private void NewExecuteNonQueryBuild()
@@ -2469,7 +2474,7 @@ namespace WpfApp1
         {
             //[EN] Adaptate mechanics, sreen elements formula: CurrentScreenSize/Recomended(1920X1080)
             //[RU] Механика адаптации, формула расположения элементов: ТекущееРазрешениеЭкрана/Рекомендуемое(1920Х1080)
-            Button[] BtnWFM = { CraftSwitch, AddProfile, DeleteProfile };
+            Button[] BtnWFM = { CraftSwitch, AddProfile, DeleteProfile, AutoTurn };
             FullMediaShrink(Numb(1920*Adoptation.WidthAdBack), Numb(1080 * Adoptation.HeightAdBack));
             Label[] LabMS = { CurrentPlayer, Player1, Player2, Player3, Player4, Player5, Player6, Lab1, TimerFlees, TimerFlees1, CureHealTxt, RecoverAPTxt, BuffUpTxt, DamageFoe, DamageFoe2, DamageFoe3, Lab2, BattleText1, BattleText2, BattleText3, BattleText4, BattleText5, BattleText6, HPtext, APtext, LevelText, HP, AP, HPenemy, ItemText, ATK, ExpText, AfterLevel, AfterName, AfterStatus, NewLevelGet, BeforeParams, BeforeHPtxt, BeforeAPtxt, BeforeHP, BeforeAP, BeforeAttack, BeforeDefence, BeforeAgility, BeforeSpecial, BeforeATK, BeforeDEF, BeforeAG, BeforeSP, AfterParams, AfterHPtxt, AfterAPtxt, AfterHP, AfterAP, AfterAttack, AfterDefence, AfterAgility, AfterSpecial, AfterATK, AfterDEF, AfterAG, AfterSP, AddHP, AddAP, AddATK, AddDEF, AddAG, AddSP, AfterBattleGet, MaterialsGet, MaterialsAdd, MaterialsOnHand, ItemsGet, ItemsGetSlot1, Name0, Level0, StatusP, HPtext1, APtext1, HP1, AP1, Exp1, TimeRecordText, Params, ParamsATK, ParamsDEF, ParamsAG, ParamsSP, ATK1, AddATK1, DEF1, AddDEF1, AG1, SP1, EquipText, EquipH, EquipB, EquipL, EquipD, CostText, AbilsCost, FightSkills, MiscSkills, BandageText, HerbsText, EtherText, Ether2OutText, SleepBagText, ElixirText, AntidoteText, FusedText, CountText, MaterialsCraft, CrftAntidoteCostTxt, CrftBandageCostTxt, CrftEtherCostTxt, CrftFusedCostTxt, CrftHerbsCostTxt, CrftEther2CostTxt, CrftBedbagCostTxt, CrftElixirCostTxt, Task1, Task2, Task3, Task4, InfoHeaderText1, InfoHeaderText2, InfoHeaderText3, InfoIndex, DescribeHeader, Describe1, Describe2, MusicText, MusicPercent, SoundsText, SoundsPercent, NoiseText, NoisePercent, BrightnessText, BrightnessPercent, GameSpeedText, GameSpeedX, FoeAtk1, FoeDef1, FoeSpd1, FoeSpc1, FoeWkn1, FoeNam1, FoeDsc1, FoeAtk2, FoeDef2, FoeSpd2, FoeSpc2, FoeWkn2, FoeNam2, FoeDsc2, FoeAtk3, FoeDef3, FoeSpd3, FoeSpc3, FoeWkn3, FoeNam3, FoeDsc3, FoeAtk4, FoeDef4, FoeSpd4, FoeSpc4, FoeWkn4, FoeNam4, FoeDsc4, FoeAtk5, FoeDef5, FoeSpd5, FoeSpc5, FoeWkn5, FoeNam5, FoeDsc5, FoeAtk6, FoeDef6, FoeSpd6, FoeSpc6, FoeWkn6, FoeNam6, FoeDsc6, FoeAtk7, FoeDef7, FoeSpd7, FoeSpc7, FoeWkn7, FoeNam7, FoeDsc7, FoeAtk8, FoeDef8, FoeSpd8, FoeSpc8, FoeWkn8, FoeNam8, FoeDsc8, FoeAtk9, FoeDef9, FoeSpd9, FoeSpc9, FoeWkn9, FoeNam9, FoeDsc9, FoeAtk10, FoeDef10, FoeSpd10, FoeSpc10, FoeWkn10, FoeNam10, FoeDsc10, FoeAtk11, FoeDef11, FoeSpd11, FoeSpc11, FoeWkn11, FoeNam11, FoeDsc11, FoeAtk12, FoeDef12, FoeSpd12, FoeSpc12, FoeWkn12, FoeNam12, FoeDsc12, FoeAtk13, FoeDef13, FoeSpd13, FoeSpc13, FoeWkn13, FoeNam13, FoeDsc13, FoeAtk14, FoeDef14, FoeSpd14, FoeSpc14, FoeWkn14, FoeNam14, FoeDsc14, FoeAtk15, FoeDef15, FoeSpd15, FoeSpc15, FoeWkn15, FoeNam15, FoeDsc15, FoeAtk16, FoeDef16, FoeSpd16, FoeSpc16, FoeWkn16, FoeNam16, FoeDsc16, Task5, CrftCraftPerfbootsCostTxt };
             TextBlock[] blocks = { InfoText1, InfoText2, InfoText3 };
@@ -2499,8 +2504,10 @@ namespace WpfApp1
         //[RU] Получение коэффициентов
         private void CheckScreenProperties()
         {
-            Adoptation.HeightAdBack = SystemParameters.VirtualScreenHeight / 1080;
-            Adoptation.WidthAdBack = SystemParameters.VirtualScreenWidth / 1920;
+            Adoptation.WidthAdBack = SystemParameters.PrimaryScreenWidth / 1920;
+            Adoptation.HeightAdBack = SystemParameters.PrimaryScreenHeight / 1080;
+            //Adoptation.HeightAdBack = SystemParameters.VirtualScreenHeight / 1080;
+            //Adoptation.WidthAdBack = SystemParameters.VirtualScreenWidth / 1920;
             Adaptate();
         }
         //[EN] Set events on triggers
@@ -3226,7 +3233,7 @@ namespace WpfApp1
                 case 150: if (DataBaseMSsql.CurrentLogin != "????") { SaveGame(); SEF(Path.GameSounds.ControlSave); } break;
                 case 151: Super1.CurrentHP = Super1.MaxHP; Dj(Path.GameNoises.Cure2); break;
                 case 152: Super1.CurrentAP = Super1.MaxAP; Dj(Path.GameNoises.ApUp); break;
-                case 170: if (TRout.IsEnabled) TimerOff(ref TRout); FleeTime = new Byte[] { 2, 30 }; TimerFlees.Content = "2:30"; AnyHideX(Img2, TimerFlees); Super1.MenuTask++; MediaShowAdvanced(TheEnd, Ura(Path.CutScene.Ending), new TimeSpan(0, 0, 0, 0, 0)); AnyShow(Skip1); HeyPlaySomething(Path.GameMusic.PutTheEnd); Img1.Source = Bmper(Path.Backgrounds.Normal); break;
+                case 170: if (TRout.IsEnabled) TimerOff(ref TRout); FleeTime = new Byte[] { 2, 30 }; TimerFlees.Content = "2:30"; AnyHideX(Img2, TimerFlees, Img1); Super1.MenuTask++; MediaShowAdvanced(TheEnd, Ura(Path.CutScene.Ending), new TimeSpan(0, 0, 0, 0, 0)); AnyShow(Skip1); HeyPlaySomething(Path.GameMusic.PutTheEnd); Img1.Source = Bmper(Path.Backgrounds.Normal); break;
                 case 191: WhatsGoingOn(200); LetsBattle(); break;
                 case 192: ChangeMapToVoid(192); PlayerSetLocation(1, 57); break;
                 default: break;
@@ -3303,12 +3310,12 @@ namespace WpfApp1
                         default: break;
                     }
                 }
-                if (e.Key == Key.LeftCtrl) { AnyHideX(Img2, Img1); StatusCalculate(); AnyShow(GameMenu); }
+                if (e.Key == Key.LeftCtrl) { AnyHideX(Img2); StatusCalculate(); AnyShow(GameMenu); }
                 if (e.Key == Key.I) { Bestiary(); return; }
             }
             else if (SelectMenuFight.IsEnabled || SelectMenuSkills.IsEnabled) { if (e.Key == Key.W || e.Key == Key.A || e.Key == Key.S || e.Key == Key.D) SelectWithKeyBoard(e.Key == Key.W || e.Key == Key.A); }
-            else if (e.Key == Key.LeftCtrl) { if (BestiaryImg.IsEnabled || GameMenu.IsEnabled) { HideMenus(); AnyShow(Img2); } }
-            else if (e.Key == Key.I) { if (BestiaryImg.IsEnabled || GameMenu.IsEnabled) { HideMenus(); AnyShow(Img2); } }
+            else if (e.Key == Key.LeftCtrl) { if (BestiaryImg.IsEnabled || GameMenu.IsEnabled) { HideMenus(); if (Img1.IsEnabled && !Med2.IsEnabled) AnyShow(Img2); } }
+            else if (e.Key == Key.I) { if (BestiaryImg.IsEnabled || GameMenu.IsEnabled) { HideMenus(); if (Img1.IsEnabled && !Med2.IsEnabled) AnyShow(Img2); } }
             
         }
 
@@ -3317,7 +3324,6 @@ namespace WpfApp1
         private void HideMenus() {
             AnyHideX(BestiaryImg, GameMenu);
             MegaHide2();
-            AnyShow(Img1);
         }
         private void PauseGame()
         {
@@ -3511,7 +3517,7 @@ namespace WpfApp1
             speed = 0;
             Lab2.Foreground = Brushes.Yellow;
             AnyShow(BattleStatus);
-            AnyHideX(Threasure1, Med2, Img1, Img2, PharaohAppears, SaveProgress, JailImg1, JailImg2, JailImg3, JailImg5, JailImg6, JailImg7, Boulder1, Ancient, Warrior, FinalAppears);
+            AnyHideX(Threasure1, Med2, Img2, PharaohAppears, SaveProgress, JailImg1, JailImg2, JailImg3, JailImg5, JailImg6, JailImg7, Boulder1, Ancient, Warrior, FinalAppears);
             Map1ModelsAllTurnOff1();
             ChestsAndTablesAllTurnOff1();
             AnyShowX(Img3, Img4);
@@ -3689,6 +3695,7 @@ namespace WpfApp1
         }
         private void Med2_MediaEnded(object sender, RoutedEventArgs e)
         {
+            AnyHide(Img1);
             switch (Sets.SpecialBattle)
             {
                 case 0: RegularBattle(); Laugh(); break;
@@ -4189,6 +4196,7 @@ namespace WpfApp1
             if (CurrentLocation == 0) Map1EnableModels();
             if (CheckMapIfModelExists(7)) AnyShow(Boulder1);
             ImgShowX(new Image[] { Threasure1, Img2, SaveProgress });
+            AnyShow(Img1);
             AnyHideX(Win);
             Win.Position = new TimeSpan(0, 0, 0, 0, 0);
             HeyPlaySomething(music[CurrentLocation]);
@@ -4226,8 +4234,8 @@ namespace WpfApp1
                 switch (Sets.SpecialBattle)
                 {
                     case 1: case 2: case 3: MediaShow(TheEnd); AnyShow(Skip1); Img1.Source = Bmper(Path.Backgrounds.Normal); break;
-                    case 200: MediaShow(Win); AnyHide(Img1); break;
-                    default: MediaShow(Win); AnyHide(Img1); break;
+                    case 200: MediaShow(Win); break;
+                    default: MediaShow(Win); break;
                 }
                 Sets.SpecialBattle = 0;
             }

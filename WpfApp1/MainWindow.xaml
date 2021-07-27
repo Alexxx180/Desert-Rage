@@ -5,9 +5,9 @@
         xmlns:mc="http:f//schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         Title="Desert rage" KeyDown="Window_KeyDown" Height="1080" Width="1920" ResizeMode="NoResize" WindowStyle="None" WindowState="Maximized" KeyUp="Form1_KeyUp">
-    <Window.Resources>
+    <!--<Window.Resources>
         <ResourceDictionary Source="/PresentationFramework.Aero,Version=3.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/Aero.NormalColor.xaml" />
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid x:Name="AllGameAlignment">
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="*"/>
@@ -226,7 +226,7 @@
         <Label x:Name="TimerFlees" Content="2:30" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" FontFamily="Bauhaus 93" FontSize="72" Panel.ZIndex="7" Grid.Column="53" Grid.Row="32" Visibility="Hidden" Grid.ColumnSpan="7" Grid.RowSpan="4" BorderBrush="#FF00DCFF" BorderThickness="8,8,8,8" Foreground="White" />
 
         <!--Модели на карте-->
-        <Image x:Name="Img1" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/Images/Locations/Regular/New_game_show.jpg" Grid.Column="0" Grid.Row="0" Visibility="Hidden" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="3"/>
+        <Image x:Name="Img1" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/Images/Locations/Regular/New_game_show.jpg" Grid.Column="0" Grid.Row="0" Visibility="Hidden" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="3" IsEnabled="False"/>
         <ProgressBar x:Name="HPhelper" Grid.Row="33" Grid.Column="17" Grid.ColumnSpan="3" Value="{Binding ElementName=HPbar1, Path=Value}" Minimum="0" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Visibility="Hidden" Panel.ZIndex="5">
             <ProgressBar.Foreground>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">

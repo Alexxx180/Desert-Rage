@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Произошла проблема" Height="225" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+        Title="Произошла проблема" Height="270" Width="480" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <!--Icon="/Resources/Images/Autorize/IconShocked3.ico"-->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
             <RowDefinition Height="0.15*"></RowDefinition>
             <RowDefinition Height="0.05*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Image x:Name="Icon" Grid.Row="2" Source="/Resources/Images/Autorize/IconShocked3.ico" Grid.Column="1" Stretch="Fill"></Image>
+        <Image x:Name="Icon1" Grid.Row="2" Source="/Resources/Images/Autorize/IconShocked3.ico" Grid.Column="1" Stretch="Fill"></Image>
         <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Label FontWeight="Bold" Background="#FFFFBD30" Content="English" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" Padding="2,2,2,2"></Label>
             <TextBlock x:Name="EN"  TextWrapping="Wrap" TextAlignment="Justify" Padding="5">
@@ -37,7 +37,7 @@
                 <Label FontWeight="Bold" Background="#FFFFBD30" Content="Полное сообщение" Grid.Row="1" Grid.Column="3" VerticalAlignment="Stretch" Padding="2,2,2,2"  HorizontalAlignment="Stretch" DockPanel.Dock="Right"></Label>
                 <Label FontWeight="Bold" Background="#FFFFBD30" Content="Full Message" Grid.Row="1" Grid.Column="3" VerticalAlignment="Stretch" Padding="2,2,2,2" HorizontalAlignment="Stretch" DockPanel.Dock="Left"></Label>
             </DockPanel>
-            <TextBox x:Name="Problem" TextWrapping="Wrap" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+            <TextBox x:Name="Problem" TextWrapping="Wrap" HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
         </StackPanel>
         <Button Content="OK" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" Click="Button_Click" Grid.Row="4" Grid.Column="4"></Button>
     </Grid>
