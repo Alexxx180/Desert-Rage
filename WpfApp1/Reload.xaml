@@ -37,7 +37,9 @@
                 <Label FontWeight="Bold" Background="#FFFFBD30" Content="Полное сообщение" Grid.Row="1" Grid.Column="3" VerticalAlignment="Stretch" Padding="2,2,2,2"  HorizontalAlignment="Stretch" DockPanel.Dock="Right"></Label>
                 <Label FontWeight="Bold" Background="#FFFFBD30" Content="Full Message" Grid.Row="1" Grid.Column="3" VerticalAlignment="Stretch" Padding="2,2,2,2" HorizontalAlignment="Stretch" DockPanel.Dock="Left"></Label>
             </DockPanel>
-            <TextBox x:Name="Problem" TextWrapping="Wrap" HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+            <ScrollViewer>
+                <TextBox x:Name="Problem" TextWrapping="Wrap" HorizontalScrollBarVisibility="Visible" IsReadOnly="False"/>
+            </ScrollViewer>
         </StackPanel>
         <Button Content="OK" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" Click="Button_Click" Grid.Row="4" Grid.Column="4"></Button>
     </Grid>

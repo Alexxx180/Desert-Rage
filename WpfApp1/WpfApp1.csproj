@@ -28,6 +28,10 @@
     <StartupObject>WpfApp1.App</StartupObject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="bin\**" />
     <EmbeddedResource Remove="bin\**" />
@@ -36,133 +40,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Remove=".bmp" />
-    <None Remove="AbilsButton.png" />
-    <None Remove="AbsoluteBlack.jpg" />
-    <None Remove="ActiveTask.png" />
-    <None Remove="Adventures3.png" />
-    <None Remove="Adventures4.png" />
-    <None Remove="AG.png" />
-    <None Remove="AG2.png" />
-    <None Remove="AncientArtifact.png" />
-    <None Remove="AncientArtifact2.png" />
-    <None Remove="AncientKnife.png" />
-    <None Remove="AncientModel1.png" />
-    <None Remove="AntidoteItem.png" />
-    <None Remove="ATK.png" />
-    <None Remove="ATK2.png" />
-    <None Remove="BackImg.png" />
-    <None Remove="BackToAdventure.png" />
-    <None Remove="BackToAdventure2.png" />
-    <None Remove="BandageBootsItems.png" />
-    <None Remove="BandageItem.png" />
-    <None Remove="Battle1.bmp" />
-    <None Remove="Battle3.bmp" />
-    <None Remove="Battle3.jpg" />
-    <None Remove="Bestiary.jpg" />
-    <None Remove="BlackSkinItems.png" />
-    <None Remove="Bones.png" />
-    <None Remove="Bones1.png" />
-    <None Remove="BonesDied.ogg" />
-    <None Remove="Boots.png" />
-    <None Remove="Boots2.png" />
-    <None Remove="Boulder.png" />
-    <None Remove="Bridge.png" />
-    <None Remove="Cancel.png" />
-    <None Remove="CancelImg.png" />
-    <None Remove="ChestClosed%28ver1%29.png" />
-    <None Remove="ChestClosed%28ver2%29.png" />
-    <None Remove="ChestOpened%28ver1%29.png" />
-    <None Remove="CompletedTask.png" />
-    <None Remove="Confirm.png" />
-    <None Remove="Control.png" />
-    <None Remove="CoolT-shirt.png" />
-    <None Remove="Cure2.png" />
-    <None Remove="CureMenu.png" />
-    <None Remove="DEF.png" />
-    <None Remove="DEF2.png" />
-    <None Remove="Defence.png" />
-    <None Remove="DefenceBeforeImg.png" />
-    <None Remove="DefenceUP.png" />
-    <None Remove="EagleWearsItems.png" />
-    <None Remove="ElixirItem.png" />
-    <None Remove="EnemyCursor.png" />
-    <None Remove="Equip.png" />
-    <None Remove="EquipButton.png" />
-    <None Remove="EquipButton2.png" />
-    <None Remove="EscapeBeforeImg.png" />
-    <None Remove="Ether2Item.png" />
-    <None Remove="EtherItem.png" />
-    <None Remove="FightBeforeImg.png" />
-    <None Remove="FinalBoss.png" />
-    <None Remove="FusedItem.png" />
-    <None Remove="GetItemsArmor1.png" />
-    <None Remove="GetItemsArmor2.png" />
-    <None Remove="GetItemsCustomBoots1.png" />
-    <None Remove="GetItemsCustomBoots2.png" />
-    <None Remove="GetItemsCustomPants1.png" />
-    <None Remove="GetItemsCustomPants2.png" />
-    <None Remove="GetItemsCustomPants4.png" />
-    <None Remove="GetItemsCustomWeapon1.png" />
-    <None Remove="GetItemsCustomWeapon2.png" />
-    <None Remove="Ghoul1.png" />
-    <None Remove="GrimReaper1.png" />
-    <None Remove="Hands.png" />
-    <None Remove="Hands2.png" />
-    <None Remove="HealMenu.png" />
-    <None Remove="HerbsItem.png" />
-    <None Remove="IconDefence1.png" />
-    <None Remove="IconPoisoned.png" />
-    <None Remove="Imp1.png" />
-    <None Remove="InfoButton.png" />
-    <None Remove="Introduction1.png" />
-    <None Remove="ItemsBeforeImg.png" />
-    <None Remove="ItemsButton.png" />
-    <None Remove="ItemsCount.png" />
-    <None Remove="Jacket.png" />
-    <None Remove="Jacket2.png" />
-    <None Remove="Jail1.png" />
-    <None Remove="Key.png" />
-    <None Remove="KillerMole1.png" />
-    <None Remove="KnucledusterItem.png" />
-    <None Remove="Learn.png" />
-    <None Remove="LegendSword.png" />
-    <None Remove="Legs.png" />
-    <None Remove="Legs2.png" />
-    <None Remove="LevelUpMenu.jpg" />
-    <None Remove="LeverOff.png" />
-    <None Remove="Loc1_1.jpg" />
-    <None Remove="Loc1_2.jpg" />
-    <None Remove="Loc2.jpg" />
-    <None Remove="Loc2_1.png" />
-    <None Remove="Loc3.jpg" />
-    <None Remove="Lock.png" />
-    <None Remove="Master1.png" />
-    <None Remove="MasterOfAll1.png" />
-    <None Remove="Materials.png" />
-    <None Remove="Menu.bmp" />
-    <None Remove="Menu2.png" />
-    <None Remove="Menu3.png" />
-    <None Remove="Mummy.png" />
-    <None Remove="Mummy1.png" />
-    <None Remove="New_game_show.heif" />
-    <None Remove="New_game_show.jpg" />
-    <None Remove="New_game_show.svg" />
-    <None Remove="Pain1.png" />
-    <None Remove="pers5.png" />
-    <None Remove="person1.png" />
-    <None Remove="person2.png" />
-    <None Remove="person3.png" />
-    <None Remove="person4.png" />
-    <None Remove="person5.png" />
-    <None Remove="person6.png" />
-    <None Remove="PersonHurts1.png" />
-    <None Remove="Pharaoh.png" />
-    <None Remove="PharaohModel.png" />
     <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Remove="Quake.png" />
-    <None Remove="Regen.png" />
-    <None Remove="Remove.png" />
     <None Remove="Resources\Database\DesertRageGame.mdf" />
     <None Remove="Resources\Database\DesertRageGame_log.ldf" />
     <None Remove="Resources\Images\Autorize\Adventures1.png" />
@@ -376,6 +254,7 @@
     <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon9.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Static\Defence.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Static\Poison.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\PoisonBubble.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Static\Sam.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Static\Usual.png" />
     <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Escape\Escape1.png" />
@@ -658,6 +537,7 @@
     <None Remove="Resources\Images\Fight\Enemies\Enemies\Worm.png" />
     <None Remove="Resources\Images\Fight\Enemies\Enemies\Zombie.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Bones1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Ghoul1.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\GrimReaper1.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Imp1.png" />
@@ -669,10 +549,12 @@
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Vulture1.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Worm1.png" />
     <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Zombie1.png" />
+    <None Remove="Resources\Images\Fight\Misc\BuffUp.png" />
     <None Remove="Resources\Images\Fight\Misc\Confirm.png" />
     <None Remove="Resources\Images\Fight\Misc\ItemsCount.png" />
     <None Remove="Resources\Images\Fight\Misc\TableBorder1.png" />
     <None Remove="Resources\Images\Fight\Misc\TimeTurn.png" />
+    <None Remove="Resources\Images\Fight\Misc\ToughUp.png" />
     <None Remove="Resources\Images\Fight\Options\BackImg.png" />
     <None Remove="Resources\Images\Fight\Options\BackToAdventure.png" />
     <None Remove="Resources\Images\Fight\Options\BackToAdventure2.png" />
@@ -736,6 +618,8 @@
     <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon3.png" />
     <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon4.png" />
     <None Remove="Resources\Images\Locations\Messages\Pain\Pain1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Pain\Pain2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Pain\Pain3.png" />
     <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsElixir.png" />
     <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsEther2.png" />
     <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsHerbs.png" />
@@ -1014,8 +898,14 @@
 
   <ItemGroup>
     <Resource Include="Resources\Images\Autorize\IconShocked3.ico" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\PoisonBubble.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
+    <Resource Include="Resources\Images\Fight\Misc\BuffUp.png" />
+    <Resource Include="Resources\Images\Fight\Misc\ToughUp.png" />
     <Resource Include="Resources\Images\Fight\Options\GenocideAfterImg.png" />
     <Resource Include="Resources\Images\Fight\Options\GenocideBeforeImg.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Pain\Pain2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Pain\Pain3.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click2.png" />
   </ItemGroup>
@@ -1841,447 +1731,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Ambushed.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ambushed.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ambushed.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ambushed2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ambushed2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ambushed2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Battle_theme1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Battle_theme2.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Battle_theme2.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Battle_theme2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Begin1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Begin2.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Begin2.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Begin2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="BonesDied.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="BonesDied.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ChestOpened.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ChestOpened1.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ChestOpened1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ChestOpened1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Cure.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Cure.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Cure.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CureIcon2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CureIcon2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CureIcon2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CureIcon2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePerson2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePerson2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePerson2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePerson2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonIcon.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonIcon.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonIcon.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonIcon.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonPerson2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonPerson2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonPerson2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CurePoisonPerson2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DefeatPharaoh.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DefeatPharaoh.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DefeatPharaoh.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Defence.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Defence.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Defence.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Desert1.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Desert1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Desert1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DoorOpened.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DoorOpened1.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DoorOpened1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="DoorOpened1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Escape2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Final1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="GameOver.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="GameOver.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="GameOver.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack3.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack3.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack3.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack3.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="HandAttack3.mpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Heal.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Heal.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Heal.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="History_showdown.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="History_showdown.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="History_showdown.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Horror.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Horror.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Horror.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconEscape1.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconEscape1.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconEscape1.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconItemUsed.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconItemUsed.m4v">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="IconItemUsed.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconItemUsed.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconRage1.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconRage1.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconRage1.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconRage1.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconSuper2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconSuper2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconSuper2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconSuper2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconWhip.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconWhip.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconWhip.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="IconWhip.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Intro1.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Intro1.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Intro1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsClose.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsClose.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsClose.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsOpen.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsOpen.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsOpen.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsUsed.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsUsed.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemsUsed.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemUsed2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemUsed2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemUsed2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ItemUsed2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUP.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUP.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUP.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUp.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUP.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUp.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="LevelUp.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Main_theme.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Main_theme.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="MummyDied.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="MummyDied.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="MummyDied.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonSuper2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonSuper2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonSuper2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonSuper2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonWhip2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonWhip2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonWhip2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="PersonWhip2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pharaoh2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Punch.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Punch.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Punch.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\CutScenes\BattleEnds\GameOver.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -2333,58 +1782,67 @@
     <None Update="Resources\CutScenes\ChaptersIntroduction\Prologue.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\AncientPyramid_theme.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_Battle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\BattleTheme1.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_Boss.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\BattleTheme2.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_Calm.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\BattleTheme3.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_Danger.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\BossBattle1.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_End.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\BossBattle2.mp3">
+    <None Update="Resources\OST\Music\AncientPyramid_Secret.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\ChFin1.mp3">
+    <None Update="Resources\OST\Music\FireTemple_Battle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\ChFin2.mp3">
+    <None Update="Resources\OST\Music\FireTemple_Boss.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\ChFin3.mp3">
+    <None Update="Resources\OST\Music\FireTemple_Calm.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\Ending.mp3">
+    <None Update="Resources\OST\Music\FireTemple_Danger.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\FinalBoss_theme.mp3">
+    <None Update="Resources\OST\Music\FireTemple_End.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\FireTemple_theme.mp3">
+    <None Update="Resources\OST\Music\MainTitle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\GetAway.mp3">
+    <None Update="Resources\OST\Music\TheEnd.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\Intro.mp3">
+    <None Update="Resources\OST\Music\TheGreatEscape.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\Main_theme.mp3">
+    <None Update="Resources\OST\Music\ThePrologue.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\SecretBossFight.mp3">
+    <None Update="Resources\OST\Music\TheTitles.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\Titres.mp3">
+    <None Update="Resources\OST\Music\WaterTemple_Battle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\OST\Music\WaterTemple_theme.mp3">
+    <None Update="Resources\OST\Music\WaterTemple_Boss.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Calm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Danger.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_End.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\OST\Noises\Ambushed.mp3">
@@ -2537,129 +1995,10 @@
     <None Update="Resources\OST\Sounds\ZombieDied.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="SpiderDied.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SpiderDied.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="SpiderDied.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Super.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Super.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Super.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Target.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Target.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Target.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres3.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres3.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Titres3.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Torch.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Torch.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Torch.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchIcon.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchIcon.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchIcon.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchIcon.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchPerson2.avi">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchPerson2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchPerson2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TorchPerson2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Whip.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Whip.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Whip.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Win.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Win.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Win.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="YouWon.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="YouWon.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="YouWon.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ZombieDied.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ZombieDied.ogg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="ZombieDied.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="СurePerson2.m4v">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="СurePerson2.mov">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="СurePerson2.mp4">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\OST\Music\" />
   </ItemGroup>
   
   <Target Name="AfterResolveReferences">

@@ -25,5 +25,8 @@
     <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

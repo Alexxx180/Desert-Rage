@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace WpfApp1
 {
@@ -17,6 +7,22 @@ namespace WpfApp1
     /// </summary>
     public partial class Reload : Window
     {
+        public Reload(int code, string problem)
+        {
+            string[] enText = {
+                "Encountered with connection problem. Contact with administrator.",
+                "The video got some Exception! Contact with administrator.",
+
+            };
+            string[] ruText = {
+                "Столкнулись с проблемой подключения. Свяжитесь с администратором.",
+                "Возникла ошибка воспроизведения! Свяжитесь с администратором."
+            };
+            InitializeComponent();
+            EN.Text = enText[code];
+            RU.Text = ruText[code];
+            Problem.Text = problem;
+        }
         public Reload(string en, string ru, string problem)
         {
             InitializeComponent();
