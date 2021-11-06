@@ -1,6 +1,6 @@
 ﻿# Основы работы с репозиториями
 
-[Read in English](https://github.com/Alexxx180/Desert-Rage/blob/help/READMEru.md)
+[Read in English](https://github.com/Alexxx180/Desert-Rage/blob/help/READMEen.md)
 
 [Полная документация GitHub для быстрого старта](https://docs.github.com/en/get-started/quickstart/hello-world)
 
