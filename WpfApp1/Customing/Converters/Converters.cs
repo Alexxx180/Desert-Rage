@@ -25,7 +25,7 @@ namespace WpfApp1.Customing.Converters
             return Convert.ToInt32(obj);
         }
 
-        public static ushort ToShort(this object obj)
+        public static ushort ToUShort(this object obj)
         {
             return Convert.ToUInt16(obj);
         }
