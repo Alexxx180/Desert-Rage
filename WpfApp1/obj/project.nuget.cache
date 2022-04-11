@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7H8yf6pcSbjGi00m3ESuUTCwX/BWOzvQO5oFvXuk+4nfmt2BahSfjmOVqqJwYmpemToAVHPLBuy/K+f7jCbYjQ==",
+  "dgSpecHash": "dTHNfnCvp9+6oVnro35NkN083dO66kXmQkXtlCmVFGCRGDG3dn8N0Li6NgOz4c5p87vHgg5ogBeQeK7rzPuySQ==",
   "success": true,
-  "projectFilePath": "D:\\Александр\\Windows 7\\misc\\Надгробные плиты\\C#\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -5,38 +5,41 @@ namespace WpfApp1.Customing.Converters
 {
     public static class Converters
     {
-        public static bool Bool(object obj)
+        public static bool ToBool(this object obj)
         {
             return Convert.ToBoolean(obj);
         }
-        public static byte Bits(object obj)
+
+        public static byte ToByte(this object obj)
         {
             return Convert.ToByte(obj);
         }
-        public static sbyte SBits(object obj)
+
+        public static sbyte ToSByte(this object obj)
         {
             return Convert.ToSByte(obj);
         }
-        public static int Numb(object obj)
+
+        public static int ToInt(this object obj)
         {
             return Convert.ToInt32(obj);
         }
-        public static ushort Shrt(object obj)
+
+        public static ushort ToShort(this object obj)
         {
             return Convert.ToUInt16(obj);
         }
-        public static double Dble(object obj)
+
+        public static double ToDouble(this object obj)
         {
             return Convert.ToDouble(obj);
         }
-        public static string Str(object obj)
-        {
-            return obj.ToString();
-        }
-        public static string[] Strs(params object[] objs)
+
+        public static string[] ToStrings(this object[] objs)
         {
             return StrX(objs).ToArray();
         }
+
         public static List<string> StrX(params object[] objs)
         {
             List<string> list = new List<string>();
@@ -44,9 +47,11 @@ namespace WpfApp1.Customing.Converters
                 list.Add(objs[i].ToString());
             return list;
         }
+
         public static byte BitHex(string hex)
         {
-            return Bits(16 * RecognizeHex(hex.ToCharArray()[0]) + RecognizeHex(hex.ToCharArray()[1]));
+            return (16 * RecognizeHex(hex.ToCharArray()[0]) +
+                RecognizeHex(hex.ToCharArray()[1])).ToByte();
         }
         public static byte[] UnHex(string hexColor)
         {

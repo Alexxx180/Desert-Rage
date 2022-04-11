@@ -23,6 +23,8 @@ using static WpfApp1.Helpers.Characteristics;
 using static WpfApp1.Helpers.Bag;
 using static WpfApp1.Exceptions.ErrorList;
 using System.Diagnostics;
+using WpfApp1.Model.Stats;
+using WpfApp1.Model.Stats.Player.Armory;
 
 namespace WpfApp1
 {
@@ -40,6 +42,7 @@ namespace WpfApp1
             InitializeComponent();
             Functionality();
         }
+
         private void Functionality()
         {
             DataContext = this;
@@ -60,6 +63,7 @@ namespace WpfApp1
             Anonymous();
 
         }
+
         private Image TargetImage;
         public ushort GetHP
         {
@@ -85,6 +89,7 @@ namespace WpfApp1
                 }
             }
         }
+
         public ushort GetMHP
         {
             get => MainHero.MaxHP;
@@ -94,6 +99,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public ushort GetAP
         {
             get => MainHero.CurrentAP;
@@ -103,6 +109,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public ushort GetMAP
         {
             get => MainHero.MaxAP;
@@ -112,6 +119,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public ushort GetATK
         {
             get => Shrt(MainHero.Attack + MainHero.Weapon.Power + AbilityBonuses[0]);
@@ -121,6 +129,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public ushort GetDEF
         {
             get => Shrt((MainHero.Defence * MainHero.DefenseState) + MainHero.Armor.Power
@@ -131,6 +140,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public byte GetAGL
         {
             get => MainHero.Speed;
@@ -140,6 +150,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public byte GetSPL
         {
             get => GetHero.Special;
@@ -149,6 +160,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public byte GetStatus
         {
             get => MainHero.PlayerStatus;
@@ -160,6 +172,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public ushort GetExp
         {
             get => MainHero.Experience;
@@ -169,6 +182,7 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+
         public byte GetLV
         {
             get => MainHero.CurrentLevel;
@@ -299,6 +313,68 @@ namespace WpfApp1
             return TimeWorldRecord[0] > 23;
         }
 
+        Character Ray1 = new Character
+        {
+            Level = 1,
+
+            HeroProfile = new Profile
+            {
+                Icon = Paths.Static.Person.Usual,
+                Image = Paths.Static.Person.Usual,
+            },
+
+            Hp = new Bar(100),
+            Ap = new Bar(40),
+
+            Stats = new BattleStats
+            {
+                Attack = 25,
+                Defence = 15,
+                Speed = 15
+            },
+            Special = 25,
+
+            Learned = new BitArray(16),
+
+            Weapon = new Weapon
+            {
+                Name = Txts.Equipment.Hands.Bare,
+                Type = "Weapon",
+                Description = "",
+                Noise = Paths.OST.Noises.HandAttack,
+                Power = 0,
+                Chest = 0,
+                Animation = Paths.Dynamic.Person.HdAttack,
+                IconAnimation = Paths.Dynamic.Icon.HdAttack
+            },
+
+            Armor = new Equipment{
+                Name = Txts.Equipment.Torso.Bare,
+                Type = "Armor",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Legs = new Equipment
+            {
+                Name = Txts.Equipment.Anckles.Bare,
+                Type = "Legs",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Boots = new Equipment
+            {
+                Name = Txts.Equipment.Boots.Bare,
+                Type = "Boots",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            }
+        };
+
         static Characteristics Ray = new Characteristics
         {
             MaxHP = 100,
@@ -310,6 +386,7 @@ namespace WpfApp1
             Image = Paths.Static.Person.Usual,
             Icon = Paths.Static.Icon.Usual,
         };
+
         static Characteristics Sam = new Characteristics
         {
             MaxHP = 200,

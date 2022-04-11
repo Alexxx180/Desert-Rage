@@ -140,42 +140,6 @@ namespace WpfApp1.Helpers
                 }
         }
 
-
-        public class Equipment
-        {
-            private Equipment(string name, string type, string description, byte power, byte chest)
-            {
-                Name = name;
-                Power = power;
-                Chest = chest;
-                Type = type;
-                Description = description;
-            }
-            public class Weapon : Equipment
-            {
-                public Weapon(string name, string type, string description, string noise, byte power, byte chest, string[] animation, string[] iconAnimate) : base(name, type, description, power, chest)
-                {
-                    Animation = animation;
-                    IconAnimate = iconAnimate;
-                    Noise = noise;
-                }
-                public string Noise { get; set; }
-                public string[] Animation { get; set; }
-                public string[] IconAnimate { get; set; }
-            }
-            public class Armor : Equipment
-            {
-                public Armor(string name, string type, string description, byte power, byte chest) : base(name, type, description, power, chest)
-                {
-                }
-            }
-            public string Name { get; set; }
-            public string Description { get; set; }
-            public string Type { get; set; }
-            public byte Power { get; set; }
-            public byte Chest { get; set; }
-        }
-
         public static Weapon BareHands = new Weapon(Txts.Equipment.Hands.Bare, "Weapon", "", OST.Noises.HandAttack, 0, 0, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
         public static Weapon Knuckle = new Weapon(Txts.Equipment.Hands.Duster, "Weapon", Txts.Hints.EqWpn1, OST.Noises.HandAttack, 10, 203, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
         public static Weapon Knife = new Weapon(Txts.Equipment.Hands.Knife, "Weapon", Txts.Hints.EqWpn2, OST.Noises.Knife, 50, 206, Dynamic.Person.KnAttack, Dynamic.Icon.KnAttack);

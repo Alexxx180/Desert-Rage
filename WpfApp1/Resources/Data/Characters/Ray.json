@@ -1,0 +1,56 @@
+{
+            HeroProfile = new Profile
+            {
+                Icon = Paths.Static.Person.Usual,
+                Image = Paths.Static.Person.Usual,
+            },
+
+            Hp = new Bar(100),
+            Ap = new Bar(40),
+
+            Stats = new BattleStats
+            {
+                Attack = 25,
+                Defence = 15,
+                Speed = 15
+            },
+            Special = 25,
+
+            Weapon = new Weapon
+            {
+                Name = Txts.Equipment.Hands.Bare,
+                Type = "Weapon",
+                Description = "",
+                Noise = Paths.OST.Noises.HandAttack,
+                Power = 0,
+                Chest = 0,
+                Animation = Paths.Dynamic.Person.HdAttack,
+                IconAnimation = Paths.Dynamic.Icon.HdAttack
+            },
+
+            Armor = new Equipment{
+                Name = Txts.Equipment.Torso.Bare,
+                Type = "Armor",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Legs = new Equipment
+            {
+                Name = Txts.Equipment.Anckles.Bare,
+                Type = "Legs",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Boots = new Equipment
+            {
+                Name = Txts.Equipment.Boots.Bare,
+                Type = "Boots",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            }
+};

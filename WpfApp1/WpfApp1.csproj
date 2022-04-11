@@ -1999,6 +1999,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\OST\Music\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   
   <Target Name="AfterResolveReferences">
