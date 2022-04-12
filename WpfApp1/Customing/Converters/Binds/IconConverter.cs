@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
-using static WpfApp1.Customing.Decorators;
-using static WpfApp1.Customing.Converters.Converters;
-using static WpfApp1.Helpers.Paths.Static.Icon;
+using static DesertRage.Customing.Decorators;
+using static DesertRage.Customing.Converters.Converters;
+using static DesertRage.Helpers.Paths.Static.Icon;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public class IconConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            byte status = Bits(value);
+            byte status = value.ToByte();
             return status switch
             {
                 1 => Bmper(Poison),

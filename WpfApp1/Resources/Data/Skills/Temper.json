@@ -1,0 +1,13 @@
+{
+    "Name" : "Усиление",
+    "Description" : "Txts.Abililities.Buffs",
+    "Noise" : "Paths.OST.Noises.StrongStand",
+
+    "Power" : "2",
+
+    "Level" : "16",
+    "Cost" : "12",
+
+    "Animation" : "Paths.Dynamic.Person.BuffUp",
+    "IconAnimation" : "Paths.Dynamic.Icon.BuffUp",
+};

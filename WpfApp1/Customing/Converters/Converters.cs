@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WpfApp1.Customing.Converters
+namespace DesertRage.Customing.Converters
 {
     public static class Converters
     {

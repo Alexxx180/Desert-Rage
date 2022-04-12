@@ -11,22 +11,23 @@ using System.Windows.Threading;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using WpfApp1.Helpers;
-using WpfApp1.Helpers.Attach;
-using static WpfApp1.Customing.Decorators;
-using static WpfApp1.Mechanics.MapBuilder;
-using static WpfApp1.Customing.Converters.Converters;
-using static WpfApp1.Mechanics.Algorithms.Coloring;
-using static WpfApp1.Mechanics.Algorithms.Encoding;
-using static WpfApp1.Helpers.Abilities;
-using static WpfApp1.Helpers.Characteristics;
-using static WpfApp1.Helpers.Bag;
-using static WpfApp1.Exceptions.ErrorList;
+using DesertRage.Helpers;
+using DesertRage.Helpers.Attach;
+using static DesertRage.Customing.Decorators;
+using static DesertRage.Mechanics.MapBuilder;
+using static DesertRage.Customing.Converters.Converters;
+using static DesertRage.Mechanics.Algorithms.Coloring;
+using static DesertRage.Helpers.Abilities;
+using static DesertRage.Helpers.Characteristics;
+using static DesertRage.Helpers.Bag;
 using System.Diagnostics;
-using WpfApp1.Model.Stats;
-using WpfApp1.Model.Stats.Player.Armory;
+using DesertRage.Model.Stats;
+using DesertRage.Model.Stats.Player.Armory;
+using static DesertRage.Writers.Processors;
+using DesertRage.Model;
+using DesertRage.Model.Stats.Player;
 
-namespace WpfApp1
+namespace DesertRage
 {
 
     /// <summary>
@@ -41,29 +42,32 @@ namespace WpfApp1
         {
             InitializeComponent();
             Functionality();
+
+            MainHero = Ray;
         }
 
         private void Functionality()
         {
-            DataContext = this;
             DispatcherTimer[] timers = new DispatcherTimer[] {
                 Targt, PRegn, PCtrl, PTurn, WRecd, RRoll, TRout
             };
+            
             SetAllTimeTriggers(ref timers);
+            
             ShowFoesStats();
+
             PlayMusic(Paths.OST.Music.MainTheme);
+
             Adaptate();
-            try {
-                Autorization();
-                SeeMap();
-            } catch (Exception ex) {
-                _ = new Reload(Numb(CONECTION_ERROR), ex.Message).ShowDialog();
-                Close();
-            }
+
+            Autorization();
+            SeeMap();
+            
             Anonymous();
 
         }
 
+        #region Get Members
         private Image TargetImage;
         public ushort GetHP
         {
@@ -255,24 +259,25 @@ namespace WpfApp1
                 OnPropertyChanged();
             }
         }
+        #endregion
 
-        //[EN] Connection to database and show progress feature
-        //[RU] Подключение к базе данных и особенность показа прогресса.
-        Sql TSql = new Sql();
+        internal UserProfile Player { get; set; }
+
         public void Autorization()
         {
-            TSql.CheckAllRecordedPlayers();
-            CurrentPlayer.Content = TSql.GetCurrentPlayer();
-            Continue.IsEnabled = TSql.CheckIfPlayerCanContinue();
+            
+            
             ConAdv.Source = Bmper(Continue.IsEnabled ?
                 Paths.Static.Menu.Adventures.BeforeConAdv :
                 Paths.Static.Menu.Adventures.AdventureLock);
         }
+
         private void SeeMap()
         {
             byte locs = Bits(TSql.CheckTask());
             ChangeBackground(LocationDecode(locs), locs);
         }
+
         private bool TimeChamber()
         {
             if (FleeTime[0] <= 0 && FleeTime[1] <= 0)
@@ -313,7 +318,7 @@ namespace WpfApp1
             return TimeWorldRecord[0] > 23;
         }
 
-        Character Ray1 = new Character
+        internal Character Ray = new Character
         {
             Level = 1,
 
@@ -375,94 +380,161 @@ namespace WpfApp1
             }
         };
 
-        static Characteristics Ray = new Characteristics
+        internal Character Sam = new Character
         {
-            MaxHP = 100,
-            MaxAP = 40,
-            Attack = 25,
-            Defence = 15,
-            Speed = 15,
-            Special = 25,
-            Image = Paths.Static.Person.Usual,
-            Icon = Paths.Static.Icon.Usual,
+            Level = 1,
+
+            HeroProfile = new Profile
+            {
+                Icon = Paths.Static.Person.Usual,
+                Image = Paths.Static.Person.Usual,
+            },
+
+            Hp = new Bar(200),
+            Ap = new Bar(200),
+
+            Stats = new BattleStats
+            {
+                Attack = 50,
+                Defence = 50,
+                Speed = 50
+            },
+            Special = 50,
+
+            Learned = new BitArray(16),
+
+            Weapon = new Weapon
+            {
+                Name = Txts.Equipment.Hands.Minigun,
+                Type = "Weapon",
+                Description = Txts.Hints.EqWpn4,
+                Noise = Paths.OST.Noises.Minigun,
+                Power = 100,
+                Chest = 0,
+                Animation = Paths.Dynamic.Person.SeriousMg,
+                IconAnimation = Paths.Dynamic.Icon.SeriousMg
+            },
+
+            Armor = new Equipment
+            {
+                Name = Txts.Equipment.Torso.Bare,
+                Type = "Armor",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Legs = new Equipment
+            {
+                Name = Txts.Equipment.Anckles.Bare,
+                Type = "Legs",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            },
+
+            Boots = new Equipment
+            {
+                Name = Txts.Equipment.Boots.Bare,
+                Type = "Boots",
+                Description = "",
+                Power = 0,
+                Chest = 0
+            }
         };
 
-        static Characteristics Sam = new Characteristics
-        {
-            MaxHP = 200,
-            MaxAP = 200,
-            CurrentHP = 200,
-            CurrentAP = 200,
-            Attack = 50,
-            Defence = 50,
-            Speed = 50,
-            Special = 50,
-            Image = Paths.Static.Person.Serious,
-            Icon = Paths.Static.Icon.Serious,
-            Weapon = new Equipment.Weapon(Txts.Equipment.Hands.Minigun,
-                "Weapon", Txts.Hints.EqWpn4, Paths.OST.Noises.Minigun,
-                50, 254, Paths.Dynamic.Person.SeriousMg,
-                Paths.Dynamic.Icon.SeriousMg)
-        };
-        Characteristics MainHero = Ray;
+        internal Character MainHero;
 
         Foe[] FoesOnLocation => LocationsFoes[CurrentLocation];
 
+        #region Skills Members
         public FightSkills ATorch => new FightSkills("Факел",
             Txts.Abililities.Torch, Paths.Dynamic.Person.Torch,
             Paths.Dynamic.Icon.Torch, 3, 4, Shrt(GetSPL * 1.25),
             Paths.OST.Noises.Torch);
+
+        public Skill SSTorch = new Skill
+        {
+            Name = "Факел",
+            Description = Txts.Abililities.Torch,
+            Noise = Paths.OST.Noises.Torch,
+
+            Power = 1.25f,
+
+            Level = 3,
+            Cost = 4,
+
+            Animation = Paths.Dynamic.Person.Torch,
+            IconAnimation = Paths.Dynamic.Icon.Torch,
+        };
+
         public FightSkills AWhip => new FightSkills("Кнут",
             Txts.Abililities.Whip, Paths.Dynamic.Person.Whip,
             Paths.Dynamic.Icon.Whip, 6, 6, Shrt(GetSPL * 1.5),
             Paths.OST.Noises.Whip);
+
         public FightSkills ASling => new FightSkills("Рогатка",
             Txts.Abililities.Throw, Paths.Dynamic.Person.Thrower,
             Paths.Dynamic.Icon.Thrower, 11, 15, Shrt(GetSPL * 2.5),
             Paths.OST.Noises.Thrower);
+
         public FightSkills ACombo => new FightSkills("Супер",
             Txts.Abililities.Spec1, Paths.Dynamic.Person.Super,
             Paths.Dynamic.Icon.Super, 7, 10, Shrt(GetSPL * 2),
             Paths.OST.Noises.Super);
+
         public FightSkills AWhirl => new FightSkills("Буря",
             Txts.Abililities.Spec2, Paths.Dynamic.Person.Tornado,
             Paths.Dynamic.Icon.Tornado, 13, 20, Shrt(GetSPL * 3),
             Paths.OST.Noises.Whirl);
+
         public FightSkills AQuake => new FightSkills("Обвал",
             Txts.Abililities.Spec3, Paths.Dynamic.Person.Quake,
             Paths.Dynamic.Icon.Quake, 18, 30, Shrt(GetSPL * 4),
             Paths.OST.Noises.Quake);
+
         public MedicineSkills ACure => new MedicineSkills("Лечение",
             Txts.Abililities.Cure, Paths.Dynamic.Person.Cure,
             Paths.Dynamic.Icon.Cure, 2, 5, Shrt(GetSPL * 2),
             Paths.OST.Noises.Cure);
+
         public MedicineSkills ACure2 => new MedicineSkills("Лечение 2",
             Txts.Abililities.Cure2, Paths.Dynamic.Person.Cure2,
             Paths.Dynamic.Icon.Cure2, 21, 10, GetMHP,
             Paths.OST.Noises.Cure2);
+
         public MedicineSkills AHeal => new MedicineSkills("Исцеление",
             Txts.Abililities.Heal, Paths.Dynamic.Person.Heal,
             Paths.Dynamic.Icon.Heal, 4, 3, Paths.OST.Noises.Heal);
+
         public MedicineSkills AHpup => new MedicineSkills("Время лечит",
             Txts.Abililities.Regen, Paths.Dynamic.Person.Regen,
             Paths.Dynamic.Icon.Regen, 20, 15, 1, Paths.OST.Noises.HpUp);
+
         public MedicineSkills AApup => new MedicineSkills("Контроль",
             Txts.Abililities.Control, Paths.Dynamic.Person.Control,
             Paths.Dynamic.Icon.Control, 25, 0, 1, Paths.OST.Noises.ApUp);
+
         public SupportSkills ATemper => new SupportSkills("Усиление",
             Txts.Abililities.Buffs, Paths.Dynamic.Person.BuffUp,
             Paths.Dynamic.Icon.BuffUp, 16, 12,
             Paths.OST.Noises.StrongStand);
+
         public SupportSkills ASecure => new SupportSkills("Охрана",
             Txts.Abililities.Tough, Paths.Dynamic.Person.ToughenUp,
             Paths.Dynamic.Icon.ToughenUp, 14, 8,
             Paths.OST.Noises.Shield);
+
         public SupportSkills ALearn => new SupportSkills("Изучение",
             Txts.Abililities.Learn, Paths.Dynamic.Person.Learn,
             Paths.Dynamic.Icon.Learn, 5, 2, Paths.OST.Noises.Learn);
+        #endregion
+
 
         Misc Sets = new Misc();
         Misc.Adopt Adoptation = new Misc.Adopt();
+
+        
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
@@ -637,8 +709,7 @@ namespace WpfApp1
             Threasure1.Source = Bmper(Paths.Static.Map.Models.Artifact1);
         }
 
-        //[EN] Play original soundtrack (OST)
-        //[RU] Проигрывание оригинального саундтрека
+        // Play original soundtrack
         private void PlayMusic(in string Path) => PlayOST(Sound1, Path);
         private void PlayNoise(in string Path) => PlayOST(Sound2, Path);
         private void PlaySound(in string Path) => PlayOST(Sound3, Path);
@@ -808,7 +879,8 @@ namespace WpfApp1
             Sets.SpecialBattle = SecretBattlesIndex;
             TargetImage = BossSlot1;
         }
-        
+
+        #region Controllers Members
         //[EN] Check what is under person foot.
         //[RU] Проверить на что герой наступил.
         private void GroundCheck(in byte Interaction)
@@ -1137,6 +1209,7 @@ namespace WpfApp1
                         break;
                 }
         }
+        #endregion
 
         private void PauseGame()
         {
@@ -1221,7 +1294,8 @@ namespace WpfApp1
             BitArray learned = Decoder(new BitArray(new bool[16]), cipher);
             AnyHide(Img2);
             AnyShow(BestiaryImg);
-            AnyShowX2(learned, new FrameworkElement[] { FoeImg1, FoeAImg1, FoeDImg1, FoeGImg1, FoeSImg1, FoeAtk1, FoeDef1, FoeSpc1, FoeSpd1, FoeWkn1, FoeNam1, FoeDsc1 },
+            AnyShowX2(learned,
+                new FrameworkElement[] { FoeImg1, FoeAImg1, FoeDImg1, FoeGImg1, FoeSImg1, FoeAtk1, FoeDef1, FoeSpc1, FoeSpd1, FoeWkn1, FoeNam1, FoeDsc1 },
                 new FrameworkElement[] { FoeImg2, FoeAImg2, FoeDImg2, FoeGImg2, FoeSImg2, FoeAtk2, FoeDef2, FoeSpc2, FoeSpd2, FoeWkn2, FoeNam2, FoeDsc2 },
                 new FrameworkElement[] { FoeImg3, FoeAImg3, FoeDImg3, FoeGImg3, FoeSImg3, FoeAtk3, FoeDef3, FoeSpc3, FoeSpd3, FoeWkn3, FoeNam3, FoeDsc3 },
                 new FrameworkElement[] { FoeImg4, FoeAImg4, FoeDImg4, FoeGImg4, FoeSImg4, FoeAtk4, FoeDef4, FoeSpc4, FoeSpd4, FoeWkn4, FoeNam4, FoeDsc4 },
@@ -1236,7 +1310,7 @@ namespace WpfApp1
                 new FrameworkElement[] { FoeImg13, FoeAImg13, FoeDImg13, FoeGImg13, FoeSImg13, FoeAtk13, FoeDef13, FoeSpc13, FoeSpd13, FoeWkn13, FoeNam13, FoeDsc13 },
                 new FrameworkElement[] { FoeImg14, FoeAImg14, FoeDImg14, FoeGImg14, FoeSImg14, FoeAtk14, FoeDef14, FoeSpc14, FoeSpd14, FoeWkn14, FoeNam14, FoeDsc14 },
                 new FrameworkElement[] { FoeImg15, FoeAImg15, FoeDImg15, FoeGImg15, FoeSImg15, FoeAtk15, FoeDef15, FoeSpc15, FoeSpd15, FoeWkn15, FoeNam15, FoeDsc15 },
-                new FrameworkElement[] { FoeImg16, FoeAImg16, FoeDImg16, FoeGImg16, FoeSImg16, FoeAtk16, FoeDef16, FoeSpc16, FoeSpd16, FoeWkn16, FoeNam16, FoeDsc16 }); ;
+                new FrameworkElement[] { FoeImg16, FoeAImg16, FoeDImg16, FoeGImg16, FoeSImg16, FoeAtk16, FoeDef16, FoeSpc16, FoeSpd16, FoeWkn16, FoeNam16, FoeDsc16 });
         }
         
         //[EN] Objects interaction
@@ -1407,6 +1481,7 @@ namespace WpfApp1
             lab.Foreground = memoryColor;
         }
 
+        #region Bosses Members
         //[EN] Battle : Boss 1 (Pharaoh).
         //[RU] Сражение : Босс 1 (Фараон).
         private void BossBattle1()
@@ -1492,6 +1567,8 @@ namespace WpfApp1
             EnemiesShow(RecordFoes);
             FoesRefresh();
         }
+        #endregion
+
         private void RefreshHeroFully()
         {
             OnPropertyChanged(nameof(GetHP));
@@ -2894,115 +2971,26 @@ namespace WpfApp1
                 Player5, Player6, DeleteProfile);
             CheckRecords();
         }
+
         private void SaveGame()
         {
-            try
-            {
-                byte[] CipherValue = new byte[] { 1, 2, 4, 8 };
-                TSql.SavePlayerBag(new string[] { "@LOGIN", "@BAN", "@ETR",
-                    "@ANT", "@FUS", "@HRB", "@ER2", "@SLB", "@ELX", "@MAT" },
-                    new object[] { TSql.CurrentLogin, GetBag.Bandage.Count,
-                        GetBag.Ether.Count, GetBag.Antidote.Count, GetBag.Fused.Count,
-                        GetBag.Herbs.Count, GetBag.Ether2.Count, GetBag.SleepBag.Count,
-                        GetBag.Elixir.Count, GetBag.Materials});
-                TSql.SavePlayerEquip(new string[] { "@LOGIN", "@WPN", "@ARR",
-                    "@PNT", "@BOO", "@WPS", "@ARS", "@PTS", "@BTS" },
-                    new object[] { TSql.CurrentLogin, MainHero.Weapon.Power,
-                        MainHero.Armor.Power, MainHero.Legs.Power,
-                        MainHero.Boots.Power, Encoder(GetBag.Weapons),
-                        Encoder(GetBag.Armors), Encoder(GetBag.Panties),
-                        Encoder(GetBag.ArmBoots) });
-                TSql.SavePlayerSettings(new string[] { "@LOGIN", "@MUS",
-                    "@SND", "@NS", "@FS", "@BR", "@TMR" },
-                    new object[] { TSql.CurrentLogin,
-                        Bits(MusicLoud.Value * 100), Bits(SoundsLoud.Value * 100),
-                        Bits(NoiseLoud.Value * 100), Bits(GameSpeed.Value * 100),
-                        Bits(Brightness.Value * 100), TimerTurnOn.IsChecked.Value });
-                TSql.SavePlayerStats(new string[] { "@LOGIN", "@LV", "@LC", "@HP",
-                    "@AP", "@XP", "@TK", "@LN", "@TR" },
-                    MainHero.GetPlayerRecord(TSql.CurrentLogin));
-            }
-            catch (Exception ex) {
-                _ = new Reload(Numb(CONECTION_ERROR), ex.Message).ShowDialog();
-                Close();
-            }
+            SaveProfile("Ray.json", Player);
         }
-        private void SaveCool(string name)
-        {
-            try
-            {
-                byte[] CipherValue = new byte[] { 1, 2, 4, 8 };
-                TSql.SavePlayerBag(new string[] { "@LOGIN", "@BAN", "@ETR", "@ANT",
-                    "@FUS", "@HRB", "@ER2", "@SLB", "@ELX", "@MAT" },
-                    new object[] { name, 255, 255, 255,
-                        255, 255, 255, 255, 255, 65535});
-                TSql.SavePlayerEquip(new string[] { "@LOGIN", "@WPN", "@ARR", "@PNT",
-                    "@BOO", "@WPS", "@ARS", "@PTS", "@BTS" },
-                    new object[] { name, 255, 115,
-                        85, 55, 15, 15, 15, 15 });
-                TSql.SavePlayerSettings(new string[] { "@LOGIN", "@MUS", "@SND",
-                    "@NS", "@FS", "@BR", "@TMR" },
-                    new object[] { name, Bits(MusicLoud.Value * 100),
-                        Bits(SoundsLoud.Value * 100), Bits(NoiseLoud.Value * 100),
-                        Bits(GameSpeed.Value * 100), Bits(Brightness.Value * 100),
-                        TimerTurnOn.IsChecked.Value });
-                TSql.SavePlayerStats(new string[] { "@LOGIN", "@LV", "@LC",
-                    "@HP", "@AP", "@XP", "@TK", "@LN", "@TR" },
-                    new object[] { name, 25, 1, 999, 999, 0, 0, 65535, true });
-            }
-            catch (Exception ex)
-            {
-                _ = new Reload(Numb(CONECTION_ERROR), ex.Message).ShowDialog();
-                Close();
-            }
-        }
+
+
         //[EN] Continue button click.
         //[RU] Кнопка "Продолжить начатое".
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
-            object[] Bag = TSql.CheckPlayerBag(TSql.CurrentLogin,
-                new object[] { 0, 0, 0, 0, 0, 0, 0, 0, 0 });
-            int len = Bag.Length - 1;
-            byte[] byteArray = new byte[len];
-            for (int i = 0; i < len - 1; i++)
-                byteArray[i] = Bits(Bag[i]);
-            GetBag.SetCount(byteArray);
-            GetMaterials = Shrt(Bag[8]);
+            Player = LoadProfile("Ray.json");
 
-            byte[] byteEquip = TSql.CheckPlayerEquip(TSql.CurrentLogin,
-                new byte[] { 0, 0, 0, 0, 0, 0, 0, 0 });
-            GetHero.SetAllEquip(byteEquip[0], byteEquip[1], byteEquip[2], byteEquip[3]);
-            byte[] Ciphers = { byteEquip[4], byteEquip[5], byteEquip[6], byteEquip[7] };
-
-            Bag = TSql.GetPlayerRecord(TSql.CurrentLogin,
-                new object[] { 0, 0, 0, 0, 0, 0, 0 });
-            GetLV = Bits(Bag[0]);
-            MainHero.MenuTask = Bits(Bag[1]);
-            GetHP = Shrt(Bag[2]);
-            GetAP = Shrt(Bag[3]);
-
-            MainHero.Experience = Shrt(Bag[4]);
-            MainHero.MiniTask = Bool(Bag[5]);
-            MainHero.Learned = Shrt(Bag[6]);
-
-            byteEquip = TSql.GetPlayerSettings(TSql.CurrentLogin,
-                new byte[] { 0, 0, 0, 0, 0, 0 });
-            SettingsSetAll(byteEquip);
-
-            GetBag.Weapons = Decoder(new BitArray(new bool[4]), Ciphers[0]);
-            GetBag.Hands = GetValueFromDecoder(GetBag.Weapons, MainHero.Weapon.Power);
-            GetBag.Armors = Decoder(new BitArray(new bool[4]), Ciphers[1]);
-            GetBag.Jacket = GetValueFromDecoder(GetBag.Armors, MainHero.Armor.Power);
-            GetBag.Panties = Decoder(new BitArray(new bool[4]), Ciphers[2]);
-            GetBag.Leggings = GetValueFromDecoder(GetBag.Panties, MainHero.Legs.Power);
-            GetBag.ArmBoots = Decoder(new BitArray(new bool[4]), Ciphers[3]);
-            GetBag.Foots = GetValueFromDecoder(GetBag.ArmBoots, MainHero.Boots.Power);
             OnPropertyChanged(nameof(GetBag));
             OnPropertyChanged(nameof(GetMaterials));
             OnPropertyChanged(nameof(GetHero));
             OnPropertyChanged(nameof(GetNlvl));
             ContinueQuest();
         }
+
         private void RefreshSkills()
         {
             OnPropertyChanged(nameof(ATorch));

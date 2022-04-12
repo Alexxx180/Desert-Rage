@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public class LeftTextConverter : IValueConverter
     {

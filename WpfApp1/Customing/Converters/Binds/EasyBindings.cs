@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Data;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public static class EasyBindings
     {

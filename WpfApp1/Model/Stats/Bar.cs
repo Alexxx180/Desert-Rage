@@ -1,7 +1,7 @@
 ﻿using System;
-using WpfApp1.Customing.Converters;
+using DesertRage.Customing.Converters;
 
-namespace WpfApp1.Model.Stats
+namespace DesertRage.Model.Stats
 {
     public struct Bar
     {

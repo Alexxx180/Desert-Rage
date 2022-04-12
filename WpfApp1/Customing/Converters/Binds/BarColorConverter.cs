@@ -2,10 +2,10 @@
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
-using static WpfApp1.Customing.Converters.Converters;
-using static WpfApp1.Mechanics.Algorithms.Coloring;
+using static DesertRage.Customing.Converters.Converters;
+using static DesertRage.Mechanics.Algorithms.Coloring;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public class BarColorConverter : IMultiValueConverter
     {

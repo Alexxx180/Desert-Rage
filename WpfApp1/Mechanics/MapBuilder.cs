@@ -1,9 +1,9 @@
 ﻿using System.Windows.Controls;
-using WpfApp1.Helpers;
-using static WpfApp1.Customing.Decorators;
-using static WpfApp1.Customing.Converters.Converters;
+using DesertRage.Helpers;
+using static DesertRage.Customing.Decorators;
+using static DesertRage.Customing.Converters.Converters;
 
-namespace WpfApp1.Mechanics
+namespace DesertRage.Mechanics
 {
     public static class MapBuilder
     {

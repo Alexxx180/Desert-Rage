@@ -1,4 +1,4 @@
-﻿namespace WpfApp1.Helpers
+﻿namespace DesertRage.Helpers
 {
     //[EN] Misc class, contents engine values
     //[RU] Класс прочее, содержит параметры двигателя игры

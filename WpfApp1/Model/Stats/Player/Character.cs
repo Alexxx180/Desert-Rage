@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using WpfApp1.Model.Stats.Player.Armory;
+using DesertRage.Model.Stats.Player.Armory;
 
-namespace WpfApp1.Model.Stats
+namespace DesertRage.Model.Stats.Player
 {
     internal class Character
     {
@@ -45,15 +45,15 @@ namespace WpfApp1.Model.Stats
         #endregion
 
         public string Name { get; set; }
-        public Profile HeroProfile;
+        public Profile HeroProfile { get; set; }
 
         public byte Level { get; set; }
         public ushort Experience { get; set; }
 
-        public Bar Hp;
-        public Bar Ap;
+        public Bar Hp { get; set; }
+        public Bar Ap { get; set; }
 
-        public BattleStats Stats;
+        public BattleStats Stats { get; set; }
         public byte Special { get; set; }
 
         public BitArray Status { get; set; }

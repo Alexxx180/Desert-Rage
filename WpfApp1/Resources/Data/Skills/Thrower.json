@@ -1,0 +1,13 @@
+{
+    "Name" : "Рогатка",
+    "Description" : "Txts.Abililities.Whip",
+    "Noise" : "Paths.OST.Noises.Whip",
+
+    "Power" : "2.5f",
+
+    "Level" : "6",
+    "Cost" : "6",
+
+    "Animation" : "Paths.Dynamic.Person.Whip",
+    "IconAnimation" : "Paths.Dynamic.Icon.Whip",
+};

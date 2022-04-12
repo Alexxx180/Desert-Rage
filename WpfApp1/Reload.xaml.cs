@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfApp1
+namespace DesertRage
 {
     /// <summary>
     /// Логика взаимодействия для Reload.xaml
@@ -23,6 +23,7 @@ namespace WpfApp1
             RU.Text = ruText[code];
             Problem.Text = problem;
         }
+
         public Reload(string en, string ru, string problem)
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace WpfApp1
             RU.Text = ru;
             Problem.Text = problem;
         }
+
         public static void Reloading()
         {
             MainWindow main = new MainWindow();

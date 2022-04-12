@@ -1,4 +1,4 @@
-﻿namespace WpfApp1.Helpers
+﻿namespace DesertRage.Helpers
 {
     public static class Txts
     {

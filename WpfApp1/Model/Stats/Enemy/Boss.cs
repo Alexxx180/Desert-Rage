@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace WpfApp1.Model.Stats.Enemy
+namespace DesertRage.Model.Stats.Enemy
 {
     public class Boss : Foe
     {

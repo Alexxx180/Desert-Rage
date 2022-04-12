@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace WpfApp1.Helpers
+namespace DesertRage.Helpers
 {
     // Bag class, depends on items getting and used in/out battle
     public class Bag : Characteristics

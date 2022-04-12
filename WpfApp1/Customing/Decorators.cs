@@ -6,12 +6,19 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
-using static WpfApp1.Customing.Converters.Converters;
+using static DesertRage.Customing.Converters.Converters;
 
-namespace WpfApp1.Customing
+namespace DesertRage.Customing
 {
     public static class Decorators
     {
+        public static void SetActive
+            (this FrameworkElement element, bool setToActive)
+        {
+            element.Visibility = setToActive ?
+                Visibility.Visible : Visibility.Collapsed;
+        }
+
         public static void AnyFontSize(TextBlock textBlock, in double fontSize)
         {
             textBlock.FontSize = fontSize;

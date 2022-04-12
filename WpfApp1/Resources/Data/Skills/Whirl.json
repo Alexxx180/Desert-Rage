@@ -1,0 +1,13 @@
+{
+    "Name" : "Буря",
+    "Description" : "Txts.Abililities.Spec2",
+    "Noise" : "Paths.OST.Noises.Whirl",
+
+    "Power" : "3f",
+
+    "Level" : "13",
+    "Cost" : "20",
+
+    "Animation" : "Paths.Dynamic.Person.Tornado",
+    "IconAnimation" : "Paths.Dynamic.Icon.Tornado",
+};

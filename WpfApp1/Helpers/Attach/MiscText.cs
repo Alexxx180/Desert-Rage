@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfApp1.Helpers.Attach
+namespace DesertRage.Helpers.Attach
 {
     public static class MiscText
     {

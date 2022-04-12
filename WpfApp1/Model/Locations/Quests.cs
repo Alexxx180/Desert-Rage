@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace WpfApp1.Model.Locations
+namespace DesertRage.Model.Locations
 {
     public class Quests
     {

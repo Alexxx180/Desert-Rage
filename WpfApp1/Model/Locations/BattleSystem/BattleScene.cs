@@ -1,6 +1,6 @@
-﻿using WpfApp1.Model.Stats.Enemy;
+﻿using DesertRage.Model.Stats.Enemy;
 
-namespace WpfApp1.Model.Locations.BattleSystem
+namespace DesertRage.Model.Locations.BattleSystem
 {
     public class BattleScene
     {

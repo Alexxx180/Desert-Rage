@@ -1,4 +1,4 @@
-﻿namespace WpfApp1.Model.Stats
+﻿namespace DesertRage.Model.Stats
 {
     public struct BattleStats
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
-using static WpfApp1.Customing.Decorators;
-using static WpfApp1.Helpers.Paths.Static.Foes;
+using static DesertRage.Customing.Decorators;
+using static DesertRage.Helpers.Paths.Static.Foes;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public class ImageConverter : IValueConverter
     {

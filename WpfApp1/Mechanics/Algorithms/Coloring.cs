@@ -1,7 +1,7 @@
 ﻿using System.Windows.Media;
-using static WpfApp1.Customing.Converters.Converters;
+using static DesertRage.Customing.Converters.Converters;
 
-namespace WpfApp1.Mechanics.Algorithms
+namespace DesertRage.Mechanics.Algorithms
 {
     public static class Coloring
     {

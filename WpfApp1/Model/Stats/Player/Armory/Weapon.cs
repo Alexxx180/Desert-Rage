@@ -1,4 +1,4 @@
-﻿namespace WpfApp1.Model.Stats.Player.Armory
+﻿namespace DesertRage.Model.Stats.Player.Armory
 {
     public class Weapon : Equipment
     {

@@ -1,4 +1,4 @@
-﻿namespace WpfApp1.Model.Stats.Enemy
+﻿namespace DesertRage.Model.Stats.Enemy
 {
     // Enemy logic
     public class Foe

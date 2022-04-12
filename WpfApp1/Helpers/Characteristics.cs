@@ -1,8 +1,8 @@
 ﻿using System;
-using static WpfApp1.Helpers.Paths;
-using static WpfApp1.Helpers.Characteristics.Equipment;
+using static DesertRage.Helpers.Paths;
+using static DesertRage.Helpers.Characteristics.Equipment;
 
-namespace WpfApp1.Helpers
+namespace DesertRage.Helpers
 {
     //[EN] Class of hero parameters, like Max Health (HP), Attack and other.
     //[RU] Класс параметров героя, таких как Макс. Здоровье (ОЗ), Атака и прочее.

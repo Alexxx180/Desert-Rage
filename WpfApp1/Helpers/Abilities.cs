@@ -1,7 +1,7 @@
 ﻿using System;
-using static WpfApp1.Customing.Converters.Converters;
+using static DesertRage.Customing.Converters.Converters;
 
-namespace WpfApp1.Helpers
+namespace DesertRage.Helpers
 {
     public abstract class Abilities
     {

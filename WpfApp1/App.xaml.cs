@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using Serilog;
+using System;
 using System.Data;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfApp1
+namespace DesertRage
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// App loading and resolving assembly
     /// </summary>
     public partial class App : Application
     {
         public App()
         {
             AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;
+        }
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
+                .WriteTo.File("Logs/log.txt",
+                rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
+            Log.Information("Application started");
+            Log.Debug("Collecting configuration info...");
         }
 
         private static Assembly OnResolveAssembly(object sender, ResolveEventArgs args)
@@ -38,7 +46,6 @@ namespace WpfApp1
                 stream.Read(assemblyRawBytes, 0, assemblyRawBytes.Length);
                 return Assembly.Load(assemblyRawBytes);
             }
-
         }
     }
 }

@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using static WpfApp1.Customing.Converters.Converters;
+using static DesertRage.Customing.Converters.Converters;
 
-namespace WpfApp1.Customing.Converters.Binds
+namespace DesertRage.Customing.Converters.Binds
 {
     public class BoolConverter : IValueConverter
     {
