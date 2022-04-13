@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="225">
-    <Grid x:Name="GameMenuSelect" Grid.Column="1" Grid.RowSpan="2" Panel.ZIndex="11">
+    <!--<Grid x:Name="GameMenuSelect" Grid.Column="1" Grid.RowSpan="2" Panel.ZIndex="11">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
             <ColumnDefinition Width="0.8*"/>
@@ -30,47 +30,47 @@
             <RowDefinition Height="0.025*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="Status" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Click="Status_Click" IsEnabled="True" Visibility="Visible" Grid.Row="1" Grid.Column="1">
+        <Button x:Name="Status" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Click="Status_Click" IsEnabled="True" Visibility="Visible" Grid.Row="1" Grid.Column="1">
             <Image x:Name="StatusImg" Source="/Resources/Images/Menu/Status/StatusButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="StatusToolTip" FontSize="24" Text="Посмотреть статус героя"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Abils" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="10" Click="Abils_Click" Visibility="Visible" Grid.Column="1" Grid.Row="3">
+        <Button x:Name="Abils" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="10" Click="Abils_Click" Visibility="Visible" Grid.Column="1" Grid.Row="3">
             <Image x:Name="AbilsImg" Source="/Resources/Images/Menu/Skills/AbilsButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="AbilsToolTip" FontSize="24" Text="Посмотреть умения"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Items0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="10" Click="Items0_Click" Visibility="Visible" Grid.Column="1" Grid.Row="5">
+        <Button x:Name="Items0" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="10" Click="Items0_Click" Visibility="Visible" Grid.Column="1" Grid.Row="5">
             <Image x:Name="Items0Img" Source="/Resources/Images/Menu/Bag/ItemsButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="ItemsToolTip" FontSize="24" Text="Посмотреть предметы"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Equip" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom" Panel.ZIndex="10" Click="Equip_Click" Visibility="Visible" Grid.Column="1" Grid.Row="7">
+        <Button x:Name="Equip" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Panel.ZIndex="10" Click="Equip_Click" Visibility="Visible" Grid.Column="1" Grid.Row="7">
             <Image x:Name="EquipImg" Source="/Resources/Images/Menu/Equip/EquipButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="EquipToolTip" FontSize="24" Text="Посмотреть снаряжение"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Tasks" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="10" Click="Tasks_Click" Visibility="Visible" Grid.Column="1" Grid.Row="9">
+        <Button x:Name="Tasks" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="10" Click="Tasks_Click" Visibility="Visible" Grid.Column="1" Grid.Row="9">
             <Image x:Name="TasksImg" Source="/Resources/Images/Menu/Tasks/TasksButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="TasksToolTip" FontSize="24" Text="Посмотреть текущие задачи"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Info" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="10" Visibility="Visible" Click="Info_Click" Grid.Column="1" Grid.Row="11">
+        <Button x:Name="Info" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="10" Visibility="Visible" Click="Info_Click" Grid.Column="1" Grid.Row="11">
             <Image x:Name="InfoImg" Source="/Resources/Images/Menu/Help/InfoButton.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="InfoToolTip" FontSize="24" Text="Ознакомиться с руководством"/>
             </ToolTipService.ToolTip>
         </Button>
-        <Button x:Name="Settings" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="10" Visibility="Visible" Grid.Column="1" Grid.Row="13" Click="Settings_Click">
+        <Button x:Name="Settings" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="10" Visibility="Visible" Grid.Column="1" Grid.Row="13" Click="Settings_Click">
             <Image x:Name="SettingsImg" Source="/Resources/Images/Menu/Sets/Properties.png" Stretch="Fill"/>
             <ToolTipService.ToolTip>
                 <TextBlock x:Name="SettingsToolTip" FontSize="24" Text="Настроиться"/>
             </ToolTipService.ToolTip>
         </Button>
-    </Grid>
+    </Grid>-->
 </UserControl>

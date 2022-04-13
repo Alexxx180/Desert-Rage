@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="GameTasks" Grid.Row="0" Grid.Column="0" Panel.ZIndex="11" Visibility="Hidden">
+    <Grid Grid.Row="0" Grid.Column="0" Panel.ZIndex="11" Visibility="Hidden">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.05*"/>
             <ColumnDefinition Width="0.9*"/>
@@ -23,31 +23,31 @@
         </Grid.RowDefinitions>
 
         <DockPanel Grid.Row="1" Grid.Column="1">
-            <Image x:Name="Task1Img" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Visible" Stretch="Uniform" Grid.RowSpan="5" Grid.Row="2" Grid.Column="3"/>
+            <Image x:Name="Task1Img" Grid.ColumnSpan="4" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Visible" Stretch="Uniform" Grid.RowSpan="5" Grid.Row="2" Grid.Column="3"/>
             <Viewbox>
                 <Label x:Name="Task1" Content="Найдите способ открыть дверь" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontSize="60" FontFamily="Franklin Gothic Demi" IsEnabled="False" Visibility="Visible" Grid.RowSpan="3" Grid.Row="3" Grid.Column="8"/>
             </Viewbox>
         </DockPanel>
         <DockPanel Grid.Row="2" Grid.Column="1">
-            <Image x:Name="Task2Img" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
+            <Image x:Name="Task2Img" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
             <Viewbox>
                 <Label x:Name="Task2" Content="Соберите другой ключ" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="60" IsEnabled="False" Visibility="Hidden"/>
             </Viewbox>
         </DockPanel>
         <DockPanel Grid.Row="3" Grid.Column="1">
-            <Image x:Name="Task3Img" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" Visibility="Hidden" IsEnabled="False" />
+            <Image x:Name="Task3Img" Grid.ColumnSpan="4" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" Visibility="Hidden" IsEnabled="False" />
             <Viewbox>
                 <Label x:Name="Task3" Content="Соберите последний ключ" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="60" Foreground="White" IsEnabled="False" Visibility="Hidden" />
             </Viewbox>
         </DockPanel>
         <DockPanel Grid.Row="4" Grid.Column="1" >
-            <Image x:Name="Task4Img" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
+            <Image x:Name="Task4Img" Grid.ColumnSpan="4" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
             <Viewbox>
                 <Label x:Name="Task4" Content="Проверьте загадочный артефакт" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="60" Visibility="Hidden" IsEnabled="False" />
             </Viewbox>
         </DockPanel>
         <DockPanel Grid.Row="5" Grid.Column="1" >
-            <Image x:Name="Task5Img" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
+            <Image x:Name="Task5Img" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Tasks/Priority/CompletedTask.png" IsEnabled="False" Visibility="Hidden" />
             <Viewbox>
                 <Label x:Name="Task5" Content="Найдите и изучите древнее чудище" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="60" Visibility="Hidden" IsEnabled="False" />
             </Viewbox>

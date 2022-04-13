@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Scenes"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="16">
@@ -16,23 +16,66 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="0.61*"/>
             <RowDefinition Height="0.09*"/>
-            <RowDefinition Height="0.22*"/>
-            <RowDefinition Height="0.08*"/>
+            <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
 
-        <MediaElement x:Name="Med2" LoadedBehavior="Manual" UnloadedBehavior="Manual" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" IsEnabled="False" Visibility="Hidden" Source="Resources/CutScenes/BattleStarts/Battlestations1.mp4" MediaEnded="Med2_MediaEnded" SpeedRatio="1" Stretch="Fill" Grid.RowSpan="4" MediaFailed="MediaErrorEncountered" IsMuted="True" Volume="0"/>
-        <MediaElement x:Name="Win" Grid.ColumnSpan="4" HorizontalAlignment="Left" LoadedBehavior="Manual" VerticalAlignment="Top" Margin="0,0,0,0" Source="Resources/CutScenes/BattleEnds/Win1.mp4" Visibility="Hidden" IsEnabled="False" MediaEnded="Win_MediaEnded" UnloadedBehavior="Manual" MediaFailed="Win_MediaFailed" Stretch="Fill" MediaOpened="Win_MediaOpened" Grid.RowSpan="4"/>
-        <MediaElement x:Name="Med1" LoadedBehavior="Manual" Stretch="Fill"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Source="Resources\CutScenes\ChaptersIntroduction\Prologue.mp4" MediaFailed="MediaErrorEncountered" MediaEnded="Med1_MediaEnded" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" MediaOpened="Med1_MediaOpened" Grid.ColumnSpan="4" Grid.RowSpan="4" IsEnabled="False" />
-        <MediaElement x:Name="TheEnd" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" LoadedBehavior="Manual" UnloadedBehavior="Manual" IsEnabled="False" MediaEnded="TheEnd_MediaEnded" Source="Resources\CutScenes\BattleEnds\Win1.mp4" Stretch="Fill" SpeedRatio="2" Grid.RowSpan="4" MediaFailed="MediaErrorEncountered"/>
-        <MediaElement x:Name="GameOver" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" LoadedBehavior="Manual" Visibility="Hidden" IsEnabled="False" Source="Resources\CutScenes\BattleEnds\GameOver.mp4" MediaEnded="GameOver_MediaEnded" Grid.RowSpan="4"/>
-        <MediaElement x:Name="ChapterIntroduction" LoadedBehavior="Manual" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden" Source="Resources/CutScenes/ChaptersIntroduction/Chapter1.mp4" MediaEnded="ChapterIntroduction_MediaEnded" Grid.Column="0" Grid.Row="0" Margin="0,0,0,0" Grid.ColumnSpan="4" Grid.RowSpan="4" IsEnabled="False" MediaFailed="MediaErrorEncountered" />
+        <MediaElement x:Name="Player"
+            MediaEnded="OnMediaEnded"
+            MediaFailed="OnMediaEnded">
+            <Grid.ColumnSpan>
+                4
+            </Grid.ColumnSpan>
 
-        <Button x:Name="Skip1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi Cond" FontSize="48" FontStyle="Italic" Click="Skip1_Click" Visibility="Hidden" IsEnabled="False" Grid.Column="1" Grid.Row="1" MouseEnter="Skip1_MouseEnter" MouseLeave="Skip1_MouseLeave" BorderBrush="#FF612817" Grid.ColumnSpan="1">
-            <Image x:Name="SkipImg" Source="/Resources/Images/Autorize/Skips1.png" Stretch="Fill" />
-        </Button>
-        
-        <Viewbox x:Name="AutoSave" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" Grid.ColumnSpan="2" Visibility="Hidden">
-            <Label Content="Автосохранение" FontFamily="Franklin Gothic Demi" Foreground="WhiteSmoke" Background="#CC000000" BorderBrush="#FFE46800" BorderThickness="1" />
-        </Viewbox>
+            <Grid.RowSpan>
+                4
+            </Grid.RowSpan>
+
+            <MediaElement.Stretch>
+                Fill
+            </MediaElement.Stretch>
+            
+            <MediaElement.Source>
+                <Binding Path="PlayingFilm"/>
+                <!--Resources/CutScenes/BattleStarts/Battlestations1.mp4-->
+            </MediaElement.Source>
+
+            <MediaElement.LoadedBehavior>
+                Manual
+            </MediaElement.LoadedBehavior>
+            
+            <MediaElement.UnloadedBehavior>
+                Manual
+            </MediaElement.UnloadedBehavior>
+            
+            <MediaElement.IsMuted>
+                True
+            </MediaElement.IsMuted>
+        </MediaElement>
+
+        <!--<Button x:Name="Skip1" Click="OnMediaEnded"
+                MouseEnter="Skip1_MouseEnter"
+                MouseLeave="Skip1_MouseLeave">
+            <Button.BorderBrush>
+                #FF612817
+            </Button.BorderBrush>
+            
+            <Grid.Column>
+                1
+            </Grid.Column>
+            
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <Image x:Name="SkipImg">
+                <Image.Source>
+                    /Resources/Images/Autorize/Skips1.png
+                </Image.Source>
+                
+                <Image.Stretch>
+                    Fill
+                </Image.Stretch>
+            </Image>
+        </Button>-->
     </Grid>
 </UserControl>

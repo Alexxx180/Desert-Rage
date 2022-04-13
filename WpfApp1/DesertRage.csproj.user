@@ -56,13 +56,22 @@
     <Compile Update="Controls\Menu\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\BattleScene.xaml.cs">
+    <Compile Update="Controls\Scenes\Battle\BattleScene.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Scenes\Battle\Avatar\Ray.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Scenes\Battle\Foe.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\CutScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\LevelMap.xaml.cs">
+    <Compile Update="Controls\Scenes\Map\Avatar\Ray.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Scenes\Map\LevelMap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Reload.xaml.cs">
@@ -112,13 +121,22 @@
     <Page Update="Controls\Menu\MainMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Scenes\BattleScene.xaml">
+    <Page Update="Controls\Scenes\Battle\BattleScene.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Scenes\Battle\Avatar\Ray.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Scenes\Battle\Foe.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\CutScene.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Scenes\LevelMap.xaml">
+    <Page Update="Controls\Scenes\Map\Avatar\Ray.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Scenes\Map\LevelMap.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -127,7 +145,10 @@
     <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Styles\Buttons.xaml">
+    <Page Update="Resources\DataTemplates\Images.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\Total.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

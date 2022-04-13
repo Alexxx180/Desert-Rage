@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image x:Name="BestiaryImg" Grid.ColumnSpan="60" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.RowSpan="36" VerticalAlignment="Top" Panel.ZIndex="10" Source="/Resources/Images/Menu/Kinds/Bestiary.jpg" Stretch="Fill" Opacity="0.95" Visibility="Hidden" IsEnabled="False"/>
+        <Image x:Name="BestiaryImg" Grid.ColumnSpan="60" HorizontalAlignment="Left"  Grid.RowSpan="36" VerticalAlignment="Top" Panel.ZIndex="10" Source="/Resources/Images/Menu/Kinds/Bestiary.jpg" Stretch="Fill" Opacity="0.95" Visibility="Hidden" IsEnabled="False"/>
     </Grid>
 </UserControl>

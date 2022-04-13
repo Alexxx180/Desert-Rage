@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Player.Armory;
 
 namespace DesertRage.Model.Stats.Player
@@ -9,6 +10,32 @@ namespace DesertRage.Model.Stats.Player
         {
             Status = new BitArray(1);
         }
+
+        //DispatcherTimer PRegn = new DispatcherTimer();
+        //DispatcherTimer PCtrl = new DispatcherTimer();
+
+        //private void HeroSetStatus(byte code)
+        //{
+        //    string[] text = { Txts.Common.Hlthy + " ♫", Txts.Common.Ill + " §" };
+        //    GetStatus = code;
+        //    AfterStatus.Content = StatusP.Content = text[code];
+        //}
+
+        //private void PRegn_F_T37(object sender, EventArgs e)
+        //{
+        //    if (GetHP >= GetMHP)
+        //        TimerOff(ref PRegn);
+        //    else
+        //        GetHP++;
+        //}
+
+        //private void PCtrl_F_T38(object sender, EventArgs e)
+        //{
+        //    if (GetAP == GetMAP)
+        //        TimerOff(ref PCtrl);
+        //    else
+        //        GetAP++;
+        //}
 
         #region Hp Management Members
         public void Hit(int value)
@@ -65,7 +92,6 @@ namespace DesertRage.Model.Stats.Player
 
         public BitArray Learned { get; set; }
 
-        public int X { get; set; }
-        public int Y { get; set; }
+        public Position Place { get; set; }
     }
 }

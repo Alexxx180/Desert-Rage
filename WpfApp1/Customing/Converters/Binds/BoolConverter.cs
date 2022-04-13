@@ -10,7 +10,9 @@ namespace DesertRage.Customing.Converters.Binds
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Bool(value) ? Visibility.Hidden : Visibility.Visible;
+            return value.ToBool() ?
+                Visibility.Hidden :
+                Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

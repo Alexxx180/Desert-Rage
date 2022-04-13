@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Battle"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="FightResults" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="7" Visibility="Hidden">
+    <!--<Grid x:Name="FightResults" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="7" Visibility="Hidden">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.04*"/>
             <ColumnDefinition Width="0.01*"/>
@@ -66,27 +66,26 @@
             <RowDefinition Height="0.005*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="AfterBattleMenuImg" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.RowSpan="26" Grid.Row="0" VerticalAlignment="Top" Source="/Resources/Images/Menu/Kinds/LevelUpMenu.jpg" Stretch="Fill" Panel.ZIndex="6" Visibility="Visible" Grid.ColumnSpan="27"/>
+        <Image x:Name="AfterBattleMenuImg" Grid.Column="0" HorizontalAlignment="Left"  Grid.RowSpan="26" Grid.Row="0" VerticalAlignment="Top" Source="/Resources/Images/Menu/Kinds/LevelUpMenu.jpg" Stretch="Fill" Panel.ZIndex="6" Visibility="Visible" Grid.ColumnSpan="27"/>
 
-        <!--Общие сведения-->
         <Viewbox Grid.Row="5" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11">
-            <Label x:Name="AfterLevel" Content="{Binding Path=GetLV, Converter={StaticResource LeftTextConverter}, ConverterParameter='Уровень '}" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="6" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="AfterLevel" Content="{Binding Path=GetLV, Converter={StaticResource LeftTextConverter}, ConverterParameter='Уровень '}" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="6" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
-        <Image x:Name="AfterIcon" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Center" Panel.ZIndex="6" Source="/Resources/Images/Fight/Character/Icon/Static/Usual.png" Stretch="Uniform" Visibility="Visible"/>
+        <Image x:Name="AfterIcon" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center"  Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Center" Panel.ZIndex="6" Source="/Resources/Images/Fight/Character/Icon/Static/Usual.png" Stretch="Uniform" Visibility="Visible"/>
 
         <Viewbox Grid.Row="2" Grid.Column="8" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="AfterName" Content="Имя: Рэй" Grid.Column="8" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="48" FontFamily="Franklin Gothic Demi" Grid.RowSpan="3" Grid.ColumnSpan="4" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="AfterName" Content="Имя: Рэй" Grid.Column="8" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Center" FontSize="48" FontFamily="Franklin Gothic Demi" Grid.RowSpan="3" Grid.ColumnSpan="4" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="2" Grid.Column="12" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11">
-            <Label x:Name="AfterStatus" Content="Статус: здоров ♫" Grid.Column="12" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="7" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="AfterStatus" Content="Статус: здоров ♫" Grid.Column="12" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="3" Grid.ColumnSpan="7" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
-        <ProgressBar x:Name="NextExpBar" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Panel.ZIndex="7" BorderBrush="#FF7010C1" Foreground="#FF7010C1" IsEnabled="False" Visibility="Visible" Value="{Binding Path=GetExp}" Maximum="{Binding Path=GetNlvl}" Grid.Column="8" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="12"/>
+        <ProgressBar x:Name="NextExpBar" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="7" BorderBrush="#FF7010C1" Foreground="#FF7010C1" IsEnabled="False" Visibility="Visible" Value="{Binding Path=GetExp}" Maximum="{Binding Path=GetNlvl}" Grid.Column="8" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="12"/>
 
         <Viewbox Grid.Row="6" Grid.Column="16" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="ExpText" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="7" FontFamily="Cooper Black" FontSize="36" Visibility="Visible" IsEnabled="False" Grid.Column="18" Grid.Row="6" Grid.RowSpan="1" Grid.ColumnSpan="2" Padding="0,0,0,0">
+            <Label x:Name="ExpText" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="7" FontFamily="Cooper Black" FontSize="36" Visibility="Visible" IsEnabled="False" Grid.Column="18" Grid.Row="6" Grid.RowSpan="1" Grid.ColumnSpan="2" Padding="0,0,0,0">
                 <Label.Content>
                     <MultiBinding Converter="{StaticResource BarValuesTextConverter}" ConverterParameter="Опыт: ">
                         <Binding Path="Value" ElementName="NextExpBar" />
@@ -101,16 +100,15 @@
         </Viewbox>
 
 
-        <!--Параметры ДО-->
         <Viewbox Grid.Row="10" Grid.Column="4" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11">
-            <Label x:Name="BeforeParams" Content="Показатели" Grid.Column="4" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="10" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="6" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible" Padding="0,0,0,0"/>
+            <Label x:Name="BeforeParams" Content="Показатели" Grid.Column="4" HorizontalAlignment="Center"  Grid.Row="10" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="6" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible" Padding="0,0,0,0"/>
         </Viewbox>
 
         <Viewbox Grid.Row="12" Grid.Column="2" Grid.RowSpan="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeHPtxt" Content="ОЗ" Padding="0" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="12" VerticalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeHPtxt" Content="ОЗ" Padding="0" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="12" VerticalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <ProgressBar x:Name="BeforeHPbar" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="12" VerticalAlignment="Stretch"  Value="{Binding Path=GetHP}" Maximum="{Binding Path=GetMHP}" Panel.ZIndex="7" Grid.RowSpan="2" Visibility="Visible">
+        <ProgressBar x:Name="BeforeHPbar" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Stretch"  Grid.Row="12" VerticalAlignment="Stretch"  Value="{Binding Path=GetHP}" Maximum="{Binding Path=GetMHP}" Panel.ZIndex="7" Grid.RowSpan="2" Visibility="Visible">
             <ProgressBar.Foreground>
                 <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="0">
                     <Binding Path="Value" ElementName="BeforeHPbar" />
@@ -120,7 +118,7 @@
         </ProgressBar>
 
         <Viewbox Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="6" Panel.ZIndex="11" HorizontalAlignment="Left">
-            <Label x:Name="BeforeHP" Grid.Column="3" Margin="0,0,0,0" Grid.Row="12" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Cooper Black" Panel.ZIndex="8" Foreground="White" Visibility="Visible" FontSize="30" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Label x:Name="BeforeHP" Grid.Column="3"  Grid.Row="12" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Cooper Black" Panel.ZIndex="8" Foreground="White" Visibility="Visible" FontSize="30" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                 <Label.Content>
                     <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
                         <Binding Path="Value" ElementName="BeforeHPbar" />
@@ -131,10 +129,10 @@
         </Viewbox>
 
         <Viewbox Grid.Row="15" Grid.Column="2" Grid.RowSpan="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeAPtxt" Content="ОД" Padding="0" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="15" VerticalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeAPtxt" Content="ОД" Padding="0" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="15" VerticalAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <ProgressBar x:Name="BeforeAPbar" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="15" VerticalAlignment="Stretch"  Value="{Binding Path=GetAP}" Maximum="{Binding Path=GetMAP}" Panel.ZIndex="7" Grid.RowSpan="2" Visibility="Visible">
+        <ProgressBar x:Name="BeforeAPbar" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Stretch"  Grid.Row="15" VerticalAlignment="Stretch"  Value="{Binding Path=GetAP}" Maximum="{Binding Path=GetMAP}" Panel.ZIndex="7" Grid.RowSpan="2" Visibility="Visible">
             <ProgressBar.Foreground>
                 <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="1">
                     <Binding Path="Value" ElementName="BeforeAPbar" />
@@ -144,7 +142,7 @@
         </ProgressBar>
 
         <Viewbox Grid.Row="16" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11" HorizontalAlignment="Left">
-            <Label x:Name="BeforeAP" Grid.Column="3" Margin="0,0,0,0" Grid.Row="15" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Cooper Black" Panel.ZIndex="8" Foreground="White" Visibility="Visible" FontSize="30" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
+            <Label x:Name="BeforeAP" Grid.Column="3"  Grid.Row="15" Grid.RowSpan="2" Grid.ColumnSpan="6" FontFamily="Cooper Black" Panel.ZIndex="8" Foreground="White" Visibility="Visible" FontSize="30" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
                 <Label.Content>
                     <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
                         <Binding Path="Value" ElementName="BeforeAPbar" />
@@ -155,34 +153,34 @@
         </Viewbox>
 
         <Viewbox Grid.Row="18" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeAttack" Content="АТК" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="18" VerticalAlignment="Top" Grid.RowSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible" Grid.ColumnSpan="1"/>
+            <Label x:Name="BeforeAttack" Content="АТК" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="18" VerticalAlignment="Top" Grid.RowSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible" Grid.ColumnSpan="1"/>
         </Viewbox>
         <Viewbox Grid.Row="19" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeDefence" Content="ЗЩТ" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="19" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeDefence" Content="ЗЩТ" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="19" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="20" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeAgility" Content="СКР" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="20" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeAgility" Content="СКР" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="20" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="21" Grid.Column="2" Panel.ZIndex="11" Grid.RowSpan="2">
-            <Label x:Name="BeforeSpecial" Content="СПЦ" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="21" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeSpecial" Content="СПЦ" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="21" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <Image x:Name="BeforeAttackImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="18" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeDefenceImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="19" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeAgilityImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="21" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/SP2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
+        <Image x:Name="BeforeAttackImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="18" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeDefenceImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="19" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeAgilityImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="21" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/SP2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
 
         <Viewbox Grid.Row="18" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeATK" Content="{Binding Path=GetATK}" Grid.Column="7" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="18" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeATK" Content="{Binding Path=GetATK}" Grid.Column="7" HorizontalAlignment="Right"  Grid.Row="18" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="19" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeDEF" Content="{Binding Path=GetDEF}" Grid.Column="7" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="19" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeDEF" Content="{Binding Path=GetDEF}" Grid.Column="7" HorizontalAlignment="Right"  Grid.Row="19" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="20" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeAG" Content="{Binding Path=GetAGL}" Grid.Column="7" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="20" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeAG" Content="{Binding Path=GetAGL}" Grid.Column="7" HorizontalAlignment="Right"  Grid.Row="20" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11" Grid.RowSpan="2">
-            <Label x:Name="BeforeSP" Content="{Binding Path=GetSPL}" Grid.Column="7" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="21" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible" Grid.RowSpan="2"/>
+            <Label x:Name="BeforeSP" Content="{Binding Path=GetSPL}" Grid.Column="7" HorizontalAlignment="Right"  Grid.Row="21" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible" Grid.RowSpan="2"/>
         </Viewbox>
 
 
@@ -280,33 +278,32 @@
             </Viewbox>
         </Grid>
 
-        <!--Получение предметов и материалов-->
         <Viewbox Grid.Row="1" Grid.Column="22" Grid.RowSpan="2" Grid.ColumnSpan="3" Panel.ZIndex="11">
-            <Label x:Name="AfterBattleGet" Content="Получено" Grid.Column="22" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="AfterBattleGet" Content="Получено" Grid.Column="22" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="48" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="3" Grid.Column="22" Grid.RowSpan="2" Grid.ColumnSpan="3" Panel.ZIndex="11" HorizontalAlignment="Left">
-            <Label x:Name="MaterialsGet" Content="Материалы" Grid.Column="22" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="MaterialsGet" Content="Материалы" Grid.Column="22" HorizontalAlignment="Left"  Grid.Row="3" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="5" Grid.Column="24" Grid.RowSpan="1" Panel.ZIndex="11">
-            <Label x:Name="MaterialsAdd" Content="+999" Grid.Column="24" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="36" FontFamily="Cooper Black" Panel.ZIndex="7" Foreground="#FFFFDF4E" Visibility="Visible"/>
+            <Label x:Name="MaterialsAdd" Content="+999" Grid.Column="24" HorizontalAlignment="Left"  Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="36" FontFamily="Cooper Black" Panel.ZIndex="7" Foreground="#FFFFDF4E" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="5" Grid.Column="23" Grid.RowSpan="1" Panel.ZIndex="11">
-            <Label x:Name="MaterialsOnHand" Content="{Binding Path=GetMaterials}" Grid.Column="23" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="36" FontFamily="Cooper Black" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="MaterialsOnHand" Content="{Binding Path=GetMaterials}" Grid.Column="23" HorizontalAlignment="Left"  Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="36" FontFamily="Cooper Black" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
         <Image x:Name="MaterialsGetImg" Grid.ColumnSpan="1" Grid.Column="22" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Stretch" Source="/Resources/Images/Menu/Bag/Materials.png" Panel.ZIndex="7" Grid.RowSpan="1" Visibility="Visible" Stretch="Fill"/>
 
         <Viewbox Grid.Row="7" Grid.Column="22" Grid.RowSpan="1" Grid.ColumnSpan="3" Panel.ZIndex="11" HorizontalAlignment="Left">
-            <Label x:Name="ItemsGet" Content="Предметы" Grid.Column="22" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="7" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
+            <Label x:Name="ItemsGet" Content="Предметы" Grid.Column="22" HorizontalAlignment="Left"  Grid.Row="7" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="22" Grid.RowSpan="11" Grid.ColumnSpan="3" Panel.ZIndex="11" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Label x:Name="ItemsGetSlot1" Content="Антидот: 1" Grid.Column="22" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="9" VerticalAlignment="Top" Grid.RowSpan="11" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="ItemsGetSlot1" Content="Антидот: 1" Grid.Column="22" HorizontalAlignment="Left"  Grid.Row="9" VerticalAlignment="Top" Grid.RowSpan="11" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <Button x:Name="TextOk1" Grid.ColumnSpan="5" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="8" FontSize="36" Click="TextOk1_Click" Visibility="Visible" IsEnabled="False" Grid.RowSpan="3" Grid.Row="22" Grid.Column="21">
+        <Button x:Name="TextOk1" Grid.ColumnSpan="5" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="8" FontSize="36" Click="TextOk1_Click" Visibility="Visible" IsEnabled="False" Grid.RowSpan="3" Grid.Row="22" Grid.Column="21">
             <Image x:Name="BackToAdventureImg" Source="/Resources/Images/Fight/Options/BackToAdventure2.png" Stretch="Fill"/>
         </Button>
-    </Grid>
+    </Grid>-->
 </UserControl>

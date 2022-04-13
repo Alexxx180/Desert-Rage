@@ -4,10 +4,10 @@ namespace DesertRage.Model.Locations
 {
     public class Quests
     {
-        public Quests(int length)
+        public Quests(params string[] descriptions)
         {
-            Descriptions = new string[length];
-            Completion = new BitArray(new bool[length]);
+            Descriptions = descriptions;
+            Completion = new BitArray(descriptions.Length);
         }
 
         public void Complete(int no)
@@ -15,7 +15,8 @@ namespace DesertRage.Model.Locations
             Completion[no] = true;
         }
 
-        public string[] Descriptions { get; set; }
+        public readonly string[] Descriptions;
+
         public BitArray Completion { get; set; }
     }
 }

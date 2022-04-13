@@ -30,7 +30,7 @@ namespace DesertRage.Helpers
         }
 
         public static readonly DependencyProperty CostProperty = DependencyProperty.RegisterAttached(
-        "Cost", typeof(byte), typeof(SkillInfo), new PropertyMetadata(Bits(0)));
+        "Cost", typeof(byte), typeof(SkillInfo), new PropertyMetadata(0));
         public static void SetCost(DependencyObject element, byte value)
         {
             element.SetValue(CostProperty, value);
@@ -38,7 +38,7 @@ namespace DesertRage.Helpers
 
         public static byte GetCost(DependencyObject element)
         {
-            return Bits(element.GetValue(CostProperty));
+            return element.GetValue(CostProperty).ToByte();
         }
     }
 }

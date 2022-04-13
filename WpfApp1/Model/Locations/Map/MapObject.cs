@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesertRage.Model.Locations.Map
+﻿namespace DesertRage.Model.Locations.Map
 {
     public class MapObject
     {

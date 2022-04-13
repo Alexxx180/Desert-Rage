@@ -12,6 +12,56 @@ namespace DesertRage.Customing
 {
     public static class Decorators
     {
+        //#region Deprecated Members
+        //private async void ShowAndHide(Label label, string content, ushort time)
+        //{
+        //    label.Content = content;
+        //    AnyShow(label);
+        //    await Task.Delay(time);
+        //    AnyHide(label);
+        //}
+
+        //private void ChangeBackground(in byte loc, in byte NoSpoilers)
+        //{
+        //    string[] Bmps = new string[] { Paths.Static.Map.Location1,
+        //        Paths.Static.Map.Location2, Paths.Static.Map.Location3,
+        //        Paths.Static.Map.Location4 };
+        //    Img1.Source = Bmper((NoSpoilers == 0) ?
+        //        Paths.Static.Map.Main : Bmps[loc]);
+        //}
+
+        //private void ChangeBackground(in byte loc)
+        //{
+        //    string[] Bmps = new string[] { Paths.Static.Map.Location1,
+        //        Paths.Static.Map.Location2, Paths.Static.Map.Location3,
+        //        Paths.Static.Map.Location4 };
+        //    Img1.Source = Bmper(Bmps[loc]);
+        //}
+
+        //private void SettingsSetAll(params byte[] SettingValues)
+        //{
+        //    Slider[] Sliders = { MusicLoud, SoundsLoud,
+        //        NoiseLoud, GameSpeed, Brightness };
+        //    for (byte i = 0; i < Sliders.Length; i++)
+        //        Sliders[i].Value = Dble(SettingValues[i]) * 0.01;
+        //    TimerTurnOn.IsChecked = SettingValues[5] >= 1;
+        //}
+
+        //private void PlayerSetLocation(in int row, in int column)
+        //{
+        //    MainHero.Y = row;
+        //    MainHero.X = column;
+        //    AnyGrid(Img2, row, column);
+        //}
+
+        //private void FastTextChange(Label[] Labs, in string[] texts)
+        //{
+        //    for (byte i = 0; i < Labs.Length; i++)
+        //        Labs[i].Content = texts[i];
+        //}
+        //#endregion
+
+
         public static void SetActive
             (this FrameworkElement element, bool setToActive)
         {
@@ -124,10 +174,12 @@ namespace DesertRage.Customing
         {
             return new Uri(Path, UriKind.RelativeOrAbsolute);
         }
+
         public static BitmapImage Bmper(string UriToBmp)
         {
             return new BitmapImage(new Uri(UriToBmp, UriKind.RelativeOrAbsolute));
         }
+
         public static BitmapImage[] BmpersToX(params string[] texts)
         {
             List<BitmapImage> bmps = new List<BitmapImage>();
@@ -135,19 +187,23 @@ namespace DesertRage.Customing
                 bmps.Add(Bmper(texts[i]));
             return bmps.ToArray();
         }
+
         public static int CheckColumn(in Image img, int offset)
         {
-            return Math.Max(Bits(img.GetValue(Grid.ColumnProperty)) - offset, 0);
+            return Math.Max(img.GetValue(Grid.ColumnProperty).ToByte() - offset, 0);
         }
+
         public static int CheckRow(in Image img, int offset)
         {
-            return Math.Max(Bits(img.GetValue(Grid.RowProperty)) - offset, 0);
+            return Math.Max(img.GetValue(Grid.RowProperty).ToByte() - offset, 0);
         }
+
         public static void FastEnableDisableBtn(bool enabled, params Button[] buttons)
         {
             for (byte i = 0; i < buttons.Length; i++)
                 buttons[i].IsEnabled = enabled;
         }
+
         public static void FastEnableDisableBtn(bool[] enabled, params Button[] buttons)
         {
             for (byte i = 0; i < buttons.Length; i++)
@@ -158,15 +214,18 @@ namespace DesertRage.Customing
         {
             timer.Start();
         }
+
         public static void TimerOn(ref DispatcherTimer timer, in ushort time)
         {
             timer.Interval = TimeSpan.FromMilliseconds(time);
             timer.Start();
         }
+
         public static void TimerOff(ref DispatcherTimer timer)
         {
             timer.Stop();
         }
+
         public static void PlayOST(MediaElement element, in string Path)
         {
             element.Stop();

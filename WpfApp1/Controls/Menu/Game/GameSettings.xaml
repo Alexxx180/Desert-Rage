@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="GameSettings" Panel.ZIndex="11" Visibility="Hidden">
+    <!--<Grid x:Name="GameSettings" Panel.ZIndex="11" Visibility="Hidden">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.025*"/>
             <ColumnDefinition Width="0.23*"/>
@@ -29,40 +29,39 @@
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
 
-        <!--Настройки-->
 
-        <Slider x:Name="MusicLoud" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Panel.ZIndex="11" SmallChange="0.01" Maximum="1" Value="0.8" Visibility="Visible">
+        <Slider x:Name="MusicLoud" Grid.Column="3" HorizontalAlignment="Stretch"  Grid.Row="2" VerticalAlignment="Center" Panel.ZIndex="11" SmallChange="0.01" Maximum="1" Value="0.8" Visibility="Visible">
             <Slider.LayoutTransform>
                 <ScaleTransform  x:Name="MuLd" ScaleY="3" ScaleX="3" CenterX="15" CenterY="15"/>
             </Slider.LayoutTransform>
         </Slider>
-        <Slider x:Name="SoundsLoud" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" Panel.ZIndex="11" Width="225" Height="22" SmallChange="0.01" Maximum="1" ValueChanged="SoundsLoud_ValueChanged" Value="1" Visibility="Visible">
+        <Slider x:Name="SoundsLoud" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Center" Panel.ZIndex="11" Width="225" Height="22" SmallChange="0.01" Maximum="1" ValueChanged="SoundsLoud_ValueChanged" Value="1" Visibility="Visible">
             <Slider.LayoutTransform>
                 <ScaleTransform x:Name="SnLd" ScaleY="3" ScaleX="3" CenterX="15" CenterY="15"/>
             </Slider.LayoutTransform>
         </Slider>
-        <Slider x:Name="NoiseLoud" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Panel.ZIndex="11" Width="225" Height="22" SmallChange="0.01" Maximum="1" ValueChanged="NoiseLoud_ValueChanged" Value="0.7" Visibility="Visible">
+        <Slider x:Name="NoiseLoud" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="6" VerticalAlignment="Center" Panel.ZIndex="11" Width="225" Height="22" SmallChange="0.01" Maximum="1" ValueChanged="NoiseLoud_ValueChanged" Value="0.7" Visibility="Visible">
             <Slider.LayoutTransform>
                 <ScaleTransform x:Name="NsLd" ScaleY="3" ScaleX="3" CenterX="15" CenterY="15"/>
             </Slider.LayoutTransform>
         </Slider>
-        <Slider x:Name="GameSpeed" Grid.ColumnSpan="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Panel.ZIndex="11" Grid.RowSpan="7" Width="23" Height="160" SmallChange="0.25" Maximum="2" Orientation="Vertical" Value="1" Minimum="0.25" Visibility="Visible" ValueChanged="GameSpeed_ValueChanged">
+        <Slider x:Name="GameSpeed" Grid.ColumnSpan="1" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" Panel.ZIndex="11" Grid.RowSpan="7" Width="23" Height="160" SmallChange="0.25" Maximum="2" Orientation="Vertical" Value="1" Minimum="0.25" Visibility="Visible" ValueChanged="GameSpeed_ValueChanged">
             <Slider.LayoutTransform>
                 <ScaleTransform x:Name="Gs" ScaleY="3" ScaleX="3" CenterX="15" CenterY="15"/>
             </Slider.LayoutTransform>
         </Slider>
-        <Slider x:Name="Brightness" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="8" VerticalAlignment="Center" Panel.ZIndex="11" Height="22" SmallChange="0.01" Maximum="1" Width="225" Value="0.5" Minimum="0.01" Visibility="Visible">
+        <Slider x:Name="Brightness" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="8" VerticalAlignment="Center" Panel.ZIndex="11" Height="22" SmallChange="0.01" Maximum="1" Width="225" Value="0.5" Minimum="0.01" Visibility="Visible">
             <Slider.LayoutTransform>
                 <ScaleTransform x:Name="Brgt" ScaleY="3" ScaleX="3" CenterX="15" CenterY="15"/>
             </Slider.LayoutTransform>
         </Slider>
 
         <Viewbox Grid.Row="2" Grid.Column="2">
-            <Label x:Name="MusicText" Content="Музыка" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
+            <Label x:Name="MusicText" Content="Музыка" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right">
-            <Label x:Name="MusicPercent" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Stretch" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" Visibility="Visible" IsEnabled="True">
+            <Label x:Name="MusicPercent" Grid.Column="3" HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" Visibility="Visible" IsEnabled="True">
                 <Label.Content>
                     <Binding ElementName="MusicLoud" Path="Value" Converter="{StaticResource RightTextConverter}" ConverterParameter="%"></Binding>
                 </Label.Content>
@@ -70,11 +69,11 @@
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2">
-            <Label x:Name="SoundsText" Content="Звуки" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
+            <Label x:Name="SoundsText" Content="Звуки" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="4" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Right">
-            <Label x:Name="SoundsPercent" Grid.Column="3" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
+            <Label x:Name="SoundsPercent" Grid.Column="3" HorizontalAlignment="Right"  Grid.Row="3" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
                 <Label.Content>
                     <Binding ElementName="SoundsLoud" Path="Value" Converter="{StaticResource RightTextConverter}" ConverterParameter="%"></Binding>
                 </Label.Content>
@@ -82,11 +81,11 @@
         </Viewbox>
 
         <Viewbox Grid.Row="6" Grid.Column="2">
-            <Label x:Name="NoiseText" Content="Шумы" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
+            <Label x:Name="NoiseText" Content="Шумы" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="6" VerticalAlignment="Center" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="5" Grid.Column="3" HorizontalAlignment="Right">
-            <Label x:Name="NoisePercent" Grid.Column="3" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
+            <Label x:Name="NoisePercent" Grid.Column="3" HorizontalAlignment="Right"  Grid.Row="5" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
                 <Label.Content>
                     <Binding ElementName="NoiseLoud" Path="Value" Converter="{StaticResource RightTextConverter}" ConverterParameter="%"></Binding>
                 </Label.Content>
@@ -94,11 +93,11 @@
         </Viewbox>
 
         <Viewbox Grid.Row="8" Grid.Column="2">
-            <Label x:Name="BrightnessText" Content="Яркость" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="8" VerticalAlignment="Top" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
+            <Label x:Name="BrightnessText" Content="Яркость" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="8" VerticalAlignment="Top" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="7" Grid.Column="3" HorizontalAlignment="Right">
-            <Label x:Name="BrightnessPercent" Grid.Column="3" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="7" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" Visibility="Visible">
+            <Label x:Name="BrightnessPercent" Grid.Column="3" HorizontalAlignment="Right"  Grid.Row="7" VerticalAlignment="Bottom" FontFamily="Cooper Black" FontSize="40" Panel.ZIndex="12" Foreground="White" Visibility="Visible">
                 <Label.Content>
                     <Binding ElementName="Brightness" Path="Value" Converter="{StaticResource RightTextConverter}" ConverterParameter="%"></Binding>
                 </Label.Content>
@@ -106,18 +105,18 @@
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="1">
-            <Label x:Name="GameSpeedText" Content="Скорость боя" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="1" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
+            <Label x:Name="GameSpeedText" Content="Скорость боя" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="1" FontFamily="Franklin Gothic Medium" FontSize="48" Panel.ZIndex="11" IsEnabled="True" Visibility="Visible"/>
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="1">
-            <Label x:Name="GameSpeedX" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="9" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi" FontSize="60" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
+            <Label x:Name="GameSpeedX" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="9" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi" FontSize="60" Panel.ZIndex="12" Foreground="White" IsEnabled="True" Visibility="Visible">
                 <Label.Content>
                     <Binding ElementName="GameSpeed" Path="Value" Converter="{StaticResource LeftTextConverter}" ConverterParameter="x"></Binding>
                 </Label.Content>
             </Label>
         </Viewbox>
 
-        <CheckBox x:Name="TimerTurnOn" Grid.Column="3" IsChecked="True" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="9" VerticalAlignment="Center" Panel.ZIndex="11" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="12" Checked="TimerTurnOn_Checked" Unchecked="TimerTurnOn_Unchecked" Visibility="Visible" IsEnabled="True">
+        <CheckBox x:Name="TimerTurnOn" Grid.Column="3" IsChecked="True" HorizontalAlignment="Left"  Grid.Row="9" VerticalAlignment="Center" Panel.ZIndex="11" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="12" Checked="TimerTurnOn_Checked" Unchecked="TimerTurnOn_Unchecked" Visibility="Visible" IsEnabled="True">
             <CheckBox.LayoutTransform>
                 <ScaleTransform x:Name="TmOn" ScaleY="4" ScaleX="4" CenterX="15" CenterY="15"/>
             </CheckBox.LayoutTransform>
@@ -130,5 +129,5 @@
                 </Viewbox>
             </CheckBox.Content>
         </CheckBox>
-    </Grid>
+    </Grid>-->
 </UserControl>

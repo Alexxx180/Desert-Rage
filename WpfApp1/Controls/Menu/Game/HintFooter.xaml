@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="800">
-    <Grid Grid.Row="1" Grid.RowSpan="2" Panel.ZIndex="11">
+    <!--<Grid Grid.Row="1" Grid.RowSpan="2" Panel.ZIndex="11">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.05*"/>
             <ColumnDefinition/>
@@ -26,10 +26,10 @@
             </Grid.RowDefinitions>
 
             <Viewbox HorizontalAlignment="Left">
-                <Label x:Name="DescribeHeader" Content="Совет" HorizontalAlignment="Left"  Padding="0" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="Black" FontSize="48" FontFamily="Britannic Bold" Panel.ZIndex="11" Visibility="Visible" IsEnabled="False" DockPanel.Dock="Top"/>
+                <Label x:Name="DescribeHeader" Content="Совет" HorizontalAlignment="Left"  Padding="0"  VerticalAlignment="Top" Foreground="White" BorderBrush="Black" FontSize="48" FontFamily="Britannic Bold" Panel.ZIndex="11" Visibility="Visible" IsEnabled="False" DockPanel.Dock="Top"/>
             </Viewbox>
             <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                <Label x:Name="Describe1" Content="ОЗ имеет тенденцию падать до 0. Враги только этого и добиваются.&#xA;Похоже что ненадолго." HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="Black" FontFamily="Britannic Bold" FontSize="36" IsEnabled="False" Visibility="Visible" DockPanel.Dock="Bottom" />
+                <Label x:Name="Describe1" Content="ОЗ имеет тенденцию падать до 0. Враги только этого и добиваются.&#xA;Похоже что ненадолго." HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="Black" FontFamily="Britannic Bold" FontSize="36" IsEnabled="False" Visibility="Visible" DockPanel.Dock="Bottom" />
             </Viewbox>
         </Grid>
 
@@ -46,14 +46,14 @@
             </Grid.RowDefinitions>
 
             <Viewbox Grid.Row="1" Grid.Column="1" Panel.ZIndex="11">
-                <Label x:Name="InfoIndex" Content="1/20" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" IsEnabled="False" Visibility="Visible" Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="InfoIndex" Content="1/20" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" IsEnabled="False" Visibility="Visible" Grid.Column="1" Grid.Row="1"/>
             </Viewbox>
-            <Button x:Name="InfoIndexPlus" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Gill Sans Ultra Bold" FontSize="36" Click="InfoIndexPlus_Click" Visibility="Visible" Grid.Row="1" Grid.Column="2">
+            <Button x:Name="InfoIndexPlus" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Gill Sans Ultra Bold" FontSize="36" Click="InfoIndexPlus_Click" Visibility="Visible" Grid.Row="1" Grid.Column="2">
                 <Image x:Name="InfoIndexPlusImg" Source="/Resources/Images/Fight/Options/ToNext.png" Stretch="Fill" />
             </Button>
-            <Button x:Name="InfoIndexMinus" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Gill Sans Ultra Bold" FontSize="36" Click="InfoIndexMinus_Click" IsEnabled="False" Visibility="Hidden" Grid.Row="1">
+            <Button x:Name="InfoIndexMinus" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Gill Sans Ultra Bold" FontSize="36" Click="InfoIndexMinus_Click" IsEnabled="False" Visibility="Hidden" Grid.Row="1">
                 <Image x:Name="InfoIndexMinusImg" Source="/Resources/Images/Fight/Options/ToPrev.png" Stretch="Fill" />
             </Button>
         </Grid>
-    </Grid>
+    </Grid>-->
 </UserControl>

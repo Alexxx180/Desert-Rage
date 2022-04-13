@@ -3,237 +3,155 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http:f//schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DesertRage"
         xmlns:bind="clr-namespace:DesertRage.Customing.Converters.Binds"
-        xmlns:help="clr-namespace:DesertRage.Helpers"
-        xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
-        xmlns:vms="clr-namespace:DesertRage"
-        Title="Desert rage" KeyDown="Window_KeyDown" Height="1080" Width="1920" ResizeMode="NoResize" WindowStyle="None" WindowState="Maximized" KeyUp="Form1_KeyUp">
+        xmlns:scene="clr-namespace:DesertRage.Controls.Scenes"
+        Title="Desert rage"
+        Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized"
+        ResizeMode="NoResize">
     <Window.DataContext>
         <Binding RelativeSource="{RelativeSource Self}"/>
     </Window.DataContext>
-    
+
     <Window.Resources>
-        <bind:BarColorConverter x:Key="BarColorConverter"/>
-        <bind:BarValuesTextConverter x:Key="BarValuesTextConverter"/>
-        <bind:ImageConverter x:Key="ImageConverter" />
-        <bind:LeftTextConverter x:Key="LeftTextConverter" />
-        <bind:RightTextConverter x:Key="RightTextConverter" />
-        <bind:InvertConverter x:Key="InvertConverter"/>
-        <bind:BoolConverter x:Key="BoolConverter"/>
-        <bind:AccessConverter x:Key="AccessConverter"/>
-        <bind:VisibilityConverter x:Key="VisibilityConverter"/>
-        <bind:VisibilityConverter2 x:Key="VisibilityConverter2"/>
+        <!--<bind:InvertConverter x:Key="InvertConverter"/>-->
     </Window.Resources>
-    
-    <Grid x:Name="AllGameAlignment" Background="Black">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
+    <!--x:Name="AllGameAlignment"-->
+    <Grid  Background="Black">
         <!--Звуковое сопровождение-->
-        <MediaElement x:Name="Sound1" MediaEnded="Sound1_MediaEnded">
-            <MediaElement.Source>
-                /Resources/OST/Music/Main_theme.mp3
-            </MediaElement.Source>
-            
-            <MediaElement.Visibility>
-                Collapsed
-            </MediaElement.Visibility>
-            
-            <MediaElement.Volume>
-                <Binding ElementName="MusicLoud" Path="Value"/>
-            </MediaElement.Volume>
-            
-            <MediaElement.LoadedBehavior>
-                Manual
-            </MediaElement.LoadedBehavior>
-        </MediaElement>
+        <StackPanel>
+            <MediaElement x:Name="Sound1" MediaEnded="Sound1_MediaEnded">
+                <MediaElement.Visibility>
+                    Collapsed
+                </MediaElement.Visibility>
 
-        <MediaElement x:Name="Sound2" MediaEnded="Sounds_Ended">
-            <MediaElement.Source>
-                /Resources/OST/Noises/Punch.mp3
-            </MediaElement.Source>
+                <MediaElement.Volume>
+                    <Binding ElementName="MusicLoud" Path="Value"/>
+                </MediaElement.Volume>
 
-            <MediaElement.Visibility>
-                Collapsed
-            </MediaElement.Visibility>
+                <MediaElement.LoadedBehavior>
+                    Manual
+                </MediaElement.LoadedBehavior>
 
-            <MediaElement.Volume>
-                <Binding ElementName="NoiseLoud" Path="Value"/>
-            </MediaElement.Volume>
+                <MediaElement.Triggers>
+                    <EventTrigger RoutedEvent="MediaElement.Loaded">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <MediaTimeline x:Name="MusicSource"
+                                                   Source="/Resources/OST/Music/Main_theme.mp3"
+                                                   Storyboard.TargetName="myMediaElement"  
+                                                   RepeatBehavior="Forever" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </MediaElement.Triggers>
+            </MediaElement>
 
-            <MediaElement.LoadedBehavior>
-                Manual
-            </MediaElement.LoadedBehavior>
-        </MediaElement>
+            <MediaElement x:Name="Sound2" MediaEnded="OnSoundsEnd">
+                <MediaElement.Source>
+                    /Resources/OST/Noises/Punch.mp3
+                </MediaElement.Source>
 
-        <MediaElement x:Name="Sound3" MediaEnded="Sounds_Ended">
-            <MediaElement.Source>
-                /Resources/OST/Sounds/ChestOpened.mp3
-            </MediaElement.Source>
+                <MediaElement.Visibility>
+                    Collapsed
+                </MediaElement.Visibility>
 
-            <MediaElement.Visibility>
-                Collapsed
-            </MediaElement.Visibility>
+                <MediaElement.Volume>
+                    <Binding ElementName="NoiseLoud" Path="Value"/>
+                </MediaElement.Volume>
 
-            <MediaElement.Volume>
-                <Binding ElementName="SoundsLoud" Path="Value"/>
-            </MediaElement.Volume>
+                <MediaElement.LoadedBehavior>
+                    Manual
+                </MediaElement.LoadedBehavior>
+            </MediaElement>
 
-            <MediaElement.LoadedBehavior>
-                Manual
-            </MediaElement.LoadedBehavior>
-        </MediaElement>
+            <MediaElement x:Name="Sound3" MediaEnded="OnSoundsEnd">
+                <MediaElement.Source>
+                    /Resources/OST/Sounds/ChestOpened.mp3
+                </MediaElement.Source>
 
-        <!--Карта-->
-        <Viewbox Grid.Row="32" Grid.Column="53" Grid.RowSpan="4" Grid.ColumnSpan="7" Panel.ZIndex="6" HorizontalAlignment="Right">
-            <Label x:Name="TimerFlees" Content="2:30" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" FontFamily="Bauhaus 93" FontSize="72" Panel.ZIndex="7" Grid.Column="53" Grid.Row="32" Visibility="Hidden" Grid.ColumnSpan="7" Grid.RowSpan="4" BorderBrush="#FF00DCFF" BorderThickness="8,8,8,8" Foreground="White" />
-        </Viewbox>
+                <MediaElement.Visibility>
+                    Collapsed
+                </MediaElement.Visibility>
 
-        <!--Модели на карте-->
-        <Image x:Name="Img1" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/Images/Locations/Regular/New_game_show.jpg" Grid.Column="0" Grid.Row="0" Visibility="Hidden" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="3" IsEnabled="False"/>
-        <ProgressBar x:Name="HPhelper" Grid.Row="33" Grid.Column="17" Grid.ColumnSpan="3" Value="{Binding ElementName=HPbar1, Path=Value}" Minimum="0" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Visibility="Hidden" Panel.ZIndex="5">
-            <ProgressBar.Foreground>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#FF3AAC28"/>
-                    <GradientStop Color="#FF00F3FF" Offset="1"/>
-                    <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                </LinearGradientBrush>
-            </ProgressBar.Foreground>
-        </ProgressBar>
-        
-        <Image x:Name="BrightnessImg" IsHitTestVisible="False" Grid.ColumnSpan="60" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.RowSpan="36" VerticalAlignment="Top" Panel.ZIndex="25" Source="/Resources/Images/Locations/Regular/AbsoluteBlack.jpg" Stretch="Fill" Visibility="Visible" IsEnabled="False">
-            <Image.Opacity>
-                <Binding ElementName="Brightness" Path="Value" Converter="{StaticResource InvertConverter}" ConverterParameter="1"></Binding>
-            </Image.Opacity>
+                <MediaElement.Volume>
+                    <Binding ElementName="SoundsLoud" Path="Value"/>
+                </MediaElement.Volume>
+
+                <MediaElement.LoadedBehavior>
+                    Manual
+                </MediaElement.LoadedBehavior>
+            </MediaElement>
+        </StackPanel>
+
+        <Label>
+            <!--<scene:LevelMap/>-->
+        </Label>
+
+        <Image x:Name="BrightnessImg">
+            <Image.IsHitTestVisible>
+                False
+            </Image.IsHitTestVisible>
+
+            <Image.Stretch>
+                Fill
+            </Image.Stretch>
+
+            <!--<Image.Opacity>
+                <Binding ElementName="Brightness" Path="Value" ConverterParameter="1">
+                    <Binding.Converter>
+                        <StaticResource ResourceKey="InvertConverter"/>
+                    </Binding.Converter>
+                </Binding>
+            </Image.Opacity>-->
+
+            <Image.Source>
+                /Resources/Images/Locations/Regular/AbsoluteBlack.jpg
+            </Image.Source>
         </Image>
 
-        <Grid x:Name="Pause" Grid.RowSpan="36" Grid.ColumnSpan="60" Background="#7F000000" Panel.ZIndex="25" Visibility="Hidden" IsEnabled="False">
-            <Label Content="Pause | Пауза" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="96" FontFamily="Cambria" FontWeight="Bold">
-                <Label.Foreground>
+        <Grid x:Name="Pause">
+            <Grid.Visibility>
+                Hidden
+            </Grid.Visibility>
+
+            <Grid.IsEnabled>
+                False
+            </Grid.IsEnabled>
+
+            <Grid.Background>
+                #7F000000
+            </Grid.Background>
+
+            <TextBlock Text="Pause | Пауза" FontSize="96">
+                <TextBlock.FontWeight>
+                    Bold
+                </TextBlock.FontWeight>
+
+                <TextBlock.FontFamily>
+                    Cambria
+                </TextBlock.FontFamily>
+
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.HorizontalAlignment>
+                    Center
+                </TextBlock.HorizontalAlignment>
+
+                <TextBlock.Foreground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFFB9809" Offset="0"/>
                         <GradientStop Color="White" Offset="1"/>
                     </LinearGradientBrush>
-                </Label.Foreground>
-            </Label>
+                </TextBlock.Foreground>
+            </TextBlock>
         </Grid>
     </Grid>
 </Window>

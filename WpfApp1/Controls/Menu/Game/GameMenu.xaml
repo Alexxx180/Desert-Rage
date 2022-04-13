@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="GameMenu">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.7375*"/>
             <ColumnDefinition Width="0.2625*"/>

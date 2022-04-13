@@ -35,6 +35,11 @@ namespace DesertRage.Customing.Converters
             return Convert.ToDouble(obj);
         }
 
+        public static Uri ToUri(this string path)
+        {
+            return new Uri(path);
+        }
+
         public static string[] ToStrings(this object[] objs)
         {
             return StrX(objs).ToArray();

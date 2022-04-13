@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="GameStatus" Panel.ZIndex="11" Visibility="Visible">
+    <Grid  Panel.ZIndex="11" Visibility="Visible">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.025*"/>
             <ColumnDefinition Width="0.025*"/>
@@ -42,43 +42,43 @@
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="Icon0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="{Binding ElementName=Img5, Path=Source}" Visibility="Visible" IsEnabled="False" Stretch="Fill" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Image x:Name="Icon0" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="{Binding ElementName=Img5, Path=Source}" Visibility="Visible" IsEnabled="False" Stretch="Fill" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="Name0" Content="Имя: Рэй" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="1" Grid.RowSpan="1" Grid.Column="5"/>
+            <Label x:Name="Name0" Content="Имя: Рэй" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="1" Grid.RowSpan="1" Grid.Column="5"/>
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="10" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="Level0" Content="Уровень: 1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.RowSpan="1" Grid.Row="2" Grid.Column="5"/>
+            <Label x:Name="Level0" Content="Уровень: 1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.RowSpan="1" Grid.Row="2" Grid.Column="5"/>
         </Viewbox>
 
         <Viewbox Grid.Row="1" Grid.Column="7" Grid.RowSpan="1" Grid.ColumnSpan="3" Panel.ZIndex="11">
-            <Label x:Name="StatusP" Content="Статус: здоров ♫" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="1" Grid.Column="7"/>
+            <Label x:Name="StatusP" Content="Статус: здоров ♫" Grid.ColumnSpan="3" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="1" Grid.Column="7"/>
         </Viewbox>
 
         <Viewbox Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="HPtext1" Content="Очки здоровья" Padding="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4"/>
+            <Label x:Name="HPtext1" Content="Очки здоровья" Padding="0" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4"/>
         </Viewbox>
 
-        <ProgressBar x:Name="HPbar1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=HPbar, Path=Foreground}" BorderBrush="{Binding ElementName=HPbar, Path=BorderBrush}" Value="{Binding ElementName=HPbar, Path=Value}" Maximum="{Binding ElementName=HPbar, Path=Maximum}" Background="WhiteSmoke" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="8" Grid.RowSpan="1"/>
+        <ProgressBar x:Name="HPbar1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=HPbar, Path=Foreground}" BorderBrush="{Binding ElementName=HPbar, Path=BorderBrush}" Value="{Binding ElementName=HPbar, Path=Value}" Maximum="{Binding ElementName=HPbar, Path=Maximum}" Background="WhiteSmoke" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="8" Grid.RowSpan="1"/>
 
         <Viewbox Grid.Row="4" Grid.Column="6" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="HP1" Content="{Binding ElementName=HP, Path=Content}" Foreground="White" Grid.ColumnSpan="2"  Margin="0,0,0,0" Panel.ZIndex="11" FontFamily="Cooper Black" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible" Grid.RowSpan="1" Grid.Row="4" Grid.Column="6"/>
+            <Label x:Name="HP1" Content="{Binding ElementName=HP, Path=Content}" Foreground="White" Grid.ColumnSpan="2"   Panel.ZIndex="11" FontFamily="Cooper Black" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible" Grid.RowSpan="1" Grid.Row="4" Grid.Column="6"/>
         </Viewbox>
 
         <Viewbox Grid.Row="6" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="APtext1" Content="Очки действий" Padding="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="6" Grid.Column="2"/>
+            <Label x:Name="APtext1" Content="Очки действий" Padding="0" Grid.ColumnSpan="4" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="6" Grid.Column="2"/>
         </Viewbox>
 
-        <ProgressBar x:Name="APbar1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=APbar, Path=Foreground}" BorderBrush="{Binding ElementName=APbar, Path=BorderBrush}" Value="{Binding ElementName=APbar, Path=Value}" Maximum="{Binding ElementName=APbar, Path=Maximum}" Visibility="Visible" IsEnabled="False" Grid.RowSpan="1" Grid.Row="6" Grid.Column="8"/>
+        <ProgressBar x:Name="APbar1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=APbar, Path=Foreground}" BorderBrush="{Binding ElementName=APbar, Path=BorderBrush}" Value="{Binding ElementName=APbar, Path=Value}" Maximum="{Binding ElementName=APbar, Path=Maximum}" Visibility="Visible" IsEnabled="False" Grid.RowSpan="1" Grid.Row="6" Grid.Column="8"/>
 
         <Viewbox Grid.Row="6" Grid.Column="6" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="AP1" Content="{Binding ElementName=AP, Path=Content}" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,0,0" Panel.ZIndex="11" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="6" Grid.Column="6"/>
+            <Label x:Name="AP1" Content="{Binding ElementName=AP, Path=Content}" Foreground="White" Grid.ColumnSpan="2"  Panel.ZIndex="11" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="6" Grid.Column="6"/>
         </Viewbox>
 
-        <ProgressBar x:Name="ExpBar1" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Value="{Binding Path=GetExp}" Maximum="{Binding Path=GetNlvl}" Panel.ZIndex="11" BorderBrush="#FF7010C1" Foreground="#FF7010C1" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="2" Grid.Column="5"/>
+        <ProgressBar x:Name="ExpBar1" Grid.ColumnSpan="5" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Value="{Binding Path=GetExp}" Maximum="{Binding Path=GetNlvl}" Panel.ZIndex="11" BorderBrush="#FF7010C1" Foreground="#FF7010C1" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="2" Grid.Column="5"/>
 
-        <Viewbox Grid.Row="2" Grid.Column="10" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
-            <Label x:Name="Exp1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" Grid.Column="10" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.ColumnSpan="2" Grid.Row="2">
+        <!--<Viewbox Grid.Row="2" Grid.Column="10" Grid.RowSpan="1" Grid.ColumnSpan="2" Panel.ZIndex="11">
+            <Label x:Name="Exp1" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" Grid.Column="10" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.ColumnSpan="2" Grid.Row="2">
                 <Label.Content>
                     <MultiBinding Converter="{StaticResource BarValuesTextConverter}" ConverterParameter="Опыт: ">
                         <Binding Path="Value" ElementName="ExpBar1" />
@@ -86,72 +86,72 @@
                     </MultiBinding>
                 </Label.Content>
             </Label>
-        </Viewbox>
+        </Viewbox>-->
 
         <Viewbox Grid.Row="8" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="Params" Content="Параметры" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Panel.ZIndex="11" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="8" Grid.Column="3"/>
+            <Label x:Name="Params" Content="Параметры" Grid.ColumnSpan="4" HorizontalAlignment="Left"  VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Panel.ZIndex="11" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="8" Grid.Column="3"/>
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="ParamsATK" Content="АТК" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="2" Grid.RowSpan="1"/>
+            <Label x:Name="ParamsATK" Content="АТК" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="2" Grid.RowSpan="1"/>
         </Viewbox>
         <Viewbox Grid.Row="10" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="ParamsDEF" Content="ЗЩТ" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="2"/>
+            <Label x:Name="ParamsDEF" Content="ЗЩТ" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="2"/>
         </Viewbox>
         <Viewbox Grid.Row="11" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="ParamsAG" Content="СКР" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="2"/>
+            <Label x:Name="ParamsAG" Content="СКР" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="2"/>
         </Viewbox>
         <Viewbox Grid.Row="12" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="ParamsSP" Content="СПЦ" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Franklin Gothic Demi" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="2"/>
+            <Label x:Name="ParamsSP" Content="СПЦ" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Franklin Gothic Demi" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="2"/>
         </Viewbox>
 
         <Viewbox Grid.Row="9" Grid.Column="5" Panel.ZIndex="11">
-            <Label x:Name="ATK1" Content="{Binding Path=GetATK}" Grid.ColumnSpan="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="2" Grid.Row="9" Grid.Column="5"/>
+            <Label x:Name="ATK1" Content="{Binding Path=GetATK}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="2" Grid.Row="9" Grid.Column="5"/>
         </Viewbox>
         <Viewbox Grid.Row="10" Grid.Column="5" Panel.ZIndex="11">
-            <Label x:Name="DEF1" Content="{Binding Path=GetDEF}" Grid.ColumnSpan="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="10" Grid.Column="5"/>
+            <Label x:Name="DEF1" Content="{Binding Path=GetDEF}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="10" Grid.Column="5"/>
         </Viewbox>
         <Viewbox Grid.Row="11" Grid.Column="5" Panel.ZIndex="11">
-            <Label x:Name="AG1" Content="{Binding Path=GetHero.Speed}" Grid.ColumnSpan="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="11" Grid.Column="5"/>
+            <Label x:Name="AG1" Content="{Binding Path=GetHero.Speed}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="11" Grid.Column="5"/>
         </Viewbox>
         <Viewbox Grid.Row="12" Grid.Column="5" Panel.ZIndex="11">
-            <Label x:Name="SP1" Content="{Binding Path=GetHero.Special}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="5"/>
+            <Label x:Name="SP1" Content="{Binding Path=GetHero.Special}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="5"/>
         </Viewbox>
 
-        <Image x:Name="ATKImg" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Visibility="Visible" Grid.Row="9" Grid.Column="3" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <Image x:Name="DEFImg" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="3"/>
-        <Image x:Name="AGImg" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/AG2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="3"/>
-        <Image x:Name="SPImg" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/SP2.png" Visibility="Visible" Stretch="Fill" Grid.Row="12" Grid.Column="3"/>
+        <Image x:Name="ATKImg" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Visibility="Visible" Grid.Row="9" Grid.Column="3" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image x:Name="DEFImg" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="3"/>
+        <Image x:Name="AGImg" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/AG2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="3"/>
+        <Image x:Name="SPImg" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/SP2.png" Visibility="Visible" Stretch="Fill" Grid.Row="12" Grid.Column="3"/>
 
         <!--Снаряжение персонажа-->
 
         <Viewbox Grid.Row="8" Grid.Column="9" Panel.ZIndex="11">
-            <Label x:Name="EquipText" Content="Экипировка" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Grid.Column="9" IsEnabled="False" Visibility="Visible" Grid.Row="8"/>
+            <Label x:Name="EquipText" Content="Экипировка" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Grid.Column="9" IsEnabled="False" Visibility="Visible" Grid.Row="8"/>
         </Viewbox>
         <Viewbox Grid.Row="9" Grid.Column="9" Panel.ZIndex="11">
-            <Label x:Name="EquipH" Content="{Binding Path=GetHero.Weapon.Name}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="9"/>
+            <Label x:Name="EquipH" Content="{Binding Path=GetHero.Weapon.Name}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="9"/>
         </Viewbox>
         <Viewbox Grid.Row="10" Grid.Column="9" Panel.ZIndex="11">
-            <Label x:Name="EquipB" Content="{Binding Path=GetHero.Armor.Name}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="9"/>
+            <Label x:Name="EquipB" Content="{Binding Path=GetHero.Armor.Name}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="9"/>
         </Viewbox>
         <Viewbox Grid.Row="11" Grid.Column="9" Panel.ZIndex="11">
-            <Label x:Name="EquipL" Content="{Binding Path=GetHero.Legs.Name}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="9"/>
+            <Label x:Name="EquipL" Content="{Binding Path=GetHero.Legs.Name}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="9"/>
         </Viewbox>
         <Viewbox Grid.Row="12" Grid.Column="9" Panel.ZIndex="11">
-            <Label x:Name="EquipD" Content="{Binding Path=GetHero.Boots.Name}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="12" Grid.Column="9"/>
+            <Label x:Name="EquipD" Content="{Binding Path=GetHero.Boots.Name}" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="12" Grid.Column="9"/>
         </Viewbox>
 
-        <Image x:Name="EquipHImg" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Hands.png" Visibility="Visible" Stretch="Fill" Grid.Row="9" Grid.Column="8" />
-        <Image x:Name="EquipBImg" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Jacket.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="8"/>
-        <Image x:Name="EquipLImg" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Legs2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="8"/>
-        <Image x:Name="EquipDImg" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Boots.png" Visibility="Visible" Stretch="Fill" Grid.Row="12" Grid.Column="8" Grid.RowSpan="1" Grid.ColumnSpan="1"  />
+        <Image x:Name="EquipHImg" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Hands.png" Visibility="Visible" Stretch="Fill" Grid.Row="9" Grid.Column="8" />
+        <Image x:Name="EquipBImg" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Jacket.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="8"/>
+        <Image x:Name="EquipLImg" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Legs2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="8"/>
+        <Image x:Name="EquipDImg" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Boots.png" Visibility="Visible" Stretch="Fill" Grid.Row="12" Grid.Column="8" Grid.RowSpan="1" Grid.ColumnSpan="1"  />
         <!---->
         <Viewbox Grid.Row="15" Grid.Column="7" Grid.ColumnSpan="4" Panel.ZIndex="11" HorizontalAlignment="Right">
-            <Label x:Name="TimeRecordText" Content="Срочно выключай машину! Время: 23:59:59.999" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" Grid.Column="7" IsEnabled="False" Visibility="Hidden" Grid.Row="14" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+            <Label x:Name="TimeRecordText" Content="Срочно выключай машину! Время: 23:59:59.999" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" Grid.Column="7" IsEnabled="False" Visibility="Hidden" Grid.Row="14" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
         </Viewbox>
 
         <Viewbox Grid.Row="14" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="4" Panel.ZIndex="11">
-            <Label x:Name="TimerFlees1" Content="{Binding ElementName=TimerFlees, Path=Content}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Bauhaus 93" FontSize="72" Panel.ZIndex="11" Grid.Column="2" Grid.Row="14" Visibility="Hidden" BorderBrush="#FF00DCFF" BorderThickness="8,8,8,8" Foreground="White" Grid.ColumnSpan="4" Grid.RowSpan="2" />
+            <Label x:Name="TimerFlees1" Content="{Binding ElementName=TimerFlees, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Bauhaus 93" FontSize="72" Panel.ZIndex="11" Grid.Column="2" Grid.Row="14" Visibility="Hidden" BorderBrush="#FF00DCFF" BorderThickness="8,8,8,8" Foreground="White" Grid.ColumnSpan="4" Grid.RowSpan="2" />
         </Viewbox>
     </Grid>
 </UserControl>

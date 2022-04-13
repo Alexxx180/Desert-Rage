@@ -17,9 +17,9 @@ namespace DesertRage.Customing.Converters.Binds
                 if (val == null)
                     return new SolidColorBrush(Color.FromRgb(0, 255, 255));
             
-            int current = Numb(values[0]);
-            int maxValue = Numb(values[1]);
-            int variant = Numb(parameter);
+            int current = values[0].ToInt();
+            int maxValue = values[1].ToInt();
+            int variant = parameter.ToInt();
             LinearStrategy(out byte max, out byte medium, out byte critical, current, maxValue);
             return variant switch
             {

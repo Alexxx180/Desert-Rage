@@ -1,6 +1,5 @@
 ﻿using System;
 using static DesertRage.Helpers.Paths;
-using static DesertRage.Helpers.Characteristics.Equipment;
 
 namespace DesertRage.Helpers
 {
@@ -31,10 +30,10 @@ namespace DesertRage.Helpers
         public byte SeriousBonus { get; set; }
         public bool MiniTask { get; set; }
         public ushort Experience { get; set; }
-        public Weapon Weapon { get; set; }
-        public Armor Armor { get; set; }
-        public Armor Legs { get; set; }
-        public Armor Boots { get; set; }
+        //public Weapon Weapon { get; set; }
+        //public Armor Armor { get; set; }
+        //public Armor Legs { get; set; }
+        //public Armor Boots { get; set; }
         public string Image { get; set; }
         public string Icon { get; set; }
         public int X { get; set; }
@@ -79,10 +78,10 @@ namespace DesertRage.Helpers
             //[RU] ТЕКУЩАЯ ЭКИПИРОВКА
             //PlayerEQ = new byte[] { 0, 0, 0, 0 };
             SeriousBonus = 0;
-            Weapon = BareHands;
-            Armor = Shirt;
-            Legs = Pants;
-            Boots = CleanBoots;
+            //Weapon = BareHands;
+            //Armor = Shirt;
+            //Legs = Pants;
+            //Boots = CleanBoots;
 
             //[EN] PLAYER STATUS IN AND OUT OF BATTLE
             //[RU] СТАТУС ИГРОКА В И ВНЕ БОЯ
@@ -108,60 +107,61 @@ namespace DesertRage.Helpers
         {
             return new object[] { login, CurrentLevel, MenuTask, CurrentHP, CurrentAP, Experience, MiniTask, Learned, true };
         }
-        public void SetAllEquip(in byte weapon, in byte armor, in byte legs, in byte boots)
-        {
-            Weapon[] weapons = { BareHands, Knuckle, Knife, Sword, Minigun };
-            for (byte i = 0; i < weapons.Length; i++)
-                if (weapons[i].Power == weapon)
-                {
-                    Weapon = weapons[i];
-                    break;
-                }
-            Armor[] armors = { Shirt, BlackCoat, AncientArmor, LegendArmor, CoolTShirt };
-            for (byte i = 0; i < armors.Length; i++)
-                if (armors[i].Power == armor)
-                {
-                    Armor = armors[i];
-                    break;
-                }
-            Armor[] pants = { Pants, FeatherPants, WarriorPants, LegendPants, SeriousPants };
-            for (byte i = 0; i < pants.Length; i++)
-                if (pants[i].Power == legs)
-                {
-                    Legs = pants[i];
-                    break;
-                }
-            Armor[] boot = { CleanBoots, BandageBoots, ManBoots, LegendBoots, SeriousBoots };
-            for (byte i = 0; i < boot.Length; i++)
-                if (boot[i].Power == boots)
-                {
-                    Boots = boot[i];
-                    break;
-                }
-        }
 
-        public static Weapon BareHands = new Weapon(Txts.Equipment.Hands.Bare, "Weapon", "", OST.Noises.HandAttack, 0, 0, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
-        public static Weapon Knuckle = new Weapon(Txts.Equipment.Hands.Duster, "Weapon", Txts.Hints.EqWpn1, OST.Noises.HandAttack, 10, 203, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
-        public static Weapon Knife = new Weapon(Txts.Equipment.Hands.Knife, "Weapon", Txts.Hints.EqWpn2, OST.Noises.Knife, 50, 206, Dynamic.Person.KnAttack, Dynamic.Icon.KnAttack);
-        public static Weapon Sword = new Weapon(Txts.Equipment.Hands.Sword, "Weapon", Txts.Hints.EqWpn3, OST.Noises.Sword, 200, 212, Dynamic.Person.SwAttack, Dynamic.Icon.SwAttack);
-        public static Weapon Minigun = new Weapon(Txts.Equipment.Hands.Minigun, "Weapon", Txts.Hints.EqWpn4, OST.Noises.Minigun, 255, 226, Dynamic.Person.MgAttack, Dynamic.Icon.MgAttack);
+        //public void SetAllEquip(in byte weapon, in byte armor, in byte legs, in byte boots)
+        //{
+        //    Weapon[] weapons = { BareHands, Knuckle, Knife, Sword, Minigun };
+        //    for (byte i = 0; i < weapons.Length; i++)
+        //        if (weapons[i].Power == weapon)
+        //        {
+        //            Weapon = weapons[i];
+        //            break;
+        //        }
+        //    Armor[] armors = { Shirt, BlackCoat, AncientArmor, LegendArmor, CoolTShirt };
+        //    for (byte i = 0; i < armors.Length; i++)
+        //        if (armors[i].Power == armor)
+        //        {
+        //            Armor = armors[i];
+        //            break;
+        //        }
+        //    Armor[] pants = { Pants, FeatherPants, WarriorPants, LegendPants, SeriousPants };
+        //    for (byte i = 0; i < pants.Length; i++)
+        //        if (pants[i].Power == legs)
+        //        {
+        //            Legs = pants[i];
+        //            break;
+        //        }
+        //    Armor[] boot = { CleanBoots, BandageBoots, ManBoots, LegendBoots, SeriousBoots };
+        //    for (byte i = 0; i < boot.Length; i++)
+        //        if (boot[i].Power == boots)
+        //        {
+        //            Boots = boot[i];
+        //            break;
+        //        }
+        //}
 
-        public static Armor Shirt = new Armor(Txts.Equipment.Torso.Bare, "Armor", "", 0, 0);
-        public static Armor BlackCoat = new Armor(Txts.Equipment.Torso.Bcoat, "Armor", Txts.Hints.EqArm1, 5, 201);
-        public static Armor AncientArmor = new Armor(Txts.Equipment.Torso.Ancient, "Armor", Txts.Hints.EqArm2, 25, 208);
-        public static Armor LegendArmor = new Armor(Txts.Equipment.Torso.Legend, "Armor", Txts.Hints.EqArm3, 90, 210);
-        public static Armor CoolTShirt = new Armor(Txts.Equipment.Torso.Serious, "Armor", Txts.Hints.EqArm4, 115, 191);
+        //public static Weapon BareHands = new Weapon(Txts.Equipment.Hands.Bare, "Weapon", "", OST.Noises.HandAttack, 0, 0, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
+        //public static Weapon Knuckle = new Weapon(Txts.Equipment.Hands.Duster, "Weapon", Txts.Hints.EqWpn1, OST.Noises.HandAttack, 10, 203, Dynamic.Person.HdAttack, Dynamic.Icon.HdAttack);
+        //public static Weapon Knife = new Weapon(Txts.Equipment.Hands.Knife, "Weapon", Txts.Hints.EqWpn2, OST.Noises.Knife, 50, 206, Dynamic.Person.KnAttack, Dynamic.Icon.KnAttack);
+        //public static Weapon Sword = new Weapon(Txts.Equipment.Hands.Sword, "Weapon", Txts.Hints.EqWpn3, OST.Noises.Sword, 200, 212, Dynamic.Person.SwAttack, Dynamic.Icon.SwAttack);
+        //public static Weapon Minigun = new Weapon(Txts.Equipment.Hands.Minigun, "Weapon", Txts.Hints.EqWpn4, OST.Noises.Minigun, 255, 226, Dynamic.Person.MgAttack, Dynamic.Icon.MgAttack);
 
-        public static Armor Pants = new Armor(Txts.Equipment.Anckles.Bare, "Legs", "", 0, 0);
-        public static Armor FeatherPants = new Armor(Txts.Equipment.Anckles.Vulture, "Legs", Txts.Hints.EqPnt1, 4, 204);
-        public static Armor WarriorPants = new Armor(Txts.Equipment.Anckles.Ancient, "Legs", Txts.Hints.EqPnt2, 15, 205);
-        public static Armor LegendPants = new Armor(Txts.Equipment.Anckles.Legend, "Legs", Txts.Hints.EqPnt3, 65, 211);
-        public static Armor SeriousPants = new Armor(Txts.Equipment.Anckles.Serious, "Legs", Txts.Hints.EqPnt4, 85, 213);
+        //public static Armor Shirt = new Armor(Txts.Equipment.Torso.Bare, "Armor", "", 0, 0);
+        //public static Armor BlackCoat = new Armor(Txts.Equipment.Torso.Bcoat, "Armor", Txts.Hints.EqArm1, 5, 201);
+        //public static Armor AncientArmor = new Armor(Txts.Equipment.Torso.Ancient, "Armor", Txts.Hints.EqArm2, 25, 208);
+        //public static Armor LegendArmor = new Armor(Txts.Equipment.Torso.Legend, "Armor", Txts.Hints.EqArm3, 90, 210);
+        //public static Armor CoolTShirt = new Armor(Txts.Equipment.Torso.Serious, "Armor", Txts.Hints.EqArm4, 115, 191);
 
-        public static Armor CleanBoots = new Armor(Txts.Equipment.Boots.Bare, "Boots", "", 0, 0);
-        public static Armor BandageBoots = new Armor(Txts.Equipment.Boots.Bboots, "Boots", Txts.Hints.EqBts1, 1, 202);
-        public static Armor ManBoots = new Armor(Txts.Equipment.Boots.Ancient, "Boots", Txts.Hints.EqBts2, 10, 207);
-        public static Armor LegendBoots = new Armor(Txts.Equipment.Boots.Legend, "Boots", Txts.Hints.EqBts3, 40, 209);
-        public static Armor SeriousBoots = new Armor(Txts.Equipment.Boots.Serious, "Boots", Txts.Hints.EqBts4, 55, 255);
+        //public static Armor Pants = new Armor(Txts.Equipment.Anckles.Bare, "Legs", "", 0, 0);
+        //public static Armor FeatherPants = new Armor(Txts.Equipment.Anckles.Vulture, "Legs", Txts.Hints.EqPnt1, 4, 204);
+        //public static Armor WarriorPants = new Armor(Txts.Equipment.Anckles.Ancient, "Legs", Txts.Hints.EqPnt2, 15, 205);
+        //public static Armor LegendPants = new Armor(Txts.Equipment.Anckles.Legend, "Legs", Txts.Hints.EqPnt3, 65, 211);
+        //public static Armor SeriousPants = new Armor(Txts.Equipment.Anckles.Serious, "Legs", Txts.Hints.EqPnt4, 85, 213);
+
+        //public static Armor CleanBoots = new Armor(Txts.Equipment.Boots.Bare, "Boots", "", 0, 0);
+        //public static Armor BandageBoots = new Armor(Txts.Equipment.Boots.Bboots, "Boots", Txts.Hints.EqBts1, 1, 202);
+        //public static Armor ManBoots = new Armor(Txts.Equipment.Boots.Ancient, "Boots", Txts.Hints.EqBts2, 10, 207);
+        //public static Armor LegendBoots = new Armor(Txts.Equipment.Boots.Legend, "Boots", Txts.Hints.EqBts3, 40, 209);
+        //public static Armor SeriousBoots = new Armor(Txts.Equipment.Boots.Serious, "Boots", Txts.Hints.EqBts4, 55, 255);
     }
 }

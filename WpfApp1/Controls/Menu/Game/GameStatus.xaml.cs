@@ -22,5 +22,13 @@ namespace DesertRage.Controls.Menu.Game
         {
             InitializeComponent();
         }
+
+        //private void HeroStatus()
+        //{
+        //    AnyShow(GameStatus);
+        //    PlayerSetLocation(MainHero.Y, MainHero.X);
+        //    FastTextChange(new Label[] { Describe1, Describe2 },
+        //        new string[] { Txts.Hints.Status, Txts.Sections.Status });
+        //}
     }
 }

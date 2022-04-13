@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -23,15 +23,17 @@
 
   <ItemGroup>
     <Compile Remove="bin\**" />
+    <Compile Remove="Resources\Database\**" />
     <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="Resources\Database\**" />
     <None Remove="bin\**" />
+    <None Remove="Resources\Database\**" />
     <Page Remove="bin\**" />
+    <Page Remove="Resources\Database\**" />
   </ItemGroup>
   
   <ItemGroup>
     <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Remove="Resources\Database\DesertRageGame.mdf" />
-    <None Remove="Resources\Database\DesertRageGame_log.ldf" />
     <None Remove="Resources\Images\Autorize\Adventures1.png" />
     <None Remove="Resources\Images\Autorize\Adventures2.png" />
     <None Remove="Resources\Images\Autorize\Adventures3.png" />
@@ -1126,18 +1128,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Resources\Database\DesertRageGame.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Resources\Database\DesertRageGame_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
 
@@ -1756,6 +1746,9 @@
     <None Update="Resources\CutScenes\ChaptersIntroduction\Prologue.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\DataTemplates\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Resources\OST\Music\AncientPyramid_Battle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1973,11 +1966,25 @@
 
   <ItemGroup>
     <Folder Include="Resources\OST\Music\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Quotes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Quotes.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Quotes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Quotes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   
   <Target Name="AfterResolveReferences">

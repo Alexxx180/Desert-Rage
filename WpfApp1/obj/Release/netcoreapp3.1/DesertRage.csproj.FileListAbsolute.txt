@@ -1,0 +1,31 @@
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\DesertRage.csproj.AssemblyReference.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\CutScene.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Resources\Styles\Total.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\App.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Battle\BattleResults.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Bestiary\BestiaryLayout.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Bestiary\FoeAnalyze.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameItems.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameMenu.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameSettings.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameSkills.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameStatus.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameTasks.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\GameTopics.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\HintFooter.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\Game\Hints.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Menu\MainMenu.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\Battle\Avatar\Ray.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\Battle\BattleScene.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\Battle\Foe.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\CutScene.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\Map\Avatar\Ray.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Controls\Scenes\Map\LevelMap.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\MainWindow.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Reload.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\App.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage_MarkupCompile.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage_MarkupCompile.lref
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage.pdb

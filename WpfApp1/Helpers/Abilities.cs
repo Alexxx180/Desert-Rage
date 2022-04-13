@@ -54,7 +54,7 @@ namespace DesertRage.Helpers
             {
                 return Power;
             }
-            public ushort Learn(int no) => Shrt(Math.Pow(2, no));
+            public ushort Learn(int no) => Math.Pow(2, no).ToUShort();
 
             public byte Power;
         }

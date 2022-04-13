@@ -22,5 +22,24 @@ namespace DesertRage.Controls.Menu.Game
         {
             InitializeComponent();
         }
+
+        //private void SoundsLoud_ValueChanged(object sender,
+        //    RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (!NewAdventure.IsEnabled)
+        //        PlaySound(Paths.OST.Sounds.ChestOpened);
+        //}
+
+        //private void NoiseLoud_ValueChanged(object sender,
+        //    RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (!NewAdventure.IsEnabled)
+        //        PlayNoise(Paths.OST.Noises.Torch);
+        //}
+
+        //private void GameSpeed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    OnPropertyChanged(nameof(TimeFormula));
+        //}
     }
 }

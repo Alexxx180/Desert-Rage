@@ -2,8 +2,6 @@
 {
     public class NextStats
     {
-        public ushort[] Level { get; set; }
-        
         public ushort[] Hp { get; set; }
         public ushort[] Ap { get; set; }
 
