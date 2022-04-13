@@ -225,5 +225,15 @@ namespace DesertRage.Controls.Menu
         //    AnyHide(MainMenu);
         //    PlayMusic(Paths.OST.Music.Prologue);
         //}
+
+        private void NewGame(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Continue(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

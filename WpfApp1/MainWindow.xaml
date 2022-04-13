@@ -5,6 +5,8 @@
         xmlns:mc="http:f//schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:bind="clr-namespace:DesertRage.Customing.Converters.Binds"
         xmlns:scene="clr-namespace:DesertRage.Controls.Scenes"
+        xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
+        xmlns:controls="clr-namespace:DesertRage.Controls"
         Title="Desert rage"
         Height="1080" Width="1920"
         WindowStyle="None"
@@ -21,79 +23,15 @@
 
     <!--x:Name="AllGameAlignment"-->
     <Grid  Background="Black">
-        <!--Звуковое сопровождение-->
-        <StackPanel>
-            <MediaElement x:Name="Sound1" MediaEnded="Sound1_MediaEnded">
-                <MediaElement.Visibility>
-                    Collapsed
-                </MediaElement.Visibility>
-
-                <MediaElement.Volume>
-                    <Binding ElementName="MusicLoud" Path="Value"/>
-                </MediaElement.Volume>
-
-                <MediaElement.LoadedBehavior>
-                    Manual
-                </MediaElement.LoadedBehavior>
-
-                <MediaElement.Triggers>
-                    <EventTrigger RoutedEvent="MediaElement.Loaded">
-                        <EventTrigger.Actions>
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <MediaTimeline x:Name="MusicSource"
-                                                   Source="/Resources/OST/Music/Main_theme.mp3"
-                                                   Storyboard.TargetName="myMediaElement"  
-                                                   RepeatBehavior="Forever" />
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger.Actions>
-                    </EventTrigger>
-                </MediaElement.Triggers>
-            </MediaElement>
-
-            <MediaElement x:Name="Sound2" MediaEnded="OnSoundsEnd">
-                <MediaElement.Source>
-                    /Resources/OST/Noises/Punch.mp3
-                </MediaElement.Source>
-
-                <MediaElement.Visibility>
-                    Collapsed
-                </MediaElement.Visibility>
-
-                <MediaElement.Volume>
-                    <Binding ElementName="NoiseLoud" Path="Value"/>
-                </MediaElement.Volume>
-
-                <MediaElement.LoadedBehavior>
-                    Manual
-                </MediaElement.LoadedBehavior>
-            </MediaElement>
-
-            <MediaElement x:Name="Sound3" MediaEnded="OnSoundsEnd">
-                <MediaElement.Source>
-                    /Resources/OST/Sounds/ChestOpened.mp3
-                </MediaElement.Source>
-
-                <MediaElement.Visibility>
-                    Collapsed
-                </MediaElement.Visibility>
-
-                <MediaElement.Volume>
-                    <Binding ElementName="SoundsLoud" Path="Value"/>
-                </MediaElement.Volume>
-
-                <MediaElement.LoadedBehavior>
-                    Manual
-                </MediaElement.LoadedBehavior>
-            </MediaElement>
-        </StackPanel>
-
-        <Label>
+        <Label HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+               HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <menu:MainMenu/>
             <!--<scene:LevelMap/>-->
         </Label>
 
-        <Image x:Name="BrightnessImg">
+        <controls:SoundGroup x:Name="SoundTrack"/>
+
+        <Image x:Name="BrightnessImg" Opacity="0">
             <Image.IsHitTestVisible>
                 False
             </Image.IsHitTestVisible>
@@ -153,5 +91,8 @@
                 </TextBlock.Foreground>
             </TextBlock>
         </Grid>
+
+        <!--Звуковое сопровождение-->
+        
     </Grid>
 </Window>

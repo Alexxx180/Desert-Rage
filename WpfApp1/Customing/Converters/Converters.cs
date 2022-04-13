@@ -37,7 +37,7 @@ namespace DesertRage.Customing.Converters
 
         public static Uri ToUri(this string path)
         {
-            return new Uri(path);
+            return new Uri(path, UriKind.RelativeOrAbsolute);
         }
 
         public static string[] ToStrings(this object[] objs)

@@ -28,6 +28,7 @@ using DesertRage.Model.Stats.Player;
 using DesertRage.ViewModel;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Locations;
+using DesertRage.Controls;
 
 namespace DesertRage
 {
@@ -43,19 +44,21 @@ namespace DesertRage
         public MainWindow()
         {
             InitializeComponent();
+            SoundTrack.PlayMusic(Paths.OST.Music.MainTheme);
             //Functionality();
-
-            MainHero = Ray;
+            //MainHero = Ray;
         }
+
+        
 
         //private void Functionality()
         //{
         //    DispatcherTimer[] timers = new DispatcherTimer[] {
         //        Targt, PRegn, PCtrl, PTurn, RRoll, TRout
         //    };
-            
+
         //    SetAllTimeTriggers(ref timers);
-            
+
         //    ShowFoesStats();
 
         //    PlayMusic(Paths.OST.Music.MainTheme);
@@ -64,7 +67,7 @@ namespace DesertRage
 
         //    Autorization();
         //    SeeMap();
-            
+
         //    Anonymous();
 
         //}
@@ -349,11 +352,6 @@ namespace DesertRage
             Player.CurrentLocation = ReadJson<Location>("SecretTemple.json");
         }
 
-        // Play original soundtrack
-        private void PlayMusic(in string Path) => PlayOST(Sound1, Path);
-        private void PlayNoise(in string Path) => PlayOST(Sound2, Path);
-        private void PlaySound(in string Path) => PlayOST(Sound3, Path);
-
         private void SpeedUp()
         {
             //Sound2.SpeedRatio = GameSpeed.Value;
@@ -362,8 +360,8 @@ namespace DesertRage
 
         private void SpeedDown()
         {
-            Sound2.SpeedRatio = 1;
-            Sound3.SpeedRatio = 1;
+            //Sound2.SpeedRatio = 1;
+            //Sound3.SpeedRatio = 1;
         }
         
         //private void PauseGame()
@@ -399,17 +397,7 @@ namespace DesertRage
 
 
         // Deprecated: use triggers instead
-        private void Sound1_MediaEnded(object sender, RoutedEventArgs e)
-        {
-            Sound1.Stop();
-            Sound1.Position = TimeSpan.Zero;
-            Sound1.Play();
-        }
-
-        private void OnSoundsEnd(object sender, RoutedEventArgs e)
-        {
-            (sender as MediaElement).Stop();
-        }
+        
 
         //#region Triggers Members
         //private void TimerTurnOn_Checked(object sender, RoutedEventArgs e)
@@ -434,7 +422,7 @@ namespace DesertRage
 
         private void SaveGame()
         {
-            PlaySound(Paths.OST.Sounds.ControlSave);
+            //PlaySound(Paths.OST.Sounds.ControlSave);
             SaveProfile("Ray.json", Player);
         }
 

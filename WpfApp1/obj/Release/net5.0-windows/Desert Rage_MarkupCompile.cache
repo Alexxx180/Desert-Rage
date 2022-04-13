@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\App.xaml
-24-1450739878
+25-229779963
 
-672014876038
+68130372208
 195554908793
-Controls\Menu\Battle\BattleResults.xaml;Controls\Menu\Bestiary\BestiaryLayout.xaml;Controls\Menu\Bestiary\FoeAnalyze.xaml;Controls\Menu\Game\GameEquipment.xaml;Controls\Menu\Game\GameItems.xaml;Controls\Menu\Game\GameMenu.xaml;Controls\Menu\Game\GameSettings.xaml;Controls\Menu\Game\GameSkills.xaml;Controls\Menu\Game\GameStatus.xaml;Controls\Menu\Game\GameTasks.xaml;Controls\Menu\Game\GameTopics.xaml;Controls\Menu\Game\HintFooter.xaml;Controls\Menu\Game\Hints.xaml;Controls\Menu\MainMenu.xaml;Controls\Scenes\Battle\Avatar\Ray.xaml;Controls\Scenes\Battle\BattleScene.xaml;Controls\Scenes\Battle\Foe.xaml;Controls\Scenes\CutScene.xaml;Controls\Scenes\Map\Avatar\Ray.xaml;Controls\Scenes\Map\LevelMap.xaml;MainWindow.xaml;Reload.xaml;Resources\DataTemplates\Images.xaml;Resources\Styles\Total.xaml;
+Controls\Menu\Battle\BattleResults.xaml;Controls\Menu\Bestiary\BestiaryLayout.xaml;Controls\Menu\Bestiary\FoeAnalyze.xaml;Controls\Menu\Game\GameEquipment.xaml;Controls\Menu\Game\GameItems.xaml;Controls\Menu\Game\GameMenu.xaml;Controls\Menu\Game\GameSettings.xaml;Controls\Menu\Game\GameSkills.xaml;Controls\Menu\Game\GameStatus.xaml;Controls\Menu\Game\GameTasks.xaml;Controls\Menu\Game\GameTopics.xaml;Controls\Menu\Game\HintFooter.xaml;Controls\Menu\Game\Hints.xaml;Controls\Menu\MainMenu.xaml;Controls\Scenes\Battle\Avatar\Ray.xaml;Controls\Scenes\Battle\BattleScene.xaml;Controls\Scenes\Battle\Foe.xaml;Controls\Scenes\CutScene.xaml;Controls\Scenes\Map\Avatar\Ray.xaml;Controls\Scenes\Map\LevelMap.xaml;Controls\SoundGroup.xaml;MainWindow.xaml;Reload.xaml;Resources\DataTemplates\Images.xaml;Resources\Styles\Total.xaml;
 
 False
 

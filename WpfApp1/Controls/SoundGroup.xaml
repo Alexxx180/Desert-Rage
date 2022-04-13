@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="DesertRage.Controls.SoundGroup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesertRage.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="80">
+    <StackPanel>
+        <MediaElement x:Name="Sound1" MediaEnded="OnMusicEnd">
+            <!--Resources/OST/Music/MainTitle.mp3-->
+            <MediaElement.Visibility>
+                Visible
+            </MediaElement.Visibility>
+
+            <MediaElement.Volume>
+                1
+                <!--<Binding ElementName="MusicLoud" Path="Value"/>-->
+            </MediaElement.Volume>
+
+            <MediaElement.LoadedBehavior>
+                Manual
+            </MediaElement.LoadedBehavior>
+        </MediaElement>
+
+        <MediaElement x:Name="Sound2" MediaEnded="OnSoundsEnd">
+            <MediaElement.Source>
+                /Resources/OST/Noises/Punch.mp3
+            </MediaElement.Source>
+
+            <MediaElement.Visibility>
+                Collapsed
+            </MediaElement.Visibility>
+
+            <MediaElement.Volume>
+                1
+                <!--<Binding ElementName="NoiseLoud" Path="Value"/>-->
+            </MediaElement.Volume>
+
+            <MediaElement.LoadedBehavior>
+                Manual
+            </MediaElement.LoadedBehavior>
+        </MediaElement>
+
+        <MediaElement x:Name="Sound3" MediaEnded="OnSoundsEnd">
+            <MediaElement.Source>
+                /Resources/OST/Sounds/ChestOpened.mp3
+            </MediaElement.Source>
+
+            <MediaElement.Visibility>
+                Collapsed
+            </MediaElement.Visibility>
+
+            <MediaElement.Volume>
+                1
+                <!--<Binding ElementName="SoundsLoud" Path="Value"/>-->
+            </MediaElement.Volume>
+
+            <MediaElement.LoadedBehavior>
+                Manual
+            </MediaElement.LoadedBehavior>
+        </MediaElement>
+    </StackPanel>
+</UserControl>
