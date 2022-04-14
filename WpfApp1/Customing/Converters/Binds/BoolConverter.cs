@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using static DesertRage.Customing.Converters.Converters;
 
 namespace DesertRage.Customing.Converters.Binds
 {
@@ -11,7 +10,7 @@ namespace DesertRage.Customing.Converters.Binds
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return value.ToBool() ?
-                Visibility.Hidden :
+                Visibility.Collapsed :
                 Visibility.Visible;
         }
 

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
@@ -14,7 +15,16 @@
         </Grid.RowDefinitions>
 
         <ListBox Style="{StaticResource GlobalFont}"
-                 MouseMove="ProfilesMouseMove" Drop="ProfilesDrop">
+                 MouseMove="ProfilesMove" Drop="ProfilesDrop"
+                 SelectionChanged="SelectProfile">
+            <ListBox.Visibility>
+                <Binding Path="IsListVisible">
+                    <Binding.Converter>
+                        <converters:VisibilityConverter/>
+                    </Binding.Converter>
+                </Binding>
+            </ListBox.Visibility>
+            
             <ListBox.AllowDrop>
                 True
             </ListBox.AllowDrop>
@@ -47,10 +57,25 @@
             </Grid.ColumnDefinitions>
 
             <TextBox TextAlignment="Center" MaxLength="30">
-                <Grid.Column>
-                    1
-                </Grid.Column>
+                <TextBox.FontSize>
+                    20
+                </TextBox.FontSize>
 
+                <TextBox.Text>
+                    <Binding Path="CurrentProfile">
+                        <Binding.Mode>
+                            TwoWay
+                        </Binding.Mode>
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </TextBox.Text>
+
+                <TextBox.Foreground>
+                    White
+                </TextBox.Foreground>
+                
                 <TextBox.Background>
                     #8A000000
                 </TextBox.Background>
@@ -60,7 +85,8 @@
                 </TextBox.BorderBrush>
             </TextBox>
 
-            <Button Style="{StaticResource OptionAccent}">
+            <Button Style="{StaticResource OptionAccent}"
+                    FontSize="24" Click="UseProfile">
                 <Grid.Row>
                     1
                 </Grid.Row>
@@ -78,7 +104,7 @@
                 </Button.Foreground>
 
                 <Button.Content>
-                    <TextBlock FontSize="24" Text="▼"/>
+                    ▲
                 </Button.Content>
             </Button>
         </Grid>

@@ -1,24 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Diagnostics;
 using System.Collections.ObjectModel;
-
-//using DesertRage.Model;
-
+using System.Collections.Generic;
 
 namespace DesertRage.Controls.Menu
 {
@@ -27,6 +14,19 @@ namespace DesertRage.Controls.Menu
     /// </summary>
     public partial class Autorization : UserControl, INotifyPropertyChanged
     {
+        private string _currentProfile;
+        public string CurrentProfile
+        {
+            get => _currentProfile;
+            set
+            {
+                _currentProfile = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private HashSet<string> _toDrop;
+
         private ObservableCollection<string> _profiles;
         public ObservableCollection<string> Profiles
         {
@@ -38,10 +38,23 @@ namespace DesertRage.Controls.Menu
             }
         }
 
+        private bool _isListVisible;
+        public bool IsListVisible
+        {
+            get => _isListVisible;
+            set
+            {
+                _isListVisible = value;
+                OnPropertyChanged();
+            }
+        }
+
         public Autorization()
         {
             InitializeComponent();
 
+            _isListVisible = false;
+            _toDrop = new HashSet<string>();
             Profiles = new ObservableCollection<string>();
 
             Profiles.Add("АляТополя");
@@ -52,7 +65,8 @@ namespace DesertRage.Controls.Menu
             Profiles.Add("И еще один");
         }
 
-        private void ProfilesMouseMove(object sender, MouseEventArgs e)
+        #region ProfilesManagement Members
+        private void ProfilesMove(object sender, MouseEventArgs e)
         {
             Point mPos = e.GetPosition(null);
 
@@ -64,10 +78,9 @@ namespace DesertRage.Controls.Menu
                 {
                     ListBox profileList = sender as ListBox;
                     string selectedItem = profileList.SelectedItem as string;
-                    
 
-                    Trace.WriteLine(selectedItem);
                     _ = Profiles.Remove(selectedItem);
+                    _ = _toDrop.Add(selectedItem);
 
                     DragDrop.DoDragDrop(this, new DataObject(DataFormats.FileDrop, selectedItem), DragDropEffects.Move);
                 }
@@ -80,7 +93,22 @@ namespace DesertRage.Controls.Menu
             if (e.Data.GetData(DataFormats.FileDrop) is string item)
             {
                 Profiles.Add(item);
+                _ = _toDrop.Remove(item);
             }
+        }
+        #endregion
+
+        private void SelectProfile(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox profileList = sender as ListBox;
+            CurrentProfile = profileList.SelectedItem as string;
+        }
+
+        private void UseProfile(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            IsListVisible = !IsListVisible;
+            button.Content = IsListVisible ? "▼" : "▲";
         }
 
         #region INotifyPropertyChanged Members
