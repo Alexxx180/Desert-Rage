@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DesertRage.Customing.Converters;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -12,8 +14,8 @@ namespace DesertRage.Controls.Scenes
     public partial class CutScene : UserControl, INotifyPropertyChanged
     {
         #region Film Members
-        private string _playingFilm;
-        private string PlayingFilm
+        private Uri _playingFilm;
+        public Uri PlayingFilm
         {
             get => _playingFilm;
             set
@@ -49,7 +51,7 @@ namespace DesertRage.Controls.Scenes
 
             if (_films.Count > 0)
             {
-                PlayingFilm = _films.Dequeue();
+                PlayingFilm = _films.Dequeue().ToUri();
             }
         }
 
@@ -57,10 +59,11 @@ namespace DesertRage.Controls.Scenes
         {
             if (_films.Count > 0)
             {
-                PlayingFilm = _films.Dequeue();
+                PlayingFilm = _films.Dequeue().ToUri();
             }
             else
             {
+                Player.Close();
                 _action();
             }
         }

@@ -6,6 +6,10 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using DesertRage.Controls.Scenes;
+using static DesertRage.Writers.Processors;
+using System.Diagnostics;
+using DesertRage.Helpers;
 
 namespace DesertRage.Controls.Menu
 {
@@ -14,6 +18,16 @@ namespace DesertRage.Controls.Menu
     /// </summary>
     public partial class MainMenu : UserControl, INotifyPropertyChanged
     {
+        public static readonly DependencyProperty
+            TracksProperty = DependencyProperty.Register(nameof(Tracks),
+                typeof(SoundGroup), typeof(MainMenu));
+
+        public SoundGroup Tracks
+        {
+            get => GetValue(TracksProperty) as SoundGroup;
+            set => SetValue(TracksProperty, value);
+        }
+
         private GameStart _startViewModel;
         public GameStart StartViewModel
         {
@@ -235,9 +249,21 @@ namespace DesertRage.Controls.Menu
         //    PlayMusic(Paths.OST.Music.Prologue);
         //}
 
+        public void MapFromScratch()
+        {
+            Trace.WriteLine("IT IS WORKING");
+            //UserProfile user = new UserProfile();
+            //user.CurrentLocation = LoadLocation("SecretTemple.json");
+            //user.Hero = LoadCharacter("Ray.json");
+            
+        }
+
         private void NewGame(object sender, RoutedEventArgs e)
         {
-
+            Tracks.PlayMusic(Paths.OST.Music.Prologue);
+            Label display = Parent as Label;
+            display.Content = new CutScene(MapFromScratch,
+                "Resources/CutScenes/ChaptersIntroduction/Prologue.mp4");
         }
 
         private void Continue(object sender, RoutedEventArgs e)

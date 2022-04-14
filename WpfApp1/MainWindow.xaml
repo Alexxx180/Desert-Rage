@@ -1,9 +1,6 @@
 ﻿<Window x:Name="DesertRageEntry" x:Class="DesertRage.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http:f//schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:bind="clr-namespace:DesertRage.Customing.Converters.Binds"
         xmlns:scene="clr-namespace:DesertRage.Controls.Scenes"
         xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
         xmlns:controls="clr-namespace:DesertRage.Controls"
@@ -15,21 +12,24 @@
     <Window.DataContext>
         <Binding RelativeSource="{RelativeSource Self}"/>
     </Window.DataContext>
+    
+    <Grid Background="Black">
+        <controls:SoundGroup x:Name="SoundTrack"/>
+        
+        <Label x:Name="Display">
+            <Label.VerticalContentAlignment>
+                Stretch
+            </Label.VerticalContentAlignment>
+            
+            <Label.HorizontalContentAlignment>
+                Stretch
+            </Label.HorizontalContentAlignment>
 
-    <Window.Resources>
-        <!--<bind:InvertConverter x:Key="InvertConverter"/>-->
-    </Window.Resources>
-
-
-    <!--x:Name="AllGameAlignment"-->
-    <Grid  Background="Black">
-        <Label HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-               HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <menu:MainMenu/>
+            <Label.Content>
+                <menu:MainMenu Tracks="{Binding ElementName=SoundTrack}"/>
+            </Label.Content>
             <!--<scene:LevelMap/>-->
         </Label>
-
-        <controls:SoundGroup x:Name="SoundTrack"/>
 
         <Image x:Name="BrightnessImg" Opacity="0">
             <Image.IsHitTestVisible>
@@ -91,8 +91,5 @@
                 </TextBlock.Foreground>
             </TextBlock>
         </Grid>
-
-        <!--Звуковое сопровождение-->
-        
     </Grid>
 </Window>

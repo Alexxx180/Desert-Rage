@@ -2,6 +2,8 @@
 using System.IO;
 using System.Text.Json;
 using System.Windows;
+using DesertRage.Model.Locations;
+using DesertRage.Model.Stats.Player;
 using DesertRage.ViewModel;
 using Microsoft.Win32;
 using Serilog;
@@ -14,6 +16,8 @@ namespace DesertRage.Writers
             DataDirectory => Environment.CurrentDirectory +
             @"\Resources\Data\";
         private static string ProfileDirectory => DataDirectory + @"Profiles\";
+        private static string MapDirectory => DataDirectory + @"Map\";
+        private static string CharacterDirectory => DataDirectory + @"Characters\";
 
         static Processors()
         {
@@ -127,6 +131,13 @@ namespace DesertRage.Writers
             return deserilizeable;
         }
 
+        private static T ReadCheck<T>(string path)
+        {
+            Log.Debug("Loading runtime: " + path);
+            return !File.Exists(path) ?
+                default : ReadJson<T>(path);
+        }
+
         private static void ProcessJsonAny<T>(string path, T serilizeable)
         {
             try
@@ -143,17 +154,28 @@ namespace DesertRage.Writers
             }
         }
 
-        #region SaveLoad Members
-        internal static UserProfile LoadProfile(string name)
-        {
-            Log.Debug("Loading runtime: " + ProfileDirectory + name);
-            return !File.Exists(ProfileDirectory + name) ? null :
-                ReadJson<UserProfile>(ProfileDirectory + name);
-        }
-
+        #region Profile Members
         internal static void SaveProfile(string name, UserProfile data)
         {
+            Log.Debug("Saving runtime: " + ProfileDirectory + name);
             ProcessJsonAny(ProfileDirectory + name, data);
+        }
+
+        internal static UserProfile LoadProfile(string name)
+        {
+            return ReadCheck<UserProfile>(ProfileDirectory + name);
+        }
+        #endregion
+
+        #region Load Members
+        internal static Location LoadLocation(string name)
+        {
+            return ReadCheck<Location>(MapDirectory + name);
+        }
+
+        internal static Character LoadCharacter(string name)
+        {
+            return ReadCheck<Character>(CharacterDirectory + name);
         }
         #endregion
     }

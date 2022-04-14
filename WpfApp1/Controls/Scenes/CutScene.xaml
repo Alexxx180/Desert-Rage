@@ -6,7 +6,7 @@
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="16">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.82*"/>
             <ColumnDefinition Width="0.15*"/>
@@ -33,49 +33,42 @@
             <MediaElement.Stretch>
                 Fill
             </MediaElement.Stretch>
-            
+
             <MediaElement.Source>
                 <Binding Path="PlayingFilm"/>
-                <!--Resources/CutScenes/BattleStarts/Battlestations1.mp4-->
             </MediaElement.Source>
 
             <MediaElement.LoadedBehavior>
                 Manual
             </MediaElement.LoadedBehavior>
-            
+
             <MediaElement.UnloadedBehavior>
                 Manual
             </MediaElement.UnloadedBehavior>
-            
+
             <MediaElement.IsMuted>
                 True
             </MediaElement.IsMuted>
         </MediaElement>
 
-        <!--<Button x:Name="Skip1" Click="OnMediaEnded"
-                MouseEnter="Skip1_MouseEnter"
-                MouseLeave="Skip1_MouseLeave">
-            <Button.BorderBrush>
-                #FF612817
-            </Button.BorderBrush>
-            
+        <Button x:Name="Skip1" Click="OnMediaEnded">
+            <Button.Style>
+                <StaticResource ResourceKey="WhiteOption"/>
+            </Button.Style>
+
             <Grid.Column>
                 1
             </Grid.Column>
-            
+
             <Grid.Row>
                 1
             </Grid.Row>
 
-            <Image x:Name="SkipImg">
-                <Image.Source>
-                    /Resources/Images/Autorize/Skips1.png
-                </Image.Source>
-                
-                <Image.Stretch>
-                    Fill
-                </Image.Stretch>
-            </Image>
-        </Button>-->
+            <Button.Content>
+                <Viewbox>
+                    <TextBlock Text="+ Пропуск +"/>
+                </Viewbox>
+            </Button.Content>
+        </Button>
     </Grid>
 </UserControl>

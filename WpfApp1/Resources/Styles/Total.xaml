@@ -71,7 +71,7 @@
            BasedOn="{StaticResource OptionAccent}">
         <Setter Property="Padding">
             <Setter.Value>
-                10
+                10,3,10,3
             </Setter.Value>
         </Setter>
         

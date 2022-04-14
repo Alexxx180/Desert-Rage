@@ -165,3 +165,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\Menu\Autorization.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\Lists.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\TextBoxes.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
