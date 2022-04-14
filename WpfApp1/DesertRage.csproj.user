@@ -14,6 +14,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Controls\Menu\Autorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\Menu\Battle\BattleResults.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -82,6 +85,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls\Menu\Autorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\Menu\Battle\BattleResults.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -152,6 +158,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\DataTemplates\Images.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\Lists.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\TextBlocks.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Total.xaml">

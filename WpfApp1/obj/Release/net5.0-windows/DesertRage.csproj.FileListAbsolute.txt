@@ -161,3 +161,7 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\SoundGroup.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\SoundGroup.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\TextBlocks.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\Menu\Autorization.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\Menu\Autorization.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\Lists.baml

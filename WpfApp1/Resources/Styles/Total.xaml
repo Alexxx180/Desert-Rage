@@ -9,23 +9,16 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <Style x:Key="OptionAccent" TargetType="Control"
-           BasedOn="{StaticResource GlobalFont}">
-        <Setter Property="Padding">
-            <Setter.Value>
-                10
-            </Setter.Value>
-        </Setter>
-        
-        <Setter Property="BorderBrush">
-            <Setter.Value>#D8000000</Setter.Value>
-        </Setter>
-        
+
+    <Style x:Key="BackAccent" TargetType="Panel">
+        <Setter Property="Background" Value="#B8000000"/>
+    </Style>
+
+    <Style x:Key="OptionBack" TargetType="Control" BasedOn="{StaticResource GlobalFont}">
         <Setter Property="Foreground">
             <Setter.Value>White</Setter.Value>
         </Setter>
-        
+
         <Setter Property="Background">
             <Setter.Value>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,1" MappingMode="Absolute">
@@ -34,7 +27,20 @@
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
-        
+    </Style>
+    
+    <Style x:Key="OptionAccent" TargetType="Control"
+           BasedOn="{StaticResource OptionBack}">
+        <Setter Property="Padding">
+            <Setter.Value>
+                10
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="BorderBrush">
+            <Setter.Value>#D8000000</Setter.Value>
+        </Setter>
+
         <Setter Property="TextBlock.Effect">
             <Setter.Value>
                 <DropShadowEffect Opacity="1">

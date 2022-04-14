@@ -351,18 +351,6 @@ namespace DesertRage
             Player.Hero = Ray;
             Player.CurrentLocation = ReadJson<Location>("SecretTemple.json");
         }
-
-        private void SpeedUp()
-        {
-            //Sound2.SpeedRatio = GameSpeed.Value;
-            //Sound3.SpeedRatio = GameSpeed.Value;
-        }
-
-        private void SpeedDown()
-        {
-            //Sound2.SpeedRatio = 1;
-            //Sound3.SpeedRatio = 1;
-        }
         
         //private void PauseGame()
         //{
