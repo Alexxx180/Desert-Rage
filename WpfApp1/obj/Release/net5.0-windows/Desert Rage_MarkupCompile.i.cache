@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\App.xaml
-28-989072726
+29-1562867930
 
-72-247100892
+73-254503388
 195554908793
-Controls\Menu\Autorization.xaml;Controls\Menu\Battle\BattleResults.xaml;Controls\Menu\Bestiary\BestiaryLayout.xaml;Controls\Menu\Bestiary\FoeAnalyze.xaml;Controls\Menu\Game\GameEquipment.xaml;Controls\Menu\Game\GameItems.xaml;Controls\Menu\Game\GameMenu.xaml;Controls\Menu\Game\GameSettings.xaml;Controls\Menu\Game\GameSkills.xaml;Controls\Menu\Game\GameStatus.xaml;Controls\Menu\Game\GameTasks.xaml;Controls\Menu\Game\GameTopics.xaml;Controls\Menu\Game\HintFooter.xaml;Controls\Menu\Game\Hints.xaml;Controls\Menu\MainMenu.xaml;Controls\Scenes\Battle\Avatar\Ray.xaml;Controls\Scenes\Battle\BattleScene.xaml;Controls\Scenes\Battle\Foe.xaml;Controls\Scenes\CutScene.xaml;Controls\Scenes\Map\Avatar\Ray.xaml;Controls\Scenes\Map\LevelMap.xaml;Controls\SoundGroup.xaml;MainWindow.xaml;Reload.xaml;Resources\DataTemplates\Images.xaml;Resources\Styles\Lists.xaml;Resources\Styles\TextBlocks.xaml;Resources\Styles\Total.xaml;
+Controls\Menu\Autorization.xaml;Controls\Menu\Battle\BattleResults.xaml;Controls\Menu\Bestiary\BestiaryLayout.xaml;Controls\Menu\Bestiary\FoeAnalyze.xaml;Controls\Menu\Game\GameEquipment.xaml;Controls\Menu\Game\GameItems.xaml;Controls\Menu\Game\GameMenu.xaml;Controls\Menu\Game\GameSettings.xaml;Controls\Menu\Game\GameSkills.xaml;Controls\Menu\Game\GameStatus.xaml;Controls\Menu\Game\GameTasks.xaml;Controls\Menu\Game\GameTopics.xaml;Controls\Menu\Game\HintFooter.xaml;Controls\Menu\Game\Hints.xaml;Controls\Menu\MainMenu.xaml;Controls\Scenes\Battle\Avatar\Ray.xaml;Controls\Scenes\Battle\BattleScene.xaml;Controls\Scenes\Battle\Foe.xaml;Controls\Scenes\CutScene.xaml;Controls\Scenes\Map\Avatar\Ray.xaml;Controls\Scenes\Map\LevelMap.xaml;Controls\SoundGroup.xaml;MainWindow.xaml;Reload.xaml;Resources\DataTemplates\Images.xaml;Resources\Styles\Lists.xaml;Resources\Styles\TextBlocks.xaml;Resources\Styles\TextBoxes.xaml;Resources\Styles\Total.xaml;
 
-True
+False
 

@@ -15,10 +15,6 @@
     </Style>
 
     <Style x:Key="OptionBack" TargetType="Control" BasedOn="{StaticResource GlobalFont}">
-        <Setter Property="Foreground">
-            <Setter.Value>White</Setter.Value>
-        </Setter>
-
         <Setter Property="Background">
             <Setter.Value>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,1" MappingMode="Absolute">
@@ -31,12 +27,6 @@
     
     <Style x:Key="OptionAccent" TargetType="Control"
            BasedOn="{StaticResource OptionBack}">
-        <Setter Property="Padding">
-            <Setter.Value>
-                10
-            </Setter.Value>
-        </Setter>
-
         <Setter Property="BorderBrush">
             <Setter.Value>#D8000000</Setter.Value>
         </Setter>
@@ -76,4 +66,25 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <Style x:Key="WhiteOption" TargetType="Control"
+           BasedOn="{StaticResource OptionAccent}">
+        <Setter Property="Padding">
+            <Setter.Value>
+                10
+            </Setter.Value>
+        </Setter>
+        
+        <Setter Property="Foreground">
+            <Setter.Value>White</Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BlackOption" TargetType="Control"
+           BasedOn="{StaticResource OptionAccent}">
+        <Setter Property="Foreground">
+            <Setter.Value>Black</Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

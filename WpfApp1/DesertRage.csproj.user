@@ -166,6 +166,9 @@
     <Page Update="Resources\Styles\TextBlocks.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Styles\TextBoxes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Styles\Total.xaml">
       <SubType>Designer</SubType>
     </Page>

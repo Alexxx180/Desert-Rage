@@ -4,65 +4,33 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
+using DesertRage.Writers;
+using DesertRage.ViewModel;
 
 namespace DesertRage.Controls.Menu
 {
     /// <summary>
-    /// Логика взаимодействия для Autorization.xaml
+    /// Player autorization
     /// </summary>
     public partial class Autorization : UserControl, INotifyPropertyChanged
     {
-        private string _currentProfile;
-        public string CurrentProfile
+        public static readonly DependencyProperty
+            ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
+                typeof(GameStart), typeof(Autorization));
+
+        public GameStart ViewModel
         {
-            get => _currentProfile;
-            set
-            {
-                _currentProfile = value;
-                OnPropertyChanged();
-            }
+            get => GetValue(ViewModelProperty) as GameStart;
+            set => SetValue(ViewModelProperty, value);
         }
 
-        private HashSet<string> _toDrop;
-
-        private ObservableCollection<string> _profiles;
-        public ObservableCollection<string> Profiles
-        {
-            get => _profiles;
-            set
-            {
-                _profiles = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _isListVisible;
-        public bool IsListVisible
-        {
-            get => _isListVisible;
-            set
-            {
-                _isListVisible = value;
-                OnPropertyChanged();
-            }
-        }
+        private readonly HashSet<string> _toDrop;
 
         public Autorization()
         {
             InitializeComponent();
-
-            _isListVisible = false;
             _toDrop = new HashSet<string>();
-            Profiles = new ObservableCollection<string>();
-
-            Profiles.Add("АляТополя");
-            Profiles.Add("МистерПерпендыкович");
-            Profiles.Add("СерьезныйСэм");
-            Profiles.Add("Еще");
-            Profiles.Add("И еще");
-            Profiles.Add("И еще один");
         }
 
         #region ProfilesManagement Members
@@ -79,7 +47,7 @@ namespace DesertRage.Controls.Menu
                     ListBox profileList = sender as ListBox;
                     string selectedItem = profileList.SelectedItem as string;
 
-                    _ = Profiles.Remove(selectedItem);
+                    _ = ViewModel.Profiles.Remove(selectedItem);
                     _ = _toDrop.Add(selectedItem);
 
                     DragDrop.DoDragDrop(this, new DataObject(DataFormats.FileDrop, selectedItem), DragDropEffects.Move);
@@ -92,24 +60,38 @@ namespace DesertRage.Controls.Menu
         {
             if (e.Data.GetData(DataFormats.FileDrop) is string item)
             {
-                Profiles.Add(item);
+                ViewModel.Profiles.Add(item);
                 _ = _toDrop.Remove(item);
             }
         }
         #endregion
 
+        #region Selection Members
         private void SelectProfile(object sender, SelectionChangedEventArgs e)
         {
             ListBox profileList = sender as ListBox;
-            CurrentProfile = profileList.SelectedItem as string;
+            ViewModel.CurrentProfile = profileList.SelectedItem as string;
         }
 
         private void UseProfile(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            IsListVisible = !IsListVisible;
-            button.Content = IsListVisible ? "▼" : "▲";
+            ViewModel.IsListVisible = !ViewModel.IsListVisible;
+
+            if (ViewModel.IsListVisible)
+            {
+                button.Content = "▼";
+            }
+            else
+            {
+                button.Content = "▲";
+                foreach (string file in _toDrop)
+                {
+                    Processors.TruncateFile(file);
+                }
+            }
         }
+        #endregion
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

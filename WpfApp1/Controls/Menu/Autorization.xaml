@@ -8,15 +8,26 @@
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <Grid DataContext="{Binding Path=ViewModel}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
 
-        <ListBox Style="{StaticResource GlobalFont}"
-                 MouseMove="ProfilesMove" Drop="ProfilesDrop"
+        <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop"
                  SelectionChanged="SelectProfile">
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.ItemContainerStyle>
+                <StaticResource ResourceKey="RangerItems" />
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.AllowDrop>
+                True
+            </ListBox.AllowDrop>
+
             <ListBox.Visibility>
                 <Binding Path="IsListVisible">
                     <Binding.Converter>
@@ -24,30 +35,10 @@
                     </Binding.Converter>
                 </Binding>
             </ListBox.Visibility>
-            
-            <ListBox.AllowDrop>
-                True
-            </ListBox.AllowDrop>
-            
-            <ListBox.FontSize>
-                24
-            </ListBox.FontSize>
-            
+
             <ListBox.ItemsSource>
                 <Binding Path="Profiles" Mode="OneWay"/>
             </ListBox.ItemsSource>
-            
-            <ListBox.ItemContainerStyle>
-                <StaticResource ResourceKey="RangerItems" />
-            </ListBox.ItemContainerStyle>
-
-            <ListBox.BorderBrush>
-                #8A000000
-            </ListBox.BorderBrush>
-
-            <ListBox.Background>
-                #8A000000
-            </ListBox.Background>
         </ListBox>
 
         <Grid Grid.Row="1" Style="{StaticResource BackAccent}">
@@ -57,9 +48,9 @@
             </Grid.ColumnDefinitions>
 
             <TextBox TextAlignment="Center" MaxLength="30">
-                <TextBox.FontSize>
-                    20
-                </TextBox.FontSize>
+                <TextBox.Style>
+                    <StaticResource ResourceKey="InputField"/>
+                </TextBox.Style>
 
                 <TextBox.Text>
                     <Binding Path="CurrentProfile">
@@ -71,21 +62,9 @@
                         </Binding.UpdateSourceTrigger>
                     </Binding>
                 </TextBox.Text>
-
-                <TextBox.Foreground>
-                    White
-                </TextBox.Foreground>
-                
-                <TextBox.Background>
-                    #8A000000
-                </TextBox.Background>
-
-                <TextBox.BorderBrush>
-                    #8A000000
-                </TextBox.BorderBrush>
             </TextBox>
 
-            <Button Style="{StaticResource OptionAccent}"
+            <Button Style="{StaticResource BlackOption}"
                     FontSize="24" Click="UseProfile">
                 <Grid.Row>
                     1
@@ -94,14 +73,6 @@
                 <Grid.Column>
                     2
                 </Grid.Column>
-
-                <Button.Padding>
-                    0
-                </Button.Padding>
-
-                <Button.Foreground>
-                    Black
-                </Button.Foreground>
 
                 <Button.Content>
                     ▲

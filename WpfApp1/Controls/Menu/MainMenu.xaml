@@ -5,9 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
              xmlns:System="clr-namespace:System;assembly=System.Runtime"
+             x:Name="DesertMainMenu"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+    
     <Grid Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="4" Visibility="Visible">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.25*"/>
@@ -28,7 +33,7 @@
             </Image.Source>
         </Image>
 
-        <menu:Autorization/>
+        <menu:Autorization ViewModel="{Binding ElementName=DesertMainMenu, Path=StartViewModel}"/>
 
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
@@ -55,7 +60,7 @@
                 </TextBlock>
             </Viewbox>
 
-            <Button Style="{StaticResource OptionAccent}">
+            <Button Style="{StaticResource WhiteOption}">
                 <Grid.Row>
                     3
                 </Grid.Row>
@@ -64,16 +69,16 @@
                     1
                 </Grid.Column>
 
-                <Button.BorderBrush>
-                    <Brush>#D8000000</Brush>
-                </Button.BorderBrush>
+                <Button.IsEnabled>
+                    <Binding Path="StartViewModel.IsPlayerExists"/>
+                </Button.IsEnabled>
 
                 <Viewbox>
                     <TextBlock Text="Продолжить начатое"/>
                 </Viewbox>
             </Button>
 
-            <Button Style="{StaticResource OptionAccent}">
+            <Button Style="{StaticResource WhiteOption}">
                 <Grid.Row>
                     5
                 </Grid.Row>
@@ -82,39 +87,10 @@
                     1
                 </Grid.Column>
 
-                <Button.BorderBrush>
-                    <Brush>#D8000000</Brush>
-                </Button.BorderBrush>
-
                 <Viewbox>
                     <TextBlock Text="Новое приключение"/>
                 </Viewbox>
             </Button>
         </Grid>
-
-        
-
-        
-
-        
-
-        <!--<Label>
-                <Label.Template>
-                    <StaticResource ResourceKey="ChangeableImage"/>
-                </Label.Template>
-            </Label>-->
-
-
-        
-
-        <!--<Button x:Name="NewAdventure" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="72" Click="NewAdventure_Click" Panel.ZIndex="5" Visibility="Visible" FontStretch="Normal" MouseEnter="GameStartBtns_MouseEnter" MouseLeave="GameStartBtns_MouseLeave" BorderBrush="#FF612817" Grid.Row="6" Grid.Column="2">
-            
-            <Image x:Name="NewAdv" Source="/Resources/Images/Autorize/Adventures3.png" Stretch="Fill">
-                
-            </Image>
-        </Button>
-        <Button x:Name="Continue" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="72" Click="Continue_Click" Panel.ZIndex="5" Visibility="Visible" IsEnabled="False" FontStretch="Normal" MouseLeave="GameStartBtns_MouseLeave" MouseEnter="GameStartBtns_MouseEnter" BorderBrush="#FF612817" Grid.Row="4" Grid.Column="2">
-            <Image x:Name="ConAdv" Source="/Resources/Images/Autorize/Adventures4.png" Stretch="Fill" />
-        </Button>-->
     </Grid>
 </UserControl>

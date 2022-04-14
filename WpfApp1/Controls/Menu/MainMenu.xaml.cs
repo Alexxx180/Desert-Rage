@@ -1,26 +1,35 @@
-﻿using System;
+﻿using DesertRage.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace DesertRage.Controls.Menu
 {
     /// <summary>
     /// Логика взаимодействия для MainMenu.xaml
     /// </summary>
-    public partial class MainMenu : UserControl
+    public partial class MainMenu : UserControl, INotifyPropertyChanged
     {
+        private GameStart _startViewModel;
+        public GameStart StartViewModel
+        {
+            get => _startViewModel;
+            set
+            {
+                _startViewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainMenu()
         {
             InitializeComponent();
+
+            StartViewModel = new GameStart();
         }
 
         //private void ListPlayers(object sender, RoutedEventArgs e)
@@ -235,5 +244,23 @@ namespace DesertRage.Controls.Menu
         {
 
         }
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+        #endregion
     }
 }

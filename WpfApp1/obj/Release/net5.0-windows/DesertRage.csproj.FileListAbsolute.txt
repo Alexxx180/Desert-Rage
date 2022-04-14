@@ -157,7 +157,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\ref\Desert Rage.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Desert Rage.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\DesertRage.genruntimeconfig.cache
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\SoundGroup.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\SoundGroup.baml
@@ -165,3 +164,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\Menu\Autorization.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Controls\Menu\Autorization.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\Lists.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\obj\Release\net5.0-windows\Resources\Styles\TextBoxes.baml

@@ -39,12 +39,12 @@ namespace DesertRage
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        //[EN] Initialize MainWindow (Main Constructor)
-        //[RU] Инициализация ГлавногоЭкрана (Главный Конструктор).
         public MainWindow()
         {
             InitializeComponent();
             SoundTrack.PlayMusic(Paths.OST.Music.MainTheme);
+
+            
             //Functionality();
             //MainHero = Ray;
         }
@@ -382,31 +382,6 @@ namespace DesertRage
         //        if (foes[i].HP > 0)
         //            CheckFoesTurns(i);
         //}
-
-
-        // Deprecated: use triggers instead
-        
-
-        //#region Triggers Members
-        //private void TimerTurnOn_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    if (WRecd.IsEnabled) 
-        //        TimerOff(ref WRecd);
-        //}
-
-        //private void TimerTurnOn_Unchecked(object sender, RoutedEventArgs e)
-        //{
-        //    if (!WRecd.IsEnabled)
-        //        TimerOn(ref WRecd); 
-        //}
-
-        //private void ChangeTimer(ref DispatcherTimer timer,
-        //    EventHandler SomeEvent, TimeSpan timeSpan)
-        //{
-        //    timer.Tick += new EventHandler(SomeEvent);
-        //    timer.Interval = timeSpan;
-        //}
-        //#endregion
 
         private void SaveGame()
         {

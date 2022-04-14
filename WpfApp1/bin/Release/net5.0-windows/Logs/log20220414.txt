@@ -118,3 +118,26 @@
 2022-04-14 14:33:25.263 +03:00 [DBG] Collecting configuration info...
 2022-04-14 14:34:32.880 +03:00 [INF] Application started
 2022-04-14 14:34:32.911 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:10:49.865 +03:00 [INF] Application started
+2022-04-14 15:10:49.896 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:14:07.995 +03:00 [INF] Application started
+2022-04-14 15:14:08.026 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:48:33.334 +03:00 [INF] Application started
+2022-04-14 15:48:33.365 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:52:53.736 +03:00 [INF] Application started
+2022-04-14 15:52:53.768 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:57:27.523 +03:00 [INF] Application started
+2022-04-14 15:57:27.555 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:59:00.081 +03:00 [INF] Application started
+2022-04-14 15:59:00.112 +03:00 [DBG] Collecting configuration info...
+2022-04-14 15:59:06.763 +03:00 [DBG] Data directory set as: D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\WpfApp1\bin\Release\net5.0-windows\Resources\Data\
+2022-04-14 15:59:06.763 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:08.106 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:10.652 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:13.740 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:14.836 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:18.924 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:34.379 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:41.420 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:45.244 +03:00 [INF] Truncating file: 
+2022-04-14 15:59:48.276 +03:00 [INF] Truncating file: 
