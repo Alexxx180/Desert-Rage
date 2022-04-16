@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesertRage.Model.Locations.Map;
+using System;
 using System.Collections.Generic;
 
 namespace DesertRage.Customing.Converters
@@ -43,6 +44,21 @@ namespace DesertRage.Customing.Converters
         public static Uri ToUri(this string Path, UriKind kind)
         {
             return new Uri(Path, kind);
+        }
+
+        public static string Tile(this string[] map, Position place)
+        {
+            return map[place.Y][place.X].ToString();
+        }
+
+        public static Position ToPosition(this string position)
+        {
+            string[] units = position.Split(':');
+            return new Position
+            {
+                X = units[0].ToInt(),
+                Y = units[1].ToInt()
+            };
         }
 
         public static string[] ToStrings(this object[] objs)

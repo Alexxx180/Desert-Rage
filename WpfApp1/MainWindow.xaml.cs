@@ -29,6 +29,7 @@ using DesertRage.ViewModel;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Locations;
 using DesertRage.Controls;
+using DesertRage.Controls.Scenes;
 
 namespace DesertRage
 {
@@ -44,12 +45,16 @@ namespace DesertRage
             InitializeComponent();
             SoundTrack.PlayMusic(Paths.OST.Music.MainTheme);
 
-            
+
             //Functionality();
             //MainHero = Ray;
+
+            //Trace.WriteLine(MAAAP.Focus());
+
+
         }
 
-        
+
 
         //private void Functionality()
         //{
@@ -387,6 +392,14 @@ namespace DesertRage
         {
             //PlaySound(Paths.OST.Sounds.ControlSave);
             SaveProfile("Ray.json", Player);
+        }
+
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (Display.Content is IControllable keyPad)
+            {
+                keyPad.KeyHandle(sender, e);
+            }
         }
 
         #region INotifyPropertyChanged Members

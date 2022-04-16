@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DesertRage.Model.Locations.Map;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
@@ -18,24 +20,36 @@ namespace DesertRage.Controls.Scenes.Map
     /// <summary>
     /// Логика взаимодействия для LevelMap.xaml
     /// </summary>
-    public partial class LevelMap : UserControl, INotifyPropertyChanged
+    public partial class LevelMap : UserControl, INotifyPropertyChanged, IControllable
     {
+        private Position _camera;
+        public Position Camera
+        {
+            get => _camera;
+            set
+            {
+                _camera = value;
+                OnPropertyChanged();
+            }
+        }
+
         public LevelMap()
         {
             InitializeComponent();
 
             TileCodes = new Dictionary<string, string>
             {
-                { ".", "Resources/Images/Locations/Total/Chests/ChestOpened(ver1).png" },
-                { "K", "Resources/Images/Locations/Loc1/Key.png" },
-                { "#", "Resources/Images/Locations/Loc1/Lock.png" },
-                { "H", "Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" },
-                { "$", "Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" },
-                { "S", "Resources/Images/Locations/Total/SafeArea.png" },
-                { "X", "Resources/Images/Locations/Loc1/AncientArtifact.png" },
-                { "!", "Resources/Images/Locations/Total/Chests/ChestClosed(ver3).png" },
-                { "@", "Resources/Images/Locations/Total/Table.jpg" }
+                { ".", "/Resources/Images/Locations/Total/Chests/ChestOpened(ver1).png" },
+                { "K", "/Resources/Images/Locations/Loc1/Key.png" },
+                { "#", "/Resources/Images/Locations/Loc1/Lock.png" },
+                { "H", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" },
+                { "$", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" },
+                { "S", "/Resources/Images/Locations/Total/SafeArea.png" },
+                { "X", "/Resources/Images/Locations/Loc1/AncientArtifact.png" },
+                { "!", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver3).png" },
+                { "@", "/Resources/Images/Locations/Total/Table.jpg" }
             };
+            OnPropertyChanged(nameof(TileCodes));
 
             Map = new string[] {
                 "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
@@ -75,6 +89,8 @@ namespace DesertRage.Controls.Scenes.Map
                 "H...H...............H...H....H.............................H",
                 "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
             };
+
+            Camera = new Position(1, 3);
         }
         // To make it via tiles we need converter
         // '.' -> place to go ; 'H' - wall
@@ -121,7 +137,16 @@ namespace DesertRage.Controls.Scenes.Map
         // with only map objects
         // and bind there hero too
 
-        private readonly Dictionary<string, string> TileCodes;
+        public Dictionary<string, string> TileCodes { get; }
+        //public string[] Map
+        //{
+        //    get => _map;
+        //    set
+        //    {
+        //        _map = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         private string[] _map;
         public string[] Map
@@ -472,5 +497,33 @@ namespace DesertRage.Controls.Scenes.Map
         }
 
         #endregion
+
+        public void KeyHandle(object sender, KeyEventArgs e)
+        {
+            Trace.WriteLine(Camera.ToString());
+            switch (e.Key)
+            {
+                case Key.W:
+                    Trace.WriteLine("W");
+                    Camera = new Position(Camera.X, Camera.Y - 1);
+                    break;
+                case Key.A:
+                    Trace.WriteLine("A");
+                    Camera = new Position(Camera.X - 1, Camera.Y);
+                    Camera.Increment(new Position(-1, 0));
+                    break;
+                case Key.S:
+                    Trace.WriteLine("S");
+                    Camera.Increment(new Position(0, 1));
+                    break;
+                case Key.D:
+                    Trace.WriteLine("D");
+                    Camera.Increment(new Position(1, 0));
+                    break;
+                default:
+                    break;
+            }
+            //OnPropertyChanged(nameof(Camera));
+        }
     }
 }

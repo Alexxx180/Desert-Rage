@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="80">
     <StackPanel>
-        <MediaElement x:Name="Sound1" MediaEnded="OnMusicEnd">
+        <MediaElement x:Name="Sound1" MediaEnded="OnMusicEnd" IsMuted="True">
             <!--Resources/OST/Music/MainTitle.mp3-->
             <MediaElement.Visibility>
                 Visible

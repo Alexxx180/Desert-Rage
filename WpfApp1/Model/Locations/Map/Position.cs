@@ -1,6 +1,4 @@
-﻿using DesertRage.Customing.Converters;
-
-namespace DesertRage.Model.Locations.Map
+﻿namespace DesertRage.Model.Locations.Map
 {
     public struct Position
     {
@@ -10,22 +8,36 @@ namespace DesertRage.Model.Locations.Map
             Y = y;
         }
 
-        public int X { get; set; }
-        public int Y { get; set; }
+        public Position(Position start, int increment)
+        {
+            X = start.X + increment;
+            Y = start.Y + increment;
+        }
+
+        public void Increment(Position distance)
+        {
+            X += distance.X;
+            Y += distance.Y;
+        }
+
+        public bool IsOverflow(int min, string[] map)
+        {
+            bool overFlow = Y < min || Y >= map.Length;
+
+            if (!overFlow)
+            {
+                overFlow = X < min || X >= map[Y].Length;
+            }
+
+            return overFlow;
+        }
 
         public override string ToString()
         {
             return $"{X}:{Y}";
         }
 
-        public static Position ToPosition(string position)
-        {
-            string[] units = position.Split(':');
-            return new Position
-            {
-                X = units[0].ToInt(),
-                Y = units[1].ToInt()
-            };
-        }
+        public int X { get; set; }
+        public int Y { get; set; }
     }
 }

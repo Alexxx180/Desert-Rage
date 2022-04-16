@@ -8,7 +8,8 @@
         Height="1080" Width="1920"
         WindowStyle="None"
         WindowState="Maximized"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        KeyDown="OnKeyDown">
     <Window.DataContext>
         <Binding RelativeSource="{RelativeSource Self}"/>
     </Window.DataContext>
@@ -28,7 +29,7 @@
             <Label.Content>
                 <!--<menu:MainMenu Tracks="{Binding ElementName=SoundTrack}"/>-->
 
-                <map:LevelMap/>
+                <map:LevelMap x:Name="MAAAP"/>
             </Label.Content>
             
         </Label>

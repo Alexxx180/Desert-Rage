@@ -4,8 +4,29 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1920">
+             FocusManager.FocusedElement="{Binding ElementName=MapView, Mode=OneTime}"
+             d:DesignHeight="1080" d:DesignWidth="1920" x:Name="MapView">
+    <!--<UserControl.Style>
+        <Style>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsFocused}" Value="True">
+                    <Setter Property="FocusManager.FocusedElement" 
+                    Value="{Binding RelativeSource={RelativeSource Self}}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Style>-->
+    
+    <UserControl.Resources>
+        <converters:MapConverter x:Key="MapConverter"/>
+    </UserControl.Resources>
+    
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+    
     <Grid>
         <Grid.Background>
             <VisualBrush TileMode="Tile">
@@ -33,7 +54,6 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
 
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -49,68 +69,133 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <!--#region TileRow-0-->
             
             <map:MapTile>
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-4:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-3:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-2:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-1:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="0:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="5">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="1:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="6">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="2:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="7">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="3:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile X="8">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
+                    <MultiBinding ConverterParameter="4:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
 
-            <map:MapTile X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -120,61 +205,127 @@
 
             <map:MapTile Y="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-4:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-3:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-2:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-1:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="0:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="5">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="1:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="6">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="2:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="7">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="3:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="1" X="8">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
+                    <MultiBinding ConverterParameter="4:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
 
-            <map:MapTile Y="1" X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -184,61 +335,127 @@
 
             <map:MapTile Y="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-4:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-3:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-2:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-1:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="0:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="5">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="1:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="6">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="2:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="7">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="3:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="2" X="8">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
+                    <MultiBinding ConverterParameter="4:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
 
-            <map:MapTile Y="2" X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -248,61 +465,127 @@
 
             <map:MapTile Y="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-4:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-3:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-2:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-1:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="0:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="5">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="1:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="6">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="2:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="7">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="3:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="3" X="8">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
+                    <MultiBinding ConverterParameter="4:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
 
-            <map:MapTile Y="3" X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -312,125 +595,127 @@
 
             <map:MapTile Y="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-4:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="1">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-3:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="2">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-2:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="3">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="-1:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="4">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="0:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="5">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="1:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="6">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="2:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="7">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                    <MultiBinding ConverterParameter="3:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
             <map:MapTile Y="4" X="8">
                 <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
+                    <MultiBinding ConverterParameter="4:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
 
-            <map:MapTile Y="4" X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <!--#endregion-->
-
-            <!--#region TileRow-5-->
-
-            <map:MapTile Y="5">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="1">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="2">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="3">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="4">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="5">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="6">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="7">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="8">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
-                </map:MapTile.Path>
-            </map:MapTile>
-
-            <map:MapTile Y="5" X="9">
-                <map:MapTile.Path>
-                    /Resources/Images/Locations/Total/Boulder.png
+                        <Binding ElementName="MapView" Path="DataContext.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    </MultiBinding>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -447,7 +732,7 @@
                 </Grid.Row>
 
                 <Grid.Column>
-                    8
+                    7
                 </Grid.Column>
 
                 <Grid.ColumnSpan>
