@@ -1,7 +1,7 @@
 ﻿<Window x:Name="DesertRageEntry" x:Class="DesertRage.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:scene="clr-namespace:DesertRage.Controls.Scenes"
+        xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
         xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
         xmlns:controls="clr-namespace:DesertRage.Controls"
         Title="Desert rage"
@@ -26,9 +26,11 @@
             </Label.HorizontalContentAlignment>
 
             <Label.Content>
-                <menu:MainMenu Tracks="{Binding ElementName=SoundTrack}"/>
+                <!--<menu:MainMenu Tracks="{Binding ElementName=SoundTrack}"/>-->
+
+                <map:LevelMap/>
             </Label.Content>
-            <!--<scene:LevelMap/>-->
+            
         </Label>
 
         <Image x:Name="BrightnessImg" Opacity="0">

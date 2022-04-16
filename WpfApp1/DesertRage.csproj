@@ -634,6 +634,7 @@
     <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver1%29.png" />
     <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver2%29.png" />
     <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver3%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Dark.png" />
     <None Remove="Resources\Images\Locations\Total\Jail1.png" />
     <None Remove="Resources\Images\Locations\Total\Person\Static\Down.png" />
     <None Remove="Resources\Images\Locations\Total\Person\Static\Left.png" />
@@ -897,6 +898,7 @@
     <Resource Include="Resources\Images\Fight\Options\GenocideBeforeImg.png" />
     <Resource Include="Resources\Images\Locations\Messages\Pain\Pain2.png" />
     <Resource Include="Resources\Images\Locations\Messages\Pain\Pain3.png" />
+    <Resource Include="Resources\Images\Locations\Total\Dark.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click2.png" />
   </ItemGroup>

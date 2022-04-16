@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,11 +18,120 @@ namespace DesertRage.Controls.Scenes.Map
     /// <summary>
     /// Логика взаимодействия для LevelMap.xaml
     /// </summary>
-    public partial class LevelMap : UserControl
+    public partial class LevelMap : UserControl, INotifyPropertyChanged
     {
         public LevelMap()
         {
             InitializeComponent();
+
+            TileCodes = new Dictionary<string, string>
+            {
+                { ".", "Resources/Images/Locations/Total/Chests/ChestOpened(ver1).png" },
+                { "K", "Resources/Images/Locations/Loc1/Key.png" },
+                { "#", "Resources/Images/Locations/Loc1/Lock.png" },
+                { "H", "Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" },
+                { "$", "Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" },
+                { "S", "Resources/Images/Locations/Total/SafeArea.png" },
+                { "X", "Resources/Images/Locations/Loc1/AncientArtifact.png" },
+                { "!", "Resources/Images/Locations/Total/Chests/ChestClosed(ver3).png" },
+                { "@", "Resources/Images/Locations/Total/Table.jpg" }
+            };
+
+            Map = new string[] {
+                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+                "H............H................H..........H.....H...........H",
+                "H..H.H..H.H...HHHHHH.HHH....H.H..........H.....H.....HHH...H",
+                "H...H....H...H..........H.HHH.H.....H....H.HH..H....H......H",
+                "HHH.HHHH.H..H.H.HHHHHHHH..H.H.H....HXH...H..HH.H..HH..HHH..H",
+                "H...H....HH..H..........H.H.H.HH........HHH.H..H.HH.....HH.H",
+                "HH.HH.HHHH.HH.HHHH.HHH..H......HH......HHH..H.HH.H..HHHH.H.H",
+                "H...H.........H...H..$H..HH.H...HHHH#HHH....H..H.H.HH..H.H.H",
+                "H.HHHHHHHHHHH.H.H...HHH.H..H...H...H.......HHH.H.H.H...H.H.H",
+                "H.H.........H.H.HHHH$....HH...H....HHHH.....H..H.H.H!H.H.H.H",
+                "H.H.HHHHHHH.H.H.H...HH..H..H.H..H.....@HHHHHH.HH.H..HH.H.H.H",
+                "H.H.H.....H.H...H....H.H..H...H..HHH...HHH.....H.HH.....HH.H",
+                "H.H.H.HHH.H.HHHHH.H...H...H.H.H.....H........H.H..HHHHHHH..H",
+                "H.H.H.H...H.......H...H..H.....HHHH..HHHHHH..H.H...........H",
+                "H.H.H.H.H.H.......H..H...H..H......H.......HHHHHHHHHHHHH...H",
+                "H.H.H.H.H.H...HHHHH..H.HHHHH.HHHH..HHHHHHH..H......H.......H",
+                "H.H.H.H.HHHHH........H...H.......H.......H........H.H......H",
+                "H.....H......HH...H...HH.H..HSH.H.HHHHH..HHHHH.HH...H......H",
+                "H.HH#H..HH.HH..H.......H..............H......H.....H.......H",
+                "HHH..HH..H......H...H..HHHHHH#HH.HHH..H..HHH.HHHH..H.......H",
+                "H.....HHH..H....H......H.......H...H...HH..H....H..HHHHHH..H",
+                "H.H....HHHHK....H.H..HH........HHH.H.H....H.HHH.........H..H",
+                "H.H.......HH....H......H.HH......H.H.....HH...H.........H..H",
+                "H.H.HHH....H....H...H.H.H..H.....HHHHHHH.H..H..HHHH.....H..H",
+                "H.H.H.....H$..HHH.....H..........H.....H....H.....H.....H..H",
+                "HHH.HHHH..HH..H@H......H..H......H..H.HHHHHHH.H.........H..H",
+                "H...H......HHHH.HHHHHH..H..H...HHH.HH........HHHH..........H",
+                "H.HHH......H.....H.$H....H..HHHH....HH..H.....H..HHH.H..H..H",
+                "H...H..HHH....H..H.H...H..H..H...HHHHHHHHHH.H..H.....H..HH.H",
+                "H.H.H....H..H....H..HH..H.H..H...H...HH....H.H..HHHHHHH.H..H",
+                "H.H.H....HHHH....HH.H..H..H.HH...H.H.H...H.H..H...........HH",
+                "HHH.HHH..H..........H.HHHHH..H...H.H.H.HHH.HH..HHHH..HH.H..H",
+                "H...H....HH..H..H...H.H...H.HH.....H....H...HH....H..H..HH.H",
+                "H.K.H.............@.H.H.H.H..H.....H....H.K.H...H....H..H..H",
+                "H...H...............H...H....H.............................H",
+                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+            };
+        }
+        // To make it via tiles we need converter
+        // '.' -> place to go ; 'H' - wall
+
+        //        MapSlice
+
+        //MapObject - > MapTile
+
+        //Dictionary<string. string>
+
+        //"3;7", MapObject
+
+        // We have to record LevelMap slice
+        // position
+
+        // THEN WE MAY BE ABLE TO DO ANYTHING ABOUT IT
+
+        // X = 6
+
+        // H....HHHH....HH.H
+        // HHH..H..........H
+        // H....HH..H..H...H
+        // H.............@.H
+        // H...............H
+
+        // TO
+
+        // X = 3
+
+        // .H.H....HHHH....H
+        // HH.HHH..H........
+        // ...H....HH..H..H.
+        // .K.H.............
+        // ...H.............
+
+        // And hero will have
+        // something like 
+        // relative position
+        // on this map X-Y
+
+        // Or... Even better
+
+        // Make another tileset
+        // with only map objects
+        // and bind there hero too
+
+        private readonly Dictionary<string, string> TileCodes;
+
+        private string[] _map;
+        public string[] Map
+        {
+            get => _map;
+            set
+            {
+                _map = value;
+                OnPropertyChanged();
+            }
         }
 
         ////[EN] Complete tasks
@@ -342,5 +453,24 @@ namespace DesertRage.Controls.Scenes.Map
         //    MainHero.MiniTask = true;
         //    ShowAfterBattleMenu();
         //}
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
     }
 }

@@ -3,248 +3,494 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Scenes"
+             xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+        <Grid.Background>
+            <VisualBrush TileMode="Tile">
+                <VisualBrush.Viewport>
+                    0.8,0.8,0.1,0.1
+                </VisualBrush.Viewport>
+                
+                <VisualBrush.AlignmentY>
+                    Top
+                </VisualBrush.AlignmentY>
+                
+                <VisualBrush.AlignmentX>
+                    Left
+                </VisualBrush.AlignmentX>
+                
+                <VisualBrush.Visual>
+                    <Image Source="/Resources/Images/Locations/1/Way.png"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <!--#region TileRow-0-->
+            
+            <map:MapTile>
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <map:MapTile X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <map:MapTile X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <map:MapTile X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <!--#endregion-->
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <!--#region TileRow-1-->
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <map:MapTile Y="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <map:MapTile Y="1" X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <map:MapTile Y="1" X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <map:MapTile Y="1" X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        
-        <Image x:Name="Img2" Grid.Column="18" Grid.Row="34"  VerticalAlignment="Center" Source="/Resources/Images/Locations/Total/Person/Static/Down.png" Panel.ZIndex="5" Visibility="Hidden" IsEnabled="False" Stretch="Fill" HorizontalAlignment="Center"/>
-        <Image x:Name="Table1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/Table.png" Stretch="Fill" Visibility="Hidden" IsEnabled="False" Grid.Row="29" Grid.Column="49"/>
-        <Image x:Name="Table2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Table.png" Stretch="Fill" IsEnabled="False" Visibility="Hidden" Grid.Row="22" Grid.Column="23" Panel.ZIndex="3"/>
-        <Image x:Name="Table3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Table.png" Stretch="Fill" Visibility="Hidden" IsEnabled="False" Grid.Row="22" Grid.Column="2" Panel.ZIndex="3"/>
-        <Image x:Name="ChestImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" Panel.ZIndex="3" Visibility="Hidden" IsEnabled="False" Grid.Row="10" Grid.Column="8" Stretch="Fill"/>
-        <Image x:Name="ChestImg2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" Panel.ZIndex="3" IsEnabled="False" Visibility="Hidden" Grid.Row="24" Grid.Column="10" Stretch="Fill"/>
-        <Image x:Name="ChestImg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" Panel.ZIndex="3" IsEnabled="False" Visibility="Hidden" Grid.Row="10" Grid.Column="24" Stretch="Fill"/>
-        <Image x:Name="ChestImg4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" IsEnabled="False" Visibility="Hidden" Grid.Row="8" Grid.Column="35" Stretch="Fill"/>
-        <Image x:Name="SecretChestImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" IsEnabled="False" Visibility="Hidden" Grid.Row="27" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="SecretChestImg2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" IsEnabled="False" Visibility="Hidden" Grid.Row="5" Grid.Column="56" Stretch="Fill"/>
-        <Image x:Name="KeyImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc1/Models/Key.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="33" Grid.Column="2"/>
-        <Image x:Name="KeyImg2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc1/Models/Key.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="21" Grid.Column="11"/>
-        <Image x:Name="KeyImg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc1/Models/Key.png" Visibility="Hidden" IsEnabled="False" Stretch="Fill" Grid.Column="42" Grid.Row="33"/>
-        <Image x:Name="LockImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Loc1/Models/Lock.png" Panel.ZIndex="3" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="18" Grid.Column="4"/>
-        <Image x:Name="LockImg2" Grid.Column="29" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Locations/Loc1/Models/Lock.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="19"/>
-        <Image x:Name="LockImg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc1/Models/Lock.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="7" Grid.Column="36"/>
-        <Image x:Name="JailImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Total/Jail1.png" Panel.ZIndex="3" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="27" Grid.Column="50"/>
-        <Image x:Name="JailImg2" Grid.Column="53" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Locations/Total/Jail1.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="18"/>
-        <Image x:Name="JailImg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/Jail1.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="4" Grid.Column="54"/>
-        <Image x:Name="JailImg5" Grid.Column="4" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Locations/Total/Jail1.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="18"/>
-        <Image x:Name="JailImg6" Grid.Column="15" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Locations/Total/Jail1.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="28"/>
-        <Image x:Name="JailImg7" Grid.Column="20" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Locations/Total/Jail1.png" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Row="26"/>
-        <Image x:Name="Boulder1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="5" Source="/Resources/Images/Locations/Total/Boulder.png" Visibility="Hidden" IsEnabled="False" Grid.Row="3" Grid.Column="54" Stretch="Fill"/>
-        <Image x:Name="Lever1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/LeverOff.png" Visibility="Hidden" IsEnabled="False" Grid.Row="34" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="Lever2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/LeverOff.png" Visibility="Hidden" IsEnabled="False" Grid.Row="34" Grid.Column="1" Stretch="Fill"/>
-        <Image x:Name="Lever3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/LeverOff.png" Visibility="Hidden" IsEnabled="False" Grid.Row="21" Grid.Column="49" Stretch="Fill"/>
-        <Image x:Name="Bridge1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="16" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="Bridge2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="15" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="Bridge3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="6" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="Bridge4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="5" Grid.Column="28" Stretch="Fill"/>
-        <Image x:Name="Bridge5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="10" Grid.Column="19" Stretch="Fill"/>
-        <Image x:Name="Bridge6" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="10" Grid.Column="18" Stretch="Fill"/>
-        <Image x:Name="Bridge7" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="40" Stretch="Fill"/>
-        <Image x:Name="Bridge8" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Bridge.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="41" Stretch="Fill"/>
-        <Image x:Name="SpSer" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="58" Stretch="Fill"/>
-        <Image x:Name="SpDmg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="21" Grid.Column="13" Stretch="Fill"/>
-        <Image x:Name="SpDmg2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="18" Grid.Column="37" Stretch="Fill"/>
-        <Image x:Name="SpDmg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="55" Stretch="Fill"/>
-        <Image x:Name="SpDmg4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="7" Stretch="Fill"/>
-        <Image x:Name="SpDmg5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="10" Stretch="Fill"/>
-        <Image x:Name="SpHrb1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="7" Stretch="Fill"/>
-        <Image x:Name="SpHrb2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="8" Stretch="Fill"/>
-        <Image x:Name="SpHrb3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="8" Stretch="Fill"/>
-        <Image x:Name="SpHrb4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="9" Stretch="Fill"/>
-        <Image x:Name="SpHrb5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="29" Grid.Column="18" Stretch="Fill"/>
-        <Image x:Name="SpHrb6" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="23" Grid.Column="43" Stretch="Fill"/>
-        <Image x:Name="SpHrb7" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="44" Stretch="Fill"/>
-        <Image x:Name="SpHrb8" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="6" Grid.Column="45" Stretch="Fill"/>
-        <Image x:Name="SpHrb9" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="45" Stretch="Fill"/>
-        <Image x:Name="SpHrb10" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="55" Stretch="Fill"/>
-        <Image x:Name="SpHrb11" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="6" Grid.Column="56" Stretch="Fill"/>
-        <Image x:Name="SpHrb12" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="56" Stretch="Fill"/>
-        <Image x:Name="SpHrb13" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="47" Stretch="Fill"/>
-        <Image x:Name="SpHrb14" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="14" Grid.Column="48" Stretch="Fill"/>
-        <Image x:Name="SpEtr1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="3" Stretch="Fill"/>
-        <Image x:Name="SpEtr2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="3" Stretch="Fill"/>
-        <Image x:Name="SpEtr3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="4" Stretch="Fill"/>
-        <Image x:Name="SpEtr4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="10" Stretch="Fill"/>
-        <Image x:Name="SpEtr5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="11" Stretch="Fill"/>
-        <Image x:Name="SpEtr6" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="11" Stretch="Fill"/>
-        <Image x:Name="SpEtr7" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="14" Stretch="Fill"/>
-        <Image x:Name="SpEtr8" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="14" Stretch="Fill"/>
-        <Image x:Name="SpEtr9" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="15" Stretch="Fill"/>
-        <Image x:Name="SpEtr10" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="18" Grid.Column="15" Stretch="Fill"/>
-        <Image x:Name="SpEtr11" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="21" Stretch="Fill"/>
-        <Image x:Name="SpEtr12" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="23" Stretch="Fill"/>
-        <Image x:Name="SpEtr13" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="14" Grid.Column="46" Stretch="Fill"/>
-        <Image x:Name="SpEtr14" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="31" Grid.Column="47" Stretch="Fill"/>
-        <Image x:Name="SpEtr15" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="15" Grid.Column="47" Stretch="Fill"/>
-        <Image x:Name="SpEtr16" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="48" Stretch="Fill"/>
-        <Image x:Name="SpEtr17" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="49" Stretch="Fill"/>
-        <Image x:Name="SpEtr18" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="34" Grid.Column="58" Stretch="Fill"/>
-        <Image x:Name="SpElx1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="22" Grid.Column="5" Stretch="Fill"/>
-        <Image x:Name="SpElx2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="9" Stretch="Fill"/>
-        <Image x:Name="SpElx3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="6" Grid.Column="44" Stretch="Fill"/>
-        <Image x:Name="SpElx4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="14" Grid.Column="47" Stretch="Fill"/>
-        <Image x:Name="SpElx5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="48" Stretch="Fill"/>
-        <Image x:Name="SpElx6" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="6" Grid.Column="55" Stretch="Fill"/>
-        <Image x:Name="SpSbg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="4" Stretch="Fill"/>
-        <Image x:Name="SpSbg2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="7" Grid.Column="15" Stretch="Fill"/>
-        <Image x:Name="SpSbg3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="22" Stretch="Fill"/>
-        <Image x:Name="SpSbg4" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="21" Stretch="Fill"/>
-        <Image x:Name="SpSbg5" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="23" Stretch="Fill"/>
-        <Image x:Name="SpSbg6" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="13" Grid.Column="34" Stretch="Fill"/>
-        <Image x:Name="SpSbg7" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="11" Grid.Column="34" Stretch="Fill"/>
-        <Image x:Name="SpSbg8" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="33" Stretch="Fill"/>
-        <Image x:Name="SpSbg9" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="35" Stretch="Fill"/>
-        <Image x:Name="SpSbg10" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="15" Grid.Column="46" Stretch="Fill"/>
-        <Image x:Name="SpSbg11" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="12" Grid.Column="49" Stretch="Fill"/>
-        <Image x:Name="SpTsk" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/Surprise.png" Visibility="Hidden" IsEnabled="False" Grid.Row="17" Grid.Column="11" Stretch="Fill"/>
-        <Image x:Name="Threasure1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc2/Models/AncientArtifact2.png" Visibility="Hidden" IsEnabled="False" Grid.Row="16" Grid.Column="4" Stretch="Fill"/>
-        <Image x:Name="SaveProgress" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Total/SafeArea.png" Visibility="Hidden" IsEnabled="False" Grid.Row="28" Grid.Column="20" Stretch="Fill"/>
-        <Image x:Name="PharaohAppears" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc1/Models/PharaohModel.png" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="36" Opacity="0.01" Stretch="Fill"/>
-        <Image x:Name="FinalAppears" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc3/Models/FinalBoss.png" Visibility="Hidden" IsEnabled="False" Grid.Row="2" Grid.Column="28" Opacity="0.01" Stretch="Fill"/>
-        <Image x:Name="Ancient" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc2/Models/Dynamic/Ancient/Act1.png" Visibility="Hidden" IsEnabled="False" Grid.Row="16" Grid.Column="4" Opacity="0" Stretch="Fill"/>
-        <Image x:Name="Warrior" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="3" Source="/Resources/Images/Locations/Loc2/Models/Dynamic/Warrior/Act1.png" Visibility="Hidden" IsEnabled="False" Grid.Row="16" Grid.Column="1" Stretch="Fill"/>
+            <map:MapTile Y="1" X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-        <!--Сообщения на карте-->
-        <Image x:Name="TableMessage1" Grid.ColumnSpan="11" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="5" Source="/Resources/Images/Locations/Messages/Tables/TableMessage6.png" Stretch="Fill" IsEnabled="False" Visibility="Hidden" Grid.RowSpan="7" Grid.Row="25" Grid.Column="11"/>
-        <Image x:Name="TaskCompletedImg" Grid.ColumnSpan="7" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Tasks/TaskCompleted.png" Panel.ZIndex="4" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Column="39" Grid.Row="28" Grid.RowSpan="4"/>
-        <Image x:Name="ChestMessage1" Grid.ColumnSpan="7" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Chests/GetItemsCustomWeapon2.png" Panel.ZIndex="19" IsEnabled="False" Visibility="Hidden" Grid.Row="20" Grid.Column="17" Grid.RowSpan="4" Stretch="Fill"/>
-        <Image x:Name="PainImg" Grid.ColumnSpan="60" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Pain/Pain1.png" Panel.ZIndex="4" IsEnabled="False" Visibility="Hidden" Grid.RowSpan="36" Stretch="Fill" IsHitTestVisible="False"></Image>
+            <map:MapTile Y="1" X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-        <!--Карта-->
-        <Viewbox Grid.Row="32" Grid.Column="53" Grid.RowSpan="4" Grid.ColumnSpan="7" Panel.ZIndex="6" HorizontalAlignment="Right">
-            <Label x:Name="TimerFlees" Content="2:30" HorizontalAlignment="Right"  VerticalAlignment="Bottom" FontFamily="Bauhaus 93" FontSize="72" Panel.ZIndex="7" Grid.Column="53" Grid.Row="32" Visibility="Hidden" Grid.ColumnSpan="7" Grid.RowSpan="4" BorderBrush="#FF00DCFF" BorderThickness="8,8,8,8" Foreground="White" />
-        </Viewbox>
+            <map:MapTile Y="1" X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
 
-        <!--Модели на карте-->
-        <Image x:Name="Img1" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Fill" Source="/Resources/Images/Locations/Regular/New_game_show.jpg" Grid.Column="0" Grid.Row="0" Visibility="Hidden" Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="3" IsEnabled="False"/>
-        <ProgressBar x:Name="HPhelper" Grid.Row="33" Grid.Column="17" Grid.ColumnSpan="3" Value="{Binding ElementName=HPbar1, Path=Value}" Minimum="0" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Visibility="Hidden" Panel.ZIndex="5">
-            <ProgressBar.Foreground>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop Color="#FF3AAC28"/>
-                    <GradientStop Color="#FF00F3FF" Offset="1"/>
-                    <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                </LinearGradientBrush>
-            </ProgressBar.Foreground>
-        </ProgressBar>
+            <map:MapTile Y="1" X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-2-->
+
+            <map:MapTile Y="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-3-->
+
+            <map:MapTile Y="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-4-->
+
+            <map:MapTile Y="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-5-->
+
+            <map:MapTile Y="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="1">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="2">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="3">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="4">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="5">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="6">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="7">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="8">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="5" X="9">
+                <map:MapTile.Path>
+                    /Resources/Images/Locations/Total/Boulder.png
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--<Image x:Name="TableMessage1" Grid.ColumnSpan="11" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="5" Source="/Resources/Images/Locations/Messages/Tables/TableMessage6.png" Stretch="Fill" IsEnabled="False" Visibility="Hidden" Grid.RowSpan="7" Grid.Row="25" Grid.Column="11"/>
+            <Image x:Name="TaskCompletedImg" Grid.ColumnSpan="7" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Tasks/TaskCompleted.png" Panel.ZIndex="4" IsEnabled="False" Visibility="Hidden" Stretch="Fill" Grid.Column="39" Grid.Row="28" Grid.RowSpan="4"/>
+            <Image x:Name="ChestMessage1" Grid.ColumnSpan="7" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Chests/GetItemsCustomWeapon2.png" Panel.ZIndex="19" IsEnabled="False" Visibility="Hidden" Grid.Row="20" Grid.Column="17" Grid.RowSpan="4" Stretch="Fill"/>
+            <Image x:Name="PainImg" Grid.ColumnSpan="60" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Locations/Messages/Pain/Pain1.png" Panel.ZIndex="4" IsEnabled="False" Visibility="Hidden" Grid.RowSpan="36" Stretch="Fill" IsHitTestVisible="False"></Image>-->
+
+            <Viewbox>
+                <Grid.Row>
+                    5
+                </Grid.Row>
+
+                <Grid.Column>
+                    8
+                </Grid.Column>
+
+                <Grid.ColumnSpan>
+                    2
+                </Grid.ColumnSpan>
+                
+                
+                <Viewbox.VerticalAlignment>
+                    Bottom
+                </Viewbox.VerticalAlignment>
+                
+                <Viewbox.HorizontalAlignment>
+                    Right
+                </Viewbox.HorizontalAlignment>
+
+                <TextBlock Text="1:30">
+                    <TextBlock.Padding>
+                        2,0,2,0
+                    </TextBlock.Padding>
+                    
+                    <TextBlock.FontFamily>
+                        Stencil
+                    </TextBlock.FontFamily>
+                    
+                    <TextBlock.Foreground>
+                        White
+                    </TextBlock.Foreground>
+                    
+                    <TextBlock.Background>
+                        #D8000000
+                    </TextBlock.Background>
+                </TextBlock>
+            </Viewbox>
+
+            <!--<ProgressBar x:Name="HPhelper" Grid.Row="33" Grid.Column="17" Grid.ColumnSpan="3" Value="{Binding ElementName=HPbar1, Path=Value}" Minimum="0" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Visibility="Hidden" Panel.ZIndex="5">
+                <ProgressBar.Foreground>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FF3AAC28"/>
+                        <GradientStop Color="#FF00F3FF" Offset="1"/>
+                        <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                    </LinearGradientBrush>
+                </ProgressBar.Foreground>
+            </ProgressBar>-->
+        </Grid>
     </Grid>
 </UserControl>
