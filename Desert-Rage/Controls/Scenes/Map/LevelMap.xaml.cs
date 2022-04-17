@@ -3,18 +3,9 @@ using DesertRage.Model.Locations.Map;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -23,6 +14,30 @@ namespace DesertRage.Controls.Scenes.Map
     /// </summary>
     public partial class LevelMap : UserControl, INotifyPropertyChanged, IControllable
     {
+        public Dictionary<string, string> TileCodes { get; }
+
+        private Uri _backCover;
+        public Uri BackCover
+        {
+            get => _backCover;
+            set
+            {
+                _backCover = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string[] _map;
+        public string[] Map
+        {
+            get => _map;
+            set
+            {
+                _map = value;
+                OnPropertyChanged();
+            }
+        }
+
         private Position _camera;
         public Position Camera
         {
@@ -38,17 +53,23 @@ namespace DesertRage.Controls.Scenes.Map
         {
             InitializeComponent();
 
+
+            BackCover = "/Resources/Images/Locations/1-Secret-Temple/Way.svg".ToUri(UriKind.Relative);
+
+            ///Resources/Images/Locations/1-Secret-Temple/Way.svg
+
             TileCodes = new Dictionary<string, string>
             {
-                { ".", "/Resources/Images/Locations/Total/Chests/ChestOpened(ver1).png" },
-                { "K", "/Resources/Images/Locations/Loc1/Key.png" },
-                { "#", "/Resources/Images/Locations/Loc1/Lock.png" },
-                { "H", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver1).png" },
-                { "$", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver2).png" },
-                { "S", "/Resources/Images/Locations/Total/SafeArea.png" },
-                { "X", "/Resources/Images/Locations/Loc1/AncientArtifact.png" },
-                { "!", "/Resources/Images/Locations/Total/Chests/ChestClosed(ver3).png" },
-                { "@", "/Resources/Images/Locations/Total/Table.jpg" }
+                { ".", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
+                { "H", "/Resources/Images/Locations/1-Secret-Temple/Wall.svg" },
+                { "X", "/Resources/Images/Locations/1-Secret-Temple/Artifact.svg" },
+                { "!", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
+                { "S", "/Resources/Images/Locations/Total/SafeArea.svg" },
+                { "$", "/Resources/Images/Locations/Total/Chest/Closed.svg" },
+                { "E", "/Resources/Images/Locations/Total/Chest/Opened.svg" },
+                { "K", "/Resources/Images/Locations/Total/Key.svg" },
+                { "#", "/Resources/Images/Locations/Total/Lock.svg" },
+                { "@", "/Resources/Images/Locations/Total/Table.svg" }
             };
             OnPropertyChanged(nameof(TileCodes));
 
@@ -93,52 +114,7 @@ namespace DesertRage.Controls.Scenes.Map
 
             Camera = new Position(1, 3);
         }
-        // To make it via tiles we need converter
-        // '.' -> place to go ; 'H' - wall
 
-        //        MapSlice
-
-        //MapObject - > MapTile
-
-        //Dictionary<string. string>
-
-        //"3;7", MapObject
-
-        // We have to record LevelMap slice
-        // position
-
-        // THEN WE MAY BE ABLE TO DO ANYTHING ABOUT IT
-
-        // X = 6
-
-        // H....HHHH....HH.H
-        // HHH..H..........H
-        // H....HH..H..H...H
-        // H.............@.H
-        // H...............H
-
-        // TO
-
-        // X = 3
-
-        // .H.H....HHHH....H
-        // HH.HHH..H........
-        // ...H....HH..H..H.
-        // .K.H.............
-        // ...H.............
-
-        // And hero will have
-        // something like 
-        // relative position
-        // on this map X-Y
-
-        // Or... Even better
-
-        // Make another tileset
-        // with only map objects
-        // and bind there hero too
-
-        public Dictionary<string, string> TileCodes { get; }
         //public string[] Map
         //{
         //    get => _map;
@@ -149,16 +125,7 @@ namespace DesertRage.Controls.Scenes.Map
         //    }
         //}
 
-        private string[] _map;
-        public string[] Map
-        {
-            get => _map;
-            set
-            {
-                _map = value;
-                OnPropertyChanged();
-            }
-        }
+        
 
         ////[EN] Complete tasks
         ////[RU] Завершение задач.
@@ -352,51 +319,6 @@ namespace DesertRage.Controls.Scenes.Map
         //    TheEnd.Source = Ura(Paths.CutScenes.WasteTime);
         //}
 
-        //private void Location3_LavaTemple()
-        //{
-        //    Sets.EnemyRate = 5;
-        //    AnyShowX(ChestImg1, ChestImg2, ChestImg3, ChestImg4, Table1, Table2,
-        //        Table3, Boulder1, JailImg1, JailImg2, JailImg5, Lever1, Lever2, Lever3);
-        //    AnyGridX(new Image[] { ChestImg1, ChestImg2, ChestImg3, ChestImg4, Table1,
-        //        Table2, Table3, Threasure1, SaveProgress, Boulder1, JailImg1, JailImg2,
-        //        JailImg5 },
-        //        new int[] { 17, 22, 28, 26, 17, 1, 1, 2, 18, 20, 28, 21, 25 },
-        //        new int[] { 4, 23, 38, 56, 27, 9, 50, 28, 28, 46, 37, 46, 48 });
-        //    AnyHideX(JailImg3, JailImg6, JailImg7, SecretChestImg1, SecretChestImg2);
-        //    AnyShowX(SpDmg1, SpDmg2, SpDmg3, SpDmg4, SpDmg5, SpHrb1, SpHrb2, SpHrb3,
-        //        SpHrb4, SpHrb5, SpHrb6, SpHrb7, SpHrb8, SpHrb9, SpHrb10, SpHrb11, SpHrb12,
-        //        SpHrb13, SpHrb14, SpEtr1, SpEtr2, SpEtr3, SpEtr4, SpEtr5, SpEtr6, SpEtr7,
-        //        SpEtr8, SpEtr9, SpEtr10, SpEtr11, SpEtr12, SpEtr13, SpEtr14, SpEtr15,
-        //        SpEtr16, SpEtr17, SpEtr18, SpElx1, SpElx2, SpElx3, SpElx4, SpElx5, SpElx6,
-        //        SpSbg1, SpSbg2, SpSbg3, SpSbg4, SpSbg5, SpSbg6, SpSbg7, SpSbg8, SpSbg9,
-        //        SpSbg10, SpSbg11, SpSer, SpTsk);
-        //    SurpriseCheck(GetBag.Weapons[3], 226, SpSer);
-        //    SurpriseCheck(Ray.MiniTask, 233, SpTsk);
-        //    if (Ray.MenuTask >= 8)
-        //    {
-        //        ChangeMapToVoid(138);
-        //        ChangeMapToWall(111);
-        //        PullTheLever(Lever1, Bridge1, Bridge2, Bridge3, Bridge4);
-        //    }
-        //    PlayerSetLocation(18, 28);
-        //    TheEnd.Source = Ura(Paths.CutScenes.PowerRanger);
-        //}
-
-        //private void Location4_BigRun()
-        //{
-        //    AnyShowX(TimerFlees, TimerFlees1);
-        //    AnyHideX(SpDmg1, SpDmg2, SpDmg3, SpDmg4, SpDmg5, SpHrb1, SpHrb2, SpHrb3,
-        //        SpHrb4, SpHrb5, SpHrb6, SpHrb7, SpHrb8, SpHrb9, SpHrb10, SpHrb11, SpHrb12,
-        //        SpHrb13, SpHrb14, SpEtr1, SpEtr2, SpEtr3, SpEtr4, SpEtr5, SpEtr6, SpEtr7,
-        //        SpEtr8, SpEtr9, SpEtr10, SpEtr11, SpEtr12, SpEtr13, SpEtr14, SpEtr15,
-        //        SpEtr16, SpEtr17, SpEtr18, SpElx1, SpElx2, SpElx3, SpElx4, SpElx5, SpElx6,
-        //        SpSbg1, SpSbg2, SpSbg3, SpSbg4, SpSbg5, SpSbg6, SpSbg7, SpSbg8, SpSbg9,
-        //        SpSbg10, SpSbg11, SpSer, SpTsk, Lever1, Lever2, Lever3, Bridge1, Bridge2,
-        //        Bridge3, Bridge4, Bridge5, Bridge6, Bridge7, Bridge8);
-        //    TimerOn(ref TRout);
-        //    PlayerSetLocation(1, 30);
-        //}
-
         //private void Threasures()
         //{
         //    string[] ambushed = {
@@ -499,6 +421,7 @@ namespace DesertRage.Controls.Scenes.Map
 
         #endregion
 
+        #region Movement Members
         public static bool DetermineWay(string tile)
         {
             bool isWay;
@@ -507,7 +430,7 @@ namespace DesertRage.Controls.Scenes.Map
                 case ".":
                 case ",":
                 case "_":
-                case "-":
+                case ":":
                     isWay = true;
                     break;
                 default:
@@ -530,38 +453,27 @@ namespace DesertRage.Controls.Scenes.Map
                 Camera = next;
             }
         }
+        #endregion
 
         public void KeyHandle(object sender, KeyEventArgs e)
         {
-            //Trace.WriteLine(Camera.ToString());
-            
             switch (e.Key)
             {
                 case Key.W:
-                    //Trace.WriteLine("W");
                     GoTo(0, -1);
                     break;
                 case Key.A:
-                    //Trace.WriteLine("A");
                     GoTo(-1, 0);
-                    //Camera = new Position(Camera.X - 1, Camera.Y);
-                    //Camera.Increment(new Position(-1, 0));
                     break;
                 case Key.S:
-
                     GoTo(0, 1);
-                    //Trace.WriteLine("S");
-                    //Camera.Increment(new Position(0, 1));
                     break;
                 case Key.D:
                     GoTo(1, 0);
-                    //Trace.WriteLine("D");
-                    //Camera.Increment(new Position(1, 0));
                     break;
                 default:
                     break;
             }
-            //OnPropertyChanged(nameof(Camera));
         }
     }
 }

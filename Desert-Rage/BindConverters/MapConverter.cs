@@ -17,13 +17,17 @@ namespace DesertRage.BindConverters
                 tiles = values[1] as
                 Dictionary<string, string>;
 
-            string tile = "/Resources/Images/Locations/Total/Dark.png";
+            string tile = "/Resources/Images/Locations/Total/Dark.svg"; //"/Resources/Images/Locations/Total/Dark.svg";
 
             if (values[2] is not Position current)
                 return tile;
 
-            if (map is null ||
-                tiles is null)
+            if (tiles is null)
+                return tile;
+
+            tile = tiles["."];
+
+            if (map is null)
                 return tile;
 
             current.Increment(parameter.ToString().ToPosition());

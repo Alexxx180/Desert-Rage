@@ -7,6 +7,7 @@ namespace DesertRage.Model.Locations
     {
         public string[] Map { get; set; }
 
+        public Dictionary<string, string> TileCodes { get; }
         public Dictionary<string, MapObject> MapItems { get; set; }
 
         public void CompeteTask(int taskNo)

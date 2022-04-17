@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#535686;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+	.st1{fill:#A0B8D3;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+	.st2{font-family:'Enemy-Crusher';}
+	.st3{font-size:3px;}
+	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<circle class="st0" cx="16" cy="15" r="12"/>
+<circle class="st1" cx="16" cy="15" r="10"/>
+<text transform="matrix(1 0 0 1 9.5198 14.2245)"><tspan x="0" y="0" class="st2 st3">Истину</tspan><tspan x="0" y="3.6" class="st2 st3">найдет</tspan></text>
+<line class="st4" x1="12" y1="10" x2="20" y2="10"/>
+<line class="st4" x1="12" y1="20" x2="19.44" y2="20"/>
+</svg>

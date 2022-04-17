@@ -9,7 +9,7 @@ namespace DesertRage.BindConverters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (value ?? "/Resources/Images/Locations/Total/Dark.png").ToString().ToUri(UriKind.Relative);
+            return (value ?? "/Resources/Images/Locations/Total/Dark.svg").ToString().ToUri(UriKind.Relative);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
