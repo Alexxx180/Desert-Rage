@@ -1,0 +1,1997 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <AssemblyName>Desert Rage</AssemblyName>
+    <Authors>Татаринцев Александр</Authors>
+    <Company>XEtreme Team</Company>
+    <Copyright>©2021, XEtreme Team. Все права защищены</Copyright>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <NeutralLanguage>ru</NeutralLanguage>
+    <PackageIcon>favicon.ico</PackageIcon>
+    <StartupObject>DesertRage.App</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="Resources\Database\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="Resources\Database\**" />
+    <None Remove="bin\**" />
+    <None Remove="Resources\Database\**" />
+    <Page Remove="bin\**" />
+    <Page Remove="Resources\Database\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Remove="Resources\Images\Autorize\Adventures1.png" />
+    <None Remove="Resources\Images\Autorize\Adventures2.png" />
+    <None Remove="Resources\Images\Autorize\Adventures3.png" />
+    <None Remove="Resources\Images\Autorize\Adventures4.png" />
+    <None Remove="Resources\Images\Autorize\Adventures5.png" />
+    <None Remove="Resources\Images\Autorize\IconShocked3.ico" />
+    <None Remove="Resources\Images\Autorize\Skips1.png" />
+    <None Remove="Resources\Images\Autorize\Skips2.png" />
+    <None Remove="Resources\Images\Autorize\Wanted.png" />
+    <None Remove="Resources\Images\Autorize\Wanted2.png" />
+    <None Remove="Resources\Images\Fight\Background\Battle1.jpg" />
+    <None Remove="Resources\Images\Fight\Background\Battle2.jpg" />
+    <None Remove="Resources\Images\Fight\Background\Battle3.jpg" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Minigun\MinigunIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Minigun\MinigunIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sam\IconSeriousSamMinigun1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sam\IconSeriousSamMinigun2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon1.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon10.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon2.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon3.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon4.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon5.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon6.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon7.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon8.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon9.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\Defence.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\Poison.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\PoisonBubble.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\Sam.png" />
+    <None Remove="Resources\Images\Fight\Character\Icon\Static\Usual.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Escape\Escape1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Escape\Escape2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack11.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack12.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack13.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack14.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun11.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun12.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun13.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun14.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun15.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_11.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_12.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_13.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_14.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip1.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip10.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip2.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip3.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip4.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip5.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip6.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip7.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip8.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip9.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Static\Defence.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Static\SeriousSam.png" />
+    <None Remove="Resources\Images\Fight\Character\Person\Static\Usual.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll4.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll5.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks10.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks4.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks5.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks6.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks7.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks8.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks9.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\MasterOfAll1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\Pharaoh.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\UghZan.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\Warrior.png" />
+    <None Remove="Resources\Images\Fight\Enemies\BossImgs\MasterOfAll1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\BossImgs\Pharaoh.png" />
+    <None Remove="Resources\Images\Fight\Enemies\BossImgs\UghZan1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\BossImgs\Warrior1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Bones.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks2.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks3.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Ghoul.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\GrimReaper.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Imp.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\KillerMole.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Master.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Mummy.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Scarab.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Spider.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Vulture.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Worm.png" />
+    <None Remove="Resources\Images\Fight\Enemies\Enemies\Zombie.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Bones1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Ghoul1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\GrimReaper1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Imp1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\KillerMole1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Master1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Mummy1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Scarab.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Spider1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Vulture1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Worm1.png" />
+    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Zombie1.png" />
+    <None Remove="Resources\Images\Fight\Misc\BuffUp.png" />
+    <None Remove="Resources\Images\Fight\Misc\Confirm.png" />
+    <None Remove="Resources\Images\Fight\Misc\ItemsCount.png" />
+    <None Remove="Resources\Images\Fight\Misc\TableBorder1.png" />
+    <None Remove="Resources\Images\Fight\Misc\TimeTurn.png" />
+    <None Remove="Resources\Images\Fight\Misc\ToughUp.png" />
+    <None Remove="Resources\Images\Fight\Options\BackImg.png" />
+    <None Remove="Resources\Images\Fight\Options\BackToAdventure.png" />
+    <None Remove="Resources\Images\Fight\Options\BackToAdventure2.png" />
+    <None Remove="Resources\Images\Fight\Options\CancelImg.png" />
+    <None Remove="Resources\Images\Fight\Options\Confirm.png" />
+    <None Remove="Resources\Images\Fight\Options\DefenceAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\DefenceBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\EscapeAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\EscapeBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\FightAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\FightBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\GenocideAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\GenocideBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\ItemsAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\ItemsBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\SkillsAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\SkillsBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Options\ToNext.png" />
+    <None Remove="Resources\Images\Fight\Options\ToPrev.png" />
+    <None Remove="Resources\Images\Fight\Options\TrgtSelectAfterImg.png" />
+    <None Remove="Resources\Images\Fight\Options\TrgtSelectBeforeImg.png" />
+    <None Remove="Resources\Images\Fight\Target\Target1.png" />
+    <None Remove="Resources\Images\Fight\Target\Target2.png" />
+    <None Remove="Resources\Images\Fight\Target\Target3.png" />
+    <None Remove="Resources\Images\Locations\Loc1\Loc1.jpg" />
+    <None Remove="Resources\Images\Locations\Loc1\Models\AncientArtifact.png" />
+    <None Remove="Resources\Images\Locations\Loc1\Models\Key.png" />
+    <None Remove="Resources\Images\Locations\Loc1\Models\Lock.png" />
+    <None Remove="Resources\Images\Locations\Loc1\Models\PharaohModel.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Loc2.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\AncientArtifact2.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act1.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act2.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act3.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act4.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act5.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act6.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act1.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act2.png" />
+    <None Remove="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act3.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Loc3.jpg" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\AncientArtifact3.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\Bridge.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\FinalBoss.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\LeverOff.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\LeverOn.png" />
+    <None Remove="Resources\Images\Locations\Loc3\Models\Surprise.png" />
+    <None Remove="Resources\Images\Locations\Loc4\Loc4.jpg" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants4.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon4.png" />
+    <None Remove="Resources\Images\Locations\Messages\Pain\Pain1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Pain\Pain2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Pain\Pain3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsElixir.png" />
+    <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsEther2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsHerbs.png" />
+    <None Remove="Resources\Images\Locations\Messages\Surprises\GetItemsSleepBag.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage1.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage2.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage3.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage4.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage5.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage6.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage7.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage8.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tables\TableMessage9.png" />
+    <None Remove="Resources\Images\Locations\Messages\Tasks\TaskCompleted.png" />
+    <None Remove="Resources\Images\Locations\Regular\AbsoluteBlack.jpg" />
+    <None Remove="Resources\Images\Locations\Regular\New_game_show.jpg" />
+    <None Remove="Resources\Images\Locations\Total\Boulder.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestClosed%28ver1%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestClosed%28ver2%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestClosed%28ver3%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver1%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver2%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Chests\ChestOpened%28ver3%29.png" />
+    <None Remove="Resources\Images\Locations\Total\Dark.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Static\Down.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Static\Left.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Static\Right.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Static\Up.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Down1.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Down2.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Left.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Right.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Up1.png" />
+    <None Remove="Resources\Images\Locations\Total\Person\Walk\Up2.png" />
+    <None Remove="Resources\Images\Locations\Total\SafeArea.png" />
+    <None Remove="Resources\Images\Locations\Total\Table.png" />
+    <None Remove="Resources\Images\Menu\Bag\AntidoteItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\BandageItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\ElixirItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\Ether2Item.png" />
+    <None Remove="Resources\Images\Menu\Bag\EtherItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\FusedItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\HerbsItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\ItemsBeforeImg.png" />
+    <None Remove="Resources\Images\Menu\Bag\ItemsButton.png" />
+    <None Remove="Resources\Images\Menu\Bag\Materials.png" />
+    <None Remove="Resources\Images\Menu\Bag\SleepBagItem.png" />
+    <None Remove="Resources\Images\Menu\Equip\EquipBtns\Cancel.png" />
+    <None Remove="Resources\Images\Menu\Equip\EquipBtns\Equip.png" />
+    <None Remove="Resources\Images\Menu\Equip\EquipBtns\Remove.png" />
+    <None Remove="Resources\Images\Menu\Equip\EquipButton.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\AncientArmorButton.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\AncientKnife.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\BandageBootsItems.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\BlackSkinItems.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\CoolT-shirt.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\EagleWearsItems.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\KnucledusterItem.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\LegendArmor.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\LegendBoots.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\LegendPants.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\LegendSword.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\ManBoots.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\SeriousBoots.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\SeriousMinigun.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\SeriousPants.png" />
+    <None Remove="Resources\Images\Menu\Equip\Equipment\WarPants.png" />
+    <None Remove="Resources\Images\Menu\Equip\Minis\Boots.png" />
+    <None Remove="Resources\Images\Menu\Equip\Minis\Hands.png" />
+    <None Remove="Resources\Images\Menu\Equip\Minis\Jacket.png" />
+    <None Remove="Resources\Images\Menu\Equip\Minis\Legs2.png" />
+    <None Remove="Resources\Images\Menu\Help\InfoButton.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info1\Flee1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info1\Flee2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info2\Results1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info2\Results2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info3\StatsUp1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page10\Info3\StatsUp2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info1\Status1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info1\Status2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info2\Levels1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info2\Levels2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info3\Exp1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page11\Info3\Exp2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info1\Stats1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info1\Stats2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info2\ATK1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info2\ATK2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info3\DEF1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page12\Info3\DEF2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info1\SPD1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info1\SPD2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info2\SPC1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info2\SPC2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info3\TimeOut1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page13\Info3\TimeOut2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info1\MoreFight1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info1\MoreFight2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info2\Bestiary1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info2\Bestiary2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info3\Tasks1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page14\Info3\Tasks2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info1\Settings1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info1\Settings2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info2\Creator1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info2\Creator2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info3\Goodbye1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page15\Info3\Goodbye2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info1\Ways1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info1\Ways2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info2\Walls1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info2\Walls2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info3\Locks1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page16\Info3\Locks2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info1\Chests1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info1\Chests2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info2\Dangers1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info2\Dangers2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info3\Artifacts1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page17\Info3\Artifacts2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info1\Sources1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info1\Sources2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info2\SupposeSam1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info2\SupposeSam2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info3\Secrets1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page18\Info3\Secrets2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info1\Scenes1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info1\Scenes2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info3\Help1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page19\Info3\Help2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info3\AncientPlaces1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page1\Info3\AncientPlaces2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info1\WhoIsAncients1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info1\WhoIsAncients2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info2\PreHistory1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info2\PreHistory2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info3\Artifacts1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page2\Info3\Artifacts2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info1\NewAdventures1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info1\NewAdventures2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info2\Wanted1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info2\Wanted2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info3\Chapters1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page3\Info3\Chapters2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info1\Movement1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info1\Movement2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info2\Exit1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info2\Exit2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page4\Info3\Click2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info1\Fight1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info1\Fight2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info2\Foes1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info2\Foes2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info3\Bosses1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page5\Info3\Bosses2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info1\FoesDestroy1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info1\FoesDestroy2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info2\Timing1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info2\Timing2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info3\Actions1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page6\Info3\Actions2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info1\Hp1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info1\Hp2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info2\Ap1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info2\Ap2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info3\Time1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page7\Info3\Time2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info1\Damage1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info1\Damage2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info2\Kombat1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info2\Kombat2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info3\Select1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page8\Info3\Select2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info1\Defence1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info1\Defence2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills2.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag1.png" />
+    <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag2.png" />
+    <None Remove="Resources\Images\Menu\Kinds\Bestiary.jpg" />
+    <None Remove="Resources\Images\Menu\Kinds\LevelUpMenu.jpg" />
+    <None Remove="Resources\Images\Menu\Kinds\Menu3.png" />
+    <None Remove="Resources\Images\Menu\Sets\Properties.png" />
+    <None Remove="Resources\Images\Menu\Skills\AbilsButton.png" />
+    <None Remove="Resources\Images\Menu\Skills\Control.png" />
+    <None Remove="Resources\Images\Menu\Skills\Cure2.png" />
+    <None Remove="Resources\Images\Menu\Skills\CureMenu.png" />
+    <None Remove="Resources\Images\Menu\Skills\DefenceUP.png" />
+    <None Remove="Resources\Images\Menu\Skills\HealMenu.png" />
+    <None Remove="Resources\Images\Menu\Skills\Learn.png" />
+    <None Remove="Resources\Images\Menu\Skills\Quake.png" />
+    <None Remove="Resources\Images\Menu\Skills\Regen.png" />
+    <None Remove="Resources\Images\Menu\Skills\StrengthUP.png" />
+    <None Remove="Resources\Images\Menu\Skills\SuperImg.png" />
+    <None Remove="Resources\Images\Menu\Skills\Thrower.png" />
+    <None Remove="Resources\Images\Menu\Skills\TorchImg.png" />
+    <None Remove="Resources\Images\Menu\Skills\Tornado.png" />
+    <None Remove="Resources\Images\Menu\Skills\WhipImg.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\AG2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\ATK2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\DEF2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\SP2.png" />
+    <None Remove="Resources\Images\Menu\Status\StatusButton.png" />
+    <None Remove="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
+    <None Remove="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
+    <None Remove="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
+    <None Remove="Resources\Images\Menu\Tasks\TasksButton.png" />
+    <None Remove="SafeArea.png" />
+    <None Remove="Scarab.png" />
+    <None Remove="SeriousBoots.png" />
+    <None Remove="SeriousPants.png" />
+    <None Remove="SettingsButton.png" />
+    <None Remove="SettingsButton1.png" />
+    <None Remove="SkillsAfterImg.png" />
+    <None Remove="SkillsBeforeImg.png" />
+    <None Remove="Skips1.png" />
+    <None Remove="SleepBagItem.png" />
+    <None Remove="SP.png" />
+    <None Remove="SP2.png" />
+    <None Remove="Spider.png" />
+    <None Remove="Spider1.png" />
+    <None Remove="StatusButton.png" />
+    <None Remove="StrengthUP.png" />
+    <None Remove="SuperImg.png" />
+    <None Remove="Surprise.png" />
+    <None Remove="Table.png" />
+    <None Remove="TableBorder1.png" />
+    <None Remove="TableMessage1.png" />
+    <None Remove="TableMessage2.png" />
+    <None Remove="TableMessage3.png" />
+    <None Remove="TableMessage4.png" />
+    <None Remove="TableMessage5.png" />
+    <None Remove="TableMessage6.png" />
+    <None Remove="Target.gif" />
+    <None Remove="Target1.png" />
+    <None Remove="TaskCompleted.png" />
+    <None Remove="TasksButton.png" />
+    <None Remove="Thrower.png" />
+    <None Remove="TimeTurn.png" />
+    <None Remove="ToNext.png" />
+    <None Remove="ToPrev.png" />
+    <None Remove="TorchImg.png" />
+    <None Remove="Tornado.png" />
+    <None Remove="TrgtSelectBeforeImg.png" />
+    <None Remove="UghZan.png" />
+    <None Remove="UghZan1.png" />
+    <None Remove="Vulture1.png" />
+    <None Remove="WalkD1.png" />
+    <None Remove="WalkD2.png" />
+    <None Remove="WalkL1.png" />
+    <None Remove="WalkR1.png" />
+    <None Remove="WalkU1.png" />
+    <None Remove="WalkU2.png" />
+    <None Remove="Wall1.jpg" />
+    <None Remove="Wanted.png" />
+    <None Remove="Wanted2.png" />
+    <None Remove="Warrior1.png" />
+    <None Remove="WarriorModel1.png" />
+    <None Remove="WarriorModel_1.png" />
+    <None Remove="WhipImg.png" />
+    <None Remove="Worm1.png" />
+    <None Remove="Zombie.png" />
+    <None Remove="Zombie1.png" />
+    <None Include="Resources\Images\Autorize\favicon.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Autorize\IconShocked3.ico" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\PoisonBubble.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
+    <Resource Include="Resources\Images\Fight\Misc\BuffUp.png" />
+    <Resource Include="Resources\Images\Fight\Misc\ToughUp.png" />
+    <Resource Include="Resources\Images\Fight\Options\GenocideAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\GenocideBeforeImg.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Pain\Pain2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Pain\Pain3.png" />
+    <Resource Include="Resources\Images\Locations\Total\Dark.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Escape\Escape1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Escape\Escape2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\HandAttack\HandAttack9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\KnifeAttack\KnifeAttck9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack11.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack12.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack13.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack14.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\MinigunAttack\MinigunAttack9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun11.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun12.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun13.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun14.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun15.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SeriousSamMinigun\SeriousSamMinigun9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Fight\SwordAttack\Sword9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Items\ItemUsed3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\PersonHurts\PersonHurts5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Misc\SeriousSwitch\SeriousSwitch9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\BuffUp\BuffUp9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Control\Control9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_11.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_12.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_13.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_14.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure2\Cure2_9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Cure\Cure9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Heal\Heal9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Learn\Learn9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Quake\Quake8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Regen\Regen9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Super\Super9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Thrower\Thrower9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Torch\Torch9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\ToughenUp\ToughenUp9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Dynamic\Skills\Whip\Whip9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Static\Defence.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Static\SeriousSam.png" />
+    <Resource Include="Resources\Images\Fight\Character\Person\Static\Usual.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\TornadoIcon\TornadoIcon9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Autorize\Adventures1.png" />
+    <Resource Include="Resources\Images\Autorize\Adventures2.png" />
+    <Resource Include="Resources\Images\Autorize\Adventures3.png" />
+    <Resource Include="Resources\Images\Autorize\Adventures4.png" />
+    <Resource Include="Resources\Images\Autorize\Adventures5.png" />
+    <Resource Include="Resources\Images\Autorize\Skips1.png" />
+    <Resource Include="Resources\Images\Autorize\Skips2.png" />
+    <Resource Include="Resources\Images\Autorize\Wanted.png" />
+    <Resource Include="Resources\Images\Autorize\Wanted2.png" />
+    <Resource Include="Resources\Images\Fight\Background\Battle1.jpg" />
+    <Resource Include="Resources\Images\Fight\Background\Battle2.jpg" />
+    <Resource Include="Resources\Images\Fight\Background\Battle3.jpg" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Minigun\MinigunIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Minigun\MinigunIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Punch\IconRage9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sam\IconSeriousSamMinigun1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sam\IconSeriousSamMinigun2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Sword\Sword8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Items\IconItemUsed9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\IconShocked\IconShocked9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Misc\LevelUp\LevelUpIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\BuffUpIcon\BuffUpIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ControlIcon\ControlIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\CureIcon2\IconCure2_9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\HealIcon\HealIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconCure\IconCure9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\IconTorch\IconTorch9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\LearnIcon\LearnIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\QuakeIcon\QuakeIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\RegenIcon\RegenIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\SuperIcon\SuperIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ThrowerIcon\ThrowerIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\ToughenUpIcon\ToughenUpIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon1.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon10.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon2.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon3.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon4.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon5.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon6.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon7.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon8.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Dynamic\Skills\WhipIcon\WhipIcon9.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\Defence.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\Poison.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\Sam.png" />
+    <Resource Include="Resources\Images\Fight\Character\Icon\Static\Usual.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll4.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll5.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks10.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks4.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks5.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks6.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks7.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks8.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks9.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\MasterOfAll1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\Pharaoh.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\UghZan.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\Warrior.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\MasterOfAll1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\Pharaoh.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\UghZan1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\Warrior1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Bones.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks2.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks3.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Ghoul.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\GrimReaper.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Imp.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\KillerMole.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Master.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Mummy.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Scarab.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Spider.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Vulture.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Worm.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Zombie.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Bones1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Ghoul1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\GrimReaper1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Imp1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\KillerMole1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Master1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Mummy1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Scarab.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Spider1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Vulture1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Worm1.png" />
+    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Zombie1.png" />
+    <Resource Include="Resources\Images\Fight\Misc\Confirm.png" />
+    <Resource Include="Resources\Images\Fight\Misc\ItemsCount.png" />
+    <Resource Include="Resources\Images\Fight\Misc\TableBorder1.png" />
+    <Resource Include="Resources\Images\Fight\Misc\TimeTurn.png" />
+    <Resource Include="Resources\Images\Fight\Options\BackImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\BackToAdventure.png" />
+    <Resource Include="Resources\Images\Fight\Options\BackToAdventure2.png" />
+    <Resource Include="Resources\Images\Fight\Options\CancelImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\Confirm.png" />
+    <Resource Include="Resources\Images\Fight\Options\DefenceAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\DefenceBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\EscapeAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\EscapeBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\FightAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\FightBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\ItemsAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\ItemsBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\SkillsAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\SkillsBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\ToNext.png" />
+    <Resource Include="Resources\Images\Fight\Options\ToPrev.png" />
+    <Resource Include="Resources\Images\Fight\Options\TrgtSelectAfterImg.png" />
+    <Resource Include="Resources\Images\Fight\Options\TrgtSelectBeforeImg.png" />
+    <Resource Include="Resources\Images\Fight\Target\Target1.png" />
+    <Resource Include="Resources\Images\Fight\Target\Target2.png" />
+    <Resource Include="Resources\Images\Fight\Target\Target3.png" />
+    <Resource Include="Resources\Images\Locations\Loc1\Loc1.jpg" />
+    <Resource Include="Resources\Images\Locations\Loc1\Models\AncientArtifact.png" />
+    <Resource Include="Resources\Images\Locations\Loc1\Models\Key.png" />
+    <Resource Include="Resources\Images\Locations\Loc1\Models\Lock.png" />
+    <Resource Include="Resources\Images\Locations\Loc1\Models\PharaohModel.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Loc2.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\AncientArtifact2.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act1.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act2.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act3.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act4.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act5.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Ancient\Act6.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act1.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act2.png" />
+    <Resource Include="Resources\Images\Locations\Loc2\Models\Dynamic\Warrior\Act3.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Loc3.jpg" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\AncientArtifact3.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\Bridge.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\FinalBoss.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\LeverOff.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\LeverOn.png" />
+    <Resource Include="Resources\Images\Locations\Loc3\Models\Surprise.png" />
+    <Resource Include="Resources\Images\Locations\Loc4\Loc4.jpg" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsArmor1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsArmor2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsArmor3.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomBoots3.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants3.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomPants4.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon3.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Chests\GetItemsCustomWeapon4.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Pain\Pain1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Surprises\GetItemsElixir.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Surprises\GetItemsEther2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Surprises\GetItemsHerbs.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Surprises\GetItemsSleepBag.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage1.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage2.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage3.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage4.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage5.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage6.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage7.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage8.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tables\TableMessage9.png" />
+    <Resource Include="Resources\Images\Locations\Messages\Tasks\TaskCompleted.png" />
+    <Resource Include="Resources\Images\Locations\Regular\AbsoluteBlack.jpg" />
+    <Resource Include="Resources\Images\Locations\Regular\New_game_show.jpg" />
+    <Resource Include="Resources\Images\Locations\Total\Boulder.png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestClosed(ver1).png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestClosed(ver2).png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestClosed(ver3).png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestOpened(ver1).png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestOpened(ver2).png" />
+    <Resource Include="Resources\Images\Locations\Total\Chests\ChestOpened(ver3).png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Static\Down.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Static\Left.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Static\Right.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Static\Up.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Down1.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Down2.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Left.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Right.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Up1.png" />
+    <Resource Include="Resources\Images\Locations\Total\Person\Walk\Up2.png" />
+    <Resource Include="Resources\Images\Locations\Total\SafeArea.png" />
+    <Resource Include="Resources\Images\Locations\Total\Table.png" />
+    <Resource Include="Resources\Images\Menu\Bag\AntidoteItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\BandageItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\ElixirItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\Ether2Item.png" />
+    <Resource Include="Resources\Images\Menu\Bag\EtherItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\FusedItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\HerbsItem.png" />
+    <Resource Include="Resources\Images\Menu\Bag\ItemsBeforeImg.png" />
+    <Resource Include="Resources\Images\Menu\Bag\ItemsButton.png" />
+    <Resource Include="Resources\Images\Menu\Bag\Materials.png" />
+    <Resource Include="Resources\Images\Menu\Bag\SleepBagItem.png" />
+    <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Cancel.png" />
+    <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Equip.png" />
+    <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Remove.png" />
+    <Resource Include="Resources\Images\Menu\Equip\EquipButton.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\AncientArmorButton.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\AncientKnife.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\BandageBootsItems.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\BlackSkinItems.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\CoolT-shirt.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\EagleWearsItems.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\KnucledusterItem.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\LegendArmor.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\LegendBoots.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\LegendPants.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\LegendSword.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\ManBoots.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\SeriousBoots.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\SeriousMinigun.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\SeriousPants.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Equipment\WarPants.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Minis\Boots.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Minis\Hands.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Minis\Jacket.png" />
+    <Resource Include="Resources\Images\Menu\Equip\Minis\Legs2.png" />
+    <Resource Include="Resources\Images\Menu\Help\InfoButton.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info1\Flee1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info1\Flee2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info2\Results1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info2\Results2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info3\StatsUp1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page10\Info3\StatsUp2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info1\Status1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info1\Status2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info2\Levels1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info2\Levels2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info3\Exp1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page11\Info3\Exp2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info1\Stats1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info1\Stats2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info2\ATK1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info2\ATK2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info3\DEF1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page12\Info3\DEF2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info1\SPD1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info1\SPD2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info2\SPC1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info2\SPC2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info3\TimeOut1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page13\Info3\TimeOut2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info1\MoreFight1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info1\MoreFight2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info2\Bestiary1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info2\Bestiary2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info3\Tasks1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page14\Info3\Tasks2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info1\Settings1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info1\Settings2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info2\Creator1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info2\Creator2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info3\Goodbye1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page15\Info3\Goodbye2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info1\Ways1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info1\Ways2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info2\Walls1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info2\Walls2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info3\Locks1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page16\Info3\Locks2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info1\Chests1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info1\Chests2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info2\Dangers1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info2\Dangers2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info3\Artifacts1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page17\Info3\Artifacts2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info1\Sources1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info1\Sources2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info2\SupposeSam1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info2\SupposeSam2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info3\Secrets1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page18\Info3\Secrets2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info1\Scenes1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info1\Scenes2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info2\Thanks2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info3\Help1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page19\Info3\Help2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info1\Introduction2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info2\Founder2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info3\AncientPlaces1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page1\Info3\AncientPlaces2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info1\WhoIsAncients1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info1\WhoIsAncients2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info2\PreHistory1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info2\PreHistory2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info3\Artifacts1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page2\Info3\Artifacts2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info1\NewAdventures1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info1\NewAdventures2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info2\Wanted1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info2\Wanted2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info3\Chapters1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page3\Info3\Chapters2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info1\Movement1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info1\Movement2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info2\Exit1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info2\Exit2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info1\Fight1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info1\Fight2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info2\Foes1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info2\Foes2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info3\Bosses1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page5\Info3\Bosses2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info1\FoesDestroy1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info1\FoesDestroy2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info2\Timing1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info2\Timing2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info3\Actions1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page6\Info3\Actions2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info1\Hp1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info1\Hp2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info2\Ap1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info2\Ap2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info3\Time1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page7\Info3\Time2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info1\Damage1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info1\Damage2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info2\Kombat1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info2\Kombat2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info3\Select1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page8\Info3\Select2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info1\Defence1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info1\Defence2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills2.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag1.png" />
+    <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag2.png" />
+    <Resource Include="Resources\Images\Menu\Kinds\Bestiary.jpg" />
+    <Resource Include="Resources\Images\Menu\Kinds\LevelUpMenu.jpg" />
+    <Resource Include="Resources\Images\Menu\Kinds\Menu3.png" />
+    <Resource Include="Resources\Images\Menu\Sets\Properties.png" />
+    <Resource Include="Resources\Images\Menu\Skills\AbilsButton.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Control.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Cure2.png" />
+    <Resource Include="Resources\Images\Menu\Skills\CureMenu.png" />
+    <Resource Include="Resources\Images\Menu\Skills\DefenceUP.png" />
+    <Resource Include="Resources\Images\Menu\Skills\HealMenu.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Learn.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Quake.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Regen.png" />
+    <Resource Include="Resources\Images\Menu\Skills\StrengthUP.png" />
+    <Resource Include="Resources\Images\Menu\Skills\SuperImg.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Thrower.png" />
+    <Resource Include="Resources\Images\Menu\Skills\TorchImg.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Tornado.png" />
+    <Resource Include="Resources\Images\Menu\Skills\WhipImg.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\AG2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\ATK2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\DEF2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\SP2.png" />
+    <Resource Include="Resources\Images\Menu\Status\StatusButton.png" />
+    <Resource Include="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
+    <Resource Include="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
+    <Resource Include="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
+    <Resource Include="Resources\Images\Menu\Tasks\TasksButton.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\CutScenes\BattleEnds\GameOver.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleEnds\Win1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleEnds\Win2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleEnds\Win3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleStarts\Battlestations1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleStarts\BattleStations2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\BattleStarts\BattleStations3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersEnding\Ending.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersEnding\Final1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersEnding\Final2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersEnding\Final3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersEnding\Titres.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersIntroduction\Chapter1.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersIntroduction\Chapter2.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersIntroduction\Chapter3.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersIntroduction\Epilogue.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\CutScenes\ChaptersIntroduction\Prologue.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\DataTemplates\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_Battle.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_Boss.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_Calm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_Danger.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_End.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\AncientPyramid_Secret.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\FireTemple_Battle.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\FireTemple_Boss.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\FireTemple_Calm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\FireTemple_Danger.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\FireTemple_End.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\MainTitle.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\TheEnd.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\TheGreatEscape.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\ThePrologue.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\TheTitles.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Battle.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Boss.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Calm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_Danger.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Music\WaterTemple_End.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Ambushed.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Control.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Cure.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Cure2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Defence.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Escape.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\FoesNearby.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\GetReady.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Heal.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Horror.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\HpUp.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\ItemsClose.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\ItemsOpen.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\ItemsUsed.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Knife.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\LevelUp.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Minigun.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Minigun2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\PharaohRoar.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\PowUp.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Punch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Quake.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Scan.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Shield.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Super.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Sword.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Thrower.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Torch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Whip.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Wind.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\BonesDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\ChestOpened.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\DefeatFriend.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\DefeatMasterOfAll.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\DefeatPharaoh.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\DoorOpened.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\GhoulDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\GrimReaperDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\ImpDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\KillerMoleDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\MasterDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\MummyDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\SaveSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\ScarabDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\SpiderDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\UghZan1Died.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\VultureDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\WormDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\YouWon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Sounds\ZombieDied.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\OST\Music\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Quotes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Quotes.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Quotes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Quotes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <Target Name="AfterResolveReferences">
+    <ItemGroup>
+      <EmbeddedResource Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Extension)' == '.dll'">
+        <LogicalName>%(ReferenceCopyLocalPaths.DestinationSubDirectory)%(ReferenceCopyLocalPaths.Filename)%(ReferenceCopyLocalPaths.Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
+</Project>

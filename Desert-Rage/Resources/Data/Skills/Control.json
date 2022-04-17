@@ -1,0 +1,13 @@
+{
+    "Name" : "Контроль",
+    "Description" : "Txts.Abililities.Control",
+    "Noise" : "Paths.OST.Noises.ApUp",
+
+    "Power" : "1",
+
+    "Level" : "25",
+    "Cost" : "0",
+
+    "Animation" : "Paths.Dynamic.Person.Control",
+    "IconAnimation" : "Paths.Dynamic.Icon.Control",
+};

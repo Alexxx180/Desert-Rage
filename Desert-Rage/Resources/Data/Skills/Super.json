@@ -1,0 +1,13 @@
+{
+    "Name" : "Супер",
+    "Description" : "Txts.Abililities.Spec1",
+    "Noise" : "Paths.OST.Noises.Super",
+
+    "Power" : "2f",
+
+    "Level" : "7",
+    "Cost" : "10",
+
+    "Animation" : "Paths.Dynamic.Person.Super",
+    "IconAnimation" : "Paths.Dynamic.Icon.Super",
+};

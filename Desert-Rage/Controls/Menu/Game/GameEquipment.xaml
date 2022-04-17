@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="DesertRage.Controls.Menu.Game.GameEquipment"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="GameEquip" Panel.ZIndex="11" Visibility="Hidden">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.01*"/>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition Width="0.065*"/>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.085*"/>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.04*"/>
+            <ColumnDefinition Width="0.045*"/>
+            <ColumnDefinition Width="0.045*"/>
+            <ColumnDefinition Width="0.045*"/>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition Width="0.035*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.21*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.01*"/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.07*"/>
+            <RowDefinition Height="0.07*"/>
+            <RowDefinition Height="0.07*"/>
+            <RowDefinition Height="0.03*"/>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition Height="0.03*"/>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition Height="0.03*"/>
+            <RowDefinition Height="0.09*"/>
+            <RowDefinition Height="0.065*"/>
+            <RowDefinition Height="0.065*"/>
+            <RowDefinition Height="0.065*"/>
+            <RowDefinition Height="0.065*"/>
+            <RowDefinition Height="0.02*"/>
+            <RowDefinition Height="0.09*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="Icon2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Fight/Character/Icon/Static/Usual.png" Visibility="Visible" IsEnabled="False" Stretch="Fill" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Viewbox Grid.Row="1" Grid.Column="5" Grid.RowSpan="1" Grid.ColumnSpan="5" Panel.ZIndex="11">
+            <Label x:Name="Name2" Content="{Binding ElementName=Name0, Path=Content}" Grid.ColumnSpan="5" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="1" Grid.RowSpan="1" Grid.Column="5"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="2" Grid.Column="5" Grid.RowSpan="1" Grid.ColumnSpan="5" Panel.ZIndex="11">
+            <Label x:Name="Level1" Content="{Binding ElementName=Level0, Path=Content}" Grid.ColumnSpan="5" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.RowSpan="1" Grid.Row="2" Grid.Column="5"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="10" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11" HorizontalAlignment="Left">
+            <Label x:Name="StatusP2" Content="{Binding ElementName=StatusP, Path=Content}" Grid.ColumnSpan="7" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="36" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="1" Grid.Column="10"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
+            <Label x:Name="HPtext2" Content="Очки здоровья" Padding="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4"/>
+        </Viewbox>
+
+        <ProgressBar x:Name="HPbar2" Value="{Binding ElementName=HPbar1, Path=Value}" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Grid.ColumnSpan="9" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=HPbar1, Path=Foreground}" BorderBrush="{Binding ElementName=HPbar1, Path=BorderBrush}" Background="WhiteSmoke" IsEnabled="False" Visibility="Visible" Grid.Row="4" Grid.Column="10" Grid.RowSpan="1"/>
+
+        <Viewbox Grid.Row="4" Grid.Column="6" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
+            <Label x:Name="HP2" Content="{Binding ElementName=HP1, Path=Content}" Foreground="White" Grid.ColumnSpan="4"  Panel.ZIndex="11" FontFamily="Cooper Black" Visibility="Visible" Grid.RowSpan="1" Grid.Row="4" Grid.Column="6" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="6" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
+            <Label x:Name="APtext2" Content="Очки действий" Padding="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="4"/>
+        </Viewbox>
+
+        <ProgressBar x:Name="APbar2" Value="{Binding ElementName=APbar1, Path=Value}" Maximum="{Binding ElementName=APbar1, Path=Maximum}" Grid.ColumnSpan="9" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" Panel.ZIndex="11" Foreground="{Binding ElementName=APbar1, Path=Foreground}" BorderBrush="{Binding ElementName=APbar1, Path=BorderBrush}" Background="WhiteSmoke" IsEnabled="False" Visibility="Visible" Grid.Row="6" Grid.Column="10" Grid.RowSpan="1"/>
+
+        <Viewbox Grid.Row="6" Grid.Column="6" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
+            <Label x:Name="AP2" Content="{Binding ElementName=AP1, Path=Content}" Foreground="White" Grid.ColumnSpan="4"  Panel.ZIndex="11" FontFamily="Cooper Black" Visibility="Visible" Grid.RowSpan="1" Grid.Row="6" Grid.Column="6" FontSize="36" Background="#FF6E6E6E" BorderBrush="Black" Padding="0,0,0,0" BorderThickness="2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Viewbox>
+        <Viewbox Grid.Row="8" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="7" Panel.ZIndex="11">
+            <Label x:Name="Params1" Content="Параметры" Grid.ColumnSpan="7" HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Panel.ZIndex="11" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="8" Grid.Column="3"/>
+        </Viewbox>
+        <Viewbox Grid.Row="9" Grid.Column="2" Panel.ZIndex="11">
+            <Label x:Name="ParamsATK1" Content="АТК" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" FontSize="36" FontFamily="Franklin Gothic Demi" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="2" Grid.RowSpan="1"/>
+        </Viewbox>
+        <Viewbox Grid.Row="10" Grid.Column="2" Panel.ZIndex="11">
+            <Label x:Name="ParamsDEF1" Content="ЗЩТ" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="2"/>
+        </Viewbox>
+        <Viewbox Grid.Row="11" Grid.Column="2" Panel.ZIndex="11">
+            <Label x:Name="ParamsAG1" Content="СКР" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="2"/>
+        </Viewbox>
+        <Viewbox Grid.Row="12" Grid.Column="2" Panel.ZIndex="11">
+            <Label x:Name="ParamsSP1" Content="СПЦ" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Franklin Gothic Demi" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="2"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="9" Grid.Column="5" Panel.ZIndex="11">
+            <Label x:Name="ATK2" Content="{Binding ElementName=ATK1, Path=Content}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="9" Grid.Column="5"/>
+        </Viewbox>
+        <Viewbox Grid.Row="10" Grid.Column="5" Panel.ZIndex="11">
+            <Label x:Name="DEF2" Content="{Binding ElementName=DEF1, Path=Content}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="10" Grid.Column="5"/>
+        </Viewbox>
+        <Viewbox Grid.Row="11" Grid.Column="5" Panel.ZIndex="11">
+            <Label x:Name="AG2" Content="{Binding ElementName=AG1, Path=Content}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Grid.RowSpan="1" Grid.Row="11" Grid.Column="5"/>
+        </Viewbox>
+        <Viewbox Grid.Row="12" Grid.Column="5" Panel.ZIndex="11">
+            <Label x:Name="SP2" Content="{Binding ElementName=SP1, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Cooper Black" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="12" Grid.Column="5"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="9" Grid.Column="7" Panel.ZIndex="11" Grid.ColumnSpan="3">
+            <Label x:Name="AddATK1" Content="+25" HorizontalAlignment="Right"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="#FFFFD206" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="3"/>
+        </Viewbox>
+        <Viewbox Grid.Row="10" Grid.Column="7" Panel.ZIndex="11" Grid.ColumnSpan="3">
+            <Label x:Name="AddDEF1" Content="+25" HorizontalAlignment="Right"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="#FFFFD206" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Grid.Row="10" Grid.Column="7" Grid.ColumnSpan="3"/>
+        </Viewbox>
+
+        <Image x:Name="ATKImg1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Visibility="Visible" Grid.Row="9" Grid.Column="3" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image x:Name="DEFImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="3"/>
+        <Image x:Name="AGImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/AG2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="3"/>
+        <Image x:Name="SPImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/SP2.png" Visibility="Visible" Stretch="Fill" Grid.Row="12" Grid.Column="3"/>
+
+        <!--Снаряжение персонажа-->
+        <Viewbox Grid.Row="8" Grid.Column="12" Panel.ZIndex="11" Grid.ColumnSpan="4">
+            <Label x:Name="EquipText1" Content="Экипировка" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="48" Grid.Column="12" IsEnabled="False" Visibility="Visible" Grid.Row="8" Grid.ColumnSpan="4"/>
+        </Viewbox>
+        <Viewbox Grid.Row="9" Grid.Column="12" Panel.ZIndex="11" Grid.ColumnSpan="4">
+            <Label x:Name="EquipH1" Content="{Binding ElementName=EquipH, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="9" Grid.Column="12" Grid.ColumnSpan="4"/>
+        </Viewbox>
+        <Viewbox Grid.Row="10" Grid.Column="12" Panel.ZIndex="11" Grid.ColumnSpan="4">
+            <Label x:Name="EquipB1" Content="{Binding ElementName=EquipB, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="10" Grid.Column="12" Grid.ColumnSpan="4"/>
+        </Viewbox>
+        <Viewbox Grid.Row="11" Grid.Column="12" Panel.ZIndex="11" Grid.ColumnSpan="4">
+            <Label x:Name="EquipL1" Content="{Binding ElementName=EquipL, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="12" Grid.ColumnSpan="4"/>
+        </Viewbox>
+        <Viewbox Grid.Row="12" Grid.Column="12" Panel.ZIndex="11" Grid.ColumnSpan="4">
+            <Label x:Name="EquipD1" Content="{Binding ElementName=EquipD, Path=Content}" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="11" Foreground="White" Visibility="Visible" IsEnabled="False" Grid.Row="12" Grid.Column="12" Grid.ColumnSpan="4"/>
+        </Viewbox>
+
+        <Image x:Name="EquipHImg1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Hands.png" Visibility="Visible" Grid.Row="9" Grid.Column="11" Stretch="Fill"/>
+        <Image x:Name="EquipBImg1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Jacket.png" Visibility="Visible" Stretch="Fill" Grid.Row="10" Grid.Column="11"/>
+        <Image x:Name="EquipLImg1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Legs2.png" Visibility="Visible" Stretch="Fill" Grid.Row="11" Grid.Column="11"/>
+        <Image x:Name="EquipDImg1" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Menu/Equip/Minis/Boots.png" Visibility="Visible" Stretch="Fill" Grid.RowSpan="1" Grid.Row="12" Grid.Column="11"/>
+
+        <!--Экипировка-->
+        <!--<Button x:Name="Equipments" Tag="{Binding Path=GetHero.Weapon}" Grid.ColumnSpan="5" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Bauhaus 93" FontSize="36" Click="AnyEquipments_Click" Visibility="Hidden" MouseEnter="AnyEquipments_MouseEnter" MouseLeave="AnyEquipments_MouseLeave" Grid.RowSpan="2" Grid.Row="14" Grid.Column="2">
+            <Image x:Name="EquipmentsImg" Source="/Resources/Images/Menu/Equip/Equipment/KnucledusterItem.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equipments2" Grid.ColumnSpan="6" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Bauhaus 93" FontSize="36" Click="AnyEquipments_Click" Visibility="Hidden" MouseEnter="AnyEquipments_MouseEnter" MouseLeave="AnyEquipments_MouseLeave" Grid.RowSpan="2" Grid.Row="14" Grid.Column="8">
+            <Image x:Name="Equipments2Img" Source="/Resources/Images/Menu/Equip/Equipment/AncientKnife.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equipments3" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Bauhaus 93" FontSize="36" Click="AnyEquipments_Click" Visibility="Hidden" MouseEnter="AnyEquipments_MouseEnter" MouseLeave="AnyEquipments_MouseLeave" Grid.Row="14" Grid.Column="15" Grid.RowSpan="2">
+            <Image x:Name="Equipments3Img" Source="/Resources/Images/Menu/Equip/Equipment/LegendSword.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equipments4" Grid.ColumnSpan="3" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" FontFamily="Bauhaus 93" FontSize="36" Click="AnyEquipments_Click" Visibility="Hidden" MouseEnter="AnyEquipments_MouseEnter" MouseLeave="AnyEquipments_MouseLeave" Grid.RowSpan="2" Grid.Row="14" Grid.Column="17">
+            <Image x:Name="Equipments4Img" Source="/Resources/Images/Menu/Equip/Equipment/SeriousMinigun.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equip1" Tag="0" Style="{StaticResource TriggerButton}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="38" Click="OnEquip_Click" Visibility="Visible" Grid.Row="9" Grid.Column="17">
+            <Image x:Name="Eq1Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Equip.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Remove1" Tag="{Binding Path=GetHero.Weapon}" Style="{StaticResource TriggerButton}" attach:EquipInfo.Equip="{Binding Source={x:Static help:Characteristics.BareHands}}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="40" Click="OnRemove_Click" Visibility="Visible" Grid.Row="9" Grid.Column="18" MouseLeave="RemoveButtons_MouseLeave" MouseEnter="RemoveButtons_MouseEnter">
+            <Image x:Name="Rm1Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Remove.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equip2" Tag="1" Style="{StaticResource TriggerButton}" Grid.ColumnSpan="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="38" Click="OnEquip_Click" Visibility="Visible" Grid.RowSpan="1" Grid.Row="10" Grid.Column="17">
+            <Image x:Name="Eq2Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Equip.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Remove2" Tag="{Binding Path=GetHero.Armor}" Style="{StaticResource TriggerButton}" attach:EquipInfo.Equip="{Binding Source={x:Static help:Characteristics.Shirt}}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="40" Click="OnRemove_Click" Visibility="Visible" Grid.Row="10" Grid.Column="18" MouseLeave="RemoveButtons_MouseLeave" MouseEnter="RemoveButtons_MouseEnter">
+            <Image x:Name="Rm2Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Remove.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equip3" Tag="2" Style="{StaticResource TriggerButton}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="38" Click="OnEquip_Click" Visibility="Visible" Grid.Row="11" Grid.Column="17">
+            <Image x:Name="Eq3Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Equip.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Remove3" Tag="{Binding Path=GetHero.Legs}" Style="{StaticResource TriggerButton}" attach:EquipInfo.Equip="{Binding Source={x:Static help:Characteristics.Pants}}" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" FontSize="40" FontFamily="Franklin Gothic Demi" Click="OnRemove_Click" Visibility="Visible" Grid.Row="11" Grid.Column="18" MouseLeave="RemoveButtons_MouseLeave" MouseEnter="RemoveButtons_MouseEnter">
+            <Image x:Name="Rm3Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Remove.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Equip4" Tag="3" Style="{StaticResource TriggerButton}" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" FontSize="38" FontFamily="Franklin Gothic Demi" Click="OnEquip_Click" Visibility="Visible" Grid.Row="12" Grid.Column="17">
+            <Image x:Name="Eq4Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Equip.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="Remove4" Tag="{Binding Path=GetHero.Boots}" Style="{StaticResource TriggerButton}" attach:EquipInfo.Equip="{Binding Source={x:Static help:Characteristics.CleanBoots}}" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="40" Click="OnRemove_Click" Visibility="Visible" IsEnabled="False" Grid.Row="12" Grid.Column="18" MouseLeave="RemoveButtons_MouseLeave" MouseEnter="RemoveButtons_MouseEnter">
+            <Image x:Name="Rm4Img" Source="/Resources/Images/Menu/Equip/EquipBtns/Remove.png" Stretch="Fill"/>
+        </Button>
+        <Button x:Name="CancelEq" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="11" FontFamily="Franklin Gothic Demi" FontSize="40" Click="CancelEq_Click" Visibility="Hidden" IsEnabled="False" Grid.Row="8" Grid.Column="17" Grid.ColumnSpan="2">
+            <Image x:Name="CnImg" Source="/Resources/Images/Menu/Equip/EquipBtns/Cancel.png" Stretch="Fill"/>
+        </Button>-->
+    </Grid>
+</UserControl>

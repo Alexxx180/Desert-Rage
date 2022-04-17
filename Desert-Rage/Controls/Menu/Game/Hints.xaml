@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="DesertRage.Controls.Menu.Game.Hints"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!--<Grid Panel.ZIndex="11" Visibility="Hidden">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.025*"/>
+            <ColumnDefinition Width="0.48*"/>
+            <ColumnDefinition Width="0.48*"/>
+            <ColumnDefinition Width="0.015*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="InfoImg1" Tag="0" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="12" Source="/Resources/Images/Menu/Help/Inform/Page1/Info1/Introduction1.png" Visibility="Visible" Grid.Row="1" Grid.Column="1" MouseEnter="InfoImgs_MouseEnter" MouseLeave="InfoImgs_MouseLeave"/>
+        <Image x:Name="InfoImg2" Tag="1" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="12" Source="/Resources/Images/Menu/Help/Inform/Page1/Info2/Founder1.png" Visibility="Visible" Grid.Row="2" Grid.Column="2" MouseEnter="InfoImgs_MouseEnter" MouseLeave="InfoImgs_MouseLeave"/>
+        <Image x:Name="InfoImg3" Tag="2" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="12" Source="/Resources/Images/Menu/Help/Inform/Page1/Info3/AncientPlaces1.png" Visibility="Visible" Grid.Row="3" Grid.Column="1" MouseEnter="InfoImgs_MouseEnter" MouseLeave="InfoImgs_MouseLeave"/>
+        <Grid  Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.425*"/>
+                <RowDefinition Height="0.575*"/>
+            </Grid.RowDefinitions>
+            <Viewbox>
+                <Label x:Name="InfoHeaderText1" Content="Древние - кто они?" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="White" FontSize="72" FontFamily="Franklin Gothic Demi" FontStyle="Normal" FontWeight="Normal" Visibility="Visible" IsEnabled="False"/>
+            </Viewbox>
+            <Viewbox Grid.Row="1">
+                <TextBlock x:Name="InfoText1" HorizontalAlignment="Center"  VerticalAlignment="Top" Panel.ZIndex="11" Foreground="Black" FontFamily="Franklin Gothic Demi" FontSize="36" IsEnabled="False" Visibility="Visible"> Древние - люди, что когда-то<LineBreak/> обладали технологиями, кото-<LineBreak/> рые нам и не снились.</TextBlock>
+            </Viewbox>
+        </Grid>
+
+        <Grid  Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.425*"/>
+                <RowDefinition Height="0.575*"/>
+            </Grid.RowDefinitions>
+            <Viewbox>
+                <Label x:Name="InfoHeaderText2" Content="Предыстория" HorizontalAlignment="Right"  VerticalAlignment="Center" Panel.ZIndex="11" Foreground="White" FontFamily="Franklin Gothic Demi" FontSize="32" Padding="5" IsEnabled="False" Visibility="Visible" />
+            </Viewbox>
+            <Viewbox Grid.Row="1">
+                <TextBlock x:Name="InfoText2" HorizontalAlignment="Center"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="44" Foreground="Black" Panel.ZIndex="10" IsEnabled="False" Visibility="Visible" TextAlignment="Right"> После глупых войн и жажды<LineBreak/> власти, люди истратили нас-<LineBreak/> следие - мудрость веков</TextBlock>
+            </Viewbox>
+        </Grid>
+
+        <Grid  Grid.Row="3" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.425*"/>
+                <RowDefinition Height="0.575*"/>
+            </Grid.RowDefinitions>
+            <Viewbox>
+                <Label x:Name="InfoHeaderText3" Content="Артефакты" HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Franklin Gothic Demi" FontSize="72" Panel.ZIndex="11" Foreground="White" IsEnabled="False" Visibility="Visible" />
+            </Viewbox>
+            <Viewbox Grid.Row="1">
+                <TextBlock x:Name="InfoText3" Grid.ColumnSpan="20" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="44" FontFamily="Franklin Gothic Demi" Panel.ZIndex="11" Foreground="Black" IsEnabled="False" Visibility="Visible"> Артефакты содержат посла-<LineBreak/> ния, лежащие в основе<LineBreak/> ключа к мудрости веков</TextBlock>
+            </Viewbox>
+        </Grid>
+    </Grid>-->
+</UserControl>

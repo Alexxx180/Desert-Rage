@@ -1,0 +1,13 @@
+{
+    "Name" : "Охрана",
+    "Description" : "Txts.Abililities.Tough",
+    "Noise" : "Paths.OST.Noises.Shield",
+
+    "Power" : "2",
+
+    "Level" : "14",
+    "Cost" : "8",
+
+    "Animation" : "Paths.Dynamic.Person.ToughenUp",
+    "IconAnimation" : "Paths.Dynamic.Icon.ToughenUp",
+};

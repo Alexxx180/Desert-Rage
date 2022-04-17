@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qdeD0K5QgR8ryECKk5/jy3yB159fjpkmt5gZeWBtjkaja7dKO1KeGSATW3eXh1v70KE+uqI7egCG+PFDHNlS9w==",
+  "success": true,
+  "projectFilePath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\DesertRage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

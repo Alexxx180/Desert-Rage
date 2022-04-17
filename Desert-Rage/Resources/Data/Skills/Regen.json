@@ -1,0 +1,13 @@
+{
+    "Name" : "Время лечит",
+    "Description" : "Txts.Abililities.Regen",
+    "Noise" : "Paths.OST.Noises.HpUp",
+
+    "Power" : "1",
+
+    "Level" : "20",
+    "Cost" : "15",
+
+    "Animation" : "Paths.Dynamic.Person.Regen",
+    "IconAnimation" : "Paths.Dynamic.Icon.Regen",
+};

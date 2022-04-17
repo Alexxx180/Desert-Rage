@@ -1,0 +1,13 @@
+{
+    "Name" : "Лечение",
+    "Description" : "Txts.Abililities.Cure",
+    "Noise" : "Paths.OST.Noises.Cure",
+
+    "Power" : "2f",
+
+    "Level" : "2",
+    "Cost" : "5",
+
+    "Animation" : "Paths.Dynamic.Person.Cure",
+    "IconAnimation" : "Paths.Dynamic.Icon.Cure",
+};

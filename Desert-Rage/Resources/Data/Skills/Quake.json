@@ -1,0 +1,13 @@
+{
+    "Name" : "Обвал",
+    "Description" : "Txts.Abililities.Spec3",
+    "Noise" : "Paths.OST.Noises.Quake",
+
+    "Power" : "4f",
+
+    "Level" : "18",
+    "Cost" : "30",
+
+    "Animation" : "Paths.Dynamic.Person.Quake",
+    "IconAnimation" : "Paths.Dynamic.Icon.Quake",
+};

@@ -1,0 +1,123 @@
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.exe
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\Database\DesertRageGame.mdf
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\Database\DesertRageGame_log.ldf
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleEnds\GameOver.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleEnds\Win1.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleEnds\Win2.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleEnds\Win3.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleStarts\Battlestations1.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleStarts\BattleStations2.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\BattleStarts\BattleStations3.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersEnding\Ending.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersEnding\Final1.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersEnding\Final2.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersEnding\Final3.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersEnding\Titres.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersIntroduction\Chapter1.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersIntroduction\Chapter2.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersIntroduction\Chapter3.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersIntroduction\Epilogue.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\CutScenes\ChaptersIntroduction\Prologue.mp4
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Ambushed.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Control.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Cure.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Cure2.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Defence.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Escape.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\FoesNearby.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\GetReady.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Heal.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Horror.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\HpUp.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\ItemsClose.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\ItemsOpen.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\ItemsUsed.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Knife.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\LevelUp.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Minigun.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Minigun2.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\PharaohRoar.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\PowUp.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Punch.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Quake.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Scan.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Shield.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Super.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Sword.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Thrower.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Torch.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Whip.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Noises\Wind.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\BonesDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\ChestOpened.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\DefeatFriend.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\DefeatMasterOfAll.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\DefeatPharaoh.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\DoorOpened.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\GhoulDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\GrimReaperDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\ImpDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\KillerMoleDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\MasterDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\MummyDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\SaveSound.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\ScarabDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\SpiderDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\UghZan1Died.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\VultureDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\WormDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\YouWon.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Sounds\ZombieDied.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.deps.json
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.runtimeconfig.json
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.runtimeconfig.dev.json
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Desert Rage.pdb
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.csproj.ResolveComReference.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\MainWindow.g.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Reload.g.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\App.g.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage_Content.g.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage_MarkupCompile.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage_MarkupCompile.lref
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\MainWindow.baml
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Reload.baml
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage.g.resources
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.AssemblyInfoInputs.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.AssemblyInfo.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.csproj.CopyComplete
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage.dll
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Desert Rage.pdb
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.genruntimeconfig.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\WpfApp1.csproj.AssemblyReference.cache
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\Resources\Styles\Buttons.baml
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\obj\Release\netcoreapp3.1\App.baml
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_Battle.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_Boss.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_Calm.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_Danger.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_End.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\AncientPyramid_Secret.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\FireTemple_Battle.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\FireTemple_Boss.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\FireTemple_Calm.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\FireTemple_Danger.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\FireTemple_End.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\MainTitle.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\TheEnd.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\TheGreatEscape.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\ThePrologue.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\TheTitles.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\WaterTemple_Battle.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\WaterTemple_Boss.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\WaterTemple_Calm.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\WaterTemple_Danger.mp3
+D:\Александр\Windows 7\misc\Надгробные плиты\C#\WpfApp1\WpfApp1\bin\Release\netcoreapp3.1\Resources\OST\Music\WaterTemple_End.mp3

@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="DesertRage.Controls.Menu.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
+             xmlns:System="clr-namespace:System;assembly=System.Runtime"
+             x:Name="DesertMainMenu"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+    
+    <Grid Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="4" Visibility="Visible">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.75*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="MenuBackground">
+            <Grid.ColumnSpan>
+                2
+            </Grid.ColumnSpan>
+
+            <Image.Stretch>
+                Fill
+            </Image.Stretch>
+            
+            <Image.Source>
+                /Resources/Images/Locations/Regular/New_game_show.jpg
+            </Image.Source>
+        </Image>
+
+        <menu:Autorization ViewModel="{Binding ElementName=DesertMainMenu, Path=StartViewModel}"/>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.059*"/>
+                <ColumnDefinition Width="0.55*"/>
+                <ColumnDefinition Width="0.391*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.03*"/>
+                <RowDefinition Height="0.17*"/>
+                <RowDefinition Height="0.275*"/>
+                <RowDefinition Height="0.125*"/>
+                <RowDefinition Height="0.025*"/>
+                <RowDefinition Height="0.125*"/>
+                <RowDefinition Height="0.05*"/>
+            </Grid.RowDefinitions>
+
+            <Viewbox Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="Desert Rage">
+                    <TextBlock.Style>
+                        <StaticResource ResourceKey="DesertCaption"/>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Viewbox>
+
+            <Button Style="{StaticResource WhiteOption}">
+                <Grid.Row>
+                    3
+                </Grid.Row>
+
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <Button.IsEnabled>
+                    <Binding Path="StartViewModel.IsPlayerExists"/>
+                </Button.IsEnabled>
+
+                <Viewbox>
+                    <TextBlock Text="Продолжить начатое"/>
+                </Viewbox>
+            </Button>
+
+            <Button Style="{StaticResource WhiteOption}" Click="NewGame">
+                <Grid.Row>
+                    5
+                </Grid.Row>
+
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <Viewbox>
+                    <TextBlock Text="Новое приключение"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>
