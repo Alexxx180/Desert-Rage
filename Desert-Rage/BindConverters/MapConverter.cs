@@ -17,15 +17,12 @@ namespace DesertRage.BindConverters
                 tiles = values[1] as
                 Dictionary<string, string>;
 
-            string tile = "/Resources/Images/Locations/Total/Dark.svg"; //"/Resources/Images/Locations/Total/Dark.svg";
+            if (values[2] is not
+                Position current
+                || tiles is null)
+                return "/Resources/Images/Locations/Total/Dark.svg";
 
-            if (values[2] is not Position current)
-                return tile;
-
-            if (tiles is null)
-                return tile;
-
-            tile = tiles["."];
+            string tile = tiles["."];
 
             if (map is null)
                 return tile;
@@ -40,14 +37,6 @@ namespace DesertRage.BindConverters
             {
                 tile = tiles[code];
             }
-
-            //System.Diagnostics.Trace.WriteLine(tiles.Count);
-
-            //System.Diagnostics.Trace.WriteLine(tiles.ContainsKey(code));
-
-            //System.Diagnostics.Trace.WriteLine(current.ToString());
-
-            //System.Diagnostics.Trace.WriteLine(tile);
 
             return tile;
         }

@@ -1,11 +1,12 @@
-﻿using DesertRage.Customing.Converters;
-using DesertRage.Model.Locations.Map;
-using System;
+﻿using DesertRage.Model.Locations.Map;
+using DesertRage.ViewModel;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Input;
+using DesertRage.Model.Stats.Player;
+using DesertRage.Model.Locations;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -14,37 +15,13 @@ namespace DesertRage.Controls.Scenes.Map
     /// </summary>
     public partial class LevelMap : UserControl, INotifyPropertyChanged, IControllable
     {
-        public Dictionary<string, string> TileCodes { get; }
-
-        private Uri _backCover;
-        public Uri BackCover
+        private UserProfile _userData;
+        public UserProfile UserData
         {
-            get => _backCover;
+            get => _userData;
             set
             {
-                _backCover = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string[] _map;
-        public string[] Map
-        {
-            get => _map;
-            set
-            {
-                _map = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private Position _camera;
-        public Position Camera
-        {
-            get => _camera;
-            set
-            {
-                _camera = value;
+                _userData = value;
                 OnPropertyChanged();
             }
         }
@@ -53,14 +30,11 @@ namespace DesertRage.Controls.Scenes.Map
         {
             InitializeComponent();
 
+            string back = "/Resources/Images/Locations/1-Secret-Temple/Way.svg";
 
-            BackCover = "/Resources/Images/Locations/1-Secret-Temple/Way.svg".ToUri(UriKind.Relative);
-
-            ///Resources/Images/Locations/1-Secret-Temple/Way.svg
-
-            TileCodes = new Dictionary<string, string>
+            Dictionary<string, string> tiles = new Dictionary<string, string>
             {
-                { ".", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
+                { ".", back },
                 { "H", "/Resources/Images/Locations/1-Secret-Temple/Wall.svg" },
                 { "X", "/Resources/Images/Locations/1-Secret-Temple/Artifact.svg" },
                 { "!", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
@@ -71,9 +45,8 @@ namespace DesertRage.Controls.Scenes.Map
                 { "#", "/Resources/Images/Locations/Total/Lock.svg" },
                 { "@", "/Resources/Images/Locations/Total/Table.svg" }
             };
-            OnPropertyChanged(nameof(TileCodes));
 
-            Map = new string[] {
+            string[] map = new string[] {
                 "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
                 "H............H................H..........H.....H...........H",
                 "H..H.H..H.H...HHHHHH.HHH....H.H..........H.....H.....HHH...H",
@@ -112,7 +85,66 @@ namespace DesertRage.Controls.Scenes.Map
                 "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
             };
 
-            Camera = new Position(1, 3);
+            Location location = new Location
+            {
+                TileCodes = tiles,
+                BackCover = back,
+                Map = map
+            };
+
+            Character hero = new Character
+            {
+                Step = new Position[4]
+                {
+                    new Position(0, -1),
+                    new Position(-1, 0),
+                    new Position(0, 1),
+                    new Position(1, 0)
+
+                },
+                StandImage = new string[4]
+                {
+                    "/Resources/Images/Locations/Total/Person/Static/Up.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Down.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Right.svg"
+                },
+                MapImage = "/Resources/Images/Locations/Total/Person/Static/Down.svg",
+                GoingImage = new string[4][]
+                {
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Walk/Up/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Up/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Left/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Left/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Walk/Down/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Down/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Right/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Right/2.svg"
+                    }
+                },
+                WalkThrough = new HashSet<string>
+                    { ".", ",", ":", "_" },
+                Place = new Position(1, 3)
+            };
+
+            UserProfile newPlayer = new UserProfile
+            {
+                Level = location,
+                Hero = hero
+            };
+
+            UserData = newPlayer;
         }
 
         //public string[] Map
@@ -125,7 +157,7 @@ namespace DesertRage.Controls.Scenes.Map
         //    }
         //}
 
-        
+
 
         ////[EN] Complete tasks
         ////[RU] Завершение задач.
@@ -401,6 +433,42 @@ namespace DesertRage.Controls.Scenes.Map
         //    MainHero.MiniTask = true;
         //    ShowAfterBattleMenu();
         //}
+        
+        public void KeyHandle(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.W:
+                    UserData.Go(Direction.UP);
+                    break;
+                case Key.A:
+                    UserData.Go(Direction.LEFT);
+                    break;
+                case Key.S:
+                    UserData.Go(Direction.DOWN);
+                    break;
+                case Key.D:
+                    UserData.Go(Direction.RIGHT);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void KeyRelease(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.W:
+                case Key.A:
+                case Key.S:
+                case Key.D:
+                    UserData.Stand();
+                    break;
+                default:
+                    break;
+            }
+        }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
@@ -420,60 +488,5 @@ namespace DesertRage.Controls.Scenes.Map
         }
 
         #endregion
-
-        #region Movement Members
-        public static bool DetermineWay(string tile)
-        {
-            bool isWay;
-            switch (tile)
-            {
-                case ".":
-                case ",":
-                case "_":
-                case ":":
-                    isWay = true;
-                    break;
-                default:
-                    isWay = false;
-                    break;
-            }
-            return isWay;
-        }
-
-        private void GoTo(int x, int y)
-        {
-            Position next = new Position
-            {
-                X = Camera.X + x,
-                Y = Camera.Y + y
-            };
-
-            if (DetermineWay(Map.Tile(next)))
-            {
-                Camera = next;
-            }
-        }
-        #endregion
-
-        public void KeyHandle(object sender, KeyEventArgs e)
-        {
-            switch (e.Key)
-            {
-                case Key.W:
-                    GoTo(0, -1);
-                    break;
-                case Key.A:
-                    GoTo(-1, 0);
-                    break;
-                case Key.S:
-                    GoTo(0, 1);
-                    break;
-                case Key.D:
-                    GoTo(1, 0);
-                    break;
-                default:
-                    break;
-            }
-        }
     }
 }

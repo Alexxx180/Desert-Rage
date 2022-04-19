@@ -345,3 +345,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\SharpVectors.Rendering.Gdi.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\SharpVectors.Rendering.Wpf.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\SharpVectors.Runtime.Wpf.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache

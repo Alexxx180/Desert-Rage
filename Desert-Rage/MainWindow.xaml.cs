@@ -354,7 +354,7 @@ namespace DesertRage
             //RefreshSkills();
 
             Player.Hero = Ray;
-            Player.CurrentLocation = ReadJson<Location>("SecretTemple.json");
+            Player.Level = ReadJson<Location>("SecretTemple.json");
         }
         
         //private void PauseGame()
@@ -399,6 +399,14 @@ namespace DesertRage
             if (Display.Content is IControllable keyPad)
             {
                 keyPad.KeyHandle(sender, e);
+            }
+        }
+
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (Display.Content is IControllable keyPad)
+            {
+                keyPad.KeyRelease(sender, e);
             }
         }
 

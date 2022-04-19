@@ -1,14 +1,39 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Player.Armory;
 
 namespace DesertRage.Model.Stats.Player
 {
-    internal class Character
+    public class Character
     {
         public Character()
         {
             Status = new BitArray(1);
+            StandImage = new string[4];
+            GoingImage = new string[4][];
+        }
+
+        internal void Go(in string[] map, int move)
+        {
+            Position next = Place;
+            next.Increment(Step[move]);
+            
+            Pose = move;
+            Walk = (Walk + 1) % GoingImage[Pose].Length;
+            MapImage = GoingImage[Pose][Walk];
+
+            if (WalkThrough.Contains(map.Tile(next)))
+            {
+                Place = next;
+            }
+        }
+
+        internal void Stand()
+        {
+            //Walk = 0;
+            MapImage = StandImage[Pose];
         }
 
         //DispatcherTimer PRegn = new DispatcherTimer();
@@ -71,9 +96,13 @@ namespace DesertRage.Model.Stats.Player
         }
         #endregion
 
+
+        #region HeroPresentation Members
         public string Name { get; set; }
         public Profile HeroProfile { get; set; }
+        #endregion
 
+        #region Status Members
         public byte Level { get; set; }
         public ushort Experience { get; set; }
 
@@ -84,14 +113,26 @@ namespace DesertRage.Model.Stats.Player
         public byte Special { get; set; }
 
         public BitArray Status { get; set; }
+        public BitArray Learned { get; set; }
 
         public Weapon Weapon { get; set; }
         public Equipment Armor { get; set; }
         public Equipment Legs { get; set; }
         public Equipment Boots { get; set; }
+        #endregion
 
-        public BitArray Learned { get; set; }
 
+        #region Map Members
         public Position Place { get; set; }
+        public Position[] Step { get; set; }
+
+        public int Pose { get; set; }
+        public int Walk { get; set; }
+        public string MapImage { get; set; }
+        public string[] StandImage { get; set; }
+        public string[][] GoingImage { get; set; }
+
+        public HashSet<string> WalkThrough { get; set; }
+        #endregion
     }
 }

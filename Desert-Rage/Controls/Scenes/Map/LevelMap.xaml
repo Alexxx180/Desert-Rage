@@ -36,19 +36,13 @@
                 <VisualBrush.Visual>
                     <svgc:SvgViewbox>
                         <attach:SvgBox.Source>
-                            <Binding Path="BackCover" />
+                            <Binding Path="UserData.Level.BackCover" />
                         </attach:SvgBox.Source>
 
                         <attach:SvgBox.Stretch>
                             Fill
                         </attach:SvgBox.Stretch>
                     </svgc:SvgViewbox>
-
-                    <!--<Image>
-                        <Image.Source>
-                            <Binding Path="BackCover" />
-                        </Image.Source>
-                    </Image>-->
                 </VisualBrush.Visual>
             </VisualBrush>
         </Grid.Background>
@@ -84,9 +78,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -98,9 +92,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -112,9 +106,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -126,9 +120,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -140,9 +134,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -154,9 +148,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -168,9 +162,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -182,9 +176,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -196,9 +190,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -214,9 +208,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -228,9 +222,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -242,9 +236,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -256,9 +250,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -270,9 +264,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -284,9 +278,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -298,9 +292,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -312,9 +306,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -326,9 +320,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -344,9 +338,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -358,9 +352,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -372,9 +366,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -386,9 +380,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -400,9 +394,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -414,9 +408,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -428,9 +422,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -442,9 +436,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -456,9 +450,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -474,9 +468,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -488,9 +482,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -502,9 +496,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -516,9 +510,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -530,9 +524,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -544,9 +538,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -558,9 +552,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -572,9 +566,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -586,9 +580,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -604,9 +598,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -618,9 +612,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -632,9 +626,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -646,9 +640,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -660,9 +654,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -674,9 +668,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -688,9 +682,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -702,9 +696,9 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
@@ -716,14 +710,20 @@
                         <StaticResource ResourceKey="MapConverter"/>
                     </MultiBinding.Converter>
 
-                    <Binding ElementName="MapView" Path="DataContext.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.Camera"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
                 </MultiBinding>
             </map:MapTile.Path>
         </map:MapTile>
 
         <!--#endregion-->
+
+        <map:MapTile x:Name="HeroTile" Y="2" X="4">
+            <map:MapTile.Path>
+                <Binding ElementName="MapView" Path="DataContext.UserData.Hero.MapImage"/>
+            </map:MapTile.Path>
+        </map:MapTile>
 
         <Viewbox>
             <Grid.Row>
