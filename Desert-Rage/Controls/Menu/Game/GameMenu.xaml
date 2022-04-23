@@ -4,46 +4,50 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
+             xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Style="{StaticResource BackAccent}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.7375*"/>
-            <ColumnDefinition Width="0.2625*"/>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.8112*"/>
-            <RowDefinition Height="0.13*"/>
-            <RowDefinition Height="0.0588*"/>
+            <RowDefinition Height="0.95*"/>
+            <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="Menu1" Stretch="Fill">
-            <Grid.RowSpan>
-                3
-            </Grid.RowSpan>
-            <Grid.ColumnSpan>
-                2
-            </Grid.ColumnSpan>
+        <Viewbox>
+            <Viewbox.HorizontalAlignment>
+                Left
+            </Viewbox.HorizontalAlignment>
             
-            <Image.Source>
-                /Resources/Images/Menu/Kinds/Menu3.png
-            </Image.Source>
-        </Image>
+            <Viewbox.Style>
+                <StaticResource ResourceKey="Impact"/>
+            </Viewbox.Style>
 
-        <Grid Grid.Row="2" Grid.Column="1" Panel.ZIndex="11">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.8*"/>
-                <RowDefinition Height="0.2*"/>
-            </Grid.RowDefinitions>
+            <Grid.Row>
+                2
+            </Grid.Row>
 
-            <Viewbox>
-                <TextBlock x:Name="Describe2" Text="Статус героя" FontFamily="Britannic Bold" Foreground="White">
-                    
-                </TextBlock>
-            </Viewbox>
-        </Grid>
-        
-        
+            <TextBlock Padding="5,0,5,0" Text="Вот тут пример достаточно длинного совета, они меняются случайно"/>
+        </Viewbox>
+
+        <Viewbox>
+            <Viewbox.Style>
+                <StaticResource ResourceKey="Impact"/>
+            </Viewbox.Style>
+            
+            <Grid.Row>
+                2
+            </Grid.Row>
+
+            <Grid.Column>
+                1
+            </Grid.Column>
+
+            <TextBlock Text="Статус героя"/>
+        </Viewbox>
     </Grid>
 </UserControl>

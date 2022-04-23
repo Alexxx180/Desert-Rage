@@ -7,6 +7,7 @@ namespace DesertRage.Model.Stats
     {
         public Bar(ushort value)
         {
+            Minimum = 0;
             Current = value;
             Max = value;
         }
@@ -28,6 +29,7 @@ namespace DesertRage.Model.Stats
             Current = Max;
         }
 
+        public ushort Minimum { get; set; }
         public ushort Current { get; set; }
         public ushort Max { get; set; }
     }

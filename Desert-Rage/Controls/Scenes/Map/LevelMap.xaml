@@ -17,763 +17,786 @@
         <Binding RelativeSource="{RelativeSource Self}"/>
     </UserControl.DataContext>
 
-    <!--Padding="0"-->
-    <Grid Margin="0" UseLayoutRounding="False">
-        <Grid.Background>
-            <VisualBrush TileMode="Tile">
-                <VisualBrush.Viewport>
-                    0,0,0.111,0.2
-                </VisualBrush.Viewport>
-
-                <VisualBrush.AlignmentY>
-                    Top
-                </VisualBrush.AlignmentY>
-
-                <VisualBrush.AlignmentX>
-                    Left
-                </VisualBrush.AlignmentX>
-
-                <VisualBrush.Visual>
-                    <svgc:SvgViewbox>
-                        <attach:SvgBox.Source>
-                            <Binding Path="UserData.Level.BackCover" />
-                        </attach:SvgBox.Source>
-
-                        <attach:SvgBox.Stretch>
-                            Fill
-                        </attach:SvgBox.Stretch>
-                    </svgc:SvgViewbox>
-                </VisualBrush.Visual>
-            </VisualBrush>
-        </Grid.Background>
-
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-
-        <!--#region TileRow-0-->
-
-        <map:MapTile>
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-4:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-3:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-2:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-1:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="0:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="5">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="1:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="6">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="2:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="7">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="3:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile X="8">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="4:-2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <!--#endregion-->
-
-        <!--#region TileRow-1-->
-
-        <map:MapTile Y="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-4:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-3:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-2:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-1:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="0:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="5">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="1:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="6">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="2:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="7">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="3:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="1" X="8">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="4:-1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <!--#endregion-->
-
-        <!--#region TileRow-2-->
-
-        <map:MapTile Y="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-4:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-3:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-2:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-1:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="0:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="5">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="1:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="6">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="2:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="7">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="3:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="2" X="8">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="4:0">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <!--#endregion-->
-
-        <!--#region TileRow-3-->
-
-        <map:MapTile Y="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-4:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-3:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-2:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-1:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="0:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="5">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="1:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="6">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="2:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="7">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="3:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="3" X="8">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="4:1">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <!--#endregion-->
-
-        <!--#region TileRow-4-->
-
-        <map:MapTile Y="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-4:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="1">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-3:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="2">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-2:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="3">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="-1:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="4">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="0:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="5">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="1:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="6">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="2:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="7">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="3:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <map:MapTile Y="4" X="8">
-            <map:MapTile.Path>
-                <MultiBinding ConverterParameter="4:2">
-                    <MultiBinding.Converter>
-                        <StaticResource ResourceKey="MapConverter"/>
-                    </MultiBinding.Converter>
-
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                </MultiBinding>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <!--#endregion-->
-
-        <map:MapTile x:Name="HeroTile" Y="2" X="4">
-            <map:MapTile.Path>
-                <Binding ElementName="MapView" Path="DataContext.UserData.Hero.MapImage"/>
-            </map:MapTile.Path>
-        </map:MapTile>
-
-        <Viewbox>
-            <Grid.Row>
-                5
-            </Grid.Row>
-
-            <Grid.Column>
-                7
-            </Grid.Column>
-
-            <Grid.ColumnSpan>
-                2
-            </Grid.ColumnSpan>
-
-
-            <Viewbox.VerticalAlignment>
-                Bottom
-            </Viewbox.VerticalAlignment>
-
-            <Viewbox.HorizontalAlignment>
-                Right
-            </Viewbox.HorizontalAlignment>
-
-            <TextBlock Text="1:30">
-                <TextBlock.Padding>
-                    2,0,2,0
-                </TextBlock.Padding>
-
-                <TextBlock.FontFamily>
-                    Stencil
-                </TextBlock.FontFamily>
-
-                <TextBlock.Foreground>
-                    White
-                </TextBlock.Foreground>
-
-                <TextBlock.Background>
-                    #D8000000
-                </TextBlock.Background>
-            </TextBlock>
-        </Viewbox>
-
-        <!--<ProgressBar x:Name="HPhelper" Grid.Row="33" Grid.Column="17" Grid.ColumnSpan="3" Value="{Binding ElementName=HPbar1, Path=Value}" Minimum="0" Maximum="{Binding ElementName=HPbar1, Path=Maximum}" Visibility="Hidden" Panel.ZIndex="5">
-                <ProgressBar.Foreground>
-                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                        <GradientStop Color="#FF3AAC28"/>
-                        <GradientStop Color="#FF00F3FF" Offset="1"/>
-                        <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                    </LinearGradientBrush>
-                </ProgressBar.Foreground>
-            </ProgressBar>-->
+    <Grid>
+        <Grid Margin="0" UseLayoutRounding="False">
+            <Grid.Background>
+                <VisualBrush TileMode="Tile">
+                    <VisualBrush.Viewport>
+                        0,0,0.111,0.2
+                    </VisualBrush.Viewport>
+
+                    <VisualBrush.AlignmentY>
+                        Top
+                    </VisualBrush.AlignmentY>
+
+                    <VisualBrush.AlignmentX>
+                        Left
+                    </VisualBrush.AlignmentX>
+
+                    <VisualBrush.Visual>
+                        <svgc:SvgViewbox>
+                            <attach:SvgBox.Source>
+                                <Binding Path="UserData.Level.BackCover" />
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Fill
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--#region TileRow-0-->
+
+            <map:MapTile>
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-4:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-3:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-2:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-1:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="0:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="5">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="1:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="6">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="2:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="7">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="3:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile X="8">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="4:-2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-1-->
+
+            <map:MapTile Y="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-4:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-3:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-2:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-1:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="0:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="5">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="1:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="6">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="2:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="7">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="3:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="1" X="8">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="4:-1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-2-->
+
+            <map:MapTile Y="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-4:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-3:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-2:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-1:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="0:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="5">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="1:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="6">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="2:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="7">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="3:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="2" X="8">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="4:0">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-3-->
+
+            <map:MapTile Y="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-4:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-3:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-2:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-1:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="0:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="5">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="1:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="6">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="2:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="7">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="3:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="3" X="8">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="4:1">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <!--#region TileRow-4-->
+
+            <map:MapTile Y="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-4:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="1">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-3:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="2">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-2:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="3">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="-1:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="4">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="0:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="5">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="1:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="6">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="2:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="7">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="3:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <map:MapTile Y="4" X="8">
+                <map:MapTile.Path>
+                    <MultiBinding ConverterParameter="4:2">
+                        <MultiBinding.Converter>
+                            <StaticResource ResourceKey="MapConverter"/>
+                        </MultiBinding.Converter>
+
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
+                    </MultiBinding>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <!--#endregion-->
+
+            <map:MapTile x:Name="HeroTile" Y="2" X="4">
+                <map:MapTile.Path>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.MapImage"/>
+                </map:MapTile.Path>
+            </map:MapTile>
+
+            <Grid Grid.Row="2" Grid.Column="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                </Grid.ColumnDefinitions>
+
+                <ProgressBar x:Name="HPhelper" Orientation="Vertical" Visibility="Collapsed">
+                    <ProgressBar.Minimum>
+                        0
+                    </ProgressBar.Minimum>
+
+                    <ProgressBar.Value>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Hp.Current"/>
+                    </ProgressBar.Value>
+
+                    <ProgressBar.Maximum>
+                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Hp.Max"/>
+                    </ProgressBar.Maximum>
+
+                    <ProgressBar.Foreground>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF3AAC28"/>
+                            <GradientStop Color="#FF00F3FF" Offset="1"/>
+                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                        </LinearGradientBrush>
+                    </ProgressBar.Foreground>
+                </ProgressBar>
+            </Grid>
+            
+            
+
+            <Viewbox>
+                <Grid.Row>
+                    5
+                </Grid.Row>
+
+                <Grid.Column>
+                    7
+                </Grid.Column>
+
+                <Grid.ColumnSpan>
+                    2
+                </Grid.ColumnSpan>
+
+
+                <Viewbox.VerticalAlignment>
+                    Bottom
+                </Viewbox.VerticalAlignment>
+
+                <Viewbox.HorizontalAlignment>
+                    Right
+                </Viewbox.HorizontalAlignment>
+
+                <!--<TextBlock Text="1:30">
+                    <TextBlock.Padding>
+                        2,0,2,0
+                    </TextBlock.Padding>
+
+                    <TextBlock.FontFamily>
+                        Stencil
+                    </TextBlock.FontFamily>
+
+                    <TextBlock.Foreground>
+                        White
+                    </TextBlock.Foreground>
+
+                    <TextBlock.Background>
+                        #D8000000
+                    </TextBlock.Background>
+                </TextBlock>-->
+            </Viewbox>
+        </Grid>
     </Grid>
 </UserControl>

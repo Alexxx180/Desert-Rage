@@ -83,6 +83,12 @@
     <Compile Update="Controls\Scenes\Map\MapTile.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\Status\StatBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Status\StatusPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Reload.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -152,6 +158,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\SoundGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Status\StatBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Status\StatusPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

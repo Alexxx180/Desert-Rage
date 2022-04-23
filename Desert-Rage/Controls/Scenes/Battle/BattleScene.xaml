@@ -370,7 +370,9 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <ProgressBar x:Name="APbar" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="#FF1D25BB"  Value="{Binding Path=GetAP}" Maximum="{Binding Path=GetMAP}"  IsEnabled="False" Visibility="Visible" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+                <ProgressBar x:Name="APbar" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
+    BorderBrush="#FF1D25BB"  Value="{Binding Path=GetAP}"
+    Maximum="{Binding Path=GetMAP}"  IsEnabled="False" Visibility="Visible" Grid.RowSpan="2" Grid.ColumnSpan="2" >
                     <ProgressBar.Resources>
 
                     </ProgressBar.Resources>
@@ -383,7 +385,8 @@
                 </ProgressBar>
 
                 <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                    <Label x:Name="AP" HorizontalAlignment="Left"  VerticalAlignment="Bottom" RenderTransformOrigin="0.491,0.225" FontFamily="Cooper Black" Foreground="#FFFFEDED" Background="#FF6E6E6E" BorderThickness="2" IsEnabled="False" Visibility="Visible" Padding="0,0,0,0" BorderBrush="Black" >
+                    <Label x:Name="AP" HorizontalAlignment="Left"  VerticalAlignment="Bottom" RenderTransformOrigin="0.491,0.225" FontFamily="Cooper Black"
+    Foreground="#FFFFEDED" Background="#FF6E6E6E" BorderThickness="2" IsEnabled="False" Visibility="Visible" Padding="0,0,0,0" BorderBrush="Black" >
                         <Label.Resources>
 
                         </Label.Resources>
