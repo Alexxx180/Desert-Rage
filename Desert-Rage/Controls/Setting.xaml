@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="DesertRage.Controls.Setting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="800" Height="60">
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+
+    <Grid Style="{StaticResource Impact}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Padding="1">
+            <TextBlock.Style>
+                <StaticResource ResourceKey="SettingText"/>
+            </TextBlock.Style>
+            
+            <TextBlock.Text>
+                <Binding Path="Caption"/>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <Slider Padding="1">
+            <Grid.Column>
+                1
+            </Grid.Column>
+
+            <Slider.Minimum>
+                <Binding Path="Slider.Minimum"/>
+            </Slider.Minimum>
+
+            <Slider.Value>
+                <Binding Path="Slider.Current">
+                    <Binding.Mode>
+                        TwoWay
+                    </Binding.Mode>
+
+                    <Binding.UpdateSourceTrigger>
+                        LostFocus
+                    </Binding.UpdateSourceTrigger>
+                </Binding>
+            </Slider.Value>
+            
+            <Slider.Maximum>
+                <Binding Path="Slider.Max"/>
+            </Slider.Maximum>
+
+            <Slider.Height>
+                22
+            </Slider.Height>
+
+            <Slider.Width>
+                225
+            </Slider.Width>
+
+            <Slider.IsSnapToTickEnabled>
+                True
+            </Slider.IsSnapToTickEnabled>
+
+            <Slider.TickFrequency>
+                1
+            </Slider.TickFrequency>
+            
+            <Slider.SmallChange>
+                1
+            </Slider.SmallChange>
+
+            <Slider.LargeChange>
+                10
+            </Slider.LargeChange>
+
+            <Slider.VerticalAlignment>
+                Center
+            </Slider.VerticalAlignment>
+            
+            <Slider.HorizontalAlignment>
+                Center
+            </Slider.HorizontalAlignment>
+            
+            <Slider.LayoutTransform>
+                <ScaleTransform>
+                    <ScaleTransform.ScaleX>
+                        1.75
+                    </ScaleTransform.ScaleX>
+                    
+                    <ScaleTransform.ScaleY>
+                        1.75
+                    </ScaleTransform.ScaleY>
+
+                    <ScaleTransform.CenterX>
+                        15
+                    </ScaleTransform.CenterX>
+
+                    <ScaleTransform.CenterY>
+                        15
+                    </ScaleTransform.CenterY>
+                </ScaleTransform>
+            </Slider.LayoutTransform>
+        </Slider>
+
+        <TextBlock>
+            <Grid.Column>
+                2
+            </Grid.Column>
+
+            <TextBlock.Style>
+                <StaticResource ResourceKey="SettingText"/>
+            </TextBlock.Style>
+
+            <TextBlock.Padding>
+                1
+            </TextBlock.Padding>
+
+            <TextBlock.Text>
+                <Binding Path="Slider.Current" StringFormat="{}{0}%"/>
+            </TextBlock.Text>
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -275,13 +275,11 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Battle\BattleResults.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\BestiaryLayout.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\FoeAnalyze.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameEquipment.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameItems.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameMenu.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameSettings.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameSkills.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameStatus.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTasks.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTopics.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\HintFooter.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\Hints.g.cs
@@ -304,13 +302,11 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Battle\BattleResults.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\BestiaryLayout.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\FoeAnalyze.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameEquipment.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameItems.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameMenu.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameSettings.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameSkills.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameStatus.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTasks.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTopics.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\HintFooter.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\Hints.baml
@@ -350,3 +346,5 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatBar.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatusPanel.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatusPanel.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.g.cs

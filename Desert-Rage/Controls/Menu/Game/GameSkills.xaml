@@ -3,9 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
+             xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Style="{StaticResource Impact}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+
+        <status:StatusPanel/>
+
+        <ListBox Style="{StaticResource OrdinaryList}">
+            <ListBox.ItemContainerStyle>
+                <StaticResource ResourceKey="RangerItems" />
+            </ListBox.ItemContainerStyle>
+            
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <ListBoxItem>
+                Lasdadsad
+            </ListBoxItem>
+            <ListBoxItem>
+                Lasdadsad
+            </ListBoxItem>
+            <ListBoxItem>
+                Lasdadsad
+            </ListBoxItem>
+            <ListBoxItem>
+                Lasdadsad
+            </ListBoxItem>
+            <ListBoxItem>
+                Lasdadsad
+            </ListBoxItem>
+        </ListBox>
+    </Grid>
+    
     <!--<Grid x:Name="GameSkills" Panel.ZIndex="11" Visibility="Collapsed">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.025*"/>

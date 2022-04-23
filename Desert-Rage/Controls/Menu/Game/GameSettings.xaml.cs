@@ -1,23 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DesertRage.Model.Stats.Player;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesertRage.Controls.Menu.Game
 {
     /// <summary>
-    /// Логика взаимодействия для GameSettings.xaml
+    /// In game settings component
     /// </summary>
     public partial class GameSettings : UserControl
     {
+        public static readonly DependencyProperty
+            GameOptionsProperty = DependencyProperty.Register
+                (nameof(GameOptions), typeof(Settings),
+                typeof(GameSettings));
+
+        #region Settings Members
+        public Settings GameOptions
+        {
+            get => GetValue(GameOptionsProperty) as Settings;
+            set => SetValue(GameOptionsProperty, value);
+        }
+        #endregion
+
         public GameSettings()
         {
             InitializeComponent();

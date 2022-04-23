@@ -22,4 +22,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="SettingText" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
 </ResourceDictionary>

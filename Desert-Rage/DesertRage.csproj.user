@@ -26,9 +26,6 @@
     <Compile Update="Controls\Menu\Bestiary\FoeAnalyze.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Menu\Game\GameEquipment.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Menu\Game\GameItems.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,9 +39,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Menu\Game\GameStatus.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameTasks.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Menu\Game\GameTopics.xaml.cs">
@@ -77,6 +71,9 @@
     <Compile Update="Controls\Scenes\Map\LevelMap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\Setting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\SoundGroup.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,9 +103,6 @@
     <Page Update="Controls\Menu\Bestiary\FoeAnalyze.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Menu\Game\GameEquipment.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Controls\Menu\Game\GameItems.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -122,9 +116,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Menu\Game\GameStatus.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameTasks.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Menu\Game\GameTopics.xaml">
@@ -155,6 +146,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\Map\LevelMap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Setting.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\SoundGroup.xaml">

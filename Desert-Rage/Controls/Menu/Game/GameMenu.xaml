@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
-             xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Style="{StaticResource BackAccent}">
@@ -17,6 +16,30 @@
             <RowDefinition Height="0.95*"/>
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource Impact}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="0.05*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.92*"/>
+                <ColumnDefinition Width="0.04*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="SelectedTopic">
+                <Grid.Row>
+                    1
+                </Grid.Row>
+
+                <Grid.Column>
+                    1
+                </Grid.Column>
+            </Label>
+        </Grid>
 
         <Viewbox>
             <Viewbox.HorizontalAlignment>

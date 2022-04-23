@@ -8,120 +8,106 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Style="{StaticResource Impact}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.05*"/>
-            <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.04*"/>
-            <ColumnDefinition Width="0.92*"/>
-            <ColumnDefinition Width="0.04*"/>
-        </Grid.ColumnDefinitions>
+        <status:StatusPanel/>
 
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
-                <RowDefinition Height="0.3*"/>
-                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.75*"/>
             </Grid.RowDefinitions>
 
-            <status:StatusPanel/>
+            <Viewbox HorizontalAlignment="Left">
+                <TextBlock Padding="10,0,10,0" Text="Рэй"/>
+            </Viewbox>
 
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.25*"/>
-                    <RowDefinition Height="0.75*"/>
-                </Grid.RowDefinitions>
+            <TextBox>
+                <Grid.Row>
+                    1
+                </Grid.Row>
 
-                <Viewbox HorizontalAlignment="Left">
-                    <TextBlock Padding="10,0,10,0" Text="Рэй"/>
-                </Viewbox>
+                <TextBox.Style>
+                    <StaticResource ResourceKey="InputField"/>
+                </TextBox.Style>
 
-                <TextBox>
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
+                <TextBox.Text>
+                    Искатель приключений
+                </TextBox.Text>
+            </TextBox>
+        </Grid>
 
-                    <TextBox.Style>
-                        <StaticResource ResourceKey="InputField"/>
-                    </TextBox.Style>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="0.7*"/>
+            </Grid.ColumnDefinitions>
 
-                    <TextBox.Text>
-                        Искатель приключений
-                    </TextBox.Text>
-                </TextBox>
-            </Grid>
+            <Image>
+                <Grid.Column>
+                    1
+                </Grid.Column>
+            </Image>
 
-            <Grid Grid.Row="2">
+            <Grid>
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*"/>
-                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.85*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image>
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
-                </Image>
-
                 <Grid>
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
-
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.15*"/>
-                        <ColumnDefinition Width="0.85*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="0.2*"/>
                     </Grid.ColumnDefinitions>
 
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.8*"/>
-                            <ColumnDefinition Width="0.2*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                        </Grid>
-                    </Grid>
-
-                    <Grid>
-                        <Grid.Column>
-                            1
-                        </Grid.Column>
-
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-
-                        <ComboBox Style="{StaticResource BackAccent}"/>
-                        <ComboBox Style="{StaticResource BackAccent}">
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-                        </ComboBox>
-
-                        <ComboBox Style="{StaticResource BackAccent}">
-                            <Grid.Row>
-                                2
-                            </Grid.Row>
-                        </ComboBox>
-
-                        <ComboBox Style="{StaticResource BackAccent}">
-                            <Grid.Row>
-                                3
-                            </Grid.Row>
-                        </ComboBox>
                     </Grid>
+                </Grid>
+
+                <Grid>
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <ComboBox Style="{StaticResource BackAccent}"/>
+                    <ComboBox Style="{StaticResource BackAccent}">
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
+                    </ComboBox>
+
+                    <ComboBox Style="{StaticResource BackAccent}">
+                        <Grid.Row>
+                            2
+                        </Grid.Row>
+                    </ComboBox>
+
+                    <ComboBox Style="{StaticResource BackAccent}">
+                        <Grid.Row>
+                            3
+                        </Grid.Row>
+                    </ComboBox>
                 </Grid>
             </Grid>
         </Grid>

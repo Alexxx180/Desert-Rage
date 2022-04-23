@@ -99,6 +99,8 @@ namespace DesertRage.Model.Stats.Player
 
         #region HeroPresentation Members
         public string Name { get; set; }
+        public string Description { get; set; }
+
         public Profile HeroProfile { get; set; }
         #endregion
 
@@ -119,6 +121,11 @@ namespace DesertRage.Model.Stats.Player
         public Equipment Armor { get; set; }
         public Equipment Legs { get; set; }
         public Equipment Boots { get; set; }
+        #endregion
+
+        #region Skills Members
+        public List<Skill> BattleSkills { get; set; }
+        public List<Skill> ExtraSkills { get; set; }
         #endregion
 
 
