@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Player.Armory;
+using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.Model.Stats.Player
 {

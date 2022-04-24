@@ -4,14 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
              mc:Ignorable="d" 
+             x:Name="HeroStatusPanel"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              d:DesignHeight="75" d:DesignWidth="600">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75"/>
-            <ColumnDefinition Width="0.85*"/>
+            <ColumnDefinition Width="0.125*"/>
+            <ColumnDefinition Width="0.875*"/>
         </Grid.ColumnDefinitions>
+
+        <svgc:SvgViewbox>
+            <DockPanel.Dock>
+                Left
+            </DockPanel.Dock>
+
+            <attach:SvgBox.Source>
+                <Binding Path="Icon">
+                    <Binding.ElementName>
+                        HeroStatusPanel
+                    </Binding.ElementName>
+                    
+                    <Binding.Converter>
+                        <converters:UriConverter/>
+                    </Binding.Converter>
+                </Binding>
+            </attach:SvgBox.Source>
+
+            <attach:SvgBox.Stretch>
+                Fill
+            </attach:SvgBox.Stretch>
+        </svgc:SvgViewbox>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -21,7 +47,15 @@
 
             <status:StatBar Caption="ОЗ">
                 <status:StatBar.Bar>
-                    <Binding Path="HealthPoints"/>
+                    <Binding>
+                        <Binding.ElementName>
+                            HeroStatusPanel
+                        </Binding.ElementName>
+
+                        <Binding.Path>
+                            DataContext.HealthPoints
+                        </Binding.Path>
+                    </Binding>
                 </status:StatBar.Bar>
                 
                 <status:StatBar.ForeBrush>
@@ -39,7 +73,15 @@
                 </Grid.Row>
 
                 <status:StatBar.Bar>
-                    <Binding Path="ActionPoints"/>
+                    <Binding>
+                        <Binding.ElementName>
+                            HeroStatusPanel
+                        </Binding.ElementName>
+
+                        <Binding.Path>
+                            DataContext.ActionPoints
+                        </Binding.Path>
+                    </Binding>
                 </status:StatBar.Bar>
                 
                 <status:StatBar.ForeBrush>

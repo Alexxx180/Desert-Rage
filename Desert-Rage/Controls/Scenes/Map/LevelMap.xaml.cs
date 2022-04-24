@@ -7,11 +7,12 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using DesertRage.Model.Stats.Player;
 using DesertRage.Model.Locations;
+using DesertRage.Controls.Menu.Game;
 
 namespace DesertRage.Controls.Scenes.Map
 {
     /// <summary>
-    /// Логика взаимодействия для LevelMap.xaml
+    /// Location map
     /// </summary>
     public partial class LevelMap : UserControl, INotifyPropertyChanged, IControllable
     {
@@ -141,8 +142,10 @@ namespace DesertRage.Controls.Scenes.Map
             UserProfile newPlayer = new UserProfile
             {
                 Level = location,
-                Hero = hero
+                Hero = hero,
+                Menu = new GameMenu()
             };
+            newPlayer.Menu.SetLocation(this);
 
             UserData = newPlayer;
         }
@@ -439,16 +442,29 @@ namespace DesertRage.Controls.Scenes.Map
             switch (e.Key)
             {
                 case Key.W:
+                case Key.Up:
+                case Key.NumPad8:
                     UserData.Go(Direction.UP);
                     break;
                 case Key.A:
+                case Key.Left:
+                case Key.NumPad4:
                     UserData.Go(Direction.LEFT);
                     break;
                 case Key.S:
+                case Key.Down:
+                case Key.NumPad2:
                     UserData.Go(Direction.DOWN);
                     break;
                 case Key.D:
+                case Key.Right:
+                case Key.NumPad6:
                     UserData.Go(Direction.RIGHT);
+                    break;
+                case Key.LeftCtrl:
+                case Key.RightCtrl:
+                    Label container = Parent as Label;
+                    container.Content = UserData.Menu;
                     break;
                 default:
                     break;
@@ -463,6 +479,14 @@ namespace DesertRage.Controls.Scenes.Map
                 case Key.A:
                 case Key.S:
                 case Key.D:
+                case Key.Up:
+                case Key.Left:
+                case Key.Down:
+                case Key.Right:
+                case Key.NumPad2:
+                case Key.NumPad4:
+                case Key.NumPad6:
+                case Key.NumPad8:
                     UserData.Stand();
                     break;
                 default:

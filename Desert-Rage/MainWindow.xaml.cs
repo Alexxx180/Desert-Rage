@@ -1,34 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Text.RegularExpressions;
 using System.Windows.Threading;
-using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Helpers;
-using DesertRage.Helpers.Attach;
-using static DesertRage.Customing.Decorators;
-using static DesertRage.Mechanics.MapBuilder;
-using static DesertRage.Customing.Converters.Converters;
-using static DesertRage.Mechanics.Algorithms.Coloring;
-using static DesertRage.Helpers.Abilities;
-using static DesertRage.Helpers.Characteristics;
-using System.Diagnostics;
 using DesertRage.Model.Stats;
 using DesertRage.Model.Stats.Player.Armory;
 using static DesertRage.Writers.Processors;
-using DesertRage.Model;
 using DesertRage.Model.Stats.Player;
 using DesertRage.ViewModel;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Locations;
-using DesertRage.Controls;
 using DesertRage.Controls.Scenes;
 
 namespace DesertRage
@@ -394,7 +377,26 @@ namespace DesertRage
             SaveProfile("Ray.json", Player);
         }
 
+        #region RoutedEvent Members
         private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    Close();
+                    break;
+                default:
+                    TransferKeyDown(sender, e);
+                    break;
+            };
+        }
+
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            TransferKeyUp(sender, e);
+        }
+
+        private void TransferKeyDown(object sender, KeyEventArgs e)
         {
             if (Display.Content is IControllable keyPad)
             {
@@ -402,13 +404,14 @@ namespace DesertRage
             }
         }
 
-        private void OnKeyUp(object sender, KeyEventArgs e)
+        private void TransferKeyUp(object sender, KeyEventArgs e)
         {
             if (Display.Content is IControllable keyPad)
             {
                 keyPad.KeyRelease(sender, e);
             }
         }
+        #endregion
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

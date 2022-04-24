@@ -1,26 +1,81 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using DesertRage.Model.Menu;
 
 namespace DesertRage.Controls.Menu.Game
 {
     /// <summary>
-    /// Логика взаимодействия для GameTopics.xaml
+    /// Game menu topics selection
     /// </summary>
-    public partial class GameTopics : UserControl
+    public partial class GameTopics : UserControl, INotifyPropertyChanged
     {
+        public static readonly DependencyProperty
+            MenuTopicProperty = DependencyProperty.Register(
+                nameof(MenuTopic), typeof(Label), typeof(GameTopics));
+
+        public Label MenuTopic
+        {
+            get => GetValue(MenuTopicProperty) as Label;
+            set => SetValue(MenuTopicProperty, value);
+        }
+
+        private ObservableCollection<Topic> _topics;
+        public ObservableCollection<Topic> Topics
+        {
+            get => _topics;
+            set
+            {
+                _topics = value;
+                OnPropertyChanged();
+            }
+        }
+
         public GameTopics()
         {
             InitializeComponent();
+
+            Topics = new ObservableCollection<Topic>
+            {
+                new Topic
+                {
+                    Name = "Статус",
+                    Icon = "/Resources/Images/Menu/Topics/Status.svg",
+                    TopicElement = new GameStatus()
+                },
+                new Topic
+                {
+                    Name = "Умения",
+                    Icon = "/Resources/Images/Menu/Topics/Actions.svg",
+                    TopicElement = new GameSkills()
+                },
+                new Topic
+                {
+                    Name = "Предметы",
+                    Icon = "/Resources/Images/Menu/Topics/Items.svg",
+                    TopicElement = new GameItems()
+                },
+                new Topic
+                {
+                    Name = "Справка",
+                    Icon = "/Resources/Images/Menu/Topics/Info.svg",
+                    TopicElement = new Hints()
+                },
+                new Topic
+                {
+                    Name = "Настройки",
+                    Icon = "/Resources/Images/Menu/Topics/Settings.svg",
+                    TopicElement = new GameSettings()
+                }
+            };
+        }
+
+        private void OnTopicSelection(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox list = sender as ListBox;
+            MenuTopic.Content = (list.SelectedItem as Topic).TopicElement;
         }
 
         //private void Status_Click(object sender, RoutedEventArgs e)
@@ -129,5 +184,24 @@ namespace DesertRage.Controls.Menu.Game
         //    AnyShow(SwitchPanel);
         //    GameHint();
         //}
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
     }
 }

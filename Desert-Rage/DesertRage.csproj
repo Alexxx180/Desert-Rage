@@ -843,6 +843,11 @@
     <None Remove="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
     <None Remove="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
     <None Remove="Resources\Images\Menu\Tasks\TasksButton.png" />
+    <None Remove="Resources\Images\Menu\Topics\Actions.svg" />
+    <None Remove="Resources\Images\Menu\Topics\Info.svg" />
+    <None Remove="Resources\Images\Menu\Topics\Items.svg" />
+    <None Remove="Resources\Images\Menu\Topics\Settings.svg" />
+    <None Remove="Resources\Images\Menu\Topics\Status.svg" />
     <None Remove="SafeArea.png" />
     <None Remove="Scarab.png" />
     <None Remove="SeriousBoots.png" />
@@ -1732,6 +1737,11 @@
     <Resource Include="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
     <Resource Include="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
     <Resource Include="Resources\Images\Menu\Tasks\TasksButton.png" />
+    <Resource Include="Resources\Images\Menu\Topics\Actions.svg" />
+    <Resource Include="Resources\Images\Menu\Topics\Info.svg" />
+    <Resource Include="Resources\Images\Menu\Topics\Items.svg" />
+    <Resource Include="Resources\Images\Menu\Topics\Settings.svg" />
+    <Resource Include="Resources\Images\Menu\Topics\Status.svg" />
   </ItemGroup>
 
   <ItemGroup>

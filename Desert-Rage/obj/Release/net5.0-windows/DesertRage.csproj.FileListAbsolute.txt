@@ -320,7 +320,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\SoundGroup.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\MainWindow.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Reload.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\DataTemplates\Images.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Desert Rage.g.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Quotes.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.GenerateResource.cache
@@ -348,3 +347,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatusPanel.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\DataTemplates\Lists.baml

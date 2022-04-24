@@ -1,4 +1,5 @@
-﻿using DesertRage.Customing.Converters;
+﻿using DesertRage.Controls.Menu.Game;
+using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Player;
@@ -13,6 +14,7 @@ namespace DesertRage.ViewModel
 
         public Location Level { get; set; }
         public Character Hero { get; set; }
+        public GameMenu Menu { get; set; }
 
         public void Go(Direction move)
         {

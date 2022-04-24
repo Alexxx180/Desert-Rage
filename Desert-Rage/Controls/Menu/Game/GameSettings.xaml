@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
              xmlns:controls="clr-namespace:DesertRage.Controls"
              mc:Ignorable="d" 
+             x:Name="SettingsPanel"
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
         <Binding RelativeSource="{RelativeSource Self}"/>
@@ -18,7 +19,15 @@
             </controls:Setting.Caption>
 
             <controls:Setting.Slider>
-                <Binding Path="GameOptions.Music"/>
+                <Binding>
+                    <Binding.ElementName>
+                        SettingsPanel
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.GameOptions.Music
+                    </Binding.Path>
+                </Binding>
             </controls:Setting.Slider>
         </controls:Setting>
 
@@ -28,7 +37,15 @@
             </controls:Setting.Caption>
 
             <controls:Setting.Slider>
-                <Binding Path="GameOptions.Sound"/>
+                <Binding>
+                    <Binding.ElementName>
+                        SettingsPanel
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.GameOptions.Sound
+                    </Binding.Path>
+                </Binding>
             </controls:Setting.Slider>
         </controls:Setting>
 
@@ -38,7 +55,15 @@
             </controls:Setting.Caption>
 
             <controls:Setting.Slider>
-                <Binding Path="GameOptions.Noise"/>
+                <Binding>
+                    <Binding.ElementName>
+                        SettingsPanel
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.GameOptions.Noise
+                    </Binding.Path>
+                </Binding>
             </controls:Setting.Slider>
         </controls:Setting>
 
@@ -48,7 +73,15 @@
             </controls:Setting.Caption>
 
             <controls:Setting.Slider>
-                <Binding Path="GameOptions.Brightness"/>
+                <Binding>
+                    <Binding.ElementName>
+                        SettingsPanel
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.GameOptions.Brightness
+                    </Binding.Path>
+                </Binding>
             </controls:Setting.Slider>
         </controls:Setting>
 
@@ -58,7 +91,15 @@
             </controls:Setting.Caption>
 
             <controls:Setting.Slider>
-                <Binding Path="GameOptions.BattleSpeed"/>
+                <Binding>
+                    <Binding.ElementName>
+                        SettingsPanel
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.GameOptions.BattleSpeed
+                    </Binding.Path>
+                </Binding>
             </controls:Setting.Slider>
         </controls:Setting>
     </StackPanel>

@@ -11,66 +11,70 @@
             <ColumnDefinition Width="0.75*"/>
             <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.95*"/>
-            <RowDefinition Height="0.05*"/>
-        </Grid.RowDefinitions>
 
-        <Grid Style="{StaticResource Impact}">
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="0.95*"/>
                 <RowDefinition Height="0.05*"/>
             </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.04*"/>
-                <ColumnDefinition Width="0.92*"/>
-                <ColumnDefinition Width="0.04*"/>
-            </Grid.ColumnDefinitions>
+            <Grid Style="{StaticResource Impact}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.05*"/>
+                </Grid.RowDefinitions>
 
-            <Label x:Name="SelectedTopic">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.04*"/>
+                    <ColumnDefinition Width="0.92*"/>
+                    <ColumnDefinition Width="0.04*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="SelectedTopic">
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+
+                    <Label.HorizontalContentAlignment>
+                        Stretch
+                    </Label.HorizontalContentAlignment>
+
+                    <Label.VerticalContentAlignment>
+                        Stretch
+                    </Label.VerticalContentAlignment>
+                </Label>
+            </Grid>
+
+            <Viewbox>
+                <Viewbox.HorizontalAlignment>
+                    Left
+                </Viewbox.HorizontalAlignment>
+
+                <Viewbox.Style>
+                    <StaticResource ResourceKey="Impact"/>
+                </Viewbox.Style>
+
                 <Grid.Row>
-                    1
+                    2
                 </Grid.Row>
 
-                <Grid.Column>
-                    1
-                </Grid.Column>
-            </Label>
+                <TextBlock Padding="5,0,5,0" Text="Вот тут пример достаточно длинного совета, они меняются случайно"/>
+            </Viewbox>
         </Grid>
 
-        <Viewbox>
-            <Viewbox.HorizontalAlignment>
-                Left
-            </Viewbox.HorizontalAlignment>
-            
-            <Viewbox.Style>
-                <StaticResource ResourceKey="Impact"/>
-            </Viewbox.Style>
-
-            <Grid.Row>
-                2
-            </Grid.Row>
-
-            <TextBlock Padding="5,0,5,0" Text="Вот тут пример достаточно длинного совета, они меняются случайно"/>
-        </Viewbox>
-
-        <Viewbox>
-            <Viewbox.Style>
-                <StaticResource ResourceKey="Impact"/>
-            </Viewbox.Style>
-            
-            <Grid.Row>
-                2
-            </Grid.Row>
-
+        <local:GameTopics>
             <Grid.Column>
                 1
             </Grid.Column>
 
-            <TextBlock Text="Статус героя"/>
-        </Viewbox>
+            <local:GameTopics.MenuTopic>
+                <Binding ElementName="SelectedTopic"/>
+            </local:GameTopics.MenuTopic>
+        </local:GameTopics>
     </Grid>
 </UserControl>

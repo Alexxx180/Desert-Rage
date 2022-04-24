@@ -1,26 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DesertRage.Model.Menu.Things;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesertRage.Controls.Menu.Game
 {
     /// <summary>
-    /// Логика взаимодействия для GameItems.xaml
+    /// Character bag component
     /// </summary>
-    public partial class GameItems : UserControl
+    public partial class GameItems : UserControl, INotifyPropertyChanged
     {
+        public static readonly DependencyProperty
+            BagProperty = DependencyProperty.Register
+                (nameof(Bag),
+                typeof(ObservableCollection<Item>),
+                typeof(GameItems));
+
+        public ObservableCollection<Item> Bag
+        {
+            get => GetValue(BagProperty) as ObservableCollection<Item>;
+            set => SetValue(BagProperty, value);
+        }
+
         public GameItems()
         {
             InitializeComponent();
+            Bag = new ObservableCollection<Item>()
+            {
+                new Item
+                {
+                    Name = "Бинт",
+                    Count = 1,
+                    Icon = "/Resources/Images/Menu/Bag/AntidoteItem.png"
+                }
+            };
         }
 
         //private void CraftSwitch_Click(object sender, RoutedEventArgs e)
@@ -73,5 +88,24 @@ namespace DesertRage.Controls.Menu.Game
         //    CountText.Content = Txts.Common.QMark;
         //    AnyShow(CountText);
         //}
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
     }
 }

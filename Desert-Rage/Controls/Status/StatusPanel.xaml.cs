@@ -10,6 +10,17 @@ namespace DesertRage.Controls.Status
     /// </summary>
     public partial class StatusPanel : UserControl, INotifyPropertyChanged
     {
+        private string _icon;
+        public string Icon
+        {
+            get => _icon;
+            set
+            {
+                _icon = value;
+                OnPropertyChanged();
+            }
+        }
+
         private Bar _healthPoints;
         public Bar HealthPoints
         {
@@ -35,6 +46,8 @@ namespace DesertRage.Controls.Status
         public StatusPanel()
         {
             InitializeComponent();
+
+            Icon = "/Resources/Images/Menu/Topics/Status.svg";
         }
 
         #region INotifyPropertyChanged Members

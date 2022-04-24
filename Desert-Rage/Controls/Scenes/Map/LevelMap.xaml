@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
              xmlns:converters="clr-namespace:DesertRage.BindConverters"
+             xmlns:menu="clr-namespace:DesertRage.Controls.Menu.Game"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              mc:Ignorable="d" 
@@ -798,5 +799,7 @@
                 </TextBlock>-->
             </Viewbox>
         </Grid>
+
+        <!--<menu:GameMenu x:Name="Menu"/>-->
     </Grid>
 </UserControl>

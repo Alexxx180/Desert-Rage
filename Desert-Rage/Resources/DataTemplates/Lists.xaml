@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+                    xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters">
+    <DataTemplate x:Key="TopicTemplate">
+        <DockPanel>
+            <svgc:SvgViewbox DataContext="{Binding}">
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <attach:SvgBox.Source>
+                    <Binding Path="Icon">
+                        <Binding.Converter>
+                            <converters:UriConverter/>
+                        </Binding.Converter>
+                    </Binding>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <TextBlock>
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+                
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.Padding>
+                    10,0,10,0
+                </TextBlock.Padding>
+
+                <TextBlock.Text>
+                    <Binding Path="Name"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <Binding Path="Description"/>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
+</ResourceDictionary>

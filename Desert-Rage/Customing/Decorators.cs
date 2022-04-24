@@ -66,7 +66,8 @@ namespace DesertRage.Customing
             (this FrameworkElement element, bool setToActive)
         {
             element.Visibility = setToActive ?
-                Visibility.Visible : Visibility.Collapsed;
+                Visibility.Visible :
+                Visibility.Collapsed;
         }
 
         public static void AnyFontSize(TextBlock textBlock, in double fontSize)
