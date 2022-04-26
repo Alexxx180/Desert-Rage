@@ -836,8 +836,12 @@
     <None Remove="Resources\Images\Menu\Skills\WhipImg.png" />
     <None Remove="Resources\Images\Menu\Status\Stats\AG2.png" />
     <None Remove="Resources\Images\Menu\Status\Stats\ATK2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\Attack.svg" />
     <None Remove="Resources\Images\Menu\Status\Stats\DEF2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\Defence.svg" />
     <None Remove="Resources\Images\Menu\Status\Stats\SP2.png" />
+    <None Remove="Resources\Images\Menu\Status\Stats\Special.svg" />
+    <None Remove="Resources\Images\Menu\Status\Stats\Speed.svg" />
     <None Remove="Resources\Images\Menu\Status\StatusButton.png" />
     <None Remove="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
     <None Remove="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
@@ -1730,8 +1734,20 @@
     <Resource Include="Resources\Images\Menu\Skills\WhipImg.png" />
     <Resource Include="Resources\Images\Menu\Status\Stats\AG2.png" />
     <Resource Include="Resources\Images\Menu\Status\Stats\ATK2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\Attack.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Status\Stats\DEF2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\Defence.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Status\Stats\SP2.png" />
+    <Resource Include="Resources\Images\Menu\Status\Stats\Special.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Status\Stats\Speed.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Status\StatusButton.png" />
     <Resource Include="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
     <Resource Include="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />

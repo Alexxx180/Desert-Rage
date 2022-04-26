@@ -17,7 +17,7 @@
             <ProgressBar.Foreground>
                 <Binding Path="ForeBrush"/>
             </ProgressBar.Foreground>
-            
+
             <Grid.RowSpan>
                 2
             </Grid.RowSpan>
@@ -25,7 +25,7 @@
             <ProgressBar.Value>
                 100
             </ProgressBar.Value>
-            
+
             <ProgressBar.Maximum>
                 100
             </ProgressBar.Maximum>

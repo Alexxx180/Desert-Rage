@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters">
     <Style x:Key="OrdinaryList" TargetType="ListBox">
         <Style.BasedOn>
             <StaticResource ResourceKey="GlobalFont"/>
@@ -35,6 +36,23 @@
             </SolidColorBrush>
         </Style.Resources>
     </Style>
-    
-    
+
+    <Style x:Key="StretchFont" BasedOn="{StaticResource GlobalFont}">
+        <Setter Property="Control.FontSize">
+            <Setter.Value>
+                <Binding RelativeSource="{RelativeSource Self}">
+                    <Binding.Path>
+                        ActualHeight
+                    </Binding.Path>
+                    <Binding.Converter>
+                        <converters:ProcentualHeightConverter/>
+                    </Binding.Converter>
+                    <Binding.ConverterParameter>
+                        1,6
+                    </Binding.ConverterParameter>
+                </Binding>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

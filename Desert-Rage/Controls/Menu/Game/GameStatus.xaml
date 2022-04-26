@@ -4,8 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid Style="{StaticResource Impact}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
@@ -25,7 +28,7 @@
                 <TextBlock Padding="10,0,10,0" Text="Рэй"/>
             </Viewbox>
 
-            <TextBox>
+            <TextBox Padding="10">
                 <Grid.Row>
                     1
                 </Grid.Row>
@@ -75,7 +78,85 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
+
+                        <svgc:SvgViewbox>
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Attack.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Fill
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+                            
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Defence.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Fill
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                2
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Speed.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Fill
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                3
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Special.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Fill
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
                     </Grid>
+
+                    <ProgressBar>
+                        <Grid.Column>
+                            1
+                        </Grid.Column>
+
+                        <ProgressBar.Value>
+                            100
+                        </ProgressBar.Value>
+
+                        <ProgressBar.Maximum>
+                            100
+                        </ProgressBar.Maximum>
+
+                        <ProgressBar.Orientation>
+                            Vertical
+                        </ProgressBar.Orientation>
+                        
+                        <ProgressBar.Foreground>
+                            <LinearGradientBrush EndPoint="0.75,0.5" StartPoint="0,0.75">
+                                <GradientStop Color="#FFEDEDED"/>
+                                <GradientStop Color="#FFED00ED" Offset="1"/>
+                                <GradientStop Color="#FFAD00ED" Offset="0.512"/>
+                            </LinearGradientBrush>
+                        </ProgressBar.Foreground>
+                    </ProgressBar>
                 </Grid>
 
                 <Grid>
@@ -90,20 +171,21 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <ComboBox Style="{StaticResource BackAccent}"/>
-                    <ComboBox Style="{StaticResource BackAccent}">
+                    <ComboBox Style="{StaticResource StretchFont}"/>
+
+                    <ComboBox Style="{StaticResource StretchFont}">
                         <Grid.Row>
                             1
                         </Grid.Row>
                     </ComboBox>
 
-                    <ComboBox Style="{StaticResource BackAccent}">
+                    <ComboBox Style="{StaticResource StretchFont}">
                         <Grid.Row>
                             2
                         </Grid.Row>
                     </ComboBox>
 
-                    <ComboBox Style="{StaticResource BackAccent}">
+                    <ComboBox Style="{StaticResource StretchFont}">
                         <Grid.Row>
                             3
                         </Grid.Row>
