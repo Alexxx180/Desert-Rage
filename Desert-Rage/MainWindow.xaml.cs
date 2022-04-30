@@ -88,43 +88,7 @@ namespace DesertRage
 
             Learned = new BitArray(16),
 
-            Weapon = new Weapon
-            {
-                Name = Txts.Equipment.Hands.Bare,
-                Type = "Weapon",
-                Description = "",
-                Noise = Paths.OST.Noises.HandAttack,
-                Power = 0,
-                Chest = 0,
-                Animation = Paths.Dynamic.Person.HdAttack,
-                IconAnimation = Paths.Dynamic.Icon.HdAttack
-            },
-
-            Armor = new Equipment{
-                Name = Txts.Equipment.Torso.Bare,
-                Type = "Armor",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            },
-
-            Legs = new Equipment
-            {
-                Name = Txts.Equipment.Anckles.Bare,
-                Type = "Legs",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            },
-
-            Boots = new Equipment
-            {
-                Name = Txts.Equipment.Boots.Bare,
-                Type = "Boots",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            }
+            Gear = new Outfit(0)
         };
 
         internal Character Sam = new Character
@@ -150,44 +114,7 @@ namespace DesertRage
 
             Learned = new BitArray(16),
 
-            Weapon = new Weapon
-            {
-                Name = Txts.Equipment.Hands.Minigun,
-                Type = "Weapon",
-                Description = Txts.Hints.EqWpn4,
-                Noise = Paths.OST.Noises.Minigun,
-                Power = 100,
-                Chest = 0,
-                Animation = Paths.Dynamic.Person.SeriousMg,
-                IconAnimation = Paths.Dynamic.Icon.SeriousMg
-            },
-
-            Armor = new Equipment
-            {
-                Name = Txts.Equipment.Torso.Bare,
-                Type = "Armor",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            },
-
-            Legs = new Equipment
-            {
-                Name = Txts.Equipment.Anckles.Bare,
-                Type = "Legs",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            },
-
-            Boots = new Equipment
-            {
-                Name = Txts.Equipment.Boots.Bare,
-                Type = "Boots",
-                Description = "",
-                Power = 0,
-                Chest = 0
-            }
+            Gear = new Outfit(0)
         };
 
         internal Character MainHero { get; set; }

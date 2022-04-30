@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -12,56 +13,6 @@ namespace DesertRage.Customing
 {
     public static class Decorators
     {
-        //#region Deprecated Members
-        //private async void ShowAndHide(Label label, string content, ushort time)
-        //{
-        //    label.Content = content;
-        //    AnyShow(label);
-        //    await Task.Delay(time);
-        //    AnyHide(label);
-        //}
-
-        //private void ChangeBackground(in byte loc, in byte NoSpoilers)
-        //{
-        //    string[] Bmps = new string[] { Paths.Static.Map.Location1,
-        //        Paths.Static.Map.Location2, Paths.Static.Map.Location3,
-        //        Paths.Static.Map.Location4 };
-        //    Img1.Source = Bmper((NoSpoilers == 0) ?
-        //        Paths.Static.Map.Main : Bmps[loc]);
-        //}
-
-        //private void ChangeBackground(in byte loc)
-        //{
-        //    string[] Bmps = new string[] { Paths.Static.Map.Location1,
-        //        Paths.Static.Map.Location2, Paths.Static.Map.Location3,
-        //        Paths.Static.Map.Location4 };
-        //    Img1.Source = Bmper(Bmps[loc]);
-        //}
-
-        //private void SettingsSetAll(params byte[] SettingValues)
-        //{
-        //    Slider[] Sliders = { MusicLoud, SoundsLoud,
-        //        NoiseLoud, GameSpeed, Brightness };
-        //    for (byte i = 0; i < Sliders.Length; i++)
-        //        Sliders[i].Value = Dble(SettingValues[i]) * 0.01;
-        //    TimerTurnOn.IsChecked = SettingValues[5] >= 1;
-        //}
-
-        //private void PlayerSetLocation(in int row, in int column)
-        //{
-        //    MainHero.Y = row;
-        //    MainHero.X = column;
-        //    AnyGrid(Img2, row, column);
-        //}
-
-        //private void FastTextChange(Label[] Labs, in string[] texts)
-        //{
-        //    for (byte i = 0; i < Labs.Length; i++)
-        //        Labs[i].Content = texts[i];
-        //}
-        //#endregion
-
-
         public static void SetActive
             (this FrameworkElement element, bool setToActive)
         {
@@ -70,52 +21,56 @@ namespace DesertRage.Customing
                 Visibility.Collapsed;
         }
 
-        public static void AnyFontSize(TextBlock textBlock, in double fontSize)
+        public static void Bind(
+            this DependencyObject @object,
+            DependencyProperty property,
+            object reference, string path
+            )
         {
-            textBlock.FontSize = fontSize;
+            Binding myBinding = new Binding
+            {
+                Source = reference,
+                Path = new PropertyPath(path)
+            };
+            BindingOperations.SetBinding(@object, property, myBinding);
         }
-        public static void AnyFontSize(ContentControl control, in double fontSize)
+
+        public static void Bind(
+            this DependencyObject @object,
+            DependencyProperty property,
+            object reference, string path,
+            BindingMode mode,
+            UpdateSourceTrigger trigger
+            )
         {
-            control.FontSize = fontSize;
+            Binding myBinding = new Binding
+            {
+                Source = reference,
+                Path = new PropertyPath(path),
+                Mode = mode,
+                UpdateSourceTrigger = trigger
+            };
+            BindingOperations.SetBinding(@object, property, myBinding);
         }
-        public static void AnyShrink(FrameworkElement element,
-            in double width, in double height)
-        {
-            element.Width = width;
-            element.Height = height;
-        }
-        public static void AnyShrinkX(in double width, in double height,
-            params FrameworkElement[] elements)
-        {
-            for (byte i = 0; i < elements.Length; i++)
-                AnyShrink(elements[i], width, height);
-        }
-        public static void AnyHide(FrameworkElement element)
-        {
-            element.Visibility = Visibility.Hidden;
-            element.IsEnabled = false;
-        }
-        public static void AnyShow(FrameworkElement element)
-        {
-            element.Visibility = Visibility.Visible;
-            element.IsEnabled = true;
-        }
+
+
         public static void AnyShow(MediaElement element)
         {
             element.Play();
-            AnyShow(element as FrameworkElement);
+            element.SetActive(true);
         }
+
         public static void AnyShowAdvanced(MediaElement element,
             Uri Source, TimeSpan timeSpan)
         {
             element.Source = Source;
             element.Position = timeSpan;
             element.Play();
-            AnyShow(element as FrameworkElement);
+            element.SetActive(true);
         }
         public static void AnyHide(MediaElement element)
         {
-            AnyHide(element as FrameworkElement);
+            element.SetActive(false);
             element.Stop();
         }
         public static void AnyHideX(params MediaElement[] elements)
@@ -126,7 +81,7 @@ namespace DesertRage.Customing
         public static void AnyHideX(params FrameworkElement[] elements)
         {
             for (byte i = 0; i < elements.Length; i++)
-                AnyHide(elements[i]);
+                elements[i].SetActive(false);
         }
         public static void AnyHideX(params FrameworkElement[][] elements)
         {
@@ -147,7 +102,7 @@ namespace DesertRage.Customing
         public static void AnyShowX(params FrameworkElement[] elements)
         {
             for (byte i = 0; i < elements.Length; i++)
-                AnyShow(elements[i]);
+                elements[i].SetActive(true);
         }
         public static void AnyShowX2(in bool[] Conditions,
             params FrameworkElement[][] Objects)

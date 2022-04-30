@@ -7,7 +7,12 @@
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="GStatus">
+
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
     
     <Grid Style="{StaticResource Impact}">
         <Grid.RowDefinitions>
@@ -16,7 +21,43 @@
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <status:StatusPanel/>
+        <status:StatusPanel>
+            <status:StatusPanel.HealthPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GStatus
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Hp
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.HealthPoints>
+
+            <status:StatusPanel.ActionPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GStatus
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Ap
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.ActionPoints>
+
+            <status:StatusPanel.Icon>
+                <Binding>
+                    <Binding.ElementName>
+                        GStatus
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Icon
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.Icon>
+        </status:StatusPanel>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

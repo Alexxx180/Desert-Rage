@@ -5,47 +5,80 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="GSkills">
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+    
     <Grid Style="{StaticResource Impact}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
-        <status:StatusPanel/>
+        <status:StatusPanel>
+            <status:StatusPanel.HealthPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GSkills
+                    </Binding.ElementName>
 
-        <ListBox Style="{StaticResource OrdinaryList}">
-            <ListBox.ItemContainerStyle>
-                <StaticResource ResourceKey="RangerItems" />
-            </ListBox.ItemContainerStyle>
+                    <Binding.Path>
+                        DataContext.Player.Hero.Hp
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.HealthPoints>
 
-            <!--<ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>-->
-            
+            <status:StatusPanel.ActionPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GSkills
+                    </Binding.ElementName>
+                    
+                    <Binding.Path>
+                        DataContext.Player.Hero.Ap
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.ActionPoints>
+
+            <status:StatusPanel.Icon>
+                <Binding>
+                    <Binding.ElementName>
+                        GSkills
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Icon
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.Icon>
+        </status:StatusPanel>
+
+        <ListBox>
             <Grid.Row>
                 1
             </Grid.Row>
 
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.HorizontalContentAlignment>
+                Stretch
+            </ListBox.HorizontalContentAlignment>
+
+            <ListBox.ItemContainerStyle>
+                <StaticResource ResourceKey="RangerItems" />
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="SkillTemplate"/>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemsSource>
+                <Binding Path="Player.Hero.HeroSkills"/>
+            </ListBox.ItemsSource>
         </ListBox>
     </Grid>
     

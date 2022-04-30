@@ -3,7 +3,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using DesertRage.Customing;
 using DesertRage.Model.Menu;
+using DesertRage.ViewModel;
+using System.Windows.Data;
 
 namespace DesertRage.Controls.Menu.Game
 {
@@ -13,8 +16,18 @@ namespace DesertRage.Controls.Menu.Game
     public partial class GameTopics : UserControl, INotifyPropertyChanged
     {
         public static readonly DependencyProperty
+            PlayerProperty = DependencyProperty.Register(nameof(Player),
+                typeof(UserProfile), typeof(GameTopics));
+
+        public static readonly DependencyProperty
             MenuTopicProperty = DependencyProperty.Register(
                 nameof(MenuTopic), typeof(Label), typeof(GameTopics));
+
+        public UserProfile Player
+        {
+            get => GetValue(PlayerProperty) as UserProfile;
+            set => SetValue(PlayerProperty, value);
+        }
 
         public Label MenuTopic
         {
@@ -36,6 +49,23 @@ namespace DesertRage.Controls.Menu.Game
         public GameTopics()
         {
             InitializeComponent();
+            SetTopics();
+        }
+
+        public void SetTopics()
+        {
+            GameStatus status = new GameStatus();
+            status.Bind(GameStatus.PlayerProperty, this, nameof(Player));
+
+            GameSkills skills = new GameSkills();
+            skills.Bind(GameSkills.PlayerProperty, this, nameof(Player));
+
+            GameItems items = new GameItems();
+            items.Bind(GameItems.PlayerProperty, this, nameof(Player));
+
+            GameSettings sets = new GameSettings();
+            sets.Bind(GameSettings.PlayerProperty, this, nameof(Player),
+                BindingMode.TwoWay, UpdateSourceTrigger.LostFocus);
 
             Topics = new ObservableCollection<Topic>
             {
@@ -43,33 +73,34 @@ namespace DesertRage.Controls.Menu.Game
                 {
                     Name = "Статус",
                     Icon = "/Resources/Images/Menu/Topics/Status.svg",
-                    TopicElement = new GameStatus()
+                    TopicElement = status
                 },
                 new Topic
                 {
                     Name = "Умения",
                     Icon = "/Resources/Images/Menu/Topics/Actions.svg",
-                    TopicElement = new GameSkills()
+                    TopicElement = skills
                 },
                 new Topic
                 {
                     Name = "Предметы",
                     Icon = "/Resources/Images/Menu/Topics/Items.svg",
-                    TopicElement = new GameItems()
-                },
-                new Topic
-                {
-                    Name = "Справка",
-                    Icon = "/Resources/Images/Menu/Topics/Info.svg",
-                    TopicElement = new Hints()
+                    TopicElement = items
                 },
                 new Topic
                 {
                     Name = "Настройки",
                     Icon = "/Resources/Images/Menu/Topics/Settings.svg",
-                    TopicElement = new GameSettings()
+                    TopicElement = sets
                 }
             };
+
+            //new Topic
+            //{
+            //    Name = "Справка",
+            //    Icon = "/Resources/Images/Menu/Topics/Info.svg",
+            //    TopicElement = new Hints()
+            //},
         }
 
         private void OnTopicSelection(object sender, SelectionChangedEventArgs e)

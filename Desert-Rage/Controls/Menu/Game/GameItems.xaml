@@ -6,7 +6,8 @@
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:converters="clr-namespace:DesertRage.BindConverters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="GItems">
     <UserControl.DataContext>
         <Binding RelativeSource="{RelativeSource Self}"/>
     </UserControl.DataContext>
@@ -21,82 +22,68 @@
             <RowDefinition Height="0.8*"/>
         </Grid.RowDefinitions>
 
-        <status:StatusPanel/>
+        <status:StatusPanel>
+            <status:StatusPanel.HealthPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GItems
+                    </Binding.ElementName>
 
-        <ListBox Style="{StaticResource OrdinaryList}"
-                 ItemsSource="{Binding Path=Bag}">
+                    <Binding.Path>
+                        DataContext.Player.Hero.Hp
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.HealthPoints>
+
+            <status:StatusPanel.ActionPoints>
+                <Binding>
+                    <Binding.ElementName>
+                        GItems
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Ap
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.ActionPoints>
+
+            <status:StatusPanel.Icon>
+                <Binding>
+                    <Binding.ElementName>
+                        GItems
+                    </Binding.ElementName>
+
+                    <Binding.Path>
+                        DataContext.Player.Hero.Icon
+                    </Binding.Path>
+                </Binding>
+            </status:StatusPanel.Icon>
+        </status:StatusPanel>
+
+        <ListBox>
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.HorizontalContentAlignment>
+                Stretch
+            </ListBox.HorizontalContentAlignment>
+
             <ListBox.ItemContainerStyle>
                 <StaticResource ResourceKey="RangerItems" />
             </ListBox.ItemContainerStyle>
 
             <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <DockPanel>
-                        <Image>
-                            <DockPanel.Dock>
-                                Left
-                            </DockPanel.Dock>
-                            
-                            <Image.Source>
-                                <Binding Path="Icon">
-                                    <Binding.Converter>
-                                        <StaticResource ResourceKey="UriConverter"/>
-                                    </Binding.Converter>
-                                </Binding>
-                            </Image.Source>
-                        </Image>
-
-                        <TextBlock>
-                            <DockPanel.Dock>
-                                Left
-                            </DockPanel.Dock>
-                            
-                            <TextBlock.Text>
-                                LOOOOOOOOOOOOOOOOX
-                                <!--<Binding Path="Name"/>-->
-                            </TextBlock.Text>
-                        </TextBlock>
-
-                        <TextBlock>
-                            <DockPanel.Dock>
-                                Right
-                            </DockPanel.Dock>
-
-                            <TextBlock.Text>
-                                <Binding Path="Count"/>
-                            </TextBlock.Text>
-                        </TextBlock>
-
-                        <DockPanel.ToolTip>
-                            <TextBlock>
-                                <TextBlock.Text>
-                                    <Binding Path="Description"/>
-                                </TextBlock.Text>
-                            </TextBlock>
-                        </DockPanel.ToolTip>
-                    </DockPanel>
-                </DataTemplate>
+                <StaticResource ResourceKey="ItemTemplate"/>
             </ListBox.ItemTemplate>
-            
-            <Grid.Row>
-                1
-            </Grid.Row>
 
-            <!--<ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>
-            <ListBoxItem>
-                Lasdadsad
-            </ListBoxItem>-->
+            <ListBox.ItemsSource>
+                <Binding Path="Player.Items"/>
+            </ListBox.ItemsSource>
         </ListBox>
     </Grid>
 

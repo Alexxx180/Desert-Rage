@@ -1,8 +1,7 @@
 ﻿namespace DesertRage.Model.Stats
 {
-    public class Profile
+    public class Profile : DescriptionUnit
     {
-        public string Icon { get; set; }
         public string Image { get; set; }
     }
 }

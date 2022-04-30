@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:#B0AFC6;}
+	.st1{fill:#343551;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st4{font-family:'Enemy-Crusher';}
+	.st5{font-size:1.3px;}
+	.st6{fill:#533D14;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:#A08764;}
+</style>
+<rect x="0" class="st0" width="60" height="60"/>
+<g>
+	<polygon class="st1" points="47.02,32.23 17.92,32.21 25.18,44.82 39.74,44.83 	"/>
+	<polygon class="st2" points="39.76,19.62 25.2,19.61 24.08,21.54 18.44,18.29 13.97,26.03 19.61,29.28 17.92,32.21 25.18,44.82 
+		39.74,44.83 47.02,32.23 	"/>
+	<rect x="18.53" y="30.32" class="st3" width="27.96" height="3.81"/>
+	<text transform="matrix(1 0 0 1 19.7806 32.6739)" class="st4 st5">Mixture to turn you in action</text>
+	<g>
+		
+			<rect x="8.57" y="17.7" transform="matrix(0.5003 -0.8659 0.8659 0.5003 -10.7518 22.3332)" class="st6" width="10.79" height="5.56"/>
+		
+			<rect x="8.8" y="18.73" transform="matrix(0.5003 -0.8659 0.8659 0.5003 -10.7314 21.1803)" class="st7" width="8.38" height="2.31"/>
+	</g>
+</g>
+</svg>

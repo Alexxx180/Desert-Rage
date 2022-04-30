@@ -7,7 +7,7 @@ using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.Model.Stats.Player
 {
-    public class Character
+    public class Character : DescriptionUnit
     {
         public Character()
         {
@@ -47,22 +47,6 @@ namespace DesertRage.Model.Stats.Player
         //    AfterStatus.Content = StatusP.Content = text[code];
         //}
 
-        //private void PRegn_F_T37(object sender, EventArgs e)
-        //{
-        //    if (GetHP >= GetMHP)
-        //        TimerOff(ref PRegn);
-        //    else
-        //        GetHP++;
-        //}
-
-        //private void PCtrl_F_T38(object sender, EventArgs e)
-        //{
-        //    if (GetAP == GetMAP)
-        //        TimerOff(ref PCtrl);
-        //    else
-        //        GetAP++;
-        //}
-
         #region Hp Management Members
         public void Hit(int value)
         {
@@ -97,13 +81,7 @@ namespace DesertRage.Model.Stats.Player
         }
         #endregion
 
-
-        #region HeroPresentation Members
-        public string Name { get; set; }
-        public string Description { get; set; }
-
         public Profile HeroProfile { get; set; }
-        #endregion
 
         #region Status Members
         public byte Level { get; set; }
@@ -118,17 +96,10 @@ namespace DesertRage.Model.Stats.Player
         public BitArray Status { get; set; }
         public BitArray Learned { get; set; }
 
-        public Weapon Weapon { get; set; }
-        public Equipment Armor { get; set; }
-        public Equipment Legs { get; set; }
-        public Equipment Boots { get; set; }
+        public Outfit Gear { get; set; }
         #endregion
 
-        #region Skills Members
-        public List<Skill> BattleSkills { get; set; }
-        public List<Skill> ExtraSkills { get; set; }
-        #endregion
-
+        public List<Skill> HeroSkills { get; set; }
 
         #region Map Members
         public Position Place { get; set; }

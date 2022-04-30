@@ -665,17 +665,14 @@
     <None Remove="Resources\Images\Locations\Total\Table.png" />
     <None Remove="Resources\Images\Locations\Total\Table.svg" />
     <None Remove="Resources\Images\Locations\Total\VitalitySource.png" />
-    <None Remove="Resources\Images\Menu\Bag\AntidoteItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\BandageItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\ElixirItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\Ether2Item.png" />
-    <None Remove="Resources\Images\Menu\Bag\EtherItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\FusedItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\HerbsItem.png" />
-    <None Remove="Resources\Images\Menu\Bag\ItemsBeforeImg.png" />
-    <None Remove="Resources\Images\Menu\Bag\ItemsButton.png" />
+    <None Remove="Resources\Images\Menu\Bag\Antidote.svg" />
+    <None Remove="Resources\Images\Menu\Bag\Bandage.svg" />
+    <None Remove="Resources\Images\Menu\Bag\Elixir.svg" />
+    <None Remove="Resources\Images\Menu\Bag\Ether.svg" />
+    <None Remove="Resources\Images\Menu\Bag\EtherBottle.svg" />
+    <None Remove="Resources\Images\Menu\Bag\Herbs.svg" />
     <None Remove="Resources\Images\Menu\Bag\Materials.png" />
-    <None Remove="Resources\Images\Menu\Bag\SleepBagItem.png" />
+    <None Remove="Resources\Images\Menu\Bag\Mixture.svg" />
     <None Remove="Resources\Images\Menu\Equip\EquipBtns\Cancel.png" />
     <None Remove="Resources\Images\Menu\Equip\EquipBtns\Equip.png" />
     <None Remove="Resources\Images\Menu\Equip\EquipBtns\Remove.png" />
@@ -815,38 +812,37 @@
     <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills2.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag1.png" />
     <None Remove="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag2.png" />
-    <None Remove="Resources\Images\Menu\Kinds\Bestiary.jpg" />
-    <None Remove="Resources\Images\Menu\Kinds\LevelUpMenu.jpg" />
-    <None Remove="Resources\Images\Menu\Kinds\Menu3.png" />
-    <None Remove="Resources\Images\Menu\Sets\Properties.png" />
     <None Remove="Resources\Images\Menu\Skills\AbilsButton.png" />
+    <None Remove="Resources\Images\Menu\Skills\Analyze.svg" />
+    <None Remove="Resources\Images\Menu\Skills\AttackUp.svg" />
+    <None Remove="Resources\Images\Menu\Skills\Combo.svg" />
     <None Remove="Resources\Images\Menu\Skills\Control.png" />
+    <None Remove="Resources\Images\Menu\Skills\Cure.svg" />
     <None Remove="Resources\Images\Menu\Skills\Cure2.png" />
+    <None Remove="Resources\Images\Menu\Skills\Cure2.svg" />
     <None Remove="Resources\Images\Menu\Skills\CureMenu.png" />
     <None Remove="Resources\Images\Menu\Skills\DefenceUP.png" />
+    <None Remove="Resources\Images\Menu\Skills\DefenceUp.svg" />
+    <None Remove="Resources\Images\Menu\Skills\Heal.svg" />
     <None Remove="Resources\Images\Menu\Skills\HealMenu.png" />
     <None Remove="Resources\Images\Menu\Skills\Learn.png" />
     <None Remove="Resources\Images\Menu\Skills\Quake.png" />
     <None Remove="Resources\Images\Menu\Skills\Regen.png" />
+    <None Remove="Resources\Images\Menu\Skills\Slide.svg" />
+    <None Remove="Resources\Images\Menu\Skills\Slingshot.svg" />
+    <None Remove="Resources\Images\Menu\Skills\Storm.svg" />
     <None Remove="Resources\Images\Menu\Skills\StrengthUP.png" />
     <None Remove="Resources\Images\Menu\Skills\SuperImg.png" />
     <None Remove="Resources\Images\Menu\Skills\Thrower.png" />
+    <None Remove="Resources\Images\Menu\Skills\Torch.svg" />
     <None Remove="Resources\Images\Menu\Skills\TorchImg.png" />
     <None Remove="Resources\Images\Menu\Skills\Tornado.png" />
+    <None Remove="Resources\Images\Menu\Skills\Whip.svg" />
     <None Remove="Resources\Images\Menu\Skills\WhipImg.png" />
-    <None Remove="Resources\Images\Menu\Status\Stats\AG2.png" />
-    <None Remove="Resources\Images\Menu\Status\Stats\ATK2.png" />
     <None Remove="Resources\Images\Menu\Status\Stats\Attack.svg" />
-    <None Remove="Resources\Images\Menu\Status\Stats\DEF2.png" />
     <None Remove="Resources\Images\Menu\Status\Stats\Defence.svg" />
-    <None Remove="Resources\Images\Menu\Status\Stats\SP2.png" />
     <None Remove="Resources\Images\Menu\Status\Stats\Special.svg" />
     <None Remove="Resources\Images\Menu\Status\Stats\Speed.svg" />
-    <None Remove="Resources\Images\Menu\Status\StatusButton.png" />
-    <None Remove="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
-    <None Remove="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
-    <None Remove="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
-    <None Remove="Resources\Images\Menu\Tasks\TasksButton.png" />
     <None Remove="Resources\Images\Menu\Topics\Actions.svg" />
     <None Remove="Resources\Images\Menu\Topics\Info.svg" />
     <None Remove="Resources\Images\Menu\Topics\Items.svg" />
@@ -979,6 +975,27 @@
     <Resource Include="Resources\Images\Locations\Total\Surprise.png" />
     <Resource Include="Resources\Images\Locations\Total\Table.svg" />
     <Resource Include="Resources\Images\Locations\Total\VitalitySource.png" />
+    <Resource Include="Resources\Images\Menu\Bag\Antidote.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\Bandage.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\Elixir.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\Ether.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\EtherBottle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\Herbs.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Bag\Mixture.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page4\Info3\Click2.png" />
   </ItemGroup>
@@ -1565,17 +1582,7 @@
     <Resource Include="Resources\Images\Locations\Total\Person\Walk\Up2.png" />
     <Resource Include="Resources\Images\Locations\Total\SafeArea.png" />
     <Resource Include="Resources\Images\Locations\Total\Table.png" />
-    <Resource Include="Resources\Images\Menu\Bag\AntidoteItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\BandageItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\ElixirItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\Ether2Item.png" />
-    <Resource Include="Resources\Images\Menu\Bag\EtherItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\FusedItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\HerbsItem.png" />
-    <Resource Include="Resources\Images\Menu\Bag\ItemsBeforeImg.png" />
-    <Resource Include="Resources\Images\Menu\Bag\ItemsButton.png" />
     <Resource Include="Resources\Images\Menu\Bag\Materials.png" />
-    <Resource Include="Resources\Images\Menu\Bag\SleepBagItem.png" />
     <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Cancel.png" />
     <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Equip.png" />
     <Resource Include="Resources\Images\Menu\Equip\EquipBtns\Remove.png" />
@@ -1713,46 +1720,69 @@
     <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info2\Skills2.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag1.png" />
     <Resource Include="Resources\Images\Menu\Help\Inform\Page9\Info3\Bag2.png" />
-    <Resource Include="Resources\Images\Menu\Kinds\Bestiary.jpg" />
-    <Resource Include="Resources\Images\Menu\Kinds\LevelUpMenu.jpg" />
-    <Resource Include="Resources\Images\Menu\Kinds\Menu3.png" />
-    <Resource Include="Resources\Images\Menu\Sets\Properties.png" />
     <Resource Include="Resources\Images\Menu\Skills\AbilsButton.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Analyze.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Skills\AttackUp.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Skills\Combo.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\Control.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Cure.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\Cure2.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Cure2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\CureMenu.png" />
     <Resource Include="Resources\Images\Menu\Skills\DefenceUP.png" />
+    <Resource Include="Resources\Images\Menu\Skills\DefenceUp.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Skills\Heal.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\HealMenu.png" />
     <Resource Include="Resources\Images\Menu\Skills\Learn.png" />
     <Resource Include="Resources\Images\Menu\Skills\Quake.png" />
     <Resource Include="Resources\Images\Menu\Skills\Regen.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Slide.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Skills\Slingshot.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Menu\Skills\Storm.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\StrengthUP.png" />
     <Resource Include="Resources\Images\Menu\Skills\SuperImg.png" />
     <Resource Include="Resources\Images\Menu\Skills\Thrower.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Torch.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\TorchImg.png" />
     <Resource Include="Resources\Images\Menu\Skills\Tornado.png" />
+    <Resource Include="Resources\Images\Menu\Skills\Whip.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Menu\Skills\WhipImg.png" />
-    <Resource Include="Resources\Images\Menu\Status\Stats\AG2.png" />
-    <Resource Include="Resources\Images\Menu\Status\Stats\ATK2.png" />
     <Resource Include="Resources\Images\Menu\Status\Stats\Attack.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\Menu\Status\Stats\DEF2.png" />
     <Resource Include="Resources\Images\Menu\Status\Stats\Defence.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\Menu\Status\Stats\SP2.png" />
     <Resource Include="Resources\Images\Menu\Status\Stats\Special.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\Menu\Status\Stats\Speed.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Images\Menu\Status\StatusButton.png" />
-    <Resource Include="Resources\Images\Menu\Tasks\Priority\ActiveTask.png" />
-    <Resource Include="Resources\Images\Menu\Tasks\Priority\CompletedTask.png" />
-    <Resource Include="Resources\Images\Menu\Tasks\Priority\ExperTask.png" />
-    <Resource Include="Resources\Images\Menu\Tasks\TasksButton.png" />
     <Resource Include="Resources\Images\Menu\Topics\Actions.svg" />
     <Resource Include="Resources\Images\Menu\Topics\Info.svg" />
     <Resource Include="Resources\Images\Menu\Topics\Items.svg" />

@@ -27,7 +27,7 @@
                     <Binding.ElementName>
                         HeroStatusPanel
                     </Binding.ElementName>
-                    
+
                     <Binding.Converter>
                         <converters:UriConverter/>
                     </Binding.Converter>
@@ -57,7 +57,7 @@
                         </Binding.Path>
                     </Binding>
                 </status:StatBar.Bar>
-                
+
                 <status:StatBar.ForeBrush>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="#FF3AAC28"/>
@@ -83,7 +83,7 @@
                         </Binding.Path>
                     </Binding>
                 </status:StatBar.Bar>
-                
+
                 <status:StatBar.ForeBrush>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                         <GradientStop Color="#FFFFEDED"/>

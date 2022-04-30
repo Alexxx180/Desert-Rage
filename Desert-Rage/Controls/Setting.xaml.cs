@@ -13,7 +13,8 @@ namespace DesertRage.Controls
     {
         public static readonly DependencyProperty
             SliderProperty = DependencyProperty.Register
-                (nameof(Slider), typeof(Bar), typeof(Setting));
+                (nameof(Slider), typeof(Bar), typeof(Setting),
+                new PropertyMetadata(OnSliderChangedCallBack));
 
         public static readonly DependencyProperty
             CaptionProperty = DependencyProperty.Register
@@ -30,6 +31,31 @@ namespace DesertRage.Controls
         {
             get => (Bar)GetValue(SliderProperty);
             set => SetValue(SliderProperty, value);
+        }
+        #endregion
+
+        // Struct workaround
+        public ushort Current
+        {
+            get => Slider.Current;
+            set => SetValue(SliderProperty,
+                new Bar(Slider.Minimum, value, Slider.Max));
+        }
+
+        #region RecordsCallBack Members
+        private static void
+            OnSliderChangedCallBack(DependencyObject sender,
+            DependencyPropertyChangedEventArgs e)
+        {
+            if (sender is Setting collection)
+            {
+                collection?.OnRecordsChanged();
+            }
+        }
+
+        protected virtual void OnRecordsChanged()
+        {
+            OnPropertyChanged(nameof(Current));
         }
         #endregion
 

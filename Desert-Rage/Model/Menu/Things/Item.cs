@@ -1,11 +1,7 @@
 ﻿namespace DesertRage.Model.Menu.Things
 {
-    public class Item : Thing
+    public class Item : DescriptionUnit
     {
-        public void Use()
-        {
-            UseAction(Power);
-        }
 
         //private void UseItem(Items item)
         //{

@@ -46,4 +46,132 @@
             </DockPanel.ToolTip>
         </DockPanel>
     </DataTemplate>
+
+    <DataTemplate x:Key="ItemTemplate">
+        <DockPanel LastChildFill="True">
+            <StackPanel>
+                <StackPanel.Orientation>
+                    Horizontal
+                </StackPanel.Orientation>
+
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <svgc:SvgViewbox DataContext="{Binding}">
+                    <attach:SvgBox.Source>
+                        <Binding Path="Icon">
+                            <Binding.Converter>
+                                <converters:UriConverter/>
+                            </Binding.Converter>
+                        </Binding>
+                    </attach:SvgBox.Source>
+
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+                </svgc:SvgViewbox>
+
+                <TextBlock VerticalAlignment="Center">
+                    <TextBlock.Padding>
+                        10,0,10,0
+                    </TextBlock.Padding>
+
+                    <TextBlock.Text>
+                        <Binding Path="Name"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+
+            <TextBlock>
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+                
+                <TextBlock.HorizontalAlignment>
+                    Right
+                </TextBlock.HorizontalAlignment>
+                
+                <TextBlock.Padding>
+                    10,0,10,0
+                </TextBlock.Padding>
+                
+                <TextBlock.Text>
+                    <Binding Path="Count"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <Binding Path="Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SkillTemplate">
+        <DockPanel LastChildFill="True">
+            <StackPanel>
+                <StackPanel.Orientation>
+                    Horizontal
+                </StackPanel.Orientation>
+
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <svgc:SvgViewbox DataContext="{Binding}">
+                    <attach:SvgBox.Source>
+                        <Binding Path="Icon">
+                            <Binding.Converter>
+                                <converters:UriConverter/>
+                            </Binding.Converter>
+                        </Binding>
+                    </attach:SvgBox.Source>
+
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+                </svgc:SvgViewbox>
+
+                <TextBlock VerticalAlignment="Center">
+                    <TextBlock.Padding>
+                        10,0,10,0
+                    </TextBlock.Padding>
+
+                    <TextBlock.Text>
+                        <Binding Path="Name"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+
+            <TextBlock>
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.HorizontalAlignment>
+                    Right
+                </TextBlock.HorizontalAlignment>
+
+                <TextBlock.Padding>
+                    10,0,10,0
+                </TextBlock.Padding>
+
+                <TextBlock.Text>
+                    <Binding Path="Cost"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <Binding Path="Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
 </ResourceDictionary>

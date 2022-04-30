@@ -27,7 +27,7 @@
             </TextBlock.Text>
         </TextBlock>
 
-        <Slider Padding="1">
+        <Slider Padding="1" x:Name="MainSlider">
             <Grid.Column>
                 1
             </Grid.Column>
@@ -37,13 +37,13 @@
             </Slider.Minimum>
 
             <Slider.Value>
-                <Binding Path="Slider.Current">
+                <Binding Path="Current">
                     <Binding.Mode>
                         TwoWay
                     </Binding.Mode>
 
                     <Binding.UpdateSourceTrigger>
-                        LostFocus
+                        PropertyChanged
                     </Binding.UpdateSourceTrigger>
                 </Binding>
             </Slider.Value>

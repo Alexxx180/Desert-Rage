@@ -44,12 +44,6 @@
     <Compile Update="Controls\Menu\Game\GameTopics.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Menu\Game\HintFooter.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\Hints.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Menu\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,12 +113,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Menu\Game\GameTopics.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\HintFooter.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\Hints.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Menu\MainMenu.xaml">

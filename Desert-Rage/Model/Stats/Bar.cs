@@ -5,17 +5,34 @@ namespace DesertRage.Model.Stats
 {
     public struct Bar
     {
-        public Bar(ushort value)
+        public Bar(
+            ushort minimum,
+            ushort current,
+            ushort maximum
+            )
         {
-            Minimum = 0;
-            Current = value;
-            Max = value;
+            Minimum = minimum;
+            Current = current;
+            Max = maximum;
+        }
+
+        public Bar(
+            ushort current,
+            ushort maximum
+            ) : this(0, current, maximum)
+        {
+
+        }
+
+        public Bar(ushort value) : this(value, value)
+        {
+
         }
 
         public void Drain(int value)
         {
             ushort downTo = (Current - value).ToUShort();
-            Current = Math.Max(downTo, ushort.MinValue);
+            Current = Math.Max(downTo, Minimum);
         }
 
         public void Restore(int value)

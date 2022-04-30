@@ -1,6 +1,7 @@
 ﻿using DesertRage.Model.Stats;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace DesertRage.Controls.Status
@@ -10,44 +11,41 @@ namespace DesertRage.Controls.Status
     /// </summary>
     public partial class StatusPanel : UserControl, INotifyPropertyChanged
     {
-        private string _icon;
-        public string Icon
-        {
-            get => _icon;
-            set
-            {
-                _icon = value;
-                OnPropertyChanged();
-            }
-        }
+        public static readonly DependencyProperty
+            HealthPointsProperty = DependencyProperty.Register(
+                nameof(HealthPoints), typeof(Bar), typeof(StatusPanel));
 
-        private Bar _healthPoints;
+        public static readonly DependencyProperty
+            ActionPointsProperty = DependencyProperty.Register(
+                nameof(ActionPoints), typeof(Bar), typeof(StatusPanel));
+
+        public static readonly DependencyProperty
+            IconProperty = DependencyProperty.Register(
+                nameof(Icon), typeof(string), typeof(StatusPanel));
+
         public Bar HealthPoints
         {
-            get => _healthPoints;
-            set
-            {
-                _healthPoints = value;
-                OnPropertyChanged();
-            }
+            get => (Bar)GetValue(HealthPointsProperty);
+            set => SetValue(HealthPointsProperty, value);
         }
 
-        private Bar _actionPoints;
         public Bar ActionPoints
         {
-            get => _actionPoints;
-            set
-            {
-                _actionPoints = value;
-                OnPropertyChanged();
-            }
+            get => (Bar)GetValue(ActionPointsProperty);
+            set => SetValue(ActionPointsProperty, value);
+        }
+
+        public string Icon
+        {
+            get => GetValue(IconProperty) as string;
+            set => SetValue(IconProperty, value);
         }
 
         public StatusPanel()
         {
             InitializeComponent();
 
-            Icon = "/Resources/Images/Menu/Topics/Status.svg";
+            //Icon = "/Resources/Images/Menu/Topics/Status.svg";
         }
 
         #region INotifyPropertyChanged Members

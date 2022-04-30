@@ -1,4 +1,7 @@
 ﻿using DesertRage.Model.Stats.Player;
+using DesertRage.ViewModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -7,20 +10,17 @@ namespace DesertRage.Controls.Menu.Game
     /// <summary>
     /// In game settings component
     /// </summary>
-    public partial class GameSettings : UserControl
+    public partial class GameSettings : UserControl, INotifyPropertyChanged
     {
         public static readonly DependencyProperty
-            GameOptionsProperty = DependencyProperty.Register
-                (nameof(GameOptions), typeof(Settings),
-                typeof(GameSettings));
+            PlayerProperty = DependencyProperty.Register(nameof(Player),
+                typeof(UserProfile), typeof(GameSettings));
 
-        #region Settings Members
-        public Settings GameOptions
+        public UserProfile Player
         {
-            get => GetValue(GameOptionsProperty) as Settings;
-            set => SetValue(GameOptionsProperty, value);
+            get => GetValue(PlayerProperty) as UserProfile;
+            set => SetValue(PlayerProperty, value);
         }
-        #endregion
 
         public GameSettings()
         {
@@ -45,5 +45,24 @@ namespace DesertRage.Controls.Menu.Game
         //{
         //    OnPropertyChanged(nameof(TimeFormula));
         //}
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
     }
 }

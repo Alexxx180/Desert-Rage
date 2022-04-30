@@ -2,13 +2,8 @@
 
 namespace DesertRage.Model.Menu.Things
 {
-    public class Skill : Thing
+    public class Skill : DescriptionUnit
     {
-        public void Use(ushort special)
-        {
-            UseAction((special * Power).ToInt());
-        }
-
         public string Noise { get; set; }
 
         public float Power { get; set; }

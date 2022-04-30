@@ -205,7 +205,7 @@ namespace DesertRage.Mechanics
         {
             for (byte i = 0; i < Models.Length; i++)
                 if (CheckMap(Models[i]))
-                    AnyShow(images[i]);
+                    images[i].SetActive(true);
         }
         public static void ChangeMapToVoid(in byte Condition)
         {
@@ -214,15 +214,7 @@ namespace DesertRage.Mechanics
                     if (MapScheme[i, j] == Condition)
                         MapScheme[i, j] = 0;
         }
-        //public static void ChangeMapToVoid(in int Row, in int Col, params Image[] Imgs)
-        //{
-        //    foreach (Image img in Imgs)
-        //        if ((Bits(img.GetValue(Grid.RowProperty)) == Row) && (Bits(img.GetValue(Grid.ColumnProperty)) == Col))
-        //        {
-        //            AnyHide(img);
-        //            MapScheme[Row, Col] = 0;
-        //        }
-        //}
+
         public static void ChangeMap(in byte model, params byte[] conditions)
         {
             for (byte no = 0; no < conditions.Length; no++)

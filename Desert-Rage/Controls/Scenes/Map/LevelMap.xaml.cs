@@ -8,6 +8,7 @@ using System.Windows.Input;
 using DesertRage.Model.Stats.Player;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Menu.Game;
+using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -93,8 +94,13 @@ namespace DesertRage.Controls.Scenes.Map
                 Map = map
             };
 
+            ;
+
             Character hero = new Character
             {
+                Hp = new Model.Stats.Bar(100),
+                Ap = new Model.Stats.Bar(50),
+                Icon = "/Resources/Images/Menu/Topics/Status.svg",
                 Step = new Position[4]
                 {
                     new Position(0, -1),
@@ -136,7 +142,94 @@ namespace DesertRage.Controls.Scenes.Map
                 },
                 WalkThrough = new HashSet<string>
                     { ".", ",", ":", "_" },
-                Place = new Position(1, 3)
+                Place = new Position(1, 3),
+                HeroSkills = new List<Skill>()
+                {
+                    new Skill
+                    {
+                        Name = "Лечение",
+                        Cost = 5,
+                        Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                        Description = "+ ОЗ"
+                    },
+                    new Skill
+                    {
+                        Name = "Лечение 2",
+                        Cost = 10,
+                        Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
+                        Description = "100% ОЗ. - Яд."
+                    },
+                    new Skill
+                    {
+                        Name = "Исцеление",
+                        Cost = 3,
+                        Icon = "/Resources/Images/Menu/Skills/Heal.svg",
+                        Description = "- Яд"
+                    },
+                    new Skill
+                    {
+                        Name = "Усиление",
+                        Cost = 20,
+                        Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
+                        Description = "Сконцентрировать всю силу"
+                    },
+                    new Skill
+                    {
+                        Name = "Охрана",
+                        Cost = 15,
+                        Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
+                        Description = "Повысить бдительность"
+                    },
+                    new Skill
+                    {
+                        Name = "Анализ",
+                        Cost = 5,
+                        Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
+                        Description = "Изучить врага как следует"
+                    },
+                    new Skill
+                    {
+                        Name = "Факел",
+                        Cost = 5,
+                        Icon = "/Resources/Images/Menu/Skills/Torch.svg",
+                        Description = "Хорошо поджигает"
+                    },
+                    new Skill
+                    {
+                        Name = "Кнут",
+                        Cost = 7,
+                        Icon = "/Resources/Images/Menu/Skills/Whip.svg",
+                        Description = "Дробит кости"
+                    },
+                    new Skill
+                    {
+                        Name = "Рогатка",
+                        Cost = 13,
+                        Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
+                        Description = "От нее не скрыться"
+                    },
+                    new Skill
+                    {
+                        Name = "Комбо",
+                        Cost = 10,
+                        Icon = "/Resources/Images/Menu/Skills/Combo.svg",
+                        Description = "Град ударов по врагам"
+                    },
+                    new Skill
+                    {
+                        Name = "Буря",
+                        Cost = 18,
+                        Icon = "/Resources/Images/Menu/Skills/Storm.svg",
+                        Description = "Неистовый порыв ветра"
+                    },
+                    new Skill
+                    {
+                        Name = "Обвал",
+                        Cost = 25,
+                        Icon = "/Resources/Images/Menu/Skills/Slide.svg",
+                        Description = "Усыпать противников камнями"
+                    }
+                }
             };
 
             UserProfile newPlayer = new UserProfile
