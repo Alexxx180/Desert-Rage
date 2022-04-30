@@ -800,6 +800,69 @@
             </Viewbox>
         </Grid>
 
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop  x:Name="BlackCurtain" Color="Black" Offset="0"/>
+                    <GradientStop  x:Name="TransparentCurtain" Color="Transparent" Offset="0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Border.MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation>
+                                    <DoubleAnimation.From>
+                                        0.0
+                                    </DoubleAnimation.From>
+
+                                    <DoubleAnimation.To>
+                                        5.0
+                                    </DoubleAnimation.To>
+
+                                    <DoubleAnimation.Duration>
+                                        0:0:1
+                                    </DoubleAnimation.Duration>
+
+                                    <Storyboard.TargetName>
+                                        TransparentCurtain
+                                    </Storyboard.TargetName>
+
+                                    <Storyboard.TargetProperty>
+                                        Offset
+                                    </Storyboard.TargetProperty>
+                                </DoubleAnimation>
+
+                                <DoubleAnimation>
+                                    <DoubleAnimation.From>
+                                        0.0
+                                    </DoubleAnimation.From>
+
+                                    <DoubleAnimation.To>
+                                        5.0
+                                    </DoubleAnimation.To>
+
+                                    <DoubleAnimation.Duration>
+                                        0:0:2
+                                    </DoubleAnimation.Duration>
+
+                                    <Storyboard.TargetName>
+                                        BlackCurtain
+                                    </Storyboard.TargetName>
+
+                                    <Storyboard.TargetProperty>
+                                        Offset
+                                    </Storyboard.TargetProperty>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Border.Triggers>
+        </Border>
+
         <!--<menu:GameMenu x:Name="Menu"/>-->
     </Grid>
 </UserControl>
