@@ -23,11 +23,11 @@
             </Grid.RowSpan>
 
             <ProgressBar.Value>
-                100
+                <Binding Path="Bar.Current"/>
             </ProgressBar.Value>
 
             <ProgressBar.Maximum>
-                100
+                <Binding Path="Bar.Max"/>
             </ProgressBar.Maximum>
         </ProgressBar>
 

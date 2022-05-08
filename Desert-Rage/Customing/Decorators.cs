@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesertRage.Model.Stats;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows;
@@ -21,6 +22,7 @@ namespace DesertRage.Customing
                 Visibility.Collapsed;
         }
 
+        #region Binding Members
         public static void Bind(
             this DependencyObject @object,
             DependencyProperty property,
@@ -52,15 +54,59 @@ namespace DesertRage.Customing
             };
             BindingOperations.SetBinding(@object, property, myBinding);
         }
+        #endregion
 
+        #region Bar Management Members
+        public static bool Drop(
+            this Bar statBar,
+            out Bar newStatBar,
+            ushort decrement)
+        {
+            ushort newValue = Math.Max(
+                statBar.Current - decrement,
+                statBar.Minimum
+            ).ToUShort();
 
-        public static void AnyShow(MediaElement element)
+            newStatBar = new Bar
+            {
+                Minimum = statBar.Minimum,
+                Current = newValue,
+                Max = statBar.Max
+            };
+
+            return newValue <= statBar.Minimum;
+        }
+
+        public static bool Fill(
+            this Bar statBar,
+            out Bar newStatBar,
+            ushort increment
+            )
+        {
+            ushort newValue = Math.Min(
+                statBar.Current + increment,
+                statBar.Max
+            ).ToUShort();
+
+            newStatBar = new Bar
+            {
+                Minimum = statBar.Minimum,
+                Current = newValue,
+                Max = statBar.Max
+            };
+
+            return newValue >= statBar.Max;
+        }
+        #endregion
+
+        public static void AnyShow(this MediaElement element)
         {
             element.Play();
             element.SetActive(true);
         }
 
-        public static void AnyShowAdvanced(MediaElement element,
+        public static void AnyShowAdvanced
+            (this MediaElement element,
             Uri Source, TimeSpan timeSpan)
         {
             element.Source = Source;
@@ -68,31 +114,19 @@ namespace DesertRage.Customing
             element.Play();
             element.SetActive(true);
         }
-        public static void AnyHide(MediaElement element)
+
+        public static void AnyHide(this MediaElement element)
         {
             element.SetActive(false);
             element.Stop();
         }
-        public static void AnyHideX(params MediaElement[] elements)
-        {
-            for (byte i = 0; i < elements.Length; i++)
-                AnyHide(elements[i]);
-        }
-        public static void AnyHideX(params FrameworkElement[] elements)
-        {
-            for (byte i = 0; i < elements.Length; i++)
-                elements[i].SetActive(false);
-        }
-        public static void AnyHideX(params FrameworkElement[][] elements)
-        {
-            for (byte i = 0; i < elements.Length; i++)
-                AnyHideX(elements[i]);
-        }
+
         public static void AnyGrid(UIElement element, in int row, in int column)
         {
             Grid.SetRow(element, row);
             Grid.SetColumn(element, column);
         }
+
         public static void Scales(ScaleTransform scl, in double w, in double h)
         {
             scl.ScaleX = w;
@@ -104,6 +138,7 @@ namespace DesertRage.Customing
             for (byte i = 0; i < elements.Length; i++)
                 elements[i].SetActive(true);
         }
+
         public static void AnyShowX2(in bool[] Conditions,
             params FrameworkElement[][] Objects)
         {

@@ -70,10 +70,10 @@
                 public static string ImpDied = @"Resources\OST\Sounds\ImpDied.mp3";
                 public static string WormDied = @"Resources\OST\Sounds\WormDied.mp3";
                 public static string MasterDied = @"Resources\OST\Sounds\MasterDied.mp3";
-                public static string PhaGetLost = @"Resources\OST\Sounds\DefeatPharaoh.mp3";
-                public static string ByeFriend = @"Resources\OST\Sounds\DefeatFriend.mp3";
-                public static string ThisIsAll = @"Resources\OST\Sounds\DefeatMasterOfAll.mp3";
-                public static string HereGetSome = @"Resources\OST\Sounds\UghZan1Died.mp3";
+                public static string PharaohLost = @"Resources\OST\Sounds\DefeatPharaoh.mp3";
+                public static string RockLost = @"Resources\OST\Sounds\DefeatFriend.mp3";
+                public static string TheRulerLost = @"Resources\OST\Sounds\DefeatMasterOfAll.mp3";
+                public static string UghZanLost = @"Resources\OST\Sounds\UghZan1Died.mp3";
             }
 
             public static class Noises

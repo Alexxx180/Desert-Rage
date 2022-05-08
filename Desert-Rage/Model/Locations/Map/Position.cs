@@ -2,6 +2,12 @@
 {
     public struct Position
     {
+        public Position(int size)
+        {
+            X = size;
+            Y = size;
+        }
+
         public Position(int x, int y)
         {
             X = x;

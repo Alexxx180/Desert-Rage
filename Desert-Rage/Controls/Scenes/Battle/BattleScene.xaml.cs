@@ -1,5 +1,10 @@
-﻿using System;
+﻿using DesertRage.Controls.Scenes.Map;
+using DesertRage.Model.Locations.Map;
+using DesertRage.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,11 +21,42 @@ namespace DesertRage.Controls.Scenes
     /// <summary>
     /// Логика взаимодействия для BattleScene.xaml
     /// </summary>
-    public partial class BattleScene : UserControl
+    public partial class BattleScene : UserControl, INotifyPropertyChanged
     {
+        public readonly Position SceneSizes = new Position(5, 3);
+
+        private Uri _battleBackground;
+        public Uri BattleBackground
+        {
+            get => _battleBackground;
+            set
+            {
+                _battleBackground = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public static readonly DependencyProperty
+            BattleModelProperty = DependencyProperty.Register(
+                nameof(BattleModel), typeof(BattleViewModel),
+                typeof(BattleScene));
+
+        public BattleViewModel BattleModel
+        {
+            get => GetValue(BattleModelProperty) as BattleViewModel;
+            set => SetValue(BattleModelProperty, value);
+        }
+
         public BattleScene()
         {
             InitializeComponent();
+
+            BattleModel = new BattleViewModel();
+        }
+
+        public void SetFoes()
+        {
+
         }
 
         ////[EN] Initialize random mechanic
@@ -623,5 +659,24 @@ namespace DesertRage.Controls.Scenes
         //    FoesRefresh();
         //}
         //#endregion
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+
+        #endregion
     }
 }

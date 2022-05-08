@@ -282,9 +282,7 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameStatus.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTopics.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\MainMenu.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Ray.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\BattleScene.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Foe.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\CutScene.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\Avatar\Ray.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\LevelMap.g.cs
@@ -307,9 +305,7 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameStatus.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTopics.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\MainMenu.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Ray.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\BattleScene.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Foe.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\Avatar\Ray.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\LevelMap.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\MapTile.baml
@@ -344,3 +340,9 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\DataTemplates\Lists.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Person.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Person.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Foe.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Foe.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.g.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.baml

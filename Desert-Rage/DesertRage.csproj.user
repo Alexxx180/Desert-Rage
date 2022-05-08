@@ -50,10 +50,10 @@
     <Compile Update="Controls\Scenes\Battle\BattleScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\Battle\Avatar\Ray.xaml.cs">
+    <Compile Update="Controls\Scenes\Battle\Avatar\Person.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\Battle\Foe.xaml.cs">
+    <Compile Update="Controls\Scenes\Battle\Avatar\Foe.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\CutScene.xaml.cs">
@@ -72,6 +72,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\Map\MapTile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Status\IconStat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Status\StatBar.xaml.cs">
@@ -121,10 +124,10 @@
     <Page Update="Controls\Scenes\Battle\BattleScene.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Scenes\Battle\Avatar\Ray.xaml">
+    <Page Update="Controls\Scenes\Battle\Avatar\Person.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Scenes\Battle\Foe.xaml">
+    <Page Update="Controls\Scenes\Battle\Avatar\Foe.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\CutScene.xaml">
@@ -140,6 +143,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\SoundGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Status\IconStat.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Status\StatBar.xaml">

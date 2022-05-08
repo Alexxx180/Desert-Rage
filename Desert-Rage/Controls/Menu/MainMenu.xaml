@@ -5,6 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
              xmlns:System="clr-namespace:System;assembly=System.Runtime"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
+             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              x:Name="DesertMainMenu"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -19,19 +22,20 @@
             <ColumnDefinition Width="0.75*"/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="MenuBackground">
+
+        <svgc:SvgViewbox x:Name="MenuBackground">
             <Grid.ColumnSpan>
                 2
             </Grid.ColumnSpan>
-
-            <Image.Stretch>
-                Fill
-            </Image.Stretch>
             
-            <Image.Source>
-                /Resources/Images/Locations/Background/Cover.jpg
-            </Image.Source>
-        </Image>
+            <attach:SvgBox.Source>
+                /Resources/Images/Background/Cover.svg
+            </attach:SvgBox.Source>
+
+            <attach:SvgBox.Stretch>
+                Fill
+            </attach:SvgBox.Stretch>
+        </svgc:SvgViewbox>
 
         <menu:Autorization ViewModel="{Binding ElementName=DesertMainMenu, Path=StartViewModel}"/>
 

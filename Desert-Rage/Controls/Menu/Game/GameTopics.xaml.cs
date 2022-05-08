@@ -94,13 +94,6 @@ namespace DesertRage.Controls.Menu.Game
                     TopicElement = sets
                 }
             };
-
-            //new Topic
-            //{
-            //    Name = "Справка",
-            //    Icon = "/Resources/Images/Menu/Topics/Info.svg",
-            //    TopicElement = new Hints()
-            //},
         }
 
         private void OnTopicSelection(object sender, SelectionChangedEventArgs e)

@@ -1,0 +1,468 @@
+﻿<UserControl x:Class="DesertRage.Controls.Scenes.Battle.Avatar.Person"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesertRage.Controls.Scenes.Battle.Avatar"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
+             xmlns:stats="clr-namespace:DesertRage.Model.Stats"
+             xmlns:status="clr-namespace:DesertRage.Controls.Status"
+             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="250"
+             x:Name="BattleCharacter">
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
+    
+    <Grid>
+        <Grid>
+            <Grid.Column>
+                1
+            </Grid.Column>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.Style>
+                    <StaticResource ResourceKey="BackAccent"/>
+                </Grid.Style>
+
+                <Grid.ColumnSpan>
+                    3
+                </Grid.ColumnSpan>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <status:StatusPanel>
+                    <status:StatusPanel.Icon>
+                        /Resources/Images/Menu/Topics/Status.svg
+                    </status:StatusPanel.Icon>
+                </status:StatusPanel>
+
+                <Grid>
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <status:StatBar x:Name="TimeBar">
+                        <status:StatBar.Caption>
+                            Время
+                        </status:StatBar.Caption>
+                        
+                        <status:StatBar.Bar>
+                            <Binding>
+                                <Binding.ElementName>
+                                    BattleCharacter
+                                </Binding.ElementName>
+
+                                <Binding.Path>
+                                    DataContext.Time
+                                </Binding.Path>
+                            </Binding>
+                        </status:StatBar.Bar>
+
+                        <status:StatBar.ForeBrush>
+                            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                <GradientStop Color="#FFBB835C"/>
+                                <GradientStop Color="#FFC7FF1D" Offset="0.512"/>
+                                <GradientStop Color="#FFC7631D" Offset="1"/>
+                            </LinearGradientBrush>
+                        </status:StatBar.ForeBrush>
+                    </status:StatBar>
+
+                    <StackPanel>
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
+
+                        <StackPanel.Orientation>
+                            Horizontal
+                        </StackPanel.Orientation>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <svgc:SvgViewbox>
+                <Grid.Row>
+                    1
+                </Grid.Row>
+
+                <attach:SvgBox.Source>
+                    /Resources/Images/Fight/Character/Ray/Idle.svg
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <Menu x:Name="MOptions">
+                <Grid.Row>
+                    2
+                </Grid.Row>
+
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                
+                
+
+
+                <MenuItem>
+                    <MenuItem.VerticalAlignment>
+                        Center
+                    </MenuItem.VerticalAlignment>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                                <Run FontWeight="Bold">
+                                    Бой
+                                </Run>
+                                <LineBreak/>
+                                <Run Text="Использовать оружие по назначению"/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Бой
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Attack.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+
+                    <MenuItem>
+                        <MenuItem.Header>
+                            Паук
+                        </MenuItem.Header>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>
+                            Павук
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.VerticalContentAlignment>
+                        Center
+                    </MenuItem.VerticalContentAlignment>
+
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                            <Run FontWeight="Bold">
+                                Прием
+                            </Run>
+                            <LineBreak/>
+                            <Run Text="Применить умения на практике"/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Прием
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Special.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+
+                    <MenuItem.ItemTemplate>
+                        <StaticResource ResourceKey="SkillTemplate"/>
+                    </MenuItem.ItemTemplate>
+
+                    <MenuItem.ItemsSource>
+                        <Binding Path="Battle.Player.Hero.HeroSkills"/>
+                    </MenuItem.ItemsSource>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.VerticalContentAlignment>
+                        Center
+                    </MenuItem.VerticalContentAlignment>
+
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                                <Run FontWeight="Bold">
+                                    Щит
+                                </Run>
+                                <LineBreak/>
+                                <Run Text="Принять оборонительную позицию"/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Щит
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Defence.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.VerticalContentAlignment>
+                        Center
+                    </MenuItem.VerticalContentAlignment>
+
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Побег
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                                <Run FontWeight="Bold">
+                                    Побег
+                                </Run>
+                                <LineBreak/>
+                                <Run Text="Сбежать..."/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Status/Stats/Speed.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.VerticalContentAlignment>
+                        Center
+                    </MenuItem.VerticalContentAlignment>
+
+                    <Grid.Column>
+                        2
+                    </Grid.Column>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                                <Run FontWeight="Bold">
+                                    Сумка
+                                </Run>
+                                <LineBreak/>
+                                <Run Text="Использовать предметы"/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Сумка
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Topics/Items.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+
+                    <MenuItem.HorizontalContentAlignment>
+                        Stretch
+                    </MenuItem.HorizontalContentAlignment>
+
+                    <MenuItem.ItemTemplate>
+                        <StaticResource ResourceKey="ItemTemplate"/>
+                    </MenuItem.ItemTemplate>
+
+                    <MenuItem.ItemsSource>
+                        <Binding Path="Battle.Player.Items"/>
+                    </MenuItem.ItemsSource>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.VerticalContentAlignment>
+                        Center
+                    </MenuItem.VerticalContentAlignment>
+
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <Grid.Column>
+                        2
+                    </Grid.Column>
+
+                    <MenuItem.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </MenuItem.Style>
+
+                    <MenuItem.ToolTip>
+                        <TextBlock>
+                                <Run FontWeight="Bold">
+                                    Бойня
+                                </Run>
+                                <LineBreak/>
+                                <Run Text="Горячо поприветствовать оппонентов"/>
+                        </TextBlock>
+                    </MenuItem.ToolTip>
+
+                    <MenuItem.Header>
+                        <TextBlock>
+                            <TextBlock.VerticalAlignment>
+                                Center
+                            </TextBlock.VerticalAlignment>
+                                Бойня
+                        </TextBlock>
+                    </MenuItem.Header>
+
+                    <MenuItem.Icon>
+                        <svgc:SvgViewbox>
+
+                            <attach:SvgBox.Source>
+                                /Resources/Images/Menu/Topics/Status.svg
+                            </attach:SvgBox.Source>
+
+                            <attach:SvgBox.Stretch>
+                                Uniform
+                            </attach:SvgBox.Stretch>
+                        </svgc:SvgViewbox>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+                <Menu.Style>
+                    <StaticResource ResourceKey="BackAccent"/>
+                </Menu.Style>
+            </Menu>
+        </Grid>
+    </Grid>
+</UserControl>

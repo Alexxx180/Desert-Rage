@@ -10,9 +10,8 @@ FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Men
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Menu\Game\GameSkills.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Menu\Game\GameStatus.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Menu\MainMenu.xaml;;
-FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Battle\Avatar\Ray.xaml;;
+FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Battle\Avatar\Person.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Battle\BattleScene.xaml;;
-FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Battle\Foe.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Map\Avatar\Ray.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Map\LevelMap.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Map\MapTile.xaml;;
@@ -23,4 +22,6 @@ FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\MainWindow.x
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Reload.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Resources\DataTemplates\Lists.xaml;;
 FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Resources\Styles\Lists.xaml;;
+FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Scenes\Battle\Avatar\Foe.xaml;;
+FD:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Controls\Status\IconStat.xaml;;
 

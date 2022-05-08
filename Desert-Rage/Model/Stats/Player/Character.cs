@@ -33,19 +33,13 @@ namespace DesertRage.Model.Stats.Player
 
         internal void Stand()
         {
-            //Walk = 0;
             MapImage = StandImage[Pose];
         }
 
-        //DispatcherTimer PRegn = new DispatcherTimer();
-        //DispatcherTimer PCtrl = new DispatcherTimer();
-
-        //private void HeroSetStatus(byte code)
-        //{
-        //    string[] text = { Txts.Common.Hlthy + " ♫", Txts.Common.Ill + " §" };
-        //    GetStatus = code;
-        //    AfterStatus.Content = StatusP.Content = text[code];
-        //}
+        private void HeroSetStatus(byte no, bool code)
+        {
+            Status[no] = code;
+        }
 
         #region Hp Management Members
         public void Hit(int value)

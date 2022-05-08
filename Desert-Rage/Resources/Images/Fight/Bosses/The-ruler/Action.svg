@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:#4F6A8C;}
+	.st1{fill:#E2E2E2;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#F6ED54;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#74B87A;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<rect y="0" class="st0" width="120" height="120"/>
+<path class="st1" d="M64.45,48.57h-8.9c-0.41,0-0.74-0.33-0.74-0.74V38.1c0-0.41,0.33-0.74,0.74-0.74h8.9
+	c0.41,0,0.74,0.33,0.74,0.74v9.74C65.19,48.24,64.86,48.57,64.45,48.57z"/>
+<circle class="st1" cx="60" cy="35.29" r="7.42"/>
+<rect x="36.6" y="44.42" class="st2" width="45.65" height="68.21"/>
+<rect x="51.12" y="26.95" class="st3" width="18.07" height="5.73"/>
+<line class="st4" x1="54.81" y1="35.02" x2="57.38" y2="35.02"/>
+<line class="st4" x1="62.47" y1="35.02" x2="65.03" y2="35.02"/>
+<line class="st4" x1="58.03" y1="38.55" x2="61.97" y2="38.55"/>
+<rect x="29.21" y="44.42" class="st3" width="10.64" height="9.9"/>
+<rect x="30.4" y="54.32" class="st1" width="8.27" height="22.82"/>
+<rect x="57.38" y="52.38" class="st3" width="4.56" height="53.12"/>
+<rect x="45.08" y="57.59" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 111.001 16.2781)" class="st3" width="4.56" height="12.1"/>
+<rect x="45.08" y="88.99" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 142.3994 47.6765)" class="st3" width="4.56" height="12.1"/>
+<rect x="68.68" y="57.59" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 134.5998 -7.3208)" class="st3" width="4.56" height="12.1"/>
+<rect x="68.68" y="88.99" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 165.9982 24.0776)" class="st3" width="4.56" height="12.1"/>
+<rect x="79.22" y="44.42" class="st3" width="10.64" height="9.9"/>
+<rect x="80.41" y="54.32" class="st1" width="8.27" height="22.82"/>
+<ellipse class="st5" cx="56.09" cy="35.77" rx="0.9" ry="0.83"/>
+<ellipse class="st5" cx="63.75" cy="35.77" rx="0.9" ry="0.83"/>
+</svg>

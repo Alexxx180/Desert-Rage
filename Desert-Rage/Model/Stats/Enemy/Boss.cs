@@ -4,6 +4,11 @@ namespace DesertRage.Model.Stats.Enemy
 {
     public class Boss : Foe
     {
+        public Boss()
+        {
+
+        }
+
         public Boss(Foe foe) : base(foe)
         {
 

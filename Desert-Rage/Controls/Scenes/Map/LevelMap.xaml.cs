@@ -28,10 +28,8 @@ namespace DesertRage.Controls.Scenes.Map
             }
         }
 
-        public LevelMap()
+        public static UserProfile GetUserData()
         {
-            InitializeComponent();
-
             string back = "/Resources/Images/Locations/1-Secret-Temple/Way.svg";
 
             Dictionary<string, string> tiles = new Dictionary<string, string>
@@ -93,8 +91,6 @@ namespace DesertRage.Controls.Scenes.Map
                 BackCover = back,
                 Map = map
             };
-
-            ;
 
             Character hero = new Character
             {
@@ -232,15 +228,19 @@ namespace DesertRage.Controls.Scenes.Map
                 }
             };
 
-            UserProfile newPlayer = new UserProfile
+            return new UserProfile
             {
                 Level = location,
                 Hero = hero,
                 Menu = new GameMenu()
             };
-            newPlayer.Menu.SetLocation(this);
+        }
 
-            UserData = newPlayer;
+        public LevelMap()
+        {
+            InitializeComponent();
+            UserData = GetUserData();
+            UserData.Menu.SetLocation(this);
         }
 
         //public string[] Map

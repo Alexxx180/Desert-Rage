@@ -231,25 +231,6 @@ namespace DesertRage.Mechanics
                         MapScheme[i, j] = 1;
         }
 
-        //public static Foe Spider = new Foe(0, "Паук", 25, 3, 10, 0, 65, 5, 5, 0, Paths.Static.Foes.SpiderIcon, Paths.Static.Foes.Spider, Paths.Dynamic.Foes.Spider, Paths.OST.Sounds.SpiderDied, "Факел"); //, Paths.OST.Sounds.SpiderDied
-        //public static Foe Mummy = new Foe(1, "Мумия", 32, 7, 17, 2, 83, 7, 10, 1, Paths.Static.Foes.MummyIcon, Paths.Static.Foes.Mummy, Paths.Dynamic.Foes.Mummy, Paths.OST.Sounds.MummyDied, "Факел");
-        //public static Foe Zombie = new Foe(2, "Зомби", 41, 5, 25, 5, 101, 11, 35, 2, Paths.Static.Foes.ZombieIcon, Paths.Static.Foes.Zombie, Paths.Dynamic.Foes.Zombie, Paths.OST.Sounds.ZombieDied, "Кнут");
-        //public static Foe Bones = new Foe(3, "Страж", 50, 15, 35, 7, 125, 15, 75, 3, Paths.Static.Foes.BonesIcon, Paths.Static.Foes.Bones, Paths.Dynamic.Foes.Bones, Paths.OST.Sounds.BonesDied, "Кнут");
-
-        //public static Foe Vulture = new Foe(4, "Стервятник", 45, 25, 65, 30, 250, 35, 60, 6, Paths.Static.Foes.VultureIcon, Paths.Static.Foes.Vulture, Paths.Dynamic.Foes.Vulture, Paths.OST.Sounds.VultureDied, "Рогатка");
-        //public static Foe Ghoul = new Foe(5, "Гуль", 80, 40, 30, 20, 306, 75, 110, 4, Paths.Static.Foes.GhoulIcon, Paths.Static.Foes.Ghoul, Paths.Dynamic.Foes.Ghoul, Paths.OST.Sounds.GhoulDied, "Факел");
-        //public static Foe GrimReaper = new Foe(6, "Жнец", 100, 20, 45, 60, 272, 100, 80, 5, Paths.Static.Foes.GrimReaperIcon, Paths.Static.Foes.GrimReaper, Paths.Dynamic.Foes.GrimReaper, Paths.OST.Sounds.GrimReaperDied, "Факел");
-        //public static Foe Scarab = new Foe(7, "Скарабей", 75, 80, 80, 80, 100, 60, 255, 7, Paths.Static.Foes.ScarabIcon, Paths.Static.Foes.Scarab, Paths.Dynamic.Foes.Scarab, Paths.OST.Sounds.ScarabDied, "");
-
-        //public static Foe KillerMole = new Foe(8, "Моль-убийца", 150, 100, 100, 75, 400, 175, 105, 6, Paths.Static.Foes.KillerMoleIcon, Paths.Static.Foes.KillerMole, Paths.Dynamic.Foes.KillerMole, Paths.OST.Sounds.KillerMoleDied, "Рогатка");
-        //public static Foe Imp = new Foe(9, "Прислужник", 125, 105, 90, 110, 600, 140, 180, 5, Paths.Static.Foes.ImpIcon, Paths.Static.Foes.Imp, Paths.Dynamic.Foes.Imp, Paths.OST.Sounds.ImpDied, "Рогатка");
-        //public static Foe Worm = new Foe(10, "П. червь", 160, 70, 130, 70, 950, 200, 150, 5, Paths.Static.Foes.WormIcon, Paths.Static.Foes.Worm, Paths.Dynamic.Foes.Worm, Paths.OST.Sounds.WormDied, "Кнут");
-        //public static Foe Master = new Foe(11, "Мастер", 160, 150, 150, 150, 760, 255, 255, 7, Paths.Static.Foes.MasterIcon, Paths.Static.Foes.Master, Paths.Dynamic.Foes.Master, Paths.OST.Sounds.MasterDied, "");
-
-        //public static Foe BossNo1 = new Foe(12, "Фараон", 75, 40, 40, 35, 500, 100, 100, 3, Paths.Static.Bosses.PharaohIcon, Paths.Static.Bosses.Pharaoh, Paths.Dynamic.Bosses.Pharaoh, Paths.OST.Sounds.PhaGetLost, "");
-        //public static Foe BossNo2 = new Foe(13, "????", 170, 120, 90, 140, 2000, 200, 200, 7, Paths.Static.Bosses.WarriorIcon, Paths.Static.Bosses.Warrior, Paths.Dynamic.Bosses.Warrior, Paths.OST.Sounds.ByeFriend, "");
-        //public static Foe BossNo3 = new Foe(14, "Владыка", 255, 255, 255, 255, 10000, 255, 255, 7, Paths.Static.Bosses.MrOfAllIcon, Paths.Static.Bosses.MrOfAll, Paths.Dynamic.Bosses.MrOfAll, Paths.OST.Sounds.ThisIsAll, "");
-        //public static Foe SBoss = new Foe(15, "Угх-Зан I", 100, 50, 50, 50, 350, 150, 150, 5, Paths.Static.Bosses.UghZanIcon, Paths.Static.Bosses.UghZan, Paths.Dynamic.Bosses.UghZan, Paths.OST.Sounds.HereGetSome, "");
 
         //public static Foe[][] LocationsFoes =
         //{

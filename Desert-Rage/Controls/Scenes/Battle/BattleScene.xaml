@@ -5,13 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Scenes"
              xmlns:help="clr-namespace:DesertRage.Helpers"
-             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              xmlns:bind="clr-namespace:DesertRage.Customing.Converters.Binds"
              xmlns:vms="clr-namespace:DesertRage"
+             xmlns:converters="clr-namespace:DesertRage.BindConverters"
+             xmlns:avatar="clr-namespace:DesertRage.Controls.Scenes.Battle.Avatar"
+             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="Battle">
+    <UserControl.DataContext>
+        <Binding RelativeSource="{RelativeSource Self}"/>
+    </UserControl.DataContext>
 
-    <Border>
+    <Grid>
+        <Border>
         <Border.Background>
             <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                 <GradientStop  x:Name="TransparentCurtain" Color="Transparent" Offset="0"/>
@@ -73,718 +81,82 @@
             </EventTrigger>
         </Border.Triggers>
     </Border>
-    <!--
-    <UserControl.Resources>
-        <bind:BarColorConverter x:Key="BarColorConverter"/>
-        <bind:BarValuesTextConverter x:Key="BarValuesTextConverter"/>
-        <bind:ImageConverter x:Key="ImageConverter" />
-        <bind:LeftTextConverter x:Key="LeftTextConverter" />
-        <bind:RightTextConverter x:Key="RightTextConverter" />
-        <bind:InvertConverter x:Key="InvertConverter"/>
-        <bind:BoolConverter x:Key="BoolConverter"/>
-        <bind:AccessConverter x:Key="AccessConverter"/>
-        <bind:VisibilityConverter x:Key="VisibilityConverter"/>
-        <bind:VisibilityConverter2 x:Key="VisibilityConverter2"/>
-    </UserControl.Resources>
 
-    <Grid x:Name="BattleScene" Grid.RowSpan="36" Grid.ColumnSpan="60" Panel.ZIndex="5" Visibility="Hidden">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.176*"/>
-            <RowDefinition Height="0.074*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.6*"/>
-            <RowDefinition Height="0.05*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.225*"/>
-            <ColumnDefinition Width="0.35*"/>
-            <ColumnDefinition Width="0.1*"/>
-            <ColumnDefinition Width="0.325*"/>
-        </Grid.ColumnDefinitions>
-        
-        <Image x:Name="Img3" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="/Resources/Images/Fight/Background/Battle1.jpg" IsEnabled="False" Visibility="Visible" Stretch="Fill" Grid.ColumnSpan="4" Grid.RowSpan="5"/>
-        
-        <Viewbox Grid.Column="1" Grid.Row="0" Panel.ZIndex="7" Visibility="Visible" Grid.ColumnSpan="2">
-            <Label x:Name="BattleText1" Content="Победа" HorizontalAlignment="Center"  VerticalAlignment="Top" FontSize="72" FontFamily="Gill Sans Ultra Bold" Visibility="Hidden" >
-                <Label.Foreground>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="#FFEA961C" Offset="0.247"/>
-                    </LinearGradientBrush>
-                </Label.Foreground>
-            </Label>
-        </Viewbox>
+        <svgc:SvgViewbox>
+            <Grid.ColumnSpan>
+                2
+            </Grid.ColumnSpan>
 
-        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.85*"/>
-                <ColumnDefinition Width="0.15*"/>
-            </Grid.ColumnDefinitions>
+            <attach:SvgBox.Source>
+                /Resources/Images/Fight/Background/AncientTemple.svg
+            </attach:SvgBox.Source>
 
-            <Viewbox Grid.RowSpan="1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Panel.ZIndex="4">
-                <Label x:Name="BattleText2" Content="Пора переходить к добыче" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="48" FontFamily="Arial Black" IsEnabled="False" Visibility="Hidden" />
-            </Viewbox>
+            <attach:SvgBox.Stretch>
+                Fill
+            </attach:SvgBox.Stretch>
+        </svgc:SvgViewbox>
 
-            <Viewbox Grid.RowSpan="1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Panel.ZIndex="4">
-                <Label x:Name="WonTxt" Content="{Binding Source={x:Static help:Txts+Common.Thres}}" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="48" FontFamily="Arial Black" IsEnabled="False" Visibility="Hidden" />
-            </Viewbox>
-            <Button x:Name="textOk2" Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Panel.ZIndex="4" FontSize="36" Visibility="Hidden" IsEnabled="False" Click="textOk2_Click">
-                <Image x:Name="ConfirmImg" Source="/Resources/Images/Fight/Options/Confirm.png" Stretch="Fill"/>
-            </Button>
-        </Grid>
-
-        <Grid Grid.RowSpan="2">
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.7*"/>
+                <RowDefinition Height="0.15*"/>
             </Grid.RowDefinitions>
 
-            <Viewbox Grid.Row="0" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1" Panel.ZIndex="9">
-                <Label x:Name="FoesCount1" Content="Паук: 3" Grid.ColumnSpan="12" HorizontalAlignment="Center"  VerticalAlignment="Center" FontFamily="Cooper Black" FontSize="48" IsEnabled="False" Visibility="Hidden" Grid.RowSpan="3" Grid.Column="1" Foreground="White"/>
-            </Viewbox>
+            <Grid>
+                <Grid.Row>
+                    1
+                </Grid.Row>
 
-            <Viewbox Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1" Panel.ZIndex="9">
-                <Label x:Name="FoesCount2" Content="Мумия: 3" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" FontSize="48" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Foreground="White"/>
-            </Viewbox>
-
-            <Viewbox Grid.Row="2" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1" Panel.ZIndex="9">
-                <Label x:Name="FoesCount3" Content="Зомби: 3" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" FontSize="48" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Foreground="White" />
-            </Viewbox>
-        </Grid>
-
-        <Grid Grid.Row="3" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Image x:Name="Img6" PreviewMouseDown="MouseSelect" Tag="0" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Fight/Enemies/Enemies/Spider.png" Visibility="Hidden" IsEnabled="False" Grid.Row="1" Grid.Column="0" Stretch="Fill"/>
-            <Image x:Name="Img7" PreviewMouseDown="MouseSelect" Tag="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Fight/Enemies/Enemies/Spider.png" Visibility="Hidden" IsEnabled="False" Grid.Column="1" Stretch="Fill"/>
-            <Image x:Name="Img8" PreviewMouseDown="MouseSelect" Tag="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Fight/Enemies/Enemies/Spider.png" IsEnabled="False" Visibility="Hidden" Grid.Row="1" Grid.Column="2" Stretch="Fill"/>
-            <Image x:Name="TrgtImg" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Panel.ZIndex="6" Source="/Resources/Images/Fight/Target/Target1.png" Stretch="Fill" Visibility="Hidden"/>
-        </Grid>
-
-        <Grid Grid.Row="3" Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Image x:Name="BossSlot1" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="4" Source="/Resources/Images/Fight/Enemies/Enemies/Spider.png" Visibility="Hidden" IsEnabled="False" Grid.Column="0" Stretch="Fill"/>
-            <Image x:Name="BossTrgt" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Panel.ZIndex="6" Source="/Resources/Images/Fight/Target/Target1.png" Stretch="Fill" Visibility="Hidden"/>
-        </Grid>
-
-        <Grid x:Name="EnemyStatus" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="1" ZIndex="4" Visibility="Hidden">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.05*"/>
-                <ColumnDefinition Width="0.125*"/>
-                <ColumnDefinition Width="0.775*"/>
-                <ColumnDefinition Width="0.05*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.1*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.25*"/>
-                <RowDefinition Height="0.05*"/>
-            </Grid.RowDefinitions>
-
-            <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="2" Panel.ZIndex="7" HorizontalAlignment="Left">
-                <Label x:Name="Enemy" Content="{Binding Path=GetFoe1.Name}" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="7" FontSize="72" FontFamily="Gill Sans Ultra Bold" Visibility="Visible" Grid.Row="1" Grid.Column="2" >
-                    <Label.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Red" Offset="1"/>
-                            <GradientStop Color="#FFEA961C" Offset="0.247"/>
-                        </LinearGradientBrush>
-                    </Label.Foreground>
-                </Label>
-            </Viewbox>
-            <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="2" Panel.ZIndex="7" HorizontalAlignment="Left">
-                <Label x:Name="Enemy2" Content="{Binding Path=GetFoe2.Name}" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="7" FontSize="72" FontFamily="Gill Sans Ultra Bold" Visibility="Hidden" Grid.Row="1" Grid.Column="2" >
-                    <Label.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Red" Offset="1"/>
-                            <GradientStop Color="#FFEA961C" Offset="0.247"/>
-                        </LinearGradientBrush>
-                    </Label.Foreground>
-                </Label>
-            </Viewbox>
-            <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="2" Panel.ZIndex="7" HorizontalAlignment="Left">
-                <Label x:Name="Enemy3" Content="{Binding Path=GetFoe3.Name}" HorizontalAlignment="Left"  VerticalAlignment="Top" Panel.ZIndex="7" FontSize="72" FontFamily="Gill Sans Ultra Bold" Visibility="Hidden" Grid.Row="1" Grid.Column="2" >
-                    <Label.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Red" Offset="1"/>
-                            <GradientStop Color="#FFEA961C" Offset="0.247"/>
-                        </LinearGradientBrush>
-                    </Label.Foreground>
-                </Label>
-            </Viewbox>
-
-            <Grid Grid.Row="2" Grid.Column="1" Panel.ZIndex="5" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <ProgressBar x:Name="HPenemyBar" Value="{Binding Path=GetFoe1.HP}" Maximum="{Binding Path=GetFoe1.MaxHP}" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="5" Visibility="Visible" IsEnabled="False" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
-                    <ProgressBar.Foreground>
-                        <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="0">
-                            <Binding Path="Value" ElementName="HPenemyBar" />
-                            <Binding Path="Maximum" ElementName="HPenemyBar" />
-                        </MultiBinding>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-                <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Panel.ZIndex="5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                    <Label x:Name="HPenemy" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Panel.ZIndex="5" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Padding="0,0,0,0" Background="#FF6E6E6E" BorderBrush="Black" BorderThickness="2" Foreground="White" >
-                        <Label.Content>
-                            <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
-                                <Binding Path="Value" ElementName="HPenemyBar" />
-                                <Binding Path="Maximum" ElementName="HPenemyBar" />
-                            </MultiBinding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <ProgressBar x:Name="HPenemyBar2" Value="{Binding Path=GetFoe2.HP}" Maximum="{Binding Path=GetFoe2.MaxHP}" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="5" Visibility="Hidden" IsEnabled="False" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
-                    <ProgressBar.Foreground>
-                        <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="0">
-                            <Binding Path="Value" ElementName="HPenemyBar2" />
-                            <Binding Path="Maximum" ElementName="HPenemyBar2" />
-                        </MultiBinding>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-                <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Panel.ZIndex="5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                    <Label x:Name="HPenemy2" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Panel.ZIndex="5" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Padding="0,0,0,0" Background="#FF6E6E6E" BorderBrush="Black" BorderThickness="2" Foreground="White" >
-                        <Label.Content>
-                            <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
-                                <Binding Path="Value" ElementName="HPenemyBar2" />
-                                <Binding Path="Maximum" ElementName="HPenemyBar2" />
-                            </MultiBinding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <ProgressBar x:Name="HPenemyBar3" Value="{Binding Path=GetFoe3.HP}" Maximum="{Binding Path=GetFoe3.MaxHP}" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="5" Visibility="Hidden" IsEnabled="False" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
-                    <ProgressBar.Foreground>
-                        <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="0">
-                            <Binding Path="Value" ElementName="HPenemyBar3" />
-                            <Binding Path="Maximum" ElementName="HPenemyBar3" />
-                        </MultiBinding>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-                <Viewbox Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" Panel.ZIndex="5" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                    <Label x:Name="HPenemy3" Grid.ColumnSpan="1" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Panel.ZIndex="5" FontSize="36" FontFamily="Cooper Black" IsEnabled="False" Visibility="Visible" Padding="0,0,0,0" Background="#FF6E6E6E" BorderBrush="Black" BorderThickness="2" Foreground="White" >
-                        <Label.Content>
-                            <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
-                                <Binding Path="Value" ElementName="HPenemyBar3" />
-                                <Binding Path="Maximum" ElementName="HPenemyBar3" />
-                            </MultiBinding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <Viewbox Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="5" Grid.Column="1" HorizontalAlignment="Right">
-                    <Label x:Name="DamageFoe" Content="-25" Foreground="#FFC71515" FontSize="36" FontFamily="Cooper Black" Visibility="Collapsed" IsEnabled="False"/>
-                </Viewbox>
-            </Grid>
-
-            <Image x:Name="EnemyImg" HorizontalAlignment="Left"   VerticalAlignment="Top" Panel.ZIndex="5" Visibility="Visible" Grid.Row="1" Grid.Column="1">
-                <Image.Source>
-                    <Binding Path="GetFoe1.Icon" Converter="{StaticResource ImageConverter}"></Binding>
-                </Image.Source>
-            </Image>
-            <Image x:Name="EnemyImg2" HorizontalAlignment="Left"   VerticalAlignment="Top" Panel.ZIndex="5" Visibility="Hidden" Grid.Row="1" Grid.Column="1">
-                <Image.Source>
-                    <Binding Path="GetFoe2.Icon" Converter="{StaticResource ImageConverter}"></Binding>
-                </Image.Source>
-            </Image>
-            <Image x:Name="EnemyImg3" HorizontalAlignment="Left"   VerticalAlignment="Top" Panel.ZIndex="5" Visibility="Hidden" Grid.Row="1" Grid.Column="1">
-                <Image.Source>
-                    <Binding Path="GetFoe3.Icon" Converter="{StaticResource ImageConverter}"></Binding>
-                </Image.Source>
-            </Image>
-        </Grid>
-
-        <Grid x:Name="BattleStatus" Grid.Column="4" ZIndex="5" Visibility="Visible" Grid.RowSpan="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.05*"/>
-                <ColumnDefinition Width="0.25*"/>
-                <ColumnDefinition Width="0.04*"/>
-                <ColumnDefinition Width="0.06*"/>
-                <ColumnDefinition Width="0.45*"/>
-                <ColumnDefinition Width="0.1*"/>
-                <ColumnDefinition Width="0.05*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.1*"/>
-                <RowDefinition Height="0.06*"/>
-                <RowDefinition Height="0.025*"/>
-                <RowDefinition Height="0.075*"/>
-                <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.025*"/>
-                <RowDefinition Height="0.075*"/>
-                <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.0425*"/>
-                <RowDefinition Height="0.195*"/>
-                <RowDefinition Height="0.1*"/>
-            </Grid.RowDefinitions>
-
-            <Image x:Name="Img5" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" Source="/Resources/Images/Fight/Character/Icon/Static/Usual.png" Visibility="Visible" IsEnabled="False" Stretch="Fill" Grid.Column="1" Grid.Row="1" Grid.RowSpan="9"/>
-            <Image x:Name="Poison" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="5" Source="/Resources/Images/Fight/Character/Icon/Static/PoisonBubble.png" Visibility="{Binding Path=GetStatus, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" IsEnabled="False" Stretch="Fill" Grid.Column="1" Grid.Row="1" Grid.RowSpan="9"/>
-            <Viewbox Grid.Row="11" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1" Panel.ZIndex="4">
-                <Label x:Name="LevelText" Content="{Binding Path=GetLV, Converter={StaticResource LeftTextConverter}, ConverterParameter=Ур.}" Margin="0" FontFamily="Cooper Black" Visibility="Visible" Padding="0" FontWeight="Normal"/>
-            </Viewbox>
-
-
-            <Grid  Grid.Row="12" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="1" Panel.ZIndex="11">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.125*"/>
-                    <ColumnDefinition Width="0.3*"/>
-                    <ColumnDefinition Width="0.125*"/>
-                    <ColumnDefinition Width="0.3*"/>
-                    <ColumnDefinition Width="0.15*"/>
+                    <ColumnDefinition Width="0.75*"/>
+                    <ColumnDefinition Width="0.25*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image x:Name="BuffsUpImg" Source="/Resources/Images/Fight/Misc/BuffUP.png" Grid.Column="0" Visibility="Hidden"></Image>
-
-                <Viewbox Grid.Column="1">
-                    <Label x:Name="BuffUpTxt" Grid.Column="52" HorizontalAlignment="Left"  Grid.Row="24" VerticalAlignment="Top" Panel.ZIndex="5" FontFamily="Cooper Black" FontSize="36" Grid.RowSpan="2" Grid.ColumnSpan="4" Foreground="#FFE8FF00" Visibility="Hidden" IsEnabled="False" BorderThickness="0,0,0,0">
-                        <Label.Content>
-                            <Binding Path="GetSPL" Converter="{StaticResource LeftTextConverter}" ConverterParameter="+"></Binding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <Image x:Name="ToughUpImg" Source="/Resources/Images/Fight/Misc/ToughUP.png" Grid.Column="2" Visibility="Hidden"></Image>
-
-                <Viewbox Grid.Column="3">
-                    <Label x:Name="ToughUpTxt" Grid.Column="52" HorizontalAlignment="Left"  Grid.Row="24" VerticalAlignment="Top" Panel.ZIndex="5" FontFamily="Cooper Black" FontSize="36" Grid.RowSpan="2" Grid.ColumnSpan="4" Foreground="#FFE8FF00" Visibility="Hidden" IsEnabled="False" BorderThickness="0,0,0,0">
-                        <Label.Content>
-                            <Binding Path="GetSPL" Converter="{StaticResource LeftTextConverter}" ConverterParameter="+"></Binding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-            </Grid>
-
-
-
-            <Grid Grid.Row="2" Grid.Column="4" Panel.ZIndex="5" Grid.ColumnSpan="2" Grid.RowSpan="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <ProgressBar x:Name="HPbar" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" BorderBrush="#FF3AAC28" Value="{Binding Path=GetHP}" Maximum="{Binding Path=GetMHP}" Visibility="Visible" IsEnabled="False" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                    <ProgressBar.Resources>
-
-                    </ProgressBar.Resources>
-                    <ProgressBar.Foreground>
-                        <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="0">
-                            <Binding Path="Value" ElementName="HPbar" />
-                            <Binding Path="Maximum" ElementName="HPbar" />
-                        </MultiBinding>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-                <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                    <Label x:Name="HP" HorizontalAlignment="Left"  BorderThickness="2" VerticalAlignment="Bottom" FontFamily="Cooper Black" Foreground="White" IsEnabled="False" Visibility="Visible" Background="#FF6E6E6E" Grid.Column="0" BorderBrush="Black" Padding="0,0,0,0">
-                        <Label.Resources>
-
-                        </Label.Resources>
-                        <Label.Content>
-                            <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
-                                <Binding Path="Value" ElementName="HPbar" />
-                                <Binding Path="Maximum" ElementName="HPbar" />
-                            </MultiBinding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <Viewbox Grid.Row="0" HorizontalAlignment="Right" Grid.Column="1" Grid.RowSpan="2">
-                    <Label x:Name="BattleText6" Content="-10" Margin="0" Panel.ZIndex="6" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden" Foreground="#FFE00909" />
-                </Viewbox>
-
-                <Viewbox Grid.Row="4" Grid.Column="5" Grid.RowSpan="1" Grid.ColumnSpan="1" Panel.ZIndex="11" HorizontalAlignment="Right">
-                    <Label x:Name="CureHealTxt" Content="+999"  Background="#FFFB7111" Foreground="#FF00FFFF" BorderBrush="Black" BorderThickness="4" Grid.Column="52" HorizontalAlignment="Stretch" Grid.Row="22" VerticalAlignment="Stretch" Grid.RowSpan="2" Grid.ColumnSpan="4" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="5" Visibility="Hidden" IsEnabled="False"/>
-                </Viewbox>
-            </Grid>
-
-            <Grid Grid.Row="6" Grid.Column="4" Panel.ZIndex="5" Grid.ColumnSpan="2" Grid.RowSpan="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <ProgressBar x:Name="APbar" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"
-    BorderBrush="#FF1D25BB"  Value="{Binding Path=GetAP}"
-    Maximum="{Binding Path=GetMAP}"  IsEnabled="False" Visibility="Visible" Grid.RowSpan="2" Grid.ColumnSpan="2" >
-                    <ProgressBar.Resources>
-
-                    </ProgressBar.Resources>
-                    <ProgressBar.Foreground>
-                        <MultiBinding Converter="{StaticResource BarColorConverter}" ConverterParameter="1">
-                            <Binding Path="Value" ElementName="APbar" />
-                            <Binding Path="Maximum" ElementName="APbar" />
-                        </MultiBinding>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-
-                <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                    <Label x:Name="AP" HorizontalAlignment="Left"  VerticalAlignment="Bottom" RenderTransformOrigin="0.491,0.225" FontFamily="Cooper Black"
-    Foreground="#FFFFEDED" Background="#FF6E6E6E" BorderThickness="2" IsEnabled="False" Visibility="Visible" Padding="0,0,0,0" BorderBrush="Black" >
-                        <Label.Resources>
-
-                        </Label.Resources>
-                        <Label.Content>
-                            <MultiBinding Converter="{StaticResource BarValuesTextConverter}">
-                                <Binding Path="Value" ElementName="APbar" />
-                                <Binding Path="Maximum" ElementName="APbar" />
-                            </MultiBinding>
-                        </Label.Content>
-                    </Label>
-                </Viewbox>
-
-                <Viewbox Grid.Row="8" Grid.Column="5" Panel.ZIndex="11" HorizontalAlignment="Right">
-                    <Label x:Name="RecoverAPTxt" Content="+999" Grid.Column="52" HorizontalAlignment="Stretch" Background="#FFFB7111" Foreground="#FFFFFF00" BorderBrush="Black" BorderThickness="4"  Grid.Row="24" VerticalAlignment="Stretch" Panel.ZIndex="5" FontFamily="Cooper Black" FontSize="36" Grid.RowSpan="2" Grid.ColumnSpan="4" Visibility="Hidden" IsEnabled="False"/>
-                </Viewbox>
-            </Grid>
-
-            <Viewbox Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="5">
-                <Label x:Name="HPtext" Content="ОЗ" HorizontalAlignment="Left"  VerticalAlignment="Center" FontFamily="Bookman Old Style" Visibility="Visible" FontStyle="Italic" FontWeight="Bold" Padding="0,0,0,0" Foreground="Black"/>
-            </Viewbox>
-
-            <Viewbox Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Panel.ZIndex="5" HorizontalAlignment="Left">
-                <Label x:Name="APtext" Content="ОД" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="36" FontFamily="Bookman Old Style" Visibility="Visible" FontStyle="Italic" FontWeight="Bold" Padding="0,0,0,0" Foreground="Black"/>
-            </Viewbox>
-
-            <ProgressBar x:Name="Time1" HorizontalAlignment="Stretch" Maximum="{Binding Path=TimeFormula}"  VerticalAlignment="Stretch" Panel.ZIndex="4" LargeChange="10" BorderBrush="#FFECFF33" BorderThickness="1" IsEnabled="False" Visibility="Visible" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="1">
-                <ProgressBar.Background>
-                    <ImageBrush ImageSource="/Resources/Images/Fight/Misc/TableBorder1.png"/>
-                </ProgressBar.Background>
-                <ProgressBar.Foreground>
-                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0.5">
-                        <GradientStop Color="#FFBB835C" Offset="0"/>
-                        <GradientStop Color="#FFC7631D" Offset="1"/>
-                    </LinearGradientBrush>
-                </ProgressBar.Foreground>
-            </ProgressBar>
-            <Image x:Name="TimeTurnImg" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left"  Grid.RowSpan="2" Grid.Row="10" VerticalAlignment="Bottom" Source="/Resources/Images/Fight/Misc/TimeTurn.png" Panel.ZIndex="3" Visibility="Visible"/>
-            <Viewbox  Grid.Column="5" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Panel.ZIndex="5">
-                <Label x:Name="Lab2" Content="Ход"  Padding="0" VerticalAlignment="Stretch" Foreground="White" FontFamily="Franklin Gothic Demi Cond" Visibility="Visible" Panel.ZIndex="4" IsEnabled="False" Background="#DD660000" BorderBrush="Black" BorderThickness="1"/>
-            </Viewbox>
-
-            <Viewbox Grid.Row="11" Grid.Column="5" Grid.ColumnSpan="2" Panel.ZIndex="11">
-                <Button x:Name="AutoTurn" Padding="2" Content="Авто" Foreground="White" Background="#FF064FEC" BorderBrush="#B2FFFFFF" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="30" FontFamily="Franklin Gothic Demi Cond" Visibility="Hidden" Panel.ZIndex="5" IsEnabled="False" Grid.Column="5" Grid.Row="11" Grid.ColumnSpan="2" MouseEnter="AutoTurn_MouseEnter" MouseLeave="AutoTurn_MouseLeave" Click="AutoTurn_Click" />
-            </Viewbox>
-
-        </Grid>
-
-        <Grid Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.45*"/>
-                <RowDefinition Height="0.175*"/>
-                <RowDefinition Height="0.175*"/>
-                <RowDefinition Height="0.2*"/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.05*"/>
-                <ColumnDefinition Width="0.15*"/>
-                <ColumnDefinition Width="0.6*"/>
-                <ColumnDefinition Width="0.15*"/>
-                <ColumnDefinition Width="0.05*"/>
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="0.6*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                </Grid.ColumnDefinitions>
-
-                <Image x:Name="Img4" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="Visible" Source="/Resources/Images/Fight/Character/Person/Static/Usual.png" Stretch="Fill" Grid.Column="1" />
-            </Grid>
-
-            <Grid x:Name="FightMenu" Grid.Row="2" Grid.Column="1" Background="#A5064FEC" ZIndex="4" Visibility="Hidden" Grid.ColumnSpan="3" Grid.RowSpan="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.05*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.025*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.05*"/>
-                </Grid.RowDefinitions>
-                <Button x:Name="Button2" Tag="{Binding Source={x:Static help:Txts+FightOptions.Atk}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="50" Click="Button2_Click" Visibility="Visible" Panel.ZIndex="4" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" Grid.Row="1" Grid.Column="1">
-                    <Image Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Fight}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Fight}}" x:Name="FightImg" Source="/Resources/Images/Fight/Options/FightBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Button3" Tag="{Binding Source={x:Static help:Txts+FightOptions.Def}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="50" Visibility="Visible" Panel.ZIndex="4" Click="Button3_Click" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" FontWeight="Normal" Grid.Row="3" Grid.Column="1">
-                    <Image x:Name="DefenceImg" Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Defence}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Defence}}" Source="/Resources/Images/Fight/Options/DefenceBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Button4" Tag="{Binding Source={x:Static help:Txts+FightOptions.Esc}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="48" IsEnabled="True" Visibility="Visible" Panel.ZIndex="4" Click="Button4_Click" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" Grid.Row="3" Grid.Column="5">
-                    <Image x:Name="EscapeFromBattleImg" Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Escape}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Escape}}" Source="/Resources/Images/Fight/Options/EscapeBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Abilities" Tag="{Binding Source={x:Static help:Txts+FightOptions.Act}}"  HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="4" FontSize="48" Visibility="Visible" IsEnabled="{Binding Path=GetLV, Converter={StaticResource AccessConverter}}" Click="Abilities_Click" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" Grid.Row="1" Grid.Column="3">
-                    <Image x:Name="AbilitiesImg" Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Skills}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Skills}}" Source="/Resources/Images/Fight/Options/SkillsBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Items" Tag="{Binding Source={x:Static help:Txts+FightOptions.Inv}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="48" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" Click="Items_Click" Panel.ZIndex="4" Visibility="Visible" Grid.Row="3" Grid.Column="3">
-                    <Image x:Name="ItemsImg" Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Bag}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Bag}}" Source="/Resources/Images/Fight/Options/ItemsBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Genocide" Tag="{Binding Source={x:Static help:Txts+FightOptions.Gen}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="48" MouseEnter="FightDynamicButtons_MouseEnter" MouseLeave="FightDynamicButtons_MouseLeave" Panel.ZIndex="4" Visibility="Visible" Grid.Row="1" Grid.Column="5" Click="Genocide_Click">
-                    <Image x:Name="GenocideImg" Tag="{Binding Source={x:Static help:Paths+Static+BtnImgs+After.Genocide}}" attach:MiscText.Path="{Binding Source={x:Static help:Paths+Static+BtnImgs+Before.Genocide}}" Source="/Resources/Images/Fight/Options/GenocideBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Border Grid.RowSpan="5" Grid.ColumnSpan="7" BorderBrush="#B2FFFFFF" BorderThickness="5"></Border>
-            </Grid>
-
-            <Grid x:Name="SelectMenuFight" Background="#A5064FEC" ZIndex="4" Visibility="Hidden" IsEnabled="False" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.05*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="0.05*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="0.05*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="0.8*"/>
-                    <RowDefinition Height="0.1*"/>
-                </Grid.RowDefinitions>
-                <Border Grid.RowSpan="3" Grid.ColumnSpan="5" BorderBrush="#B2FFFFFF" BorderThickness="5"></Border>
-                <Button x:Name="Cancel1" Tag="{Binding Source={x:Static help:Txts+FightOptions.Atk}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="48" Visibility="Visible" Click="Cancel1_Click" MouseEnter="FightStaticButtons_MouseEnter" MouseLeave="FightStaticButtons_MouseLeave" Grid.Row="1" Grid.Column="3">
-                    <Image x:Name="Cancel1Img" Source="/Resources/Images/Fight/Options/CancelImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Fight" help:SkillInfo.Description="{Binding Source={x:Static help:Txts+FightOptions.Trg}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="48" Click="Fight_Click" Visibility="Visible" Panel.ZIndex="4" MouseEnter="SelectDynamicButtons_MouseEnter" MouseLeave="SelectDynamicButtons_MouseLeave" Grid.Row="1" Grid.Column="1" >
-                    <Image x:Name="SelectTrgt1Img" Source="/Resources/Images/Fight/Options/TrgtSelectBeforeImg.png" Stretch="Fill"/>
-                </Button>
-            </Grid>
-
-            <Grid x:Name="SkillsMenu" Grid.Row="1" Grid.Column="1" Background="#A5064FEC" ZIndex="5" Visibility="Hidden" Grid.ColumnSpan="3" Grid.RowSpan="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.65*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.05*"/>
-                    <RowDefinition Height="0.8*"/>
-                    <RowDefinition Height="0.025*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.05*"/>
-                </Grid.RowDefinitions>
-                <Border Grid.RowSpan="7" Grid.ColumnSpan="7" BorderBrush="#B2FFFFFF" BorderThickness="5"></Border>
-
-                <Grid x:Name="SkillList1" Grid.ColumnSpan="7" Grid.RowSpan="7" Visibility="Visible">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
-                    </Grid.ColumnDefinitions>
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.025*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.025*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.05*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Button x:Name="Cure" Tag="{Binding Path=ACure}" help:SkillInfo.Description="{Binding Path=ACure.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=2}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=5}" FontSize="36" Click="MedicineSkill_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="1" Grid.Column="1" >
-                        <Image x:Name="CureImg" Source="/Resources/Images/Menu/Skills/CureMenu.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Cure2" Tag="{Binding Path=ACure2}" help:SkillInfo.Description="{Binding Path=ACure2.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=21}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=10}" FontSize="36" Click="MedicineSkill_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="1" Grid.Column="3">
-                        <Image x:Name="Cure2Img" Source="/Resources/Images/Menu/Skills/Cure2.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Heal" Tag="{Binding Path=AHeal}" help:SkillInfo.Description="{Binding Path=AHeal.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="4" FontSize="36" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=4}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=3}" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Click="Heal_Click" Grid.Row="1" Grid.Column="5">
-                        <Image x:Name="HealImg" Source="/Resources/Images/Menu/Skills/HealMenu.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="BuffUp" Tag="{Binding Path=ATemper}" help:SkillInfo.Description="{Binding Path=ATemper.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=16}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=12}" FontSize="36" Click="BuffSkills_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="3" Grid.Column="1">
-                        <Image x:Name="BuffUpImg" Source="/Resources/Images/Menu/Skills/StrengthUP.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="ToughenUp" Tag="{Binding Path=ASecure}" help:SkillInfo.Description="{Binding Path=ASecure.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=14}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=8}" FontSize="36" Click="BuffSkills_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="3" Grid.Column="3">
-                        <Image x:Name="ToughenUpImg" Source="/Resources/Images/Menu/Skills/DefenceUP.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Regen" Tag="{Binding Path=AHpup}" help:SkillInfo.Description="{Binding Path=AHpup.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=20}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=15}" FontSize="36" Click="Regen_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="3" Grid.Column="5">
-                        <Image x:Name="RegenImg" Source="/Resources/Images/Menu/Skills/Regen.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Control" Tag="{Binding Path=AApup}" help:SkillInfo.Description="{Binding Path=AApup.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=25}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=0}" FontSize="36" Click="Control_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="5" Grid.Column="3">
-                        <Image x:Name="ControlImg" Source="/Resources/Images/Menu/Skills/Control.png" Stretch="Fill"/>
-                    </Button>
-
-                    <Button x:Name="SwitchAbils1" Tag="{x:Reference SkillList2}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" FontSize="36" FontFamily="Segoe UI" Click="SwitchAbils_Click" Visibility="Visible" Grid.Row="5" Grid.Column="5">
-                        <Image x:Name="ToNextImg" Source="/Resources/Images/Fight/Options/ToNext.png" Stretch="Fill"/>
-                    </Button>
-
-                </Grid>
-
-                <Grid x:Name="SkillList2" Grid.ColumnSpan="7" Grid.RowSpan="7" Visibility="Hidden">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
-                        <ColumnDefinition Width="0.32*"/>
-                        <ColumnDefinition Width="0.01*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.025*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.025*"/>
-                        <RowDefinition Height="0.3875*"/>
-                        <RowDefinition Height="0.05*"/>
-                    </Grid.RowDefinitions>
 
-                    <Button x:Name="Torch" Tag="{x:Reference ACT1}" help:SkillInfo.Description="{Binding Path=ATorch.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=4}" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=3}" Click="SelectSkill_Click" Panel.ZIndex="4" Grid.Row="1" Grid.Column="1" >
-                        <Image x:Name="TorchImg" Source="/Resources/Images/Menu/Skills/TorchImg.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Whip" Tag="{x:Reference ACT2}" help:SkillInfo.Description="{Binding Path=AWhip.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="4" FontSize="36" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Click="SelectSkill_Click" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=6}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=6}" Grid.Row="1" Grid.Column="3" >
-                        <Image x:Name="WhipImg" Source="/Resources/Images/Menu/Skills/WhipImg.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Thrower" Tag="{x:Reference ACT3}" help:SkillInfo.Description="{Binding Path=ASling.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=11}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=15}" FontSize="36"  Click="SelectSkill_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="1" Grid.Column="5">
-                        <Image x:Name="ThrowerImg" Source="/Resources/Images/Menu/Skills/Thrower.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Super" Tag="{Binding Path=ACombo}" help:SkillInfo.Description="{Binding Path=ACombo.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="4" FontSize="36" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=10}" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=7}" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Click="ActionOnAll_Click" Grid.Row="3" Grid.Column="1">
-                        <Image x:Name="SuperImg" Source="/Resources/Images/Menu/Skills/SuperImg.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Tornado" Tag="{Binding Path=AWhirl}" help:SkillInfo.Description="{Binding Path=AWhirl.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=13}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=20}" FontSize="36" Click="ActionOnAll_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="3" Grid.Column="3">
-                        <Image x:Name="TornadoImg" Source="/Resources/Images/Menu/Skills/Tornado.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Quake" Tag="{Binding Path=AQuake}" help:SkillInfo.Description="{Binding Path=AQuake.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=18}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=30}" FontSize="36" Click="ActionOnAll_Click" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Grid.Row="3" Grid.Column="5">
-                        <Image x:Name="QuakeImg" Source="/Resources/Images/Menu/Skills/Quake.png" Stretch="Fill"/>
-                    </Button>
-                    <Button x:Name="Learn" Tag="{x:Reference ACT4}" help:SkillInfo.Description="{Binding Path=ALearn.Description}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=5}" IsEnabled="{Binding Path=GetAP, Converter={StaticResource AccessConverter}, ConverterParameter=2}" FontSize="36" MouseEnter="AbilitiesInFight_MouseEnter" MouseLeave="AbilitiesInFight_MouseLeave" Click="SelectSkill_Click" Grid.Row="5" Grid.Column="3">
-                        <Image x:Name="LearnImg" Source="/Resources/Images/Menu/Skills/Learn.png" Stretch="Fill"/>
-                    </Button>
+                    <!--<avatar:Foe>
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
 
-                    <Button x:Name="SwitchAbils2" Tag="{x:Reference SkillList1}" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="5" FontSize="36" FontFamily="Segoe UI" Click="SwitchAbils_Click" Visibility="Visible" Grid.Row="5" Grid.Column="5">
-                        <Image x:Name="ToPrevImg" Source="/Resources/Images/Fight/Options/ToPrev.png" Stretch="Fill"/>
-                    </Button>
+                        <Grid.Column>
+                            2
+                        </Grid.Column>
+                    </avatar:Foe>-->
                 </Grid>
 
-                <Button x:Name="Back1" Tag="{Binding Source={x:Static help:Txts+CancelOptions.Back}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" Click="Back1_Click" MouseEnter="FightStaticButtons_MouseEnter" MouseLeave="FightStaticButtons_MouseLeave" Visibility="Visible" IsEnabled="True" Panel.ZIndex="4" Grid.Row="3" Grid.Column="1">
-                    <Image x:Name="BackImg1" Source="/Resources/Images/Fight/Options/BackImg.png" Stretch="Fill"/>
-                </Button>
+                <avatar:Person>
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+
+                    <avatar:Person.Battle>
+                        <Binding>
+                            <Binding.ElementName>
+                                Battle
+                            </Binding.ElementName>
+
+                            <Binding.Path>
+                                DataContext.BattleModel
+                            </Binding.Path>
+                        </Binding>
+                    </avatar:Person.Battle>
+                </avatar:Person>
             </Grid>
-
-            <Grid x:Name="SelectMenuSkills" Grid.Row="2" Grid.Column="2" Background="#A5064FEC" ZIndex="3" Visibility="Hidden" IsEnabled="False">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.05*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="0.05*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="0.05*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.1*"/>
-                    <RowDefinition Height="0.8*"/>
-                    <RowDefinition Height="0.1*"/>
-                </Grid.RowDefinitions>
-                <Border Grid.RowSpan="3" Grid.ColumnSpan="5" BorderBrush="#B2FFFFFF" BorderThickness="5"></Border>
-
-                <Button x:Name="ACT1" Tag="{Binding Path=ATorch}" help:SkillInfo.Description="{Binding Source={x:Static help:Txts+FightOptions.S1}}" help:SkillInfo.Cost="4" help:SkillInfo.Name="Факел" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" MouseEnter="SelectDynamicButtons_MouseEnter" MouseLeave="SelectDynamicButtons_MouseLeave" Click="ActionOnOne_Click" Visibility="Hidden" Grid.Row="1" Grid.Column="1">
-                    <Image x:Name="SelectTrgt2Img" Source="/Resources/Images/Fight/Options/TrgtSelectBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="ACT2" Tag="{Binding Path=AWhip}" help:SkillInfo.Description="{Binding Source={x:Static help:Txts+FightOptions.S2}}" help:SkillInfo.Cost="6" help:SkillInfo.Name="Кнут" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" Visibility="Hidden" MouseEnter="SelectDynamicButtons_MouseEnter" MouseLeave="SelectDynamicButtons_MouseLeave" Click="ActionOnOne_Click" Grid.Row="1" Grid.Column="1">
-                    <Image x:Name="SelectTrgt3Img" Source="/Resources/Images/Fight/Options/TrgtSelectBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="ACT3" Tag="{Binding Path=ASling}" help:SkillInfo.Description="{Binding Source={x:Static help:Txts+FightOptions.S3}}" help:SkillInfo.Cost="15" help:SkillInfo.Name="Рогатка" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" Visibility="Hidden" Click="ActionOnOne_Click" MouseEnter="SelectDynamicButtons_MouseEnter" MouseLeave="SelectDynamicButtons_MouseLeave" Grid.Row="1" Grid.Column="1">
-                    <Image x:Name="SelectTrgt4Img" Source="/Resources/Images/Fight/Options/TrgtSelectBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="ACT4" Tag="{Binding Path=ALearn}" help:SkillInfo.Description="{Binding Source={x:Static help:Txts+FightOptions.S4}}" help:SkillInfo.Cost="2" help:SkillInfo.Name="Изучение" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" Visibility="Hidden" Panel.ZIndex="4" Click="ACT4_Click" MouseEnter="SelectDynamicButtons_MouseEnter" MouseLeave="SelectDynamicButtons_MouseLeave" Grid.ColumnSpan="1" Grid.RowSpan="1" Grid.Column="1" Grid.Row="1">
-                    <Image x:Name="SelectTrgt5Img" Source="/Resources/Images/Fight/Options/TrgtSelectBeforeImg.png" Stretch="Fill"/>
-                </Button>
-                <Button x:Name="Cancel2" Tag="{Binding Source={x:Static help:Txts+CancelOptions.Act}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" MouseEnter="FightStaticButtons_MouseEnter" MouseLeave="FightStaticButtons_MouseLeave" Click="Cancel2_Click" Visibility="Visible" IsCancel="True" Grid.Row="1" Grid.Column="3">
-                    <Image x:Name="Cancel2Img" Source="/Resources/Images/Fight/Options/CancelImg.png" Stretch="Fill"/>
-                </Button>
-            </Grid>
-
-            <Grid x:Name="ItemsMenu" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Background="#A5064FEC" ZIndex="5" Visibility="Hidden" Grid.ColumnSpan="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                    <ColumnDefinition Width="0.32*"/>
-                    <ColumnDefinition Width="0.01*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.05*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.025*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.025*"/>
-                    <RowDefinition Height="0.3875*"/>
-                    <RowDefinition Height="0.05*"/>
-                </Grid.RowDefinitions>
-                <Border Grid.RowSpan="7" Grid.ColumnSpan="7" BorderBrush="#B2FFFFFF" BorderThickness="5"></Border>
-
-                <Image x:Name="ItemsCountImg" HorizontalAlignment="Center"  VerticalAlignment="Center" Panel.ZIndex="4" Source="/Resources/Images/Fight/Misc/ItemsCount.png" IsEnabled="False" Visibility="Visible" Stretch="Fill" Grid.Row="1" Grid.Column="5"/>
-                <Viewbox Grid.Row="1" Grid.Column="5" Panel.ZIndex="4" >
-                    <Label x:Name="ItemText" Content="" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" FontFamily="Franklin Gothic Book" FontStyle="Italic" FontWeight="Bold" Visibility="Visible" IsEnabled="False" Grid.Row="1" Grid.Column="5" Foreground="Black" />
-                </Viewbox>
-
-                <Button x:Name="Antidote1" Tag="{Binding Path=GetBag.Antidote}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Click="ItemsInFight_Click" MouseEnter="ItemsUseInBattle_MouseEnter" MouseLeave="ItemsUseInBattle_MouseLeave" Visibility="{Binding Path=GetBag.Antidote.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" IsEnabled="{Binding Path=GetStatus}" Panel.ZIndex="4" Grid.Row="1" Grid.Column="1" >
-                    <Image x:Name="AntidoteImg" Source="/Resources/Images/Menu/Bag/AntidoteItem.png" Visibility="Visible"/>
-                </Button>
-                <Button x:Name="Bandage1" Tag="{Binding Path=GetBag.Bandage}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" MouseEnter="ItemsUseInBattle_MouseEnter" MouseLeave="ItemsUseInBattle_MouseLeave" Click="ItemsInFight_Click" Visibility="{Binding Path=GetBag.Bandage.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" IsEnabled="True" Grid.Row="1" Grid.Column="3" >
-                    <Image x:Name="BandageItem" Source="/Resources/Images/Menu/Bag/BandageItem.png"/>
-                </Button>
-                <Button x:Name="Ether" Tag="{Binding Path=GetBag.Ether}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" IsEnabled="True" MouseEnter="ItemsUseInBattle_MouseEnter" MouseLeave="ItemsUseInBattle_MouseLeave" Click="ItemsInFight_Click" Visibility="{Binding Path=GetBag.Ether.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" Grid.Row="3" Grid.Column="1" >
-                    <Image x:Name="EtherItemImg" Source="/Resources/Images/Menu/Bag/EtherItem.png"/>
-                </Button>
-                <Button x:Name="Fused1" Tag="{Binding Path=GetBag.Fused}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" MouseEnter="ItemsUseInBattle_MouseEnter" MouseLeave="ItemsUseInBattle_MouseLeave" IsEnabled="True" Click="ItemsInFight_Click" Visibility="{Binding Path=GetBag.Fused.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" Grid.Row="3" Grid.Column="3" >
-                    <Image x:Name="FusedItem" Source="/Resources/Images/Menu/Bag/FusedItem.png"/>
-                </Button>
-                <Button x:Name="Herbs" Tag="{Binding Path=GetBag.Herbs}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" MouseLeave="ItemsUseInBattle_MouseLeave" IsEnabled="True" Visibility="{Binding Path=GetBag.Herbs.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" MouseEnter="ItemsUseInBattle_MouseEnter" Click="ItemsInFight_Click" Grid.Row="3" Grid.Column="5">
-                    <Image x:Name="HerbsItem" Source="/Resources/Images/Menu/Bag/HerbsItem.png"/>
-                </Button>
-                <Button x:Name="Ether2" Tag="{Binding Path=GetBag.Ether2}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" MouseLeave="ItemsUseInBattle_MouseLeave" IsEnabled="True" Visibility="{Binding Path=GetBag.Ether2.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" Click="ItemsInFight_Click" MouseEnter="ItemsUseInBattle_MouseEnter" Grid.Row="5" Grid.Column="3">
-                    <Image x:Name="Ether2Item" Source="/Resources/Images/Menu/Bag/Ether2Item.png"/>
-                </Button>
-                <Button x:Name="Elixir" Tag="{Binding Path=GetBag.Elixir}" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Panel.ZIndex="4" MouseLeave="ItemsUseInBattle_MouseLeave" IsEnabled="True" Visibility="{Binding Path=GetBag.Elixir.Count, Converter={StaticResource VisibilityConverter}, ConverterParameter=1}" MouseEnter="ItemsUseInBattle_MouseEnter" Click="ItemsInFight_Click" Grid.Row="5" Grid.Column="5">
-                    <Image x:Name="ElixirItem" Source="/Resources/Images/Menu/Bag/ElixirItem.png"/>
-                </Button>
-
-                <Button x:Name="Back2" Tag="{Binding Source={x:Static help:Txts+CancelOptions.Back}}" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="36" Visibility="Visible" Panel.ZIndex="4" MouseEnter="FightStaticButtons_MouseEnter" MouseLeave="FightStaticButtons_MouseLeave" Click="Back2_Click" Grid.Row="5" Grid.Column="1">
-                    <Image x:Name="BackImg2" Source="/Resources/Images/Fight/Options/BackImg.png" Stretch="Fill"/>
-                </Button>
-            </Grid>
-
         </Grid>
-    </Grid>-->
+    </Grid>
 </UserControl>

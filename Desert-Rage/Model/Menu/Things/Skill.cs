@@ -1,6 +1,4 @@
-﻿using DesertRage.Customing.Converters;
-
-namespace DesertRage.Model.Menu.Things
+﻿namespace DesertRage.Model.Menu.Things
 {
     public class Skill : DescriptionUnit
     {

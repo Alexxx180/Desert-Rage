@@ -44,9 +44,21 @@
     <None Remove="Resources\Images\Autorize\Skips2.png" />
     <None Remove="Resources\Images\Autorize\Wanted.png" />
     <None Remove="Resources\Images\Autorize\Wanted2.png" />
+    <None Remove="Resources\Images\Background\Cover.svg" />
+    <None Remove="Resources\Images\Fight\Background\AncientTemple.svg" />
     <None Remove="Resources\Images\Fight\Background\Battle1.jpg" />
     <None Remove="Resources\Images\Fight\Background\Battle2.jpg" />
     <None Remove="Resources\Images\Fight\Background\Battle3.jpg" />
+    <None Remove="Resources\Images\Fight\Background\LavaTemple.svg" />
+    <None Remove="Resources\Images\Fight\Background\WaterTemple.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\Pharaoh\Action.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\Pharaoh\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\Rock\Action.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\Rock\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\The-ruler\Action.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\The-ruler\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\UghZan\Action.svg" />
+    <None Remove="Resources\Images\Fight\Bosses\UghZan\Idle.svg" />
     <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee1.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Escape\Flee2.png" />
     <None Remove="Resources\Images\Fight\Character\Icon\Dynamic\Fight\Knife\IconKnAtk1.png" />
@@ -458,88 +470,36 @@
     <None Remove="Resources\Images\Fight\Character\Person\Static\Defence.png" />
     <None Remove="Resources\Images\Fight\Character\Person\Static\SeriousSam.png" />
     <None Remove="Resources\Images\Fight\Character\Person\Static\Usual.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll4.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll5.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks10.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks4.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks5.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks6.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks7.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks8.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks9.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\MasterOfAll1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\Pharaoh.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\UghZan.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Bosses\Static\Warrior.png" />
-    <None Remove="Resources\Images\Fight\Enemies\BossImgs\MasterOfAll1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\BossImgs\Pharaoh.png" />
-    <None Remove="Resources\Images\Fight\Enemies\BossImgs\UghZan1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\BossImgs\Warrior1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Bones.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks2.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks3.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Ghoul.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\GrimReaper.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Imp.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\KillerMole.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Master.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Mummy.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Scarab.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Spider.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Vulture.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Worm.png" />
-    <None Remove="Resources\Images\Fight\Enemies\Enemies\Zombie.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Bones1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Ghoul1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\GrimReaper1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Imp1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\KillerMole1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Master1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Mummy1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Scarab.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Spider1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Vulture1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Worm1.png" />
-    <None Remove="Resources\Images\Fight\Enemies\EnemyImgs\Zombie1.png" />
+    <None Remove="Resources\Images\Fight\Character\Ray\Action.svg" />
+    <None Remove="Resources\Images\Fight\Character\Ray\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Character\Rock\Action.svg" />
+    <None Remove="Resources\Images\Fight\Character\Rock\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Character\Sam\Action.svg" />
+    <None Remove="Resources\Images\Fight\Character\Sam\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Bones\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Bones\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Ghoul\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Ghoul\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Grim-reaper\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Grim-reaper\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Imp\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Imp\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Killer-mole\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Killer-mole\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Master\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Master\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Mummy\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Mummy\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Scarab\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Scarab\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Spider\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Spider\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Vulture\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Vulture\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Worm\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Worm\Idle.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Zombie\Action.svg" />
+    <None Remove="Resources\Images\Fight\Enemies\Zombie\Idle.svg" />
     <None Remove="Resources\Images\Fight\Misc\BuffUp.png" />
     <None Remove="Resources\Images\Fight\Misc\Confirm.png" />
     <None Remove="Resources\Images\Fight\Misc\ItemsCount.png" />
@@ -586,8 +546,6 @@
     <None Remove="Resources\Images\Locations\3-Lava-Temple\Way.png" />
     <None Remove="Resources\Images\Locations\4-The-Great-Escape\Wall.png" />
     <None Remove="Resources\Images\Locations\4-The-Great-Escape\Way.png" />
-    <None Remove="Resources\Images\Locations\Background\Black.jpg" />
-    <None Remove="Resources\Images\Locations\Background\Cover.jpg" />
     <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor1.png" />
     <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor2.png" />
     <None Remove="Resources\Images\Locations\Messages\Chests\GetItemsArmor3.png" />
@@ -912,8 +870,133 @@
 
   <ItemGroup>
     <Resource Include="Resources\Images\Autorize\IconShocked3.ico" />
+    <Resource Include="Resources\Images\Background\Cover.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Background\AncientTemple.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Background\LavaTemple.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Background\WaterTemple.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\Pharaoh\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\Pharaoh\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\Rock\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\Rock\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\The-ruler\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\The-ruler\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\UghZan\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Bosses\UghZan\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Fight\Character\Icon\Static\PoisonBubble.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Dead.png" />
+    <Resource Include="Resources\Images\Fight\Character\Ray\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Character\Ray\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Character\Rock\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Character\Rock\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Character\Sam\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Character\Sam\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Bones\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Bones\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Ghoul\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Ghoul\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Grim-reaper\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Grim-reaper\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Imp\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Imp\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Killer-mole\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Killer-mole\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Master\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Master\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Mummy\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Mummy\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Scarab\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Scarab\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Spider\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Spider\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Vulture\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Vulture\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Worm\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Worm\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Zombie\Action.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Fight\Enemies\Zombie\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Fight\Misc\BuffUp.png" />
     <Resource Include="Resources\Images\Fight\Misc\ToughUp.png" />
     <Resource Include="Resources\Images\Fight\Options\GenocideAfterImg.png" />
@@ -934,8 +1017,6 @@
     <Resource Include="Resources\Images\Locations\3-Lava-Temple\Way.png" />
     <Resource Include="Resources\Images\Locations\4-The-Great-Escape\Wall.png" />
     <Resource Include="Resources\Images\Locations\4-The-Great-Escape\Way.png" />
-    <Resource Include="Resources\Images\Locations\Background\Black.jpg" />
-    <Resource Include="Resources\Images\Locations\Background\Cover.jpg" />
     <Resource Include="Resources\Images\Locations\Messages\Pain\Pain2.png" />
     <Resource Include="Resources\Images\Locations\Messages\Pain\Pain3.png" />
     <Resource Include="Resources\Images\Locations\Total\ActionSource.png" />
@@ -1433,87 +1514,6 @@
     <Resource Include="Resources\Images\Fight\Character\Icon\Static\Poison.png" />
     <Resource Include="Resources\Images\Fight\Character\Icon\Static\Sam.png" />
     <Resource Include="Resources\Images\Fight\Character\Icon\Static\Usual.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll4.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\MofallAttacks\MasterOfAll5.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\PharaohAttacks\PharaohAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks10.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks4.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks5.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks6.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks7.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks8.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\UghZan1Attacks\UghZan1Attacks9.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Dynamic\WarriorAttacks\WarriorAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\MasterOfAll1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\Pharaoh.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\UghZan.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Bosses\Static\Warrior.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\MasterOfAll1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\Pharaoh.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\UghZan1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\BossImgs\Warrior1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Bones.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\BonesAttacks\BonesAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GhoulAttacks\GhoulAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\GrimReaperAttacks\GrimReaperAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ImpAttacks\Imp2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\KillerMoleAttacks\KillerMole2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MasterAttacks\Master2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\MummyAttacks\MummyAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ScarabAttacks\ScarabAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\SpiderAttacks\SpiderAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\VultureAttacks\VultureAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\WormAttacks\Worm2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks2.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Dynamic\ZombieAttacks\ZombieAttacks3.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Ghoul.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\GrimReaper.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Imp.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\KillerMole.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Master.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Mummy.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Scarab.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Spider.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Vulture.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Worm.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\Enemies\Zombie.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Bones1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Ghoul1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\GrimReaper1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Imp1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\KillerMole1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Master1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Mummy1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Scarab.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Spider1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Vulture1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Worm1.png" />
-    <Resource Include="Resources\Images\Fight\Enemies\EnemyImgs\Zombie1.png" />
     <Resource Include="Resources\Images\Fight\Misc\Confirm.png" />
     <Resource Include="Resources\Images\Fight\Misc\ItemsCount.png" />
     <Resource Include="Resources\Images\Fight\Misc\TableBorder1.png" />
