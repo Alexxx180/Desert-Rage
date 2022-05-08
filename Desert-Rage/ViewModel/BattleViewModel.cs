@@ -16,6 +16,17 @@ namespace DesertRage.ViewModel
 {
     public class BattleViewModel : INotifyPropertyChanged
     {
+        //public static readonly DependencyProperty
+        //    EnemiesProperty = DependencyProperty.Register(
+        //        nameof(Enemies), typeof(ObservableCollection<Foe>),
+        //        typeof(BattleViewModel));
+
+        //public ObservableCollection<Foe> Enemies
+        //{
+        //    get => GetValue(EnemiesProperty) as ObservableCollection<Foe>;
+        //    set => SetValue(EnemiesProperty, value);
+        //}
+
         private ObservableCollection<Foe> _enemies;
         public ObservableCollection<Foe> Enemies
         {
@@ -30,6 +41,7 @@ namespace DesertRage.ViewModel
         public BattleViewModel()
         {
             Player = LevelMap.GetUserData();
+            Enemies = new ObservableCollection<Foe>();
             RegularBattleStrategy();
         }
 
@@ -121,6 +133,20 @@ namespace DesertRage.ViewModel
 
                 List<Model.Stats.Enemy.Foe> suitable = sizeFoes[selection];
                 int foeBySize = random.Next(0, suitable.Count);
+
+                //for (byte iii = 0; iii < suitable.Count)
+
+                System.Diagnostics.Trace.WriteLine(selection.ToString());
+                System.Diagnostics.Trace.WriteLine(totalArea.Point1.ToString());
+
+                Model.Stats.Enemy.Foe someFoe = suitable[foeBySize];
+
+                System.Diagnostics.Trace.WriteLine(someFoe.Icon.ToString());
+                System.Diagnostics.Trace.WriteLine(someFoe.Name.ToString());
+                System.Diagnostics.Trace.WriteLine(someFoe.Description.ToString());
+                System.Diagnostics.Trace.WriteLine(someFoe.Hp.Current.ToString());
+                System.Diagnostics.Trace.WriteLine(someFoe.Hp.Max.ToString());
+                
 
                 Foe foe = new Foe
                 {

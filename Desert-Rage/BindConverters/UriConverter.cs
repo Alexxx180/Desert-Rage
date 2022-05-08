@@ -16,6 +16,5 @@ namespace DesertRage.BindConverters
         {
             return (value as Uri).AbsoluteUri;
         }
-
     }
 }

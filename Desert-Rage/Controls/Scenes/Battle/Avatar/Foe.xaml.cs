@@ -39,6 +39,11 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
             SizeProperty = DependencyProperty.Register(
                 nameof(Size), typeof(Position), typeof(Foe));
 
+        public static readonly DependencyProperty
+            AttributesProperty = DependencyProperty.Register(
+                nameof(Attributes), typeof(Model.Stats.Enemy.Foe),
+                typeof(Foe));
+
         public BattleViewModel Battle
         {
             get => GetValue(BattleProperty) as BattleViewModel;
@@ -57,6 +62,12 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
             set => SetValue(SizeProperty, value);
         }
 
+        public Model.Stats.Enemy.Foe Attributes
+        {
+            get => GetValue(AttributesProperty) as Model.Stats.Enemy.Foe;
+            set => SetValue(AttributesProperty, value);
+        }
+
         #region Enemy Attributes
         private DispatcherTimer _turn;
 
@@ -70,22 +81,13 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
                 OnPropertyChanged();
             }
         }
-
-        private Model.Stats.Enemy.Foe _attributes;
-        public Model.Stats.Enemy.Foe Attributes
-        {
-            get => _attributes;
-            set
-            {
-                _attributes = value;
-                OnPropertyChanged();
-            }
-        }
         #endregion
 
         public Foe()
         {
             InitializeComponent();
+            //Size = new Position(1);
+
             Time = new Bar(0, 1000);
         }
 
