@@ -113,22 +113,25 @@
                     <ColumnDefinition Width="0.25*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                <ItemsControl ItemsSource="{Binding Path=BattleModel.Enemies}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
 
-                    <!--<avatar:Foe>
+                                <!--<avatar:Foe>
                         <Grid.Row>
                             1
                         </Grid.Row>
@@ -137,7 +140,12 @@
                             2
                         </Grid.Column>
                     </avatar:Foe>-->
-                </Grid>
+                            </Grid>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+                
 
                 <avatar:Person>
                     <Grid.Column>

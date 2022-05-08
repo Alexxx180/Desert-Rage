@@ -23,7 +23,7 @@ namespace DesertRage.Controls.Scenes
     /// </summary>
     public partial class BattleScene : UserControl, INotifyPropertyChanged
     {
-        public readonly Position SceneSizes = new Position(5, 3);
+        public static readonly Position SceneSizes = new Position(5, 3);
 
         private Uri _battleBackground;
         public Uri BattleBackground
