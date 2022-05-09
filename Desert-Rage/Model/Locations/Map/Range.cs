@@ -31,6 +31,11 @@
             return Point2 - Point1 + 1;
         }
 
+        public override string ToString()
+        {
+            return $"{{ {Point1}, {Point2} }}";
+        }
+
         public bool IsOverflow(Range mask)
         {
             return Point1.IsOutTop(mask.Point1)

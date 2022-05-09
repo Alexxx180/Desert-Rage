@@ -17,14 +17,7 @@
     </UserControl.DataContext>
 
     <UserControl.Resources>
-        <Style x:Key="FoeTipStyle" TargetType="{x:Type ToolTip}">
-            <Setter Property="DataContext" Value="{Binding ElementName=EnemyControl}"/>
-            <!--<Setter>
-                Style="{StaticResource FoeTipStyle}"
-            </Setter>-->
-        </Style>
-
-        <ToolTip x:Key="FoeTip" >
+        <ToolTip x:Key="FoeTip">
             <Grid>
                 <Grid.Width>
                     200

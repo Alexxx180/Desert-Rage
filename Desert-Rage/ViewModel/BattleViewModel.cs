@@ -72,7 +72,7 @@ namespace DesertRage.ViewModel
             Model.Stats.Enemy.Foe[] stageFoes = FoesList();
 
             System.Random random = new System.Random();
-            int count = random.Next(1, 5);
+            int count = random.Next(1, 6);
 
             List<Range> area = new List<Range>
             {
@@ -82,6 +82,9 @@ namespace DesertRage.ViewModel
                     Point2 = BattleScene.SceneSizes
                 }
             };
+
+            System.Diagnostics.Trace.WriteLine(area.ToString());
+            System.Diagnostics.Trace.WriteLine("Foes count: " + count);
 
             byte i;
 
@@ -135,24 +138,25 @@ namespace DesertRage.ViewModel
                 int foeBySize = random.Next(0, suitable.Count);
 
                 //for (byte iii = 0; iii < suitable.Count)
-
+                System.Diagnostics.Trace.WriteLine("");
                 System.Diagnostics.Trace.WriteLine(selection.ToString());
                 System.Diagnostics.Trace.WriteLine(totalArea.Point1.ToString());
 
                 Model.Stats.Enemy.Foe someFoe = suitable[foeBySize];
 
+                System.Diagnostics.Trace.WriteLine("");
                 System.Diagnostics.Trace.WriteLine(someFoe.Icon.ToString());
                 System.Diagnostics.Trace.WriteLine(someFoe.Name.ToString());
                 System.Diagnostics.Trace.WriteLine(someFoe.Description.ToString());
                 System.Diagnostics.Trace.WriteLine(someFoe.Hp.Current.ToString());
                 System.Diagnostics.Trace.WriteLine(someFoe.Hp.Max.ToString());
-                
+                System.Diagnostics.Trace.WriteLine("");
 
                 Foe foe = new Foe
                 {
                     Battle = this,
                     Size = selection,
-                    Tile = totalArea.Point1,
+                    Tile = totalArea.Point1 - 1,
                     Attributes = suitable[foeBySize]
                 };
 
@@ -168,6 +172,11 @@ namespace DesertRage.ViewModel
 
                 area.AddRange(RecalculateArea(totalArea, foeArea));
                 _ = area.Remove(totalArea);
+
+                for (ii = 0; ii < area.Count; ii++)
+                {
+                    System.Diagnostics.Trace.WriteLine(area[ii].ToString());
+                }
             }
         }
 
@@ -210,7 +219,11 @@ namespace DesertRage.ViewModel
                 X = foe.Point2.X,
                 Y = foe.Point1.Y - 1
             };
-            return new Range(leftTop, rightBottom);
+            return new Range
+            {
+                Point1 = leftTop,
+                Point2 = rightBottom
+            };
         }
 
         private Range BottomArea(Range total, Range foe)
@@ -225,7 +238,11 @@ namespace DesertRage.ViewModel
                 X = foe.Point2.X,
                 Y = total.Point2.Y
             };
-            return new Range(leftTop, rightBottom);
+            return new Range
+            {
+                Point1 = leftTop,
+                Point2 = rightBottom
+            };
         }
 
         private Range LeftArea(Range total, Range foe)
@@ -236,7 +253,12 @@ namespace DesertRage.ViewModel
                 X = foe.Point1.X - total.Point1.X,
                 Y = total.Point2.Y
             };
-            return new Range(leftTop, rightBottom);
+
+            return new Range
+            {
+                Point1 = leftTop,
+                Point2 = rightBottom
+            };
         }
 
         private Range RightArea(Range total, Range foe)
@@ -247,7 +269,12 @@ namespace DesertRage.ViewModel
                 Y = total.Point1.Y
             };
             Position rightBottom = total.Point2;
-            return new Range(leftTop, rightBottom);
+
+            return new Range
+            {
+                Point1 = leftTop,
+                Point2 = rightBottom
+            };
         }
 
         #region INotifyPropertyChanged Members

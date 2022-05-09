@@ -55,7 +55,7 @@ namespace DesertRage.Model.Locations
                     Icon = "/Resources/Images/Fight/Enemies/Mummy/Idle.svg",
                     Description = "Непохоже, что кто-то рассказал этому бедалаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
                     Action = "/Resources/Images/Fight/Enemies/Mummy/Action.svg",
-                    Size = new Position(1, 2),
+                    Size = new Position(2),
                     Death = Sounds.MummyDied,
                     Hp = new Bar(83),
                     Stats = new BattleStats {
@@ -73,7 +73,7 @@ namespace DesertRage.Model.Locations
                     Icon = "/Resources/Images/Fight/Enemies/Zombie/Idle.svg",
                     Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
                     Action = "/Resources/Images/Fight/Enemies/Zombie/Action.svg",
-                    Size = new Position(1),
+                    Size = new Position(2, 1),
                     Death = Sounds.ZombieDied,
                     Hp = new Bar(83),
                     Stats = new BattleStats {
