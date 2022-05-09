@@ -1,7 +1,7 @@
 ﻿using DesertRage.Controls.Scenes.Map;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Map;
 using DesertRage.ViewModel;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -23,10 +23,10 @@ namespace DesertRage.Controls.Scenes
     /// </summary>
     public partial class BattleScene : UserControl, INotifyPropertyChanged
     {
-        public static readonly Position SceneSizes = new Position(5, 3);
+        public static readonly Range SceneArea;
 
-        private Uri _battleBackground;
-        public Uri BattleBackground
+        private System.Uri _battleBackground;
+        public System.Uri BattleBackground
         {
             get => _battleBackground;
             set
@@ -47,10 +47,19 @@ namespace DesertRage.Controls.Scenes
             set => SetValue(BattleModelProperty, value);
         }
 
+        static BattleScene()
+        {
+            SceneArea = new Range
+            {
+                Point1 = new Position(1, 1),
+                Point2 = new Position(5, 3)
+            };
+        }
+
         public BattleScene()
         {
             InitializeComponent();
-
+            //
             BattleModel = new BattleViewModel();
         }
 
