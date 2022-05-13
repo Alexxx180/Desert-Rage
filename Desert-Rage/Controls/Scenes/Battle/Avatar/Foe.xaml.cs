@@ -86,9 +86,9 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
         public Foe()
         {
             InitializeComponent();
-            //Size = new Position(1);
-
             Time = new Bar(0, 1000);
+            
+            // SetTurns();
         }
 
         public void SetTurns()
@@ -101,11 +101,16 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
 
         private void WaitForTurn(object sender, object o)
         {
-            //10 + Attributes.Stats.Speed
-            if (Time.Fill(out Bar newBar, 15))
+            ushort power;
+            ushort speed = 10;
+
+            power = Attributes.Stats.Attack;
+            speed += Attributes.Stats.Speed;
+
+            if (Time.Fill(out Bar newBar, speed))
             {
                 _turn.Stop();
-                Attack(10); //Attributes.Stats.Attack
+                Attack(power);
             }
 
             Time = newBar;
@@ -113,12 +118,17 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
 
         private void Attack(ushort damage)
         {
+            System.Diagnostics.Trace.WriteLine(Battle.Player.Hero.Hp.Current);
+
             if (Battle.Player.Hero.Hp.Drop(out Bar newBar, damage))
             {
                 _turn.Stop();
-                // Application.Current.Shutdown();
+                System.Diagnostics.Trace.WriteLine("Dead");
+                //Application.Current.Shutdown();
             }
+
             Battle.Player.Hero.Hp = newBar;
+            Battle.Player.UpdateHero();
         }
 
         public void Hit(ushort damage)

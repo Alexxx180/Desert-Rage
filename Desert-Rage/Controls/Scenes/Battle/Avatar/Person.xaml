@@ -43,6 +43,30 @@
                 </Grid.RowDefinitions>
 
                 <status:StatusPanel>
+                    <status:StatusPanel.HealthPoints>
+                        <Binding>
+                            <Binding.ElementName>
+                                BattleCharacter
+                            </Binding.ElementName>
+                            
+                            <Binding.Path>
+                                DataContext.Battle.Player.Hero.Hp
+                            </Binding.Path>
+                        </Binding>
+                    </status:StatusPanel.HealthPoints>
+
+                    <status:StatusPanel.ActionPoints>
+                        <Binding>
+                            <Binding.ElementName>
+                                BattleCharacter
+                            </Binding.ElementName>
+
+                            <Binding.Path>
+                                DataContext.Battle.Player.Hero.Ap
+                            </Binding.Path>
+                        </Binding>
+                    </status:StatusPanel.ActionPoints>
+
                     <status:StatusPanel.Icon>
                         /Resources/Images/Menu/Topics/Status.svg
                     </status:StatusPanel.Icon>
@@ -176,17 +200,9 @@
                         </svgc:SvgViewbox>
                     </MenuItem.Icon>
 
-                    <MenuItem>
-                        <MenuItem.Header>
-                            Паук
-                        </MenuItem.Header>
-                    </MenuItem>
-
-                    <MenuItem>
-                        <MenuItem.Header>
-                            Павук
-                        </MenuItem.Header>
-                    </MenuItem>
+                    <!--<MenuItem.ItemsSource>
+                        <Binding Path="Battle.Enemies"/>
+                    </MenuItem.ItemsSource>-->
                 </MenuItem>
 
                 <MenuItem>

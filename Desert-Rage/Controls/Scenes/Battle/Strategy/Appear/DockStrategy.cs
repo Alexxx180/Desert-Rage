@@ -3,6 +3,8 @@ using DesertRage.Model.Stats.Enemy;
 using DesertRage.ViewModel;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using Random = System.Random;
 
 namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
 {
@@ -48,49 +50,19 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
             }
         }
 
-        public ObservableCollection<Avatar.Foe> Build()
+        public ObservableCollection<Foe> Build()
         {
             return SelectEnemies();
         }
 
-        #region Status Members
-        private void AreaStatus()
-        {
-            for (byte ii = 0; ii < _area.Count; ii++)
-            {
-                System.Diagnostics.Trace.WriteLine(_area[ii].ToString());
-            }
-        }
-
-        private void ZoneStatus
-            (Position start, Position size)
-        {
-            System.Diagnostics.Trace.WriteLine("");
-            System.Diagnostics.Trace.WriteLine(start.ToString());
-            System.Diagnostics.Trace.WriteLine(size.ToString());
-            System.Diagnostics.Trace.WriteLine("");
-        }
-
-        private void FoeStatus(Model.Stats.Enemy.Foe someFoe)
-        {
-            System.Diagnostics.Trace.WriteLine("");
-            System.Diagnostics.Trace.WriteLine(someFoe.Icon.ToString());
-            System.Diagnostics.Trace.WriteLine(someFoe.Name.ToString());
-            System.Diagnostics.Trace.WriteLine(someFoe.Description.ToString());
-            System.Diagnostics.Trace.WriteLine(someFoe.Hp.Current.ToString());
-            System.Diagnostics.Trace.WriteLine(someFoe.Hp.Max.ToString());
-            System.Diagnostics.Trace.WriteLine("");
-        }
-        #endregion
-
         #region FoeSelection Members
-        private ObservableCollection<Avatar.Foe>
+        private ObservableCollection<Foe>
             SelectEnemies()
         {
-            ObservableCollection<Avatar.Foe> enemies = new
-                ObservableCollection<Avatar.Foe>();
+            ObservableCollection<Foe> enemies = new
+                ObservableCollection<Foe>();
 
-            System.Random random = new System.Random();
+            Random random = new Random();
             int count = random.Next(1, 6);
 
             for (byte i = 0; i < count && _area.Count > 0; i++)
@@ -101,12 +73,9 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
 
                 Position totalSize = totalArea.Size();
                 Position selection = SelectSizeGroup(_keySizes, totalSize);
-
-                ZoneStatus(selection, totalArea.Point1);
-
-                Avatar.Foe foe = SelectFoe(_stageFoes[selection],
-                    selection, totalArea.Point1);
-
+                
+                Foe foe = SelectFoe(_stageFoes[selection], totalArea.Point1);
+                
                 enemies.Add(foe);
 
                 Range foeArea = new Range(totalArea.Point1, selection);
@@ -117,8 +86,6 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
                 }
 
                 _ = _area.Remove(totalArea);
-
-                AreaStatus();
             }
 
             return enemies;
@@ -145,26 +112,18 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
             return selection;
         }
 
-        private Avatar.Foe SelectFoe(
+        private Foe SelectFoe(
             List<Foe> foes,
-            Position size,
             Position zoneLeftTop
             )
         {
-            System.Random randomFoe = new System.Random();
+            Random randomFoe = new Random();
 
             int selection = randomFoe.Next(0, foes.Count);
             Foe current = foes[selection];
+            current.Tile = zoneLeftTop - 1;
 
-            FoeStatus(current);
-
-            return new Avatar.Foe
-            {
-                Battle = _battleZone,
-                Size = size,
-                Tile = zoneLeftTop - 1,
-                Attributes = current
-            };
+            return current;
         }
         #endregion
 

@@ -147,12 +147,17 @@ namespace DesertRage.ViewModel
         public void Go(Direction move)
         {
             Hero.Go(Level.Map, move.ToInt());
-            OnPropertyChanged(nameof(Hero));
+            UpdateHero();
         }
 
         public void Stand()
         {
             Hero.Stand();
+            UpdateHero();
+        }
+
+        public void UpdateHero()
+        {
             OnPropertyChanged(nameof(Hero));
         }
 

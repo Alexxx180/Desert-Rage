@@ -1,5 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:stats="clr-namespace:DesertRage.Model.Stats"
+                    xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
                     xmlns:converters="clr-namespace:DesertRage.BindConverters">
@@ -173,5 +175,37 @@
                 </TextBlock>
             </DockPanel.ToolTip>
         </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FoeTemplate">
+        <Grid x:Name="FoeGrid">
+            <Grid.Resources>
+                <ToolTip Style="{StaticResource FoeTip}" x:Key="FoeStatus"/>
+            </Grid.Resources>
+            
+            <Grid>
+                <svgc:SvgViewbox>
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <attach:SvgBox.Source>
+                        <Binding>
+                            <Binding.Path>
+                                Icon
+                            </Binding.Path>
+                        </Binding>
+                    </attach:SvgBox.Source>
+
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+                </svgc:SvgViewbox>
+            </Grid>
+
+            <Grid.ToolTip>
+                <StaticResource ResourceKey="FoeStatus"/>
+            </Grid.ToolTip>
+        </Grid>
     </DataTemplate>
 </ResourceDictionary>

@@ -7,7 +7,7 @@ namespace DesertRage.Model.Stats.Enemy
     {
         public Foe()
         {
-
+            Size = new Position(1);
         }
 
         public Foe(Foe foe) : base(foe)
@@ -24,6 +24,9 @@ namespace DesertRage.Model.Stats.Enemy
             Action = foe.Action;
             Death = foe.Death;
 
+            Tile = foe.Tile;
+            Size = foe.Size;
+
             Experience = foe.Experience;
             DropRate = foe.DropRate;
 
@@ -31,6 +34,7 @@ namespace DesertRage.Model.Stats.Enemy
         }
 
         public EnemyBestiary No { get; set; }
+        public Position Tile { get; set; }
         public Position Size { get; set; }
 
         public Bar Hp { get; set; }
