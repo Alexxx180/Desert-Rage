@@ -44,7 +44,7 @@ namespace DesertRage.Model.Locations
                         Defence = 3,
                         Speed = 10,
                     },
-                    Agility = 0,
+                    Special = 0,
                     Hp = new Bar(65),
                     Experience = 5
                 },
@@ -63,7 +63,7 @@ namespace DesertRage.Model.Locations
                         Defence = 7,
                         Speed = 17,
                     },
-                    Agility = 2,
+                    Special = 2,
                     Experience = 7
                 },
                 new Foe
@@ -81,7 +81,7 @@ namespace DesertRage.Model.Locations
                         Defence = 5,
                         Speed = 25,
                     },
-                    Agility = 5,
+                    Special = 5,
                     Experience = 11
                 },
                 new Foe
@@ -99,7 +99,7 @@ namespace DesertRage.Model.Locations
                         Defence = 15,
                         Speed = 35,
                     },
-                    Agility = 7,
+                    Special = 7,
                     Experience = 15
                 },
                 new Foe
@@ -117,7 +117,7 @@ namespace DesertRage.Model.Locations
                         Defence = 25,
                         Speed = 65,
                     },
-                    Agility = 30,
+                    Special = 30,
                     Experience = 35
                 },
                 new Foe
@@ -135,7 +135,7 @@ namespace DesertRage.Model.Locations
                         Defence = 40,
                         Speed = 30,
                     },
-                    Agility = 20,
+                    Special = 20,
                     Experience = 75
                 },
                 new Foe
@@ -153,7 +153,7 @@ namespace DesertRage.Model.Locations
                         Defence = 20,
                         Speed = 45,
                     },
-                    Agility = 60,
+                    Special = 60,
                     Experience = 100
                 },
                 new Foe
@@ -171,7 +171,7 @@ namespace DesertRage.Model.Locations
                         Defence = 80,
                         Speed = 80,
                     },
-                    Agility = 80,
+                    Special = 80,
                     Experience = 60
                 },
                 new Foe
@@ -189,7 +189,7 @@ namespace DesertRage.Model.Locations
                         Defence = 100,
                         Speed = 100,
                     },
-                    Agility = 75,
+                    Special = 75,
                     Experience = 175
                 },
                 new Foe
@@ -207,7 +207,7 @@ namespace DesertRage.Model.Locations
                         Defence = 105,
                         Speed = 90,
                     },
-                    Agility = 140,
+                    Special = 140,
                     Experience = 180
                 },
                 new Foe
@@ -225,7 +225,7 @@ namespace DesertRage.Model.Locations
                         Defence = 70,
                         Speed = 130,
                     },
-                    Agility = 70,
+                    Special = 70,
                     Experience = 200
                 },
                 new Foe
@@ -243,7 +243,7 @@ namespace DesertRage.Model.Locations
                         Defence = 150,
                         Speed = 150,
                     },
-                    Agility = 150,
+                    Special = 150,
                     Experience = 255
                 },
                 new Boss
@@ -261,7 +261,7 @@ namespace DesertRage.Model.Locations
                         Defence = 40,
                         Speed = 40,
                     },
-                    Agility = 35,
+                    Special = 35,
                     Experience = 100
                 },
                 new Boss
@@ -279,7 +279,7 @@ namespace DesertRage.Model.Locations
                         Defence = 120,
                         Speed = 90,
                     },
-                    Agility = 140,
+                    Special = 140,
                     Experience = 200
                 },
                 new Boss
@@ -297,7 +297,7 @@ namespace DesertRage.Model.Locations
                         Defence = 255,
                         Speed = 255,
                     },
-                    Agility = 255,
+                    Special = 255,
                     Experience = 255
                 },
                 new Boss
@@ -315,7 +315,7 @@ namespace DesertRage.Model.Locations
                         Defence = 50,
                         Speed = 50,
                     },
-                    Agility = 50,
+                    Special = 50,
                     Experience = 150
                 }
             };

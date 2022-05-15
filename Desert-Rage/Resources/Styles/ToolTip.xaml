@@ -168,7 +168,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Agility">
+                                        <Binding Path="DataContext.Special">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>

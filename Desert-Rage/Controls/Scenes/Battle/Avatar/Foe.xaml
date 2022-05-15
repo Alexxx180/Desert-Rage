@@ -116,7 +116,7 @@
                         <status:IconStat.Stat>
                             <Binding Source="{x:Reference EnemyControl}">
                                 <Binding.Path>
-                                    Attributes.Agility
+                                    Attributes.Special
                                 </Binding.Path>
                             </Binding>
                         </status:IconStat.Stat>

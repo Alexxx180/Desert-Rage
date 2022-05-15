@@ -9,6 +9,9 @@ using DesertRage.Model.Stats.Player;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Menu.Game;
 using DesertRage.Model.Menu.Things;
+using DesertRage.Model.Menu.Things.Commands.Dependent;
+using DesertRage.Model.Stats;
+using DesertRage.ViewModel.Actions;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -28,133 +31,31 @@ namespace DesertRage.Controls.Scenes.Map
             }
         }
 
-        public static UserProfile GetUserData()
+        public static List<Skill> SkillsBank
+            (Character person, BattleUnit unit)
         {
-            string back = "/Resources/Images/Locations/1-Secret-Temple/Way.svg";
-
-            Dictionary<string, string> tiles = new Dictionary<string, string>
+            Skill cure = new Skill
             {
-                { ".", back },
-                { "H", "/Resources/Images/Locations/1-Secret-Temple/Wall.svg" },
-                { "X", "/Resources/Images/Locations/1-Secret-Temple/Artifact.svg" },
-                { "!", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
-                { "S", "/Resources/Images/Locations/Total/SafeArea.svg" },
-                { "$", "/Resources/Images/Locations/Total/Chest/Closed.svg" },
-                { "E", "/Resources/Images/Locations/Total/Chest/Opened.svg" },
-                { "K", "/Resources/Images/Locations/Total/Key.svg" },
-                { "#", "/Resources/Images/Locations/Total/Lock.svg" },
-                { "@", "/Resources/Images/Locations/Total/Table.svg" }
+                Name = "Лечение",
+                Cost = 5,
+                Power = 1.8f,
+                Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                Description = "+ ОЗ"
             };
 
-            string[] map = new string[] {
-                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
-                "H............H................H..........H.....H...........H",
-                "H..H.H..H.H...HHHHHH.HHH....H.H..........H.....H.....HHH...H",
-                "H...H....H...H..........H.HHH.H.....H....H.HH..H....H......H",
-                "HHH.HHHH.H..H.H.HHHHHHHH..H.H.H....HXH...H..HH.H..HH..HHH..H",
-                "H...H....HH..H..........H.H.H.HH........HHH.H..H.HH.....HH.H",
-                "HH.HH.HHHH.HH.HHHH.HHH..H......HH......HHH..H.HH.H..HHHH.H.H",
-                "H...H.........H...H..$H..HH.H...HHHH#HHH....H..H.H.HH..H.H.H",
-                "H.HHHHHHHHHHH.H.H...HHH.H..H...H...H.......HHH.H.H.H...H.H.H",
-                "H.H.........H.H.HHHH$....HH...H....HHHH.....H..H.H.H!H.H.H.H",
-                "H.H.HHHHHHH.H.H.H...HH..H..H.H..H.....@HHHHHH.HH.H..HH.H.H.H",
-                "H.H.H.....H.H...H....H.H..H...H..HHH...HHH.....H.HH.....HH.H",
-                "H.H.H.HHH.H.HHHHH.H...H...H.H.H.....H........H.H..HHHHHHH..H",
-                "H.H.H.H...H.......H...H..H.....HHHH..HHHHHH..H.H...........H",
-                "H.H.H.H.H.H.......H..H...H..H......H.......HHHHHHHHHHHHH...H",
-                "H.H.H.H.H.H...HHHHH..H.HHHHH.HHHH..HHHHHHH..H......H.......H",
-                "H.H.H.H.HHHHH........H...H.......H.......H........H.H......H",
-                "H.....H......HH...H...HH.H..HSH.H.HHHHH..HHHHH.HH...H......H",
-                "H.HH#H..HH.HH..H.......H..............H......H.....H.......H",
-                "HHH..HH..H......H...H..HHHHHH#HH.HHH..H..HHH.HHHH..H.......H",
-                "H.....HHH..H....H......H.......H...H...HH..H....H..HHHHHH..H",
-                "H.H....HHHHK....H.H..HH........HHH.H.H....H.HHH.........H..H",
-                "H.H.......HH....H......H.HH......H.H.....HH...H.........H..H",
-                "H.H.HHH....H....H...H.H.H..H.....HHHHHHH.H..H..HHHH.....H..H",
-                "H.H.H.....H$..HHH.....H..........H.....H....H.....H.....H..H",
-                "HHH.HHHH..HH..H@H......H..H......H..H.HHHHHHH.H.........H..H",
-                "H...H......HHHH.HHHHHH..H..H...HHH.HH........HHHH..........H",
-                "H.HHH......H.....H.$H....H..HHHH....HH..H.....H..HHH.H..H..H",
-                "H...H..HHH....H..H.H...H..H..H...HHHHHHHHHH.H..H.....H..HH.H",
-                "H.H.H....H..H....H..HH..H.H..H...H...HH....H.H..HHHHHHH.H..H",
-                "H.H.H....HHHH....HH.H..H..H.HH...H.H.H...H.H..H...........HH",
-                "HHH.HHH..H..........H.HHHHH..H...H.H.H.HHH.HH..HHHH..HH.H..H",
-                "H...H....HH..H..H...H.H...H.HH.....H....H...HH....H..H..HH.H",
-                "H.K.H.............@.H.H.H.H..H.....H....H.K.H...H....H..H..H",
-                "H...H...............H...H....H.............................H",
-                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+            cure.Action = new CureCommand
+            {
+                Unit = unit,
+                Thing = new SkillCommand
+                {
+                    Hero = person,
+                    Skill = cure
+                }
             };
 
-            Location location = new Location
-            {
-                TileCodes = tiles,
-                BackCover = back,
-                Map = map
-            };
-
-            Character hero = new Character
-            {
-                Hp = new Model.Stats.Bar(100),
-                Ap = new Model.Stats.Bar(50),
-                Icon = "/Resources/Images/Menu/Topics/Status.svg",
-                Step = new Position[4]
+            return new List<Skill>()
                 {
-                    new Position(0, -1),
-                    new Position(-1, 0),
-                    new Position(0, 1),
-                    new Position(1, 0)
-
-                },
-                StandImage = new string[4]
-                {
-                    "/Resources/Images/Locations/Total/Person/Static/Up.svg",
-                    "/Resources/Images/Locations/Total/Person/Static/Left.svg",
-                    "/Resources/Images/Locations/Total/Person/Static/Down.svg",
-                    "/Resources/Images/Locations/Total/Person/Static/Right.svg"
-                },
-                MapImage = "/Resources/Images/Locations/Total/Person/Static/Down.svg",
-                GoingImage = new string[4][]
-                {
-                    new string[] {
-                        "/Resources/Images/Locations/Total/Person/Walk/Up/1.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Up/2.svg"
-                    },
-                    new string[] {
-                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Left/1.svg",
-                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Left/2.svg"
-                    },
-                    new string[] {
-                        "/Resources/Images/Locations/Total/Person/Walk/Down/1.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Down/2.svg"
-                    },
-                    new string[] {
-                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Right/1.svg",
-                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
-                        "/Resources/Images/Locations/Total/Person/Walk/Right/2.svg"
-                    }
-                },
-                WalkThrough = new HashSet<string>
-                    { ".", ",", ":", "_" },
-                Place = new Position(1, 3),
-                HeroSkills = new List<Skill>()
-                {
-                    new Skill
-                    {
-                        Name = "Лечение",
-                        Cost = 5,
-                        Icon = "/Resources/Images/Menu/Skills/Cure.svg",
-                        Description = "+ ОЗ"
-                    },
-                    new Skill
-                    {
-                        Name = "Лечение 2",
-                        Cost = 10,
-                        Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
-                        Description = "100% ОЗ. - Яд."
-                    },
+                    cure,
                     new Skill
                     {
                         Name = "Исцеление",
@@ -225,8 +126,124 @@ namespace DesertRage.Controls.Scenes.Map
                         Icon = "/Resources/Images/Menu/Skills/Slide.svg",
                         Description = "Усыпать противников камнями"
                     }
-                }
+                };
+        }
+
+        public static UserProfile GetUserData()
+        {
+            string back = "/Resources/Images/Locations/1-Secret-Temple/Way.svg";
+
+            Dictionary<string, string> tiles = new Dictionary<string, string>
+            {
+                { ".", back },
+                { "H", "/Resources/Images/Locations/1-Secret-Temple/Wall.svg" },
+                { "X", "/Resources/Images/Locations/1-Secret-Temple/Artifact.svg" },
+                { "!", "/Resources/Images/Locations/1-Secret-Temple/Way.svg" },
+                { "S", "/Resources/Images/Locations/Total/SafeArea.svg" },
+                { "$", "/Resources/Images/Locations/Total/Chest/Closed.svg" },
+                { "E", "/Resources/Images/Locations/Total/Chest/Opened.svg" },
+                { "K", "/Resources/Images/Locations/Total/Key.svg" },
+                { "#", "/Resources/Images/Locations/Total/Lock.svg" },
+                { "@", "/Resources/Images/Locations/Total/Table.svg" }
             };
+
+            string[] map = new string[] {
+                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+                "H............H................H..........H.....H...........H",
+                "H..H.H..H.H...HHHHHH.HHH....H.H..........H.....H.....HHH...H",
+                "H...H....H...H..........H.HHH.H.....H....H.HH..H....H......H",
+                "HHH.HHHH.H..H.H.HHHHHHHH..H.H.H....HXH...H..HH.H..HH..HHH..H",
+                "H...H....HH..H..........H.H.H.HH........HHH.H..H.HH.....HH.H",
+                "HH.HH.HHHH.HH.HHHH.HHH..H......HH......HHH..H.HH.H..HHHH.H.H",
+                "H...H.........H...H..$H..HH.H...HHHH#HHH....H..H.H.HH..H.H.H",
+                "H.HHHHHHHHHHH.H.H...HHH.H..H...H...H.......HHH.H.H.H...H.H.H",
+                "H.H.........H.H.HHHH$....HH...H....HHHH.....H..H.H.H!H.H.H.H",
+                "H.H.HHHHHHH.H.H.H...HH..H..H.H..H.....@HHHHHH.HH.H..HH.H.H.H",
+                "H.H.H.....H.H...H....H.H..H...H..HHH...HHH.....H.HH.....HH.H",
+                "H.H.H.HHH.H.HHHHH.H...H...H.H.H.....H........H.H..HHHHHHH..H",
+                "H.H.H.H...H.......H...H..H.....HHHH..HHHHHH..H.H...........H",
+                "H.H.H.H.H.H.......H..H...H..H......H.......HHHHHHHHHHHHH...H",
+                "H.H.H.H.H.H...HHHHH..H.HHHHH.HHHH..HHHHHHH..H......H.......H",
+                "H.H.H.H.HHHHH........H...H.......H.......H........H.H......H",
+                "H.....H......HH...H...HH.H..HSH.H.HHHHH..HHHHH.HH...H......H",
+                "H.HH#H..HH.HH..H.......H..............H......H.....H.......H",
+                "HHH..HH..H......H...H..HHHHHH#HH.HHH..H..HHH.HHHH..H.......H",
+                "H.....HHH..H....H......H.......H...H...HH..H....H..HHHHHH..H",
+                "H.H....HHHHK....H.H..HH........HHH.H.H....H.HHH.........H..H",
+                "H.H.......HH....H......H.HH......H.H.....HH...H.........H..H",
+                "H.H.HHH....H....H...H.H.H..H.....HHHHHHH.H..H..HHHH.....H..H",
+                "H.H.H.....H$..HHH.....H..........H.....H....H.....H.....H..H",
+                "HHH.HHHH..HH..H@H......H..H......H..H.HHHHHHH.H.........H..H",
+                "H...H......HHHH.HHHHHH..H..H...HHH.HH........HHHH..........H",
+                "H.HHH......H.....H.$H....H..HHHH....HH..H.....H..HHH.H..H..H",
+                "H...H..HHH....H..H.H...H..H..H...HHHHHHHHHH.H..H.....H..HH.H",
+                "H.H.H....H..H....H..HH..H.H..H...H...HH....H.H..HHHHHHH.H..H",
+                "H.H.H....HHHH....HH.H..H..H.HH...H.H.H...H.H..H...........HH",
+                "HHH.HHH..H..........H.HHHHH..H...H.H.H.HHH.HH..HHHH..HH.H..H",
+                "H...H....HH..H..H...H.H...H.HH.....H....H...HH....H..H..HH.H",
+                "H.K.H.............@.H.H.H.H..H.....H....H.K.H...H....H..H..H",
+                "H...H...............H...H....H.............................H",
+                "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+            };
+
+            Location location = new Location
+            {
+                TileCodes = tiles,
+                BackCover = back,
+                Map = map
+            };
+
+            Character hero = new Character
+            {
+                Hp = new Bar(20, 100),
+                Ap = new Bar(50),
+                Special = 25,
+                Icon = "/Resources/Images/Menu/Topics/Status.svg",
+                Step = new Position[4]
+                {
+                    new Position(0, -1),
+                    new Position(-1, 0),
+                    new Position(0, 1),
+                    new Position(1, 0)
+
+                },
+                StandImage = new string[4]
+                {
+                    "/Resources/Images/Locations/Total/Person/Static/Up.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Down.svg",
+                    "/Resources/Images/Locations/Total/Person/Static/Right.svg"
+                },
+                MapImage = "/Resources/Images/Locations/Total/Person/Static/Down.svg",
+                GoingImage = new string[4][]
+                {
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Walk/Up/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Up/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Left/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Static/Left.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Left/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Walk/Down/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Down/2.svg"
+                    },
+                    new string[] {
+                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Right/1.svg",
+                        "/Resources/Images/Locations/Total/Person/Static/Right.svg",
+                        "/Resources/Images/Locations/Total/Person/Walk/Right/2.svg"
+                    }
+                },
+                WalkThrough = new HashSet<string>
+                    { ".", ",", ":", "_" },
+                Place = new Position(1, 3)
+            };
+
+            hero.HeroSkills = SkillsBank(hero, hero);
 
             return new UserProfile
             {

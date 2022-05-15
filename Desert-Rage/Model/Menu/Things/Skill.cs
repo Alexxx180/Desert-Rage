@@ -1,4 +1,6 @@
-﻿namespace DesertRage.Model.Menu.Things
+﻿using DesertRage.Model.Menu.Things.Commands;
+
+namespace DesertRage.Model.Menu.Things
 {
     public class Skill : DescriptionUnit
     {
@@ -11,5 +13,7 @@
 
         public string[] Animation { get; set; }
         public string[] IconAnimation { get; set; }
+
+        public ActionCommand Action { get; set; }
     }
 }

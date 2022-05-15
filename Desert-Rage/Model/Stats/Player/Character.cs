@@ -7,7 +7,7 @@ using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.Model.Stats.Player
 {
-    public class Character : DescriptionUnit
+    public class Character : BattleUnit
     {
         public Character()
         {
@@ -36,32 +36,19 @@ namespace DesertRage.Model.Stats.Player
             MapImage = StandImage[Pose];
         }
 
-        private void HeroSetStatus(byte no, bool code)
-        {
-            Status[no] = code;
-        }
+        public string Image { get; set; }
 
-        #region Hp Management Members
-        public void Hit(int value)
-        {
-            Hp.Drain(value);
-        }
-
-        public void Cure()
-        {
-            Hp.Restore();
-        }
-
-        public void Cure(int value)
-        {
-            Hp.Restore(value);
-        }
-        #endregion
+        public List<Skill> HeroSkills { get; set; }
 
         #region Ap Management Members
         public void Act(int value)
         {
             Ap.Drain(value);
+        }
+
+        public bool CanAct(in int value)
+        {
+            return Ap.Current >= value;
         }
 
         public void Rest()
@@ -71,29 +58,20 @@ namespace DesertRage.Model.Stats.Player
 
         public void Rest(int value)
         {
-            Ap.Restore(value);
+            Ap = Ap.Restore(value);
         }
         #endregion
-
-        public Profile HeroProfile { get; set; }
 
         #region Status Members
         public byte Level { get; set; }
         public ushort Experience { get; set; }
 
-        public Bar Hp { get; set; }
         public Bar Ap { get; set; }
 
-        public BattleStats Stats { get; set; }
-        public byte Special { get; set; }
-
-        public BitArray Status { get; set; }
         public BitArray Learned { get; set; }
 
         public Outfit Gear { get; set; }
         #endregion
-
-        public List<Skill> HeroSkills { get; set; }
 
         #region Map Members
         public Position Place { get; set; }

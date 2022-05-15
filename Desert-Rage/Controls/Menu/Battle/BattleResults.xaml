@@ -159,7 +159,7 @@
             <Label x:Name="BeforeDefence" Content="ЗЩТ" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="19" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="20" Grid.Column="2" Panel.ZIndex="11">
-            <Label x:Name="BeforeAgility" Content="СКР" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="20" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
+            <Label x:Name="BeforeSpecial" Content="СКР" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="20" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
         <Viewbox Grid.Row="21" Grid.Column="2" Panel.ZIndex="11" Grid.RowSpan="2">
             <Label x:Name="BeforeSpecial" Content="СПЦ" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="21" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
@@ -167,7 +167,7 @@
 
         <Image x:Name="BeforeAttackImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="18" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
         <Image x:Name="BeforeDefenceImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="19" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeAgilityImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
         <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="21" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/SP2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
 
         <Viewbox Grid.Row="18" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11">

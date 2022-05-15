@@ -178,7 +178,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="FoeTemplate">
-        <Grid x:Name="FoeGrid">
+        <Grid>
             <Grid.Resources>
                 <ToolTip Style="{StaticResource FoeTip}" x:Key="FoeStatus"/>
             </Grid.Resources>
@@ -206,6 +206,83 @@
             <Grid.ToolTip>
                 <StaticResource ResourceKey="FoeStatus"/>
             </Grid.ToolTip>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TargetTemplate">
+        <Grid MaxHeight="50" MinWidth="200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+
+            <svgc:SvgViewbox>
+                <attach:SvgBox.Source>
+                    <Binding>
+                        <Binding.Path>
+                            Icon
+                        </Binding.Path>
+                    </Binding>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <UniformGrid Rows="2">
+                <Grid.Column>
+                    1
+                </Grid.Column>
+                
+                <TextBlock Padding="3">
+                    <TextBlock.FontWeight>
+                        Bold
+                    </TextBlock.FontWeight>
+
+                    <TextBlock.Text>
+                        <Binding Path="Name"/>
+                    </TextBlock.Text>
+                </TextBlock>
+
+                <status:StatBar>
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <status:StatBar.Caption>
+                        ОЗ
+                    </status:StatBar.Caption>
+
+                    <status:StatBar.Bar>
+                        <Binding Path="DataContext.Hp">
+                            <Binding.RelativeSource>
+                                <RelativeSource>
+                                    <RelativeSource.AncestorType>
+                                        <x:Type TypeName="Grid"/>
+                                    </RelativeSource.AncestorType>
+
+                                    <RelativeSource.Mode>
+                                        FindAncestor
+                                    </RelativeSource.Mode>
+
+                                    <RelativeSource.AncestorLevel>
+                                        1
+                                    </RelativeSource.AncestorLevel>
+                                </RelativeSource>
+                            </Binding.RelativeSource>
+                        </Binding>
+                    </status:StatBar.Bar>
+
+                    <status:StatBar.ForeBrush>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF3AAC28"/>
+                            <GradientStop Color="#FF00F3FF" Offset="1"/>
+                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                        </LinearGradientBrush>
+                    </status:StatBar.ForeBrush>
+                </status:StatBar>
+            </UniformGrid>
         </Grid>
     </DataTemplate>
 </ResourceDictionary>

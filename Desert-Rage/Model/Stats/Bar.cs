@@ -5,6 +5,7 @@ namespace DesertRage.Model.Stats
 {
     public struct Bar
     {
+        #region Bar Members
         public Bar(
             ushort minimum,
             ushort current,
@@ -35,15 +36,21 @@ namespace DesertRage.Model.Stats
             Current = Math.Max(downTo, Minimum);
         }
 
-        public void Restore(int value)
+        public Bar Restore(int value)
         {
             ushort upTo = (Current + value).ToUShort();
-            Current = Math.Min(upTo, Max);
+            return new Bar(Minimum, Math.Min(upTo, Max), Max);
         }
 
         public void Restore()
         {
             Current = Max;
+        }
+        #endregion
+
+        public override string ToString()
+        {
+            return $"{ Current } / { Max } ({ Minimum } - { Max })";
         }
 
         public ushort Minimum { get; set; }

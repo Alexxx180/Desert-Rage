@@ -69,11 +69,8 @@ namespace DesertRage
             Level = 1,
             Place = new Position(18, 34),
 
-            HeroProfile = new Profile
-            {
-                Icon = Paths.Static.Person.Usual,
-                Image = Paths.Static.Person.Usual,
-            },
+            Icon = Paths.Static.Person.Usual,
+            Image = Paths.Static.Person.Usual,
 
             Hp = new Bar(100),
             Ap = new Bar(40),
@@ -95,14 +92,11 @@ namespace DesertRage
         {
             Level = 1,
 
-            HeroProfile = new Profile
-            {
-                Icon = Paths.Static.Person.Usual,
-                Image = Paths.Static.Person.Usual,
-            },
+            Icon = Paths.Static.Person.Usual,
+            Image = Paths.Static.Person.Usual,
 
-            Hp = new Bar(200),
-            Ap = new Bar(200),
+            Hp = new Bar(100),
+            Ap = new Bar(100),
 
             Stats = new BattleStats
             {

@@ -14,11 +14,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using DesertRage.Model.Stats.Enemy;
+using System.Windows.Input;
 
 namespace DesertRage.ViewModel
 {
     public class BattleViewModel : INotifyPropertyChanged
     {
+        public ICommand Skill { get; set; }
         private EnemyAppearing _drawStrategy;
 
         private ObservableCollection<Foe> _enemies;
@@ -32,21 +34,20 @@ namespace DesertRage.ViewModel
             }
         }
 
-        public BattleViewModel() //Model.Stats.Enemy.Foe[] foes
+        public BattleViewModel()
         {
             Player = LevelMap.GetUserData();
             _drawStrategy = new DockStrategy
                 (this, BattleScene.SceneArea, FoesList()); //
 
             Enemies = _drawStrategy.Build();
-            //new ObservableCollection<Foe>();
-            //RegularBattleStrategy();
-            foreach (Foe enemy in _enemies)
-            {
-                Trace.WriteLine(enemy.Name);
-                Trace.WriteLine(new Range(enemy.Tile, enemy.Size).ToString());
-                //Trace.WriteLine();
-            }    
+
+
+            //foreach (Foe enemy in _enemies)
+            //{
+            //    Trace.WriteLine(enemy.Name);
+            //    Trace.WriteLine(new Range(enemy.Tile, enemy.Size).ToString());
+            //}
                 
         }
 

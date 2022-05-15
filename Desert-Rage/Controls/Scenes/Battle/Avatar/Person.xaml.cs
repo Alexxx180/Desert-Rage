@@ -73,6 +73,7 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
             {
                 _turn.Stop();
                 MOptions.SetActive(true);
+                OnPropertyChanged(nameof(Battle.Player));
             }
 
             Time = newBar;

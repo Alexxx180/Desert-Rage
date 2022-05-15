@@ -96,7 +96,7 @@ namespace DesertRage.Controls.Scenes
         //{
         //    Foe foe = foes[Sets.SelectedTarget];
         //    int power = foe.Weak.Equals(skill.Name) ? skill.Power * 2 : skill.Power;
-        //    int EnemyAura = foe.Speed + foe.Agility;
+        //    int EnemyAura = foe.Speed + foe.Special;
         //    ushort total = Shrt(Math.Max(power - EnemyAura, 0));
         //    FoesKickedOne(Sets.SelectedTarget, total, Shrt(500 / GameSpeed.Value));
         //    FoesRefresh();
