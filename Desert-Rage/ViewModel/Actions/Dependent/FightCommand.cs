@@ -1,10 +1,11 @@
 ﻿using DesertRage.Customing.Converters;
 using DesertRage.Model.Stats;
 using DesertRage.Model.Menu.Battle;
+using System.ComponentModel;
 
 namespace DesertRage.ViewModel.Actions.Dependent
 {
-    public class FightCommand : ActCommand
+    public class FightCommand : ActCommand, INotifyPropertyChanged
     {
         public FightCommand(IThing thing) : base(thing)
         {
@@ -20,7 +21,11 @@ namespace DesertRage.ViewModel.Actions.Dependent
 
             BattleUnit unit = parameter as BattleUnit;
             int power = Subject.Power.ToInt();
-            unit.Hit(power);
+            //unit.Hit(power);
+            ViewModel.Enemies[0].Hit(power);
+            ViewModel.Enemies[0].Update();
+
+            //OnPropertyChanged(nameof(ViewModel.Enemies));
 
             ViewModel.UpdateEnemies();
 
