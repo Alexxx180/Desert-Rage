@@ -1,39 +1,30 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using DesertRage.Model.Stats;
+﻿using DesertRage.Customing.Converters;
+using DesertRage.Model.Stats.Player;
+using DesertRage.ViewModel;
+using DesertRage.ViewModel.Actions;
+using System.ComponentModel;
 
 namespace DesertRage.Model.Menu.Things.Commands.Dependent
 {
-    public class CureCommand : DependentCommand, INotifyPropertyChanged
+    public class CureCommand : ActCommand, INotifyPropertyChanged
     {
-        public BattleUnit Unit { get; set; }
-
-        private protected override void Use(int value)
+        public CureCommand()
         {
-            Unit.Cure(value);
-            OnPropertyChanged(nameof(Unit));
-
-            System.Diagnostics.Trace.WriteLine(Thing.Attribute);
-            System.Diagnostics.Trace.WriteLine(Unit.Hp.ToString());
+            Cursor = Battle.Targeting.HERO;
         }
 
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises this object's PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The property that has a new value.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private protected override void Use(object parameter)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-                handler(this, e);
-            }
-        }
+            UserProfile user = ViewModel.Player;
+            Character character = user.Hero;
 
-        #endregion
+            int power = Subject.Power.ToInt();
+
+            character.Cure(power);
+            user.UpdateHero();
+
+            System.Diagnostics.Trace.WriteLine(power);
+            System.Diagnostics.Trace.WriteLine(ViewModel.Player.Hero.Hp.ToString());
+        }
     }
 }

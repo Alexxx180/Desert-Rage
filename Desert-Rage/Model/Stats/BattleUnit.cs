@@ -21,14 +21,19 @@ namespace DesertRage.Model.Stats
         }
 
         #region Hp Management Members
+        public void Annihilate()
+        {
+            Hp = Hp.Drain();
+        }
+
         public void Hit(int value)
         {
-            Hp.Drain(value);
+            Hp = Hp.Drain(value);
         }
 
         public void Cure()
         {
-            Hp.Restore();
+            Hp = Hp.Restore();
         }
 
         public void Cure(int value)

@@ -2,12 +2,12 @@
 
 namespace DesertRage.Model.Menu.Things.Commands.Independent
 {
-    public class StatusMaxCommand : IndependentCommand
+    public class StatusMaxCommand
     {
         public BattleUnit Unit { get; set; }
         public bool State { get; set; }
 
-        private protected override void Use()
+        private protected void Use()
         {
             Unit.SetStatus(State);
         }

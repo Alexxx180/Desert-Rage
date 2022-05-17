@@ -43,7 +43,7 @@ namespace DesertRage.Model.Stats.Player
         #region Ap Management Members
         public void Act(int value)
         {
-            Ap.Drain(value);
+            Ap = Ap.Drain(value);
         }
 
         public bool CanAct(in int value)
@@ -53,7 +53,7 @@ namespace DesertRage.Model.Stats.Player
 
         public void Rest()
         {
-            Ap.Restore();
+            Ap = Ap.Restore();
         }
 
         public void Rest(int value)

@@ -5,6 +5,7 @@ using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things;
 using DesertRage.Model.Stats.Player;
 using DesertRage.Model.Stats.Player.Armory;
+using DesertRage.ViewModel.Actions;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -71,56 +72,56 @@ namespace DesertRage.ViewModel
                 new Item
                 {
                     Name = "Бинт",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Bandage.svg",
                     Description = "+50 ОЗ"
                 },
                 new Item
                 {
                     Name = "Антидот",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
                     Description = "- Яд"
                 },
                 new Item
                 {
                     Name = "Эфир",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Ether.svg",
                     Description = "+50 ОД"
                 },
                 new Item
                 {
                     Name = "Смесь",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Mixture.svg",
                     Description = "+80 ОЗ-ОД"
                 },
                 new Item
                 {
                     Name = "Травы",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Herbs.svg",
                     Description = "+350 ОЗ"
                 },
                 new Item
                 {
                     Name = "Бутыль эфира",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg",
                     Description = "+300 ОД"
                 },
                 new Item
                 {
                     Name = "Спальный мешок",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
                     Description = "100% ОЗ-ОД"
                 },
                 new Item
                 {
                     Name = "Эликсир",
-                    Count = 1,
+                    Value = 1,
                     Icon = "/Resources/Images/Menu/Bag/Elixir.svg",
                     Description = "100% ОЗ-ОД"
                 }

@@ -250,12 +250,12 @@
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
-                        <Binding Path="Battle.Player.Hero.HeroSkills"/>
+                        <Binding Path="Battle.Skills"/>
                     </MenuItem.ItemsSource>
 
                     <MenuItem.ItemContainerStyle>
                         <Style TargetType="MenuItem">
-                            <Setter Property="Command" Value="{Binding Action}"/>
+                            <Setter Property="Command" Value="{Binding}"/>
                         </Style>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>

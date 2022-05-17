@@ -31,102 +31,95 @@ namespace DesertRage.Controls.Scenes.Map
             }
         }
 
-        public static List<Skill> SkillsBank
-            (Character person, BattleUnit unit)
+        public static List<Skill> SkillsBank()
         {
-            Skill cure = new Skill
+            return new List<Skill>()
             {
-                Name = "Лечение",
-                Cost = 5,
-                Power = 1.8f,
-                Icon = "/Resources/Images/Menu/Skills/Cure.svg",
-                Description = "+ ОЗ"
-            };
-
-            cure.Action = new CureCommand
-            {
-                Unit = unit,
-                Thing = new SkillCommand
+                new Skill(1.8f)
                 {
-                    Hero = person,
-                    Skill = cure
+                    Name = "Лечение",
+                    Value = 5,
+                    Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                    Description = "+ ОЗ"
+                },
+                new Skill()
+                {
+                    Name = "Лечение 2",
+                    Value = 10,
+                    Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                    Description = "100% ОЗ"
+                },
+                new Skill()
+                {
+                    Name = "Исцеление",
+                    Value = 3,
+                    Icon = "/Resources/Images/Menu/Skills/Heal.svg",
+                    Description = "- Яд"
+                },
+                new Skill
+                {
+                    Name = "Усиление",
+                    Value = 20,
+                    Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
+                    Description = "Сконцентрировать всю силу"
+                },
+                new Skill
+                {
+                    Name = "Охрана",
+                    Value = 15,
+                    Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
+                    Description = "Повысить бдительность"
+                },
+                new Skill
+                {
+                    Name = "Анализ",
+                    Value = 5,
+                    Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
+                    Description = "Изучить врага как следует"
+                },
+                new Skill
+                {
+                    Name = "Факел",
+                    Value = 5,
+                    Icon = "/Resources/Images/Menu/Skills/Torch.svg",
+                    Description = "Хорошо поджигает"
+                },
+                new Skill
+                {
+                    Name = "Кнут",
+                    Value = 7,
+                    Icon = "/Resources/Images/Menu/Skills/Whip.svg",
+                    Description = "Дробит кости"
+                },
+                new Skill
+                {
+                    Name = "Рогатка",
+                    Value = 13,
+                    Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
+                    Description = "От нее не скрыться"
+                },
+                new Skill
+                {
+                    Name = "Комбо",
+                    Value = 10,
+                    Icon = "/Resources/Images/Menu/Skills/Combo.svg",
+                    Description = "Град ударов по врагам"
+                },
+                new Skill
+                {
+                    Name = "Буря",
+                    Value = 18,
+                    Icon = "/Resources/Images/Menu/Skills/Storm.svg",
+                    Description = "Неистовый порыв ветра"
+                },
+                new Skill
+                {
+                    Name = "Обвал",
+                    Value = 25,
+                    Icon = "/Resources/Images/Menu/Skills/Slide.svg",
+                    Description = "Усыпать противников камнями"
                 }
             };
-
-            return new List<Skill>()
-                {
-                    cure,
-                    new Skill
-                    {
-                        Name = "Исцеление",
-                        Cost = 3,
-                        Icon = "/Resources/Images/Menu/Skills/Heal.svg",
-                        Description = "- Яд"
-                    },
-                    new Skill
-                    {
-                        Name = "Усиление",
-                        Cost = 20,
-                        Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
-                        Description = "Сконцентрировать всю силу"
-                    },
-                    new Skill
-                    {
-                        Name = "Охрана",
-                        Cost = 15,
-                        Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
-                        Description = "Повысить бдительность"
-                    },
-                    new Skill
-                    {
-                        Name = "Анализ",
-                        Cost = 5,
-                        Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
-                        Description = "Изучить врага как следует"
-                    },
-                    new Skill
-                    {
-                        Name = "Факел",
-                        Cost = 5,
-                        Icon = "/Resources/Images/Menu/Skills/Torch.svg",
-                        Description = "Хорошо поджигает"
-                    },
-                    new Skill
-                    {
-                        Name = "Кнут",
-                        Cost = 7,
-                        Icon = "/Resources/Images/Menu/Skills/Whip.svg",
-                        Description = "Дробит кости"
-                    },
-                    new Skill
-                    {
-                        Name = "Рогатка",
-                        Cost = 13,
-                        Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
-                        Description = "От нее не скрыться"
-                    },
-                    new Skill
-                    {
-                        Name = "Комбо",
-                        Cost = 10,
-                        Icon = "/Resources/Images/Menu/Skills/Combo.svg",
-                        Description = "Град ударов по врагам"
-                    },
-                    new Skill
-                    {
-                        Name = "Буря",
-                        Cost = 18,
-                        Icon = "/Resources/Images/Menu/Skills/Storm.svg",
-                        Description = "Неистовый порыв ветра"
-                    },
-                    new Skill
-                    {
-                        Name = "Обвал",
-                        Cost = 25,
-                        Icon = "/Resources/Images/Menu/Skills/Slide.svg",
-                        Description = "Усыпать противников камнями"
-                    }
-                };
         }
 
         public static UserProfile GetUserData()
@@ -243,7 +236,7 @@ namespace DesertRage.Controls.Scenes.Map
                 Place = new Position(1, 3)
             };
 
-            hero.HeroSkills = SkillsBank(hero, hero);
+            hero.HeroSkills = SkillsBank();
 
             return new UserProfile
             {
@@ -252,6 +245,8 @@ namespace DesertRage.Controls.Scenes.Map
                 Menu = new GameMenu()
             };
         }
+
+        
 
         public LevelMap()
         {

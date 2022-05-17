@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using DesertRage.Model.Stats.Enemy;
 using System.Windows.Input;
+using DesertRage.ViewModel.Actions;
+using DesertRage.Model.Menu.Things;
+using DesertRage.Model.Menu.Things.Commands.Dependent;
 
 namespace DesertRage.ViewModel
 {
@@ -34,6 +37,41 @@ namespace DesertRage.ViewModel
             }
         }
 
+        private ObservableCollection<ActCommand> _skills;
+        public ObservableCollection<ActCommand> Skills
+        {
+            get => _skills;
+            set
+            {
+                _skills = value;
+
+                foreach (ActCommand skill in _skills)
+                {
+                    skill.SetViewModel(this);
+                }
+                    
+                OnPropertyChanged();
+            }
+        }
+
+        public static ObservableCollection<ActCommand>
+            GetSkills(List<Skill> skills)
+        {
+            Skill cure = skills[0];
+            Skill cure2 = skills[0];
+
+            return new ObservableCollection<ActCommand>
+            {
+                new CureCommand
+                {
+                    Subject = new SkillCommand
+                    {
+                        Ability = cure
+                    }
+                }
+            };
+        }
+
         public BattleViewModel()
         {
             Player = LevelMap.GetUserData();
@@ -42,13 +80,18 @@ namespace DesertRage.ViewModel
 
             Enemies = _drawStrategy.Build();
 
-
+            Skills = GetSkills(Player.Hero.HeroSkills);
             //foreach (Foe enemy in _enemies)
             //{
             //    Trace.WriteLine(enemy.Name);
             //    Trace.WriteLine(new Range(enemy.Tile, enemy.Size).ToString());
             //}
-                
+
+        }
+
+        public void UpdatePlayer()
+        {
+            OnPropertyChanged(nameof(Player));
         }
 
         private UserProfile _player;

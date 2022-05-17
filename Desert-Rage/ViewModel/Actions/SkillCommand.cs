@@ -1,45 +1,43 @@
-﻿using DesertRage.Model.Stats.Player;
-using DesertRage.Model.Menu.Things;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using DesertRage.Customing.Converters;
+using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.ViewModel.Actions
 {
-    public class SkillCommand : INotifyPropertyChanged, IAttributeThing
+    public class SkillCommand : INotifyPropertyChanged, IThing
     {
-        private Skill _skill;
-        public Skill Skill
+        private BattleViewModel _viewModel;
+        public BattleViewModel ViewModel
         {
-            get => _skill;
+            get => _viewModel;
             set
             {
-                _skill = value;
+                _viewModel = value;
                 OnPropertyChanged();
             }
         }
 
-        private Character _hero;
-        public Character Hero
+        private Skill _ability;
+        public Skill Ability
         {
-            get => _hero;
+            get => _ability;
             set
             {
-                _hero = value;
+                _ability = value;
                 OnPropertyChanged();
             }
         }
 
-        #region IAttributeThing Members
-        public void Spend()
+        public void Use()
         {
-            Hero.Act(Skill.Cost);
-            OnPropertyChanged(nameof(Hero));
+            ViewModel.Player.Hero.Act(Ability.Value);
+            ViewModel.Player.UpdateHero();
         }
 
-        public bool CanSpend => Hero.CanAct(Skill.Cost);
-        public int Attribute => (Skill.Power * Hero.Special).ToInt();
-        #endregion
+        public bool CanUse => ViewModel.Player.Hero.CanAct(Ability.Value);
+        public float Power => ViewModel.Player.Hero.Special * Ability.Power;
+
+        public ValuableUnit Unit => Ability;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

@@ -73,6 +73,9 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
             {
                 _turn.Stop();
                 MOptions.SetActive(true);
+
+                System.Diagnostics.Trace.WriteLine("FOR REAL:");
+                System.Diagnostics.Trace.WriteLine(Battle.Player.Hero.Hp.ToString());
                 OnPropertyChanged(nameof(Battle.Player));
             }
 

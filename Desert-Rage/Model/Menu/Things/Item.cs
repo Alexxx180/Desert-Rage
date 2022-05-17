@@ -1,6 +1,6 @@
 ﻿namespace DesertRage.Model.Menu.Things
 {
-    public class Item : DescriptionUnit
+    public class Item : ValuableUnit
     {
 
         //private void UseItem(Items item)
@@ -21,9 +21,6 @@
         //    PlayNoise(Paths.OST.Noises.UseItems);
         //}
 
-        public ushort Power { get; set; }
-
         public ushort Cost { get; set; }
-        public byte Count { get; set; }
     }
 }

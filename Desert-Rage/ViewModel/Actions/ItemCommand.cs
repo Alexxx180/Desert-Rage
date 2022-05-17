@@ -4,19 +4,41 @@ using System.Runtime.CompilerServices;
 
 namespace DesertRage.ViewModel.Actions
 {
-    public class ItemCommand : INotifyPropertyChanged, IAttributeThing
+    public class ItemCommand : IThing, INotifyPropertyChanged
     {
-        public Item Item { get; set; }
-
-        #region IAttrubuteThing Members
-        public void Spend()
+        private BattleViewModel _viewModel;
+        public BattleViewModel ViewModel
         {
-            Item.Count--;
+            get => _viewModel;
+            set
+            {
+                _viewModel = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Item _item;
+        public Item Item
+        {
+            get => _item;
+            set
+            {
+                _item = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #region IThing Members
+        public void Use()
+        {
+            Item.Value--;
             OnPropertyChanged(nameof(Item));
         }
 
-        public bool CanSpend => Item.Count > 0;
-        public int Attribute => Item.Power;
+        public bool CanUse => Item.Value > 0;
+        public float Power => Item.Power;
+
+        public ValuableUnit Unit => Item;
         #endregion
 
         #region INotifyPropertyChanged Members
