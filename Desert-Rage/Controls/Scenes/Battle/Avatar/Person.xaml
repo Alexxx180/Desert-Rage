@@ -191,13 +191,13 @@
                         <StaticResource ResourceKey="Impact"/>
                     </MenuItem.ItemContainerStyle>
 
-                    <MenuItem.ItemTemplate>
+                    <!--<MenuItem.ItemTemplate>
                         <StaticResource ResourceKey="TargetTemplate"/>
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
                         <Binding Path="Battle.Enemies"/>
-                    </MenuItem.ItemsSource>
+                    </MenuItem.ItemsSource>-->
                 </MenuItem>
 
                 <MenuItem>
@@ -253,7 +253,7 @@
                     </MenuItem.ItemsSource>
 
                     <MenuItem.ItemContainerStyle>
-                        <Style TargetType="MenuItem">
+                        <Style TargetType="MenuItem"  x:Name="COnt">
                             <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>
 
                             <Setter Property="ItemTemplate">
@@ -281,16 +281,18 @@
 
                                     <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>-->
 
+                                    <!--<Setter Property="CommandParameter" Value="{Binding }"/>-->
 
-                                    <!--<Setter Property="ItemContainerStyle">
+                                    <Setter Property="ItemContainerStyle">
                                         <Setter.Value>
                                             <Style TargetType="MenuItem">
-                                                <Setter Property="Command" Value="{Binding}"/>
-                                                
-                                                <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+                                                <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
+                                                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext}"/>
                                             </Style>
                                         </Setter.Value>
-                                    </Setter>-->
+                                    </Setter>
+
+                                    <!--<Setter Property="Command" Value="{Binding}" TargetName="EnemyCommand" />-->
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>

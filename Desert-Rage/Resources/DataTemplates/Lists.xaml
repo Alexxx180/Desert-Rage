@@ -4,7 +4,9 @@
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
-                    xmlns:converters="clr-namespace:DesertRage.BindConverters">
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters"
+                    xmlns:actions="clr-namespace:DesertRage.ViewModel.Actions"
+                    xmlns:foe="clr-namespace:DesertRage.Model.Stats.Enemy">
     <DataTemplate x:Key="TopicTemplate">
         <DockPanel>
             <svgc:SvgViewbox DataContext="{Binding}">
@@ -146,80 +148,82 @@
     </DataTemplate>
 
     <DataTemplate x:Key="TargetTemplate">
-        <Grid MaxHeight="50" MinWidth="200">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
+        <MenuItem Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type MenuItem}}, Path=DataContext}">
+            <Grid MaxHeight="50" MinWidth="200">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="0.8*"/>
+                </Grid.ColumnDefinitions>
 
-            <svgc:SvgViewbox>
-                <attach:SvgBox.Source>
-                    <Binding>
-                        <Binding.Path>
-                            Icon
-                        </Binding.Path>
-                    </Binding>
-                </attach:SvgBox.Source>
-
-                <attach:SvgBox.Stretch>
-                    Fill
-                </attach:SvgBox.Stretch>
-            </svgc:SvgViewbox>
-
-            <UniformGrid Rows="2">
-                <Grid.Column>
-                    1
-                </Grid.Column>
-                
-                <TextBlock Padding="3">
-                    <TextBlock.FontWeight>
-                        Bold
-                    </TextBlock.FontWeight>
-
-                    <TextBlock.Text>
-                        <Binding Path="Name"/>
-                    </TextBlock.Text>
-                </TextBlock>
-
-                <status:StatBar>
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
-
-                    <status:StatBar.Caption>
-                        ОЗ
-                    </status:StatBar.Caption>
-
-                    <status:StatBar.Bar>
-                        <Binding Path="DataContext.Hp">
-                            <Binding.RelativeSource>
-                                <RelativeSource>
-                                    <RelativeSource.AncestorType>
-                                        <x:Type TypeName="Grid"/>
-                                    </RelativeSource.AncestorType>
-
-                                    <RelativeSource.Mode>
-                                        FindAncestor
-                                    </RelativeSource.Mode>
-
-                                    <RelativeSource.AncestorLevel>
-                                        1
-                                    </RelativeSource.AncestorLevel>
-                                </RelativeSource>
-                            </Binding.RelativeSource>
+                <svgc:SvgViewbox>
+                    <attach:SvgBox.Source>
+                        <Binding>
+                            <Binding.Path>
+                                Icon
+                            </Binding.Path>
                         </Binding>
-                    </status:StatBar.Bar>
+                    </attach:SvgBox.Source>
 
-                    <status:StatBar.ForeBrush>
-                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                            <GradientStop Color="#FF3AAC28"/>
-                            <GradientStop Color="#FF00F3FF" Offset="1"/>
-                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                        </LinearGradientBrush>
-                    </status:StatBar.ForeBrush>
-                </status:StatBar>
-            </UniformGrid>
-        </Grid>
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+                </svgc:SvgViewbox>
+
+                <UniformGrid Rows="2">
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+                
+                    <TextBlock Padding="3">
+                        <TextBlock.FontWeight>
+                            Bold
+                        </TextBlock.FontWeight>
+
+                        <TextBlock.Text>
+                            <Binding Path="Name"/>
+                        </TextBlock.Text>
+                    </TextBlock>
+
+                    <status:StatBar>
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
+
+                        <status:StatBar.Caption>
+                            ОЗ
+                        </status:StatBar.Caption>
+
+                        <status:StatBar.Bar>
+                            <Binding Path="DataContext.Hp">
+                                <Binding.RelativeSource>
+                                    <RelativeSource>
+                                        <RelativeSource.AncestorType>
+                                            <x:Type TypeName="Grid"/>
+                                        </RelativeSource.AncestorType>
+
+                                        <RelativeSource.Mode>
+                                            FindAncestor
+                                        </RelativeSource.Mode>
+
+                                        <RelativeSource.AncestorLevel>
+                                            1
+                                        </RelativeSource.AncestorLevel>
+                                    </RelativeSource>
+                                </Binding.RelativeSource>
+                            </Binding>
+                        </status:StatBar.Bar>
+
+                        <status:StatBar.ForeBrush>
+                            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                <GradientStop Color="#FF3AAC28"/>
+                                <GradientStop Color="#FF00F3FF" Offset="1"/>
+                                <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                            </LinearGradientBrush>
+                        </status:StatBar.ForeBrush>
+                    </status:StatBar>
+                </UniformGrid>
+            </Grid>
+        </MenuItem>
     </DataTemplate>
 
     <HierarchicalDataTemplate x:Key="SkillTemplate" ItemsSource="{Binding Path=ViewModel.Enemies}">
@@ -286,7 +290,84 @@
         </DockPanel>
 
         <HierarchicalDataTemplate.ItemTemplate>
-            <StaticResource ResourceKey="TargetTemplate"/>
+            <DataTemplate DataType="{x:Type foe:Foe}">
+                
+                    <!--, Path=DataContext-->
+                <Grid MaxHeight="50" MinWidth="200">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.8*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <svgc:SvgViewbox>
+                        <attach:SvgBox.Source>
+                            <Binding>
+                                <Binding.Path>
+                                    Icon
+                                </Binding.Path>
+                            </Binding>
+                        </attach:SvgBox.Source>
+
+                        <attach:SvgBox.Stretch>
+                            Fill
+                        </attach:SvgBox.Stretch>
+                    </svgc:SvgViewbox>
+
+                    <UniformGrid Rows="2">
+                        <Grid.Column>
+                            1
+                        </Grid.Column>
+
+                        <TextBlock Padding="3">
+                            <TextBlock.FontWeight>
+                                Bold
+                            </TextBlock.FontWeight>
+
+                            <TextBlock.Text>
+                                <Binding Path="Name"/>
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                        <status:StatBar>
+                            <Grid.Row>
+                                1
+                            </Grid.Row>
+
+                            <status:StatBar.Caption>
+                                ОЗ
+                            </status:StatBar.Caption>
+
+                            <status:StatBar.Bar>
+                                <Binding Path="DataContext.Hp">
+                                    <Binding.RelativeSource>
+                                        <RelativeSource>
+                                            <RelativeSource.AncestorType>
+                                                <x:Type TypeName="Grid"/>
+                                            </RelativeSource.AncestorType>
+
+                                            <RelativeSource.Mode>
+                                                FindAncestor
+                                            </RelativeSource.Mode>
+
+                                            <RelativeSource.AncestorLevel>
+                                                1
+                                            </RelativeSource.AncestorLevel>
+                                        </RelativeSource>
+                                    </Binding.RelativeSource>
+                                </Binding>
+                            </status:StatBar.Bar>
+
+                            <status:StatBar.ForeBrush>
+                                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                    <GradientStop Color="#FF3AAC28"/>
+                                    <GradientStop Color="#FF00F3FF" Offset="1"/>
+                                    <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                                </LinearGradientBrush>
+                            </status:StatBar.ForeBrush>
+                        </status:StatBar>
+                    </UniformGrid>
+                </Grid>
+            </DataTemplate>
         </HierarchicalDataTemplate.ItemTemplate>
     </HierarchicalDataTemplate>
 </ResourceDictionary>

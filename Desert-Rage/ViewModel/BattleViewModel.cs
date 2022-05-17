@@ -93,6 +93,11 @@ namespace DesertRage.ViewModel
             OnPropertyChanged(nameof(Player));
         }
 
+        public void UpdateEnemies()
+        {
+            OnPropertyChanged(nameof(Enemies));
+        }
+
         private UserProfile _player;
         public UserProfile Player
         {

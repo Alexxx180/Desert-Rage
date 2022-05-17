@@ -13,12 +13,19 @@ namespace DesertRage.ViewModel.Actions.Dependent
 
         private protected override void Use(object parameter)
         {
+            System.Diagnostics.Trace.WriteLine(parameter is null);
+            System.Diagnostics.Trace.WriteLine(parameter.GetType().Name);
+            System.Diagnostics.Trace.WriteLine(parameter.GetType().FullName);
+            
+
             BattleUnit unit = parameter as BattleUnit;
             int power = Subject.Power.ToInt();
             unit.Hit(power);
 
+            ViewModel.UpdateEnemies();
+
             System.Diagnostics.Trace.WriteLine(power);
-            System.Diagnostics.Trace.WriteLine(ViewModel.Player.Hero.Hp.ToString());
+            System.Diagnostics.Trace.WriteLine(unit.Hp.ToString());
         }
     }
 }
