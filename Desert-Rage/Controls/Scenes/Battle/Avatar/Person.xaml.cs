@@ -76,7 +76,6 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
 
                 System.Diagnostics.Trace.WriteLine("FOR REAL:");
                 System.Diagnostics.Trace.WriteLine(Battle.Player.Hero.Hp.ToString());
-                OnPropertyChanged(nameof(Battle.Player));
             }
 
             Time = newBar;

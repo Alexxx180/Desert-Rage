@@ -7,6 +7,11 @@ namespace DesertRage.ViewModel.Actions
 {
     public abstract class ActCommand : ITarget, INotifyPropertyChanged
     {
+        public ActCommand(IThing thing)
+        {
+            Subject = thing;
+        }
+
         private BattleViewModel _viewModel;
         public BattleViewModel ViewModel
         {
@@ -19,7 +24,7 @@ namespace DesertRage.ViewModel.Actions
         }
 
         private Targeting _cursor;
-        public Targeting Cursor
+        public Targeting UnitCursor
         {
             get => _cursor;
             set

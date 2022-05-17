@@ -9,7 +9,6 @@ using DesertRage.Model.Stats.Player;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Menu.Game;
 using DesertRage.Model.Menu.Things;
-using DesertRage.Model.Menu.Things.Commands.Dependent;
 using DesertRage.Model.Stats;
 using DesertRage.ViewModel.Actions;
 
@@ -42,16 +41,16 @@ namespace DesertRage.Controls.Scenes.Map
                     Icon = "/Resources/Images/Menu/Skills/Cure.svg",
                     Description = "+ ОЗ"
                 },
-                new Skill()
+                new Skill
                 {
                     Name = "Лечение 2",
                     Value = 10,
-                    Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                    Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
                     Description = "100% ОЗ"
                 },
-                new Skill()
+                new Skill
                 {
-                    Name = "Исцеление",
+                    Name = "Антидот",
                     Value = 3,
                     Icon = "/Resources/Images/Menu/Skills/Heal.svg",
                     Description = "- Яд"
@@ -77,7 +76,7 @@ namespace DesertRage.Controls.Scenes.Map
                     Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
                     Description = "Изучить врага как следует"
                 },
-                new Skill
+                new Skill(2f)
                 {
                     Name = "Факел",
                     Value = 5,

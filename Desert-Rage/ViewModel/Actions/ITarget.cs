@@ -5,7 +5,7 @@ namespace DesertRage.ViewModel.Actions
 {
     public interface ITarget : ICommand
     {
-        public Targeting Cursor { get; set; }
+        public Targeting UnitCursor { get; set; }
 
         public BattleViewModel ViewModel { get; set; }
     }

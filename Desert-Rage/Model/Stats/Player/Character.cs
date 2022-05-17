@@ -9,9 +9,8 @@ namespace DesertRage.Model.Stats.Player
 {
     public class Character : BattleUnit
     {
-        public Character()
+        public Character() : base()
         {
-            Status = new BitArray(1);
             StandImage = new string[4];
             GoingImage = new string[4][];
         }

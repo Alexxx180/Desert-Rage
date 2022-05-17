@@ -8,6 +8,8 @@
              xmlns:stats="clr-namespace:DesertRage.Model.Stats"
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:target="clr-namespace:DesertRage.Model.Menu.Battle"
+             xmlns:actions="clr-namespace:DesertRage.ViewModel.Actions"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="250"
@@ -145,9 +147,6 @@
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
                 
-                
-
-
                 <MenuItem>
                     <MenuItem.VerticalAlignment>
                         Center
@@ -255,7 +254,45 @@
 
                     <MenuItem.ItemContainerStyle>
                         <Style TargetType="MenuItem">
-                            <Setter Property="Command" Value="{Binding}"/>
+                            <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>
+
+                            <Setter Property="ItemTemplate">
+                                <Setter.Value>
+                                    <StaticResource ResourceKey="TargetTemplate" />
+                                </Setter.Value>
+                            </Setter>-->
+
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                         Value="{x:Static target:Targeting.HERO}">
+                                    <Setter Property="Command" Value="{Binding}"/>
+                                    <Setter Property="ItemsSource" Value="{x:Null}"/>
+                                </DataTrigger>
+
+                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                         Value="{x:Static target:Targeting.ALL}">
+                                    <Setter Property="Command" Value="{Binding}"/>
+                                    <Setter Property="ItemsSource" Value="{x:Null}"/>
+                                </DataTrigger>
+
+                                <!--RelativeSource={RelativeSource AncestorType={x:Type actions:ActCommand}}-->
+                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                         Value="{x:Static target:Targeting.ONE}">
+
+                                    <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>-->
+
+
+                                    <!--<Setter Property="ItemContainerStyle">
+                                        <Setter.Value>
+                                            <Style TargetType="MenuItem">
+                                                <Setter Property="Command" Value="{Binding}"/>
+                                                
+                                                <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+                                            </Style>
+                                        </Setter.Value>
+                                    </Setter>-->
+                                </DataTrigger>
+                            </Style.Triggers>
                         </Style>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>

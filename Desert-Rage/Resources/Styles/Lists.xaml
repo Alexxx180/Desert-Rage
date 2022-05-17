@@ -54,4 +54,20 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="Actions" BasedOn="{StaticResource WhiteOption}" TargetType="MenuItem">
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="MenuItem">
+                    <Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>
+
+                    <Setter Property="ItemTemplate">
+                        <Setter.Value>
+                            <DynamicResource ResourceKey="TargetTemplate" />
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

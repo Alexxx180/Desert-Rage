@@ -17,7 +17,8 @@ using DesertRage.Model.Stats.Enemy;
 using System.Windows.Input;
 using DesertRage.ViewModel.Actions;
 using DesertRage.Model.Menu.Things;
-using DesertRage.Model.Menu.Things.Commands.Dependent;
+using DesertRage.ViewModel.Actions.Dependent;
+using DesertRage.ViewModel.Actions.Independent;
 
 namespace DesertRage.ViewModel
 {
@@ -58,17 +59,14 @@ namespace DesertRage.ViewModel
             GetSkills(List<Skill> skills)
         {
             Skill cure = skills[0];
-            Skill cure2 = skills[0];
+            Skill cure2 = skills[1];
+            Skill fire = skills[6];
 
             return new ObservableCollection<ActCommand>
             {
-                new CureCommand
-                {
-                    Subject = new SkillCommand
-                    {
-                        Ability = cure
-                    }
-                }
+                new CureCommand(new SkillCommand(cure)),
+                new CureMaxCommand(new SkillCommand(cure2)),
+                new FightCommand(new SkillCommand(fire))
             };
         }
 
@@ -81,6 +79,7 @@ namespace DesertRage.ViewModel
             Enemies = _drawStrategy.Build();
 
             Skills = GetSkills(Player.Hero.HeroSkills);
+            
             //foreach (Foe enemy in _enemies)
             //{
             //    Trace.WriteLine(enemy.Name);
