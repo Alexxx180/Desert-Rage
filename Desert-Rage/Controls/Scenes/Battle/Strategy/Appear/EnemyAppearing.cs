@@ -1,10 +1,10 @@
-﻿using DesertRage.Model.Stats.Enemy;
+﻿using DesertRage.ViewModel.Battle;
 using System.Collections.ObjectModel;
 
 namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
 {
     public interface EnemyAppearing
     {
-        public ObservableCollection<Foe> Build();
+        public ObservableCollection<Enemy> Build();
     }
 }

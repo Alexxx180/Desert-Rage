@@ -1,16 +1,17 @@
 ﻿namespace DesertRage.Model
 {
-    public class DescriptionUnit
+    public class DescriptionUnit : ICloneable<DescriptionUnit>
     {
-        public DescriptionUnit()
-        {
-        }
+        public DescriptionUnit() { }
 
-        public DescriptionUnit(DescriptionUnit copy)
+        public DescriptionUnit Clone()
         {
-            Icon = copy.Icon;
-            Name = copy.Name;
-            Description = copy.Description;
+            return new DescriptionUnit
+            {
+                Icon = Icon,
+                Name = Name,
+                Description = Description
+            };
         }
 
         public string Icon { get; set; }

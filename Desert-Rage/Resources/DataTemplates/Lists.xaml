@@ -6,7 +6,7 @@
                     xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
                     xmlns:converters="clr-namespace:DesertRage.BindConverters"
                     xmlns:actions="clr-namespace:DesertRage.ViewModel.Actions"
-                    xmlns:foe="clr-namespace:DesertRage.Model.Stats.Enemy">
+                    xmlns:battle="clr-namespace:DesertRage.ViewModel.Battle">
     <DataTemplate x:Key="TopicTemplate">
         <DockPanel>
             <svgc:SvgViewbox DataContext="{Binding}">
@@ -130,7 +130,7 @@
                     <attach:SvgBox.Source>
                         <Binding>
                             <Binding.Path>
-                                Icon
+                                Foe.Icon
                             </Binding.Path>
                         </Binding>
                     </attach:SvgBox.Source>
@@ -147,7 +147,7 @@
         </Grid>
     </DataTemplate>
 
-    <DataTemplate x:Key="TargetTemplate"  DataType="{x:Type foe:Foe}">
+    <DataTemplate x:Key="TargetTemplate"  DataType="{x:Type battle:Enemy}">
         <Grid MaxHeight="50" MinWidth="200" x:Name="Data">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
@@ -158,7 +158,7 @@
                 <attach:SvgBox.Source>
                     <Binding>
                         <Binding.Path>
-                            Icon
+                            Foe.Icon
                         </Binding.Path>
                     </Binding>
                 </attach:SvgBox.Source>
@@ -179,7 +179,7 @@
                     </TextBlock.FontWeight>
 
                     <TextBlock.Text>
-                        <Binding Path="Name"/>
+                        <Binding Path="Foe.Name"/>
                     </TextBlock.Text>
                 </TextBlock>
                 
@@ -193,7 +193,7 @@
                     </status:StatBar.Caption>
 
                     <status:StatBar.Bar>
-                        <Binding ElementName="Data" Path="DataContext.Hp"/>
+                        <Binding ElementName="Data" Path="DataContext.Foe.Hp"/>
                     </status:StatBar.Bar>
 
                     <status:StatBar.ForeBrush>

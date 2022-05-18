@@ -11,6 +11,7 @@ using DesertRage.Controls.Menu.Game;
 using DesertRage.Model.Menu.Things;
 using DesertRage.Model.Stats;
 using DesertRage.ViewModel.Actions;
+using SkillsID = DesertRage.Model.Menu.Things.Logic.SkillsID;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -28,97 +29,6 @@ namespace DesertRage.Controls.Scenes.Map
                 _userData = value;
                 OnPropertyChanged();
             }
-        }
-
-        public static List<Skill> SkillsBank()
-        {
-            return new List<Skill>()
-            {
-                new Skill(1.8f)
-                {
-                    Name = "Лечение",
-                    Value = 5,
-                    Icon = "/Resources/Images/Menu/Skills/Cure.svg",
-                    Description = "+ ОЗ"
-                },
-                new Skill
-                {
-                    Name = "Лечение 2",
-                    Value = 10,
-                    Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
-                    Description = "100% ОЗ"
-                },
-                new Skill
-                {
-                    Name = "Антидот",
-                    Value = 3,
-                    Icon = "/Resources/Images/Menu/Skills/Heal.svg",
-                    Description = "- Яд"
-                },
-                new Skill
-                {
-                    Name = "Усиление",
-                    Value = 20,
-                    Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
-                    Description = "Сконцентрировать всю силу"
-                },
-                new Skill
-                {
-                    Name = "Охрана",
-                    Value = 15,
-                    Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
-                    Description = "Повысить бдительность"
-                },
-                new Skill
-                {
-                    Name = "Анализ",
-                    Value = 5,
-                    Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
-                    Description = "Изучить врага как следует"
-                },
-                new Skill(2f)
-                {
-                    Name = "Факел",
-                    Value = 5,
-                    Icon = "/Resources/Images/Menu/Skills/Torch.svg",
-                    Description = "Хорошо поджигает"
-                },
-                new Skill
-                {
-                    Name = "Кнут",
-                    Value = 7,
-                    Icon = "/Resources/Images/Menu/Skills/Whip.svg",
-                    Description = "Дробит кости"
-                },
-                new Skill
-                {
-                    Name = "Рогатка",
-                    Value = 13,
-                    Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
-                    Description = "От нее не скрыться"
-                },
-                new Skill
-                {
-                    Name = "Комбо",
-                    Value = 10,
-                    Icon = "/Resources/Images/Menu/Skills/Combo.svg",
-                    Description = "Град ударов по врагам"
-                },
-                new Skill
-                {
-                    Name = "Буря",
-                    Value = 18,
-                    Icon = "/Resources/Images/Menu/Skills/Storm.svg",
-                    Description = "Неистовый порыв ветра"
-                },
-                new Skill
-                {
-                    Name = "Обвал",
-                    Value = 25,
-                    Icon = "/Resources/Images/Menu/Skills/Slide.svg",
-                    Description = "Усыпать противников камнями"
-                }
-            };
         }
 
         public static UserProfile GetUserData()
@@ -235,7 +145,19 @@ namespace DesertRage.Controls.Scenes.Map
                 Place = new Position(1, 3)
             };
 
-            hero.HeroSkills = SkillsBank();
+            hero.Skills = new List<SkillsID>
+            {
+                SkillsID.Cure,
+                SkillsID.Cure2,
+
+                SkillsID.Torch,
+                SkillsID.Whip,
+                SkillsID.Sling,
+                
+                SkillsID.Combo,
+                SkillsID.Whirl,
+                SkillsID.Quake
+            };
 
             return new UserProfile
             {
@@ -244,8 +166,6 @@ namespace DesertRage.Controls.Scenes.Map
                 Menu = new GameMenu()
             };
         }
-
-        
 
         public LevelMap()
         {

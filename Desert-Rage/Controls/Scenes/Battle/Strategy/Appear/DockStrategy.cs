@@ -1,40 +1,61 @@
 ﻿using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Enemy;
 using DesertRage.ViewModel;
+using DesertRage.ViewModel.Battle;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using Random = System.Random;
 
 namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
 {
     public class DockStrategy : EnemyAppearing
     {
+        private Range _startArea;
+
         private readonly BattleViewModel _battleZone;
         private readonly List<Range> _area;
 
         private Dictionary<Position, List<Foe>> _stageFoes;
         private List<Position> _keySizes;
 
-        public DockStrategy
-            (in BattleViewModel battleZone,
-            Range totalArea, params Foe[] foes)
+        public DockStrategy(in BattleViewModel battleZone)
         {
             _battleZone = battleZone;
+        }
 
-            _area = new List<Range>
-            {
-                totalArea
-            };
+        public DockStrategy(in BattleViewModel battleZone,
+            Range totalArea, params Foe[] foes) : this(battleZone)
+        {
+            _startArea = totalArea;
+            _area = new List<Range>();
 
+            _stageFoes = new Dictionary<Position, List<Foe>>();
+            _keySizes = new List<Position>();
+
+            SortEnemies(foes);
+        }
+
+        internal void ResetArea()
+        {
+            _area.Clear();
+            _area.Add(_startArea);
+        }
+
+        internal void ResetArea(Range area)
+        {
+            _startArea = area;
+            ResetArea();
+        }
+
+        internal void ResetEnemies(params Foe[] foes)
+        {
+            _stageFoes.Clear();
+            _keySizes.Clear();
             SortEnemies(foes);
         }
 
         private void SortEnemies(Foe[] foes)
         {
-            _stageFoes = new Dictionary<Position, List<Foe>>();
-            _keySizes = new List<Position>();
-
             for (byte i = 0; i < foes.Length; i++)
             {
                 Foe current = foes[i];
@@ -50,17 +71,18 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
             }
         }
 
-        public ObservableCollection<Foe> Build()
+        public ObservableCollection<Enemy> Build()
         {
+            ResetArea();
             return SelectEnemies();
         }
 
         #region FoeSelection Members
-        private ObservableCollection<Foe>
+        private ObservableCollection<Enemy>
             SelectEnemies()
         {
-            ObservableCollection<Foe> enemies = new
-                ObservableCollection<Foe>();
+            ObservableCollection<Enemy> enemies = new
+                ObservableCollection<Enemy>();
 
             Random random = new Random();
             int count = random.Next(1, 6);
@@ -73,10 +95,10 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
 
                 Position totalSize = totalArea.Size();
                 Position selection = SelectSizeGroup(_keySizes, totalSize);
-                
-                Foe foe = SelectFoe(_stageFoes[selection], totalArea.Point1);
-                
-                enemies.Add(foe);
+
+                Enemy enemy = SelectEnemy(_stageFoes[selection], totalArea.Point1);
+
+                enemies.Add(enemy);
 
                 Range foeArea = new Range(totalArea.Point1, selection);
 
@@ -112,7 +134,7 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
             return selection;
         }
 
-        private Foe SelectFoe(
+        private Enemy SelectEnemy(
             List<Foe> foes,
             Position zoneLeftTop
             )
@@ -120,10 +142,11 @@ namespace DesertRage.Controls.Scenes.Battle.Strategy.Appear
             Random randomFoe = new Random();
 
             int selection = randomFoe.Next(0, foes.Count);
-            Foe current = foes[selection];
-            current.Tile = zoneLeftTop - 1;
+            Foe current = foes[selection].Clone();
+            Enemy enemy = new Enemy(_battleZone, current);
+            enemy.Tile = zoneLeftTop - 1;
 
-            return current;
+            return enemy;
         }
         #endregion
 

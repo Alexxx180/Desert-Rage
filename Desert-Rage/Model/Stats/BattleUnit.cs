@@ -2,7 +2,7 @@
 
 namespace DesertRage.Model.Stats
 {
-    public class BattleUnit : DescriptionUnit
+    public class BattleUnit : DescriptionUnit, ICloneable<BattleUnit>
     {
         public BattleUnit()
         {
@@ -10,14 +10,11 @@ namespace DesertRage.Model.Stats
             Turn = new Bar(0, 1000);
         }
 
-        public BattleUnit(BattleUnit unit) : base(unit)
+        public BattleUnit(DescriptionUnit unit)
         {
-            Hp = unit.Hp;
-            Turn = unit.Turn;
-            Stats = unit.Stats;
-            Special = unit.Special;
-            Action = unit.Action;
-            Status = unit.Status;
+            Icon = unit.Icon;
+            Name = unit.Name;
+            Description = unit.Description;
         }
 
         #region Hp Management Members
@@ -53,6 +50,19 @@ namespace DesertRage.Model.Stats
         public void SetStatus(int no, bool code)
         {
             Status[no] = code;
+        }
+
+        public new BattleUnit Clone()
+        {
+            return new BattleUnit(base.Clone())
+            {
+                Hp = Hp,
+                Turn = Turn,
+                Stats = Stats,
+                Special = Special,
+                Action = Action,
+                Status = Status
+            };
         }
 
         public Bar Hp { get; set; }

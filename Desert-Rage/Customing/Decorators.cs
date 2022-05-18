@@ -1,7 +1,9 @@
 ﻿using DesertRage.Model.Stats;
+using DesertRage.ViewModel;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -14,12 +16,33 @@ namespace DesertRage.Customing
 {
     public static class Decorators
     {
-        public static void SetActive
-            (this FrameworkElement element, bool setToActive)
+        public static void SetActive(
+            this FrameworkElement element,
+            bool setToActive)
         {
             element.Visibility = setToActive ?
                 Visibility.Visible :
                 Visibility.Collapsed;
+        }
+
+        public static void Refresh<T>
+            (this IList<T> list, IEnumerable<T> value)
+        {
+            list.Clear();
+            foreach (T item in value)
+            {
+                list.Add(item);
+            }
+        }
+
+        public static void
+            SetViewModel<T>(this IEnumerable
+            <IViewModelObservable<T>> items, T viewModel)
+        {
+            foreach (IViewModelObservable<T> item in items)
+            {
+                item.SetViewModel(viewModel);
+            }
         }
 
         #region Binding Members

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Stats.Player.Armory;
-using DesertRage.Model.Menu.Things;
+using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.Model.Stats.Player
 {
@@ -37,7 +37,7 @@ namespace DesertRage.Model.Stats.Player
 
         public string Image { get; set; }
 
-        public List<Skill> HeroSkills { get; set; }
+        public List<SkillsID> Skills { get; set; }
 
         #region Ap Management Members
         public void Act(int value)

@@ -35,7 +35,7 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
             set => SetValue(BattleProperty, value);
         }
 
-        private DispatcherTimer _turn;
+        
 
         private Bar _time;
         public Bar Time
@@ -52,33 +52,17 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
         {
             InitializeComponent();
             Time = new Bar(0, 1000);
-            SetTurns();
         }
 
-        public void SetTurns()
+        public void WaitForTurn()
         {
-            _turn = new DispatcherTimer();
-            _turn.Tick += WaitForTurn;
-            _turn.Interval = new TimeSpan(0, 0, 0, 0, 50);
-            _turn.Start();
-        }
+            if (Time.IsMax)
+                return;
 
-        private void WaitForTurn(object sender, object o)
-        {
             ushort speed = 10;
-
             speed += Battle.Player.Hero.Stats.Speed;
 
-            if (Time.Fill(out Bar newBar, speed))
-            {
-                _turn.Stop();
-                MOptions.SetActive(true);
-
-                System.Diagnostics.Trace.WriteLine("FOR REAL:");
-                System.Diagnostics.Trace.WriteLine(Battle.Player.Hero.Hp.ToString());
-            }
-
-            Time = newBar;
+            Time = Time.Restore(speed);
         }
 
         public static byte[] AbilityBonuses = new byte[] { 0, 0, 0, 0 };

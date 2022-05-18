@@ -342,8 +342,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Person.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Person.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Foe.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Battle\Avatar\Foe.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Styles\ToolTip.baml

@@ -110,6 +110,17 @@
                         </status:StatBar.ForeBrush>
                     </status:StatBar>
 
+                    <UniformGrid Columns="12">
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
+
+                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
+                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
+                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
+                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
+                    </UniformGrid>
+                    
                     <StackPanel>
                         <Grid.Row>
                             1
