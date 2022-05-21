@@ -27,5 +27,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             System.Diagnostics.Trace.WriteLine("MAXED");
             System.Diagnostics.Trace.WriteLine(Hero.Hp.ToString());
         }
+
+        public virtual bool CanUse => true;
     }
 }

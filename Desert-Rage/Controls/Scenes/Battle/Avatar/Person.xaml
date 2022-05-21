@@ -267,7 +267,7 @@
                     </MenuItem.ItemsSource>
 
                     <MenuItem.ItemContainerStyle>
-                        <Style TargetType="MenuItem"  x:Name="COnt">
+                        <Style TargetType="MenuItem" x:Name="COnt">
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
                                          Value="{x:Static target:Targeting.HERO}">
@@ -358,7 +358,7 @@
                             <Setter Property="Command" Value="{Binding}"/>
                             
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=Subject.Unit.Value}" Value="0">
+                                <DataTrigger Binding="{Binding Path=Subject.Value}" Value="0">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                     <Setter Property="IsEnabled" Value="False"/>
                                 </DataTrigger>
@@ -367,7 +367,7 @@
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>
                 
-                <MenuItem>
+                <MenuItem Command="{Binding Battle.Shield}">
                     <MenuItem.VerticalContentAlignment>
                         Center
                     </MenuItem.VerticalContentAlignment>
@@ -410,9 +410,15 @@
                             </attach:SvgBox.Stretch>
                         </svgc:SvgViewbox>
                     </MenuItem.Icon>
+
+                    <!--<MenuItem.ItemContainerStyle>
+                        <Style TargetType="MenuItem" BasedOn="{StaticResource Impact}">
+                            <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext.Battle.Shield}"/>
+                        </Style>
+                    </MenuItem.ItemContainerStyle>-->
                 </MenuItem>
 
-                <MenuItem>
+                <MenuItem Command="{Binding Battle.Flee}">
                     <MenuItem.VerticalContentAlignment>
                         Center
                     </MenuItem.VerticalContentAlignment>
@@ -459,7 +465,7 @@
 
                 
 
-                <MenuItem>
+                <MenuItem Command="{Binding Battle.Auto}">
                     <MenuItem.VerticalContentAlignment>
                         Center
                     </MenuItem.VerticalContentAlignment>

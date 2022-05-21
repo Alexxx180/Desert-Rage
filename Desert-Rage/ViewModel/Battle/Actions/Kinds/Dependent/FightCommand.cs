@@ -28,5 +28,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
             System.Diagnostics.Trace.WriteLine(unit.Foe.Name);
             System.Diagnostics.Trace.WriteLine(unit.Foe.Hp.ToString());
         }
+
+        public bool CanUse => ViewModel.IsBattle;
     }
 }

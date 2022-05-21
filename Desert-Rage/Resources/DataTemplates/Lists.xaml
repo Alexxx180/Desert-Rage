@@ -207,7 +207,8 @@
         </DockPanel>
     </DataTemplate>
     
-    <HierarchicalDataTemplate x:Key="SkillTemplate" ItemsSource="{Binding Path=Effect.ViewModel.Enemies}">
+    <HierarchicalDataTemplate x:Key="SkillTemplate"
+                              ItemsSource="{Binding Path=Effect.ViewModel.Enemies}">
         <DockPanel LastChildFill="True">
             <StackPanel>
                 <StackPanel.Orientation>

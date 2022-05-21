@@ -1,4 +1,5 @@
-﻿using DesertRage.Customing.Converters;
+﻿using DesertRage.Customing;
+using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System.Collections;
 
@@ -8,7 +9,7 @@ namespace DesertRage.Model.Locations.Battle.Stats
     {
         public BattleUnit()
         {
-            Status = new BitArray(1);
+            Status = new BitArray(Decorators.ToValues<StatusID>().Length);
             Turn = new Bar(0, 1000);
         }
 
@@ -25,9 +26,13 @@ namespace DesertRage.Model.Locations.Battle.Stats
             Hp = Hp.Drain();
         }
 
-        public void Hit(int value)
+        public virtual void Hit(int value)
         {
-            Hp = Hp.Drain(value);
+            int damage = value - Stats.Defence;
+            if (damage <= 0)
+                return;
+
+            Hp = Hp.Drain(damage / Boost(StatusID.DEFENCE, StatusID.SHIELD));
         }
 
         public void Cure()
@@ -49,9 +54,24 @@ namespace DesertRage.Model.Locations.Battle.Stats
             }
         }
 
-        public void SetStatus(StatusID no, bool code)
+        public void SetStatus(StatusID id, bool code)
         {
-            Status[no.Int()] = code;
+            Status[id.Int()] = code;
+        }
+
+        public int Boost(StatusID id)
+        {
+            return Status[id.Int()].Boost();
+        }
+
+        public int Boost(params StatusID[] ids)
+        {
+            int boost = 1;
+            for (byte i = 0; i < ids.Length; i++)
+            {
+                boost *= Boost(ids[i]);
+            }
+            return boost;
         }
 
         public new BattleUnit Clone()

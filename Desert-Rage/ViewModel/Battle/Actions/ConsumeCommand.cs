@@ -32,6 +32,6 @@ namespace DesertRage.ViewModel.Battle.Actions
             Subject.Use();
         }
 
-        public override bool CanExecute(object parameter) => Subject.CanUse;
+        public override bool CanExecute(object parameter) => Subject.CanUse && base.CanExecute(parameter);
     }
 }

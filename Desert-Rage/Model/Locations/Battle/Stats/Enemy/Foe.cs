@@ -28,6 +28,15 @@
             };
         }
 
+        public override void Hit(int value)
+        {
+            int damage = value - (Stats.Defence + Stats.Special / 2);
+            if (damage <= 0)
+                return;
+
+            Hp = Hp.Drain(damage);
+        }
+
         public Position Size { get; set; }
         public string Death { get; set; }
 

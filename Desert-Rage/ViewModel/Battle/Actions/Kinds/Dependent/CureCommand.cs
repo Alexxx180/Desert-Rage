@@ -36,5 +36,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
             System.Diagnostics.Trace.WriteLine(Power);
             System.Diagnostics.Trace.WriteLine(Hero.Hp.ToString());
         }
+
+        public virtual bool CanUse => true;
     }
 }

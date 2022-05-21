@@ -34,5 +34,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
             }
         }
+
+        public bool CanUse => ViewModel.IsBattle;
     }
 }

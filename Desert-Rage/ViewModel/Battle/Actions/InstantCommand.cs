@@ -11,6 +11,6 @@ namespace DesertRage.ViewModel.Battle.Actions
             Effect.Use(parameter);
         }
 
-        public override bool CanExecute(object parameter) => true;
+        public override bool CanExecute(object parameter) => Effect.CanUse;
     }
 }

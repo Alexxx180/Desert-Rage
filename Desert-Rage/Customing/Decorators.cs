@@ -16,6 +16,21 @@ namespace DesertRage.Customing
 {
     public static class Decorators
     {
+        public static Array ToValues<TEnum>()
+        {
+            return Enum.GetValues(typeof(TEnum));
+        }
+
+        public static int Boost(this bool status, int multiply)
+        {
+            return status ? multiply : 1;
+        }
+
+        public static int Boost(this bool status)
+        {
+            return status.Boost(2);
+        }
+
         public static void SetActive(
             this FrameworkElement element,
             bool setToActive)

@@ -20,19 +20,18 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             State = state;
         }
 
+        protected UserProfile User => ViewModel.Player;
+        protected Character Hero => User.Hero;
+
         public void Use(object parameter)
         {
-            UserProfile user = ViewModel.Player;
-            Character character = user.Hero;
-
-            character.SetStatus(Status, State);
-            user.UpdateHero();
-
-            System.Diagnostics.Trace.WriteLine(user);
-            System.Diagnostics.Trace.WriteLine(character.Hp.ToString());
+            Hero.SetStatus(Status, State);
+            User.UpdateHero();
         }
 
         public StatusID Status { get; set; }
         public bool State { get; set; }
+
+        public bool CanUse => true;
     }
 }
