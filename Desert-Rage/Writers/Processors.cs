@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Windows;
 using DesertRage.Model.Locations;
-using DesertRage.Model.Stats.Player;
+using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel;
 using Microsoft.Win32;
 using Serilog;

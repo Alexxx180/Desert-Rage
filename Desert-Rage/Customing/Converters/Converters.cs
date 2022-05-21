@@ -1,4 +1,4 @@
-﻿using DesertRage.Model.Locations.Map;
+﻿using DesertRage.Model.Locations;
 using System;
 using System.Collections.Generic;
 
@@ -34,6 +34,11 @@ namespace DesertRage.Customing.Converters
         public static double ToDouble(this object obj)
         {
             return Convert.ToDouble(obj);
+        }
+
+        public static int Int(this object obj)
+        {
+            return (int)obj;
         }
 
         public static Uri ToUri(this string Path)

@@ -1,4 +1,4 @@
-﻿using DesertRage.Model.Stats;
+﻿using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.ViewModel;
 using System;
 using System.Collections;

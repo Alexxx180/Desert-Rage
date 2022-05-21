@@ -1,11 +1,10 @@
 ﻿using DesertRage.Controls.Menu.Game;
 using DesertRage.Customing.Converters;
 using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things;
-using DesertRage.Model.Stats.Player;
-using DesertRage.Model.Stats.Player.Armory;
-using DesertRage.ViewModel.Actions;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -18,114 +17,110 @@ namespace DesertRage.ViewModel
         {
             Preferences = new Settings();
 
-            Weapons = new ObservableCollection<Weapon>
-            {
-                new Weapon
-                {
-                    Name = "",
-                    Type = "Weapon",
-                    Description = "",
-                    Noise = "",
-                    Power = 0,
-                    Chest = 0,
-                }
-            };
+            //Weapons = new ObservableCollection<Weapon>
+            //{
+            //    new Weapon
+            //    {
+            //        Name = "",
+            //        Type = "Weapon",
+            //        Description = "",
+            //        Noise = "",
+            //        Chest = 0,
+            //    }
+            //};
 
-            Armor = new ObservableCollection<Equipment>
-            {
-                new Equipment
-                {
-                    Name = "",
-                    Type = "Armor",
-                    Description = "",
-                    Power = 0,
-                    Chest = 0
-                }
-            };
+            //Armor = new ObservableCollection<Equipment>
+            //{
+            //    new Equipment
+            //    {
+            //        Name = "",
+            //        Type = "Armor",
+            //        Description = "",
+            //        Chest = 0
+            //    }
+            //};
 
-            Pants = new ObservableCollection<Equipment>
-            {
-                new Equipment
-                {
-                    Name = "",
-                    Type = "Legs",
-                    Description = "",
-                    Power = 0,
-                    Chest = 0
-                }
-            };
+            //Pants = new ObservableCollection<Equipment>
+            //{
+            //    new Equipment
+            //    {
+            //        Name = "",
+            //        Type = "Legs",
+            //        Description = "",
+            //        Chest = 0
+            //    }
+            //};
 
-            Boots = new ObservableCollection<Equipment>
-            {
-                new Equipment
-                {
-                    Name = "",
-                    Type = "Boots",
-                    Description = "",
-                    Power = 0,
-                    Chest = 0
-                }
-            };
+            //Boots = new ObservableCollection<Equipment>
+            //{
+            //    new Equipment
+            //    {
+            //        Name = "",
+            //        Type = "Boots",
+            //        Description = "",
+            //        Chest = 0
+            //    }
+            //};
 
-            Items = new ObservableCollection<Item>()
-            {
-                new Item
-                {
-                    Name = "Бинт",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Bandage.svg",
-                    Description = "+50 ОЗ"
-                },
-                new Item
-                {
-                    Name = "Антидот",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
-                    Description = "- Яд"
-                },
-                new Item
-                {
-                    Name = "Эфир",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Ether.svg",
-                    Description = "+50 ОД"
-                },
-                new Item
-                {
-                    Name = "Смесь",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Mixture.svg",
-                    Description = "+80 ОЗ-ОД"
-                },
-                new Item
-                {
-                    Name = "Травы",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Herbs.svg",
-                    Description = "+350 ОЗ"
-                },
-                new Item
-                {
-                    Name = "Бутыль эфира",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg",
-                    Description = "+300 ОД"
-                },
-                new Item
-                {
-                    Name = "Спальный мешок",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
-                    Description = "100% ОЗ-ОД"
-                },
-                new Item
-                {
-                    Name = "Эликсир",
-                    Value = 1,
-                    Icon = "/Resources/Images/Menu/Bag/Elixir.svg",
-                    Description = "100% ОЗ-ОД"
-                }
-            };
+            //Items = new ObservableCollection<Item>()
+            //{
+            //    new Item
+            //    {
+            //        Name = "Бинт",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Bandage.svg",
+            //        Description = "+50 ОЗ"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Антидот",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
+            //        Description = "- Яд"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Эфир",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Ether.svg",
+            //        Description = "+50 ОД"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Смесь",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Mixture.svg",
+            //        Description = "+80 ОЗ-ОД"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Травы",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Herbs.svg",
+            //        Description = "+350 ОЗ"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Бутыль эфира",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg",
+            //        Description = "+300 ОД"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Спальный мешок",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
+            //        Description = "100% ОЗ-ОД"
+            //    },
+            //    new Item
+            //    {
+            //        Name = "Эликсир",
+            //        Value = 1,
+            //        Icon = "/Resources/Images/Menu/Bag/Elixir.svg",
+            //        Description = "100% ОЗ-ОД"
+            //    }
+            //};
         }
 
         public string Name { get; set; }
@@ -143,7 +138,7 @@ namespace DesertRage.ViewModel
         public ObservableCollection<Equipment> Boots { get; set; }
         #endregion
 
-        public ObservableCollection<Item> Items { get; set; }
+        //public ObservableCollection<Item> Items { get; set; }
 
         public void Go(Direction move)
         {

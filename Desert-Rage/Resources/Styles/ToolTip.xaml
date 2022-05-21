@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:stats="clr-namespace:DesertRage.Model.Stats"
+                    xmlns:stats="clr-namespace:DesertRage.Model.Locations.Battle.Stats"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Helpers.Attach">
@@ -168,7 +168,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Foe.Special">
+                                        <Binding Path="DataContext.Foe.Stats.Special">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>

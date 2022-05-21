@@ -1,5 +1,4 @@
-﻿using DesertRage.Model.Stats.Player;
-using DesertRage.ViewModel;
+﻿using DesertRage.ViewModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;

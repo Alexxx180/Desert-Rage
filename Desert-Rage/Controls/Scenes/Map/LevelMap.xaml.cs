@@ -1,17 +1,15 @@
-﻿using DesertRage.Model.Locations.Map;
-using DesertRage.ViewModel;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Input;
-using DesertRage.Model.Stats.Player;
-using DesertRage.Model.Locations;
 using DesertRage.Controls.Menu.Game;
-using DesertRage.Model.Menu.Things;
-using DesertRage.Model.Stats;
-using DesertRage.ViewModel.Actions;
-using SkillsID = DesertRage.Model.Menu.Things.Logic.SkillsID;
+using DesertRage.Model.Locations.Map;
+using DesertRage.Model.Locations;
+using DesertRage.Model.Menu.Things.Logic;
+using DesertRage.ViewModel;
+using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.Model.Locations.Battle.Stats;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -99,7 +97,7 @@ namespace DesertRage.Controls.Scenes.Map
             {
                 Hp = new Bar(20, 100),
                 Ap = new Bar(50),
-                Special = 25,
+                Stats = new BattleStats(25),
                 Icon = "/Resources/Images/Menu/Topics/Status.svg",
                 Step = new Position[4]
                 {

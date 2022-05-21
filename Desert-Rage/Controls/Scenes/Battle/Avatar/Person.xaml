@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Scenes.Battle.Avatar"
              xmlns:converters="clr-namespace:DesertRage.BindConverters"
-             xmlns:stats="clr-namespace:DesertRage.Model.Stats"
+             xmlns:stats="clr-namespace:DesertRage.Model.Locations.Battle.Stats.Player"
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
-             xmlns:target="clr-namespace:DesertRage.Model.Menu.Battle"
-             xmlns:actions="clr-namespace:DesertRage.ViewModel.Actions"
+             xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle"
+             xmlns:actions="clr-namespace:DesertRage.ViewModel.Battle.Actions"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="250"
@@ -198,17 +198,20 @@
                         </svgc:SvgViewbox>
                     </MenuItem.Icon>
 
-                    <MenuItem.ItemContainerStyle>
-                        <StaticResource ResourceKey="Impact"/>
-                    </MenuItem.ItemContainerStyle>
-
-                    <!--<MenuItem.ItemTemplate>
+                    <MenuItem.ItemTemplate>
                         <StaticResource ResourceKey="TargetTemplate"/>
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
                         <Binding Path="Battle.Enemies"/>
-                    </MenuItem.ItemsSource>-->
+                    </MenuItem.ItemsSource>
+
+                    <MenuItem.ItemContainerStyle>
+                        <Style TargetType="MenuItem" BasedOn="{StaticResource Impact}">
+                            <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext.Battle.Fight}"/>
+                            <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
+                        </Style>
+                    </MenuItem.ItemContainerStyle>
                 </MenuItem>
 
                 <MenuItem>
@@ -265,35 +268,21 @@
 
                     <MenuItem.ItemContainerStyle>
                         <Style TargetType="MenuItem"  x:Name="COnt">
-                            <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>
-
-                            <Setter Property="ItemTemplate">
-                                <Setter.Value>
-                                    <StaticResource ResourceKey="TargetTemplate" />
-                                </Setter.Value>
-                            </Setter>-->
-
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
                                          Value="{x:Static target:Targeting.HERO}">
                                     <Setter Property="Command" Value="{Binding}"/>
                                     <Setter Property="ItemsSource" Value="{x:Null}"/>
                                 </DataTrigger>
 
-                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
                                          Value="{x:Static target:Targeting.ALL}">
                                     <Setter Property="Command" Value="{Binding}"/>
                                     <Setter Property="ItemsSource" Value="{x:Null}"/>
                                 </DataTrigger>
 
-                                <!--RelativeSource={RelativeSource AncestorType={x:Type actions:ActCommand}}-->
-                                <DataTrigger Binding="{Binding Path=UnitCursor}"
+                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
                                          Value="{x:Static target:Targeting.ONE}">
-
-                                    <!--<Setter Property="ItemsSource" Value="{Binding Path=ViewModel.Enemies}"/>-->
-
-                                    <!--<Setter Property="CommandParameter" Value="{Binding }"/>-->
-
                                     <Setter Property="ItemContainerStyle">
                                         <Setter.Value>
                                             <Style TargetType="MenuItem">
@@ -302,8 +291,6 @@
                                             </Style>
                                         </Setter.Value>
                                     </Setter>
-
-                                    <!--<Setter Property="Command" Value="{Binding}" TargetName="EnemyCommand" />-->
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
@@ -363,8 +350,21 @@
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
-                        <Binding Path="Battle.Player.Items"/>
+                        <Binding Path="Battle.Items"/>
                     </MenuItem.ItemsSource>
+
+                    <MenuItem.ItemContainerStyle>
+                        <Style TargetType="MenuItem">
+                            <Setter Property="Command" Value="{Binding}"/>
+                            
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Subject.Unit.Value}" Value="0">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </MenuItem.ItemContainerStyle>
                 </MenuItem>
                 
                 <MenuItem>

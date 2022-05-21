@@ -1,24 +1,25 @@
-﻿using DesertRage.Controls.Scenes;
-using DesertRage.Controls.Scenes.Battle.Strategy.Appear;
-using DesertRage.Controls.Scenes.Map;
-using DesertRage.Model.Locations;
-using DesertRage.Customing;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using DesertRage.Model.Stats.Enemy;
-using System.Windows.Input;
-using DesertRage.ViewModel.Actions;
-using DesertRage.Model.Menu.Things;
-using DesertRage.ViewModel.Actions.Dependent;
-using DesertRage.ViewModel.Actions.Independent;
 using System.Windows.Threading;
-using System;
-using DesertRage.ViewModel.Battle;
+using DesertRage.Controls.Scenes;
+using DesertRage.Controls.Scenes.Map;
+using DesertRage.Customing;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Menu.Things.Logic;
+using DesertRage.ViewModel.Battle.Actions;
+using DesertRage.Model.Locations.Battle.Stats.Enemy;
+using DesertRage.Model.Locations.Battle.Strategy.Appear;
+using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.ViewModel.Battle.Actions.Kinds;
+using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
+using DesertRage.Model;
 
-namespace DesertRage.ViewModel
+namespace DesertRage.ViewModel.Battle
 {
     public class BattleViewModel : INotifyPropertyChanged
     {
@@ -46,28 +47,46 @@ namespace DesertRage.ViewModel
             }
         }
 
-        private ObservableCollection<ActCommand> _skills;
-        public ObservableCollection<ActCommand> Skills
+        private ObservableCollection<ConsumeCommand> _skills;
+        public ObservableCollection<ConsumeCommand> Skills
         {
             get => _skills;
             set
             {
                 _skills = value;
-                _skills.SetViewModel(this);
+                //_skills.SetViewModel(this);
                 OnPropertyChanged();
             }
         }
 
-        private void AddSkill(ActCommand skill)
+        private ObservableCollection<ConsumeCommand> _items;
+        public ObservableCollection<ConsumeCommand> Items
+        {
+            get => _items;
+            set
+            {
+                _items = value;
+                //_items.SetViewModel(this);
+                OnPropertyChanged();
+            }
+        }
+
+        private void AddSkill(ConsumeCommand skill)
         {
             skill.SetViewModel(this);
             Skills.Add(skill);
         }
 
+        private void AddItem(ConsumeCommand item)
+        {
+            item.SetViewModel(this);
+            Items.Add(item);
+        }
+
         private void AddSkills()
         {
             List<SkillsID> keys = Player.Hero.Skills;
-            Dictionary<SkillsID, ActCommand> skills = Bank.Skills();
+            Dictionary<SkillsID, ConsumeCommand> skills = Bank.Skills();
 
             for (byte i = 0; i < keys.Count; i++)
             {
@@ -75,7 +94,17 @@ namespace DesertRage.ViewModel
                 AddSkill(skills[id]);
             }
         }
-        
+
+        private void AddItems()
+        {
+            List<ConsumeCommand> items = Bank.Items();
+
+            for (byte i = 0; i < items.Count; i++)
+            {
+                AddItem(items[i]);
+            }
+        }
+
         #region Timing Members
         private DispatcherTimer _timing;
 
@@ -99,19 +128,41 @@ namespace DesertRage.ViewModel
             Enemies.Refresh(_drawStrategy.Build());
             _timing.Start();
 
-            foreach(Enemy enemy in Enemies)
+            foreach (Enemy enemy in Enemies)
             {
                 System.Diagnostics.Trace.WriteLine(enemy.Foe.Name);
             }
         }
         #endregion
 
+        public void UpdateItems()
+        {
+            OnPropertyChanged(nameof(Items));
+        }
+
+        private InstantCommand _fight;
+        public InstantCommand Fight
+        {
+            get => _fight;
+            set
+            {
+                _fight = value;
+                OnPropertyChanged();
+            }
+        }
+
         public BattleViewModel()
         {
             Player = LevelMap.GetUserData();
-            
-            Skills = new ObservableCollection<ActCommand>();
+
+            Skills = new ObservableCollection<ConsumeCommand>();
             AddSkills();
+
+            Items = new ObservableCollection<ConsumeCommand>();
+            AddItems();
+
+            Player.Hero.Stats = new Model.Locations.Battle.Stats.BattleStats(100);
+            Player.UpdateHero();
 
             Dictionary<EnemyBestiary, Foe> allEnemies = Bank.Foes();
             EnemyBestiary[] bestiary = Location.GetFoes();
@@ -127,6 +178,18 @@ namespace DesertRage.ViewModel
                 (this, BattleScene.SceneArea, foes);
 
             Enemies = new ObservableCollection<Enemy>();
+
+            Fight = new InstantCommand(
+                new FightCommand(
+                    new AttackFormula(0),
+                    new DescriptionUnit("Пустой слот")
+                    {
+                        Name = "Пусто",
+                    }
+                )
+            );
+                
+            Fight.SetViewModel(this);
 
             SetTurns();
 

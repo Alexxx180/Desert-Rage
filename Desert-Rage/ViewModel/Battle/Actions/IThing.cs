@@ -1,15 +1,10 @@
-﻿using DesertRage.Model.Menu.Things;
-
-namespace DesertRage.ViewModel.Actions
+﻿namespace DesertRage.ViewModel.Battle.Actions
 {
-    public interface IThing
+    public interface IThing : IBattle
     {
         public void Use();
 
         public bool CanUse { get; }
-        public float Power { get; }
-
-        public ValuableUnit Unit { get; }
-        public BattleViewModel ViewModel { get; set; }
+        public int Value { get; set; }
     }
 }

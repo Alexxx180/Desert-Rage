@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="50"
              xmlns:converters="clr-namespace:DesertRage.BindConverters"
-             xmlns:stats="clr-namespace:DesertRage.Model.Stats"
+             xmlns:stats="clr-namespace:DesertRage.Model.Locations.Battle.Stats"
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">

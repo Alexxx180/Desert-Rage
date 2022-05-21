@@ -32,7 +32,6 @@ namespace DesertRage.Controls.Status
         public IconStat()
         {
             InitializeComponent();
-            //Icon = "";
         }
     }
 }

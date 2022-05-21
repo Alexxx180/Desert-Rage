@@ -1,5 +1,5 @@
 ﻿using DesertRage.Customing.Converters;
-using DesertRage.Model.Locations.Map;
+using DesertRage.Model.Locations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -27,7 +27,7 @@ namespace DesertRage.BindConverters
             if (map is null)
                 return tile;
 
-            current.Increment(parameter.ToString().ToPosition());
+            current += parameter.ToString().ToPosition();
 
             if (current.IsOverflow(0, map))
                 return tile;

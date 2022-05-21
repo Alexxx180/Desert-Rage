@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using DesertRage.Model.Stats.Player.Armory;
 
 namespace DesertRage.Helpers.Attach
 {

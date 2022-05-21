@@ -1,12 +1,9 @@
-﻿using DesertRage.Model.Menu.Battle;
-using System.Windows.Input;
+﻿using DesertRage.Model.Locations.Battle;
 
-namespace DesertRage.ViewModel.Actions
+namespace DesertRage.ViewModel.Battle.Actions
 {
-    public interface ITarget : ICommand
+    public interface ITarget : IBattle
     {
         public Targeting UnitCursor { get; set; }
-
-        public BattleViewModel ViewModel { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using DesertRage.Model.Stats;
+﻿using DesertRage.Model.Locations.Battle.Stats;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;

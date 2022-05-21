@@ -55,7 +55,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Actions" BasedOn="{StaticResource WhiteOption}" TargetType="MenuItem">
+    <!--<Style x:Key="Actions" BasedOn="{StaticResource WhiteOption}" TargetType="MenuItem">
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="MenuItem">
@@ -69,5 +69,5 @@
                 </Style>
             </Setter.Value>
         </Setter>
-    </Style>
+    </Style>-->
 </ResourceDictionary>

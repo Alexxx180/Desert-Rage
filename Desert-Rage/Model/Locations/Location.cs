@@ -1,8 +1,6 @@
-﻿using DesertRage.Model.Locations.Map;
-using DesertRage.Model.Stats;
-using DesertRage.Model.Stats.Enemy;
+﻿using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.Model.Locations.Map;
 using System.Collections.Generic;
-using static DesertRage.Helpers.Paths.OST;
 
 namespace DesertRage.Model.Locations
 {
@@ -39,9 +37,6 @@ namespace DesertRage.Model.Locations
 
         internal Quests Tasks { get; set; }
         internal Quests Other { get; set; }
-
-        //public Foe[] StageFoes { get; set; }
-        //public Boss StageBoss { get; set; }
 
         public EnemyBestiary[] StageFoes { get; set; }
         public EnemyBestiary StageBoss { get; set; }

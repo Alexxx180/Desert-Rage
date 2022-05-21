@@ -1,6 +1,6 @@
-﻿using DesertRage.Model.Locations.Map;
-using DesertRage.Model.Stats;
-using DesertRage.Model.Stats.Enemy;
+﻿using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 

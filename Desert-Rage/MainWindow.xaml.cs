@@ -5,14 +5,13 @@ using System.Windows.Threading;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Helpers;
-using DesertRage.Model.Stats;
-using DesertRage.Model.Stats.Player.Armory;
 using static DesertRage.Writers.Processors;
-using DesertRage.Model.Stats.Player;
 using DesertRage.ViewModel;
-using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Scenes;
+using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 
 namespace DesertRage
 {
@@ -75,13 +74,7 @@ namespace DesertRage
             Hp = new Bar(100),
             Ap = new Bar(40),
 
-            Stats = new BattleStats
-            {
-                Attack = 25,
-                Defence = 15,
-                Speed = 15
-            },
-            Special = 25,
+            Stats = new BattleStats(25, 15, 15, 25),
 
             Learned = new BitArray(16),
 
@@ -98,13 +91,7 @@ namespace DesertRage
             Hp = new Bar(100),
             Ap = new Bar(100),
 
-            Stats = new BattleStats
-            {
-                Attack = 50,
-                Defence = 50,
-                Speed = 50
-            },
-            Special = 50,
+            Stats = new BattleStats(50),
 
             Learned = new BitArray(16),
 

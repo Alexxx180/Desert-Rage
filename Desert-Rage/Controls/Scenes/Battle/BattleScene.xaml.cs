@@ -1,7 +1,7 @@
 ﻿using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Locations;
-using DesertRage.Model.Locations.Map;
-using DesertRage.ViewModel;
+using DesertRage.Model.Locations.Battle;
+using DesertRage.ViewModel.Battle;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
