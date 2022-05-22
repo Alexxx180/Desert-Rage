@@ -1,5 +1,4 @@
 ﻿using DesertRage.Model.Locations.Battle.Things;
-using DesertRage.Model.Menu.Things;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Player.Armory
 {

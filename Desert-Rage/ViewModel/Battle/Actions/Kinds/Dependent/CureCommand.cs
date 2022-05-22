@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using DesertRage.Customing.Converters;
 using DesertRage.Model;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Things;
@@ -11,8 +12,8 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
     public class CureCommand : DependentCommand, IAction, INotifyPropertyChanged
     {
         public CureCommand(
-            IFormula dependency, 
-            DescriptionUnit thing
+            IFormula dependency,
+            NoiseUnit thing
             ) : base(dependency, thing)
         {
             UnitCursor = Targeting.HERO;

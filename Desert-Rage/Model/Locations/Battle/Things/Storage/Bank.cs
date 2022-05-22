@@ -3,6 +3,7 @@ using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.Resources.OST.Noises;
 using DesertRage.ViewModel.Battle;
 using DesertRage.ViewModel.Battle.Actions;
 using DesertRage.ViewModel.Battle.Actions.Kinds;
@@ -18,6 +19,8 @@ namespace DesertRage.Model.Menu.Things.Logic
     {
         internal static Dictionary<SkillsID, ConsumeCommand> Skills()
         {
+            
+
             return new Dictionary<SkillsID, ConsumeCommand>
             {
                 {
@@ -25,7 +28,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new CureCommand(
                             new SpecialFormula(1.8f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Лечение",
                                 Description = "+ ОЗ",
@@ -40,7 +43,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     SkillsID.Cure2,
                     new ConsumeCommand(
                         new CureMaxCommand(
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Лечение 2",
                                 Description = "100% ОЗ",
@@ -56,7 +59,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new StatusCommand(
                             StatusID.POISON, false,
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Антидот",
                                 Description = "- Яд",
@@ -73,7 +76,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new StatusCommand(
                             StatusID.REINFORCEMENT, true,
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Усиление",
                                 Description = "Сконцентрировать всю силу",
@@ -89,7 +92,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new StatusCommand(
                             StatusID.SHIELD, true,
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Охрана",
                                 Description = "Повысить бдительность",
@@ -105,7 +108,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightCommand(
                             new SpecialFormula(0),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Анализ",
                                 Description = "Изучить врага как следует",
@@ -121,7 +124,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightCommand(
                             new SpecialFormula(2f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Факел",
                                 Description = "Хорошо поджигает",
@@ -137,7 +140,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightCommand(
                             new SpecialFormula(3.5f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Кнут",
                                 Description = "Дробит кости",
@@ -153,7 +156,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightCommand(
                             new SpecialFormula(5f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Рогатка",
                                 Description = "От нее не скрыться",
@@ -169,7 +172,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightAllCommand(
                             new SpecialFormula(3f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Комбо",
                                 Description = "Град ударов по врагам",
@@ -185,7 +188,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightAllCommand(
                             new SpecialFormula(4f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Буря",
                                 Description = "Неистовый порыв ветра",
@@ -201,7 +204,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                     new ConsumeCommand(
                         new FightAllCommand(
                             new SpecialFormula(5f),
-                            new DescriptionUnit
+                            new NoiseUnit
                             {
                                 Name = "Обвал",
                                 Description = "Усыпать противников камнями",
@@ -221,7 +224,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new CureCommand(
                         new ItemFormula(50),
-                        new DescriptionUnit(50, "ОЗ")
+                        new NoiseUnit(50, "ОЗ")
                         {
                             Name = "Бинт",
                             Icon = "/Resources/Images/Menu/Bag/Bandage.svg"
@@ -233,7 +236,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new StatusCommand(
                         StatusID.POISON, false,
-                        new DescriptionUnit
+                        new NoiseUnit
                         {
                             Name = "Антидот",
                             Description = "- Яд",
@@ -246,7 +249,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new RestCommand(
                         new ItemFormula(50),
-                        new DescriptionUnit(50, "ОД")
+                        new NoiseUnit(50, "ОД")
                         {
                             Name = "Эфир",
                             Icon = "/Resources/Images/Menu/Bag/Ether.svg"
@@ -258,7 +261,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new RecoverCommand(
                         new ItemFormula(80),
-                        new DescriptionUnit(80, "ОЗ-ОД")
+                        new NoiseUnit(80, "ОЗ-ОД")
                         {
                             Name = "Смесь",
                             Icon = "/Resources/Images/Menu/Bag/Mixture.svg"
@@ -270,7 +273,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new CureCommand(
                         new ItemFormula(350),
-                        new DescriptionUnit(350, "ОЗ")
+                        new NoiseUnit(350, "ОЗ")
                         {
                             Name = "Травы",
                             Icon = "/Resources/Images/Menu/Bag/Herbs.svg"
@@ -282,7 +285,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                 new ConsumeCommand(
                     new RestCommand(
                         new ItemFormula(300),
-                        new DescriptionUnit(300, "ОД")
+                        new NoiseUnit(300, "ОД")
                         {
                             Name = "Бутыль эфира",
                             Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg"
@@ -293,7 +296,7 @@ namespace DesertRage.Model.Menu.Things.Logic
 
                 new ConsumeCommand(
                     new RecoverMaxCommand(
-                        new DescriptionUnit("100% ОЗ-ОД")
+                        new NoiseUnit("100% ОЗ-ОД")
                         {
                             Name = "Эликсир",
                             Icon = "/Resources/Images/Menu/Bag/Elixir.svg"

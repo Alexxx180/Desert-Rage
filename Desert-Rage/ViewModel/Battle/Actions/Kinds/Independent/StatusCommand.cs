@@ -1,4 +1,5 @@
 ﻿using DesertRage.Model;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Things.Storage;
@@ -8,13 +9,13 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
 {
     public class StatusCommand : ActCommand, IAction, INotifyPropertyChanged
     {
-        public StatusCommand(DescriptionUnit thing) : base(thing)
+        public StatusCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.HERO;
         }
 
         public StatusCommand(StatusID status, bool state,
-            DescriptionUnit thing) : this(thing)
+            NoiseUnit thing) : this(thing)
         {
             Status = status;
             State = state;

@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using DesertRage.Customing.Converters;
 using DesertRage.Model;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
@@ -12,7 +13,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
     {
         public FightCommand(
             IFormula dependency,
-            DescriptionUnit thing
+            NoiseUnit thing
             ) : base(dependency, thing)
         {
             UnitCursor = Targeting.ONE;

@@ -1,4 +1,5 @@
 ﻿using DesertRage.Model;
+using DesertRage.Model.Locations;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using System.ComponentModel;
 
@@ -6,8 +7,8 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 {
     public class RecoverCommand : CureCommand, INotifyPropertyChanged
     {
-        public RecoverCommand(IFormula dependency, 
-            DescriptionUnit thing) : base(dependency, thing) { }
+        public RecoverCommand(IFormula dependency,
+            NoiseUnit thing) : base(dependency, thing) { }
 
         protected void Rest()
         {

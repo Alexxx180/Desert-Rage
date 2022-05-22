@@ -2075,12 +2075,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Quotes.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\OST\Noises\NoisesList.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NoisesList.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Quotes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Quotes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Noises\NoisesList.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NoisesList.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   

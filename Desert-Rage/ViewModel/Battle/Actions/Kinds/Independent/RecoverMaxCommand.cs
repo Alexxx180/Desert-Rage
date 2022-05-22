@@ -1,11 +1,12 @@
 ﻿using DesertRage.Model;
+using DesertRage.Model.Locations;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
 {
     public class RecoverMaxCommand : CureMaxCommand, INotifyPropertyChanged
     {
-        public RecoverMaxCommand(DescriptionUnit thing) : base(thing) { }
+        public RecoverMaxCommand(NoiseUnit thing) : base(thing) { }
 
         protected void Rest()
         {
