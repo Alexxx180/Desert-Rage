@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Combo" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Combo.mp3</value>
+    <value>Resources/OST/Noises/Actions/Combo.mp3</value>
   </data>
   <data name="Control" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Control.mp3</value>
+    <value>Resources/OST/Noises/Actions/Control.mp3</value>
   </data>
   <data name="Cure" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Cure.mp3</value>
+    <value>Resources/OST/Noises/Actions/Cure.mp3</value>
   </data>
   <data name="Cure2" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Cure2.mp3</value>
+    <value>Resources/OST/Noises/Actions/Cure2.mp3</value>
   </data>
   <data name="DefenceBoost" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/DefenceBoost.mp3</value>
+    <value>Resources/OST/Noises/Actions/DefenceBoost.mp3</value>
   </data>
   <data name="Flee" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Flee.mp3</value>
+    <value>Resources/OST/Noises/Actions/Flee.mp3</value>
   </data>
   <data name="Heal" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Heal.mp3</value>
+    <value>Resources/OST/Noises/Actions/Heal.mp3</value>
   </data>
   <data name="PowerBoost" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/PowerBoost.mp3</value>
+    <value>Resources/OST/Noises/Actions/PowerBoost.mp3</value>
   </data>
   <data name="Quake" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Quake.mp3</value>
+    <value>Resources/OST/Noises/Actions/Quake.mp3</value>
   </data>
   <data name="Scan" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Scan.mp3</value>
+    <value>Resources/OST/Noises/Actions/Scan.mp3</value>
   </data>
   <data name="Sling" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Sling.mp3</value>
+    <value>Resources/OST/Noises/Actions/Sling.mp3</value>
   </data>
   <data name="Torch" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Torch.mp3</value>
+    <value>Resources/OST/Noises/Actions/Torch.mp3</value>
   </data>
   <data name="Whip" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Whip.mp3</value>
+    <value>Resources/OST/Noises/Actions/Whip.mp3</value>
   </data>
   <data name="Wind" xml:space="preserve">
-    <value>/Resources/OST/Noises/Actions/Wind.mp3</value>
+    <value>Resources/OST/Noises/Actions/Wind.mp3</value>
   </data>
 </root>

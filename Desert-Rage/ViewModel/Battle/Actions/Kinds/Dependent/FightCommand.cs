@@ -21,6 +21,8 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public void Use(object parameter)
         {
+            ViewModel.Player.SoundPlayer.PlayNoise(Unit.Noise);
+
             Enemy unit = parameter as Enemy;
             int power = StatUnit.Power.ToInt();
             unit.Hit(power);

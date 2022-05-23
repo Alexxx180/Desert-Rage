@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Noises.Weapons {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Weapons/Knife.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Weapons/Knife.mp3.
         /// </summary>
         internal static string Knife {
             get {
@@ -70,7 +70,7 @@ namespace DesertRage.Resources.OST.Noises.Weapons {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Weapons/Minigun.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Weapons/Minigun.mp3.
         /// </summary>
         internal static string Minigun {
             get {
@@ -79,7 +79,7 @@ namespace DesertRage.Resources.OST.Noises.Weapons {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Weapons/Punch.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Weapons/Punch.mp3.
         /// </summary>
         internal static string Punch {
             get {
@@ -88,7 +88,7 @@ namespace DesertRage.Resources.OST.Noises.Weapons {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Weapons/Sword.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Weapons/Sword.mp3.
         /// </summary>
         internal static string Sword {
             get {

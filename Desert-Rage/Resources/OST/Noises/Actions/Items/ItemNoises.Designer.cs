@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Noises.Actions.Items {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Items/Mixture.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Items/Mixture.mp3.
         /// </summary>
         internal static string Mixture {
             get {

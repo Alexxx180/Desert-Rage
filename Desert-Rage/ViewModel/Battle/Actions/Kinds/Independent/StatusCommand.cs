@@ -26,6 +26,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
 
         public void Use(object parameter)
         {
+            User.SoundPlayer.PlayNoise(Unit.Noise);
             Hero.SetStatus(Status, State);
             User.UpdateHero();
         }

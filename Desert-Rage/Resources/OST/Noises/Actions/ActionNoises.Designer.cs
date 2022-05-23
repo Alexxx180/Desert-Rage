@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Combo.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Combo.mp3.
         /// </summary>
         internal static string Combo {
             get {
@@ -70,7 +70,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Control.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Control.mp3.
         /// </summary>
         internal static string Control {
             get {
@@ -79,7 +79,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Cure.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Cure.mp3.
         /// </summary>
         internal static string Cure {
             get {
@@ -88,7 +88,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Cure2.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Cure2.mp3.
         /// </summary>
         internal static string Cure2 {
             get {
@@ -97,7 +97,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/DefenceBoost.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/DefenceBoost.mp3.
         /// </summary>
         internal static string DefenceBoost {
             get {
@@ -106,7 +106,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Flee.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Flee.mp3.
         /// </summary>
         internal static string Flee {
             get {
@@ -115,7 +115,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Heal.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Heal.mp3.
         /// </summary>
         internal static string Heal {
             get {
@@ -124,7 +124,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/PowerBoost.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/PowerBoost.mp3.
         /// </summary>
         internal static string PowerBoost {
             get {
@@ -133,7 +133,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Quake.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Quake.mp3.
         /// </summary>
         internal static string Quake {
             get {
@@ -142,7 +142,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Scan.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Scan.mp3.
         /// </summary>
         internal static string Scan {
             get {
@@ -151,7 +151,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Sling.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Sling.mp3.
         /// </summary>
         internal static string Sling {
             get {
@@ -160,7 +160,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Torch.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Torch.mp3.
         /// </summary>
         internal static string Torch {
             get {
@@ -169,7 +169,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Whip.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Whip.mp3.
         /// </summary>
         internal static string Whip {
             get {
@@ -178,7 +178,7 @@ namespace DesertRage.Resources.OST.Noises.Actions {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Actions/Wind.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Actions/Wind.mp3.
         /// </summary>
         internal static string Wind {
             get {

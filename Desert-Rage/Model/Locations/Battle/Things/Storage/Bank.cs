@@ -3,7 +3,8 @@ using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.Resources.OST.Noises;
+using DesertRage.Resources.OST.Noises.Actions;
+using DesertRage.Resources.OST.Noises.Actions.Items;
 using DesertRage.ViewModel.Battle;
 using DesertRage.ViewModel.Battle.Actions;
 using DesertRage.ViewModel.Battle.Actions.Kinds;
@@ -32,7 +33,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Лечение",
                                 Description = "+ ОЗ",
-                                Icon = "/Resources/Images/Menu/Skills/Cure.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                                Noise = ActionNoises.Cure
                             }
                         ),
                         new SkillCommand(5)
@@ -47,7 +49,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Лечение 2",
                                 Description = "100% ОЗ",
-                                Icon = "/Resources/Images/Menu/Skills/Cure2.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
+                                Noise = ActionNoises.Cure2
                             }
                         ),
                         new SkillCommand(10)
@@ -63,7 +66,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Антидот",
                                 Description = "- Яд",
-                                Icon = "/Resources/Images/Menu/Skills/Heal.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Heal.svg",
+                                Noise = ActionNoises.Heal
                             }
                         ),
                         new SkillCommand(3)
@@ -80,7 +84,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Усиление",
                                 Description = "Сконцентрировать всю силу",
-                                Icon = "/Resources/Images/Menu/Skills/AttackUp.svg"
+                                Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
+                                Noise = ActionNoises.PowerBoost
                             }
                         ),
                         new SkillCommand(20)
@@ -96,7 +101,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Охрана",
                                 Description = "Повысить бдительность",
-                                Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg"
+                                Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
+                                Noise = ActionNoises.DefenceBoost
                             }
                         ),
                         new SkillCommand(15)
@@ -112,7 +118,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Анализ",
                                 Description = "Изучить врага как следует",
-                                Icon = "/Resources/Images/Menu/Skills/Analyze.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
+                                Noise = ActionNoises.Scan
                             }
                         ),
                         new SkillCommand(5)
@@ -128,7 +135,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Факел",
                                 Description = "Хорошо поджигает",
-                                Icon = "/Resources/Images/Menu/Skills/Torch.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Torch.svg",
+                                Noise = ActionNoises.Torch
                             }
                         ),
                         new SkillCommand(5)
@@ -144,7 +152,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Кнут",
                                 Description = "Дробит кости",
-                                Icon = "/Resources/Images/Menu/Skills/Whip.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Whip.svg",
+                                Noise = ActionNoises.Whip
                             }
                         ),
                         new SkillCommand(7)
@@ -160,7 +169,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Рогатка",
                                 Description = "От нее не скрыться",
-                                Icon = "/Resources/Images/Menu/Skills/Slingshot.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
+                                Noise = ActionNoises.Sling
                             }
                         ),
                         new SkillCommand(13)
@@ -176,7 +186,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Комбо",
                                 Description = "Град ударов по врагам",
-                                Icon = "/Resources/Images/Menu/Skills/Combo.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Combo.svg",
+                                Noise = ActionNoises.Combo
                             }
                         ),
                         new SkillCommand(10)
@@ -192,7 +203,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                             {
                                 Name = "Буря",
                                 Description = "Неистовый порыв ветра",
-                                Icon = "/Resources/Images/Menu/Skills/Storm.svg"
+                                Icon = "/Resources/Images/Menu/Skills/Storm.svg",
+                                Noise = ActionNoises.Wind
                             }
                         ),
                         new SkillCommand(18)
@@ -209,6 +221,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                                 Name = "Обвал",
                                 Description = "Усыпать противников камнями",
                                 Icon = "/Resources/Images/Menu/Skills/Slide.svg",
+                                Noise = ActionNoises.Quake
                             }
                         ),
                         new SkillCommand(25)
@@ -227,7 +240,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit(50, "ОЗ")
                         {
                             Name = "Бинт",
-                            Icon = "/Resources/Images/Menu/Bag/Bandage.svg"
+                            Icon = "/Resources/Images/Menu/Bag/Bandage.svg",
+                            Noise = ActionNoises.Cure
                         }
                     ),
                     new ItemCommand(2)
@@ -241,6 +255,7 @@ namespace DesertRage.Model.Menu.Things.Logic
                             Name = "Антидот",
                             Description = "- Яд",
                             Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
+                            Noise = ActionNoises.Heal
                         }
                     ),
                     new ItemCommand(2)
@@ -252,7 +267,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit(50, "ОД")
                         {
                             Name = "Эфир",
-                            Icon = "/Resources/Images/Menu/Bag/Ether.svg"
+                            Icon = "/Resources/Images/Menu/Bag/Ether.svg",
+                            Noise = ActionNoises.Control
                         }
                     ),
                     new ItemCommand(2)
@@ -264,7 +280,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit(80, "ОЗ-ОД")
                         {
                             Name = "Смесь",
-                            Icon = "/Resources/Images/Menu/Bag/Mixture.svg"
+                            Icon = "/Resources/Images/Menu/Bag/Mixture.svg",
+                            Noise = ItemNoises.Mixture
                         }
                     ),
                     new ItemCommand(2)
@@ -276,7 +293,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit(350, "ОЗ")
                         {
                             Name = "Травы",
-                            Icon = "/Resources/Images/Menu/Bag/Herbs.svg"
+                            Icon = "/Resources/Images/Menu/Bag/Herbs.svg",
+                            Noise = ActionNoises.Cure
                         }
                     ),
                     new ItemCommand(2)
@@ -288,7 +306,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit(300, "ОД")
                         {
                             Name = "Бутыль эфира",
-                            Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg"
+                            Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg",
+                            Noise = ActionNoises.Control
                         }
                     ),
                     new ItemCommand(2)
@@ -299,7 +318,8 @@ namespace DesertRage.Model.Menu.Things.Logic
                         new NoiseUnit("100% ОЗ-ОД")
                         {
                             Name = "Эликсир",
-                            Icon = "/Resources/Images/Menu/Bag/Elixir.svg"
+                            Icon = "/Resources/Images/Menu/Bag/Elixir.svg",
+                            Noise = ItemNoises.Mixture
                         }
                     ),
                     new ItemCommand(2)

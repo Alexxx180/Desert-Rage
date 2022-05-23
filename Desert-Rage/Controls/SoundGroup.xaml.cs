@@ -6,7 +6,7 @@ using static DesertRage.Customing.Converters.Converters;
 namespace DesertRage.Controls
 {
     /// <summary>
-    /// Логика взаимодействия для SoundGroup.xaml
+    /// Sound track
     /// </summary>
     public partial class SoundGroup : UserControl
     {
@@ -28,6 +28,7 @@ namespace DesertRage.Controls
 
         private static void PlayOST(MediaElement element, in string Path)
         {
+            System.Diagnostics.Trace.WriteLine("SERIOUS?");
             element.Stop();
             element.Source = Path.ToUri();
             element.Play();

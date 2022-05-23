@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Bones.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Bones.mp3.
         /// </summary>
         internal static string Bones {
             get {
@@ -70,7 +70,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Ghoul.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Ghoul.mp3.
         /// </summary>
         internal static string Ghoul {
             get {
@@ -79,7 +79,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/GrimReaper.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/GrimReaper.mp3.
         /// </summary>
         internal static string GrimReaper {
             get {
@@ -88,7 +88,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Imp.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Imp.mp3.
         /// </summary>
         internal static string Imp {
             get {
@@ -97,7 +97,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/KillerMole.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/KillerMole.mp3.
         /// </summary>
         internal static string KillerMole {
             get {
@@ -106,7 +106,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Master.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Master.mp3.
         /// </summary>
         internal static string Master {
             get {
@@ -115,7 +115,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Mummy.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Mummy.mp3.
         /// </summary>
         internal static string Mummy {
             get {
@@ -124,7 +124,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Scarab.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Scarab.mp3.
         /// </summary>
         internal static string Scarab {
             get {
@@ -133,7 +133,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Spider.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Spider.mp3.
         /// </summary>
         internal static string Spider {
             get {
@@ -142,7 +142,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Vulture.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Vulture.mp3.
         /// </summary>
         internal static string Vulture {
             get {
@@ -151,7 +151,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Worm.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Worm.mp3.
         /// </summary>
         internal static string Worm {
             get {
@@ -160,7 +160,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Enemies {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Enemies/Zombie.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Enemies/Zombie.mp3.
         /// </summary>
         internal static string Zombie {
             get {

@@ -57,23 +57,37 @@
             </Grid.Resources>
             
             <Grid>
-                <svgc:SvgViewbox>
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
+                <Border>
+                    <svgc:SvgViewbox>
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
 
-                    <attach:SvgBox.Source>
-                        <Binding>
-                            <Binding.Path>
-                                Foe.Icon
-                            </Binding.Path>
-                        </Binding>
-                    </attach:SvgBox.Source>
+                        <attach:SvgBox.Source>
+                            <Binding>
+                                <Binding.Path>
+                                    Foe.Icon
+                                </Binding.Path>
+                            </Binding>
+                        </attach:SvgBox.Source>
 
-                    <attach:SvgBox.Stretch>
-                        Fill
-                    </attach:SvgBox.Stretch>
-                </svgc:SvgViewbox>
+                        <attach:SvgBox.Stretch>
+                            Fill
+                        </attach:SvgBox.Stretch>
+                    </svgc:SvgViewbox>
+
+                    <Border.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=IsHit}" Value="True">
+                                    <DataTrigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{DynamicResource LinearOpacity}"/>
+                                    </DataTrigger.EnterActions>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                </Border>
             </Grid>
 
             <Grid.ToolTip>
@@ -102,7 +116,7 @@
                     Fill
                 </attach:SvgBox.Stretch>
             </svgc:SvgViewbox>
-
+            
             <UniformGrid Rows="2">
                 <Grid.Column>
                     1
@@ -140,6 +154,8 @@
                     </status:StatBar.ForeBrush>
                 </status:StatBar>
             </UniformGrid>
+
+            
         </Grid>
     </DataTemplate>
 

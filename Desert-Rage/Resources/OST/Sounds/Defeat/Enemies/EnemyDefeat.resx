@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bones" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Bones.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Bones.mp3</value>
   </data>
   <data name="Ghoul" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Ghoul.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Ghoul.mp3</value>
   </data>
   <data name="GrimReaper" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/GrimReaper.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/GrimReaper.mp3</value>
   </data>
   <data name="Imp" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Imp.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Imp.mp3</value>
   </data>
   <data name="KillerMole" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/KillerMole.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/KillerMole.mp3</value>
   </data>
   <data name="Master" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Master.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Master.mp3</value>
   </data>
   <data name="Mummy" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Mummy.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Mummy.mp3</value>
   </data>
   <data name="Scarab" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Scarab.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Scarab.mp3</value>
   </data>
   <data name="Spider" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Spider.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Spider.mp3</value>
   </data>
   <data name="Vulture" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Vulture.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Vulture.mp3</value>
   </data>
   <data name="Worm" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Worm.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Worm.mp3</value>
   </data>
   <data name="Zombie" xml:space="preserve">
-    <value>/Resources/OST/Sounds/Defeat/Enemies/Zombie.mp3</value>
+    <value>Resources/OST/Sounds/Defeat/Enemies/Zombie.mp3</value>
   </data>
 </root>

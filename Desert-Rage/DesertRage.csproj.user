@@ -157,6 +157,9 @@
     <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\DataTemplates\Animations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\DataTemplates\Lists.xaml">
       <SubType>Designer</SubType>
     </Page>

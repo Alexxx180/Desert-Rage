@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Bosses {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Bosses/Friend.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Bosses/Friend.mp3.
         /// </summary>
         internal static string Friend {
             get {
@@ -70,7 +70,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Bosses {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Bosses/Pharaoh.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Bosses/Pharaoh.mp3.
         /// </summary>
         internal static string Pharaoh {
             get {
@@ -79,7 +79,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Bosses {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Bosses/TheRuler.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Bosses/TheRuler.mp3.
         /// </summary>
         internal static string TheRuler {
             get {
@@ -88,7 +88,7 @@ namespace DesertRage.Resources.OST.Sounds.Defeat.Bosses {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Defeat/Bosses/UghZan.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Defeat/Bosses/UghZan.mp3.
         /// </summary>
         internal static string UghZan {
             get {

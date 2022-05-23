@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using DesertRage.Model;
+using DesertRage.Model.Locations;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 
 namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
@@ -7,7 +8,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
     public class DependentCommand : ActCommand, INotifyPropertyChanged
     {
         public DependentCommand(IFormula statUnit,
-            DescriptionUnit unit) : base(unit)
+            NoiseUnit unit) : base(unit)
         {
             StatUnit = statUnit;
         }

@@ -26,6 +26,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public virtual void Use(object parameter)
         {
+            User.SoundPlayer.PlayNoise(Unit.Noise);
             Hero.Cure(Power);
             User.UpdateHero();
             CheckStatus();

@@ -24,6 +24,8 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public void Use(object parameter)
         {
+            ViewModel.Player.SoundPlayer.PlayNoise(Unit.Noise);
+
             System.Diagnostics.Trace.WriteLine(Power);
             System.Diagnostics.Trace.WriteLine(Enemies.Count);
             for (int i = Enemies.Count - 1; i > -1; i--)

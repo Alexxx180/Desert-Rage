@@ -18,6 +18,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
 
         public virtual void Use(object parameter)
         {
+            User.SoundPlayer.PlayNoise(Unit.Noise);
             Hero.Cure();
             User.UpdateHero();
             CheckStatus();

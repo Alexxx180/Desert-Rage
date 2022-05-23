@@ -20,7 +20,8 @@ using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using DesertRage.Model;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
 using System.Diagnostics;
-using DesertRage.Customing.Converters;
+using DesertRage.Resources.OST.Noises.Weapons;
+using DesertRage.Resources.OST.Noises.Actions;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -39,6 +40,7 @@ namespace DesertRage.ViewModel.Battle
             }
         }
 
+        #region Enemy Members
         private ObservableCollection<Enemy> _enemies;
         public ObservableCollection<Enemy> Enemies
         {
@@ -50,6 +52,24 @@ namespace DesertRage.ViewModel.Battle
             }
         }
 
+        private Foe[] GetFoes()
+        {
+            Dictionary<EnemyBestiary, Foe> allEnemies = Bank.Foes();
+            EnemyBestiary[] bestiary = Location.GetFoes();
+            Foe[] foes = new Foe[bestiary.Length];
+
+            for (byte i = 0; i < foes.Length; i++)
+            {
+                EnemyBestiary id = bestiary[i];
+                foes[i] = allEnemies[id];
+            }
+            return foes;
+        }
+
+        public bool IsBattle => Enemies.Count > 0;
+        #endregion
+
+        #region Battle Commands
         private ObservableCollection<ConsumeCommand> _skills;
         public ObservableCollection<ConsumeCommand> Skills
         {
@@ -57,7 +77,6 @@ namespace DesertRage.ViewModel.Battle
             set
             {
                 _skills = value;
-                //_skills.SetViewModel(this);
                 OnPropertyChanged();
             }
         }
@@ -69,12 +88,9 @@ namespace DesertRage.ViewModel.Battle
             set
             {
                 _items = value;
-                //_items.SetViewModel(this);
                 OnPropertyChanged();
             }
         }
-
-        public bool IsBattle => Enemies.Count > 0;
 
         private void AddSkill(ConsumeCommand skill)
         {
@@ -108,41 +124,6 @@ namespace DesertRage.ViewModel.Battle
             {
                 AddItem(items[i]);
             }
-        }
-
-        #region Timing Members
-        private DispatcherTimer _timing;
-
-        public void SetTurns()
-        {
-            _timing = new DispatcherTimer();
-            _timing.Tick += BattleTurns;
-            _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
-        }
-
-        private void BattleTurns(object sender, object o)
-        {
-            for (byte i = 0; i < Enemies.Count; i++)
-            {
-                Enemies[i].WaitForTurn();
-            }
-        }
-
-        public void Start()
-        {
-            Enemies.Refresh(_drawStrategy.Build());
-            _timing.Start();
-
-            foreach (Enemy enemy in Enemies)
-            {
-                System.Diagnostics.Trace.WriteLine(enemy.Foe.Name);
-            }
-        }
-        #endregion
-
-        public void UpdateItems()
-        {
-            OnPropertyChanged(nameof(Items));
         }
 
         private InstantCommand _fight;
@@ -188,6 +169,42 @@ namespace DesertRage.ViewModel.Battle
                 OnPropertyChanged();
             }
         }
+        #endregion
+
+        #region Timing Members
+        private DispatcherTimer _timing;
+
+        public void SetTurns()
+        {
+            _timing = new DispatcherTimer();
+            _timing.Tick += BattleTurns;
+            _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
+        }
+
+        private void BattleTurns(object sender, object o)
+        {
+            for (byte i = 0; i < Enemies.Count; i++)
+            {
+                Enemies[i].WaitForTurn();
+            }
+        }
+
+        public void Start()
+        {
+            Enemies.Refresh(_drawStrategy.Build());
+            _timing.Start();
+
+            foreach (Enemy enemy in Enemies)
+            {
+                System.Diagnostics.Trace.WriteLine(enemy.Foe.Name);
+            }
+        }
+        #endregion
+
+        public void UpdateItems()
+        {
+            OnPropertyChanged(nameof(Items));
+        }
 
         public ushort EnemySpeed()
         {
@@ -199,9 +216,10 @@ namespace DesertRage.ViewModel.Battle
             return overallSpeed;
         }
 
-        public BattleViewModel()
+        public BattleViewModel(UserProfile profile)
         {
-            Player = LevelMap.GetUserData();
+            Player = profile;
+            //Player = LevelMap.GetUserData();
 
             Skills = new ObservableCollection<ConsumeCommand>();
             AddSkills();
@@ -209,36 +227,49 @@ namespace DesertRage.ViewModel.Battle
             Items = new ObservableCollection<ConsumeCommand>();
             AddItems();
 
-            Dictionary<EnemyBestiary, Foe> allEnemies = Bank.Foes();
-            EnemyBestiary[] bestiary = Location.GetFoes();
-            Foe[] foes = new Foe[bestiary.Length];
-
-            for (byte i = 0; i < foes.Length; i++)
-            {
-                EnemyBestiary id = bestiary[i];
-                foes[i] = allEnemies[id];
-            }
-
             _drawStrategy = new DockStrategy
-                (this, BattleScene.SceneArea, foes);
+                (this, BattleScene.SceneArea, GetFoes());
 
             Enemies = new ObservableCollection<Enemy>();
 
             Fight = new InstantCommand(
                 new FightCommand(
                     new AttackFormula(0),
-                    new DescriptionUnit("Пустой слот")
+                    new NoiseUnit("Пустой слот")
                     {
                         Name = "Пусто",
+                        Noise = WeaponNoises.Punch
                     }
                 )
             );
 
-            Shield = new InstantCommand(new StatusCommand(StatusID.DEFENCE, true, null));
+            Shield = new InstantCommand(
+                new StatusCommand(StatusID.DEFENCE, true,
+                    new NoiseUnit()
+                    {
+                        Noise = ActionNoises.DefenceBoost
+                    }
+                )
+            );
 
-            Flee = new InstantCommand(new EscapeCommand(new SpeedFormula(), null));
+            Flee = new InstantCommand(
+                new EscapeCommand(
+                    new SpeedFormula(),
+                    new NoiseUnit()
+                    {
+                        Noise = ActionNoises.Flee
+                    }
+                )
+            );
 
-            Auto = new InstantCommand(new StatusCommand(StatusID.BERSERK, true, null));
+            Auto = new InstantCommand(
+                new StatusCommand(StatusID.BERSERK, true,
+                    new NoiseUnit()
+                    {
+                        Noise = ActionNoises.PowerBoost
+                    }
+                )
+            );
 
             Shield.SetViewModel(this);
             Fight.SetViewModel(this);
@@ -273,6 +304,18 @@ namespace DesertRage.ViewModel.Battle
             {
                 Trace.WriteLine("NO....");
             }
+        }
+
+        public void Pause()
+        {
+            if (IsBattle)
+                _timing.Stop();
+        }
+
+        public void Resume()
+        {
+            if (IsBattle)
+                _timing.Start();
         }
 
         #region INotifyPropertyChanged Members

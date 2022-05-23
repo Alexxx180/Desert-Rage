@@ -803,8 +803,8 @@
         <Border>
             <Border.Background>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop  x:Name="BlackCurtain" Color="Black" Offset="0"/>
-                    <GradientStop  x:Name="TransparentCurtain" Color="Transparent" Offset="0"/>
+                    <GradientStop x:Name="BlackCurtain" Color="Black" Offset="0"/>
+                    <GradientStop x:Name="TransparentCurtain" Color="Transparent" Offset="0"/>
                 </LinearGradientBrush>
             </Border.Background>
 

@@ -3,6 +3,8 @@ using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -53,6 +55,17 @@ namespace DesertRage.ViewModel.Battle
                 OnPropertyChanged();
             }
         }
+
+        private bool _isHit;
+        public bool IsHit
+        {
+            get => _isHit;
+            set
+            {
+                _isHit = value;
+                OnPropertyChanged();
+            }
+        }
         #endregion
 
         public void SetViewModel
@@ -63,6 +76,8 @@ namespace DesertRage.ViewModel.Battle
 
         public void Hit(in int value)
         {
+            IsHit = true;
+
             Foe.Hit(value);
             if (Foe.Hp.IsEmpty)
             {
@@ -70,6 +85,8 @@ namespace DesertRage.ViewModel.Battle
             }
 
             OnPropertyChanged(nameof(Foe));
+
+            IsHit = false;
         }
 
         public void WaitForTurn()
@@ -100,6 +117,8 @@ namespace DesertRage.ViewModel.Battle
         }
 
         public Position Tile { get; set; }
+
+        
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

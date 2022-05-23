@@ -29,10 +29,11 @@
             </Label.HorizontalContentAlignment>
 
             <Label.Content>
+                <Border/>
                 <!--<menu:MainMenu Tracks="{Binding ElementName=SoundTrack}"/>-->
 
                 <!--<map:LevelMap x:Name="MAAAP"/>-->
-                <scenes:BattleScene/>
+                <!--<scenes:BattleScene/>-->
             </Label.Content>
             
         </Label>

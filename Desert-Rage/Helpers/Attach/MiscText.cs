@@ -6,6 +6,7 @@ namespace DesertRage.Helpers.Attach
     {
         public static readonly DependencyProperty PathProperty = DependencyProperty.RegisterAttached(
         "Path", typeof(string), typeof(MiscText), new PropertyMetadata(""));
+
         public static void SetPath(DependencyObject element, string value)
         {
             element.SetValue(PathProperty, value);

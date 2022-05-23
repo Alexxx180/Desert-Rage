@@ -1908,6 +1908,51 @@
     <None Update="Resources\OST\Music\WaterTemple_End.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\OST\Noises\Actions\Combo.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Control.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Cure.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Cure2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\DefenceBoost.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Flee.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Heal.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Items\Mixture.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\PowerBoost.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Quake.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Scan.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Sling.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Torch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Whip.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Actions\Wind.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\OST\Noises\Ambushed.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1939,6 +1984,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\OST\Noises\HpUp.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Info\BossStorm.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Info\EnemyWind.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Info\LevelUp.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\OST\Noises\ItemsClose.mp3">
@@ -1990,6 +2044,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\OST\Noises\Torch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Weapons\Knife.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Weapons\Minigun.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Weapons\Punch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\OST\Noises\Weapons\Sword.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\OST\Noises\Whip.mp3">
@@ -2075,10 +2141,40 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Quotes.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\OST\Noises\NoisesList.Designer.cs">
+    <Compile Update="Resources\OST\Noises\Actions\ActionNoises.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>NoisesList.resx</DependentUpon>
+      <DependentUpon>ActionNoises.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Noises\Actions\Items\ItemNoises.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ItemNoises.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Noises\Info\InfoNoises.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InfoNoises.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Noises\Weapons\WeaponNoises.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WeaponNoises.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Sounds\Defeat\Bosses\BossesDefeat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>BossesDefeat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Sounds\Defeat\Enemies\EnemyDefeat.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EnemyDefeat.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\OST\Sounds\Info\InfoSounds.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>InfoSounds.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -2087,9 +2183,33 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Quotes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\OST\Noises\NoisesList.resx">
+    <EmbeddedResource Update="Resources\OST\Noises\Actions\ActionNoises.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>NoisesList.Designer.cs</LastGenOutput>
+      <LastGenOutput>ActionNoises.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Noises\Actions\Items\ItemNoises.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ItemNoises.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Noises\Info\InfoNoises.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InfoNoises.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Noises\Weapons\WeaponNoises.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WeaponNoises.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Sounds\Defeat\Bosses\BossesDefeat.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BossesDefeat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Sounds\Defeat\Enemies\EnemyDefeat.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EnemyDefeat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\OST\Sounds\Info\InfoSounds.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InfoSounds.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   

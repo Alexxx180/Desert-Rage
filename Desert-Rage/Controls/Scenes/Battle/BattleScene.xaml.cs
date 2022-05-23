@@ -56,11 +56,11 @@ namespace DesertRage.Controls.Scenes
             };
         }
 
-        public BattleScene()
+        public BattleScene(BattleViewModel battle)
         {
             InitializeComponent();
             //
-            BattleModel = new BattleViewModel();
+            BattleModel = battle;
         }
 
         public void SetFoes()

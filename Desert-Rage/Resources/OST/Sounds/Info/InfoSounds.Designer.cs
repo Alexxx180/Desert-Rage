@@ -61,7 +61,7 @@ namespace DesertRage.Resources.OST.Sounds.Info {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Info/Chest.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Info/Chest.mp3.
         /// </summary>
         internal static string Chest {
             get {
@@ -70,7 +70,7 @@ namespace DesertRage.Resources.OST.Sounds.Info {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Info/Door.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Info/Door.mp3.
         /// </summary>
         internal static string Door {
             get {
@@ -79,7 +79,7 @@ namespace DesertRage.Resources.OST.Sounds.Info {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Info/Save.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Info/Save.mp3.
         /// </summary>
         internal static string Save {
             get {
@@ -88,7 +88,7 @@ namespace DesertRage.Resources.OST.Sounds.Info {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Sounds/Info/Won.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Sounds/Info/Won.mp3.
         /// </summary>
         internal static string Won {
             get {

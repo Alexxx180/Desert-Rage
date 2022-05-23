@@ -1,5 +1,4 @@
-﻿using DesertRage.Model;
-using DesertRage.Model.Locations;
+﻿using DesertRage.Model.Locations;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using System.ComponentModel;
 
@@ -12,6 +11,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public override void Use(object parameter)
         {
+            User.SoundPlayer.PlayNoise(Unit.Noise);
             Rest();
             User.UpdateHero();
         }
