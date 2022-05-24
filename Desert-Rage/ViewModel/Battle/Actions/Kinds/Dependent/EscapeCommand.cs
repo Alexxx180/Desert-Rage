@@ -23,7 +23,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public virtual void Use(object parameter)
         {
-            ViewModel.Player.SoundPlayer.PlayNoise(Unit.Noise);
+            ViewModel.Human.Player.SoundPlayer.PlayNoise(Unit.Noise);
             ushort overallSpeed = ViewModel.EnemySpeed();
             
             Trace.WriteLine("TOTAL ENEMY SPEED: " + overallSpeed);

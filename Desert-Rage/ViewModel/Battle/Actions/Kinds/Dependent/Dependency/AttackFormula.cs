@@ -14,7 +14,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency
         private readonly int _applier;
 
         protected int Boost => Hero.Boost(StatusID.REINFORCEMENT);
-        protected Character Hero => ViewModel.Player.Hero;
+        protected Character Hero => ViewModel.Human.Player.Hero;
 
         public int Power => Hero.Stats.Attack * Boost + _applier;
     }

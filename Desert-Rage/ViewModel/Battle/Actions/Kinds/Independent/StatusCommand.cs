@@ -21,7 +21,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             State = state;
         }
 
-        protected UserProfile User => ViewModel.Player;
+        protected UserProfile User => ViewModel.Human.Player;
         protected Character Hero => User.Hero;
 
         public void Use(object parameter)

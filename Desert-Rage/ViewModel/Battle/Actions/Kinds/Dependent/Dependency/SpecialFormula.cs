@@ -15,6 +15,6 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency
         }
 
         private readonly float _multiplier;
-        public int Power => (ViewModel.Player.Hero.Stats.Special * _multiplier).ToInt();
+        public int Power => (ViewModel.Human.Player.Hero.Stats.Special * _multiplier).ToInt();
     }
 }

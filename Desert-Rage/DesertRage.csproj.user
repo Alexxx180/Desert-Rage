@@ -163,6 +163,9 @@
     <Page Update="Resources\DataTemplates\Lists.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\DataTemplates\Units.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Styles\Lists.xaml">
       <SubType>Designer</SubType>
     </Page>

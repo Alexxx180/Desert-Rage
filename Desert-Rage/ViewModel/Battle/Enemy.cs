@@ -1,6 +1,7 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
+using DesertRage.Resources.OST.Noises.Weapons;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -66,6 +67,17 @@ namespace DesertRage.ViewModel.Battle
                 OnPropertyChanged();
             }
         }
+
+        private bool _isAttack;
+        public bool IsAttack
+        {
+            get => _isAttack;
+            set
+            {
+                _isAttack = value;
+                OnPropertyChanged();
+            }
+        }
         #endregion
 
         public void SetViewModel
@@ -76,12 +88,15 @@ namespace DesertRage.ViewModel.Battle
 
         public void Hit(in int value)
         {
+            if (Foe.Hp.IsEmpty)
+                return;
+
             IsHit = true;
 
             Foe.Hit(value);
             if (Foe.Hp.IsEmpty)
             {
-                _ = ViewModel.Enemies.Remove(this);
+                Defeat();
             }
 
             OnPropertyChanged(nameof(Foe));
@@ -89,7 +104,13 @@ namespace DesertRage.ViewModel.Battle
             IsHit = false;
         }
 
-        public void WaitForTurn()
+        private void Defeat()
+        {
+            ViewModel.EnemyTurnsOver(this);
+            _ = ViewModel.Enemies.Remove(this);
+        }
+
+        public void WaitForTurn(object sender, object o)
         {
             ushort speed = 10;
             speed += Foe.Stats.Speed;
@@ -110,15 +131,17 @@ namespace DesertRage.ViewModel.Battle
 
         private void Attack()
         {
+            IsAttack = true;
+
             ushort attack = Foe.Stats.Attack;
 
-            ViewModel.Player.Hero.Hit(attack);
-            ViewModel.Player.UpdateHero();
+            ViewModel.Human.Player.Hero.Hit(attack);
+            ViewModel.Human.Player.UpdateHero();
+
+            IsAttack = false;
         }
 
         public Position Tile { get; set; }
-
-        
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

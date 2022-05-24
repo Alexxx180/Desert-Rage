@@ -25,11 +25,11 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds
 
         public void Use()
         {
-            ViewModel.Player.Hero.Act(Value);
-            ViewModel.Player.UpdateHero();
+            ViewModel.Human.Player.Hero.Act(Value);
+            ViewModel.Human.Player.UpdateHero();
         }
 
-        public bool CanUse => ViewModel.Player.Hero.CanAct(Value);
+        public bool CanUse => ViewModel.Human.Player.Hero.CanAct(Value);
         #endregion
     }
 }

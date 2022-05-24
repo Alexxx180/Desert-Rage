@@ -20,90 +20,90 @@ namespace DesertRage.Controls.Scenes.Battle.Avatar
     /// </summary>
     public partial class Person : UserControl, INotifyPropertyChanged
     {
-        public static readonly DependencyProperty
-            BattleProperty = DependencyProperty.Register(
-                nameof(Battle), typeof(BattleViewModel),
-                typeof(Person));
+        //public static readonly DependencyProperty
+        //    BattleProperty = DependencyProperty.Register(
+        //        nameof(Battle), typeof(BattleViewModel),
+        //        typeof(Person));
 
-        public BattleViewModel Battle
-        {
-            get => GetValue(BattleProperty) as BattleViewModel;
-            set => SetValue(BattleProperty, value);
-        }
+        //public BattleViewModel Battle
+        //{
+        //    get => GetValue(BattleProperty) as BattleViewModel;
+        //    set => SetValue(BattleProperty, value);
+        //}
 
-        #region Timing Members
-        private DispatcherTimer _timing;
+        //#region Timing Members
+        //private DispatcherTimer _timing;
 
-        public void SetTurns()
-        {
-            _timing = new DispatcherTimer();
-            _timing.Tick += WaitForTurn;
-            _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
-            _timing.Start();
-        }
-        #endregion
+        //public void SetTurns()
+        //{
+        //    _timing = new DispatcherTimer();
+        //    _timing.Tick += WaitForTurn;
+        //    _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
+        //    _timing.Start();
+        //}
+        //#endregion
 
-        private Bar _time;
-        public Bar Time
-        {
-            get => _time;
-            set
-            {
-                _time = value;
-                OnPropertyChanged();
-            }
-        }
+        //private Bar _time;
+        //public Bar Time
+        //{
+        //    get => _time;
+        //    set
+        //    {
+        //        _time = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
-        public Person()
-        {
-            InitializeComponent();
-            Time = new Bar(0, 1000);
-            SetTurns();
+        //public Person()
+        //{
+        //    InitializeComponent();
+        //    Time = new Bar(0, 1000);
+        //    SetTurns();
 
 
-        }
+        //}
 
-        public void WaitForTurn(object sender, object o)
-        {
-            if (Time.IsMax)
-                return;
+        //public void WaitForTurn(object sender, object o)
+        //{
+        //    if (Time.IsMax)
+        //        return;
 
-            ushort speed = 10;
-            speed += Battle.Player.Hero.Stats.Speed;
+        //    ushort speed = 10;
+        //    speed += Battle.Player.Hero.Stats.Speed;
 
-            Time = Time.Restore(speed);
+        //    Time = Time.Restore(speed);
 
-            if (Time.IsMax)
-                Strategy();
-        }
+        //    if (Time.IsMax)
+        //        Strategy();
+        //}
 
-        private void Strategy()
-        {
-            if (Battle.Player.Hero.Status[StatusID.BERSERK.Int()])
-            {
-                AutoFight();
-                return;
-            }
-            //ActPanel();
-        }
+        //private void Strategy()
+        //{
+        //    if (Battle.Player.Hero.Status[StatusID.BERSERK.Int()])
+        //    {
+        //        AutoFight();
+        //        return;
+        //    }
+        //    //ActPanel();
+        //}
 
-        public void AutoFight()
-        {
-            if (Battle.IsBattle)
-            {
-                Battle.Fight.Execute(Battle.Enemies[0]);
-                Time = Time.Drain();
-                //Battle.Enemies[0].Hit(Battle.Player.Hero.);
-            }
+        //public void AutoFight()
+        //{
+        //    if (Battle.IsBattle)
+        //    {
+        //        Battle.Fight.Execute(Battle.Enemies[0]);
+        //        Time = Time.Drain();
+        //        //Battle.Enemies[0].Hit(Battle.Player.Hero.);
+        //    }
                 
-        }
+        //}
 
-        public void ActPanel()
-        {
+        //public void ActPanel()
+        //{
 
-        }
+        //}
 
-        public static byte[] AbilityBonuses = new byte[] { 0, 0, 0, 0 };
+        //public static byte[] AbilityBonuses = new byte[] { 0, 0, 0, 0 };
 
         
 

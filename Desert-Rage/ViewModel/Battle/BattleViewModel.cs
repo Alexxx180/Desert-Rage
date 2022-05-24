@@ -22,6 +22,7 @@ using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
 using System.Diagnostics;
 using DesertRage.Resources.OST.Noises.Weapons;
 using DesertRage.Resources.OST.Noises.Actions;
+using System.Windows;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -29,13 +30,13 @@ namespace DesertRage.ViewModel.Battle
     {
         private readonly EnemyAppearing _drawStrategy;
 
-        private UserProfile _player;
-        public UserProfile Player
+        private Person _human;
+        public Person Human
         {
-            get => _player;
+            get => _human;
             set
             {
-                _player = value;
+                _human = value;
                 OnPropertyChanged();
             }
         }
@@ -69,124 +70,26 @@ namespace DesertRage.ViewModel.Battle
         public bool IsBattle => Enemies.Count > 0;
         #endregion
 
-        #region Battle Commands
-        private ObservableCollection<ConsumeCommand> _skills;
-        public ObservableCollection<ConsumeCommand> Skills
-        {
-            get => _skills;
-            set
-            {
-                _skills = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private ObservableCollection<ConsumeCommand> _items;
-        public ObservableCollection<ConsumeCommand> Items
-        {
-            get => _items;
-            set
-            {
-                _items = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private void AddSkill(ConsumeCommand skill)
-        {
-            skill.SetViewModel(this);
-            Skills.Add(skill);
-        }
-
-        private void AddItem(ConsumeCommand item)
-        {
-            item.SetViewModel(this);
-            Items.Add(item);
-        }
-
-        private void AddSkills()
-        {
-            List<SkillsID> keys = Player.Hero.Skills;
-            Dictionary<SkillsID, ConsumeCommand> skills = Bank.Skills();
-
-            for (byte i = 0; i < keys.Count; i++)
-            {
-                SkillsID id = keys[i];
-                AddSkill(skills[id]);
-            }
-        }
-
-        private void AddItems()
-        {
-            List<ConsumeCommand> items = Bank.Items();
-
-            for (byte i = 0; i < items.Count; i++)
-            {
-                AddItem(items[i]);
-            }
-        }
-
-        private InstantCommand _fight;
-        public InstantCommand Fight
-        {
-            get => _fight;
-            set
-            {
-                _fight = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private InstantCommand _shield;
-        public InstantCommand Shield
-        {
-            get => _shield;
-            set
-            {
-                _shield = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private InstantCommand _flee;
-        public InstantCommand Flee
-        {
-            get => _flee;
-            set
-            {
-                _flee = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private InstantCommand _auto;
-        public InstantCommand Auto
-        {
-            get => _auto;
-            set
-            {
-                _auto = value;
-                OnPropertyChanged();
-            }
-        }
-        #endregion
-
         #region Timing Members
         private DispatcherTimer _timing;
 
         public void SetTurns()
         {
             _timing = new DispatcherTimer();
-            _timing.Tick += BattleTurns;
             _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
+            BattleTurns();
         }
 
-        private void BattleTurns(object sender, object o)
+        private void BattleTurns()
         {
+            _timing.Tick += Human.WaitForTurn;
             for (byte i = 0; i < Enemies.Count; i++)
-            {
-                Enemies[i].WaitForTurn();
-            }
+                _timing.Tick += Enemies[i].WaitForTurn;
+        }
+
+        public void EnemyTurnsOver(in Enemy enemy)
+        {
+            _timing.Tick -= enemy.WaitForTurn;
         }
 
         public void Start()
@@ -196,15 +99,10 @@ namespace DesertRage.ViewModel.Battle
 
             foreach (Enemy enemy in Enemies)
             {
-                System.Diagnostics.Trace.WriteLine(enemy.Foe.Name);
+                Trace.WriteLine(enemy.Foe.Name);
             }
         }
         #endregion
-
-        public void UpdateItems()
-        {
-            OnPropertyChanged(nameof(Items));
-        }
 
         public ushort EnemySpeed()
         {
@@ -218,72 +116,26 @@ namespace DesertRage.ViewModel.Battle
 
         public BattleViewModel(UserProfile profile)
         {
-            Player = profile;
-            //Player = LevelMap.GetUserData();
-
-            Skills = new ObservableCollection<ConsumeCommand>();
-            AddSkills();
-
-            Items = new ObservableCollection<ConsumeCommand>();
-            AddItems();
+            Human = new Person(this, profile);
+            Enemies = new ObservableCollection<Enemy>();
 
             _drawStrategy = new DockStrategy
                 (this, BattleScene.SceneArea, GetFoes());
 
-            Enemies = new ObservableCollection<Enemy>();
-
-            Fight = new InstantCommand(
-                new FightCommand(
-                    new AttackFormula(0),
-                    new NoiseUnit("Пустой слот")
-                    {
-                        Name = "Пусто",
-                        Noise = WeaponNoises.Punch
-                    }
-                )
-            );
-
-            Shield = new InstantCommand(
-                new StatusCommand(StatusID.DEFENCE, true,
-                    new NoiseUnit()
-                    {
-                        Noise = ActionNoises.DefenceBoost
-                    }
-                )
-            );
-
-            Flee = new InstantCommand(
-                new EscapeCommand(
-                    new SpeedFormula(),
-                    new NoiseUnit()
-                    {
-                        Noise = ActionNoises.Flee
-                    }
-                )
-            );
-
-            Auto = new InstantCommand(
-                new StatusCommand(StatusID.BERSERK, true,
-                    new NoiseUnit()
-                    {
-                        Noise = ActionNoises.PowerBoost
-                    }
-                )
-            );
-
-            Shield.SetViewModel(this);
-            Fight.SetViewModel(this);
-            Flee.SetViewModel(this);
-            Auto.SetViewModel(this);
-
             SetTurns();
-
             Start();
         }
 
         public void End()
         {
+            _timing.Stop();
             Trace.WriteLine("YOHOO!");
+        }
+
+        public void Lose()
+        {
+            _timing.Stop();
+            Application.Current.Shutdown();
         }
 
         public void RunAway()

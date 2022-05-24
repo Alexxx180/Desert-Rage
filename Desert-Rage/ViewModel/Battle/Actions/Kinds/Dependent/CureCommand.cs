@@ -19,7 +19,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
             UnitCursor = Targeting.HERO;
         }
 
-        protected UserProfile User => ViewModel.Player;
+        protected UserProfile User => ViewModel.Human.Player;
         protected Character Hero => User.Hero;
 
         protected int Power => StatUnit.Power.ToInt();

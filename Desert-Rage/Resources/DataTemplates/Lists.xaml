@@ -57,37 +57,117 @@
             </Grid.Resources>
             
             <Grid>
-                <Border>
-                    <svgc:SvgViewbox>
-                        <Grid.Row>
-                            1
-                        </Grid.Row>
+                <svgc:SvgViewbox Opacity="1">
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
 
-                        <attach:SvgBox.Source>
-                            <Binding>
-                                <Binding.Path>
-                                    Foe.Icon
-                                </Binding.Path>
-                            </Binding>
-                        </attach:SvgBox.Source>
+                    <attach:SvgBox.Source>
+                        <Binding>
+                            <Binding.Path>
+                                Foe.Icon
+                            </Binding.Path>
+                        </Binding>
+                    </attach:SvgBox.Source>
 
-                        <attach:SvgBox.Stretch>
-                            Fill
-                        </attach:SvgBox.Stretch>
-                    </svgc:SvgViewbox>
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
 
-                    <Border.Style>
+                    <svgc:SvgViewbox.Style>
                         <Style>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=IsHit}" Value="True">
+                                <DataTrigger Binding="{Binding Path=IsAttack}" Value="True">
                                     <DataTrigger.EnterActions>
-                                        <BeginStoryboard Storyboard="{DynamicResource LinearOpacity}"/>
+                                        <BeginStoryboard>
+                                            <Storyboard AutoReverse="True">
+                                                <DoubleAnimation>
+                                                    <DoubleAnimation.From>
+                                                        1.0
+                                                    </DoubleAnimation.From>
+
+                                                    <DoubleAnimation.To>
+                                                        0.0
+                                                    </DoubleAnimation.To>
+
+                                                    <DoubleAnimation.Duration>
+                                                        0:0:0.2
+                                                    </DoubleAnimation.Duration>
+
+                                                    <Storyboard.TargetProperty>
+                                                        Opacity
+                                                    </Storyboard.TargetProperty>
+                                                </DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
                                     </DataTrigger.EnterActions>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
-                    </Border.Style>
-                </Border>
+                    </svgc:SvgViewbox.Style>
+                </svgc:SvgViewbox>
+
+                <svgc:SvgViewbox Opacity="0">
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <attach:SvgBox.Source>
+                        <Binding>
+                            <Binding.Path>
+                                Foe.Action
+                            </Binding.Path>
+                        </Binding>
+                    </attach:SvgBox.Source>
+
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+
+                    <svgc:SvgViewbox.Style>
+                        <Style>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=IsAttack}" Value="True">
+                                    <DataTrigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard AutoReverse="True">
+                                                <DoubleAnimation>
+                                                    <DoubleAnimation.From>
+                                                        0.0
+                                                    </DoubleAnimation.From>
+
+                                                    <DoubleAnimation.To>
+                                                        1.0
+                                                    </DoubleAnimation.To>
+
+                                                    <DoubleAnimation.Duration>
+                                                        0:0:0.2
+                                                    </DoubleAnimation.Duration>
+
+                                                    <Storyboard.TargetProperty>
+                                                        Opacity
+                                                    </Storyboard.TargetProperty>
+                                                </DoubleAnimation>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </DataTrigger.EnterActions>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </svgc:SvgViewbox.Style>
+                </svgc:SvgViewbox>
+
+                <Grid.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsHit}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{DynamicResource LinearOpacity}"/>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
             </Grid>
 
             <Grid.ToolTip>

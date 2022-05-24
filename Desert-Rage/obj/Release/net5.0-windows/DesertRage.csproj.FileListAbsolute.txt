@@ -325,3 +325,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\OST\Noises\Weapons\Punch.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\OST\Noises\Weapons\Sword.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\DataTemplates\Animations.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\DataTemplates\Units.baml

@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="Resources/Styles/TextBoxes.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/TextBlocks.xaml"/>
                 <ResourceDictionary Source="Resources/DataTemplates/Lists.xaml"/>
+                <ResourceDictionary Source="Resources/DataTemplates/Units.xaml"/>
                 <ResourceDictionary Source="Resources/DataTemplates/Animations.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

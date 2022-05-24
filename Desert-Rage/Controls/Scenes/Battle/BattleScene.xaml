@@ -184,9 +184,17 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                
+                <Label DataContext="{Binding Path=BattleModel.Human}" Padding="0">
+                    <Grid.Column>
+                        1
+                    </Grid.Column>
+                    
+                    <Label.Template>
+                        <DynamicResource ResourceKey="Person"/>
+                    </Label.Template>
+                </Label>
 
-                <avatar:Person>
+                <!--<avatar:Person>
                     <Grid.Column>
                         1
                     </Grid.Column>
@@ -202,7 +210,7 @@
                             </Binding.Path>
                         </Binding>
                     </avatar:Person.Battle>
-                </avatar:Person>
+                </avatar:Person>-->
             </Grid>
         </Grid>
     </Grid>

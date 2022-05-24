@@ -13,7 +13,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             UnitCursor = Targeting.HERO;
         }
         
-        protected UserProfile User => ViewModel.Player;
+        protected UserProfile User => ViewModel.Human.Player;
         protected Character Hero => User.Hero;
 
         public virtual void Use(object parameter)
