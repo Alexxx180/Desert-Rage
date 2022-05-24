@@ -5,24 +5,13 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Threading;
 using DesertRage.Controls.Scenes;
-using DesertRage.Controls.Scenes.Map;
 using DesertRage.Customing;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Menu.Things.Logic;
-using DesertRage.ViewModel.Battle.Actions;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.ViewModel.Battle.Actions.Kinds;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
-using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
-using DesertRage.Model;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
 using System.Diagnostics;
-using DesertRage.Resources.OST.Noises.Weapons;
-using DesertRage.Resources.OST.Noises.Actions;
-using System.Windows;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -67,6 +56,16 @@ namespace DesertRage.ViewModel.Battle
             return foes;
         }
 
+        public ushort EnemySpeed()
+        {
+            ushort overallSpeed = 0;
+            for (byte i = 0; i < Enemies.Count; i++)
+            {
+                overallSpeed += Enemies[i].Foe.Stats.Speed;
+            }
+            return overallSpeed;
+        }
+
         public bool IsBattle => Enemies.Count > 0;
         #endregion
 
@@ -77,14 +76,19 @@ namespace DesertRage.ViewModel.Battle
         {
             _timing = new DispatcherTimer();
             _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
-            BattleTurns();
+            _timing.Tick += Human.WaitForTurn;
         }
 
-        private void BattleTurns()
+        private void EnemyTurns()
         {
-            _timing.Tick += Human.WaitForTurn;
             for (byte i = 0; i < Enemies.Count; i++)
                 _timing.Tick += Enemies[i].WaitForTurn;
+        }
+
+        private void DenyEnemyTurns()
+        {
+            for (byte i = 0; i < Enemies.Count; i++)
+                EnemyTurnsOver(Enemies[i]);
         }
 
         public void EnemyTurnsOver(in Enemy enemy)
@@ -95,6 +99,7 @@ namespace DesertRage.ViewModel.Battle
         public void Start()
         {
             Enemies.Refresh(_drawStrategy.Build());
+            EnemyTurns();
             _timing.Start();
 
             foreach (Enemy enemy in Enemies)
@@ -103,16 +108,6 @@ namespace DesertRage.ViewModel.Battle
             }
         }
         #endregion
-
-        public ushort EnemySpeed()
-        {
-            ushort overallSpeed = 0;
-            for (byte i = 0; i < Enemies.Count; i++)
-            {
-                overallSpeed += Enemies[i].Foe.Stats.Speed;
-            }
-            return overallSpeed;
-        }
 
         public BattleViewModel(UserProfile profile)
         {
@@ -135,11 +130,14 @@ namespace DesertRage.ViewModel.Battle
         public void Lose()
         {
             _timing.Stop();
-            Application.Current.Shutdown();
+            _timing.Tick -= Human.WaitForTurn;
+            DenyEnemyTurns();
+            // Application.Current.Shutdown();
         }
 
         public void RunAway()
         {
+            DenyEnemyTurns();
             Enemies.Clear();
             End();
         }

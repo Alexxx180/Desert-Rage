@@ -135,8 +135,7 @@ namespace DesertRage.ViewModel.Battle
 
             ushort attack = Foe.Stats.Attack;
 
-            ViewModel.Human.Player.Hero.Hit(attack);
-            ViewModel.Human.Player.UpdateHero();
+            ViewModel.Human.Hit(attack);
 
             IsAttack = false;
         }
