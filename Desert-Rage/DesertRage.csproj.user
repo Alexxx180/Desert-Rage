@@ -50,9 +50,6 @@
     <Compile Update="Controls\Scenes\Battle\BattleScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\Battle\Avatar\Person.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Scenes\CutScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,9 +116,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\Battle\BattleScene.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Scenes\Battle\Avatar\Person.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\CutScene.xaml">

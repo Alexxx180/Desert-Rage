@@ -5,7 +5,7 @@
                     xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <ControlTemplate x:Key="Person" x:Shared="True">
-        <Grid>
+        <Grid x:Name="BattleCharacter" DataContext="{Binding}">
             <Grid.Column>
                 1
             </Grid.Column>
@@ -16,7 +16,7 @@
                 <RowDefinition Height="0.2*"/>
             </Grid.RowDefinitions>
 
-            <Grid x:Name="BattleCharacter" DataContext="{Binding}">
+            <Grid>
                 <Grid.Style>
                     <StaticResource ResourceKey="BackAccent"/>
                 </Grid.Style>
@@ -115,14 +115,92 @@
                 </Grid.Row>
 
                 <attach:SvgBox.Source>
-                    /Resources/Images/Fight/Character/Ray/Idle.svg
+                    <Binding Path="Player.Hero.Image"/>
                 </attach:SvgBox.Source>
 
                 <attach:SvgBox.Stretch>
                     Fill
                 </attach:SvgBox.Stretch>
+
+                <svgc:SvgViewbox.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard AutoReverse="True">
+                                            <DoubleAnimation>
+                                                <DoubleAnimation.From>
+                                                    1.0
+                                                </DoubleAnimation.From>
+
+                                                <DoubleAnimation.To>
+                                                    0.0
+                                                </DoubleAnimation.To>
+
+                                                <DoubleAnimation.Duration>
+                                                    0:0:0.2
+                                                </DoubleAnimation.Duration>
+
+                                                <Storyboard.TargetProperty>
+                                                    Opacity
+                                                </Storyboard.TargetProperty>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </svgc:SvgViewbox.Style>
             </svgc:SvgViewbox>
 
+            <svgc:SvgViewbox Opacity="0">
+                <Grid.Row>
+                    1
+                </Grid.Row>
+
+                <attach:SvgBox.Source>
+                    <Binding Path="Player.Hero.Action"/>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+
+                <svgc:SvgViewbox.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard AutoReverse="True">
+                                            <DoubleAnimation>
+                                                <DoubleAnimation.From>
+                                                    0.0
+                                                </DoubleAnimation.From>
+
+                                                <DoubleAnimation.To>
+                                                    1.0
+                                                </DoubleAnimation.To>
+
+                                                <DoubleAnimation.Duration>
+                                                    0:0:0.2
+                                                </DoubleAnimation.Duration>
+
+                                                <Storyboard.TargetProperty>
+                                                    Opacity
+                                                </Storyboard.TargetProperty>
+                                            </DoubleAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </svgc:SvgViewbox.Style>
+            </svgc:SvgViewbox>
+            
             <Menu x:Name="MOptions">
                 <Grid.Row>
                     2

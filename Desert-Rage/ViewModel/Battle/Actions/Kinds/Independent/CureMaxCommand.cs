@@ -1,7 +1,5 @@
-﻿using DesertRage.Model.Locations.Battle.Stats.Player;
-using DesertRage.Model.Locations.Battle;
+﻿using DesertRage.Model.Locations.Battle;
 using System.ComponentModel;
-using DesertRage.Model;
 using DesertRage.Model.Locations;
 
 namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
@@ -12,22 +10,13 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
         {
             UnitCursor = Targeting.HERO;
         }
-        
-        protected UserProfile User => ViewModel.Human.Player;
-        protected Character Hero => User.Hero;
 
         public virtual void Use(object parameter)
         {
-            User.SoundPlayer.PlayNoise(Unit.Noise);
+            Act();
             Hero.Cure();
             User.UpdateHero();
-            CheckStatus();
-        }
-
-        protected void CheckStatus()
-        {
-            System.Diagnostics.Trace.WriteLine("MAXED");
-            System.Diagnostics.Trace.WriteLine(Hero.Hp.ToString());
+            CheckStatus("MAXED");
         }
 
         public virtual bool CanUse => true;

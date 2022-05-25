@@ -1,7 +1,5 @@
-﻿using DesertRage.Model;
-using DesertRage.Model.Locations;
+﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
-using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System.ComponentModel;
 
@@ -21,12 +19,9 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             State = state;
         }
 
-        protected UserProfile User => ViewModel.Human.Player;
-        protected Character Hero => User.Hero;
-
         public void Use(object parameter)
         {
-            User.SoundPlayer.PlayNoise(Unit.Noise);
+            Act();
             Hero.SetStatus(Status, State);
             User.UpdateHero();
         }

@@ -3,12 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Scenes"
-             xmlns:help="clr-namespace:DesertRage.Helpers"
-             xmlns:bind="clr-namespace:DesertRage.Customing.Converters.Binds"
-             xmlns:vms="clr-namespace:DesertRage"
              xmlns:converters="clr-namespace:DesertRage.BindConverters"
-             xmlns:avatar="clr-namespace:DesertRage.Controls.Scenes.Battle.Avatar"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
@@ -18,10 +13,6 @@
         <Binding RelativeSource="{RelativeSource Self}"/>
     </UserControl.DataContext>
 
-    <!--<UserControl.Resources>
-        <StaticResource ResourceKey="FoeTemplate" x:Key="FoeControl"/>
-    </UserControl.Resources>-->
-    
     <Grid>
         <Border>
         <Border.Background>
@@ -188,29 +179,11 @@
                     <Grid.Column>
                         1
                     </Grid.Column>
-                    
+
                     <Label.Template>
                         <DynamicResource ResourceKey="Person"/>
                     </Label.Template>
                 </Label>
-
-                <!--<avatar:Person>
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
-
-                    <avatar:Person.Battle>
-                        <Binding>
-                            <Binding.ElementName>
-                                Battle
-                            </Binding.ElementName>
-
-                            <Binding.Path>
-                                DataContext.BattleModel
-                            </Binding.Path>
-                        </Binding>
-                    </avatar:Person.Battle>
-                </avatar:Person>-->
             </Grid>
         </Grid>
     </Grid>

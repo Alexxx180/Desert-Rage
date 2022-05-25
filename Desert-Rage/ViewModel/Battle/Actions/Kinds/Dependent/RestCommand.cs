@@ -11,7 +11,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public override void Use(object parameter)
         {
-            User.SoundPlayer.PlayNoise(Unit.Noise);
+            Act();
             Rest();
             User.UpdateHero();
         }

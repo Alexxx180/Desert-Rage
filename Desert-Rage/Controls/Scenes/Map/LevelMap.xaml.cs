@@ -99,6 +99,8 @@ namespace DesertRage.Controls.Scenes.Map
                 Ap = new Bar(50),
                 Stats = new BattleStats(25),
                 Icon = "/Resources/Images/Menu/Topics/Status.svg",
+                Image = "/Resources/Images/Fight/Character/Ray/Idle.svg",
+                Action = "/Resources/Images/Fight/Character/Ray/Action.svg",
                 Step = new Position[4]
                 {
                     new Position(0, -1),

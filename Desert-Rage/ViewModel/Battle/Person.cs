@@ -243,6 +243,12 @@ namespace DesertRage.ViewModel.Battle
                 OnPropertyChanged();
             }
         }
+
+        public void Act()
+        {
+            IsAct = true;
+            IsAct = false;
+        }
         #endregion
 
         #region Dependency Members
