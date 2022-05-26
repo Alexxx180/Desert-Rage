@@ -1842,9 +1842,6 @@
     <None Update="Resources\CutScenes\ChaptersIntroduction\Prologue.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\DataTemplates\Images.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
     <None Update="Resources\OST\Music\AncientPyramid_Battle.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -17,7 +17,9 @@ namespace DesertRage.ViewModel.Battle
 {
     public class BattleViewModel : INotifyPropertyChanged
     {
-        private readonly EnemyAppearing _drawStrategy;
+        #region UI Members
+        public BattleScene Scene { get; set; }
+        #endregion
 
         private Person _human;
         public Person Human
@@ -31,6 +33,8 @@ namespace DesertRage.ViewModel.Battle
         }
 
         #region Enemy Members
+        private readonly EnemyAppearing _drawStrategy;
+
         private ObservableCollection<Enemy> _enemies;
         public ObservableCollection<Enemy> Enemies
         {
@@ -117,14 +121,25 @@ namespace DesertRage.ViewModel.Battle
             _drawStrategy = new DockStrategy
                 (this, BattleScene.SceneArea, GetFoes());
 
+            Scene = new BattleScene(this);
+
             SetTurns();
             Start();
+        }
+
+        #region Battle Options
+        private void CleanBattlefield()
+        {
+            Enemies.Clear();
+            OnPropertyChanged(nameof(Enemies));
+            OnPropertyChanged(nameof(IsBattle));
         }
 
         public void End()
         {
             _timing.Stop();
             Trace.WriteLine("YOHOO!");
+            Scene.ReturnToMap();
         }
 
         public void Lose()
@@ -138,7 +153,7 @@ namespace DesertRage.ViewModel.Battle
         public void RunAway()
         {
             DenyEnemyTurns();
-            Enemies.Clear();
+            CleanBattlefield();
             End();
         }
 
@@ -148,7 +163,7 @@ namespace DesertRage.ViewModel.Battle
 
             if (fleeChance.Next(1, barrier + 1) == 1)
             {
-                End();
+                RunAway();
             }
             else
             {
@@ -167,6 +182,7 @@ namespace DesertRage.ViewModel.Battle
             if (IsBattle)
                 _timing.Start();
         }
+        #endregion
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

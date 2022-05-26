@@ -1,0 +1,148 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters"
+                    xmlns:status="clr-namespace:DesertRage.Controls.Status"
+                    xmlns:battle="clr-namespace:DesertRage.ViewModel.Battle">
+    <DataTemplate x:Key="TargetTemplate">
+        <DataTemplate.DataType>
+            <x:Type TypeName="battle:Enemy"/>
+        </DataTemplate.DataType>
+
+        <Grid MaxHeight="50" MinWidth="200" x:Name="Data">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+
+            <svgc:SvgViewbox>
+                <attach:SvgBox.Source>
+                    <Binding>
+                        <Binding.Path>
+                            Foe.Icon
+                        </Binding.Path>
+                    </Binding>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <UniformGrid Rows="2">
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <TextBlock Padding="3">
+                    <TextBlock.FontWeight>
+                        Bold
+                    </TextBlock.FontWeight>
+
+                    <TextBlock.Text>
+                        <Binding Path="Foe.Name"/>
+                    </TextBlock.Text>
+                </TextBlock>
+
+                <status:StatBar>
+                    <Grid.Row>
+                        1
+                    </Grid.Row>
+
+                    <status:StatBar.Caption>
+                        ОЗ
+                    </status:StatBar.Caption>
+
+                    <status:StatBar.Bar>
+                        <Binding ElementName="Data" Path="DataContext.Foe.Hp"/>
+                    </status:StatBar.Bar>
+
+                    <status:StatBar.ForeBrush>
+                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                            <GradientStop Color="#FF3AAC28"/>
+                            <GradientStop Color="#FF00F3FF" Offset="1"/>
+                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                        </LinearGradientBrush>
+                    </status:StatBar.ForeBrush>
+                </status:StatBar>
+            </UniformGrid>
+        </Grid>
+    </DataTemplate>
+
+    <HierarchicalDataTemplate x:Key="SkillTemplate">
+        <HierarchicalDataTemplate.ItemsSource>
+            <Binding Path="Effect.ViewModel.Enemies"/>
+        </HierarchicalDataTemplate.ItemsSource>
+        
+        <DockPanel LastChildFill="True">
+            <StackPanel>
+                <StackPanel.Orientation>
+                    Horizontal
+                </StackPanel.Orientation>
+
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <svgc:SvgViewbox DataContext="{Binding}">
+                    <attach:SvgBox.Source>
+                        <Binding Path="Effect.Unit.Icon">
+                            <Binding.Converter>
+                                <converters:UriConverter/>
+                            </Binding.Converter>
+                        </Binding>
+                    </attach:SvgBox.Source>
+
+                    <attach:SvgBox.Stretch>
+                        Fill
+                    </attach:SvgBox.Stretch>
+                </svgc:SvgViewbox>
+
+                <TextBlock VerticalAlignment="Center">
+                    <TextBlock.Padding>
+                        10,0,10,0
+                    </TextBlock.Padding>
+
+                    <TextBlock.Text>
+                        <Binding Path="Effect.Unit.Name"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+
+            <TextBlock>
+                <DockPanel.Dock>
+                    Right
+                </DockPanel.Dock>
+
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.HorizontalAlignment>
+                    Right
+                </TextBlock.HorizontalAlignment>
+
+                <TextBlock.Padding>
+                    10,0,10,0
+                </TextBlock.Padding>
+
+                <TextBlock.Text>
+                    <Binding Path="Subject.Value"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <Binding Path="Effect.Unit.Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel.ToolTip>
+        </DockPanel>
+
+        <HierarchicalDataTemplate.ItemTemplate>
+            <StaticResource ResourceKey="TargetTemplate"/>
+        </HierarchicalDataTemplate.ItemTemplate>
+    </HierarchicalDataTemplate>
+</ResourceDictionary>

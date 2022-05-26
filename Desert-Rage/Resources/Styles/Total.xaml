@@ -1,11 +1,40 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters">
     <Style x:Key="GlobalFont">
         <Setter Property="Control.FontFamily">
             <Setter.Value>
                 <FontFamily>
                     Microsoft Sans Serif
                 </FontFamily>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StretchFont">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="GlobalFont"/>
+        </Style.BasedOn>
+        
+        <Setter Property="Control.FontSize">
+            <Setter.Value>
+                <Binding>
+                    <Binding.RelativeSource>
+                        <RelativeSource Mode="Self"/>
+                    </Binding.RelativeSource>
+
+                    <Binding.Path>
+                        ActualHeight
+                    </Binding.Path>
+
+                    <Binding.Converter>
+                        <converters:ProcentualHeightConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        1,6
+                    </Binding.ConverterParameter>
+                </Binding>
             </Setter.Value>
         </Setter>
     </Style>

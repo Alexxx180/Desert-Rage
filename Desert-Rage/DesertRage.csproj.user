@@ -151,16 +151,22 @@
     <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DataTemplates\Animations.xaml">
+    <Page Update="Resources\Templates\Animations\Opacity.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DataTemplates\Lists.xaml">
+    <Page Update="Resources\Templates\DataTemplates\Hierarchical\Units.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\DataTemplates\Units.xaml">
+    <Page Update="Resources\Templates\DataTemplates\Units.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\ControlTemplates\Units.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Lists.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\Menu\Items\MenuItems.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\TextBlocks.xaml">
@@ -173,6 +179,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Total.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\DataTemplates\Menu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

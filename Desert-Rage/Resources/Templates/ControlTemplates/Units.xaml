@@ -313,37 +313,11 @@
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
-                        <Binding Path="Skills"/>
+                        <Binding Path="Player.Skills"/>
                     </MenuItem.ItemsSource>
 
                     <MenuItem.ItemContainerStyle>
-                        <Style TargetType="MenuItem" x:Name="COnt">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
-                                         Value="{x:Static target:Targeting.HERO}">
-                                    <Setter Property="Command" Value="{Binding}"/>
-                                    <Setter Property="ItemsSource" Value="{x:Null}"/>
-                                </DataTrigger>
-
-                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
-                                         Value="{x:Static target:Targeting.ALL}">
-                                    <Setter Property="Command" Value="{Binding}"/>
-                                    <Setter Property="ItemsSource" Value="{x:Null}"/>
-                                </DataTrigger>
-
-                                <DataTrigger Binding="{Binding Path=Effect.UnitCursor}"
-                                         Value="{x:Static target:Targeting.ONE}">
-                                    <Setter Property="ItemContainerStyle">
-                                        <Setter.Value>
-                                            <Style TargetType="MenuItem">
-                                                <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
-                                                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext}"/>
-                                            </Style>
-                                        </Setter.Value>
-                                    </Setter>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
+                        <StaticResource ResourceKey="PlayerSkills"/>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>
 
@@ -358,9 +332,9 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                        <Run FontWeight="Bold">Сумка</Run>
-                        <LineBreak/>
-                        <Run Text="Использовать предметы"/>
+                            <Run FontWeight="Bold">Сумка</Run>
+                            <LineBreak/>
+                            <Run Text="Использовать предметы"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
@@ -401,20 +375,11 @@
                     </MenuItem.ItemTemplate>
 
                     <MenuItem.ItemsSource>
-                        <Binding Path="Items"/>
+                        <Binding Path="Player.Items"/>
                     </MenuItem.ItemsSource>
 
                     <MenuItem.ItemContainerStyle>
-                        <Style TargetType="MenuItem">
-                            <Setter Property="Command" Value="{Binding}"/>
-
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=Subject.Value}" Value="0">
-                                    <Setter Property="Visibility" Value="Collapsed"/>
-                                    <Setter Property="IsEnabled" Value="False"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
+                        <StaticResource ResourceKey="PlayerItems"/>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>
 

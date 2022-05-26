@@ -82,7 +82,7 @@
             </local:GameTopics.MenuTopic>
 
             <local:GameTopics.Player>
-                <Binding ElementName="GMenu" Path="DataContext.Location.UserData"/>
+                <Binding ElementName="GMenu" Path="DataContext.User"/>
             </local:GameTopics.Player>
         </local:GameTopics>
     </Grid>
