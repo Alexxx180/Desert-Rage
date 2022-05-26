@@ -1,11 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
-                    xmlns:converters="clr-namespace:DesertRage.BindConverters"
-                    xmlns:actions="clr-namespace:DesertRage.ViewModel.Battle.Actions"
-                    xmlns:battle="clr-namespace:DesertRage.ViewModel.Battle">
+                    xmlns:converters="clr-namespace:DesertRage.BindConverters">
     <DataTemplate x:Key="FoeTemplate">
         <Grid>
             <Grid.Resources>
@@ -33,35 +30,7 @@
                     </svgc:SvgViewbox>
 
                     <Border.Style>
-                        <Style>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=IsAttack}" Value="True">
-                                    <DataTrigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard AutoReverse="True">
-                                                <DoubleAnimation>
-                                                    <DoubleAnimation.From>
-                                                        1.0
-                                                    </DoubleAnimation.From>
-
-                                                    <DoubleAnimation.To>
-                                                        0.0
-                                                    </DoubleAnimation.To>
-
-                                                    <DoubleAnimation.Duration>
-                                                        0:0:0.2
-                                                    </DoubleAnimation.Duration>
-
-                                                    <Storyboard.TargetProperty>
-                                                        Opacity
-                                                    </Storyboard.TargetProperty>
-                                                </DoubleAnimation>
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </DataTrigger.EnterActions>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
+                        <DynamicResource ResourceKey="ActAnimation1"/>
                     </Border.Style>
                 </Border>
 
@@ -85,48 +54,12 @@
                     </svgc:SvgViewbox>
 
                     <Border.Style>
-                        <Style>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=IsAttack}" Value="True">
-                                    <DataTrigger.EnterActions>
-                                        <BeginStoryboard>
-                                            <Storyboard AutoReverse="True">
-                                                <DoubleAnimation>
-                                                    <DoubleAnimation.From>
-                                                        0.0
-                                                    </DoubleAnimation.From>
-
-                                                    <DoubleAnimation.To>
-                                                        1.0
-                                                    </DoubleAnimation.To>
-
-                                                    <DoubleAnimation.Duration>
-                                                        0:0:0.2
-                                                    </DoubleAnimation.Duration>
-
-                                                    <Storyboard.TargetProperty>
-                                                        Opacity
-                                                    </Storyboard.TargetProperty>
-                                                </DoubleAnimation>
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </DataTrigger.EnterActions>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
+                        <DynamicResource ResourceKey="ActAnimation2"/>
                     </Border.Style>
                 </Border>
 
                 <Grid.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsHit}" Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard Storyboard="{DynamicResource LinearOpacity}"/>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
+                    <DynamicResource ResourceKey="HitAnimation"/>
                 </Grid.Style>
             </Grid>
 

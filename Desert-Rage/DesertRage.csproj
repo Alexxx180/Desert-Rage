@@ -622,6 +622,7 @@
     <None Remove="Resources\Images\Locations\Total\Surprise.png" />
     <None Remove="Resources\Images\Locations\Total\Table.png" />
     <None Remove="Resources\Images\Locations\Total\Table.svg" />
+    <None Remove="Resources\Images\Locations\Total\Transparent.svg" />
     <None Remove="Resources\Images\Locations\Total\VitalitySource.png" />
     <None Remove="Resources\Images\Menu\Bag\Antidote.svg" />
     <None Remove="Resources\Images\Menu\Bag\Bandage.svg" />
@@ -1055,6 +1056,9 @@
     <Resource Include="Resources\Images\Locations\Total\SafeArea.svg" />
     <Resource Include="Resources\Images\Locations\Total\Surprise.png" />
     <Resource Include="Resources\Images\Locations\Total\Table.svg" />
+    <Resource Include="Resources\Images\Locations\Total\Transparent.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Locations\Total\VitalitySource.png" />
     <Resource Include="Resources\Images\Menu\Bag\Antidote.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

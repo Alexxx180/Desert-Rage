@@ -20,7 +20,7 @@ namespace DesertRage.BindConverters
             if (values[2] is not
                 Position current
                 || tiles is null)
-                return "/Resources/Images/Locations/Total/Dark.svg";
+                return "/Resources/Images/Locations/Total/Transparent.svg";
 
             string tile = tiles["."];
 

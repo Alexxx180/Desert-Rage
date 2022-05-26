@@ -134,4 +134,40 @@
             <Setter.Value>Black</Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="HitAnimation">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsHit}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <DynamicResource ResourceKey="SemiDisappear"/>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ActAnimation1">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <DynamicResource ResourceKey="Disappear"/>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ActAnimation2">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <DynamicResource ResourceKey="Appear"/>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

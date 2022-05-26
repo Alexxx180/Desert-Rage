@@ -68,13 +68,13 @@ namespace DesertRage.ViewModel.Battle
             }
         }
 
-        private bool _isAttack;
-        public bool IsAttack
+        private bool _isAct;
+        public bool IsAct
         {
-            get => _isAttack;
+            get => _isAct;
             set
             {
-                _isAttack = value;
+                _isAct = value;
                 OnPropertyChanged();
             }
         }
@@ -131,13 +131,13 @@ namespace DesertRage.ViewModel.Battle
 
         private void Attack()
         {
-            IsAttack = true;
+            IsAct = true;
 
             ushort attack = Foe.Stats.Attack;
 
             ViewModel.Human.Hit(attack);
 
-            IsAttack = false;
+            IsAct = false;
         }
 
         public Position Tile { get; set; }

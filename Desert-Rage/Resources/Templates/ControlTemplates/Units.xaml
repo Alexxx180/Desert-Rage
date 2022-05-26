@@ -223,9 +223,9 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                        <Run FontWeight="Bold">Бой</Run>
-                        <LineBreak/>
-                        <Run Text="Использовать оружие по назначению"/>
+                            <Run FontWeight="Bold">Бой</Run>
+                            <LineBreak/>
+                            <Run Text="Использовать оружие по назначению"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 

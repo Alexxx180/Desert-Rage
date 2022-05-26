@@ -145,8 +145,27 @@ namespace DesertRage.ViewModel
         #region Model Members
         public string Name { get; set; }
 
-        public Location Level { get; set; }
-        public Character Hero { get; set; }
+        private Location _level;
+        public Location Level
+        {
+            get => _level;
+            set
+            {
+                _level = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Character _hero;
+        public Character Hero
+        {
+            get => _hero;
+            set
+            {
+                _hero = value;
+                OnPropertyChanged();
+            }
+        }
 
         public Settings Preferences { get; set; }
         #endregion

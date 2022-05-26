@@ -1,13 +1,53 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Storyboard x:Key="LinearOpacity" AutoReverse="True">
+    <Storyboard x:Key="Appear" AutoReverse="True">
+        <DoubleAnimation>
+            <DoubleAnimation.From>
+                0.0
+            </DoubleAnimation.From>
+
+            <DoubleAnimation.To>
+                1.0
+            </DoubleAnimation.To>
+
+            <DoubleAnimation.Duration>
+                0:0:0.2
+            </DoubleAnimation.Duration>
+
+            <Storyboard.TargetProperty>
+                Opacity
+            </Storyboard.TargetProperty>
+        </DoubleAnimation>
+    </Storyboard>
+
+    <Storyboard x:Key="SemiDisappear" AutoReverse="True">
         <DoubleAnimation>
             <DoubleAnimation.From>
                 1.0
             </DoubleAnimation.From>
 
             <DoubleAnimation.To>
-                0.6
+                0.5
+            </DoubleAnimation.To>
+
+            <DoubleAnimation.Duration>
+                0:0:0.2
+            </DoubleAnimation.Duration>
+
+            <Storyboard.TargetProperty>
+                Opacity
+            </Storyboard.TargetProperty>
+        </DoubleAnimation>
+    </Storyboard>
+
+    <Storyboard x:Key="Disappear" AutoReverse="True">
+        <DoubleAnimation>
+            <DoubleAnimation.From>
+                1.0
+            </DoubleAnimation.From>
+
+            <DoubleAnimation.To>
+                0.0
             </DoubleAnimation.To>
 
             <DoubleAnimation.Duration>

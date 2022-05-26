@@ -151,6 +151,9 @@
     <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Styles\ContentControls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Templates\Animations\Opacity.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -163,7 +166,7 @@
     <Page Update="Resources\Templates\ControlTemplates\Units.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Styles\Lists.xaml">
+    <Page Update="Resources\Styles\Menu\ItemsControls.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Menu\Items\MenuItems.xaml">
@@ -175,7 +178,7 @@
     <Page Update="Resources\Styles\TextBoxes.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Styles\ToolTip.xaml">
+    <Page Update="Resources\Styles\ToolTips.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Total.xaml">
