@@ -2193,7 +2193,7 @@
       <LastGenOutput>ItemNoises.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\OST\Noises\Info\InfoNoises.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InfoNoises.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\OST\Noises\Weapons\WeaponNoises.resx">

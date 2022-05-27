@@ -8,8 +8,10 @@ using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things.Logic;
+using DesertRage.Resources.OST.Noises.Info;
 using DesertRage.ViewModel.Battle;
 using DesertRage.ViewModel.Battle.Actions;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -68,6 +70,8 @@ namespace DesertRage.ViewModel
             Menu = new GameMenu(this);
             Location = new LevelMap(this);
             Battle = new BattleViewModel(this);
+
+            //BattleStart += EnemyApproaches;
         }
 
         public void LoadHeroCommands()
@@ -177,10 +181,32 @@ namespace DesertRage.ViewModel
         public ObservableCollection<Equipment> Boots { get; set; }
         #endregion
 
+        private bool _isFighting;
+        public bool IsFighting
+        {
+            get => _isFighting;
+            set
+            {
+                _isFighting = value;
+                OnPropertyChanged();
+            }
+        }
+
         public void Go(Direction move)
         {
-            Hero.Go(Level.Map, move.Int());
+            if (Hero.Go(Level.Map, move.Int()))
+            {
+                IsFighting = true;
+                SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
+            }
+
             UpdateHero();
+        }
+
+        internal void ResetDanger()
+        {
+            Hero.ToBattle = Level.Danger.Random();
+            IsFighting = false;
         }
 
         public void Stand()
@@ -197,20 +223,20 @@ namespace DesertRage.ViewModel
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
 
-    /// <summary>
-    /// Raises this object's PropertyChanged event.
-    /// </summary>
-    /// <param name="propertyName">The property that has a new value.</param>
-    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-    {
-        PropertyChangedEventHandler handler = PropertyChanged;
-        if (handler != null)
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-            handler(this, e);
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
         }
-    }
 
-    #endregion
+        #endregion
     }
 }

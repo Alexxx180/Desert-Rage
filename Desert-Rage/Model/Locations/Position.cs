@@ -1,4 +1,7 @@
-﻿namespace DesertRage.Model.Locations
+﻿using DesertRage.Customing.Converters;
+using System;
+
+namespace DesertRage.Model.Locations
 {
     public struct Position
     {
@@ -12,11 +15,6 @@
         {
             X = x;
             Y = y;
-        }
-
-        public Position(Position start, int increment)
-        {
-            this = start + increment;
         }
 
         public bool IsOverflow(int min, string[] map)
@@ -40,6 +38,18 @@
         {
             return X > mask.X || Y > mask.Y;
         }
+
+        public int Random()
+        {
+            return new Random().Next(Y, X);
+        }
+
+        #region Static Members
+        public static Position Linear(int y, int scatter)
+        {
+            return new Position(y * scatter, y);
+        }
+        #endregion
 
         #region Override Methods Members
         public override string ToString()

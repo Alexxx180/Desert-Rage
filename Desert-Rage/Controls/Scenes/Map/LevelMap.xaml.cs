@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using DesertRage.Model.Locations.Map;
@@ -12,6 +14,44 @@ namespace DesertRage.Controls.Scenes.Map
     /// </summary>
     public partial class LevelMap : UserControl, INotifyPropertyChanged, IControllable
     {
+        #region Fighting Event Members
+        public static readonly RoutedEvent
+            FightingEvent = EventManager.RegisterRoutedEvent(
+                nameof(Fighting), RoutingStrategy.Bubble,
+                typeof(RoutedEventHandler), typeof(LevelMap));
+
+        public event RoutedEventHandler Fighting
+        {
+            add { AddHandler(FightingEvent, value); }
+            remove { RemoveHandler(FightingEvent, value); }
+        }
+
+        public void RaiseBattle()
+        {
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(FightingEvent);
+            Curtain.RaiseEvent(newEventArgs);
+        }
+        #endregion
+
+        #region Entering Event Members
+        public static readonly RoutedEvent
+            EnteringEvent = EventManager.RegisterRoutedEvent(
+                nameof(Entering), RoutingStrategy.Bubble,
+                typeof(RoutedEventHandler), typeof(LevelMap));
+
+        public event RoutedEventHandler Entering
+        {
+            add { AddHandler(EnteringEvent, value); }
+            remove { RemoveHandler(EnteringEvent, value); }
+        }
+
+        public void RaiseEnter()
+        {
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(EnteringEvent);
+            Curtain.RaiseEvent(newEventArgs);
+        }
+        #endregion
+
         private UserProfile _userData;
         public UserProfile UserData
         {
@@ -315,40 +355,6 @@ namespace DesertRage.Controls.Scenes.Map
         //    MainHero.MiniTask = true;
         //    ShowAfterBattleMenu();
         //}
-        
-        public void KeyHandle(object sender, KeyEventArgs e)
-        {
-            switch (e.Key)
-            {
-                case Key.W:
-                case Key.Up:
-                case Key.NumPad8:
-                    UserData.Go(Direction.UP);
-                    break;
-                case Key.A:
-                case Key.Left:
-                case Key.NumPad4:
-                    UserData.Go(Direction.LEFT);
-                    break;
-                case Key.S:
-                case Key.Down:
-                case Key.NumPad2:
-                    UserData.Go(Direction.DOWN);
-                    break;
-                case Key.D:
-                case Key.Right:
-                case Key.NumPad6:
-                    UserData.Go(Direction.RIGHT);
-                    break;
-                case Key.LeftCtrl:
-                case Key.RightCtrl:
-                    Label container = Parent as Label;
-                    container.Content = UserData.Menu;
-                    break;
-                default:
-                    break;
-            }
-        }
 
         public void KeyRelease(object sender, KeyEventArgs e)
         {
@@ -371,6 +377,59 @@ namespace DesertRage.Controls.Scenes.Map
                 default:
                     break;
             }
+        }
+
+        public void KeyHandle(object sender, KeyEventArgs e)
+        {
+            if (UserData.IsFighting)
+                return;
+
+            switch (e.Key)
+            {
+                case Key.W:
+                case Key.Up:
+                case Key.NumPad8:
+                    Move(Direction.UP);
+                    break;
+                case Key.A:
+                case Key.Left:
+                case Key.NumPad4:
+                    Move(Direction.LEFT);
+                    break;
+                case Key.S:
+                case Key.Down:
+                case Key.NumPad2:
+                    Move(Direction.DOWN);
+                    break;
+                case Key.D:
+                case Key.Right:
+                case Key.NumPad6:
+                    Move(Direction.RIGHT);
+                    break;
+                case Key.LeftCtrl:
+                case Key.RightCtrl:
+                    UserData.Battle.Entry.Display.Content = UserData.Menu;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Move(Direction direction)
+        {
+            UserData.Go(direction);
+            if (UserData.IsFighting)
+                RaiseBattle();
+        }
+
+        private void ContinueAdventure(object sender, EventArgs e)
+        {
+            UserData.ResetDanger();
+        }
+
+        private void EnemyApproaches(object sender, EventArgs e)
+        {
+            UserData.Battle.Start();
         }
 
         #region INotifyPropertyChanged Members

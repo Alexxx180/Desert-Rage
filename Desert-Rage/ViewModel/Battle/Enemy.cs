@@ -106,8 +106,7 @@ namespace DesertRage.ViewModel.Battle
 
         private void Defeat()
         {
-            ViewModel.EnemyTurnsOver(this);
-            _ = ViewModel.Enemies.Remove(this);
+            ViewModel.EnemyDefeat(this);
         }
 
         public void WaitForTurn(object sender, object o)

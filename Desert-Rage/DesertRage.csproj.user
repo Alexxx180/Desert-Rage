@@ -47,7 +47,7 @@
     <Compile Update="Controls\Menu\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\Battle\BattleScene.xaml.cs">
+    <Compile Update="Controls\Scenes\BattleScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\CutScene.xaml.cs">
@@ -115,7 +115,7 @@
     <Page Update="Controls\Menu\MainMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Scenes\Battle\BattleScene.xaml">
+    <Page Update="Controls\Scenes\BattleScene.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\CutScene.xaml">
@@ -152,6 +152,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\ContentControls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\Animations\Motion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\Animations\Opacity.xaml">

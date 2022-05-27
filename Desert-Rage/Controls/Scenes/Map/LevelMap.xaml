@@ -8,6 +8,7 @@
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu.Game"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:info="clr-namespace:DesertRage.Resources.OST.Noises.Info"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920" x:Name="MapView">
     <UserControl.Resources>
@@ -19,8 +20,20 @@
     </UserControl.DataContext>
 
     <Grid>
-        <Grid Margin="0" UseLayoutRounding="False">
-            <Grid.Background>
+        <UniformGrid>
+            <UniformGrid.Rows>
+                5
+            </UniformGrid.Rows>
+
+            <UniformGrid.Columns>
+                9
+            </UniformGrid.Columns>
+            
+            <UniformGrid.Margin>
+                0
+            </UniformGrid.Margin>
+            
+            <UniformGrid.Background>
                 <VisualBrush TileMode="Tile">
                     <VisualBrush.Viewport>
                         0,0,0.111,0.2
@@ -46,32 +59,9 @@
                         </svgc:SvgViewbox>
                     </VisualBrush.Visual>
                 </VisualBrush>
-            </Grid.Background>
-
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            </UniformGrid.Background>
 
             <!--#region TileRow-0-->
-
             <map:MapTile>
                 <map:MapTile.Path>
                     <MultiBinding ConverterParameter="-4:-2">
@@ -388,17 +378,9 @@
                 </map:MapTile.Path>
             </map:MapTile>
 
-            <map:MapTile Y="2" X="4">
+            <map:MapTile x:Name="HeroTile" Y="2" X="4">
                 <map:MapTile.Path>
-                    <MultiBinding ConverterParameter="0:0">
-                        <MultiBinding.Converter>
-                            <StaticResource ResourceKey="MapConverter"/>
-                        </MultiBinding.Converter>
-
-                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.Map"/>
-                        <Binding ElementName="MapView" Path="DataContext.UserData.Level.TileCodes"/>
-                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Place"/>
-                    </MultiBinding>
+                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.MapImage"/>
                 </map:MapTile.Path>
             </map:MapTile>
 
@@ -720,12 +702,6 @@
 
             <!--#endregion-->
 
-            <map:MapTile x:Name="HeroTile" Y="2" X="4">
-                <map:MapTile.Path>
-                    <Binding ElementName="MapView" Path="DataContext.UserData.Hero.MapImage"/>
-                </map:MapTile.Path>
-            </map:MapTile>
-
             <Grid Grid.Row="2" Grid.Column="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.15*"/>
@@ -798,64 +774,34 @@
                     </TextBlock.Background>
                 </TextBlock>-->
             </Viewbox>
-        </Grid>
+        </UniformGrid>
 
-        <Border>
+        <Border x:Name="Curtain">
             <Border.Background>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                    <GradientStop x:Name="BlackCurtain" Color="Black" Offset="0"/>
-                    <GradientStop x:Name="TransparentCurtain" Color="Transparent" Offset="0"/>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop x:Name="FillCurtain" Color="Black" Offset="0"/>
+                    <GradientStop x:Name="BorderCurtain" Color="Transparent" Offset="0"/>
                 </LinearGradientBrush>
             </Border.Background>
 
             <Border.Triggers>
-                <EventTrigger RoutedEvent="Border.MouseDown">
+                <EventTrigger RoutedEvent="map:LevelMap.Fighting">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation>
-                                    <DoubleAnimation.From>
-                                        0.0
-                                    </DoubleAnimation.From>
+                            <Storyboard Completed="EnemyApproaches">
+                                <StaticResource ResourceKey="BorderCurtainLeftToRight"/>
+                                <StaticResource ResourceKey="FillCurtainLeftToRight"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
 
-                                    <DoubleAnimation.To>
-                                        5.0
-                                    </DoubleAnimation.To>
-
-                                    <DoubleAnimation.Duration>
-                                        0:0:1
-                                    </DoubleAnimation.Duration>
-
-                                    <Storyboard.TargetName>
-                                        TransparentCurtain
-                                    </Storyboard.TargetName>
-
-                                    <Storyboard.TargetProperty>
-                                        Offset
-                                    </Storyboard.TargetProperty>
-                                </DoubleAnimation>
-
-                                <DoubleAnimation>
-                                    <DoubleAnimation.From>
-                                        0.0
-                                    </DoubleAnimation.From>
-
-                                    <DoubleAnimation.To>
-                                        5.0
-                                    </DoubleAnimation.To>
-
-                                    <DoubleAnimation.Duration>
-                                        0:0:2
-                                    </DoubleAnimation.Duration>
-
-                                    <Storyboard.TargetName>
-                                        BlackCurtain
-                                    </Storyboard.TargetName>
-
-                                    <Storyboard.TargetProperty>
-                                        Offset
-                                    </Storyboard.TargetProperty>
-                                </DoubleAnimation>
+                <EventTrigger RoutedEvent="map:LevelMap.Entering">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard Completed="ContinueAdventure">
+                                <StaticResource ResourceKey="BorderCurtainRightFromLeft"/>
+                                <StaticResource ResourceKey="FillCurtainRightFromLeft"/>
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
@@ -863,6 +809,79 @@
             </Border.Triggers>
         </Border>
 
-        <!--<menu:GameMenu x:Name="Menu"/>-->
+        
+
+        <!--<ContentControl DataContext="{Binding}">
+            <ContentControl.Template>
+                <ControlTemplate>
+                    <Border>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                                <GradientStop x:Name="FillCurtain" Color="Black" Offset="0"/>
+                                <GradientStop x:Name="BorderCurtain" Color="Transparent" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Value="True">
+                            <DataTrigger.Binding>
+                                <Binding Path="UserData.IsFighting"/>
+                            </DataTrigger.Binding>
+
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="BattleCurtain">
+                                        <DoubleAnimation>
+                                            <DoubleAnimation.From>
+                                                0.0
+                                            </DoubleAnimation.From>
+
+                                            <DoubleAnimation.To>
+                                                5.0
+                                            </DoubleAnimation.To>
+
+                                            <DoubleAnimation.Duration>
+                                                0:0:1
+                                            </DoubleAnimation.Duration>
+
+                                            <Storyboard.TargetName>
+                                                BorderCurtain
+                                            </Storyboard.TargetName>
+
+                                            <Storyboard.TargetProperty>
+                                                Offset
+                                            </Storyboard.TargetProperty>
+                                        </DoubleAnimation>
+
+                                        <DoubleAnimation>
+                                            <DoubleAnimation.From>
+                                                0.0
+                                            </DoubleAnimation.From>
+
+                                            <DoubleAnimation.To>
+                                                5.0
+                                            </DoubleAnimation.To>
+
+                                            <DoubleAnimation.Duration>
+                                                0:0:2
+                                            </DoubleAnimation.Duration>
+
+                                            <Storyboard.TargetName>
+                                                FillCurtain
+                                            </Storyboard.TargetName>
+
+                                            <Storyboard.TargetProperty>
+                                                Offset
+                                            </Storyboard.TargetProperty>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </DataTrigger.EnterActions>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </ContentControl.Template>
+        </ContentControl>-->
     </Grid>
 </UserControl>

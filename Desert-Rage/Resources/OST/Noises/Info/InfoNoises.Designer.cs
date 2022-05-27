@@ -22,7 +22,7 @@ namespace DesertRage.Resources.OST.Noises.Info {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class InfoNoises {
+    public class InfoNoises {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DesertRage.Resources.OST.Noises.Info {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesertRage.Resources.OST.Noises.Info.InfoNoises", typeof(InfoNoises).Assembly);
@@ -51,7 +51,7 @@ namespace DesertRage.Resources.OST.Noises.Info {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,27 +61,27 @@ namespace DesertRage.Resources.OST.Noises.Info {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Misc/BossStorm.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Info/BossStorm.mp3.
         /// </summary>
-        internal static string BossStorm {
+        public static string BossStorm {
             get {
                 return ResourceManager.GetString("BossStorm", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Misc/EnemyWind.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Info/EnemyWind.mp3.
         /// </summary>
-        internal static string EnemyWind {
+        public static string EnemyWind {
             get {
                 return ResourceManager.GetString("EnemyWind", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Resources/OST/Noises/Misc/LevelUp.mp3.
+        ///   Ищет локализованную строку, похожую на Resources/OST/Noises/Info/LevelUp.mp3.
         /// </summary>
-        internal static string LevelUp {
+        public static string LevelUp {
             get {
                 return ResourceManager.GetString("LevelUp", resourceCulture);
             }

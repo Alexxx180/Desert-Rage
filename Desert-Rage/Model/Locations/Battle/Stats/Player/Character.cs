@@ -14,7 +14,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             GoingImage = new string[4][];
         }
 
-        internal void Go(in string[] map, int move)
+        internal bool Go(in string[] map, int move)
         {
             Position next = Place;
             next += Step[move];
@@ -27,6 +27,9 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             {
                 Place = next;
             }
+
+            ToBattle--;
+            return ToBattle <= 0;
         }
 
         internal void Stand()
@@ -74,6 +77,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         #region Map Members
         public Position Place { get; set; }
         public Position[] Step { get; set; }
+        public int ToBattle { get; set; }
 
         public int Pose { get; set; }
         public int Walk { get; set; }

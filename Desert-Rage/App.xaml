@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="Resources/Styles/Menu/Items/MenuItems.xaml"/>
 
                 <ResourceDictionary Source="Resources/Templates/Animations/Opacity.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/Animations/Motion.xaml"/>
                 
                 <ResourceDictionary Source="Resources/Templates/DataTemplates/Menu.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/DataTemplates/Units.xaml"/>

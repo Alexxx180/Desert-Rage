@@ -24,11 +24,7 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
             for (int i = Enemies.Count - 1; i > -1; i--)
             {
-                System.Diagnostics.Trace.WriteLine("INDEX IS: " + i);
-                System.Diagnostics.Trace.WriteLine(Enemies[i].Foe.Name);
-                System.Diagnostics.Trace.WriteLine(Enemies[i].Foe.Hp.ToString());
                 Enemies[i].Hit(Power);
-
             }
         }
 

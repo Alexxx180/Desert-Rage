@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Threading;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Helpers;
-using static DesertRage.Writers.Processors;
 using DesertRage.ViewModel;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Scenes;
@@ -14,13 +12,10 @@ using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.ViewModel.Battle;
-using DesertRage.Resources.OST.Noises.Actions;
-using DesertRage.Helpers.Attach;
-using DesertRage.Controls;
 using System.Collections.Generic;
 using DesertRage.Model.Menu.Things.Logic;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
+using static DesertRage.Writers.Processors;
+using System;
 
 namespace DesertRage
 {
@@ -30,6 +25,26 @@ namespace DesertRage
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        #region Custom Events Members
+        public static readonly RoutedEvent
+            EscapingEvent = EventManager.RegisterRoutedEvent(
+                nameof(Escaping), RoutingStrategy.Bubble,
+                typeof(RoutedEventHandler), typeof(MainWindow));
+
+        public event RoutedEventHandler Escaping
+        {
+            add { AddHandler(EscapingEvent, value); }
+            remove { RemoveHandler(EscapingEvent, value); }
+        }
+
+        public void RaiseEscape()
+        {
+            KeyDown -= OnKeyDown;
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(EscapingEvent);
+            Curtain.RaiseEvent(newEventArgs);
+        }
+        #endregion
+
         private BattleViewModel _adventure;
         public BattleViewModel Adventure
         {
@@ -50,9 +65,11 @@ namespace DesertRage
             user.LoadHeroCommands();
 
             Adventure = user.Battle;
-            Display.Content = Adventure.Scene;
+            Adventure.Entry = this;
+            Display.Content = user.Location;
         }
 
+        #region Model Members
         internal UserProfile Player { get; set; }
 
         internal Character Ray = new Character
@@ -96,7 +113,6 @@ namespace DesertRage
         {
             Player.Hero = ReadJson<Character>("Ray/Beginner.json");
             Player.Level = ReadJson<Location>("SecretTemple.json");
-            
         }
 
         private void SaveGame()
@@ -166,14 +182,15 @@ namespace DesertRage
             {
                 TileCodes = tiles,
                 BackCover = back,
-                Map = map
+                Map = map,
+                Danger = Position.Linear(9, 3)
             };
 
             Character hero = new Character
             {
-                Hp = new Bar(20, 100),
+                Hp = new Bar(100),
                 Ap = new Bar(50),
-                Stats = new BattleStats(25),
+                Stats = new BattleStats(100),
                 Icon = "/Resources/Images/Menu/Topics/Status.svg",
                 Image = "/Resources/Images/Fight/Character/Ray/Idle.svg",
                 Action = "/Resources/Images/Fight/Character/Ray/Action.svg",
@@ -217,8 +234,9 @@ namespace DesertRage
                     }
                 },
                 WalkThrough = new HashSet<string>
-                    { ".", ",", ":", "_" },
-                Place = new Position(1, 3)
+                { ".", ",", ":", "_" },
+                Place = new Position(1, 3),
+                ToBattle = location.Danger.Random()
             };
 
             hero.Skills = new List<SkillsID>
@@ -241,6 +259,7 @@ namespace DesertRage
                 Hero = hero
             };
         }
+        #endregion
 
         #region RoutedEvent Members
         private void OnKeyDown(object sender, KeyEventArgs e)
@@ -248,7 +267,8 @@ namespace DesertRage
             switch (e.Key)
             {
                 case Key.Escape:
-                    Close();
+                    Adventure.SafeFreeze();
+                    RaiseEscape();
                     break;
                 default:
                     TransferKeyDown(sender, e);
@@ -275,6 +295,11 @@ namespace DesertRage
             {
                 keyPad.KeyRelease(sender, e);
             }
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            Close();
         }
         #endregion
 

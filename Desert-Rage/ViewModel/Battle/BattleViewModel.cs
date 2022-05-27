@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Threading;
+using System.Windows.Controls;
 using DesertRage.Controls.Scenes;
 using DesertRage.Customing;
 using DesertRage.Model.Locations;
@@ -11,7 +12,6 @@ using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using System.Diagnostics;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -19,6 +19,7 @@ namespace DesertRage.ViewModel.Battle
     {
         #region UI Members
         public BattleScene Scene { get; set; }
+        public MainWindow Entry { get; set; }
         #endregion
 
         private Person _human;
@@ -76,7 +77,7 @@ namespace DesertRage.ViewModel.Battle
         #region Timing Members
         private DispatcherTimer _timing;
 
-        public void SetTurns()
+        private void SetTurns()
         {
             _timing = new DispatcherTimer();
             _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
@@ -95,21 +96,26 @@ namespace DesertRage.ViewModel.Battle
                 EnemyTurnsOver(Enemies[i]);
         }
 
-        public void EnemyTurnsOver(in Enemy enemy)
+        private void EnemyTurnsOver(in Enemy enemy)
         {
             _timing.Tick -= enemy.WaitForTurn;
         }
 
+        internal void EnemyDefeat(in Enemy enemy)
+        {
+            EnemyTurnsOver(enemy);
+            _ = Enemies.Remove(enemy);
+
+            if (!IsBattle)
+                Scene.ReturnToMap();
+        }
+
         public void Start()
         {
+            Entry.Display.Content = Scene;
             Enemies.Refresh(_drawStrategy.Build());
             EnemyTurns();
-            _timing.Start();
-
-            foreach (Enemy enemy in Enemies)
-            {
-                Trace.WriteLine(enemy.Foe.Name);
-            }
+            Scene.RaiseEnter();
         }
         #endregion
 
@@ -124,7 +130,7 @@ namespace DesertRage.ViewModel.Battle
             Scene = new BattleScene(this);
 
             SetTurns();
-            Start();
+            // Start();
         }
 
         #region Battle Options
@@ -135,23 +141,33 @@ namespace DesertRage.ViewModel.Battle
             OnPropertyChanged(nameof(IsBattle));
         }
 
-        public void End()
+        private void End()
         {
-            _timing.Stop();
-            Trace.WriteLine("YOHOO!");
-            Scene.ReturnToMap();
+            Scene.RaiseEscape();
         }
 
-        public void Lose()
+        public void SafeFreeze()
+        {
+            if (IsBattle)
+                Freeze();
+        }
+
+        private void Freeze()
         {
             _timing.Stop();
             _timing.Tick -= Human.WaitForTurn;
             DenyEnemyTurns();
-            // Application.Current.Shutdown();
+        }
+
+        public void Lose()
+        {
+            Freeze();
+            Entry.RaiseEscape();
         }
 
         public void RunAway()
         {
+            _timing.Stop();
             DenyEnemyTurns();
             CleanBattlefield();
             End();
@@ -162,13 +178,7 @@ namespace DesertRage.ViewModel.Battle
             Random fleeChance = new Random();
 
             if (fleeChance.Next(1, barrier + 1) == 1)
-            {
                 RunAway();
-            }
-            else
-            {
-                Trace.WriteLine("NO....");
-            }
         }
 
         public void Pause()

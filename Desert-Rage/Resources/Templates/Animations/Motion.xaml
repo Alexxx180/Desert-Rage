@@ -1,0 +1,90 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DoubleAnimation x:Key="BorderCurtainLeftToRight">
+        <DoubleAnimation.From>
+            0.0
+        </DoubleAnimation.From>
+
+        <DoubleAnimation.To>
+            5.0
+        </DoubleAnimation.To>
+
+        <DoubleAnimation.Duration>
+            0:0:0.5
+        </DoubleAnimation.Duration>
+
+        <Storyboard.TargetName>
+            BorderCurtain
+        </Storyboard.TargetName>
+
+        <Storyboard.TargetProperty>
+            Offset
+        </Storyboard.TargetProperty>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="FillCurtainLeftToRight">
+        <DoubleAnimation.From>
+            0.0
+        </DoubleAnimation.From>
+
+        <DoubleAnimation.To>
+            5.0
+        </DoubleAnimation.To>
+
+        <DoubleAnimation.Duration>
+            0:0:1
+        </DoubleAnimation.Duration>
+
+        <Storyboard.TargetName>
+            FillCurtain
+        </Storyboard.TargetName>
+
+        <Storyboard.TargetProperty>
+            Offset
+        </Storyboard.TargetProperty>
+    </DoubleAnimation>
+
+    <DoubleAnimation x:Key="BorderCurtainRightFromLeft">
+        <DoubleAnimation.From>
+            5.0
+        </DoubleAnimation.From>
+
+        <DoubleAnimation.To>
+            0.0
+        </DoubleAnimation.To>
+
+        <DoubleAnimation.Duration>
+            0:0:0.5
+        </DoubleAnimation.Duration>
+
+        <Storyboard.TargetName>
+            FillCurtain
+        </Storyboard.TargetName>
+
+        <Storyboard.TargetProperty>
+            Offset
+        </Storyboard.TargetProperty>
+    </DoubleAnimation>
+    
+    <DoubleAnimation x:Key="FillCurtainRightFromLeft">
+        <DoubleAnimation.From>
+            5.0
+        </DoubleAnimation.From>
+
+        <DoubleAnimation.To>
+            0.0
+        </DoubleAnimation.To>
+
+        <DoubleAnimation.Duration>
+            0:0:1
+        </DoubleAnimation.Duration>
+
+        <Storyboard.TargetName>
+            BorderCurtain
+        </Storyboard.TargetName>
+
+        <Storyboard.TargetProperty>
+            Offset
+        </Storyboard.TargetProperty>
+    </DoubleAnimation>
+</ResourceDictionary>
