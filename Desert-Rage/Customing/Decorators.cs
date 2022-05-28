@@ -94,171 +94,127 @@ namespace DesertRage.Customing
         }
         #endregion
 
-        #region Bar Management Members
-        public static bool Drop(
-            this Bar statBar,
-            out Bar newStatBar,
-            ushort decrement)
-        {
-            ushort newValue = Math.Max(
-                statBar.Current - decrement,
-                statBar.Minimum
-            ).ToUShort();
+        //public static void AnyShow(this MediaElement element)
+        //{
+        //    element.Play();
+        //    element.SetActive(true);
+        //}
 
-            newStatBar = new Bar
-            {
-                Minimum = statBar.Minimum,
-                Current = newValue,
-                Max = statBar.Max
-            };
+        //public static void AnyShowAdvanced
+        //    (this MediaElement element,
+        //    Uri Source, TimeSpan timeSpan)
+        //{
+        //    element.Source = Source;
+        //    element.Position = timeSpan;
+        //    element.Play();
+        //    element.SetActive(true);
+        //}
 
-            return newValue <= statBar.Minimum;
-        }
+        //public static void AnyHide(this MediaElement element)
+        //{
+        //    element.SetActive(false);
+        //    element.Stop();
+        //}
 
-        public static bool Fill(
-            this Bar statBar,
-            out Bar newStatBar,
-            ushort increment
-            )
-        {
-            ushort newValue = Math.Min(
-                statBar.Current + increment,
-                statBar.Max
-            ).ToUShort();
+        //public static void AnyGrid(UIElement element, in int row, in int column)
+        //{
+        //    Grid.SetRow(element, row);
+        //    Grid.SetColumn(element, column);
+        //}
 
-            newStatBar = new Bar
-            {
-                Minimum = statBar.Minimum,
-                Current = newValue,
-                Max = statBar.Max
-            };
-
-            return newValue >= statBar.Max;
-        }
-        #endregion
-
-        public static void AnyShow(this MediaElement element)
-        {
-            element.Play();
-            element.SetActive(true);
-        }
-
-        public static void AnyShowAdvanced
-            (this MediaElement element,
-            Uri Source, TimeSpan timeSpan)
-        {
-            element.Source = Source;
-            element.Position = timeSpan;
-            element.Play();
-            element.SetActive(true);
-        }
-
-        public static void AnyHide(this MediaElement element)
-        {
-            element.SetActive(false);
-            element.Stop();
-        }
-
-        public static void AnyGrid(UIElement element, in int row, in int column)
-        {
-            Grid.SetRow(element, row);
-            Grid.SetColumn(element, column);
-        }
-
-        public static void Scales(ScaleTransform scl, in double w, in double h)
-        {
-            scl.ScaleX = w;
-            scl.ScaleY = h;
-        }
+        //public static void Scales(ScaleTransform scl, in double w, in double h)
+        //{
+        //    scl.ScaleX = w;
+        //    scl.ScaleY = h;
+        //}
         
-        public static void AnyShowX(params FrameworkElement[] elements)
-        {
-            for (byte i = 0; i < elements.Length; i++)
-                elements[i].SetActive(true);
-        }
+        //public static void AnyShowX(params FrameworkElement[] elements)
+        //{
+        //    for (byte i = 0; i < elements.Length; i++)
+        //        elements[i].SetActive(true);
+        //}
 
-        public static void AnyShowX2(in bool[] Conditions,
-            params FrameworkElement[][] Objects)
-        {
-            for (byte i = 0; i < Conditions.Length; i++)
-                if (Conditions[i])
-                    AnyShowX(Objects[i]);
-        }
-        public static void AnyShowX2(in BitArray Conditions,
-            params FrameworkElement[][] Objects)
-        {
-            for (byte i = 0; i < Conditions.Length; i++)
-                if (Conditions[i])
-                    AnyShowX(Objects[i]);
-        }
-        public static void AnyGridX(UIElement[] Elements,
-            in int[] rows, in int[] columns)
-        {
-            for (byte i = 0; i < Elements.Length; i++)
-                AnyGrid(Elements[i], rows[i], columns[i]);
-        }
-        //[EN] Bitmapimages and URI from string converting
-        //[RU] Преобразование в изображения и URI из строки
-        public static Uri Ura(in string Path)
-        {
-            return new Uri(Path, UriKind.RelativeOrAbsolute);
-        }
+        //public static void AnyShowX2(in bool[] Conditions,
+        //    params FrameworkElement[][] Objects)
+        //{
+        //    for (byte i = 0; i < Conditions.Length; i++)
+        //        if (Conditions[i])
+        //            AnyShowX(Objects[i]);
+        //}
+        //public static void AnyShowX2(in BitArray Conditions,
+        //    params FrameworkElement[][] Objects)
+        //{
+        //    for (byte i = 0; i < Conditions.Length; i++)
+        //        if (Conditions[i])
+        //            AnyShowX(Objects[i]);
+        //}
+        //public static void AnyGridX(UIElement[] Elements,
+        //    in int[] rows, in int[] columns)
+        //{
+        //    for (byte i = 0; i < Elements.Length; i++)
+        //        AnyGrid(Elements[i], rows[i], columns[i]);
+        //}
 
-        public static BitmapImage Bmper(string UriToBmp)
-        {
-            return new BitmapImage(new Uri(UriToBmp, UriKind.RelativeOrAbsolute));
-        }
+        //public static Uri Ura(in string Path)
+        //{
+        //    return new Uri(Path, UriKind.RelativeOrAbsolute);
+        //}
 
-        public static BitmapImage[] BmpersToX(params string[] texts)
-        {
-            List<BitmapImage> bmps = new List<BitmapImage>();
-            for (byte i = 0; i < texts.Length; i++)
-                bmps.Add(Bmper(texts[i]));
-            return bmps.ToArray();
-        }
+        //public static BitmapImage Bmper(string UriToBmp)
+        //{
+        //    return new BitmapImage(new Uri(UriToBmp, UriKind.RelativeOrAbsolute));
+        //}
 
-        public static int CheckColumn(in Image img, int offset)
-        {
-            return Math.Max(img.GetValue(Grid.ColumnProperty).ToByte() - offset, 0);
-        }
+        //public static BitmapImage[] BmpersToX(params string[] texts)
+        //{
+        //    List<BitmapImage> bmps = new List<BitmapImage>();
+        //    for (byte i = 0; i < texts.Length; i++)
+        //        bmps.Add(Bmper(texts[i]));
+        //    return bmps.ToArray();
+        //}
 
-        public static int CheckRow(in Image img, int offset)
-        {
-            return Math.Max(img.GetValue(Grid.RowProperty).ToByte() - offset, 0);
-        }
+        //public static int CheckColumn(in Image img, int offset)
+        //{
+        //    return Math.Max(img.GetValue(Grid.ColumnProperty).ToByte() - offset, 0);
+        //}
 
-        public static void FastEnableDisableBtn(bool enabled, params Button[] buttons)
-        {
-            for (byte i = 0; i < buttons.Length; i++)
-                buttons[i].IsEnabled = enabled;
-        }
+        //public static int CheckRow(in Image img, int offset)
+        //{
+        //    return Math.Max(img.GetValue(Grid.RowProperty).ToByte() - offset, 0);
+        //}
 
-        public static void FastEnableDisableBtn(bool[] enabled, params Button[] buttons)
-        {
-            for (byte i = 0; i < buttons.Length; i++)
-                buttons[i].IsEnabled = enabled[i];
-        }
+        //public static void FastEnableDisableBtn(bool enabled, params Button[] buttons)
+        //{
+        //    for (byte i = 0; i < buttons.Length; i++)
+        //        buttons[i].IsEnabled = enabled;
+        //}
 
-        public static void TimerOn(ref DispatcherTimer timer)
-        {
-            timer.Start();
-        }
+        //public static void FastEnableDisableBtn(bool[] enabled, params Button[] buttons)
+        //{
+        //    for (byte i = 0; i < buttons.Length; i++)
+        //        buttons[i].IsEnabled = enabled[i];
+        //}
 
-        public static void TimerOn(ref DispatcherTimer timer, in ushort time)
-        {
-            timer.Interval = TimeSpan.FromMilliseconds(time);
-            timer.Start();
-        }
+        //public static void TimerOn(ref DispatcherTimer timer)
+        //{
+        //    timer.Start();
+        //}
 
-        public static void TimerOff(ref DispatcherTimer timer)
-        {
-            timer.Stop();
-        }
+        //public static void TimerOn(ref DispatcherTimer timer, in ushort time)
+        //{
+        //    timer.Interval = TimeSpan.FromMilliseconds(time);
+        //    timer.Start();
+        //}
+
+        //public static void TimerOff(ref DispatcherTimer timer)
+        //{
+        //    timer.Stop();
+        //}
 
         public static void PlayOST(MediaElement element, in string Path)
         {
             element.Stop();
-            element.Source = Ura(Path);
+            element.Source = Path.ToUri();
             element.Play();
         }
     }

@@ -2137,6 +2137,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DesertRageModel">
+      <HintPath>..\..\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Quotes.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

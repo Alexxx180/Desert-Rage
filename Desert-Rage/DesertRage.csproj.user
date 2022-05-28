@@ -53,9 +53,6 @@
     <Compile Update="Controls\Scenes\CutScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Scenes\Map\Avatar\Ray.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Scenes\Map\LevelMap.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,9 +116,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\CutScene.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Scenes\Map\Avatar\Ray.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\Map\LevelMap.xaml">

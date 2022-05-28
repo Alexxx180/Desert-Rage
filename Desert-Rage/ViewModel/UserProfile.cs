@@ -70,8 +70,6 @@ namespace DesertRage.ViewModel
             Menu = new GameMenu(this);
             Location = new LevelMap(this);
             Battle = new BattleViewModel(this);
-
-            //BattleStart += EnemyApproaches;
         }
 
         public void LoadHeroCommands()
@@ -192,6 +190,7 @@ namespace DesertRage.ViewModel
             }
         }
 
+        #region Map Members
         public void Go(Direction move)
         {
             if (Hero.Go(Level.Map, move.Int()))
@@ -212,6 +211,13 @@ namespace DesertRage.ViewModel
         public void Stand()
         {
             Hero.Stand();
+            UpdateHero();
+        }
+        #endregion
+
+        public void LevelUp()
+        {
+            //Hero = new
             UpdateHero();
         }
 

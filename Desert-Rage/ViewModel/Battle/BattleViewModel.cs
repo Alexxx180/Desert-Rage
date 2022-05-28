@@ -10,8 +10,9 @@ using DesertRage.Customing;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
-using DesertRage.Model.Locations.Battle.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.ViewModel.Battle.Strategy.Appear;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 
 namespace DesertRage.ViewModel.Battle
 {

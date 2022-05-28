@@ -7,6 +7,7 @@ using DesertRage.Customing;
 using DesertRage.Model.Menu;
 using DesertRage.ViewModel;
 using System.Windows.Data;
+using DesertRage.ViewModel.Menu;
 
 namespace DesertRage.Controls.Menu.Game
 {

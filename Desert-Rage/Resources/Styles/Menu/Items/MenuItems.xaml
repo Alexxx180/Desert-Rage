@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:converters="clr-namespace:DesertRage.BindConverters"
-                    xmlns:battle="clr-namespace:DesertRage.Model.Locations.Battle">
+                    xmlns:battle="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel">
     <Style x:Key="PlayerItems" TargetType="MenuItem" BasedOn="{StaticResource Impact}">
         <Setter Property="Command" Value="{Binding}"/>
 
