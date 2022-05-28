@@ -1,0 +1,12 @@
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.csproj.AssemblyReference.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.AssemblyInfoInputs.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.AssemblyInfo.cs
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.csproj.CoreCompileInputs.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.deps.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\bin\Debug\net5.0\ref\DesertRageModel.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.pdb
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\ref\DesertRageModel.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Model\DesertRageModel\obj\Debug\net5.0\DesertRageModel.pdb

@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>DesertRage.Model</RootNamespace>
+    <ApplicationIcon>Logo-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+</Project>
