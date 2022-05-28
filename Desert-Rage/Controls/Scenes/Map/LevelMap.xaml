@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
-             xmlns:converters="clr-namespace:DesertRage.BindConverters"
+             xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu.Game"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
              xmlns:info="clr-namespace:DesertRage.Resources.OST.Noises.Info"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920" x:Name="MapView">

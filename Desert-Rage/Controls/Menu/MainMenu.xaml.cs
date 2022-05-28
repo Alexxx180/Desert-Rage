@@ -9,7 +9,6 @@ using System.Runtime.CompilerServices;
 using DesertRage.Controls.Scenes;
 using static DesertRage.Writers.Processors;
 using System.Diagnostics;
-using DesertRage.Helpers;
 
 namespace DesertRage.Controls.Menu
 {
@@ -260,7 +259,6 @@ namespace DesertRage.Controls.Menu
 
         private void NewGame(object sender, RoutedEventArgs e)
         {
-            Tracks.PlayMusic(Paths.OST.Music.Prologue);
             Label display = Parent as Label;
             display.Content = new CutScene(MapFromScratch,
                 "Resources/CutScenes/ChaptersIntroduction/Prologue.mp4");

@@ -5,8 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
-using DesertRage.Helpers.ResourceManagement;
-using DesertRage.Helpers.ResourceManagement.OST;
+using DesertRage.Controls.Scenes;
 
 namespace DesertRage
 {
@@ -15,14 +14,6 @@ namespace DesertRage
     /// </summary>
     public partial class App : Application
     {
-        static App()
-        {
-            GameThemes = new Music();
-            GameSounds = new Sounds();
-            GameNoises = new Noises();
-            VideoScene = new CutScenes();
-        }
-
         public App()
         {
             AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;
@@ -59,12 +50,6 @@ namespace DesertRage
             }
         }
 
-        #region OST
-        public static readonly Music GameThemes;
-        public static readonly Sounds GameSounds;
-        public static readonly Noises GameNoises;
-        #endregion
-
-        public static readonly CutScenes VideoScene;
+        public static readonly CutScene VideoScene;
     }
 }

@@ -10,6 +10,7 @@
         "dependencies": {
           "Serilog.Sinks.File": "5.0.0",
           "SharpVectors": "1.7.7",
+          "DesertRageDecorators": "1.0.0.0",
           "DesertRageModel": "1.0.0.0"
         },
         "runtime": {
@@ -71,6 +72,14 @@
           }
         }
       },
+      "DesertRageDecorators/1.0.0.0": {
+        "runtime": {
+          "DesertRageDecorators.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "DesertRageModel/1.0.0.0": {
         "runtime": {
           "DesertRageModel.dll": {
@@ -107,6 +116,11 @@
       "sha512": "sha512-jMGVqc/HvxlDo5kSm24VdNd3yi+QaeY9ubSFcksDleBnGWXMoW/jCtAc6u3k1EzY7uKjwb/e//8fWiRZC80OHw==",
       "path": "sharpvectors/1.7.7",
       "hashPath": "sharpvectors.1.7.7.nupkg.sha512"
+    },
+    "DesertRageDecorators/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "DesertRageModel/1.0.0.0": {
       "type": "reference",

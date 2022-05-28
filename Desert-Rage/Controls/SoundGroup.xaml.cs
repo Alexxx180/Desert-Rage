@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using static DesertRage.Customing.Converters.Converters;
+using static DesertRage.Decorators.UI.Media;
 
 namespace DesertRage.Controls
 {
@@ -24,14 +24,6 @@ namespace DesertRage.Controls
         private void OnSoundsEnd(object sender, RoutedEventArgs e)
         {
             (sender as MediaElement).Stop();
-        }
-
-        private static void PlayOST(MediaElement element, in string Path)
-        {
-            System.Diagnostics.Trace.WriteLine("SERIOUS?");
-            element.Stop();
-            element.Source = Path.ToUri();
-            element.Play();
         }
 
         public void PlayMusic(in string path) => PlayOST(Sound1, path);

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-             xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
+             xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="GStatus">

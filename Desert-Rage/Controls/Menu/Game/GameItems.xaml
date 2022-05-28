@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
-             xmlns:converters="clr-namespace:DesertRage.BindConverters"
-             xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle"
+             xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+             xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="GItems">

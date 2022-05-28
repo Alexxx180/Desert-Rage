@@ -12,7 +12,8 @@ using DesertRage.ViewModel.Battle.Actions.Kinds;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
-using static DesertRage.Helpers.Paths.OST;
+using DesertRage.Resources.OST.Sounds.Defeat.Enemies;
+using DesertRage.Resources.OST.Sounds.Defeat.Bosses;
 
 namespace DesertRage.ViewModel
 {
@@ -338,7 +339,7 @@ namespace DesertRage.ViewModel
                         Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
                         Action = "/Resources/Images/Fight/Enemies/Spider/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.SpiderDied,
+                        Death = EnemyDefeat.Spider,
                         Stats = new BattleStats(25, 3, 10, 0),
                         Hp = new Bar(65),
                         Experience = 5
@@ -354,7 +355,7 @@ namespace DesertRage.ViewModel
                         Description = "Непохоже, что кто-то рассказал этому бедолаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
                         Action = "/Resources/Images/Fight/Enemies/Mummy/Action.svg",
                         Size = new Position(2),
-                        Death = Sounds.MummyDied,
+                        Death = EnemyDefeat.Mummy,
                         Hp = new Bar(83),
                         Stats = new BattleStats(32, 7, 17, 2),
                         Experience = 7
@@ -370,7 +371,7 @@ namespace DesertRage.ViewModel
                         Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
                         Action = "/Resources/Images/Fight/Enemies/Zombie/Action.svg",
                         Size = new Position(2, 1),
-                        Death = Sounds.ZombieDied,
+                        Death = EnemyDefeat.Zombie,
                         Hp = new Bar(83),
                         Stats = new BattleStats(41, 5, 25, 5),
                         Experience = 11
@@ -386,7 +387,7 @@ namespace DesertRage.ViewModel
                         Description = "Он не кажется таким уж безобидным. Спустя такой стаж охраны у него будет к вам серьезный разговор.",
                         Action = "/Resources/Images/Fight/Enemies/Bones/Action.svg",
                         Size = new Position(2),
-                        Death = Sounds.BonesDied,
+                        Death = EnemyDefeat.Bones,
                         Hp = new Bar(125),
                         Stats = new BattleStats(50, 15, 35, 7),
                         Experience = 15
@@ -402,7 +403,7 @@ namespace DesertRage.ViewModel
                         Description = "Это птица? Это винтокрыл? Нет, это ручной гусь Гоша, которого хозяева снова оставили голодным одного.",
                         Action = "/Resources/Images/Fight/Enemies/Vulture/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.VultureDied,
+                        Death = EnemyDefeat.Vulture,
                         Hp = new Bar(250),
                         Stats = new BattleStats(45, 25, 65, 30),
                         Experience = 35
@@ -418,7 +419,7 @@ namespace DesertRage.ViewModel
                         Description = "Страшный тип. На глаза к такому лучше точно не попадаться.",
                         Action = "/Resources/Images/Fight/Enemies/Ghoul/Action.svg",
                         Size = new Position(1, 2),
-                        Death = Sounds.GhoulDied,
+                        Death = EnemyDefeat.Ghoul,
                         Hp = new Bar(306),
                         Stats = new BattleStats(80, 40, 30, 20),
                         Experience = 75
@@ -434,7 +435,7 @@ namespace DesertRage.ViewModel
                         Description = "У него хорошая коса за плечами, вот только не видно ни одного поля с пшеницей посреди пустыни...",
                         Action = "/Resources/Images/Fight/Enemies/GrimReaper/Action.svg",
                         Size = new Position(2),
-                        Death = Sounds.GrimReaperDied,
+                        Death = EnemyDefeat.GrimReaper,
                         Hp = new Bar(272),
                         Stats = new BattleStats(100, 20, 45, 60),
                         Experience = 100
@@ -450,7 +451,7 @@ namespace DesertRage.ViewModel
                         Description = "Этот скарабей решил подняться, выполняя работенку посложнее своих жучьих обязанностей.",
                         Action = "/Resources/Images/Fight/Enemies/Scarab/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.ScarabDied,
+                        Death = EnemyDefeat.Scarab,
                         Hp = new Bar(100),
                         Stats = new BattleStats(80),
                         Experience = 60
@@ -466,7 +467,7 @@ namespace DesertRage.ViewModel
                         Description = "Такую прелесть точно не захочется найти в своем шкафу.",
                         Action = "/Resources/Images/Fight/Enemies/KillerMole/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.KillerMoleDied,
+                        Death = EnemyDefeat.KillerMole,
                         Hp = new Bar(400),
                         Stats = new BattleStats(150, 100, 100, 75),
                         Experience = 175
@@ -482,7 +483,7 @@ namespace DesertRage.ViewModel
                         Description = "Коварный, безжалостный, этот бес явно не хочет не званых гостей.",
                         Action = "/Resources/Images/Fight/Enemies/Imp/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.ImpDied,
+                        Death = EnemyDefeat.Imp,
                         Hp = new Bar(600),
                         Stats = new BattleStats(125, 105, 90, 140),
                         Experience = 180
@@ -498,7 +499,7 @@ namespace DesertRage.ViewModel
                         Description = "Этот пожиратель настолько огромный, что торчит только его хвост. Самое время малость его укоротить...",
                         Action = "/Resources/Images/Fight/Enemies/Worm/Action.svg",
                         Size = new Position(2),
-                        Death = Sounds.WormDied,
+                        Death = EnemyDefeat.Worm,
                         Hp = new Bar(950),
                         Stats = new BattleStats(160, 70, 130, 70),
                         Experience = 200
@@ -514,7 +515,7 @@ namespace DesertRage.ViewModel
                         Description = "Знатока своего дела видно сразу. Но, к сожалению, сговорчивостью он точно не выделяется.",
                         Action = "/Resources/Images/Fight/Enemies/Master/Action.svg",
                         Size = new Position(1),
-                        Death = Sounds.MasterDied,
+                        Death = EnemyDefeat.Master,
                         Hp = new Bar(760),
                         Stats = new BattleStats(160),
                         Experience = 255
@@ -536,7 +537,7 @@ namespace DesertRage.ViewModel
                         Description = "Страшно представить, что станет с тем, кто лежал замурованным так долго...",
                         Action = "/Resources/Images/Fight/Bosses/Pharaoh/Action.svg",
                         Size = new Position(2, 3),
-                        Death = Sounds.PharaohLost,
+                        Death = BossesDefeat.Pharaoh,
                         Hp = new Bar(500),
                         Stats = new BattleStats(75, 40, 40, 35),
                         Experience = 100
@@ -552,7 +553,7 @@ namespace DesertRage.ViewModel
                         Description = "Сразу видно: человек не пропускал физкультуру.",
                         Action = "/Resources/Images/Fight/Bosses/Rock/Action.svg",
                         Size = new Position(1, 2),
-                        Death = Sounds.RockLost,
+                        Death = BossesDefeat.Friend,
                         Hp = new Bar(2000),
                         Stats = new BattleStats(170, 120, 90, 140),
                         Experience = 200
@@ -568,7 +569,7 @@ namespace DesertRage.ViewModel
                         Description = "Кто-то не выспался =). Где артефакты, Билли?",
                         Action = "/Resources/Images/Fight/Bosses/TheRuler/Action.svg",
                         Size = new Position(2, 3),
-                        Death = Sounds.TheRulerLost,
+                        Death = BossesDefeat.TheRuler,
                         Hp = new Bar(10000),
                         Stats = new BattleStats(255),
                         Experience = 255
@@ -584,7 +585,7 @@ namespace DesertRage.ViewModel
                         Description = "Так-так-так, кто тут у нас?",
                         Action = "/Resources/Images/Fight/Bosses/UghZan/Action.svg",
                         Size = new Position(2, 3),
-                        Death = Sounds.UghZanLost,
+                        Death = BossesDefeat.UghZan,
                         Hp = new Bar(350),
                         Stats = new BattleStats(100),
                         Experience = 150

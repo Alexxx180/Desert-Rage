@@ -2137,6 +2137,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DesertRageDecorators">
+      <HintPath>..\..\Customing\DesertRageDecorators\bin\Debug\net5.0-windows\DesertRageDecorators.dll</HintPath>
+    </Reference>
     <Reference Include="DesertRageModel">
       <HintPath>..\..\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.dll</HintPath>
     </Reference>

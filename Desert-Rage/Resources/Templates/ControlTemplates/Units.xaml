@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
-                    xmlns:attach="clr-namespace:DesertRage.Helpers.Attach"
-                    xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle"
+                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
+                    xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <ControlTemplate x:Key="Person" x:Shared="True">
         <Grid x:Name="BattleCharacter" DataContext="{Binding}">

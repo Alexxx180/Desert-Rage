@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using DesertRage.Helpers;
 using DesertRage.ViewModel;
 using DesertRage.Model.Locations;
 using DesertRage.Controls.Scenes;
@@ -72,42 +71,34 @@ namespace DesertRage
         #region Model Members
         internal UserProfile Player { get; set; }
 
-        internal Character Ray = new Character
-        {
-            Level = 1,
-            Place = new Position(18, 34),
+        //internal Character Ray = new Character
+        //{
+        //    Level = 1,
+        //    Place = new Position(18, 34),
 
-            Icon = Paths.Static.Person.Usual,
-            Image = Paths.Static.Person.Usual,
+        //    Hp = new Bar(100),
+        //    Ap = new Bar(40),
 
-            Hp = new Bar(100),
-            Ap = new Bar(40),
+        //    Stats = new BattleStats(25, 15, 15, 25),
 
-            Stats = new BattleStats(25, 15, 15, 25),
+        //    Learned = new BitArray(16),
 
-            Learned = new BitArray(16),
+        //    Gear = new Outfit(0)
+        //};
 
-            Gear = new Outfit(0)
-        };
+        //internal Character Sam = new Character
+        //{
+        //    Level = 1,
 
-        internal Character Sam = new Character
-        {
-            Level = 1,
+        //    Hp = new Bar(100),
+        //    Ap = new Bar(100),
 
-            Icon = Paths.Static.Person.Usual,
-            Image = Paths.Static.Person.Usual,
+        //    Stats = new BattleStats(50),
 
-            Hp = new Bar(100),
-            Ap = new Bar(100),
+        //    Learned = new BitArray(16),
 
-            Stats = new BattleStats(50),
-
-            Learned = new BitArray(16),
-
-            Gear = new Outfit(0)
-        };
-
-        internal Character MainHero { get; set; }
+        //    Gear = new Outfit(0)
+        //};
 
         private void New_game()
         {

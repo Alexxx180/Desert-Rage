@@ -1,4 +1,4 @@
-﻿using DesertRage.Customing.Converters;
+﻿using DesertRage.Model.Helpers;
 
 namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency
 {

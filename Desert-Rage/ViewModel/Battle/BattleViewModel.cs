@@ -6,13 +6,13 @@ using System.Runtime.CompilerServices;
 using System.Windows.Threading;
 using System.Windows.Controls;
 using DesertRage.Controls.Scenes;
-using DesertRage.Customing;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.Battle.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
+using DesertRage.Decorators;
 
 namespace DesertRage.ViewModel.Battle
 {

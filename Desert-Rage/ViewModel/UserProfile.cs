@@ -2,7 +2,7 @@
 using DesertRage.Controls.Menu.Game;
 using DesertRage.Controls.Scenes;
 using DesertRage.Controls.Scenes.Map;
-using DesertRage.Customing.Converters;
+using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;

@@ -3,11 +3,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
-using DesertRage.Customing;
-using DesertRage.Model.Menu;
 using DesertRage.ViewModel;
 using System.Windows.Data;
 using DesertRage.ViewModel.Menu;
+using DesertRage.Decorators.UI.Bindings;
 
 namespace DesertRage.Controls.Menu.Game
 {

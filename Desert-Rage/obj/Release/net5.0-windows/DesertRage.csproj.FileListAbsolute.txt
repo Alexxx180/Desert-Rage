@@ -329,7 +329,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\n
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\ref\Desert Rage.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Desert Rage.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.genruntimeconfig.cache
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameTopics.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\CutScene.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Setting.baml
@@ -490,3 +489,5 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.CoreCompileInputs.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.CopyComplete
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.genruntimeconfig.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\DesertRageDecorators.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\DesertRageDecorators.pdb
