@@ -1,0 +1,240 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>DesertRage.Resources</RootNamespace>
+    <ApplicationIcon>Logo-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Update="Localization\Battle\Battle.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Battle.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Battle\Bosses\Pharaoh.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Pharaoh.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Battle\Bosses\Friend.Designer.cs">
+      <DependentUpon>Friend.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Bosses\TheRuler.Designer.cs">
+      <DependentUpon>TheRuler.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Bosses\UghZan.Designer.cs">
+      <DependentUpon>UghZan.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Character\Ray.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Ray.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Battle\Character\Rock.Designer.cs">
+      <DependentUpon>Rock.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Character\Sam.Designer.cs">
+      <DependentUpon>Sam.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Bones.Designer.cs">
+      <DependentUpon>Bones.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Ghoul.Designer.cs">
+      <DependentUpon>Ghoul.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\GrimReaper.Designer.cs">
+      <DependentUpon>GrimReaper.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Imp.Designer.cs">
+      <DependentUpon>Imp.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\KillerMole.Designer.cs">
+      <DependentUpon>KillerMole.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Master.Designer.cs">
+      <DependentUpon>Master.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Mummy.Designer.cs">
+      <DependentUpon>Mummy.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Scarab.Designer.cs">
+      <DependentUpon>Scarab.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Spider.Designer.cs">
+      <DependentUpon>Spider.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Vulture.Designer.cs">
+      <DependentUpon>Vulture.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Worm.Designer.cs">
+      <DependentUpon>Worm.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Battle\Enemies\Zombie.Designer.cs">
+      <DependentUpon>Zombie.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Localization\Locations\Chests.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Chests.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\MainMenu\MainMenu.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainMenu.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Menu\Items.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Items.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Menu\Skills.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Skills.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Localization\Menu\Topics.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Topics.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Localization\Battle\Battle.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Battle.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Bosses\Pharaoh.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Pharaoh.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Bosses\Friend.resx">
+      <LastGenOutput>Friend.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Bosses\TheRuler.resx">
+      <LastGenOutput>TheRuler.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Bosses\UghZan.resx">
+      <LastGenOutput>UghZan.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Character\Ray.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ray.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Character\Rock.resx">
+      <LastGenOutput>Rock.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Character\Sam.resx">
+      <LastGenOutput>Sam.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Bones.resx">
+      <LastGenOutput>Bones.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Ghoul.resx">
+      <LastGenOutput>Ghoul.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\GrimReaper.resx">
+      <LastGenOutput>GrimReaper.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Imp.resx">
+      <LastGenOutput>Imp.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\KillerMole.resx">
+      <LastGenOutput>KillerMole.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Master.resx">
+      <LastGenOutput>Master.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Mummy.resx">
+      <LastGenOutput>Mummy.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Scarab.resx">
+      <LastGenOutput>Scarab.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Spider.resx">
+      <LastGenOutput>Spider.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Vulture.resx">
+      <LastGenOutput>Vulture.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Worm.resx">
+      <LastGenOutput>Worm.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Battle\Enemies\Zombie.resx">
+      <LastGenOutput>Zombie.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Locations\Chests.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Chests.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\MainMenu\MainMenu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainMenu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Menu\Items.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Items.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Menu\Skills.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Skills.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Menu\Topics.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Topics.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DesertRageResources/1.0.0": {
+        "runtime": {
+          "DesertRageResources.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesertRageResources/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
