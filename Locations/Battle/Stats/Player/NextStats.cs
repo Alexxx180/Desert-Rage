@@ -2,6 +2,8 @@
 {
     public class NextStats
     {
+        public Bar[] Experience { get; set; }
+
         public Bar[] Hp { get; set; }
         public Bar[] Ap { get; set; }
 
