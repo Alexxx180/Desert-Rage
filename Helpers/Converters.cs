@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using DesertRage.Model.Locations;
 
 namespace DesertRage.Model.Helpers
@@ -38,11 +39,6 @@ namespace DesertRage.Model.Helpers
         public static Array ToValues<TEnum>()
         {
             return Enum.GetValues(typeof(TEnum));
-        }
-
-        public static string Tile(this string[] map, Position place)
-        {
-            return map[place.Y][place.X].ToString();
         }
 
         public static Position ToPosition(this string position)

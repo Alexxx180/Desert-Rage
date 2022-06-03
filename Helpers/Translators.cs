@@ -1,4 +1,7 @@
-﻿namespace DesertRage.Model.Helpers
+﻿using DesertRage.Model.Locations;
+using System.Text;
+
+namespace DesertRage.Model.Helpers
 {
     public static class Translators
     {
@@ -12,6 +15,20 @@
             bool status, int multiply)
         {
             return status.Boost(1, multiply);
+        }
+
+        public static char Tile
+            (this StringBuilder[] map,
+            Position place)
+        {
+            return map[place.Y][place.X];
+        }
+
+        public static void SetTile
+            (this StringBuilder[] map,
+            Position place, char setTo)
+        {
+            map[place.Y][place.X] = setTo;
         }
     }
 }

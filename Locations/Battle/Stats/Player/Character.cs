@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using System.Text;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Player
 {
@@ -14,16 +15,16 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             GoingImage = new string[4][];
         }
 
-        public bool Go(in string[] map, int move)
+        public bool Go(in StringBuilder[] map, int move)
         {
-            Position next = Place;
-            next += Step[move];
-
             Pose = move;
+            
             Walk = (Walk + 1) % GoingImage[Pose].Length;
             MapImage = GoingImage[Pose][Walk];
 
-            if (WalkThrough.Contains(map.Tile(next)))
+            Position next = Front;
+            if (WalkThrough.Contains
+                (map.Tile(next).ToString()))
             {
                 Place = next;
             }
@@ -75,6 +76,8 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         #endregion
 
         #region Map Members
+        public Position Front => Place + Step[Pose];
+
         public Position Place { get; set; }
         public Position[] Step { get; set; }
         public int ToBattle { get; set; }

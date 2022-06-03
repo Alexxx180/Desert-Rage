@@ -1,6 +1,7 @@
 ﻿using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
-using DesertRage.Model.Locations.Map;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using System.Collections.Generic;
+using System.Text;
 
 namespace DesertRage.Model.Locations
 {
@@ -8,7 +9,7 @@ namespace DesertRage.Model.Locations
     {
         public string Name { get; set; }
 
-        public string[] Map { get; set; }
+        public StringBuilder[] Map { get; set; }
         public string BackCover { get; set; }
 
         public Position Start { get; set; }
@@ -18,6 +19,9 @@ namespace DesertRage.Model.Locations
         public EnemyBestiary StageBoss { get; set; }
 
         public Dictionary<string, string> TileCodes { get; set; }
-        public Dictionary<string, MapObject> MapItems { get; set; }
+
+        public Dictionary<string, string> Messages { get; set; }
+        public Dictionary<string, Position> Gates { get; set; }
+        public Dictionary<string, Equipment> Equipment { get; set; }
     }
 }
