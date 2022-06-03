@@ -11,7 +11,6 @@
         public Foe(BattleUnit unit) : base(unit)
         {
             Hp = unit.Hp;
-            Turn = unit.Turn;
             Stats = unit.Stats;
             Action = unit.Action;
             Status = unit.Status;

@@ -1,6 +1,7 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Helpers;
 using System.Collections;
+using System.Runtime.Serialization;
 
 namespace DesertRage.Model.Locations.Battle.Stats
 {
@@ -9,7 +10,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
         public BattleUnit()
         {
             Status = new BitArray(Converters.ToValues<StatusID>().Length);
-            Turn = new Bar(0, 1000);
         }
 
         public BattleUnit(DescriptionUnit unit)
@@ -78,7 +78,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
             return new BattleUnit(base.Clone())
             {
                 Hp = Hp,
-                Turn = Turn,
                 Stats = Stats,
                 Action = Action,
                 Status = Status
@@ -86,7 +85,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
         }
 
         public Bar Hp { get; set; }
-        public Bar Turn { get; set; }
 
         public BattleStats Stats { get; set; }
         public string Action { get; set; }

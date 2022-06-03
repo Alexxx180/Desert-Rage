@@ -69,6 +69,8 @@ namespace DesertRage.Model.Locations.Battle.Stats
         public bool IsMax => Current >= Max;
         public bool IsEmpty => Current <= Minimum;
 
+        public bool IsSealed => Minimum == Max;
+
         public ushort Minimum { get; set; }
         public ushort Current { get; set; }
         public ushort Max { get; set; }

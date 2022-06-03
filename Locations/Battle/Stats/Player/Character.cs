@@ -65,7 +65,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
         #region Status Members
         public byte Level { get; set; }
-        public ushort Experience { get; set; }
+        public Bar Experience { get; set; }
 
         public Bar Ap { get; set; }
 
