@@ -2,7 +2,7 @@
 {
     public class Skill : PowerUnit
     {
-        public Skill(float power) : base(power) { }
+        public Skill(byte power) : base(power) { }
         public Skill() : base() { }
 
         public string Noise { get; set; }

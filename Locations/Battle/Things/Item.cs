@@ -4,9 +4,9 @@
     {
         public Item() { }
 
-        public Item(float power) : base(power) { }
+        public Item(byte power) : base(power) { }
 
-        public Item(float power, string meaning) : this(power)
+        public Item(byte power, string meaning) : this(power)
         {
             Description = $"+{ power} {meaning}";
         }
