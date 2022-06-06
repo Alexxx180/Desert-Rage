@@ -20,6 +20,7 @@ using EnemyImages = DesertRage.Resources.Media.Images.Battle.Enemies;
 using BossImages = DesertRage.Resources.Media.Images.Battle.Bosses;
 using System;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Battle.Stats.Player;
 
 namespace DesertRage.ViewModel
 {
@@ -28,6 +29,12 @@ namespace DesertRage.ViewModel
         private static T GetItems<T>(string path)
         {
             return App.Processor.Read<T>(path.ToFull());
+        }
+
+        internal static NextStats GetNextStats(string name)
+        {
+            return GetItems<NextStats>
+                ($"/Resources/Media/Data/Characters/{name}/Next.json");
         }
 
         internal static Equipment[][] GetEqupment()
@@ -616,14 +623,14 @@ namespace DesertRage.ViewModel
             return Environment.CurrentDirectory + path;
         }
 
-        //public static void ForEach<T>(this
-        //    IEnumerable<T> collection,
-        //    in Action<T> method)
-        //{
-        //    foreach (T @object in collection)
-        //    {
-        //        method(@object);
-        //    }
-        //}
+        public static void ForEach<T, TParam>
+            (this IEnumerable<T> collection, in
+            Action<T, TParam> method, TParam parameter)
+        {
+            foreach (T @object in collection)
+            {
+                method(@object, parameter);
+            }
+        }
     }
 }

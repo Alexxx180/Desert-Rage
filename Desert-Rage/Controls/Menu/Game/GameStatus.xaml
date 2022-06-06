@@ -202,46 +202,110 @@
                     <Grid.Column>
                         1
                     </Grid.Column>
-                    
-                    <ContentControl>
-                        <ContentControl.DataContext>
+
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <DynamicResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Player.Hero.SelectedArmor.Attack">
+                                <Binding.Mode>
+                                    TwoWay
+                                </Binding.Mode>
+
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
                             <Binding Path="Player.Equip[0]"/>
-                        </ContentControl.DataContext>
-                        
-                        <ContentControl.Template>
-                            <StaticResource ResourceKey="EquipSelector"/>
-                        </ContentControl.Template>
-                    </ContentControl>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
 
-                    <ContentControl>
-                        <ContentControl.DataContext>
-                            <Binding Path="Player.Equip[1]"/>
-                        </ContentControl.DataContext>
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
 
-                        <ContentControl.Template>
-                            <StaticResource ResourceKey="EquipSelector"/>
-                        </ContentControl.Template>
-                    </ContentControl>
+                        <ComboBox.ItemTemplate>
+                            <DynamicResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
 
-                    <ContentControl>
-                        <ContentControl.DataContext>
-                            <Binding Path="Player.Equip[2]"/>
-                        </ContentControl.DataContext>
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Player.Hero.SelectedArmor.Defence"/>
+                        </ComboBox.SelectedIndex>
 
-                        <ContentControl.Template>
-                            <StaticResource ResourceKey="EquipSelector"/>
-                        </ContentControl.Template>
-                    </ContentControl>
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Player.Equip[1]">
+                                <Binding.Mode>
+                                    TwoWay
+                                </Binding.Mode>
 
-                    <ContentControl>
-                        <ContentControl.DataContext>
-                            <Binding Path="Player.Equip[3]"/>
-                        </ContentControl.DataContext>
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
 
-                        <ContentControl.Template>
-                            <StaticResource ResourceKey="EquipSelector"/>
-                        </ContentControl.Template>
-                    </ContentControl>
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <StaticResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Player.Hero.SelectedArmor.Speed"/>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Player.Equip[2]">
+                                <Binding.Mode>
+                                    TwoWay
+                                </Binding.Mode>
+
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <StaticResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Player.Hero.SelectedArmor.Special"/>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Player.Equip[3]">
+                                <Binding.Mode>
+                                    TwoWay
+                                </Binding.Mode>
+
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
                 </UniformGrid>
             </Grid>
         </Grid>

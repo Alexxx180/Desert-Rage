@@ -80,7 +80,6 @@ namespace DesertRage.ViewModel
                 new ObservableCollection<Equipment>(),
                 new ObservableCollection<Equipment>()
             };
-            //Equip[ArmoryKind.Hands.Int()].Add(Bank.AllWeapons()[Sets.EMPTY]);
         }
 
         public void LoadHeroCommands()
@@ -154,17 +153,41 @@ namespace DesertRage.ViewModel
             }
         }
 
+        public void AddEquipment
+            (ArmoryElement armor,
+            Equipment[][] equipment)
+        {
+            int kind = armor.Kind.Int();
+            Equipment piece = equipment
+                [kind][armor.Set.Int()];
+
+            Equip[kind].Add(piece);
+        }
+
+        private void AddEquipment(ArmoryElement armor)
+        {
+            if (Hero.Equipment.Contains(armor))
+                return;
+
+            Hero.Equipment.Add(armor);
+            OnPropertyChanged(nameof(Hero));
+
+            AddEquipment(armor, Bank.GetEqupment());
+        }
+
         private void PlayerEquipment()
         {
             Equipment[][] equipment = Bank.GetEqupment();
 
-            foreach (ArmoryElement element in Hero.Equipment)
-            {
-                int kind = element.Kind.Int();
-                Equipment[] category = equipment[kind];
-                Equip[kind].Add(category[element.Set.Int()]);
-            }
+            Hero.Equipment.ForEach(AddEquipment, equipment);
+
+            //foreach (ArmoryElement element in Hero.Equipment)
+            //{
+            //    AddEquipment(element, equipment);
+            //}
         }
+
+        
         #endregion
 
         #region Model Members
@@ -222,14 +245,13 @@ namespace DesertRage.ViewModel
 
         private void LevelUp()
         {
-            NextStats stats = App.Processor.Read
-                <NextStats>(Environment.CurrentDirectory +
-                "/Resources/Media/Data/Characters/Ray/Next.json");
+            NextStats stats = Bank.GetNextStats("Ray");
+            byte level = Hero.Level;
 
-            Hero.Hp = stats.Hp[Hero.Level];
-            Hero.Ap = stats.Ap[Hero.Level];
-            Hero.Stats = stats.Stats[Hero.Level];
-            Hero.Experience = stats.Experience[Hero.Level];
+            Hero.Hp = stats.Hp[level];
+            Hero.Ap = stats.Ap[level];
+            Hero.Stats = stats.Stats[level];
+            Hero.Experience = stats.Experience[level];
             Hero.Level++;
         }
 
@@ -279,6 +301,14 @@ namespace DesertRage.ViewModel
             OnPropertyChanged(nameof(Level));
         }
 
+        private ArmoryElement Chest
+            (Position front, char frontTile)
+        {
+            Level.Map.SetTile(front, frontTile);
+            OnPropertyChanged(nameof(Level));
+            return Level.Equipment[front.ToString()];
+        }
+
         public void Interact()
         {
             Position front = Hero.Front;
@@ -286,6 +316,10 @@ namespace DesertRage.ViewModel
             switch (Level.Map.Tile(front))
             {
                 case '$':
+                    ArmoryElement armor = Chest(front, 'E');
+                    AddEquipment(armor);
+                    break;
+                case 'I':
                     break;
                 case 'K':
                     Gates(front, '.', '.');

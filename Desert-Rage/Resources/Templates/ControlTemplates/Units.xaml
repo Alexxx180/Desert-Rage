@@ -539,8 +539,6 @@
             <ComboBox.ItemsSource>
                 <Binding/>
             </ComboBox.ItemsSource>
-
-            <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />-->
         </ComboBox>
     </ControlTemplate>
 </ResourceDictionary>
