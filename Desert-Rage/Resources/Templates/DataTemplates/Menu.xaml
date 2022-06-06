@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
+                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
+                    xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators">
     <DataTemplate x:Key="TopicTemplate">
         <DockPanel>
@@ -15,6 +17,10 @@
                         <Binding.Converter>
                             <converters:UriConverter/>
                         </Binding.Converter>
+
+                        <Binding.ConverterParameter>
+                            <x:Static Member="total:LocationsTotal.Transparent"/>
+                        </Binding.ConverterParameter>
                     </Binding>
                 </attach:SvgBox.Source>
 
@@ -43,6 +49,36 @@
 
             <DockPanel.ToolTip>
                 <Binding Path="Description"/>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="PowerTemplate">
+        <DockPanel x:Name="Status">
+            <DockPanel.Resources>
+                <ToolTip Style="{StaticResource EquipTip}" x:Key="AttributeTip"/>
+            </DockPanel.Resources>
+            
+            <TextBlock>
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.Padding>
+                    10,0,10,0
+                </TextBlock.Padding>
+
+                <TextBlock.Text>
+                    <Binding Path="Name"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <StaticResource ResourceKey="AttributeTip"/>
             </DockPanel.ToolTip>
         </DockPanel>
     </DataTemplate>

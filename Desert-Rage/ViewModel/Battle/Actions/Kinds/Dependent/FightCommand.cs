@@ -14,17 +14,17 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
             UnitCursor = Targeting.ONE;
         }
 
-        public void Use(object parameter)
+        protected int Power => StatUnit.Power.ToInt();
+
+        protected void Damage(in Enemy unit)
+        {
+            unit.Hit(Power);
+        }
+
+        public virtual void Use(object parameter)
         {
             Act();
-
-            Enemy unit = parameter as Enemy;
-            int power = StatUnit.Power.ToInt();
-            unit.Hit(power);
-
-            System.Diagnostics.Trace.WriteLine(power);
-            System.Diagnostics.Trace.WriteLine(unit.Foe.Name);
-            System.Diagnostics.Trace.WriteLine(unit.Foe.Hp.ToString());
+            Damage(parameter as Enemy);
         }
 
         public bool CanUse => ViewModel.IsBattle;

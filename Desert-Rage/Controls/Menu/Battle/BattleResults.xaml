@@ -66,13 +66,13 @@
             <RowDefinition Height="0.005*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="AfterBattleMenuImg" Grid.Column="0" HorizontalAlignment="Left"  Grid.RowSpan="26" Grid.Row="0" VerticalAlignment="Top" Source="/Resources/Images/Menu/Kinds/LevelUpMenu.jpg" Stretch="Fill" Panel.ZIndex="6" Visibility="Visible" Grid.ColumnSpan="27"/>
+        <Image x:Name="AfterBattleMenuImg" Grid.Column="0" HorizontalAlignment="Left"  Grid.RowSpan="26" Grid.Row="0" VerticalAlignment="Top" Source="/Resources/Media/Images/Menu/Kinds/LevelUpMenu.jpg" Stretch="Fill" Panel.ZIndex="6" Visibility="Visible" Grid.ColumnSpan="27"/>
 
         <Viewbox Grid.Row="5" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="6" Panel.ZIndex="11">
             <Label x:Name="AfterLevel" Content="{Binding Path=GetLV, Converter={StaticResource LeftTextConverter}, ConverterParameter='Уровень '}" Grid.Column="1" HorizontalAlignment="Center"  Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="6" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Visibility="Visible"/>
         </Viewbox>
 
-        <Image x:Name="AfterIcon" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center"  Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Center" Panel.ZIndex="6" Source="/Resources/Images/Fight/Character/Icon/Static/Usual.png" Stretch="Uniform" Visibility="Visible"/>
+        <Image x:Name="AfterIcon" Grid.ColumnSpan="6" Grid.Column="1" HorizontalAlignment="Center"  Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Center" Panel.ZIndex="6" Source="/Resources/Media/Images/Battle/Character/Icon/Static/Usual.png" Stretch="Uniform" Visibility="Visible"/>
 
         <Viewbox Grid.Row="2" Grid.Column="8" Grid.RowSpan="1" Grid.ColumnSpan="4" Panel.ZIndex="11">
             <Label x:Name="AfterName" Content="Имя: Рэй" Grid.Column="8" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Center" FontSize="48" FontFamily="Franklin Gothic Demi" Grid.RowSpan="3" Grid.ColumnSpan="4" Panel.ZIndex="7" Visibility="Visible"/>
@@ -165,10 +165,10 @@
             <Label x:Name="BeforeSpecial" Content="СПЦ" Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="21" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontFamily="Franklin Gothic Demi" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <Image x:Name="BeforeAttackImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="18" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeDefenceImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="19" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
-        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="21" VerticalAlignment="Center"  Source="/Resources/Images/Menu/Status/Stats/SP2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
+        <Image x:Name="BeforeAttackImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="18" VerticalAlignment="Center"  Source="/Resources/Media/Images/menu/stats/ATK2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeDefenceImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="19" VerticalAlignment="Center"  Source="/Resources/Media/Images/menu/stats/DEF2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="20" VerticalAlignment="Center"  Source="/Resources/Media/Images/menu/stats/AG2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible"/>
+        <Image x:Name="BeforeSpecialImg" Grid.ColumnSpan="2" Grid.Column="4" HorizontalAlignment="Left"  Grid.Row="21" VerticalAlignment="Center"  Source="/Resources/Media/Images/menu/stats/SP2.png" Panel.ZIndex="7" Stretch="Fill" Visibility="Visible" Grid.RowSpan="2"/>
 
         <Viewbox Grid.Row="18" Grid.Column="7" Grid.ColumnSpan="2" Panel.ZIndex="11">
             <Label x:Name="BeforeATK" Content="{Binding Path=GetATK}" Grid.Column="7" HorizontalAlignment="Right"  Grid.Row="18" VerticalAlignment="Top"  Grid.ColumnSpan="2" FontFamily="Cooper Black" FontSize="36" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
@@ -217,21 +217,21 @@
             <Border Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Background="Aqua" />
             <Border Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Background="Aqua" />
 
-            <Image Grid.Row="0" Source="/Resources/Images/Menu/Skills/CureMenu.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=2}"/>
-            <Image Grid.Row="1" Source="/Resources/Images/Menu/Skills/TorchImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=3}" />
-            <Image Grid.Row="2" Source="/Resources/Images/Menu/Skills/HealMenu.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=4}" />
-            <Image Grid.Row="3" Source="/Resources/Images/Menu/Skills/Learn.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=5}"  />
-            <Image Grid.Row="4" Source="/Resources/Images/Menu/Skills/WhipImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=6}"  />
-            <Image Grid.Row="5" Source="/Resources/Images/Menu/Skills/SuperImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=7}" />
-            <Image Grid.Row="6" Source="/Resources/Images/Menu/Skills/Thrower.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=11}" />
+            <Image Grid.Row="0" Source="/Resources/Media/Images/Menu/Skills/CureMenu.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=2}"/>
+            <Image Grid.Row="1" Source="/Resources/Media/Images/Menu/Skills/TorchImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=3}" />
+            <Image Grid.Row="2" Source="/Resources/Media/Images/Menu/Skills/HealMenu.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=4}" />
+            <Image Grid.Row="3" Source="/Resources/Media/Images/Menu/Skills/Learn.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=5}"  />
+            <Image Grid.Row="4" Source="/Resources/Media/Images/Menu/Skills/WhipImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=6}"  />
+            <Image Grid.Row="5" Source="/Resources/Media/Images/Menu/Skills/SuperImg.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=7}" />
+            <Image Grid.Row="6" Source="/Resources/Media/Images/Menu/Skills/Thrower.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=11}" />
 
-            <Image Grid.Column="2" Source="/Resources/Images/Menu/Skills/Tornado.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=13}" />
-            <Image Grid.Row="1" Grid.Column="2" Source="/Resources/Images/Menu/Skills/StrengthUP.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=16}" />
-            <Image Grid.Row="2" Grid.Column="2" Source="/Resources/Images/Menu/Skills/DefenceUP.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=14}" />
-            <Image Grid.Row="3" Grid.Column="2" Source="/Resources/Images/Menu/Skills/Quake.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=18}" />
-            <Image Grid.Row="4" Grid.Column="2" Source="/Resources/Images/Menu/Skills/Cure2.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=21}" />
-            <Image Grid.Row="5" Grid.Column="2" Source="/Resources/Images/Menu/Skills/Regen.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=20}" />
-            <Image Grid.Row="6" Grid.Column="2" Source="/Resources/Images/Menu/Skills/Control.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=25}" />
+            <Image Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/Tornado.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=13}" />
+            <Image Grid.Row="1" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/StrengthUP.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=16}" />
+            <Image Grid.Row="2" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/DefenceUP.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=14}" />
+            <Image Grid.Row="3" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/Quake.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=18}" />
+            <Image Grid.Row="4" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/Cure2.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=21}" />
+            <Image Grid.Row="5" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/Regen.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=20}" />
+            <Image Grid.Row="6" Grid.Column="2" Source="/Resources/Media/Images/Menu/Skills/Control.png" Stretch="Fill" Visibility="{Binding Path=GetLV, Converter={StaticResource VisibilityConverter}, ConverterParameter=25}" />
 
             <Viewbox HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
                 <Label FontFamily="Cooper Black" Content="Ур. 2"></Label>
@@ -292,7 +292,7 @@
             <Label x:Name="MaterialsOnHand" Content="{Binding Path=GetMaterials}" Grid.Column="23" HorizontalAlignment="Left"  Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="1" FontSize="36" FontFamily="Cooper Black" Panel.ZIndex="7" Foreground="White" Visibility="Visible"/>
         </Viewbox>
 
-        <Image x:Name="MaterialsGetImg" Grid.ColumnSpan="1" Grid.Column="22" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Stretch" Source="/Resources/Images/Menu/Bag/Materials.png" Panel.ZIndex="7" Grid.RowSpan="1" Visibility="Visible" Stretch="Fill"/>
+        <Image x:Name="MaterialsGetImg" Grid.ColumnSpan="1" Grid.Column="22" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Stretch" Source="/Resources/Media/Images/Menu/Bag/Materials.png" Panel.ZIndex="7" Grid.RowSpan="1" Visibility="Visible" Stretch="Fill"/>
 
         <Viewbox Grid.Row="7" Grid.Column="22" Grid.RowSpan="1" Grid.ColumnSpan="3" Panel.ZIndex="11" HorizontalAlignment="Left">
             <Label x:Name="ItemsGet" Content="Предметы" Grid.Column="22" HorizontalAlignment="Left"  Grid.Row="7" VerticalAlignment="Top" Grid.RowSpan="1" Grid.ColumnSpan="3" FontSize="36" FontFamily="Franklin Gothic Demi" Panel.ZIndex="7" Visibility="Visible"/>
@@ -303,7 +303,7 @@
         </Viewbox>
 
         <Button x:Name="TextOk1" Grid.ColumnSpan="5" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="8" FontSize="36" Click="TextOk1_Click" Visibility="Visible" IsEnabled="False" Grid.RowSpan="3" Grid.Row="22" Grid.Column="21">
-            <Image x:Name="BackToAdventureImg" Source="/Resources/Images/Fight/Options/BackToAdventure2.png" Stretch="Fill"/>
+            <Image x:Name="BackToAdventureImg" Source="/Resources/Media/Images/Battle/Options/BackToAdventure2.png" Stretch="Fill"/>
         </Button>
     </Grid>-->
 </UserControl>

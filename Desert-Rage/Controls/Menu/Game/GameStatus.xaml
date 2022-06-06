@@ -6,6 +6,7 @@
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
+             xmlns:armory="clr-namespace:DesertRage.Model.Locations.Battle.Stats.Player.Armory;assembly=DesertRageModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="GStatus">
@@ -112,66 +113,63 @@
                         <ColumnDefinition Width="0.2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+                    <UniformGrid Rows="4" Columns="1">
+                        <status:IconStat>
+                            <status:IconStat.Icon>
+                                /Resources/Media/Images/menu/stats/Attack.svg
+                            </status:IconStat.Icon>
 
-                        <svgc:SvgViewbox>
-                            <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Attack.svg
-                            </attach:SvgBox.Source>
+                            <status:IconStat.Stat>
+                                <Binding ElementName="GStatus">
+                                    <Binding.Path>
+                                        DataContext.Player.Hero.Stats.Attack
+                                    </Binding.Path>
+                                </Binding>
+                            </status:IconStat.Stat>
+                        </status:IconStat>
 
-                            <attach:SvgBox.Stretch>
-                                Fill
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                        <status:IconStat>
+                            <status:IconStat.Icon>
+                                /Resources/Media/Images/menu/stats/Defence.svg
+                            </status:IconStat.Icon>
 
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-                            
-                            <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Defence.svg
-                            </attach:SvgBox.Source>
+                            <status:IconStat.Stat>
+                                <Binding ElementName="GStatus">
+                                    <Binding.Path>
+                                        DataContext.Player.Hero.Stats.Defence
+                                    </Binding.Path>
+                                </Binding>
+                            </status:IconStat.Stat>
+                        </status:IconStat>
 
-                            <attach:SvgBox.Stretch>
-                                Fill
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                        <status:IconStat>
+                            <status:IconStat.Icon>
+                                /Resources/Media/Images/menu/stats/Speed.svg
+                            </status:IconStat.Icon>
 
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                2
-                            </Grid.Row>
+                            <status:IconStat.Stat>
+                                <Binding ElementName="GStatus">
+                                    <Binding.Path>
+                                        DataContext.Player.Hero.Stats.Speed
+                                    </Binding.Path>
+                                </Binding>
+                            </status:IconStat.Stat>
+                        </status:IconStat>
 
-                            <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Speed.svg
-                            </attach:SvgBox.Source>
+                        <status:IconStat>
+                            <status:IconStat.Icon>
+                                /Resources/Media/Images/menu/stats/Special.svg
+                            </status:IconStat.Icon>
 
-                            <attach:SvgBox.Stretch>
-                                Fill
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
-
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                3
-                            </Grid.Row>
-
-                            <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Special.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Fill
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
-                    </Grid>
+                            <status:IconStat.Stat>
+                                <Binding ElementName="GStatus">
+                                    <Binding.Path>
+                                        DataContext.Player.Hero.Stats.Special
+                                    </Binding.Path>
+                                </Binding>
+                            </status:IconStat.Stat>
+                        </status:IconStat>
+                    </UniformGrid>
 
                     <ProgressBar>
                         <Grid.Column>
@@ -179,11 +177,11 @@
                         </Grid.Column>
 
                         <ProgressBar.Value>
-                            100
+                            <Binding Path="Player.Hero.Experience.Current"/>
                         </ProgressBar.Value>
 
                         <ProgressBar.Maximum>
-                            100
+                            <Binding Path="Player.Hero.Experience.Max"/>
                         </ProgressBar.Maximum>
 
                         <ProgressBar.Orientation>
@@ -200,38 +198,51 @@
                     </ProgressBar>
                 </Grid>
 
-                <Grid>
+                <UniformGrid Rows="4" Columns="1">
                     <Grid.Column>
                         1
                     </Grid.Column>
+                    
+                    <ContentControl>
+                        <ContentControl.DataContext>
+                            <Binding Path="Player.Equip[0]"/>
+                        </ContentControl.DataContext>
+                        
+                        <ContentControl.Template>
+                            <StaticResource ResourceKey="EquipSelector"/>
+                        </ContentControl.Template>
+                    </ContentControl>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                    <ContentControl>
+                        <ContentControl.DataContext>
+                            <Binding Path="Player.Equip[1]"/>
+                        </ContentControl.DataContext>
 
-                    <ComboBox Style="{StaticResource StretchFont}"/>
+                        <ContentControl.Template>
+                            <StaticResource ResourceKey="EquipSelector"/>
+                        </ContentControl.Template>
+                    </ContentControl>
 
-                    <ComboBox Style="{StaticResource StretchFont}">
-                        <Grid.Row>
-                            1
-                        </Grid.Row>
-                    </ComboBox>
+                    <ContentControl>
+                        <ContentControl.DataContext>
+                            <Binding Path="Player.Equip[2]"/>
+                        </ContentControl.DataContext>
 
-                    <ComboBox Style="{StaticResource StretchFont}">
-                        <Grid.Row>
-                            2
-                        </Grid.Row>
-                    </ComboBox>
+                        <ContentControl.Template>
+                            <StaticResource ResourceKey="EquipSelector"/>
+                        </ContentControl.Template>
+                    </ContentControl>
 
-                    <ComboBox Style="{StaticResource StretchFont}">
-                        <Grid.Row>
-                            3
-                        </Grid.Row>
-                    </ComboBox>
-                </Grid>
+                    <ContentControl>
+                        <ContentControl.DataContext>
+                            <Binding Path="Player.Equip[3]"/>
+                        </ContentControl.DataContext>
+
+                        <ContentControl.Template>
+                            <StaticResource ResourceKey="EquipSelector"/>
+                        </ContentControl.Template>
+                    </ContentControl>
+                </UniformGrid>
             </Grid>
         </Grid>
     </Grid>

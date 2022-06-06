@@ -2,7 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators">
+                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
     <DataTemplate x:Key="FoeTemplate">
         <Grid>
             <Grid.Resources>
@@ -86,6 +87,10 @@
                             <Binding.Converter>
                                 <converters:UriConverter/>
                             </Binding.Converter>
+
+                            <Binding.ConverterParameter>
+                                <x:Static Member="total:LocationsTotal.Transparent"/>
+                            </Binding.ConverterParameter>
                         </Binding>
                     </attach:SvgBox.Source>
 

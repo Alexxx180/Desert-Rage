@@ -84,7 +84,7 @@
             </Grid.ColumnSpan>
 
             <attach:SvgBox.Source>
-                /Resources/Images/Fight/Background/AncientTemple.svg
+                /Resources/Media/Images/battle/background/AncientTemple.svg
             </attach:SvgBox.Source>
 
             <attach:SvgBox.Stretch>
@@ -176,15 +176,15 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <Label DataContext="{Binding Path=BattleModel.Human}" Padding="0">
+                <ContentControl DataContext="{Binding Path=BattleModel.Human}" Padding="0">
                     <Grid.Column>
                         1
                     </Grid.Column>
 
-                    <Label.Template>
+                    <ContentControl.Template>
                         <DynamicResource ResourceKey="Person"/>
-                    </Label.Template>
-                </Label>
+                    </ContentControl.Template>
+                </ContentControl>
             </Grid>
         </Grid>
 

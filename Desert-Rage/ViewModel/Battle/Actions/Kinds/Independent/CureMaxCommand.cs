@@ -16,7 +16,6 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Independent
             Act();
             Hero.Cure();
             User.UpdateHero();
-            CheckStatus("MAXED");
         }
 
         public virtual bool CanUse => true;

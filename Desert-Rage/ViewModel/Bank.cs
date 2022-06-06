@@ -5,21 +5,38 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
-using DesertRage.Resources.OST.Noises.Actions;
-using DesertRage.Resources.OST.Noises.Actions.Items;
+using DesertRage.Resources.Media.OST.Noises.Actions;
+using DesertRage.Resources.Media.OST.Noises.Actions.Items;
 using DesertRage.ViewModel.Battle.Actions;
 using DesertRage.ViewModel.Battle.Actions.Kinds;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
-using DesertRage.Resources.OST.Sounds.Defeat.Enemies;
-using DesertRage.Resources.OST.Sounds.Defeat.Bosses;
+using DesertRage.Resources.Media.OST.Sounds.Defeat.Enemies;
+using DesertRage.Resources.Media.OST.Sounds.Defeat.Bosses;
+using DesertRage.Resources.Media.Images.Menu.Skills;
+using DesertRage.Resources.Media.Images.Menu.Items;
+using EnemyImages = DesertRage.Resources.Media.Images.Battle.Enemies;
+using BossImages = DesertRage.Resources.Media.Images.Battle.Bosses;
+using System;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 
 namespace DesertRage.ViewModel
 {
-    internal class Bank
+    internal static class Bank
     {
-        internal static Dictionary<SkillsID, ConsumeCommand> Skills()
+        private static T GetItems<T>(string path)
+        {
+            return App.Processor.Read<T>(path.ToFull());
+        }
+
+        internal static Equipment[][] GetEqupment()
+        {
+            return GetItems<Equipment[][]>
+                ("/Resources/Media/Data/Items/Equipment.json");
+        }
+
+        internal static Dictionary<SkillsID, ConsumeCommand> AllSkills()
         {
             return new Dictionary<SkillsID, ConsumeCommand>
             {
@@ -32,7 +49,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Лечение",
                                 Description = "+ ОЗ",
-                                Icon = "/Resources/Images/Menu/Skills/Cure.svg",
+                                Icon = Skills.Cure,
                                 Noise = ActionNoises.Cure
                             }
                         ),
@@ -48,7 +65,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Лечение 2",
                                 Description = "100% ОЗ",
-                                Icon = "/Resources/Images/Menu/Skills/Cure2.svg",
+                                Icon = Skills.Cure2,
                                 Noise = ActionNoises.Cure2
                             }
                         ),
@@ -65,7 +82,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Антидот",
                                 Description = "- Яд",
-                                Icon = "/Resources/Images/Menu/Skills/Heal.svg",
+                                Icon = Skills.Heal,
                                 Noise = ActionNoises.Heal
                             }
                         ),
@@ -83,7 +100,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Усиление",
                                 Description = "Сконцентрировать всю силу",
-                                Icon = "/Resources/Images/Menu/Skills/AttackUp.svg",
+                                Icon = Skills.AttackUp,
                                 Noise = ActionNoises.PowerBoost
                             }
                         ),
@@ -100,7 +117,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Охрана",
                                 Description = "Повысить бдительность",
-                                Icon = "/Resources/Images/Menu/Skills/DefenceUp.svg",
+                                Icon = Skills.DefenceUp,
                                 Noise = ActionNoises.DefenceBoost
                             }
                         ),
@@ -117,7 +134,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Анализ",
                                 Description = "Изучить врага как следует",
-                                Icon = "/Resources/Images/Menu/Skills/Analyze.svg",
+                                Icon = Skills.Analyze,
                                 Noise = ActionNoises.Scan
                             }
                         ),
@@ -134,7 +151,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Факел",
                                 Description = "Хорошо поджигает",
-                                Icon = "/Resources/Images/Menu/Skills/Torch.svg",
+                                Icon = Skills.Torch,
                                 Noise = ActionNoises.Torch
                             }
                         ),
@@ -151,7 +168,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Кнут",
                                 Description = "Дробит кости",
-                                Icon = "/Resources/Images/Menu/Skills/Whip.svg",
+                                Icon = Skills.Whip,
                                 Noise = ActionNoises.Whip
                             }
                         ),
@@ -168,7 +185,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Рогатка",
                                 Description = "От нее не скрыться",
-                                Icon = "/Resources/Images/Menu/Skills/Slingshot.svg",
+                                Icon = Skills.Slingshot,
                                 Noise = ActionNoises.Sling
                             }
                         ),
@@ -185,7 +202,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Комбо",
                                 Description = "Град ударов по врагам",
-                                Icon = "/Resources/Images/Menu/Skills/Combo.svg",
+                                Icon = Skills.Combo,
                                 Noise = ActionNoises.Combo
                             }
                         ),
@@ -202,7 +219,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Буря",
                                 Description = "Неистовый порыв ветра",
-                                Icon = "/Resources/Images/Menu/Skills/Storm.svg",
+                                Icon = Skills.Storm,
                                 Noise = ActionNoises.Wind
                             }
                         ),
@@ -219,7 +236,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Обвал",
                                 Description = "Усыпать противников камнями",
-                                Icon = "/Resources/Images/Menu/Skills/Slide.svg",
+                                Icon = Skills.Slide,
                                 Noise = ActionNoises.Quake
                             }
                         ),
@@ -229,7 +246,7 @@ namespace DesertRage.ViewModel
             };
         }
 
-        internal static List<ConsumeCommand> Items()
+        internal static List<ConsumeCommand> AllItems()
         {
             return new List<ConsumeCommand>()
             {
@@ -239,7 +256,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit(50, "ОЗ")
                         {
                             Name = "Бинт",
-                            Icon = "/Resources/Images/Menu/Bag/Bandage.svg",
+                            Icon = Items.Bandage,
                             Noise = ActionNoises.Cure
                         }
                     ),
@@ -253,7 +270,7 @@ namespace DesertRage.ViewModel
                         {
                             Name = "Антидот",
                             Description = "- Яд",
-                            Icon = "/Resources/Images/Menu/Bag/Antidote.svg",
+                            Icon = Items.Antidote,
                             Noise = ActionNoises.Heal
                         }
                     ),
@@ -266,7 +283,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit(50, "ОД")
                         {
                             Name = "Эфир",
-                            Icon = "/Resources/Images/Menu/Bag/Ether.svg",
+                            Icon = Items.Ether,
                             Noise = ActionNoises.Control
                         }
                     ),
@@ -279,7 +296,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit(80, "ОЗ-ОД")
                         {
                             Name = "Смесь",
-                            Icon = "/Resources/Images/Menu/Bag/Mixture.svg",
+                            Icon = Items.Mixture,
                             Noise = ItemNoises.Mixture
                         }
                     ),
@@ -292,7 +309,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit(350, "ОЗ")
                         {
                             Name = "Травы",
-                            Icon = "/Resources/Images/Menu/Bag/Herbs.svg",
+                            Icon = Items.Herbs,
                             Noise = ActionNoises.Cure
                         }
                     ),
@@ -305,7 +322,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit(300, "ОД")
                         {
                             Name = "Бутыль эфира",
-                            Icon = "/Resources/Images/Menu/Bag/EtherBottle.svg",
+                            Icon = Items.EtherBottle,
                             Noise = ActionNoises.Control
                         }
                     ),
@@ -317,7 +334,7 @@ namespace DesertRage.ViewModel
                         new NoiseUnit("100% ОЗ-ОД")
                         {
                             Name = "Эликсир",
-                            Icon = "/Resources/Images/Menu/Bag/Elixir.svg",
+                            Icon = Items.Elixir,
                             Noise = ItemNoises.Mixture
                         }
                     ),
@@ -335,9 +352,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Паук",
-                        Icon = "/Resources/Images/Fight/Enemies/Spider/Idle.svg",
+                        Icon = EnemyImages.Spider.Idle,
                         Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
-                        Action = "/Resources/Images/Fight/Enemies/Spider/Action.svg",
+                        Action = EnemyImages.Spider.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Spider,
                         Stats = new BattleStats(25, 3, 10, 0),
@@ -351,9 +368,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Мумия",
-                        Icon = "/Resources/Images/Fight/Enemies/Mummy/Idle.svg",
+                        Icon = EnemyImages.Mummy.Idle,
                         Description = "Непохоже, что кто-то рассказал этому бедолаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
-                        Action = "/Resources/Images/Fight/Enemies/Mummy/Action.svg",
+                        Action = EnemyImages.Mummy.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Mummy,
                         Hp = new Bar(83),
@@ -367,9 +384,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Зомби",
-                        Icon = "/Resources/Images/Fight/Enemies/Zombie/Idle.svg",
+                        Icon = EnemyImages.Zombie.Idle,
                         Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
-                        Action = "/Resources/Images/Fight/Enemies/Zombie/Action.svg",
+                        Action = EnemyImages.Zombie.Action,
                         Size = new Position(2, 1),
                         Death = EnemyDefeat.Zombie,
                         Hp = new Bar(83),
@@ -383,9 +400,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Страж",
-                        Icon = "/Resources/Images/Fight/Enemies/Bones/Idle.svg",
+                        Icon = EnemyImages.Bones.Idle,
                         Description = "Он не кажется таким уж безобидным. Спустя такой стаж охраны у него будет к вам серьезный разговор.",
-                        Action = "/Resources/Images/Fight/Enemies/Bones/Action.svg",
+                        Action = EnemyImages.Bones.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Bones,
                         Hp = new Bar(125),
@@ -399,9 +416,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Стервятник",
-                        Icon = "/Resources/Images/Fight/Enemies/Vulture/Idle.svg",
+                        Icon = EnemyImages.Vulture.Idle,
                         Description = "Это птица? Это винтокрыл? Нет, это ручной гусь Гоша, которого хозяева снова оставили голодным одного.",
-                        Action = "/Resources/Images/Fight/Enemies/Vulture/Action.svg",
+                        Action = EnemyImages.Vulture.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Vulture,
                         Hp = new Bar(250),
@@ -415,9 +432,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Гуль",
-                        Icon = "/Resources/Images/Fight/Enemies/Ghoul/Idle.svg",
+                        Icon = EnemyImages.Ghoul.Idle,
                         Description = "Страшный тип. На глаза к такому лучше точно не попадаться.",
-                        Action = "/Resources/Images/Fight/Enemies/Ghoul/Action.svg",
+                        Action = EnemyImages.Ghoul.Action,
                         Size = new Position(1, 2),
                         Death = EnemyDefeat.Ghoul,
                         Hp = new Bar(306),
@@ -431,9 +448,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Жнец",
-                        Icon = "/Resources/Images/Fight/Enemies/GrimReaper/Idle.svg",
+                        Icon = EnemyImages.GrimReaper.Idle,
                         Description = "У него хорошая коса за плечами, вот только не видно ни одного поля с пшеницей посреди пустыни...",
-                        Action = "/Resources/Images/Fight/Enemies/GrimReaper/Action.svg",
+                        Action = EnemyImages.GrimReaper.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.GrimReaper,
                         Hp = new Bar(272),
@@ -447,9 +464,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Скарабей",
-                        Icon = "/Resources/Images/Fight/Enemies/Scarab/Idle.svg",
+                        Icon = EnemyImages.Scarab.Idle,
                         Description = "Этот скарабей решил подняться, выполняя работенку посложнее своих жучьих обязанностей.",
-                        Action = "/Resources/Images/Fight/Enemies/Scarab/Action.svg",
+                        Action = EnemyImages.Scarab.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Scarab,
                         Hp = new Bar(100),
@@ -463,9 +480,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Моль-убийца",
-                        Icon = "/Resources/Images/Fight/Enemies/KillerMole/Idle.svg",
+                        Icon = EnemyImages.KillerMole.Idle,
                         Description = "Такую прелесть точно не захочется найти в своем шкафу.",
-                        Action = "/Resources/Images/Fight/Enemies/KillerMole/Action.svg",
+                        Action = EnemyImages.KillerMole.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.KillerMole,
                         Hp = new Bar(400),
@@ -479,9 +496,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Прислужник",
-                        Icon = "/Resources/Images/Fight/Enemies/Imp/Idle.svg",
+                        Icon = EnemyImages.Imp.Idle,
                         Description = "Коварный, безжалостный, этот бес явно не хочет не званых гостей.",
-                        Action = "/Resources/Images/Fight/Enemies/Imp/Action.svg",
+                        Action = EnemyImages.Imp.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Imp,
                         Hp = new Bar(600),
@@ -495,9 +512,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Песчаный червь",
-                        Icon = "/Resources/Images/Fight/Enemies/Worm/Idle.svg",
+                        Icon = EnemyImages.Worm.Idle,
                         Description = "Этот пожиратель настолько огромный, что торчит только его хвост. Самое время малость его укоротить...",
-                        Action = "/Resources/Images/Fight/Enemies/Worm/Action.svg",
+                        Action = EnemyImages.Worm.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Worm,
                         Hp = new Bar(950),
@@ -511,9 +528,9 @@ namespace DesertRage.ViewModel
                     new Foe
                     {
                         Name = "Мастер",
-                        Icon = "/Resources/Images/Fight/Enemies/Master/Idle.svg",
+                        Icon = EnemyImages.Master.Idle,
                         Description = "Знатока своего дела видно сразу. Но, к сожалению, сговорчивостью он точно не выделяется.",
-                        Action = "/Resources/Images/Fight/Enemies/Master/Action.svg",
+                        Action = EnemyImages.Master.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Master,
                         Hp = new Bar(760),
@@ -533,9 +550,9 @@ namespace DesertRage.ViewModel
                     new Boss
                     {
                         Name = "Фараон",
-                        Icon = "/Resources/Images/Fight/Bosses/Pharaoh/Idle.svg",
+                        Icon = BossImages.Pharaoh.Idle,
                         Description = "Страшно представить, что станет с тем, кто лежал замурованным так долго...",
-                        Action = "/Resources/Images/Fight/Bosses/Pharaoh/Action.svg",
+                        Action = BossImages.Pharaoh.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.Pharaoh,
                         Hp = new Bar(500),
@@ -549,9 +566,9 @@ namespace DesertRage.ViewModel
                     new Boss
                     {
                         Name = "Рок",
-                        Icon = "/Resources/Images/Fight/Bosses/Rock/Idle.svg",
+                        Icon = BossImages.Friend.Idle,
                         Description = "Сразу видно: человек не пропускал физкультуру.",
-                        Action = "/Resources/Images/Fight/Bosses/Rock/Action.svg",
+                        Action = BossImages.Friend.Action,
                         Size = new Position(1, 2),
                         Death = BossesDefeat.Friend,
                         Hp = new Bar(2000),
@@ -565,9 +582,9 @@ namespace DesertRage.ViewModel
                     new Boss
                     {
                         Name = "Владыка",
-                        Icon = "/Resources/Images/Fight/Bosses/TheRuler/Idle.svg",
+                        Icon = BossImages.TheRuler.Idle,
                         Description = "Кто-то не выспался =). Где артефакты, Билли?",
-                        Action = "/Resources/Images/Fight/Bosses/TheRuler/Action.svg",
+                        Action = BossImages.TheRuler.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.TheRuler,
                         Hp = new Bar(10000),
@@ -581,9 +598,9 @@ namespace DesertRage.ViewModel
                     new Boss
                     {
                         Name = "Угх-Зан I",
-                        Icon = "/Resources/Images/Fight/Bosses/UghZan/Idle.svg",
+                        Icon = BossImages.UghZan.Idle,
                         Description = "Так-так-так, кто тут у нас?",
-                        Action = "/Resources/Images/Fight/Bosses/UghZan/Action.svg",
+                        Action = BossImages.UghZan.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.UghZan,
                         Hp = new Bar(350),
@@ -593,5 +610,20 @@ namespace DesertRage.ViewModel
                 }
             };
         }
+
+        public static string ToFull(this string path)
+        {
+            return Environment.CurrentDirectory + path;
+        }
+
+        //public static void ForEach<T>(this
+        //    IEnumerable<T> collection,
+        //    in Action<T> method)
+        //{
+        //    foreach (T @object in collection)
+        //    {
+        //        method(@object);
+        //    }
+        //}
     }
 }

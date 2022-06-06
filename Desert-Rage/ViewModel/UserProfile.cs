@@ -1,6 +1,10 @@
-﻿using DesertRage.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using DesertRage.Controls;
 using DesertRage.Controls.Menu.Game;
-using DesertRage.Controls.Scenes;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
@@ -8,30 +12,16 @@ using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things.Logic;
-using DesertRage.Resources.OST.Noises.Info;
+using DesertRage.Resources.Media.OST.Noises.Info;
 using DesertRage.ViewModel.Battle;
 using DesertRage.ViewModel.Battle.Actions;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using DesertRage.Model;
+using System.IO;
 
 namespace DesertRage.ViewModel
 {
     public class UserProfile : INotifyPropertyChanged
     {
-        private BattleViewModel _battle;
-        public BattleViewModel Battle
-        {
-            get => _battle;
-            set
-            {
-                _battle = value;
-                OnPropertyChanged();
-            }
-        }
-
         #region UI Members
         public GameMenu Menu { get; set; }
 
@@ -56,11 +46,22 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
             }
         }
-        #endregion
 
         internal void SetSoundPlayer(SoundGroup sounds)
         {
             SoundPlayer = sounds;
+        }
+        #endregion
+
+        private BattleViewModel _battle;
+        public BattleViewModel Battle
+        {
+            get => _battle;
+            set
+            {
+                _battle = value;
+                OnPropertyChanged();
+            }
         }
 
         public UserProfile()
@@ -70,6 +71,16 @@ namespace DesertRage.ViewModel
             Menu = new GameMenu(this);
             Location = new LevelMap(this);
             Battle = new BattleViewModel(this);
+
+            Equip = new ObservableCollection
+                <ObservableCollection<Equipment>>
+            {
+                new ObservableCollection<Equipment>(),
+                new ObservableCollection<Equipment>(),
+                new ObservableCollection<Equipment>(),
+                new ObservableCollection<Equipment>()
+            };
+            //Equip[ArmoryKind.Hands.Int()].Add(Bank.AllWeapons()[Sets.EMPTY]);
         }
 
         public void LoadHeroCommands()
@@ -124,7 +135,7 @@ namespace DesertRage.ViewModel
         private void AddSkills()
         {
             List<SkillsID> keys = Hero.Skills;
-            Dictionary<SkillsID, ConsumeCommand> skills = Bank.Skills();
+            Dictionary<SkillsID, ConsumeCommand> skills = Bank.AllSkills();
 
             for (byte i = 0; i < keys.Count; i++)
             {
@@ -135,11 +146,23 @@ namespace DesertRage.ViewModel
 
         private void AddItems()
         {
-            List<ConsumeCommand> items = Bank.Items();
+            List<ConsumeCommand> items = Bank.AllItems();
 
             for (byte i = 0; i < items.Count; i++)
             {
                 AddItem(items[i]);
+            }
+        }
+
+        private void PlayerEquipment()
+        {
+            Equipment[][] equipment = Bank.GetEqupment();
+
+            foreach (ArmoryElement element in Hero.Equipment)
+            {
+                int kind = element.Kind.Int();
+                Equipment[] category = equipment[kind];
+                Equip[kind].Add(category[element.Set.Int()]);
             }
         }
         #endregion
@@ -155,6 +178,7 @@ namespace DesertRage.ViewModel
             {
                 _level = value;
                 OnPropertyChanged();
+                Battle.SetFoes();
             }
         }
 
@@ -166,18 +190,67 @@ namespace DesertRage.ViewModel
             {
                 _hero = value;
                 OnPropertyChanged();
+                PlayerEquipment();
             }
         }
 
         public Settings Preferences { get; set; }
+
+        public void AddExperience(int experience)
+        {
+            if (Hero.Experience.IsSealed)
+                return;
+
+            int toNext;
+
+            do
+            {
+                toNext = Hero.Experience.Max - experience;
+
+                Hero.Experience = Hero.Experience.Restore(experience);
+
+                if (Hero.Experience.IsMax)
+                {
+                    LevelUp();
+                    experience = -toNext;
+                }
+            }
+            while (!Hero.Experience.IsSealed && toNext < 0);
+
+            UpdateHero();
+        }
+
+        private void LevelUp()
+        {
+            NextStats stats = App.Processor.Read
+                <NextStats>(Environment.CurrentDirectory +
+                "/Resources/Media/Data/Characters/Ray/Next.json");
+
+            Hero.Hp = stats.Hp[Hero.Level];
+            Hero.Ap = stats.Ap[Hero.Level];
+            Hero.Stats = stats.Stats[Hero.Level];
+            Hero.Experience = stats.Experience[Hero.Level];
+            Hero.Level++;
+        }
+
+        public void UpdateHero()
+        {
+            OnPropertyChanged(nameof(Hero));
+        }
         #endregion
 
-        #region Equipment Members
-        public ObservableCollection<Weapon> Weapons { get; set; }
-        public ObservableCollection<Equipment> Armor { get; set; }
-        public ObservableCollection<Equipment> Pants { get; set; }
-        public ObservableCollection<Equipment> Boots { get; set; }
-        #endregion
+        private ObservableCollection<
+            ObservableCollection<Equipment>> _equip;
+        public ObservableCollection<
+            ObservableCollection<Equipment>> Equip
+        {
+            get => _equip;
+            set
+            {
+                _equip = value;
+                OnPropertyChanged();
+            }
+        }
 
         private bool _isFighting;
         public bool IsFighting
@@ -191,6 +264,43 @@ namespace DesertRage.ViewModel
         }
 
         #region Map Members
+        private void Gates(Position front, 
+            char frontTile, char gateTile)
+        {
+            Level.Map.SetTile(front, frontTile);
+            string next = front.ToString();
+
+            if (Level.Gates.ContainsKey(next))
+            {
+                Position gate = Level.Gates[next];
+                Level.Map.SetTile(gate, gateTile);
+            }
+
+            OnPropertyChanged(nameof(Level));
+        }
+
+        public void Interact()
+        {
+            Position front = Hero.Front;
+
+            switch (Level.Map.Tile(front))
+            {
+                case '$':
+                    break;
+                case 'K':
+                    Gates(front, '.', '.');
+                    break;
+                case '>':
+                    Gates(front, '<', '.');
+                    break;
+                case '<':
+                    Gates(front, '>', 'H');
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void Go(Direction move)
         {
             if (Hero.Go(Level.Map, move.Int()))
@@ -214,17 +324,6 @@ namespace DesertRage.ViewModel
             UpdateHero();
         }
         #endregion
-
-        public void LevelUp()
-        {
-            //Hero = new
-            UpdateHero();
-        }
-
-        public void UpdateHero()
-        {
-            OnPropertyChanged(nameof(Hero));
-        }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

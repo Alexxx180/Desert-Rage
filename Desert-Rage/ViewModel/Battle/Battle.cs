@@ -18,7 +18,6 @@ namespace DesertRage.ViewModel.Battle
 
         public virtual void SetViewModel(BattleViewModel viewModel)
         {
-            System.Diagnostics.Trace.WriteLine("OH SHIT...");
             ViewModel = viewModel;
         }
         

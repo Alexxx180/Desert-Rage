@@ -7,8 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="50"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-             xmlns:stats="clr-namespace:DesertRage.Model.Locations.Battle.Stats"
+             xmlns:stats="clr-namespace:DesertRage.Model.Locations.Battle.Stats;assembly=DesertRageModel"
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
+             xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <UserControl.DataContext>
@@ -30,6 +31,10 @@
                     <Binding.Converter>
                         <converters:UriConverter/>
                     </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        <x:Static Member="total:LocationsTotal.Transparent"/>
+                    </Binding.ConverterParameter>
                 </Binding>
             </attach:SvgBox.Source>
 

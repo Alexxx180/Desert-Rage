@@ -29,7 +29,7 @@
             </Grid.ColumnSpan>
             
             <attach:SvgBox.Source>
-                /Resources/Images/Background/Cover.svg
+                /Resources/Media/Images/Background/Cover.svg
             </attach:SvgBox.Source>
 
             <attach:SvgBox.Stretch>

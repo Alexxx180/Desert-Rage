@@ -98,7 +98,6 @@ namespace DesertRage.Controls.Scenes
             Label display = Parent as Label;
             LevelMap map = BattleModel.Human.Player.Location;
             display.Content = map;
-            System.Diagnostics.Trace.WriteLine("GOT IT");
             map.RaiseEnter();
         }
 

@@ -24,7 +24,7 @@
             <RowDefinition Height="0.15*"/>
             <RowDefinition Height="0.05*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="Icon1" Grid.Row="2" Source="/Resources/Images/Autorize/IconShocked3.ico" Grid.Column="1" Stretch="Fill"></Image>
+        <Image x:Name="Icon1" Grid.Row="2" Source="/Resources/Media/Images/Autorize/IconShocked3.ico" Grid.Column="1" Stretch="Fill"></Image>
         <StackPanel Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
             <Label FontWeight="Bold" Background="#FFFFBD30" Content="English" Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" Padding="2,2,2,2"></Label>
             <TextBlock x:Name="EN"  TextWrapping="Wrap" TextAlignment="Justify" Padding="5">

@@ -72,25 +72,25 @@ namespace DesertRage.Controls.Menu.Game
                 new Topic
                 {
                     Name = "Статус",
-                    Icon = "/Resources/Images/Menu/Topics/Status.svg",
+                    Icon = "/Resources/Media/Images/Battle/Character/Ray/Icon.svg",
                     TopicElement = status
                 },
                 new Topic
                 {
                     Name = "Умения",
-                    Icon = "/Resources/Images/Menu/Topics/Actions.svg",
+                    Icon = "/Resources/Media/Images/Menu/Topics/Actions.svg",
                     TopicElement = skills
                 },
                 new Topic
                 {
                     Name = "Предметы",
-                    Icon = "/Resources/Images/Menu/Topics/Items.svg",
+                    Icon = "/Resources/Media/Images/Menu/Topics/Items.svg",
                     TopicElement = items
                 },
                 new Topic
                 {
                     Name = "Настройки",
-                    Icon = "/Resources/Images/Menu/Topics/Settings.svg",
+                    Icon = "/Resources/Media/Images/Menu/Topics/Settings.svg",
                     TopicElement = sets
                 }
             };

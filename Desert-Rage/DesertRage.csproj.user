@@ -79,6 +79,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Media\Images\Battle\Bosses\TheRuler.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Media\Images\Battle\Enemies\Worm.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Media\Images\Menu\Items\Items.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Controls\Menu\Autorization.xaml">
       <SubType>Designer</SubType>
     </Page>

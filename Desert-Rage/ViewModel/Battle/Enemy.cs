@@ -1,11 +1,8 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
-using DesertRage.Resources.OST.Noises.Weapons;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Controls;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -15,7 +12,6 @@ namespace DesertRage.ViewModel.Battle
         {
             Foe = foe;
             Time = new Bar(0, 1000);
-            System.Diagnostics.Trace.WriteLine(foe.Stats.Speed);
         }
 
         public Enemy(BattleViewModel viewModel, Foe foe) : this(foe)

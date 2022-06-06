@@ -1,17 +1,12 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
-using DesertRage.Model.Locations.Battle.Stats.Enemy;
-using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.Model.Menu.Things.Logic;
-using DesertRage.Resources.OST.Noises.Actions;
-using DesertRage.Resources.OST.Noises.Weapons;
+using DesertRage.Resources.Media.OST.Noises.Actions;
+using DesertRage.Resources.Media.OST.Noises.Weapons;
 using DesertRage.ViewModel.Battle.Actions;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 

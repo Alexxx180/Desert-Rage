@@ -34,7 +34,7 @@
             </Label.Content>
         </Label>
 
-        <Image x:Name="BrightnessImg" Opacity="0">
+        <!--<Image x:Name="BrightnessImg" Opacity="0">
             <Image.IsHitTestVisible>
                 False
             </Image.IsHitTestVisible>
@@ -43,18 +43,10 @@
                 Fill
             </Image.Stretch>
 
-            <!--<Image.Opacity>
-                <Binding ElementName="Brightness" Path="Value" ConverterParameter="1">
-                    <Binding.Converter>
-                        <StaticResource ResourceKey="InvertConverter"/>
-                    </Binding.Converter>
-                </Binding>
-            </Image.Opacity>-->
-
             <Image.Source>
-                /Resources/Images/Locations/Total/Dark.png
+                /Resources/Media/Images/Locations/Total/Dark.png
             </Image.Source>
-        </Image>
+        </Image>-->
 
         <Grid x:Name="Pause">
             <Grid.Visibility>

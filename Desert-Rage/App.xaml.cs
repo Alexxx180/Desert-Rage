@@ -6,6 +6,9 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using DesertRage.Controls.Scenes;
+using Processors;
+using System.Text.Json;
+using Processors.Converters.Json;
 
 namespace DesertRage
 {
@@ -14,6 +17,18 @@ namespace DesertRage
     /// </summary>
     public partial class App : Application
     {
+        internal static readonly Serializer Processor;
+
+        static App()
+        {
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                Converters = { new BitArrayConverter() }
+            };
+
+            Processor = new Json(options);
+        }
+
         public App()
         {
             AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;

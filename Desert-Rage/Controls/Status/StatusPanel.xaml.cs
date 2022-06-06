@@ -11,41 +11,45 @@ namespace DesertRage.Controls.Status
     /// </summary>
     public partial class StatusPanel : UserControl, INotifyPropertyChanged
     {
-        public static readonly DependencyProperty
-            HealthPointsProperty = DependencyProperty.Register(
-                nameof(HealthPoints), typeof(Bar), typeof(StatusPanel));
-
-        public static readonly DependencyProperty
-            ActionPointsProperty = DependencyProperty.Register(
-                nameof(ActionPoints), typeof(Bar), typeof(StatusPanel));
-
+        #region Icon Members
         public static readonly DependencyProperty
             IconProperty = DependencyProperty.Register(
                 nameof(Icon), typeof(string), typeof(StatusPanel));
-
-        public Bar HealthPoints
-        {
-            get => (Bar)GetValue(HealthPointsProperty);
-            set => SetValue(HealthPointsProperty, value);
-        }
-
-        public Bar ActionPoints
-        {
-            get => (Bar)GetValue(ActionPointsProperty);
-            set => SetValue(ActionPointsProperty, value);
-        }
 
         public string Icon
         {
             get => GetValue(IconProperty) as string;
             set => SetValue(IconProperty, value);
         }
+        #endregion
+
+        #region Health Members
+        public static readonly DependencyProperty
+            HealthPointsProperty = DependencyProperty.Register(
+                nameof(HealthPoints), typeof(Bar), typeof(StatusPanel));
+
+        public Bar HealthPoints
+        {
+            get => (Bar)GetValue(HealthPointsProperty);
+            set => SetValue(HealthPointsProperty, value);
+        }
+        #endregion
+
+        #region Action Members
+        public static readonly DependencyProperty
+            ActionPointsProperty = DependencyProperty.Register(
+                nameof(ActionPoints), typeof(Bar), typeof(StatusPanel));
+
+        public Bar ActionPoints
+        {
+            get => (Bar)GetValue(ActionPointsProperty);
+            set => SetValue(ActionPointsProperty, value);
+        }
+        #endregion
 
         public StatusPanel()
         {
             InitializeComponent();
-
-            //Icon = "/Resources/Images/Menu/Topics/Status.svg";
         }
 
         #region INotifyPropertyChanged Members

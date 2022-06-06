@@ -6,6 +6,7 @@
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
              xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel"
+             xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="GItems">
@@ -57,6 +58,10 @@
                     <Binding.Path>
                         DataContext.Player.Hero.Icon
                     </Binding.Path>
+
+                    <Binding.ConverterParameter>
+                        <x:Static Member="total:LocationsTotal.Transparent"/>
+                    </Binding.ConverterParameter>
                 </Binding>
             </status:StatusPanel.Icon>
         </status:StatusPanel>

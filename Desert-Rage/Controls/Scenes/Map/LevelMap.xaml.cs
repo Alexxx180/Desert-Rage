@@ -63,9 +63,13 @@ namespace DesertRage.Controls.Scenes.Map
             }
         }
 
-        public LevelMap(UserProfile user)
+        public LevelMap()
         {
             InitializeComponent();
+        }
+
+        public LevelMap(UserProfile user) : this()
+        {
             UserData = user;
         }
 
@@ -409,6 +413,11 @@ namespace DesertRage.Controls.Scenes.Map
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
                     UserData.Battle.Entry.Display.Content = UserData.Menu;
+                    break;
+                case Key.E:
+                case Key.Space:
+                case Key.Enter:
+                    UserData.Interact();
                     break;
                 default:
                     break;

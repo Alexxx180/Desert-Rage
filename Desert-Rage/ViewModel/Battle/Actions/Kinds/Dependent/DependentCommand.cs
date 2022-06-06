@@ -25,8 +25,6 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
 
         public override void SetViewModel(BattleViewModel viewModel)
         {
-            System.Diagnostics.Trace.WriteLine("OH YEAH");
-
             base.SetViewModel(viewModel);
             StatUnit.SetViewModel(viewModel);
             OnPropertyChanged(nameof(StatUnit));

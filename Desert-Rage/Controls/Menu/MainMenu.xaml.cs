@@ -7,7 +7,6 @@ using System.Windows.Controls;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Controls.Scenes;
-using static DesertRage.Writers.Processors;
 using System.Diagnostics;
 
 namespace DesertRage.Controls.Menu

@@ -7,6 +7,7 @@
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+             xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              mc:Ignorable="d" 
              x:Name="HeroStatusPanel"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
@@ -31,6 +32,10 @@
                     <Binding.Converter>
                         <converters:UriConverter/>
                     </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        <x:Static Member="total:LocationsTotal.Transparent"/>
+                    </Binding.ConverterParameter>
                 </Binding>
             </attach:SvgBox.Source>
 

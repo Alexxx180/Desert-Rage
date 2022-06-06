@@ -19,7 +19,6 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds.Dependent
             Act();
             Hero.Cure(Power);
             User.UpdateHero();
-            CheckStatus("CURE! " + Power);
         }
 
         protected int Power => StatUnit.Power.ToInt();

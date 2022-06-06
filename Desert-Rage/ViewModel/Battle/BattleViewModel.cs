@@ -1,28 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Threading;
-using System.Windows.Controls;
 using DesertRage.Controls.Scenes;
-using DesertRage.Model.Locations;
-using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
-using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.Battle.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Decorators;
 
 namespace DesertRage.ViewModel.Battle
 {
-    public class BattleViewModel : INotifyPropertyChanged
+    public class BattleViewModel : BattleOptions, INotifyPropertyChanged
     {
+        private BattleViewModel() : base()
+        {
+            Experience = 0;
+            _drawStrategy = new DockStrategy
+                (this, BattleScene.SceneArea);
+            Scene = new BattleScene(this);
+        }
+
+        public BattleViewModel(UserProfile profile) : this()
+        {
+            Human = new Person(this, profile);
+            _timing.Tick += Human.WaitForTurn;
+        }
+
         #region UI Members
         public BattleScene Scene { get; set; }
         public MainWindow Entry { get; set; }
         #endregion
 
+        #region Hero Members
         private Person _human;
         public Person Human
         {
@@ -34,24 +42,14 @@ namespace DesertRage.ViewModel.Battle
             }
         }
 
+        internal ushort Experience { get; set; }
+        #endregion
+
         #region Enemy Members
-        private readonly EnemyAppearing _drawStrategy;
-
-        private ObservableCollection<Enemy> _enemies;
-        public ObservableCollection<Enemy> Enemies
-        {
-            get => _enemies;
-            set
-            {
-                _enemies = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private Foe[] GetFoes()
+        internal void SetFoes()
         {
             Dictionary<EnemyBestiary, Foe> allEnemies = Bank.Foes();
-            EnemyBestiary[] bestiary = Location.GetFoes();
+            EnemyBestiary[] bestiary = Human.Player.Level.StageFoes;
             Foe[] foes = new Foe[bestiary.Length];
 
             for (byte i = 0; i < foes.Length; i++)
@@ -59,119 +57,50 @@ namespace DesertRage.ViewModel.Battle
                 EnemyBestiary id = bestiary[i];
                 foes[i] = allEnemies[id];
             }
-            return foes;
+
+            _drawStrategy.ResetEnemies(foes);
         }
 
-        public ushort EnemySpeed()
-        {
-            ushort overallSpeed = 0;
-            for (byte i = 0; i < Enemies.Count; i++)
-            {
-                overallSpeed += Enemies[i].Foe.Stats.Speed;
-            }
-            return overallSpeed;
-        }
-
-        public bool IsBattle => Enemies.Count > 0;
+        private readonly EnemyAppearing _drawStrategy;
         #endregion
 
-        #region Timing Members
-        private DispatcherTimer _timing;
-
-        private void SetTurns()
-        {
-            _timing = new DispatcherTimer();
-            _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
-            _timing.Tick += Human.WaitForTurn;
-        }
-
-        private void EnemyTurns()
-        {
-            for (byte i = 0; i < Enemies.Count; i++)
-                _timing.Tick += Enemies[i].WaitForTurn;
-        }
-
-        private void DenyEnemyTurns()
-        {
-            for (byte i = 0; i < Enemies.Count; i++)
-                EnemyTurnsOver(Enemies[i]);
-        }
-
-        private void EnemyTurnsOver(in Enemy enemy)
-        {
-            _timing.Tick -= enemy.WaitForTurn;
-        }
-
-        internal void EnemyDefeat(in Enemy enemy)
-        {
-            EnemyTurnsOver(enemy);
-            _ = Enemies.Remove(enemy);
-
-            if (!IsBattle)
-                Scene.ReturnToMap();
-        }
-
-        public void Start()
+        #region Option Members
+        public override void Start()
         {
             Entry.Display.Content = Scene;
+
             Enemies.Refresh(_drawStrategy.Build());
+            for (byte i = 0; i < Enemies.Count; i++)
+            {
+                Experience += Enemies[i].Foe.Experience;
+            }
+
             EnemyTurns();
             Scene.RaiseEnter();
         }
-        #endregion
 
-        public BattleViewModel(UserProfile profile)
+        private protected override void End()
         {
-            Human = new Person(this, profile);
-            Enemies = new ObservableCollection<Enemy>();
-
-            _drawStrategy = new DockStrategy
-                (this, BattleScene.SceneArea, GetFoes());
-
-            Scene = new BattleScene(this);
-
-            SetTurns();
-            // Start();
-        }
-
-        #region Battle Options
-        private void CleanBattlefield()
-        {
-            Enemies.Clear();
-            OnPropertyChanged(nameof(Enemies));
-            OnPropertyChanged(nameof(IsBattle));
-        }
-
-        private void End()
-        {
+            Experience = 0;
             Scene.RaiseEscape();
         }
 
-        public void SafeFreeze()
+        private protected override void Freeze()
         {
-            if (IsBattle)
-                Freeze();
-        }
-
-        private void Freeze()
-        {
-            _timing.Stop();
+            base.Freeze();
             _timing.Tick -= Human.WaitForTurn;
-            DenyEnemyTurns();
         }
 
-        public void Lose()
+        public override void Won()
+        {
+            Human.Player.AddExperience(Experience);
+            End();
+        }
+
+        public override void Lose()
         {
             Freeze();
             Entry.RaiseEscape();
-        }
-
-        public void RunAway()
-        {
-            _timing.Stop();
-            DenyEnemyTurns();
-            CleanBattlefield();
-            End();
         }
 
         public void Escape(int barrier)
@@ -181,37 +110,6 @@ namespace DesertRage.ViewModel.Battle
             if (fleeChance.Next(1, barrier + 1) == 1)
                 RunAway();
         }
-
-        public void Pause()
-        {
-            if (IsBattle)
-                _timing.Stop();
-        }
-
-        public void Resume()
-        {
-            if (IsBattle)
-                _timing.Start();
-        }
-        #endregion
-
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises this object's PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The property that has a new value.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-                handler(this, e);
-            }
-        }
-
         #endregion
     }
 }

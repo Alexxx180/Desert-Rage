@@ -13,15 +13,8 @@ namespace DesertRage.ViewModel.Battle.Actions.Kinds
 
         public void Act()
         {
-            User.SoundPlayer.PlayNoise(Unit.Noise);
             Man.Act();
-        }
-
-        protected void CheckStatus(string comment)
-        {
-            System.Diagnostics.Trace.WriteLine(comment);
-            System.Diagnostics.Trace.WriteLine(Hero.Hp.ToString());
-            System.Diagnostics.Trace.WriteLine(Hero.Ap.ToString());
+            User.SoundPlayer.PlayNoise(Unit.Noise);
         }
 
         protected Person Man => ViewModel.Human;

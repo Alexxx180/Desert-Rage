@@ -28,8 +28,8 @@ namespace DesertRage.ViewModel.Battle.Actions
 
         public override void Execute(object parameter)
         {
-            base.Execute(parameter);
             Subject.Use();
+            base.Execute(parameter);
         }
 
         public override bool CanExecute(object parameter) => Subject.CanUse && base.CanExecute(parameter);

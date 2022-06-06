@@ -17,21 +17,15 @@ namespace DesertRage.ViewModel.Battle.Strategy.Appear
         private Dictionary<Position, List<Foe>> _stageFoes;
         private List<Position> _keySizes;
 
-        public DockStrategy(in BattleViewModel battleZone)
+        public DockStrategy
+            (in BattleViewModel battleZone, Range totalArea)
         {
             _battleZone = battleZone;
-        }
-
-        public DockStrategy(in BattleViewModel battleZone,
-            Range totalArea, params Foe[] foes) : this(battleZone)
-        {
             _startArea = totalArea;
             _area = new List<Range>();
 
             _stageFoes = new Dictionary<Position, List<Foe>>();
             _keySizes = new List<Position>();
-
-            SortEnemies(foes);
         }
 
         internal void ResetArea()
@@ -46,7 +40,7 @@ namespace DesertRage.ViewModel.Battle.Strategy.Appear
             ResetArea();
         }
 
-        internal void ResetEnemies(params Foe[] foes)
+        public void ResetEnemies(params Foe[] foes)
         {
             _stageFoes.Clear();
             _keySizes.Clear();

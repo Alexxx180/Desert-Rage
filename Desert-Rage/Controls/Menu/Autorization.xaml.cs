@@ -5,8 +5,8 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
-using DesertRage.Writers;
 using DesertRage.ViewModel;
+using System.IO;
 
 namespace DesertRage.Controls.Menu
 {
@@ -87,7 +87,10 @@ namespace DesertRage.Controls.Menu
                 button.Content = "▲";
                 foreach (string file in _toDrop)
                 {
-                    Processors.TruncateFile(file);
+                    if (File.Exists(file))
+                    {
+                        File.Delete(file);
+                    }
                 }
             }
         }

@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image x:Name="FoeImg1" Grid.ColumnSpan="4" Grid.Column="1"  Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Images/Fight/Enemies/EnemyImgs/Spider1.png" Visibility="Hidden"/>
-        <Image x:Name="FoeAImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/ATK2.png" Visibility="Hidden" Grid.RowSpan="2" Grid.Row="1" Grid.Column="5" Stretch="Uniform"/>
-        <Image x:Name="FoeDImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/DEF2.png" Visibility="Hidden" Grid.RowSpan="2" Stretch="Uniform" Grid.Row="3" Grid.Column="5"/>
-        <Image x:Name="FoeGImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/AG2.png" Visibility="Hidden" Stretch="Uniform" Grid.RowSpan="2" Grid.Row="1" Grid.Column="10"/>
-        <Image x:Name="FoeSImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Images/Menu/Status/Stats/SP2.png" Visibility="Hidden" Stretch="Uniform" Grid.RowSpan="2" Grid.Row="3" Grid.Column="10"/>
+        <Image x:Name="FoeImg1" Grid.ColumnSpan="4" Grid.Column="1"  Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Top" Panel.ZIndex="11" Source="/Resources/Media/Images/Battle/Enemies/EnemyImgs/Spider1.png" Visibility="Hidden"/>
+        <Image x:Name="FoeAImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Media/Images/menu/stats/ATK2.png" Visibility="Hidden" Grid.RowSpan="2" Grid.Row="1" Grid.Column="5" Stretch="Uniform"/>
+        <Image x:Name="FoeDImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Media/Images/menu/stats/DEF2.png" Visibility="Hidden" Grid.RowSpan="2" Stretch="Uniform" Grid.Row="3" Grid.Column="5"/>
+        <Image x:Name="FoeGImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Media/Images/menu/stats/AG2.png" Visibility="Hidden" Stretch="Uniform" Grid.RowSpan="2" Grid.Row="1" Grid.Column="10"/>
+        <Image x:Name="FoeSImg1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Panel.ZIndex="11" Source="/Resources/Media/Images/menu/stats/SP2.png" Visibility="Hidden" Stretch="Uniform" Grid.RowSpan="2" Grid.Row="3" Grid.Column="10"/>
         <Viewbox Grid.Row="1" Grid.Column="7" Grid.RowSpan="2" Grid.ColumnSpan="2" Panel.ZIndex="11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Label x:Name="FoeAtk1" Foreground="White" Content="255" Grid.Column="7" Padding="0" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="3" FontFamily="Cooper Black" IsEnabled="False" Visibility="Hidden"/>
         </Viewbox>

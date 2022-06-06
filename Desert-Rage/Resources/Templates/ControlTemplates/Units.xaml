@@ -56,7 +56,7 @@
                     </status:StatusPanel.ActionPoints>
 
                     <status:StatusPanel.Icon>
-                        /Resources/Images/Menu/Topics/Status.svg
+                        /Resources/Media/Images/Battle/Character/Ray/Icon.svg
                     </status:StatusPanel.Icon>
                 </status:StatusPanel>
 
@@ -241,7 +241,7 @@
                     <MenuItem.Icon>
                         <svgc:SvgViewbox>
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Attack.svg
+                                /Resources/Media/Images/menu/stats/Attack.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -299,7 +299,7 @@
                             </Grid.Row>
 
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Special.svg
+                                /Resources/Media/Images/menu/stats/Special.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -357,7 +357,7 @@
                             </Grid.Row>
 
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Topics/Items.svg
+                                /Resources/Media/Images/Menu/Topics/Items.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -419,7 +419,7 @@
                             </Grid.Row>
 
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Defence.svg
+                                /Resources/Media/Images/menu/stats/Defence.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -465,7 +465,7 @@
                             </Grid.Row>
 
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Status/Stats/Speed.svg
+                                /Resources/Media/Images/menu/stats/Speed.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -507,7 +507,7 @@
                     <MenuItem.Icon>
                         <svgc:SvgViewbox>
                             <attach:SvgBox.Source>
-                                /Resources/Images/Menu/Topics/Status.svg
+                                /Resources/Media/Images/Battle/Character/Ray/Icon.svg
                             </attach:SvgBox.Source>
 
                             <attach:SvgBox.Stretch>
@@ -524,5 +524,23 @@
 
             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="EquipSelector">
+        <ComboBox>
+            <ComboBox.Style>
+                <StaticResource ResourceKey="StretchFont"/>
+            </ComboBox.Style>
+
+            <ComboBox.ItemTemplate>
+                <StaticResource ResourceKey="PowerTemplate"/>
+            </ComboBox.ItemTemplate>
+
+            <ComboBox.ItemsSource>
+                <Binding/>
+            </ComboBox.ItemsSource>
+
+            <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+        </ComboBox>
     </ControlTemplate>
 </ResourceDictionary>
