@@ -4,13 +4,15 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player.Armory
 {
     public class Equipment : PowerUnit
     {
-        public Equipment(string meaning, float power) : base(power)
+        public Equipment() { }
+
+        public Equipment(float power) : base(power) { }
+
+        public Equipment(float power, string name) : this(power)
         {
-            Description = $"{meaning} +{power}";
+            Name = name;
         }
 
-        public string Type { get; set; }
-
-        public byte Chest { get; set; }
+        public ArmoryKind Type { get; set; }
     }
 }

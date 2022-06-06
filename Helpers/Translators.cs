@@ -18,14 +18,14 @@ namespace DesertRage.Model.Helpers
         }
 
         public static char Tile
-            (this StringBuilder[] map,
+            (this char[][] map,
             Position place)
         {
             return map[place.Y][place.X];
         }
 
         public static void SetTile
-            (this StringBuilder[] map,
+            (this char[][] map,
             Position place, char setTo)
         {
             map[place.Y][place.X] = setTo;

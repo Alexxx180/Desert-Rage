@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DesertRage.Model.Helpers;
-using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
-using System.Text;
+using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Player
 {
@@ -15,7 +14,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             GoingImage = new string[4][];
         }
 
-        public bool Go(in StringBuilder[] map, int move)
+        public bool Go(in char[][] map, int move)
         {
             Pose = move;
             
@@ -71,8 +70,9 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         public Bar Ap { get; set; }
 
         public BitArray Learned { get; set; }
+        public HashSet<ArmoryElement> Equipment { get; set; }
 
-        public Outfit Gear { get; set; }
+        public BattleStats SelectedArmor { get; set; }
         #endregion
 
         #region Map Members

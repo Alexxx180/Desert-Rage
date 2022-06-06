@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace DesertRage.Model.Locations
 {
@@ -17,7 +16,7 @@ namespace DesertRage.Model.Locations
             Y = y;
         }
 
-        public bool IsOverflow(int min, StringBuilder[] map)
+        public bool IsOverflow(int min, in char[][] map)
         {
             bool overFlow = Y < min || Y >= map.Length;
 
