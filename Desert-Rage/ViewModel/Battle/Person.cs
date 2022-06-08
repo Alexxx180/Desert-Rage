@@ -8,11 +8,10 @@ using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace DesertRage.ViewModel.Battle
 {
-    public class Person : INotifyPropertyChanged
+    public class Person : Participant, INotifyPropertyChanged
     {
         public Person
             (BattleViewModel viewModel, UserProfile player)
@@ -21,17 +20,7 @@ namespace DesertRage.ViewModel.Battle
             Time = new Bar(0, 1000);
             SetViewModel(viewModel);
             SetCommands();
-        }
-
-        private BattleViewModel _viewModel;
-        public BattleViewModel ViewModel
-        {
-            get => _viewModel;
-            set
-            {
-                _viewModel = value;
-                OnPropertyChanged();
-            }
+            OnPropertyChanged(nameof(Unit));
         }
 
         #region Battle Commands
@@ -39,7 +28,7 @@ namespace DesertRage.ViewModel.Battle
         {
             Fight = new InstantCommand(
                 new FightCommand(
-                    new AttackFormula(0),
+                    new AttackFormula(),
                     new NoiseUnit("Пустой слот")
                     {
                         Name = "Пусто",
@@ -128,67 +117,19 @@ namespace DesertRage.ViewModel.Battle
         #endregion
 
         #region Hero Members
-        private UserProfile _player;
-        public UserProfile Player
-        {
-            get => _player;
-            set
-            {
-                _player = value;
-                OnPropertyChanged();
-            }
-        }
+        public UserProfile Player { get; }
 
-        private Bar _time;
-        public Bar Time
-        {
-            get => _time;
-            set
-            {
-                _time = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _isHit;
-        public bool IsHit
-        {
-            get => _isHit;
-            set
-            {
-                _isHit = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _isAct;
-        public bool IsAct
-        {
-            get => _isAct;
-            set
-            {
-                _isAct = value;
-                OnPropertyChanged();
-            }
-        }
+        public override BattleUnit Unit => Player.Hero;
 
         public void Act()
         {
             IsAct = true;
             IsAct = false;
         }
-        #endregion
-
-        #region Dependency Members
-        public void SetViewModel
-            (BattleViewModel viewModel)
-        {
-            ViewModel = viewModel;
-        }
 
         public void Cure(in int value)
         {
-            Player.Hero.Cure(value);
+            Unit.Cure(value);
             Player.UpdateHero();
         }
 
@@ -197,53 +138,25 @@ namespace DesertRage.ViewModel.Battle
             Player.Hero.Rest(value);
             Player.UpdateHero();
         }
+        #endregion
 
-        public void Hit(in int value)
+        #region Participant Members
+        private protected override void Damage(int value)
         {
-            if (Player.Hero.Hp.IsEmpty)
-                return;
+            Player.Hit(value);
+        }
 
-            IsHit = true;
-
-            Player.Hero.Hit(value);
-            if (Player.Hero.Hp.IsEmpty)
-            {
-                ViewModel.Lose();
-            }
-
-            Player.UpdateHero();
-
-            IsHit = false;
+        private protected override void Defeat()
+        {
+            ViewModel.Lose();
         }
         #endregion
 
-        public void WaitForTurn(object sender, object o)
+        public override void WaitForTurn(object sender, object o)
         {
             if (Time.IsMax)
                 return;
-
-            ushort speed = 10;
-            speed += Player.Hero.Stats.Speed;
-
-            Time = Time.Restore(speed);
+            base.WaitForTurn(sender, o);
         }
-
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises this object's PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The property that has a new value.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-                handler(this, e);
-            }
-        }
-        #endregion
     }
 }

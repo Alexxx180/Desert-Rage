@@ -61,7 +61,7 @@ namespace DesertRage.ViewModel.Battle
             _drawStrategy.ResetEnemies(foes);
         }
 
-        private readonly EnemyAppearing _drawStrategy;
+        private readonly IEnemyAppearing _drawStrategy;
         #endregion
 
         #region Option Members
@@ -72,7 +72,7 @@ namespace DesertRage.ViewModel.Battle
             Enemies.Refresh(_drawStrategy.Build());
             for (byte i = 0; i < Enemies.Count; i++)
             {
-                Experience += Enemies[i].Foe.Experience;
+                Experience += Enemies[i].Experience;
             }
 
             EnemyTurns();

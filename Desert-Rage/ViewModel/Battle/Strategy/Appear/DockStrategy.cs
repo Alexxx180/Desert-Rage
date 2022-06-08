@@ -7,7 +7,7 @@ using Random = System.Random;
 
 namespace DesertRage.ViewModel.Battle.Strategy.Appear
 {
-    public class DockStrategy : EnemyAppearing
+    public class DockStrategy : IEnemyAppearing
     {
         private Range _startArea;
 

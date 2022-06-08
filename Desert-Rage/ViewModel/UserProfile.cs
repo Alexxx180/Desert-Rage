@@ -180,14 +180,7 @@ namespace DesertRage.ViewModel
             Equipment[][] equipment = Bank.GetEqupment();
 
             Hero.Equipment.ForEach(AddEquipment, equipment);
-
-            //foreach (ArmoryElement element in Hero.Equipment)
-            //{
-            //    AddEquipment(element, equipment);
-            //}
         }
-
-        
         #endregion
 
         #region Model Members
@@ -218,6 +211,19 @@ namespace DesertRage.ViewModel
         }
 
         public Settings Preferences { get; set; }
+
+        public void Hit(int value)
+        {
+            value -= Equip[ArmoryKind.Torso.Int()]
+                [Hero.SelectedArmor.Defence].Power;
+            value -= Equip[ArmoryKind.Legs.Int()]
+                [Hero.SelectedArmor.Speed].Power;
+            value -= Equip[ArmoryKind.Feet.Int()]
+                [Hero.SelectedArmor.Special].Power;
+
+            Hero.Hit(value);
+            UpdateHero();
+        }
 
         public void AddExperience(int experience)
         {

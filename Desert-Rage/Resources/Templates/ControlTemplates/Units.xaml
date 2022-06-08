@@ -38,7 +38,7 @@
                             </Binding.ElementName>
 
                             <Binding.Path>
-                                DataContext.Player.Hero.Hp
+                                DataContext.Unit.Hp
                             </Binding.Path>
                         </Binding>
                     </status:StatusPanel.HealthPoints>
@@ -56,7 +56,15 @@
                     </status:StatusPanel.ActionPoints>
 
                     <status:StatusPanel.Icon>
-                        /Resources/Media/Images/Battle/Character/Ray/Icon.svg
+                        <Binding>
+                            <Binding.ElementName>
+                                BattleCharacter
+                            </Binding.ElementName>
+
+                            <Binding.Path>
+                                DataContext.Unit.Icon
+                            </Binding.Path>
+                        </Binding>
                     </status:StatusPanel.Icon>
                 </status:StatusPanel>
 
@@ -161,7 +169,7 @@
                 </Grid.Row>
 
                 <attach:SvgBox.Source>
-                    <Binding Path="Player.Hero.Action"/>
+                    <Binding Path="Unit.Action"/>
                 </attach:SvgBox.Source>
 
                 <attach:SvgBox.Stretch>

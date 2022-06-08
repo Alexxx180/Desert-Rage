@@ -2,116 +2,44 @@
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace DesertRage.ViewModel.Battle
 {
-    public class Enemy : INotifyPropertyChanged, IViewModelObservable<BattleViewModel>
+    public class Enemy : Participant, INotifyPropertyChanged, IViewModelObservable<BattleViewModel>
     {
         public Enemy(Foe foe)
         {
-            Foe = foe;
+            _foe = foe;
             Time = new Bar(0, 1000);
+            OnPropertyChanged(nameof(Unit));
+            OnPropertyChanged(nameof(Size));
+            OnPropertyChanged(nameof(Experience));
         }
 
         public Enemy(BattleViewModel viewModel, Foe foe) : this(foe)
         {
             SetViewModel(viewModel);
+            
         }
 
-        private BattleViewModel _viewModel;
-        public BattleViewModel ViewModel
-        {
-            get => _viewModel;
-            set
-            {
-                _viewModel = value;
-                OnPropertyChanged();
-            }
-        }
-
-        #region Foe Members
         private Foe _foe;
-        public Foe Foe
+
+        public override BattleUnit Unit => _foe;
+        public byte Experience => _foe.Experience;
+
+        private protected override void Damage(int value)
         {
-            get => _foe;
-            set
-            {
-                _foe = value;
-                OnPropertyChanged();
-            }
+            Unit.Hit(value);
         }
 
-        private Bar _time;
-        public Bar Time
-        {
-            get => _time;
-            set
-            {
-                _time = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _isHit;
-        public bool IsHit
-        {
-            get => _isHit;
-            set
-            {
-                _isHit = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private bool _isAct;
-        public bool IsAct
-        {
-            get => _isAct;
-            set
-            {
-                _isAct = value;
-                OnPropertyChanged();
-            }
-        }
-        #endregion
-
-        public void SetViewModel
-            (BattleViewModel viewModel)
-        {
-            ViewModel = viewModel;
-        }
-
-        public void Hit(in int value)
-        {
-            if (Foe.Hp.IsEmpty)
-                return;
-
-            IsHit = true;
-
-            Foe.Hit(value);
-            if (Foe.Hp.IsEmpty)
-            {
-                Defeat();
-            }
-
-            OnPropertyChanged(nameof(Foe));
-
-            IsHit = false;
-        }
-
-        private void Defeat()
+        private protected override void Defeat()
         {
             ViewModel.EnemyDefeat(this);
         }
 
-        public void WaitForTurn(object sender, object o)
+        public override void WaitForTurn(object sender, object o)
         {
-            ushort speed = 10;
-            speed += Foe.Stats.Speed;
-
-            Time = Time.Restore(speed);
-
+            base.WaitForTurn(sender, o);
             if (Time.IsMax)
             {
                 Time = Time.Drain();
@@ -128,7 +56,8 @@ namespace DesertRage.ViewModel.Battle
         {
             IsAct = true;
 
-            ushort attack = Foe.Stats.Attack;
+            ushort attack = Unit.Stats.Attack;
+            attack += Unit.Stats.Special;
 
             ViewModel.Human.Hit(attack);
 
@@ -136,23 +65,6 @@ namespace DesertRage.ViewModel.Battle
         }
 
         public Position Tile { get; set; }
-
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises this object's PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The property that has a new value.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-                handler(this, e);
-            }
-        }
-        #endregion
+        public Position Size => _foe.Size;
     }
 }

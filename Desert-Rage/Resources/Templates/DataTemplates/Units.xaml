@@ -20,7 +20,7 @@
                         <attach:SvgBox.Source>
                             <Binding>
                                 <Binding.Path>
-                                    Foe.Icon
+                                    Unit.Icon
                                 </Binding.Path>
                             </Binding>
                         </attach:SvgBox.Source>
@@ -44,7 +44,7 @@
                         <attach:SvgBox.Source>
                             <Binding>
                                 <Binding.Path>
-                                    Foe.Action
+                                    Unit.Action
                                 </Binding.Path>
                             </Binding>
                         </attach:SvgBox.Source>

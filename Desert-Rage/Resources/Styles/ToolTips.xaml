@@ -39,7 +39,7 @@
                                 </TextBlock.FontWeight>
                             
                                 <TextBlock.Text>
-                                    <Binding Path="Foe.Name"/>
+                                    <Binding Path="Unit.Name"/>
                                 </TextBlock.Text>
                             </TextBlock>
 
@@ -53,7 +53,7 @@
                                 </status:StatBar.Caption>
 
                                 <status:StatBar.Bar>
-                                    <Binding Path="DataContext.Foe.Hp">
+                                    <Binding Path="DataContext.Unit.Hp">
                                         <Binding.RelativeSource>
                                             <RelativeSource>
                                                 <RelativeSource.AncestorType>
@@ -92,7 +92,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Foe.Stats.Attack">
+                                        <Binding Path="DataContext.Unit.Stats.Attack">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>
@@ -118,7 +118,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Foe.Stats.Defence">
+                                        <Binding Path="DataContext.Unit.Stats.Defence">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>
@@ -144,7 +144,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Foe.Stats.Speed">
+                                        <Binding Path="DataContext.Unit.Stats.Speed">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>
@@ -170,7 +170,7 @@
                                     </status:IconStat.Icon>
 
                                     <status:IconStat.Stat>
-                                        <Binding Path="DataContext.Foe.Stats.Special">
+                                        <Binding Path="DataContext.Unit.Stats.Special">
                                             <Binding.RelativeSource>
                                                 <RelativeSource>
                                                     <RelativeSource.AncestorType>

@@ -21,7 +21,7 @@
                 <attach:SvgBox.Source>
                     <Binding>
                         <Binding.Path>
-                            Foe.Icon
+                            Unit.Icon
                         </Binding.Path>
                     </Binding>
                 </attach:SvgBox.Source>
@@ -42,7 +42,7 @@
                     </TextBlock.FontWeight>
 
                     <TextBlock.Text>
-                        <Binding Path="Foe.Name"/>
+                        <Binding Path="Unit.Name"/>
                     </TextBlock.Text>
                 </TextBlock>
 
@@ -56,7 +56,7 @@
                     </status:StatBar.Caption>
 
                     <status:StatBar.Bar>
-                        <Binding ElementName="Data" Path="DataContext.Foe.Hp"/>
+                        <Binding ElementName="Data" Path="DataContext.Unit.Hp"/>
                     </status:StatBar.Bar>
 
                     <status:StatBar.ForeBrush>

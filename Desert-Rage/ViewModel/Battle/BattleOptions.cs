@@ -43,7 +43,7 @@ namespace DesertRage.ViewModel.Battle
             ushort overallSpeed = 0;
             for (byte i = 0; i < Enemies.Count; i++)
             {
-                overallSpeed += Enemies[i].Foe.Stats.Speed;
+                overallSpeed += Enemies[i].Unit.Stats.Speed;
             }
             return overallSpeed;
         }
