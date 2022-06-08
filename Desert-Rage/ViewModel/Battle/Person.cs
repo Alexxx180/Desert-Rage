@@ -13,14 +13,13 @@ namespace DesertRage.ViewModel.Battle
 {
     public class Person : Participant, INotifyPropertyChanged
     {
-        public Person
-            (BattleViewModel viewModel, UserProfile player)
+        public Person(BattleViewModel viewModel,
+            UserProfile player) : base()
         {
             Player = player;
-            Time = new Bar(0, 1000);
+            
             SetViewModel(viewModel);
             SetCommands();
-            OnPropertyChanged(nameof(Unit));
         }
 
         #region Battle Commands

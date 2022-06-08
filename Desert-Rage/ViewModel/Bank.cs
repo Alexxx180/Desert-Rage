@@ -21,6 +21,8 @@ using BossImages = DesertRage.Resources.Media.Images.Battle.Bosses;
 using System;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.ViewModel.Battle.Strategy.Fight;
+using DesertRage.Model.Locations.Battle;
 
 namespace DesertRage.ViewModel
 {
@@ -41,6 +43,15 @@ namespace DesertRage.ViewModel
         {
             return GetItems<Equipment[][]>
                 ("/Resources/Media/Data/Items/Equipment.json");
+        }
+
+        internal static IParticipantFight FightStrategy(Foe unit)
+        {
+            return unit.Strategy switch
+            {
+                FightingMode.POSION => new Poison(unit, new Position(8, 1)),
+                _ => new Attack(unit)
+            };
         }
 
         internal static Dictionary<SkillsID, ConsumeCommand> AllSkills()
@@ -365,7 +376,7 @@ namespace DesertRage.ViewModel
                         Size = new Position(1),
                         Death = EnemyDefeat.Spider,
                         Stats = new BattleStats(25, 3, 10, 0),
-                        Hp = new Bar(65),
+                        Hp = new Slider(65),
                         Experience = 5
                     }
                 },
@@ -380,7 +391,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Mummy.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Mummy,
-                        Hp = new Bar(83),
+                        Hp = new Slider(83),
                         Stats = new BattleStats(32, 7, 17, 2),
                         Experience = 7
                     }
@@ -396,7 +407,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Zombie.Action,
                         Size = new Position(2, 1),
                         Death = EnemyDefeat.Zombie,
-                        Hp = new Bar(83),
+                        Hp = new Slider(83),
                         Stats = new BattleStats(41, 5, 25, 5),
                         Experience = 11
                     }
@@ -412,7 +423,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Bones.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Bones,
-                        Hp = new Bar(125),
+                        Hp = new Slider(125),
                         Stats = new BattleStats(50, 15, 35, 7),
                         Experience = 15
                     }
@@ -428,7 +439,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Vulture.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Vulture,
-                        Hp = new Bar(250),
+                        Hp = new Slider(250),
                         Stats = new BattleStats(45, 25, 65, 30),
                         Experience = 35
                     }
@@ -444,7 +455,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Ghoul.Action,
                         Size = new Position(1, 2),
                         Death = EnemyDefeat.Ghoul,
-                        Hp = new Bar(306),
+                        Hp = new Slider(306),
                         Stats = new BattleStats(80, 40, 30, 20),
                         Experience = 75
                     }
@@ -460,7 +471,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.GrimReaper.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.GrimReaper,
-                        Hp = new Bar(272),
+                        Hp = new Slider(272),
                         Stats = new BattleStats(100, 20, 45, 60),
                         Experience = 100
                     }
@@ -476,7 +487,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Scarab.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Scarab,
-                        Hp = new Bar(100),
+                        Hp = new Slider(100),
                         Stats = new BattleStats(80),
                         Experience = 60
                     }
@@ -492,7 +503,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.KillerMole.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.KillerMole,
-                        Hp = new Bar(400),
+                        Hp = new Slider(400),
                         Stats = new BattleStats(150, 100, 100, 75),
                         Experience = 175
                     }
@@ -508,7 +519,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Imp.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Imp,
-                        Hp = new Bar(600),
+                        Hp = new Slider(600),
                         Stats = new BattleStats(125, 105, 90, 140),
                         Experience = 180
                     }
@@ -524,7 +535,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Worm.Action,
                         Size = new Position(2),
                         Death = EnemyDefeat.Worm,
-                        Hp = new Bar(950),
+                        Hp = new Slider(950),
                         Stats = new BattleStats(160, 70, 130, 70),
                         Experience = 200
                     }
@@ -540,7 +551,7 @@ namespace DesertRage.ViewModel
                         Action = EnemyImages.Master.Action,
                         Size = new Position(1),
                         Death = EnemyDefeat.Master,
-                        Hp = new Bar(760),
+                        Hp = new Slider(760),
                         Stats = new BattleStats(160),
                         Experience = 255
                     }
@@ -562,7 +573,7 @@ namespace DesertRage.ViewModel
                         Action = BossImages.Pharaoh.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.Pharaoh,
-                        Hp = new Bar(500),
+                        Hp = new Slider(500),
                         Stats = new BattleStats(75, 40, 40, 35),
                         Experience = 100
                     }
@@ -578,7 +589,7 @@ namespace DesertRage.ViewModel
                         Action = BossImages.Friend.Action,
                         Size = new Position(1, 2),
                         Death = BossesDefeat.Friend,
-                        Hp = new Bar(2000),
+                        Hp = new Slider(2000),
                         Stats = new BattleStats(170, 120, 90, 140),
                         Experience = 200
                     }
@@ -594,7 +605,7 @@ namespace DesertRage.ViewModel
                         Action = BossImages.TheRuler.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.TheRuler,
-                        Hp = new Bar(10000),
+                        Hp = new Slider(10000),
                         Stats = new BattleStats(255),
                         Experience = 255
                     }
@@ -610,7 +621,7 @@ namespace DesertRage.ViewModel
                         Action = BossImages.UghZan.Action,
                         Size = new Position(2, 3),
                         Death = BossesDefeat.UghZan,
-                        Hp = new Bar(350),
+                        Hp = new Slider(350),
                         Stats = new BattleStats(100),
                         Experience = 150
                     }

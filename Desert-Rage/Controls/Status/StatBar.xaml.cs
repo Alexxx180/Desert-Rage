@@ -1,9 +1,9 @@
-﻿using DesertRage.Model.Locations.Battle.Stats;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using Slider = DesertRage.Model.Locations.Battle.Stats.Slider;
 
 namespace DesertRage.Controls.Status
 {
@@ -14,7 +14,7 @@ namespace DesertRage.Controls.Status
     {
         public static readonly DependencyProperty
             BarProperty = DependencyProperty.Register(
-                nameof(Bar), typeof(Bar), typeof(StatBar));
+                nameof(Bar), typeof(Slider), typeof(StatBar));
 
         #region StatBar Members
         private string _сaption;
@@ -39,9 +39,9 @@ namespace DesertRage.Controls.Status
             }
         }
 
-        public Bar Bar
+        public Slider Bar
         {
-            get => (Bar)GetValue(BarProperty);
+            get => (Slider)GetValue(BarProperty);
             set => SetValue(BarProperty, value);
         }
         #endregion

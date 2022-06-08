@@ -8,14 +8,79 @@ namespace DesertRage.ViewModel.Battle
 {
     public abstract class BattleOptions : INotifyPropertyChanged
     {
-        private protected readonly DispatcherTimer _timing;
-
         private protected BattleOptions()
         {
             _timing = new DispatcherTimer();
             _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
             Enemies = new ObservableCollection<Enemy>();
         }
+
+        #region Timing Members
+        private readonly DispatcherTimer _timing;
+
+        internal void HealPoison(in Participant unit)
+        {
+            System.Diagnostics.Trace.WriteLine("GOT IT!!");
+
+            _timing.Tick -= unit.Poison;
+            unit.SetPoison(false);
+        }
+
+        internal void Poison(in Participant unit)
+        {
+            if (unit.IsPoisoned)
+                return;
+
+            _timing.Tick += unit.Poison;
+            unit.SetPoison(true);
+        }
+
+        private protected void EndTurns(in Participant unit)
+        {
+            _timing.Tick -= unit.WaitForTurn;
+            HealPoison(unit);
+        }
+
+        private protected void StartTurns(in Participant unit)
+        {
+            _timing.Tick += unit.WaitForTurn;
+        }
+
+        #region Option Members
+        public void RunAway()
+        {
+            _timing.Stop();
+            DenyEnemyTurns();
+            CleanBattlefield();
+            End();
+        }
+
+        public void SafeFreeze()
+        {
+            if (IsBattle)
+                Freeze();
+        }
+
+        private protected virtual void Freeze()
+        {
+            _timing.Stop();
+            DenyEnemyTurns();
+        }
+
+        public void Pause()
+        {
+            if (IsBattle)
+                _timing.Stop();
+        }
+
+        public void Resume()
+        {
+            if (IsBattle)
+                _timing.Start();
+        }
+        #endregion
+
+        #endregion
 
         #region Enemy Members
         public bool IsBattle => Enemies.Count > 0;
@@ -51,23 +116,21 @@ namespace DesertRage.ViewModel.Battle
         private protected void EnemyTurns()
         {
             for (byte i = 0; i < Enemies.Count; i++)
-                _timing.Tick += Enemies[i].WaitForTurn;
+            {
+                StartTurns(Enemies[i]);
+                //Poison(Enemies[i]);
+            }
         }
 
         private void DenyEnemyTurns()
         {
             for (byte i = 0; i < Enemies.Count; i++)
-                EnemyTurnsOver(Enemies[i]);
-        }
-
-        private void EnemyTurnsOver(in Enemy enemy)
-        {
-            _timing.Tick -= enemy.WaitForTurn;
+                EndTurns(Enemies[i]);
         }
 
         internal void EnemyDefeat(in Enemy enemy)
         {
-            EnemyTurnsOver(enemy);
+            EndTurns(enemy);
             _ = Enemies.Remove(enemy);
 
             if (!IsBattle)
@@ -75,45 +138,11 @@ namespace DesertRage.ViewModel.Battle
         }
         #endregion
 
-        #region Option Members
-        public void RunAway()
-        {
-            _timing.Stop();
-            DenyEnemyTurns();
-            CleanBattlefield();
-            End();
-        }
-
-        public void SafeFreeze()
-        {
-            if (IsBattle)
-                Freeze();
-        }
-
-        private protected virtual void Freeze()
-        {
-            _timing.Stop();
-            DenyEnemyTurns();
-        }
-
-        public void Pause()
-        {
-            if (IsBattle)
-                _timing.Stop();
-        }
-
-        public void Resume()
-        {
-            if (IsBattle)
-                _timing.Start();
-        }
-
         public abstract void Start();
         private protected abstract void End();
 
         public abstract void Won();
         public abstract void Lose();
-        #endregion
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

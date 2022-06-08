@@ -1,8 +1,8 @@
-﻿using DesertRage.Model.Locations.Battle.Stats;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using Slider = DesertRage.Model.Locations.Battle.Stats.Slider;
 
 namespace DesertRage.Controls.Status
 {
@@ -26,11 +26,11 @@ namespace DesertRage.Controls.Status
         #region Health Members
         public static readonly DependencyProperty
             HealthPointsProperty = DependencyProperty.Register(
-                nameof(HealthPoints), typeof(Bar), typeof(StatusPanel));
+                nameof(HealthPoints), typeof(Slider), typeof(StatusPanel));
 
-        public Bar HealthPoints
+        public Slider HealthPoints
         {
-            get => (Bar)GetValue(HealthPointsProperty);
+            get => (Slider)GetValue(HealthPointsProperty);
             set => SetValue(HealthPointsProperty, value);
         }
         #endregion
@@ -38,11 +38,11 @@ namespace DesertRage.Controls.Status
         #region Action Members
         public static readonly DependencyProperty
             ActionPointsProperty = DependencyProperty.Register(
-                nameof(ActionPoints), typeof(Bar), typeof(StatusPanel));
+                nameof(ActionPoints), typeof(Slider), typeof(StatusPanel));
 
-        public Bar ActionPoints
+        public Slider ActionPoints
         {
-            get => (Bar)GetValue(ActionPointsProperty);
+            get => (Slider)GetValue(ActionPointsProperty);
             set => SetValue(ActionPointsProperty, value);
         }
         #endregion

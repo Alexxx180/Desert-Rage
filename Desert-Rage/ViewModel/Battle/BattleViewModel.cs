@@ -22,7 +22,7 @@ namespace DesertRage.ViewModel.Battle
         public BattleViewModel(UserProfile profile) : this()
         {
             Human = new Person(this, profile);
-            _timing.Tick += Human.WaitForTurn;
+            StartTurns(Human);
         }
 
         #region UI Members
@@ -64,7 +64,7 @@ namespace DesertRage.ViewModel.Battle
         private readonly IEnemyAppearing _drawStrategy;
         #endregion
 
-        #region Option Members
+        #region BattleOptions
         public override void Start()
         {
             Entry.Display.Content = Scene;
@@ -88,7 +88,7 @@ namespace DesertRage.ViewModel.Battle
         private protected override void Freeze()
         {
             base.Freeze();
-            _timing.Tick -= Human.WaitForTurn;
+            EndTurns(Human);
         }
 
         public override void Won()

@@ -15,8 +15,6 @@ using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Resources.Media.OST.Noises.Info;
 using DesertRage.ViewModel.Battle;
 using DesertRage.ViewModel.Battle.Actions;
-using DesertRage.Model;
-using System.IO;
 
 namespace DesertRage.ViewModel
 {
@@ -222,7 +220,7 @@ namespace DesertRage.ViewModel
                 [Hero.SelectedArmor.Special].Power;
 
             Hero.Hit(value);
-            UpdateHero();
+            //UpdateHero();
         }
 
         public void AddExperience(int experience)
@@ -236,7 +234,7 @@ namespace DesertRage.ViewModel
             {
                 toNext = Hero.Experience.Max - experience;
 
-                Hero.Experience = Hero.Experience.Restore(experience);
+                Hero.Experience.Fill(experience.ToUShort());
 
                 if (Hero.Experience.IsMax)
                 {
@@ -254,10 +252,10 @@ namespace DesertRage.ViewModel
             NextStats stats = Bank.GetNextStats("Ray");
             byte level = Hero.Level;
 
-            Hero.Hp = stats.Hp[level];
-            Hero.Ap = stats.Ap[level];
+            Hero.Hp.Set(stats.Hp[level]);
+            Hero.Ap.Set(stats.Ap[level]);
             Hero.Stats = stats.Stats[level];
-            Hero.Experience = stats.Experience[level];
+            Hero.Experience.Set(stats.Experience[level]);
             Hero.Level++;
         }
 
