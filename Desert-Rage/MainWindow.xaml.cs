@@ -74,7 +74,7 @@ namespace DesertRage
             
             path = "/Resources/Media/Data/Map/SecretTemple.json".ToFull();
             Location level = App.Processor.Read<Location>(path);
-            hero.Place = level.Start;
+            hero.SetPlace(level.Start);
 
             UserProfile user = new UserProfile
             {

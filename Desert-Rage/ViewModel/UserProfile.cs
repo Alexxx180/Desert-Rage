@@ -14,7 +14,7 @@ using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Resources.Media.OST.Noises.Info;
 using DesertRage.ViewModel.Battle;
-using DesertRage.ViewModel.Battle.Actions;
+using DesertRage.ViewModel.Battle.Components.Actions;
 
 namespace DesertRage.ViewModel
 {
@@ -192,7 +192,7 @@ namespace DesertRage.ViewModel
             {
                 _level = value;
                 OnPropertyChanged();
-                Battle.SetFoes();
+                Battle.SetFoes(value.StageFoes);
             }
         }
 
@@ -347,7 +347,7 @@ namespace DesertRage.ViewModel
                 SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
             }
 
-            UpdateHero();
+            //UpdateHero();
         }
 
         internal void ResetDanger()
@@ -359,7 +359,6 @@ namespace DesertRage.ViewModel
         public void Stand()
         {
             Hero.Stand();
-            UpdateHero();
         }
         #endregion
 

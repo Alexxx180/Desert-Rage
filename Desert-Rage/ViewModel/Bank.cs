@@ -7,11 +7,11 @@ using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Resources.Media.OST.Noises.Actions;
 using DesertRage.Resources.Media.OST.Noises.Actions.Items;
-using DesertRage.ViewModel.Battle.Actions;
-using DesertRage.ViewModel.Battle.Actions.Kinds;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Dependent.Dependency;
-using DesertRage.ViewModel.Battle.Actions.Kinds.Independent;
+using DesertRage.ViewModel.Battle.Components.Actions;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.Resources.Media.OST.Sounds.Defeat.Enemies;
 using DesertRage.Resources.Media.OST.Sounds.Defeat.Bosses;
 using DesertRage.Resources.Media.Images.Menu.Skills;
@@ -21,7 +21,7 @@ using BossImages = DesertRage.Resources.Media.Images.Battle.Bosses;
 using System;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Battle.Stats.Player;
-using DesertRage.ViewModel.Battle.Strategy.Fight;
+using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 using DesertRage.Model.Locations.Battle;
 
 namespace DesertRage.ViewModel
@@ -45,12 +45,12 @@ namespace DesertRage.ViewModel
                 ("/Resources/Media/Data/Items/Equipment.json");
         }
 
-        internal static IParticipantFight FightStrategy(Foe unit)
+        internal static IParticipantFight[] Fights()
         {
-            return unit.Strategy switch
+            return new IParticipantFight[]
             {
-                FightingMode.POSION => new Poison(unit, new Position(8, 1)),
-                _ => new Attack(unit)
+                new Poison(new Position(8, 1)),
+                new Attack()
             };
         }
 

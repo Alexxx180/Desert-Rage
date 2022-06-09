@@ -889,7 +889,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\Battle\Strategy\Statuses\" />
+    <Folder Include="ViewModel\Battle\Components\Strategy\Statuses\" />
   </ItemGroup>
   
   <Target Name="AfterResolveReferences">
