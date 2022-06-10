@@ -1,9 +1,10 @@
-﻿using DesertRage.Model.Locations;
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System.ComponentModel;
 
-namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent
+namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status
 {
     public class StatusCommand : ActCommand, IAction, INotifyPropertyChanged
     {
@@ -19,11 +20,26 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent
             State = state;
         }
 
-        public void Use(object parameter)
+        public virtual void Use(object parameter)
         {
             Act();
+
+            if (Hero.Status[Status.Int()])
+            {
+
+                if (!State)
+                    ViewModel.RemoveStateEvent(Man.StatusEvents[Status]);
+                else
+                    Hero.StatusTiming[Status.Int()].Fill();
+            }
+            else
+            {
+
+                if (State)
+                    ViewModel.AddStateEvent(Man.StatusEvents[Status]);
+            }
+
             Hero.SetStatus(Status, State);
-            User.UpdateHero();
         }
 
         public StatusID Status { get; set; }

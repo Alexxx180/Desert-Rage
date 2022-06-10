@@ -23,6 +23,7 @@ using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 using DesertRage.Model.Locations.Battle;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
 
 namespace DesertRage.ViewModel
 {
@@ -94,8 +95,8 @@ namespace DesertRage.ViewModel
                 {
                     SkillsID.Antidote,
                     new ConsumeCommand(
-                        new StatusCommand(
-                            StatusID.POISON, false,
+                        new RemoveStatus(
+                            StatusID.POISON,
                             new NoiseUnit
                             {
                                 Name = "Антидот",
@@ -112,8 +113,8 @@ namespace DesertRage.ViewModel
                 {
                     SkillsID.BuffUp,
                     new ConsumeCommand(
-                        new StatusCommand(
-                            StatusID.REINFORCEMENT, true,
+                        new ApplyStatus(
+                            StatusID.REINFORCEMENT,
                             new NoiseUnit
                             {
                                 Name = "Усиление",
@@ -129,8 +130,8 @@ namespace DesertRage.ViewModel
                 {
                     SkillsID.Shield,
                     new ConsumeCommand(
-                        new StatusCommand(
-                            StatusID.SHIELD, true,
+                        new ApplyStatus(
+                            StatusID.SHIELD,
                             new NoiseUnit
                             {
                                 Name = "Охрана",
@@ -282,8 +283,8 @@ namespace DesertRage.ViewModel
                 ),
 
                 new ConsumeCommand(
-                    new StatusCommand(
-                        StatusID.POISON, false,
+                    new RemoveStatus(
+                        StatusID.POISON,
                         new NoiseUnit
                         {
                             Name = "Антидот",

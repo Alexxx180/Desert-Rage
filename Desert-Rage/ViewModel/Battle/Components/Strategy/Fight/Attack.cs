@@ -1,4 +1,5 @@
 ﻿using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.ViewModel.Battle.Components.Participation;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
@@ -14,12 +15,10 @@ namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
 
         public virtual void Fight()
         {
-            ushort power = Unit.Stats.Attack;
-            power += Unit.Stats.Special;
+            ushort power = Stats.Attack;
+            power += Stats.Special;
 
-            System.Diagnostics.Trace.WriteLine(ViewModel.Human.Player.Hero.Hp);
-            System.Diagnostics.Trace.WriteLine(power);
-            ViewModel.Human.Hit(power);
+            Victim.Hit(power);
         }
 
         public virtual void Dispose()
@@ -36,6 +35,9 @@ namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
                 ViewModel = ViewModel
             };
         }
+
+        public Participant Victim => ViewModel.Human;
+        public BattleStats Stats => Unit.Stats;
 
         public BattleUnit Unit { get; set; }
     }

@@ -7,6 +7,7 @@ using DesertRage.ViewModel.Battle.Components.Actions;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent;
+using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.Battle.Components.Participation
@@ -37,7 +38,8 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
             );
 
             Shield = new InstantCommand(
-                new StatusCommand(StatusID.DEFENCE, true,
+                new ApplyStatus(
+                    StatusID.DEFENCE,
                     new NoiseUnit()
                     {
                         Noise = ActionNoises.DefenceBoost
@@ -56,7 +58,8 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
             );
 
             Auto = new InstantCommand(
-                new StatusCommand(StatusID.BERSERK, true,
+                new ApplyStatus(
+                    StatusID.BERSERK,
                     new NoiseUnit()
                     {
                         Noise = ActionNoises.PowerBoost

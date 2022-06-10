@@ -1,4 +1,5 @@
-﻿using DesertRage.Model.Locations;
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System;
 
@@ -18,13 +19,29 @@ namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
 
         public override void Fight()
         {
-            if (_poison.Next(_chance.Y, _chance.X) == _chance.Y)
+            if (_poison.Next(_chance.Y, _chance.X) != _chance.Y)
             {
-                ViewModel.Human.Unit.SetStatus(StatusID.POISON, false);
+                base.Fight();
             }
             else
             {
-                base.Fight();
+                Venom();
+            }
+        }
+
+        private void Venom()
+        {
+            StatusID poison = StatusID.POISON;
+            int poisonId = poison.Int();
+
+            if (Victim.Unit.Status[poisonId])
+            {
+                Victim.Unit.StatusTiming[poisonId].Fill();
+            }
+            else
+            {
+                Victim.Unit.SetStatus(poisonId, true);
+                ViewModel.AddStateEvent(Victim.StatusEvents[poison]);
             }
         }
 
