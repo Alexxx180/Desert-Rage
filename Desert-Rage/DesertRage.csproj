@@ -117,6 +117,7 @@
     <None Remove="Resources\Media\Images\Menu\Skills\Cure2.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\DefenceUp.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Heal.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Poison.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Slide.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Slingshot.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Storm.svg" />
@@ -271,6 +272,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Battle\Enemies\Zombie\Idle.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Poison.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Menu\Topics\Actions.svg">

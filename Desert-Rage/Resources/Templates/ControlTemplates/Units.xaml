@@ -104,7 +104,25 @@
                         </status:StatBar.ForeBrush>
                     </status:StatBar>
 
-                    <UniformGrid Columns="12" VerticalAlignment="Stretch">
+                    <ItemsControl ItemsSource="{Binding Path=Player.Hero.StatusInfo}">
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
+
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="12" Rows="1"
+                                         VerticalAlignment="Stretch"
+                                         IsItemsHost="True"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <StaticResource ResourceKey="StatusTemplate"/>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    
+                    <!--<UniformGrid Columns="12" VerticalAlignment="Stretch">
                         <Grid.Row>
                             1
                         </Grid.Row>
@@ -113,7 +131,7 @@
                         <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
                         <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
                         <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
-                    </UniformGrid>
+                    </UniformGrid>-->
                 </Grid>
             </Grid>
 
@@ -208,7 +226,7 @@
                     </Style>
                 </svgc:SvgViewbox.Style>
             </svgc:SvgViewbox>
-            
+
             <Menu x:Name="MOptions">
                 <Grid.Row>
                     2
@@ -532,21 +550,5 @@
 
             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
-    </ControlTemplate>
-
-    <ControlTemplate x:Key="EquipSelector">
-        <ComboBox>
-            <ComboBox.Style>
-                <StaticResource ResourceKey="StretchFont"/>
-            </ComboBox.Style>
-
-            <ComboBox.ItemTemplate>
-                <StaticResource ResourceKey="PowerTemplate"/>
-            </ComboBox.ItemTemplate>
-
-            <ComboBox.ItemsSource>
-                <Binding/>
-            </ComboBox.ItemsSource>
-        </ComboBox>
     </ControlTemplate>
 </ResourceDictionary>

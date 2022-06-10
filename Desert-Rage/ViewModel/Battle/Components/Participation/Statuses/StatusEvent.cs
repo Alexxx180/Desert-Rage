@@ -11,8 +11,8 @@ namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
             if (Participant.IsDead ||
                 Participant.NoStatus(Status))
             {
+                Participant.Unit.SetStatus(Status, false);
                 RemoveEvent();
-                return;
             }
         }
 

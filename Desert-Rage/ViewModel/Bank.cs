@@ -51,7 +51,7 @@ namespace DesertRage.ViewModel
             return new IParticipantFight[]
             {
                 new Attack(),
-                new Poison(new Position(8, 1))
+                new Poison(new Position(4, 1))
             };
         }
 
@@ -378,7 +378,8 @@ namespace DesertRage.ViewModel
                         Death = EnemyDefeat.Spider,
                         Stats = new BattleStats(25, 3, 10, 0),
                         Hp = new Slider(65),
-                        Experience = 5
+                        Experience = 5,
+                        Strategy = FightingMode.POSION
                     }
                 },
 

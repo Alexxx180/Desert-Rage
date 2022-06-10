@@ -13,11 +13,9 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Statu
         {
             int statusId = Status.Int();
 
-            if (Hero.Status[statusId])
-            {
-                Hero.StatusTiming[statusId].Fill();
-            }
-            else
+            Hero.StatusInfo[statusId].Time.Fill();
+
+            if (!Hero.Status[statusId])
             {
                 ViewModel.AddStateEvent(Man.StatusEvents[Status]);
             }

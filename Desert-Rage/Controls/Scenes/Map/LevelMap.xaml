@@ -702,38 +702,6 @@
 
             <!--#endregion-->
 
-            <Grid Grid.Row="2" Grid.Column="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*"/>
-                    <ColumnDefinition Width="0.7*"/>
-                    <ColumnDefinition Width="0.15*"/>
-                </Grid.ColumnDefinitions>
-
-                <ProgressBar x:Name="HPhelper" Orientation="Vertical" Visibility="Collapsed">
-                    <ProgressBar.Minimum>
-                        0
-                    </ProgressBar.Minimum>
-
-                    <ProgressBar.Value>
-                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Hp.Current"/>
-                    </ProgressBar.Value>
-
-                    <ProgressBar.Maximum>
-                        <Binding ElementName="MapView" Path="DataContext.UserData.Hero.Hp.Max"/>
-                    </ProgressBar.Maximum>
-
-                    <ProgressBar.Foreground>
-                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                            <GradientStop Color="#FF3AAC28"/>
-                            <GradientStop Color="#FF00F3FF" Offset="1"/>
-                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                        </LinearGradientBrush>
-                    </ProgressBar.Foreground>
-                </ProgressBar>
-            </Grid>
-            
-            
-
             <Viewbox>
                 <Grid.Row>
                     5

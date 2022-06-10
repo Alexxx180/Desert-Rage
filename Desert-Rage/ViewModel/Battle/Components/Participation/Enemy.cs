@@ -46,10 +46,13 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
         private void Turn()
         {
             IsAct = true;
-
-            _strategy.Fight();
-
+            Berserk();
             IsAct = false;
+        }
+
+        public override void Berserk()
+        {
+            _strategy.Fight();
         }
 
         public override void WaitForTurn(object sender, object o)

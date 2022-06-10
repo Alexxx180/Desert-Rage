@@ -18,11 +18,7 @@
                         </Grid.Row>
 
                         <attach:SvgBox.Source>
-                            <Binding>
-                                <Binding.Path>
-                                    Unit.Icon
-                                </Binding.Path>
-                            </Binding>
+                            <Binding Path="Unit.Icon"/>
                         </attach:SvgBox.Source>
 
                         <attach:SvgBox.Stretch>
@@ -136,5 +132,58 @@
                 </TextBlock>
             </DockPanel.ToolTip>
         </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="StatusTemplate">
+        <Grid DataContext="{Binding}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <svgc:SvgViewbox>
+                <attach:SvgBox.Source>
+                    <Binding Path="Icon"/>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <ProgressBar Background="#B8000000"
+                         Foreground="#FF00F3FF">
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <ProgressBar.Orientation>
+                    Vertical
+                </ProgressBar.Orientation>
+
+                <ProgressBar.Minimum>
+                    <Binding Path="Time.Minimum"/>
+                </ProgressBar.Minimum>
+
+                <ProgressBar.Value>
+                    <Binding Path="Time.Current"/>
+                </ProgressBar.Value>
+
+                <ProgressBar.Maximum>
+                    <Binding Path="Time.Max"/>
+                </ProgressBar.Maximum>
+            </ProgressBar>
+
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Time.Current}" Value="0">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+        </Grid>
     </DataTemplate>
 </ResourceDictionary>

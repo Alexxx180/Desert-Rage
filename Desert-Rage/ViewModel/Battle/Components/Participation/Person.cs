@@ -129,6 +129,12 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
             IsAct = false;
         }
 
+        public override void Berserk()
+        {
+            Act();
+            Fight.Execute(ViewModel.Enemies[0]);
+        }
+
         public void Cure(in int value)
         {
             Unit.Cure(value);

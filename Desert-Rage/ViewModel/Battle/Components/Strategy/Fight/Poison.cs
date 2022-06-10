@@ -19,8 +19,10 @@ namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
 
         public override void Fight()
         {
+            
             if (_poison.Next(_chance.Y, _chance.X) != _chance.Y)
             {
+                //System.Diagnostics.Trace.WriteLine("YES-YES-YES");
                 base.Fight();
             }
             else
@@ -34,11 +36,9 @@ namespace DesertRage.ViewModel.Battle.Components.Strategy.Fight
             StatusID poison = StatusID.POISON;
             int poisonId = poison.Int();
 
-            if (Victim.Unit.Status[poisonId])
-            {
-                Victim.Unit.StatusTiming[poisonId].Fill();
-            }
-            else
+            Victim.Unit.StatusInfo[poisonId].Time.Fill();
+
+            if (!Victim.Unit.Status[poisonId])
             {
                 Victim.Unit.SetStatus(poisonId, true);
                 ViewModel.AddStateEvent(Victim.StatusEvents[poison]);

@@ -21,6 +21,7 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
                     (this, StatusID.SHIELD) },
                 { StatusID.DEFENCE, new Reinforcement
                     (this, StatusID.DEFENCE) },
+                { StatusID.BERSERK, new Berserk(this) }
             };
         }
 
@@ -74,6 +75,7 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
 
         private protected abstract void Damage(int value);
         private protected abstract void Defeat();
+        public abstract void Berserk();
 
         public bool IsDead => Unit.Hp.IsEmpty;
 
@@ -110,7 +112,7 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
         #region Time Events
         public bool NoStatus(StatusID id)
         {
-            Slider status = Unit.StatusTiming[id.Int()];
+            Slider status = Unit.StatusInfo[id.Int()].Time;
             status.Drain(1);
 
             return status.IsEmpty;
@@ -128,7 +130,6 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
         }
         #endregion
 
-        public readonly Dictionary<StatusID,
-            IStatusEvent> StatusEvents;
+        public readonly Dictionary<StatusID, IStatusEvent> StatusEvents;
     }
 }
