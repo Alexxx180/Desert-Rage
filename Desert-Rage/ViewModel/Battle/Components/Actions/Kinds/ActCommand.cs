@@ -1,7 +1,7 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel.Battle.Components.Actions;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds

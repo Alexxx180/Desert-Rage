@@ -9,7 +9,7 @@ using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent;
 using System.ComponentModel;
 
-namespace DesertRage.ViewModel.Battle.Participation
+namespace DesertRage.ViewModel.Battle.Components.Participation
 {
     public class Person : Participant, INotifyPropertyChanged
     {

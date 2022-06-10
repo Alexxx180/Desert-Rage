@@ -2,7 +2,8 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Threading;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation.Statuses;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -16,20 +17,15 @@ namespace DesertRage.ViewModel.Battle
 
         #region Event Members
 
-        #region Poison
-        internal void HealPoison(in Participant unit)
+        #region State Events
+        public void AddStateEvent(in IStatusEvent status)
         {
-            _timing.Tick -= unit.Poison;
-            unit.SetPoison(false);
+            _timing.Tick += status.StateEvent;
         }
 
-        internal void Poison(in Participant unit)
+        public void RemoveStateEvent(in IStatusEvent status)
         {
-            if (unit.IsPoisoned)
-                return;
-
-            _timing.Tick += unit.Poison;
-            unit.SetPoison(true);
+            _timing.Tick -= status.StateEvent;
         }
         #endregion
 
@@ -37,7 +33,6 @@ namespace DesertRage.ViewModel.Battle
         private protected void EndTurns(in Participant unit)
         {
             _timing.Tick -= unit.WaitForTurn;
-            HealPoison(unit);
         }
 
         private protected void StartTurns(in Participant unit)

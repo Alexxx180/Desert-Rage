@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using DesertRage.Controls.Scenes;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
 
 namespace DesertRage.ViewModel.Battle
 {

@@ -4,7 +4,7 @@
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
-                    xmlns:participant="clr-namespace:DesertRage.ViewModel.Battle.Participation"
+                    xmlns:participant="clr-namespace:DesertRage.ViewModel.Battle.Components.Participation"
                     xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
     <DataTemplate x:Key="TargetTemplate">
         <DataTemplate.DataType>

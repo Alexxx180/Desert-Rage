@@ -3,7 +3,7 @@ using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
 
 namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent
 {

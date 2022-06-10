@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -74,7 +75,7 @@ namespace DesertRage.ViewModel.Battle
             for (byte i = 0; i < Enemies.Count; i++)
             {
                 StartTurns(Enemies[i]);
-                Poison(Enemies[i]);
+                AddStateEvent(Enemies[i].StatusEvents[StatusID.POISON]);
             }
         }
 

@@ -1,4 +1,4 @@
-﻿namespace DesertRage.ViewModel.Battle
+﻿namespace DesertRage.ViewModel.Battle.Components
 {
     public interface IBattle : IViewModelObservable<BattleViewModel>
     {

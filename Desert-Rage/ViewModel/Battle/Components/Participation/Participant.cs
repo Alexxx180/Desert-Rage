@@ -1,14 +1,27 @@
-﻿using DesertRage.Model.Locations.Battle.Stats;
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.ViewModel.Battle.Components.Participation.Statuses;
+using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace DesertRage.ViewModel.Battle.Participation
+namespace DesertRage.ViewModel.Battle.Components.Participation
 {
     public abstract class Participant : Battle, INotifyPropertyChanged, IViewModelObservable<BattleViewModel>
     {
         private protected Participant()
         {
             Time = new Slider(0, 1000);
-            OnPropertyChanged(nameof(Unit));
+            StatusEvents = new Dictionary<StatusID, IStatusEvent>
+            {
+                { StatusID.POISON, new Poison(this) },
+                { StatusID.REINFORCEMENT, new Reinforcement
+                    (this, StatusID.REINFORCEMENT) },
+                { StatusID.SHIELD, new Reinforcement
+                    (this, StatusID.SHIELD) },
+                { StatusID.DEFENCE, new Reinforcement
+                    (this, StatusID.DEFENCE) },
+            };
         }
 
         #region Timing Members
@@ -62,43 +75,45 @@ namespace DesertRage.ViewModel.Battle.Participation
         private protected abstract void Damage(int value);
         private protected abstract void Defeat();
 
+        public bool IsDead => Unit.Hp.IsEmpty;
+
         public void Hit(in int value)
         {
-            if (Unit.Hp.IsEmpty)
+            if (IsDead)
                 return;
 
             IsHit = true;
 
             Damage(value);
-            if (Unit.Hp.IsEmpty)
-            {
-                Defeat();
-            }
-
-            OnPropertyChanged(nameof(Unit));
+            SafeDefeat();
 
             IsHit = false;
         }
 
-        public void SetPoison(bool state)
+        public void ToughHit(in ushort value)
         {
-            IsPoisoned = state;
-        }
-
-        #region Time Events
-        public virtual void Poison(object sender, object o)
-        {
-            System.Diagnostics.Trace.WriteLine("THAT'S NOT ALL RIGHT " + Unit.Hp.ToString());
-            if (Unit.Hp.IsEmpty)
+            if (IsDead)
                 return;
 
-            Unit.Hp.Drain(1);
-            if (Unit.Hp.IsEmpty)
+            Unit.Hp.Drain(value);
+            SafeDefeat();
+        }
+
+        private void SafeDefeat()
+        {
+            if (IsDead)
             {
                 Defeat();
             }
+        }
 
-            //OnPropertyChanged(nameof(Unit));
+        #region Time Events
+        public bool NoStatus(StatusID id)
+        {
+            Slider status = Unit.StatusTiming[id.Int()];
+            status.Drain(1);
+
+            return status.IsEmpty;
         }
 
         public virtual void WaitForTurn(object sender, object o)
@@ -112,5 +127,8 @@ namespace DesertRage.ViewModel.Battle.Participation
             Time.Fill(speed);
         }
         #endregion
+
+        public readonly Dictionary<StatusID,
+            IStatusEvent> StatusEvents;
     }
 }

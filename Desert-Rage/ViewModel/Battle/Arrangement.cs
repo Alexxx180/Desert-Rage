@@ -5,7 +5,7 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.ViewModel.Battle.Components.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations;
-using DesertRage.ViewModel.Battle.Participation;
+using DesertRage.ViewModel.Battle.Components.Participation;
 
 namespace DesertRage.ViewModel.Battle
 {

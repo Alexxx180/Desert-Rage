@@ -6,7 +6,7 @@ using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 
-namespace DesertRage.ViewModel.Battle.Participation
+namespace DesertRage.ViewModel.Battle.Components.Participation
 {
     public class Enemy : Participant, INotifyPropertyChanged
     {

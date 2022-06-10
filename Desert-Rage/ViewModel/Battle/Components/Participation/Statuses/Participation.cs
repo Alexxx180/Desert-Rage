@@ -1,12 +1,18 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DesertRage.ViewModel.Battle.Components
+namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
 {
-    public class Battle : IBattle, INotifyPropertyChanged
+    public class Participation : IParticipation, INotifyPropertyChanged
     {
-        private BattleViewModel _viewModel;
-        public BattleViewModel ViewModel
+        public Participation
+            (Participant participant)
+        {
+            Participant = participant;
+        }
+
+        private Participant _viewModel;
+        public Participant Participant
         {
             get => _viewModel;
             set
@@ -16,9 +22,9 @@ namespace DesertRage.ViewModel.Battle.Components
             }
         }
 
-        public virtual void SetViewModel(BattleViewModel viewModel)
+        public virtual void SetViewModel(Participant viewModel)
         {
-            ViewModel = viewModel;
+            Participant = viewModel;
         }
 
         #region INotifyPropertyChanged Members
@@ -37,7 +43,6 @@ namespace DesertRage.ViewModel.Battle.Components
                 handler(this, e);
             }
         }
-
         #endregion
     }
 }
