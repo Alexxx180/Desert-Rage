@@ -51,7 +51,7 @@ namespace DesertRage.ViewModel
             return new IParticipantFight[]
             {
                 new Attack(),
-                new Poison(new Position(4, 1))
+                new Poison(new Position(8, 1))
             };
         }
 
