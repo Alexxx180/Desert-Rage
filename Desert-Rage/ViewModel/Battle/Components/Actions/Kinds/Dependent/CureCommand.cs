@@ -18,7 +18,6 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent
         {
             Act();
             Hero.Cure(Power);
-            User.UpdateHero();
         }
 
         protected int Power => StatUnit.Power.ToInt();

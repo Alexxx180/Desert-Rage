@@ -4,6 +4,7 @@ using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 
 namespace DesertRage.ViewModel.Battle.Components.Participation
@@ -69,9 +70,11 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
         public override BattleUnit Unit => _foe;
 
         public byte Experience => _foe.Experience;
+        public EnemyBestiary ID => _foe.ID;
+
         private IParticipantFight _strategy;
 
-        public Position Tile { get; set; }
         public Position Size => _foe.Size;
+        public Position Tile { get; set; }
     }
 }

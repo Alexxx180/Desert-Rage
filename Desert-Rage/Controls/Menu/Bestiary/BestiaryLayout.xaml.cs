@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesertRage.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,21 @@ namespace DesertRage.Controls.Menu.Bestiary
     /// </summary>
     public partial class BestiaryLayout : UserControl
     {
+        public static readonly DependencyProperty
+            PlayerProperty = DependencyProperty.Register(nameof(Player),
+                typeof(UserProfile), typeof(BestiaryLayout));
+
+        public UserProfile Player
+        {
+            get => GetValue(PlayerProperty) as UserProfile;
+            set => SetValue(PlayerProperty, value);
+        }
+
         public BestiaryLayout()
         {
             InitializeComponent();
         }
+
+
     }
 }

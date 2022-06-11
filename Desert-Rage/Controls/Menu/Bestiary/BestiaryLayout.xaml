@@ -4,9 +4,113 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Bestiary"
+             xmlns:viewmodel="clr-namespace:DesertRage.ViewModel"
+             xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image x:Name="BestiaryImg" Grid.ColumnSpan="60" HorizontalAlignment="Left"  Grid.RowSpan="36" VerticalAlignment="Top" Panel.ZIndex="10" Source="/Resources/Media/Images/Menu/Kinds/Bestiary.jpg" Stretch="Fill" Opacity="0.95" Visibility="Hidden" IsEnabled="False"/>
+        <!--<Image x:Name="BestiaryImg" Grid.ColumnSpan="60" HorizontalAlignment="Left"  Grid.RowSpan="36" VerticalAlignment="Top" Panel.ZIndex="10" Source="/Resources/Media/Images/Menu/Kinds/Bestiary.jpg" Stretch="Fill" Opacity="0.95" Visibility="Hidden" IsEnabled="False"/>-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.75*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox ItemsSource="{Binding Source={x:Static viewmodel:Bank.FoeEnumeration}}">
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.ItemContainerStyle>
+                <StaticResource ResourceKey="RangerItems" />
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="TopicTemplate"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <UniformGrid Rows="3" Columns="3"/>
+
+        <UniformGrid Rows="3">
+            <Grid.Column>
+                1
+            </Grid.Column>
+
+            <Viewbox Style="{StaticResource Impact}" HorizontalAlignment="Left">
+                <TextBlock Padding="3" Text="Паук"/>
+            </Viewbox>
+
+            <status:StatBar>
+                <status:StatBar.Caption>
+                    ОЗ
+                </status:StatBar.Caption>
+
+                <!--<status:StatBar.Bar>
+                    <Binding Path="DataContext.Unit.Hp">
+                        <Binding.RelativeSource>
+                            <RelativeSource>
+                                <RelativeSource.AncestorType>
+                                    <x:Type TypeName="Grid"/>
+                                </RelativeSource.AncestorType>
+
+                                <RelativeSource.Mode>
+                                    FindAncestor
+                                </RelativeSource.Mode>
+
+                                <RelativeSource.AncestorLevel>
+                                    1
+                                </RelativeSource.AncestorLevel>
+                            </RelativeSource>
+                        </Binding.RelativeSource>
+                    </Binding>
+                </status:StatBar.Bar>-->
+            </status:StatBar>
+        </UniformGrid>
+
+        <Grid Style="{StaticResource Impact}">
+            <Grid.Row>
+                2
+            </Grid.Row>
+
+            <Grid.Column>
+                2
+            </Grid.Column>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.125*"/>
+                <ColumnDefinition Width="0.875*"/>
+            </Grid.ColumnDefinitions>
+
+            <UniformGrid Rows="4">
+                <Rectangle Fill="Black" Stroke="White"/>
+                <Rectangle Fill="Black" Stroke="White"/>
+                <Rectangle Fill="Black" Stroke="White"/>
+                <Rectangle Fill="Black" Stroke="White"/>
+            </UniformGrid>
+
+            <ScrollViewer>
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <TextBlock FontSize="20" TextWrapping="Wrap" Padding="10,5,10,5">
+                    <TextBlock.Text>
+                        Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...
+                    </TextBlock.Text>
+                </TextBlock>
+            </ScrollViewer>
+            
+        </Grid>
+        
     </Grid>
 </UserControl>

@@ -15,7 +15,6 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent
         {
             Act();
             Hero.Cure();
-            User.UpdateHero();
         }
 
         public virtual bool CanUse => true;

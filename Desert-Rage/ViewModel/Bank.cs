@@ -29,6 +29,29 @@ namespace DesertRage.ViewModel
 {
     internal static class Bank
     {
+        static Bank()
+        {
+            FoeEnumeration = new Foe[]
+            {
+                new Foe
+                {
+                    ID = EnemyBestiary.Spider,
+                    Name = "Паук",
+                    Icon = EnemyImages.Spider.Idle,
+                    Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
+                    Action = EnemyImages.Spider.Action,
+                    Size = new Position(1),
+                    Death = EnemyDefeat.Spider,
+                    Stats = new BattleStats(25, 3, 10, 0),
+                    Hp = new Slider(65),
+                    Experience = 5,
+                    Strategy = FightingMode.POSION
+                }
+            };
+        }
+
+        public static Foe[] FoeEnumeration { get; set; }
+
         private static T GetItems<T>(string path)
         {
             return App.Processor.Read<T>(path.ToFull());
@@ -109,6 +132,21 @@ namespace DesertRage.ViewModel
                     )
                 },
 
+                {
+                    SkillsID.Learn,
+                    new ConsumeCommand(
+                        new LearnCommand(
+                            new NoiseUnit
+                            {
+                                Name = "Анализ",
+                                Description = "Изучить врага как следует",
+                                Icon = Skills.Analyze,
+                                Noise = ActionNoises.Scan
+                            }
+                        ),
+                        new SkillCommand(0)
+                    )
+                },
 
                 {
                     SkillsID.BuffUp,
@@ -141,23 +179,6 @@ namespace DesertRage.ViewModel
                             }
                         ),
                         new SkillCommand(15)
-                    )
-                },
-
-                {
-                    SkillsID.Learn,
-                    new ConsumeCommand(
-                        new FightCommand(
-                            new SpecialFormula(0),
-                            new NoiseUnit
-                            {
-                                Name = "Анализ",
-                                Description = "Изучить врага как следует",
-                                Icon = Skills.Analyze,
-                                Noise = ActionNoises.Scan
-                            }
-                        ),
-                        new SkillCommand(5)
                     )
                 },
 
@@ -370,6 +391,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Spider,
                     new Foe
                     {
+                        ID = EnemyBestiary.Spider,
                         Name = "Паук",
                         Icon = EnemyImages.Spider.Idle,
                         Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
@@ -387,6 +409,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Mummy,
                     new Foe
                     {
+                        ID = EnemyBestiary.Mummy,
                         Name = "Мумия",
                         Icon = EnemyImages.Mummy.Idle,
                         Description = "Непохоже, что кто-то рассказал этому бедолаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
@@ -403,6 +426,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Zombie,
                     new Foe
                     {
+                        ID = EnemyBestiary.Zombie,
                         Name = "Зомби",
                         Icon = EnemyImages.Zombie.Idle,
                         Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
@@ -419,6 +443,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Bones,
                     new Foe
                     {
+                        ID = EnemyBestiary.Bones,
                         Name = "Страж",
                         Icon = EnemyImages.Bones.Idle,
                         Description = "Он не кажется таким уж безобидным. Спустя такой стаж охраны у него будет к вам серьезный разговор.",
@@ -435,6 +460,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Vulture,
                     new Foe
                     {
+                        ID = EnemyBestiary.Vulture,
                         Name = "Стервятник",
                         Icon = EnemyImages.Vulture.Idle,
                         Description = "Это птица? Это винтокрыл? Нет, это ручной гусь Гоша, которого хозяева снова оставили голодным одного.",
@@ -451,6 +477,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Ghoul,
                     new Foe
                     {
+                        ID = EnemyBestiary.Ghoul,
                         Name = "Гуль",
                         Icon = EnemyImages.Ghoul.Idle,
                         Description = "Страшный тип. На глаза к такому лучше точно не попадаться.",
@@ -467,6 +494,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.GrimReaper,
                     new Foe
                     {
+                        ID = EnemyBestiary.GrimReaper,
                         Name = "Жнец",
                         Icon = EnemyImages.GrimReaper.Idle,
                         Description = "У него хорошая коса за плечами, вот только не видно ни одного поля с пшеницей посреди пустыни...",
@@ -483,6 +511,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Scarab,
                     new Foe
                     {
+                        ID = EnemyBestiary.Scarab,
                         Name = "Скарабей",
                         Icon = EnemyImages.Scarab.Idle,
                         Description = "Этот скарабей решил подняться, выполняя работенку посложнее своих жучьих обязанностей.",
@@ -499,6 +528,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.KillerMole,
                     new Foe
                     {
+                        ID = EnemyBestiary.KillerMole,
                         Name = "Моль-убийца",
                         Icon = EnemyImages.KillerMole.Idle,
                         Description = "Такую прелесть точно не захочется найти в своем шкафу.",
@@ -515,6 +545,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Imp,
                     new Foe
                     {
+                        ID = EnemyBestiary.Imp,
                         Name = "Прислужник",
                         Icon = EnemyImages.Imp.Idle,
                         Description = "Коварный, безжалостный, этот бес явно не хочет не званых гостей.",
@@ -531,6 +562,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Worm,
                     new Foe
                     {
+                        ID = EnemyBestiary.Worm,
                         Name = "Песчаный червь",
                         Icon = EnemyImages.Worm.Idle,
                         Description = "Этот пожиратель настолько огромный, что торчит только его хвост. Самое время малость его укоротить...",
@@ -547,6 +579,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Master,
                     new Foe
                     {
+                        ID = EnemyBestiary.Master,
                         Name = "Мастер",
                         Icon = EnemyImages.Master.Idle,
                         Description = "Знатока своего дела видно сразу. Но, к сожалению, сговорчивостью он точно не выделяется.",
@@ -569,6 +602,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Pharaoh,
                     new Boss
                     {
+                        ID = EnemyBestiary.Pharaoh,
                         Name = "Фараон",
                         Icon = BossImages.Pharaoh.Idle,
                         Description = "Страшно представить, что станет с тем, кто лежал замурованным так долго...",
@@ -585,6 +619,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.Rock,
                     new Boss
                     {
+                        ID = EnemyBestiary.Rock,
                         Name = "Рок",
                         Icon = BossImages.Friend.Idle,
                         Description = "Сразу видно: человек не пропускал физкультуру.",
@@ -601,6 +636,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.TheRuler,
                     new Boss
                     {
+                        ID = EnemyBestiary.TheRuler,
                         Name = "Владыка",
                         Icon = BossImages.TheRuler.Idle,
                         Description = "Кто-то не выспался =). Где артефакты, Билли?",
@@ -617,6 +653,7 @@ namespace DesertRage.ViewModel
                     EnemyBestiary.UghZan,
                     new Boss
                     {
+                        ID = EnemyBestiary.UghZan,
                         Name = "Угх-Зан I",
                         Icon = BossImages.UghZan.Idle,
                         Description = "Так-так-так, кто тут у нас?",

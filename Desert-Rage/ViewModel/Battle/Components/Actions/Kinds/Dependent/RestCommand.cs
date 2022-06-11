@@ -13,7 +13,6 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent
         {
             Act();
             Rest();
-            User.UpdateHero();
         }
     }
 }
