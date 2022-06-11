@@ -2,28 +2,28 @@
 
 namespace DesertRage.Model.Locations.Battle.Stats.Enemy
 {
-    public class Boss : Foe
+    public class Boss : Foe, ICloneable<Boss>
     {
         public Boss() { }
 
-        public Boss(Foe foe) : base(foe)
+        public Boss(Boss unit)
         {
-            Death = foe.Death;
-            Size = foe.Size;
-            Experience = foe.Experience;
-            DropRate = foe.DropRate;
+            Set(unit);
         }
 
-        public new Boss Clone()
+        public void Set(Boss unit)
         {
-            return new Boss(base.Clone())
-            {
-                Theme = Theme,
-                ActionsLock = ActionsLock
-            };
+            base.Set(unit);
+            Theme = unit.Theme;
+            ActionsLock = unit.ActionsLock;
         }
 
         public string Theme { get; set; }
         public BitArray ActionsLock { get; set; }
+
+        public override Boss Clone()
+        {
+            return new Boss(this);
+        }
     }
 }

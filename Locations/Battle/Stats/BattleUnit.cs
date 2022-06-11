@@ -1,7 +1,6 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Helpers;
 using System.Collections;
-using System.Runtime.Serialization;
 
 namespace DesertRage.Model.Locations.Battle.Stats
 {
@@ -9,20 +8,54 @@ namespace DesertRage.Model.Locations.Battle.Stats
     {
         public BattleUnit()
         {
-            Status = new BitArray(Converters.ToValues<StatusID>().Length);
+            Hp = new Slider();
+
+            int enumLength = Converters.ToValues<StatusID>().Length;
+
+            Status = new BitArray(enumLength);
+            StatusInfo = new Status[enumLength];
+            for (byte i = 0; i < StatusInfo.Length; i++)
+            {
+                StatusInfo[i] = new Status
+                {
+                    Time = new Slider(0, Stats.Special)
+                };
+            }
         }
 
-        public BattleUnit(DescriptionUnit unit)
+        public BattleUnit(BattleUnit unit)
         {
-            Icon = unit.Icon;
-            Name = unit.Name;
-            Description = unit.Description;
+            Set(unit);
+        }
+
+        public void SetStatusTiming()
+        {
+            SetStatusTiming(Stats.Special);
+        }
+
+        public void SetStatusTiming(ushort max)
+        {
+            for (byte i = 0; i < StatusInfo.Length; i++)
+            {
+                Slider time = StatusInfo[i].Time;
+                time.Set(0, time.Current, max);
+            }
+        }
+
+        public void Set(BattleUnit unit)
+        {
+            base.Set(unit);
+            Hp.Set(unit.Hp);
+            Stats = unit.Stats;
+            Action = unit.Action;
+            Status = unit.Status;
+            SetStatusTiming();
         }
 
         #region Hp Management Members
         public void Annihilate()
         {
-            Hp = Hp.Drain();
+            Hp.Drain();
         }
 
         public virtual void Hit(int value)
@@ -31,17 +64,19 @@ namespace DesertRage.Model.Locations.Battle.Stats
             if (damage <= 0)
                 return;
 
-            Hp = Hp.Drain(damage / Boost(StatusID.DEFENCE, StatusID.SHIELD));
+            damage /= Boost(StatusID.DEFENCE, StatusID.SHIELD);
+
+            Hp.Drain(damage.ToUShort());
         }
 
         public void Cure()
         {
-            Hp = Hp.Restore();
+            Hp.Fill();
         }
 
         public void Cure(int value)
         {
-            Hp = Hp.Restore(value);
+            Hp.Fill(value.ToUShort());
         }
         #endregion
 
@@ -51,6 +86,11 @@ namespace DesertRage.Model.Locations.Battle.Stats
             {
                 Status[i] = code;
             }
+        }
+
+        public void SetStatus(int id, bool code)
+        {
+            Status[id] = code;
         }
 
         public void SetStatus(StatusID id, bool code)
@@ -73,22 +113,17 @@ namespace DesertRage.Model.Locations.Battle.Stats
             return boost;
         }
 
-        public new BattleUnit Clone()
-        {
-            return new BattleUnit(base.Clone())
-            {
-                Hp = Hp,
-                Stats = Stats,
-                Action = Action,
-                Status = Status
-            };
-        }
-
-        public Bar Hp { get; set; }
+        public Slider Hp { get; set; }
 
         public BattleStats Stats { get; set; }
         public string Action { get; set; }
 
         public BitArray Status { get; set; }
+        public Status[] StatusInfo { get; set; }
+
+        public override BattleUnit Clone()
+        {
+            return new BattleUnit(this);
+        }
     }
 }

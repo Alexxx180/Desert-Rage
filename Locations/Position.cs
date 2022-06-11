@@ -78,6 +78,16 @@ namespace DesertRage.Model.Locations
             };
         }
 
+        public static Position operator +
+            (Chip start, Position increment)
+        {
+            return new Position
+            {
+                X = start.X + increment.X,
+                Y = start.Y + increment.Y
+            };
+        }
+
         public static Position operator -
             (Position end, int decrement)
         {

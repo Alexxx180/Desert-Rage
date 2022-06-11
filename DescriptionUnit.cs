@@ -6,23 +6,25 @@
 
         public DescriptionUnit(string meaning) : base(meaning) { }
 
-        public DescriptionUnit(int value, 
-            string meaning) : this($"+{value} {meaning}") { }
+        public DescriptionUnit(int value, string meaning) :
+            this($"+{value} {meaning}") { }
 
-        public DescriptionUnit(Unit unit)
+        public DescriptionUnit(DescriptionUnit unit)
         {
-            Name = unit.Name;
-            Description = unit.Description;
+            Set(unit);
         }
 
-        public new DescriptionUnit Clone()
+        public void Set(DescriptionUnit unit)
         {
-            return new DescriptionUnit(base.Clone())
-            {
-                Icon = Icon
-            };
+            base.Set(unit);
+            Icon = unit.Icon;
         }
 
         public string Icon { get; set; }
+
+        public override DescriptionUnit Clone()
+        {
+            return new DescriptionUnit(this);
+        }
     }
 }

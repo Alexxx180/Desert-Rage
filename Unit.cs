@@ -1,6 +1,6 @@
 ﻿namespace DesertRage.Model
 {
-    public class Unit
+    public class Unit : ICloneable<Unit>
     {
         public Unit() { }
 
@@ -9,16 +9,23 @@
             Description = meaning;
         }
 
+        public Unit(Unit unit)
+        {
+            Set(unit);
+        }
+
+        public void Set(Unit unit)
+        {
+            Name = unit.Name;
+            Description = unit.Description;
+        }
+
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public Unit Clone()
+        public virtual Unit Clone()
         {
-            return new Unit
-            {
-                Name = Name,
-                Description = Description
-            };
+            return new Unit(this);
         }
     }
 }

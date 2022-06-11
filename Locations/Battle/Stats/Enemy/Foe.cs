@@ -1,4 +1,8 @@
-﻿namespace DesertRage.Model.Locations.Battle.Stats.Enemy
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
+using DesertRage.Model.Locations.Battle.Things.Storage;
+
+namespace DesertRage.Model.Locations.Battle.Stats.Enemy
 {
     // Enemy logic
     public class Foe : BattleUnit, ICloneable<Foe>
@@ -8,38 +12,46 @@
             Size = new Position(1);
         }
 
-        public Foe(BattleUnit unit) : base(unit)
+        public Foe(Foe unit)
         {
-            Hp = unit.Hp;
-            Stats = unit.Stats;
-            Action = unit.Action;
-            Status = unit.Status;
+            Set(unit);
         }
 
-        public new Foe Clone()
+        public void Set(Foe unit)
         {
-            return new Foe(base.Clone())
-            {
-                Death = Death,
-                Size = Size,
-                Experience = Experience,
-                DropRate = DropRate
-            };
+            base.Set(unit);
+            ID = unit.ID;
+            Death = unit.Death;
+            Size = unit.Size;
+            Experience = unit.Experience;
+            Drop = unit.Drop;
+            Strategy = unit.Strategy;
         }
 
         public override void Hit(int value)
         {
-            int damage = value - (Stats.Defence + Stats.Special / 2);
+            int damage = value - Stats.Defence;
+            damage -= Stats.Special / 2;
+
             if (damage <= 0)
                 return;
 
-            Hp = Hp.Drain(damage);
+            Hp.Drain(damage.ToUShort());
         }
+
+        public EnemyBestiary ID { get; set; }
+        public ItemsID Drop { get; set; }
 
         public Position Size { get; set; }
         public string Death { get; set; }
 
         public byte Experience { get; set; }
-        public byte DropRate { get; set; }
+
+        public FightingMode Strategy { get; set; }
+
+        public override Foe Clone()
+        {
+            return new Foe(this);
+        }
     }
 }
