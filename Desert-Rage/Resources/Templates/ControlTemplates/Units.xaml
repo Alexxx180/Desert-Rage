@@ -3,7 +3,263 @@
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
                     xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel"
+                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
+                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
+    <ControlTemplate x:Key="HpBar">
+        <Grid DataContext="{Binding}">
+            <status:StatBar>
+                <status:StatBar.Caption>
+                    ОЗ
+                </status:StatBar.Caption>
+
+                <status:StatBar.Bar>
+                    <Binding Path="Hp"/>
+                </status:StatBar.Bar>
+
+                <status:StatBar.ForeBrush>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FF3AAC28"/>
+                        <GradientStop Color="#FF00F3FF" Offset="1"/>
+                        <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
+                    </LinearGradientBrush>
+                </status:StatBar.ForeBrush>
+            </status:StatBar>
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ApBar">
+        <Grid DataContext="{Binding}">
+            <status:StatBar>
+                <status:StatBar.Caption>
+                    ОД
+                </status:StatBar.Caption>
+
+                <status:StatBar.Bar>
+                    <Binding Path="Ap"/>
+                </status:StatBar.Bar>
+
+                <status:StatBar.ForeBrush>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FFFFEDED"/>
+                        <GradientStop Color="#FF00EDED" Offset="1"/>
+                        <GradientStop Color="#FF00ADED" Offset="0.512"/>
+                    </LinearGradientBrush>
+                </status:StatBar.ForeBrush>
+            </status:StatBar>
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="TimeBar">
+        <Grid DataContext="{Binding}">
+            <status:StatBar>
+                <status:StatBar.Caption>
+                    Время
+                </status:StatBar.Caption>
+
+                <status:StatBar.Bar>
+                    <Binding Path="Time"/>
+                </status:StatBar.Bar>
+
+                <status:StatBar.ForeBrush>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FFBB835C"/>
+                        <GradientStop Color="#FFC7FF1D" Offset="0.512"/>
+                        <GradientStop Color="#FFC7631D" Offset="1"/>
+                    </LinearGradientBrush>
+                </status:StatBar.ForeBrush>
+            </status:StatBar>
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="StatsVertical">
+        <UniformGrid Rows="4" Columns="1" DataContext="{Binding}">
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Attack.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Attack"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Defence.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Defence"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Speed.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Speed"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Special.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Special"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+        </UniformGrid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="StatsHorizontal">
+        <UniformGrid Rows="1" Columns="4" DataContext="{Binding}">
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Attack.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Attack"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Defence.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Defence"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Speed.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Speed"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+
+            <status:IconStat>
+                <status:IconStat.Icon>
+                    /Resources/Media/Images/Menu/Stats/Special.svg
+                </status:IconStat.Icon>
+
+                <status:IconStat.Stat>
+                    <Binding Path="Special"/>
+                </status:IconStat.Stat>
+            </status:IconStat>
+        </UniformGrid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ExperienceBar">
+        <Grid DataContext="{Binding}">
+            <ProgressBar>
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <ProgressBar.Value>
+                    <Binding Path="Experience.Current"/>
+                </ProgressBar.Value>
+
+                <ProgressBar.Maximum>
+                    <Binding Path="Experience.Max"/>
+                </ProgressBar.Maximum>
+
+                <ProgressBar.Orientation>
+                    Vertical
+                </ProgressBar.Orientation>
+
+                <ProgressBar.Foreground>
+                    <LinearGradientBrush EndPoint="0.75,0.5" StartPoint="0,0.75">
+                        <GradientStop Color="#FFEDEDED"/>
+                        <GradientStop Color="#FFED00ED" Offset="1"/>
+                        <GradientStop Color="#FFAD00ED" Offset="0.512"/>
+                    </LinearGradientBrush>
+                </ProgressBar.Foreground>
+            </ProgressBar>
+            
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="Statuses">
+        <ItemsControl ItemsSource="{Binding Path=StatusInfo}">
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="12" Rows="1">
+                        <UniformGrid.VerticalAlignment>
+                            Stretch
+                        </UniformGrid.VerticalAlignment>
+
+                        <UniformGrid.IsItemsHost>
+                            True
+                        </UniformGrid.IsItemsHost>
+                    </UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <StaticResource ResourceKey="StatusTemplate"/>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="StatusPanel">
+        <Grid DataContext="{Binding}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.125*"/>
+                <ColumnDefinition Width="0.875*"/>
+            </Grid.ColumnDefinitions>
+
+            <svgc:SvgViewbox>
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <attach:SvgBox.Source>
+                    <Binding Path="Icon">
+                        <Binding.Converter>
+                            <converters:UriConverter/>
+                        </Binding.Converter>
+
+                        <Binding.ConverterParameter>
+                            <x:Static Member="total:LocationsTotal.Transparent"/>
+                        </Binding.ConverterParameter>
+                    </Binding>
+                </attach:SvgBox.Source>
+
+                <attach:SvgBox.Stretch>
+                    Fill
+                </attach:SvgBox.Stretch>
+            </svgc:SvgViewbox>
+
+            <UniformGrid Rows="3" Grid.Column="1">
+                <ContentControl Template="{StaticResource HpBar}"/>
+                <ContentControl Template="{StaticResource ApBar}"/>
+                <ContentControl Template="{StaticResource Statuses}"/>
+            </UniformGrid>
+
+            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </ControlTemplate>
+
     <ControlTemplate x:Key="Person" x:Shared="True">
         <Grid x:Name="BattleCharacter" DataContext="{Binding}">
             <Grid.Column>
@@ -21,118 +277,22 @@
                     <StaticResource ResourceKey="BackAccent"/>
                 </Grid.Style>
 
-                <Grid.ColumnSpan>
-                    3
-                </Grid.ColumnSpan>
-
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="0.75"/>
+                    <RowDefinition Height="0.25"/>
                 </Grid.RowDefinitions>
 
-                <status:StatusPanel>
-                    <status:StatusPanel.HealthPoints>
-                        <Binding>
-                            <Binding.ElementName>
-                                BattleCharacter
-                            </Binding.ElementName>
+                <ContentControl Template="{StaticResource StatusPanel}">
+                    <ContentControl.DataContext>
+                        <Binding Path="Player.Hero"/>
+                    </ContentControl.DataContext>
+                </ContentControl>
 
-                            <Binding.Path>
-                                DataContext.Unit.Hp
-                            </Binding.Path>
-                        </Binding>
-                    </status:StatusPanel.HealthPoints>
-
-                    <status:StatusPanel.ActionPoints>
-                        <Binding>
-                            <Binding.ElementName>
-                                BattleCharacter
-                            </Binding.ElementName>
-
-                            <Binding.Path>
-                                DataContext.Player.Hero.Ap
-                            </Binding.Path>
-                        </Binding>
-                    </status:StatusPanel.ActionPoints>
-
-                    <status:StatusPanel.Icon>
-                        <Binding>
-                            <Binding.ElementName>
-                                BattleCharacter
-                            </Binding.ElementName>
-
-                            <Binding.Path>
-                                DataContext.Unit.Icon
-                            </Binding.Path>
-                        </Binding>
-                    </status:StatusPanel.Icon>
-                </status:StatusPanel>
-
-                <Grid>
+                <ContentControl Template="{StaticResource TimeBar}">
                     <Grid.Row>
                         1
                     </Grid.Row>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-
-                    <status:StatBar x:Name="TimeBar">
-                        <status:StatBar.Caption>
-                            Время
-                        </status:StatBar.Caption>
-
-                        <status:StatBar.Bar>
-                            <Binding>
-                                <Binding.ElementName>
-                                    BattleCharacter
-                                </Binding.ElementName>
-
-                                <Binding.Path>
-                                    DataContext.Time
-                                </Binding.Path>
-                            </Binding>
-                        </status:StatBar.Bar>
-
-                        <status:StatBar.ForeBrush>
-                            <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                                <GradientStop Color="#FFBB835C"/>
-                                <GradientStop Color="#FFC7FF1D" Offset="0.512"/>
-                                <GradientStop Color="#FFC7631D" Offset="1"/>
-                            </LinearGradientBrush>
-                        </status:StatBar.ForeBrush>
-                    </status:StatBar>
-
-                    <ItemsControl ItemsSource="{Binding Path=Player.Hero.StatusInfo}">
-                        <Grid.Row>
-                            1
-                        </Grid.Row>
-
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <UniformGrid Columns="12" Rows="1"
-                                         VerticalAlignment="Stretch"
-                                         IsItemsHost="True"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-
-                        <ItemsControl.ItemTemplate>
-                            <StaticResource ResourceKey="StatusTemplate"/>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    
-                    <!--<UniformGrid Columns="12" VerticalAlignment="Stretch">
-                        <Grid.Row>
-                            1
-                        </Grid.Row>
-
-                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
-                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
-                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
-                        <Rectangle Fill="AntiqueWhite" Stroke="BlueViolet" StrokeThickness="2"/>
-                    </UniformGrid>-->
-                </Grid>
+                </ContentControl>
             </Grid>
 
             <svgc:SvgViewbox>

@@ -20,51 +20,11 @@
     
     <Grid Style="{StaticResource Impact}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.75*"/>
         </Grid.RowDefinitions>
 
-        <status:StatusPanel>
-            <status:StatusPanel.HealthPoints>
-                <Binding>
-                    <Binding.ElementName>
-                        GItems
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Hp
-                    </Binding.Path>
-                </Binding>
-            </status:StatusPanel.HealthPoints>
-
-            <status:StatusPanel.ActionPoints>
-                <Binding>
-                    <Binding.ElementName>
-                        GItems
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Ap
-                    </Binding.Path>
-                </Binding>
-            </status:StatusPanel.ActionPoints>
-
-            <status:StatusPanel.Icon>
-                <Binding>
-                    <Binding.ElementName>
-                        GItems
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Icon
-                    </Binding.Path>
-
-                    <Binding.ConverterParameter>
-                        <x:Static Member="total:LocationsTotal.Transparent"/>
-                    </Binding.ConverterParameter>
-                </Binding>
-            </status:StatusPanel.Icon>
-        </status:StatusPanel>
+        <ContentControl Template="{StaticResource StatusPanel}"/>
 
         <Menu Style="{StaticResource OrdinaryList}">
             <Grid.Row>

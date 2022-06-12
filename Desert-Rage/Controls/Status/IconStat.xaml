@@ -11,12 +11,9 @@
              xmlns:status="clr-namespace:DesertRage.Controls.Status"
              xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-    
-    <Grid>
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+             x:Name="This">
+    <Grid DataContext="{Binding ElementName=This}">
         <svgc:SvgViewbox>
             <Grid.Row>
                 1

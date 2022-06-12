@@ -9,305 +9,173 @@
              xmlns:armory="clr-namespace:DesertRage.Model.Locations.Battle.Stats.Player.Armory;assembly=DesertRageModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             x:Name="GStatus">
+             x:Name="This">
+    <UniformGrid Rows="2" DataContext="{Binding ElementName=This, Path=Player}" Style="{StaticResource Impact}">
+        <UniformGrid Rows="2" DataContext="{Binding Path=Hero}">
+            <ContentControl Template="{StaticResource StatusPanel}"/>
 
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-    
-    <Grid Style="{StaticResource Impact}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.3*"/>
-            <RowDefinition Height="0.5*"/>
-        </Grid.RowDefinitions>
-
-        <status:StatusPanel>
-            <status:StatusPanel.HealthPoints>
-                <Binding>
-                    <Binding.ElementName>
-                        GStatus
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Hp
-                    </Binding.Path>
-                </Binding>
-            </status:StatusPanel.HealthPoints>
-
-            <status:StatusPanel.ActionPoints>
-                <Binding>
-                    <Binding.ElementName>
-                        GStatus
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Ap
-                    </Binding.Path>
-                </Binding>
-            </status:StatusPanel.ActionPoints>
-
-            <status:StatusPanel.Icon>
-                <Binding>
-                    <Binding.ElementName>
-                        GStatus
-                    </Binding.ElementName>
-
-                    <Binding.Path>
-                        DataContext.Player.Hero.Icon
-                    </Binding.Path>
-                </Binding>
-            </status:StatusPanel.Icon>
-        </status:StatusPanel>
-
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.25*"/>
-                <RowDefinition Height="0.75*"/>
-            </Grid.RowDefinitions>
-
-            <Viewbox HorizontalAlignment="Left">
-                <TextBlock Padding="10,0,10,0" Text="Рэй"/>
-            </Viewbox>
-
-            <TextBox Padding="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <Grid.Row>
                     1
                 </Grid.Row>
 
-                <TextBox.Style>
-                    <StaticResource ResourceKey="InputField"/>
-                </TextBox.Style>
+                <StackPanel>
+                    <TextBox Padding="10">
+                        <Grid.Row>
+                            1
+                        </Grid.Row>
 
-                <TextBox.Text>
-                    Искатель приключений
-                </TextBox.Text>
-            </TextBox>
-        </Grid>
+                        <TextBox.Style>
+                            <StaticResource ResourceKey="InputField"/>
+                        </TextBox.Style>
+
+                        <TextBox.Text>
+                            Искатель приключений
+                        </TextBox.Text>
+                    </TextBox>
+
+                    <TextBlock HorizontalAlignment="Right" Padding="10,0,10,0" FontSize="24" Text="Рэй"/>
+                </StackPanel>
+            </ScrollViewer>
+        </UniformGrid>
+
+        
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.3*"/>
-                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition Width="0.6*"/>
             </Grid.ColumnDefinitions>
 
-            <Image>
-                <Grid.Column>
-                    1
-                </Grid.Column>
-            </Image>
-
-            <Grid>
-                <Grid.Column>
-                    1
-                </Grid.Column>
-
+            <Grid DataContext="{Binding Path=Hero}">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*"/>
-                    <ColumnDefinition Width="0.85*"/>
+                    <ColumnDefinition Width="0.75*"/>
+                    <ColumnDefinition Width="0.25*"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid>
+                <Image/>
+
+                <Grid Grid.Column="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.8*"/>
                         <ColumnDefinition Width="0.2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <UniformGrid Rows="4" Columns="1">
-                        <status:IconStat>
-                            <status:IconStat.Icon>
-                                /Resources/Media/Images/menu/stats/Attack.svg
-                            </status:IconStat.Icon>
+                    <ContentControl Template="{StaticResource StatsVertical}">
+                        <ContentControl.DataContext>
+                            <Binding Path="Stats"/>
+                        </ContentControl.DataContext>
+                    </ContentControl>
 
-                            <status:IconStat.Stat>
-                                <Binding ElementName="GStatus">
-                                    <Binding.Path>
-                                        DataContext.Player.Hero.Stats.Attack
-                                    </Binding.Path>
-                                </Binding>
-                            </status:IconStat.Stat>
-                        </status:IconStat>
-
-                        <status:IconStat>
-                            <status:IconStat.Icon>
-                                /Resources/Media/Images/menu/stats/Defence.svg
-                            </status:IconStat.Icon>
-
-                            <status:IconStat.Stat>
-                                <Binding ElementName="GStatus">
-                                    <Binding.Path>
-                                        DataContext.Player.Hero.Stats.Defence
-                                    </Binding.Path>
-                                </Binding>
-                            </status:IconStat.Stat>
-                        </status:IconStat>
-
-                        <status:IconStat>
-                            <status:IconStat.Icon>
-                                /Resources/Media/Images/menu/stats/Speed.svg
-                            </status:IconStat.Icon>
-
-                            <status:IconStat.Stat>
-                                <Binding ElementName="GStatus">
-                                    <Binding.Path>
-                                        DataContext.Player.Hero.Stats.Speed
-                                    </Binding.Path>
-                                </Binding>
-                            </status:IconStat.Stat>
-                        </status:IconStat>
-
-                        <status:IconStat>
-                            <status:IconStat.Icon>
-                                /Resources/Media/Images/menu/stats/Special.svg
-                            </status:IconStat.Icon>
-
-                            <status:IconStat.Stat>
-                                <Binding ElementName="GStatus">
-                                    <Binding.Path>
-                                        DataContext.Player.Hero.Stats.Special
-                                    </Binding.Path>
-                                </Binding>
-                            </status:IconStat.Stat>
-                        </status:IconStat>
-                    </UniformGrid>
-
-                    <ProgressBar>
+                    <ContentControl Template="{StaticResource ExperienceBar}">
                         <Grid.Column>
                             1
                         </Grid.Column>
-
-                        <ProgressBar.Value>
-                            <Binding Path="Player.Hero.Experience.Current"/>
-                        </ProgressBar.Value>
-
-                        <ProgressBar.Maximum>
-                            <Binding Path="Player.Hero.Experience.Max"/>
-                        </ProgressBar.Maximum>
-
-                        <ProgressBar.Orientation>
-                            Vertical
-                        </ProgressBar.Orientation>
-                        
-                        <ProgressBar.Foreground>
-                            <LinearGradientBrush EndPoint="0.75,0.5" StartPoint="0,0.75">
-                                <GradientStop Color="#FFEDEDED"/>
-                                <GradientStop Color="#FFED00ED" Offset="1"/>
-                                <GradientStop Color="#FFAD00ED" Offset="0.512"/>
-                            </LinearGradientBrush>
-                        </ProgressBar.Foreground>
-                    </ProgressBar>
+                    </ContentControl>
                 </Grid>
-
-                <UniformGrid Rows="4" Columns="1">
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
-
-                    <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
-                        <ComboBox.ItemTemplate>
-                            <DynamicResource ResourceKey="PowerTemplate"/>
-                        </ComboBox.ItemTemplate>
-
-                        <ComboBox.SelectedIndex>
-                            <Binding Path="Player.Hero.SelectedArmor.Attack">
-                                <Binding.Mode>
-                                    TwoWay
-                                </Binding.Mode>
-
-                                <Binding.UpdateSourceTrigger>
-                                    PropertyChanged
-                                </Binding.UpdateSourceTrigger>
-                            </Binding>
-                        </ComboBox.SelectedIndex>
-
-                        <ComboBox.ItemsSource>
-                            <Binding Path="Player.Equip[0]"/>
-                        </ComboBox.ItemsSource>
-                    </ComboBox>
-
-                    <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
-                        <ComboBox.ItemTemplate>
-                            <DynamicResource ResourceKey="PowerTemplate"/>
-                        </ComboBox.ItemTemplate>
-
-                        <ComboBox.SelectedIndex>
-                            <Binding Path="Player.Hero.SelectedArmor.Defence"/>
-                        </ComboBox.SelectedIndex>
-
-                        <ComboBox.ItemsSource>
-                            <Binding Path="Player.Equip[1]">
-                                <Binding.Mode>
-                                    TwoWay
-                                </Binding.Mode>
-
-                                <Binding.UpdateSourceTrigger>
-                                    PropertyChanged
-                                </Binding.UpdateSourceTrigger>
-                            </Binding>
-                        </ComboBox.ItemsSource>
-                    </ComboBox>
-
-                    <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
-                        <ComboBox.ItemTemplate>
-                            <StaticResource ResourceKey="PowerTemplate"/>
-                        </ComboBox.ItemTemplate>
-
-                        <ComboBox.SelectedIndex>
-                            <Binding Path="Player.Hero.SelectedArmor.Speed"/>
-                        </ComboBox.SelectedIndex>
-
-                        <ComboBox.ItemsSource>
-                            <Binding Path="Player.Equip[2]">
-                                <Binding.Mode>
-                                    TwoWay
-                                </Binding.Mode>
-
-                                <Binding.UpdateSourceTrigger>
-                                    PropertyChanged
-                                </Binding.UpdateSourceTrigger>
-                            </Binding>
-                        </ComboBox.ItemsSource>
-                    </ComboBox>
-
-                    <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
-                        <ComboBox.ItemTemplate>
-                            <StaticResource ResourceKey="PowerTemplate"/>
-                        </ComboBox.ItemTemplate>
-
-                        <ComboBox.SelectedIndex>
-                            <Binding Path="Player.Hero.SelectedArmor.Special"/>
-                        </ComboBox.SelectedIndex>
-
-                        <ComboBox.ItemsSource>
-                            <Binding Path="Player.Equip[3]">
-                                <Binding.Mode>
-                                    TwoWay
-                                </Binding.Mode>
-
-                                <Binding.UpdateSourceTrigger>
-                                    PropertyChanged
-                                </Binding.UpdateSourceTrigger>
-                            </Binding>
-                        </ComboBox.ItemsSource>
-                    </ComboBox>
-                </UniformGrid>
             </Grid>
+
+            <UniformGrid Rows="4" Columns="1">
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <ComboBox>
+                    <ComboBox.Style>
+                        <StaticResource ResourceKey="StretchFont"/>
+                    </ComboBox.Style>
+
+                    <ComboBox.ItemTemplate>
+                        <DynamicResource ResourceKey="PowerTemplate"/>
+                    </ComboBox.ItemTemplate>
+
+                    <ComboBox.SelectedIndex>
+                        <Binding Path="Hero.SelectedArmor.Attack"/>
+                    </ComboBox.SelectedIndex>
+
+                    <ComboBox.ItemsSource>
+                        <Binding Path="Equip[0]"/>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
+
+                <ComboBox>
+                    <ComboBox.Style>
+                        <StaticResource ResourceKey="StretchFont"/>
+                    </ComboBox.Style>
+
+                    <ComboBox.ItemTemplate>
+                        <DynamicResource ResourceKey="PowerTemplate"/>
+                    </ComboBox.ItemTemplate>
+
+                    <ComboBox.SelectedIndex>
+                        <Binding Path="Hero.SelectedArmor.Defence"/>
+                    </ComboBox.SelectedIndex>
+
+                    <ComboBox.ItemsSource>
+                        <Binding Path="Equip[1]">
+                            <Binding.Mode>
+                                TwoWay
+                            </Binding.Mode>
+
+                            <Binding.UpdateSourceTrigger>
+                                PropertyChanged
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
+
+                <ComboBox>
+                    <ComboBox.Style>
+                        <StaticResource ResourceKey="StretchFont"/>
+                    </ComboBox.Style>
+
+                    <ComboBox.ItemTemplate>
+                        <StaticResource ResourceKey="PowerTemplate"/>
+                    </ComboBox.ItemTemplate>
+
+                    <ComboBox.SelectedIndex>
+                        <Binding Path="Hero.SelectedArmor.Speed"/>
+                    </ComboBox.SelectedIndex>
+
+                    <ComboBox.ItemsSource>
+                        <Binding Path="Equip[2]">
+                            <Binding.Mode>
+                                TwoWay
+                            </Binding.Mode>
+
+                            <Binding.UpdateSourceTrigger>
+                                PropertyChanged
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
+
+                <ComboBox>
+                    <ComboBox.Style>
+                        <StaticResource ResourceKey="StretchFont"/>
+                    </ComboBox.Style>
+
+                    <ComboBox.ItemTemplate>
+                        <StaticResource ResourceKey="PowerTemplate"/>
+                    </ComboBox.ItemTemplate>
+
+                    <ComboBox.SelectedIndex>
+                        <Binding Path="Hero.SelectedArmor.Special"/>
+                    </ComboBox.SelectedIndex>
+
+                    <ComboBox.ItemsSource>
+                        <Binding Path="Equip[3]">
+                            <Binding.Mode>
+                                TwoWay
+                            </Binding.Mode>
+
+                            <Binding.UpdateSourceTrigger>
+                                PropertyChanged
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
+            </UniformGrid>
         </Grid>
-    </Grid>
+    </UniformGrid>
 </UserControl>

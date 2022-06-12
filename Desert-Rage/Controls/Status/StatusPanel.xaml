@@ -10,9 +10,8 @@
              xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              mc:Ignorable="d" 
              x:Name="HeroStatusPanel"
-             DataContext="{Binding RelativeSource={RelativeSource Self}}"
              d:DesignHeight="75" d:DesignWidth="600">
-    <Grid>
+    <Grid DataContext="{Binding ElementName=HeroStatusPanel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.125*"/>
             <ColumnDefinition Width="0.875*"/>
@@ -25,9 +24,9 @@
 
             <attach:SvgBox.Source>
                 <Binding Path="Icon">
-                    <Binding.ElementName>
+                    <!--<Binding.ElementName>
                         HeroStatusPanel
-                    </Binding.ElementName>
+                    </Binding.ElementName>-->
 
                     <Binding.Converter>
                         <converters:UriConverter/>
@@ -50,7 +49,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <status:StatBar Caption="ОЗ">
+            <ContentControl DataContext="{Binding HealthPoints}" Template="{StaticResource HpBar}"/>
+            
+            <!--<status:StatBar Caption="ОЗ">
                 <status:StatBar.Bar>
                     <Binding>
                         <Binding.ElementName>
@@ -70,7 +71,7 @@
                         <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
                     </LinearGradientBrush>
                 </status:StatBar.ForeBrush>
-            </status:StatBar>
+            </status:StatBar>-->
 
             <status:StatBar Caption="ОД">
                 <Grid.Row>
@@ -84,7 +85,7 @@
                         </Binding.ElementName>
 
                         <Binding.Path>
-                            DataContext.ActionPoints
+                            ActionPoints
                         </Binding.Path>
                     </Binding>
                 </status:StatBar.Bar>
