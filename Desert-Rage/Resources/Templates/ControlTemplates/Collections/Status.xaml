@@ -25,4 +25,21 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </ControlTemplate>
+
+    <ControlTemplate x:Key="StatusPanel">
+        <Grid DataContext="{Binding}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.15*"/>
+                <ColumnDefinition Width="0.85*"/>
+            </Grid.ColumnDefinitions>
+
+            <ContentControl Template="{StaticResource UnitIcon}"/>
+
+            <UniformGrid Rows="3" Grid.Column="1">
+                <ContentControl Template="{StaticResource HpBar}"/>
+                <ContentControl Template="{StaticResource ApBar}"/>
+                <ContentControl Template="{StaticResource Statuses}"/>
+            </UniformGrid>
+        </Grid>
+    </ControlTemplate>
 </ResourceDictionary>

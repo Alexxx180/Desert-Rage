@@ -7,24 +7,26 @@
     <DataTemplate x:Key="FoeTemplate">
         <Grid>
             <Grid.Resources>
-                <ToolTip Style="{StaticResource FoeTip}" x:Key="FoeStatus"/>
+                <ToolTip x:Key="FoeStatusTip">
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip" BasedOn="{StaticResource BindableTip}">
+                            <Setter Property="Template" Value="{StaticResource FoeStatus}"/>
+                        </Style>
+                    </ToolTip.Style>
+                </ToolTip>
             </Grid.Resources>
             
             <Grid>
                 <Border>
-                    <svgc:SvgViewbox>
+                    <ContentControl Template="{StaticResource UnitIcon}">
                         <Grid.Row>
                             1
                         </Grid.Row>
 
-                        <attach:SvgBox.Source>
-                            <Binding Path="Unit.Icon"/>
-                        </attach:SvgBox.Source>
-
-                        <attach:SvgBox.Stretch>
-                            Fill
-                        </attach:SvgBox.Stretch>
-                    </svgc:SvgViewbox>
+                        <ContentControl.DataContext>
+                            <Binding Path="Unit"/>
+                        </ContentControl.DataContext>
+                    </ContentControl>
 
                     <Border.Style>
                         <DynamicResource ResourceKey="ActAnimation1"/>
@@ -61,12 +63,8 @@
             </Grid>
 
             <Grid.ToolTip>
-                <StaticResource ResourceKey="FoeStatus"/>
+                <StaticResource ResourceKey="FoeStatusTip"/>
             </Grid.ToolTip>
         </Grid>
     </DataTemplate>
-
-    
-
-    
 </ResourceDictionary>

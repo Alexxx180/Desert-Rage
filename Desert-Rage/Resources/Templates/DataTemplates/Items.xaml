@@ -1,9 +1,16 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataTemplate x:Key="TopicTemplate">
+        <DockPanel>
+            <ContentControl Template="{StaticResource UnitIcon}" DockPanel.Dock="Left"/>
+            <ContentControl Template="{StaticResource UnitName}" DockPanel.Dock="Left"/>
+
+            <DockPanel.ToolTip>
+                <Binding Path="Description"/>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
+    
     <DataTemplate x:Key="ItemTemplate">
         <DockPanel LastChildFill="True">
             <StackPanel DataContext="{Binding Path=Effect.Unit}">
@@ -43,6 +50,35 @@
         </DockPanel>
     </DataTemplate>
 
+    <DataTemplate x:Key="PowerTemplate">
+        <Border x:Name="Status">
+            <Border.Resources>
+                <ToolTip x:Key="AttributeTip">
+                    <ToolTip.Style>
+                        <Style TargetType="ToolTip" BasedOn="{StaticResource BindableTip}">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Template" Value="{StaticResource EquipPower}"/>
+                        </Style>
+                    </ToolTip.Style>
+                </ToolTip>
+            </Border.Resources>
+
+            <ContentControl Template="{StaticResource UnitName}">
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <ContentControl.VerticalAlignment>
+                    Center
+                </ContentControl.VerticalAlignment>
+            </ContentControl>
+
+            <Border.ToolTip>
+                <StaticResource ResourceKey="AttributeTip"/>
+            </Border.ToolTip>
+        </Border>
+    </DataTemplate>
+    
     <DataTemplate x:Key="StatusTemplate">
         <Grid DataContext="{Binding}">
             <Grid.ColumnDefinitions>

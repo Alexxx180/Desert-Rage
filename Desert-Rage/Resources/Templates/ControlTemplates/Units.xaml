@@ -2,46 +2,36 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
-    <ControlTemplate x:Key="Person" x:Shared="True">
+    <ControlTemplate x:Key="CharacterSide">
         <Grid x:Name="BattleCharacter" DataContext="{Binding}">
             <Grid.Column>
                 1
             </Grid.Column>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.125*"/>
+                <RowDefinition Height="0.05*"/>
                 <RowDefinition Height="0.6*"/>
-                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.225*"/>
             </Grid.RowDefinitions>
 
-            <Grid>
-                <Grid.Style>
+            <ContentControl Template="{StaticResource StatusPanel}">
+                <ContentControl.Style>
                     <StaticResource ResourceKey="BackAccent"/>
-                </Grid.Style>
+                </ContentControl.Style>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.75"/>
-                    <RowDefinition Height="0.25"/>
-                </Grid.RowDefinitions>
+                <ContentControl.DataContext>
+                    <Binding Path="Player.Hero"/>
+                </ContentControl.DataContext>
+            </ContentControl>
 
-                <ContentControl Template="{StaticResource StatusPanel}">
-                    <ContentControl.DataContext>
-                        <Binding Path="Player.Hero"/>
-                    </ContentControl.DataContext>
-                </ContentControl>
-
-                <ContentControl Template="{StaticResource TimeBar}">
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
-                </ContentControl>
-            </Grid>
-
-            <svgc:SvgViewbox>
+            <ContentControl Template="{StaticResource TimeBar}">
                 <Grid.Row>
                     1
                 </Grid.Row>
+            </ContentControl>
 
+            <svgc:SvgViewbox Grid.Row="2">
                 <attach:SvgBox.Source>
                     <Binding Path="Player.Hero.Image"/>
                 </attach:SvgBox.Source>
@@ -83,11 +73,7 @@
                 </svgc:SvgViewbox.Style>
             </svgc:SvgViewbox>
 
-            <svgc:SvgViewbox Opacity="0">
-                <Grid.Row>
-                    1
-                </Grid.Row>
-
+            <svgc:SvgViewbox Grid.Row="2" Opacity="0">
                 <attach:SvgBox.Source>
                     <Binding Path="Unit.Action"/>
                 </attach:SvgBox.Source>
@@ -129,11 +115,7 @@
                 </svgc:SvgViewbox.Style>
             </svgc:SvgViewbox>
 
-            <Menu x:Name="MOptions">
-                <Grid.Row>
-                    2
-                </Grid.Row>
-
+            <Menu x:Name="MOptions" Grid.Row="3">
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="3" Rows="3"/>
@@ -450,7 +432,7 @@
                 </Menu.Style>
             </Menu>
 
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />-->
         </Grid>
     </ControlTemplate>
 </ResourceDictionary>

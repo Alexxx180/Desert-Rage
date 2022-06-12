@@ -9,12 +9,8 @@
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             x:Name="Battle">
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-
-    <Grid>
+             x:Name="This">
+    <Grid DataContext="{Binding ElementName=This, Path=BattleModel}">
         <Border>
             <Border.Background>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
@@ -109,7 +105,7 @@
                     <ColumnDefinition Width="0.25*"/>
                 </Grid.ColumnDefinitions>
 
-                <ItemsControl ItemsSource="{Binding Path=BattleModel.Enemies}">
+                <ItemsControl ItemsSource="{Binding Path=Enemies}">
                     <ItemsControl.ItemContainerStyle>
                         <Style TargetType="{x:Type ContentPresenter}">
                             <Setter Property="Grid.Column">
@@ -176,14 +172,14 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <ContentControl DataContext="{Binding Path=BattleModel.Human}" Padding="0">
+                <ContentControl Template="{StaticResource CharacterSide}" Padding="0">
                     <Grid.Column>
                         1
                     </Grid.Column>
 
-                    <ContentControl.Template>
-                        <DynamicResource ResourceKey="Person"/>
-                    </ContentControl.Template>
+                    <ContentControl.DataContext>
+                        <Binding Path="Human"/>
+                    </ContentControl.DataContext>
                 </ContentControl>
             </Grid>
         </Grid>

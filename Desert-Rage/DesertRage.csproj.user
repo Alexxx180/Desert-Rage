@@ -68,9 +68,6 @@
     <Compile Update="Controls\Status\StatBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Status\StatusPanel.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Reload.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -138,9 +135,6 @@
     <Page Update="Controls\Status\StatBar.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Status\StatusPanel.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -193,9 +187,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\Total.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Resources\Templates\DataTemplates\Menu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

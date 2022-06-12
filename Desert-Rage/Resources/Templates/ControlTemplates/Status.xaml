@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:target="clr-namespace:DesertRage.Model.Locations.Battle;assembly=DesertRageModel"
                     xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
@@ -272,22 +271,86 @@
         </Grid>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="StatusPanel">
-        <Grid DataContext="{Binding}">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.15*"/>
-                <ColumnDefinition Width="0.85*"/>
-            </Grid.ColumnDefinitions>
+    <ControlTemplate x:Key="FoeStatus">
+        <Border DataContext="{Binding Path=Unit}">
+            <Border.BorderThickness>
+                2
+            </Border.BorderThickness>
+            
+            <Border.BorderBrush>
+                Black
+            </Border.BorderBrush>
 
-            <ContentControl Template="{StaticResource UnitIcon}"/>
+            <Border.Background>
+                Azure
+            </Border.Background>
 
-            <UniformGrid Rows="3" Grid.Column="1">
-                <ContentControl Template="{StaticResource HpBar}"/>
-                <ContentControl Template="{StaticResource ApBar}"/>
-                <ContentControl Template="{StaticResource Statuses}"/>
+            <UniformGrid Rows="2" Height="100" Width="200">
+                <UniformGrid Rows="2">
+                    <ContentControl Template="{StaticResource UnitName}" FontWeight="Bold"/>
+                    <ContentControl Template="{StaticResource HpBar}"/>
+                </UniformGrid>
+
+                <ContentControl Template="{StaticResource StatsHorizontal}">
+                    <ContentControl.DataContext>
+                        <Binding Path="Stats"/>
+                    </ContentControl.DataContext>
+                </ContentControl>
             </UniformGrid>
+        </Border>
+    </ControlTemplate>
 
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-        </Grid>
+    <ControlTemplate x:Key="EquipPower">
+        <Border BorderThickness="2" DataContext="{Binding}">
+            <Border.BorderBrush>
+                Black
+            </Border.BorderBrush>
+
+            <Border.Background>
+                Azure
+            </Border.Background>
+
+            <DockPanel Style="{StaticResource Impact}">
+                <status:IconStat>
+                    <DockPanel.Dock>
+                        Left
+                    </DockPanel.Dock>
+
+                    <status:IconStat.Icon>
+                        <Binding Path="Icon">
+                            <Binding.Converter>
+                                <converters:UriConverter/>
+                            </Binding.Converter>
+
+                            <Binding.ConverterParameter>
+                                <x:Static Member="total:LocationsTotal.Transparent"/>
+                            </Binding.ConverterParameter>
+                        </Binding>
+                    </status:IconStat.Icon>
+
+                    <status:IconStat.Stat>
+                        <Binding Path="Power"/>
+                    </status:IconStat.Stat>
+                </status:IconStat>
+
+                <TextBlock>
+                    <DockPanel.Dock>
+                        Left
+                    </DockPanel.Dock>
+
+                    <TextBlock.VerticalAlignment>
+                        Center
+                    </TextBlock.VerticalAlignment>
+
+                    <TextBlock.Padding>
+                        10,0,10,0
+                    </TextBlock.Padding>
+
+                    <TextBlock.Text>
+                        <Binding Path="Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel>
+        </Border>
     </ControlTemplate>
 </ResourceDictionary>

@@ -5,10 +5,6 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Templates/ControlTemplates/Status.xaml"/>
-                <ResourceDictionary Source="Resources/Templates/DataTemplates/Items.xaml"/>
-                <ResourceDictionary Source="Resources/Templates/ControlTemplates/Collections/Status.xaml"/>
-                
                 <ResourceDictionary Source="Resources/Styles/Total.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/ToolTips.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/TextBoxes.xaml"/>
@@ -19,8 +15,11 @@
                 
                 <ResourceDictionary Source="Resources/Templates/Animations/Opacity.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/Animations/Motion.xaml"/>
-                
-                <ResourceDictionary Source="Resources/Templates/DataTemplates/Menu.xaml"/>
+
+                <ResourceDictionary Source="Resources/Templates/ControlTemplates/Status.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/DataTemplates/Items.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/ControlTemplates/Collections/Status.xaml"/>
+
                 <ResourceDictionary Source="Resources/Templates/DataTemplates/Units.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/DataTemplates/Hierarchical/Units.xaml"/>
 

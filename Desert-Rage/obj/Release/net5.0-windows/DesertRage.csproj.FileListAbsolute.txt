@@ -357,7 +357,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\SoundGroup.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatBar.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatusPanel.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\MainWindow.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Reload.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\App.g.cs
@@ -382,14 +381,12 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\SoundGroup.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\IconStat.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatBar.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Status\StatusPanel.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\MainWindow.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Reload.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Styles\ToolTips.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Styles\Total.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\ControlTemplates\Units.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\DataTemplates\Hierarchical\Units.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\DataTemplates\Menu.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\DataTemplates\Units.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Desert Rage.exe
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Desert Rage.deps.json
