@@ -51,7 +51,7 @@ namespace DesertRage.ViewModel.Battle
                 stageFoes[i] = foes[id.Int()];
             }
 
-            _drawStrategy.ResetEnemies(foes);
+            _drawStrategy.ResetEnemies(stageFoes);
         }
 
         private readonly IEnemyAppearing _drawStrategy;
