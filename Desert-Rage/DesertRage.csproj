@@ -764,6 +764,12 @@
     <None Update="Resources\Media\Data\Items\Equipment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\Data\Opponents\Bosses.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\Data\Opponents\Foes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\Combo.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

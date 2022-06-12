@@ -57,7 +57,7 @@
                     <ColumnDefinition Width="0.725*"/>
                 </Grid.ColumnDefinitions>
 
-                <UniformGrid Rows="3" Columns="3"/>
+                <ContentControl Template="{StaticResource SlicedIcon}"/>
 
                 <UniformGrid Rows="3">
                     <Grid.Column>
@@ -77,43 +77,29 @@
                     </Viewbox>
 
                     <ContentControl Template="{StaticResource HpBar}"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.575*"/>
+                            <ColumnDefinition Width="0.425*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <ContentControl DataContext="{Binding Path=Stats}" Template="{StaticResource StatsHorizontal}"/>
+                    </Grid>
                 </UniformGrid>
             </Grid>
 
-            <Grid Style="{StaticResource Impact}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Style="{StaticResource Impact}">
                 <Grid.Row>
-                    2
+                    1
                 </Grid.Row>
 
-                <Grid.Column>
-                    2
-                </Grid.Column>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.125*"/>
-                    <ColumnDefinition Width="0.875*"/>
-                </Grid.ColumnDefinitions>
-
-                <UniformGrid Rows="4">
-                    <Rectangle Fill="Black" Stroke="White"/>
-                    <Rectangle Fill="Black" Stroke="White"/>
-                    <Rectangle Fill="Black" Stroke="White"/>
-                    <Rectangle Fill="Black" Stroke="White"/>
-                </UniformGrid>
-
-                <ScrollViewer>
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
-
-                    <!--Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...-->
-                    <TextBlock FontSize="20" TextWrapping="Wrap" Padding="10,5,10,5">
-                        <TextBlock.Text>
-                            <Binding Path="Description"/>
-                        </TextBlock.Text>
-                    </TextBlock>
-                </ScrollViewer>
-            </Grid>
+                <TextBlock FontSize="20" TextWrapping="Wrap" Padding="10,5,10,5">
+                    <TextBlock.Text>
+                        <Binding Path="Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </UserControl>

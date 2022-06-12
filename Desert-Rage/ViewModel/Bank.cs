@@ -31,42 +31,53 @@ namespace DesertRage.ViewModel
     {
         static Bank()
         {
-            FoeEnumeration = new Foe[]
-            {
-                new Foe
-                {
-                    ID = EnemyBestiary.Spider,
-                    Name = "Паук",
-                    Icon = EnemyImages.Spider.Idle,
-                    Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
-                    Action = EnemyImages.Spider.Action,
-                    Size = new Position(1),
-                    Death = EnemyDefeat.Spider,
-                    Stats = new BattleStats(25, 3, 10, 0),
-                    Hp = new Slider(65),
-                    Experience = 5,
-                    Strategy = FightingMode.POSION
-                }
-            };
+            FoeEnumeration = Foes();
         }
 
         public static Foe[] FoeEnumeration { get; set; }
 
-        private static T GetItems<T>(string path)
+
+        private static T GetData<T>(string path)
         {
             return App.Processor.Read<T>(path.ToFull());
         }
 
+        private static T GetItems<T>(string path)
+        {
+            return GetData<T>($"/Resources/Media/Data/{path}");
+        }
+
+
+        internal static Character LoadHero(string name)
+        {
+            return GetItems<Character>($"Characters/{name}/Beginner.json");
+        }
+
+        internal static Location LoadLevel(string name)
+        {
+            return GetItems<Location>($"Map/{name}.json");
+        }
+
+
+
         internal static NextStats GetNextStats(string name)
         {
-            return GetItems<NextStats>
-                ($"/Resources/Media/Data/Characters/{name}/Next.json");
+            return GetItems<NextStats>($"Characters/{name}/Next.json");
         }
 
         internal static Equipment[][] GetEqupment()
         {
-            return GetItems<Equipment[][]>
-                ("/Resources/Media/Data/Items/Equipment.json");
+            return GetItems<Equipment[][]>("Items/Equipment.json");
+        }
+
+        internal static Foe[] Foes()
+        {
+            return GetItems<Foe[]>("Opponents/Foes.json");
+        }
+
+        internal static Foe[] AllBosses()
+        {
+            return GetItems<Foe[]>("Opponents/Bosses.json");
         }
 
         internal static IParticipantFight[] Fights()
@@ -383,216 +394,221 @@ namespace DesertRage.ViewModel
             };
         }
 
-        internal static Dictionary<EnemyBestiary, Foe> Foes()
-        {
-            return new Dictionary<EnemyBestiary, Foe>
-            {
-                {
-                    EnemyBestiary.Spider,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Spider,
-                        Name = "Паук",
-                        Icon = EnemyImages.Spider.Idle,
-                        Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
-                        Action = EnemyImages.Spider.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.Spider,
-                        Stats = new BattleStats(25, 3, 10, 0),
-                        Hp = new Slider(65),
-                        Experience = 5,
-                        Strategy = FightingMode.POSION
-                    }
-                },
+        
 
-                {
-                    EnemyBestiary.Mummy,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Mummy,
-                        Name = "Мумия",
-                        Icon = EnemyImages.Mummy.Idle,
-                        Description = "Непохоже, что кто-то рассказал этому бедолаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
-                        Action = EnemyImages.Mummy.Action,
-                        Size = new Position(2),
-                        Death = EnemyDefeat.Mummy,
-                        Hp = new Slider(83),
-                        Stats = new BattleStats(32, 7, 17, 2),
-                        Experience = 7
-                    }
-                },
 
-                {
-                    EnemyBestiary.Zombie,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Zombie,
-                        Name = "Зомби",
-                        Icon = EnemyImages.Zombie.Idle,
-                        Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
-                        Action = EnemyImages.Zombie.Action,
-                        Size = new Position(2, 1),
-                        Death = EnemyDefeat.Zombie,
-                        Hp = new Slider(83),
-                        Stats = new BattleStats(41, 5, 25, 5),
-                        Experience = 11
-                    }
-                },
 
-                {
-                    EnemyBestiary.Bones,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Bones,
-                        Name = "Страж",
-                        Icon = EnemyImages.Bones.Idle,
-                        Description = "Он не кажется таким уж безобидным. Спустя такой стаж охраны у него будет к вам серьезный разговор.",
-                        Action = EnemyImages.Bones.Action,
-                        Size = new Position(2),
-                        Death = EnemyDefeat.Bones,
-                        Hp = new Slider(125),
-                        Stats = new BattleStats(50, 15, 35, 7),
-                        Experience = 15
-                    }
-                },
 
-                {
-                    EnemyBestiary.Vulture,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Vulture,
-                        Name = "Стервятник",
-                        Icon = EnemyImages.Vulture.Idle,
-                        Description = "Это птица? Это винтокрыл? Нет, это ручной гусь Гоша, которого хозяева снова оставили голодным одного.",
-                        Action = EnemyImages.Vulture.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.Vulture,
-                        Hp = new Slider(250),
-                        Stats = new BattleStats(45, 25, 65, 30),
-                        Experience = 35
-                    }
-                },
+        //internal static Dictionary<EnemyBestiary, Foe> Foes()
+        //{
+        //    return new Dictionary<EnemyBestiary, Foe>
+        //    {
+        //        {
+        //            EnemyBestiary.Spider,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Spider,
+        //                Name = "Паук",
+        //                Icon = EnemyImages.Spider.Idle,
+        //                Description = "Этот паук так долго питался гнильем, что сам стал разносчиком заразы. И вовсе не хочется проверять, что он может взяться за что-то посвежее...",
+        //                Action = EnemyImages.Spider.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.Spider,
+        //                Stats = new BattleStats(25, 3, 10, 0),
+        //                Hp = new Slider(65),
+        //                Experience = 5,
+        //                Strategy = FightingMode.POSION
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.Ghoul,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Ghoul,
-                        Name = "Гуль",
-                        Icon = EnemyImages.Ghoul.Idle,
-                        Description = "Страшный тип. На глаза к такому лучше точно не попадаться.",
-                        Action = EnemyImages.Ghoul.Action,
-                        Size = new Position(1, 2),
-                        Death = EnemyDefeat.Ghoul,
-                        Hp = new Slider(306),
-                        Stats = new BattleStats(80, 40, 30, 20),
-                        Experience = 75
-                    }
-                },
+        //        {
+        //            EnemyBestiary.Mummy,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Mummy,
+        //                Name = "Мумия",
+        //                Icon = EnemyImages.Mummy.Idle,
+        //                Description = "Непохоже, что кто-то рассказал этому бедолаге как снять бинты. Хотя стойте... Это же ходячий бинт!",
+        //                Action = EnemyImages.Mummy.Action,
+        //                Size = new Position(2),
+        //                Death = EnemyDefeat.Mummy,
+        //                Hp = new Slider(83),
+        //                Stats = new BattleStats(32, 7, 17, 2),
+        //                Experience = 7
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.GrimReaper,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.GrimReaper,
-                        Name = "Жнец",
-                        Icon = EnemyImages.GrimReaper.Idle,
-                        Description = "У него хорошая коса за плечами, вот только не видно ни одного поля с пшеницей посреди пустыни...",
-                        Action = EnemyImages.GrimReaper.Action,
-                        Size = new Position(2),
-                        Death = EnemyDefeat.GrimReaper,
-                        Hp = new Slider(272),
-                        Stats = new BattleStats(100, 20, 45, 60),
-                        Experience = 100
-                    }
-                },
+        //        {
+        //            EnemyBestiary.Zombie,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Zombie,
+        //                Name = "Зомби",
+        //                Icon = EnemyImages.Zombie.Idle,
+        //                Description = "Многие действительно считали зомби мертвецом, способным словно гепард гоняться за людьми? Бросьте, это же почти полностью разложившийся труп. Он умоляет о том, чтобы его добили.",
+        //                Action = EnemyImages.Zombie.Action,
+        //                Size = new Position(2, 1),
+        //                Death = EnemyDefeat.Zombie,
+        //                Hp = new Slider(83),
+        //                Stats = new BattleStats(41, 5, 25, 5),
+        //                Experience = 11
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.Scarab,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Scarab,
-                        Name = "Скарабей",
-                        Icon = EnemyImages.Scarab.Idle,
-                        Description = "Этот скарабей решил подняться, выполняя работенку посложнее своих жучьих обязанностей.",
-                        Action = EnemyImages.Scarab.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.Scarab,
-                        Hp = new Slider(100),
-                        Stats = new BattleStats(80),
-                        Experience = 60
-                    }
-                },
+        //        {
+        //            EnemyBestiary.Bones,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Bones,
+        //                Name = "Страж",
+        //                Icon = EnemyImages.Bones.Idle,
+        //                Description = "Он не кажется таким уж безобидным. Спустя такой стаж охраны у него будет к вам серьезный разговор.",
+        //                Action = EnemyImages.Bones.Action,
+        //                Size = new Position(2),
+        //                Death = EnemyDefeat.Bones,
+        //                Hp = new Slider(125),
+        //                Stats = new BattleStats(50, 15, 35, 7),
+        //                Experience = 15
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.KillerMole,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.KillerMole,
-                        Name = "Моль-убийца",
-                        Icon = EnemyImages.KillerMole.Idle,
-                        Description = "Такую прелесть точно не захочется найти в своем шкафу.",
-                        Action = EnemyImages.KillerMole.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.KillerMole,
-                        Hp = new Slider(400),
-                        Stats = new BattleStats(150, 100, 100, 75),
-                        Experience = 175
-                    }
-                },
+        //        {
+        //            EnemyBestiary.Vulture,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Vulture,
+        //                Name = "Стервятник",
+        //                Icon = EnemyImages.Vulture.Idle,
+        //                Description = "Это птица? Это винтокрыл? Нет, это ручной гусь Гоша, которого хозяева снова оставили голодным одного.",
+        //                Action = EnemyImages.Vulture.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.Vulture,
+        //                Hp = new Slider(250),
+        //                Stats = new BattleStats(45, 25, 65, 30),
+        //                Experience = 35
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.Imp,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Imp,
-                        Name = "Прислужник",
-                        Icon = EnemyImages.Imp.Idle,
-                        Description = "Коварный, безжалостный, этот бес явно не хочет не званых гостей.",
-                        Action = EnemyImages.Imp.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.Imp,
-                        Hp = new Slider(600),
-                        Stats = new BattleStats(125, 105, 90, 140),
-                        Experience = 180
-                    }
-                },
+        //        {
+        //            EnemyBestiary.Ghoul,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Ghoul,
+        //                Name = "Гуль",
+        //                Icon = EnemyImages.Ghoul.Idle,
+        //                Description = "Страшный тип. На глаза к такому лучше точно не попадаться.",
+        //                Action = EnemyImages.Ghoul.Action,
+        //                Size = new Position(1, 2),
+        //                Death = EnemyDefeat.Ghoul,
+        //                Hp = new Slider(306),
+        //                Stats = new BattleStats(80, 40, 30, 20),
+        //                Experience = 75
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.Worm,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Worm,
-                        Name = "Песчаный червь",
-                        Icon = EnemyImages.Worm.Idle,
-                        Description = "Этот пожиратель настолько огромный, что торчит только его хвост. Самое время малость его укоротить...",
-                        Action = EnemyImages.Worm.Action,
-                        Size = new Position(2),
-                        Death = EnemyDefeat.Worm,
-                        Hp = new Slider(950),
-                        Stats = new BattleStats(160, 70, 130, 70),
-                        Experience = 200
-                    }
-                },
+        //        {
+        //            EnemyBestiary.GrimReaper,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.GrimReaper,
+        //                Name = "Жнец",
+        //                Icon = EnemyImages.GrimReaper.Idle,
+        //                Description = "У него хорошая коса за плечами, вот только не видно ни одного поля с пшеницей посреди пустыни...",
+        //                Action = EnemyImages.GrimReaper.Action,
+        //                Size = new Position(2),
+        //                Death = EnemyDefeat.GrimReaper,
+        //                Hp = new Slider(272),
+        //                Stats = new BattleStats(100, 20, 45, 60),
+        //                Experience = 100
+        //            }
+        //        },
 
-                {
-                    EnemyBestiary.Master,
-                    new Foe
-                    {
-                        ID = EnemyBestiary.Master,
-                        Name = "Мастер",
-                        Icon = EnemyImages.Master.Idle,
-                        Description = "Знатока своего дела видно сразу. Но, к сожалению, сговорчивостью он точно не выделяется.",
-                        Action = EnemyImages.Master.Action,
-                        Size = new Position(1),
-                        Death = EnemyDefeat.Master,
-                        Hp = new Slider(760),
-                        Stats = new BattleStats(160),
-                        Experience = 255
-                    }
-                }
-            };
-        }
+        //        {
+        //            EnemyBestiary.Scarab,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Scarab,
+        //                Name = "Скарабей",
+        //                Icon = EnemyImages.Scarab.Idle,
+        //                Description = "Этот скарабей решил подняться, выполняя работенку посложнее своих жучьих обязанностей.",
+        //                Action = EnemyImages.Scarab.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.Scarab,
+        //                Hp = new Slider(100),
+        //                Stats = new BattleStats(80),
+        //                Experience = 60
+        //            }
+        //        },
+
+        //        {
+        //            EnemyBestiary.KillerMole,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.KillerMole,
+        //                Name = "Моль-убийца",
+        //                Icon = EnemyImages.KillerMole.Idle,
+        //                Description = "Такую прелесть точно не захочется найти в своем шкафу.",
+        //                Action = EnemyImages.KillerMole.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.KillerMole,
+        //                Hp = new Slider(400),
+        //                Stats = new BattleStats(150, 100, 100, 75),
+        //                Experience = 175
+        //            }
+        //        },
+
+        //        {
+        //            EnemyBestiary.Imp,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Imp,
+        //                Name = "Прислужник",
+        //                Icon = EnemyImages.Imp.Idle,
+        //                Description = "Коварный, безжалостный, этот бес явно не хочет не званых гостей.",
+        //                Action = EnemyImages.Imp.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.Imp,
+        //                Hp = new Slider(600),
+        //                Stats = new BattleStats(125, 105, 90, 140),
+        //                Experience = 180
+        //            }
+        //        },
+
+        //        {
+        //            EnemyBestiary.Worm,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Worm,
+        //                Name = "Песчаный червь",
+        //                Icon = EnemyImages.Worm.Idle,
+        //                Description = "Этот пожиратель настолько огромный, что торчит только его хвост. Самое время малость его укоротить...",
+        //                Action = EnemyImages.Worm.Action,
+        //                Size = new Position(2),
+        //                Death = EnemyDefeat.Worm,
+        //                Hp = new Slider(950),
+        //                Stats = new BattleStats(160, 70, 130, 70),
+        //                Experience = 200
+        //            }
+        //        },
+
+        //        {
+        //            EnemyBestiary.Master,
+        //            new Foe
+        //            {
+        //                ID = EnemyBestiary.Master,
+        //                Name = "Мастер",
+        //                Icon = EnemyImages.Master.Idle,
+        //                Description = "Знатока своего дела видно сразу. Но, к сожалению, сговорчивостью он точно не выделяется.",
+        //                Action = EnemyImages.Master.Action,
+        //                Size = new Position(1),
+        //                Death = EnemyDefeat.Master,
+        //                Hp = new Slider(760),
+        //                Stats = new BattleStats(160),
+        //                Experience = 255
+        //            }
+        //        }
+        //    };
+        //}
 
         internal static Dictionary<EnemyBestiary, Boss> Bosses()
         {

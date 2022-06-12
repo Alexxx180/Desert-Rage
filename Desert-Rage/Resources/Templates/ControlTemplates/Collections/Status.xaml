@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate x:Key="Statuses">
+        <ItemsControl ItemsSource="{Binding Path=StatusInfo}">
+            <Grid.Row>
+                1
+            </Grid.Row>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="12" Rows="1">
+                        <UniformGrid.VerticalAlignment>
+                            Stretch
+                        </UniformGrid.VerticalAlignment>
+
+                        <UniformGrid.IsItemsHost>
+                            True
+                        </UniformGrid.IsItemsHost>
+                    </UniformGrid>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <StaticResource ResourceKey="StatusTemplate"/>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ControlTemplate>
+</ResourceDictionary>

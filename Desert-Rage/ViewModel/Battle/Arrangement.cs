@@ -6,6 +6,7 @@ using DesertRage.ViewModel.Battle.Components.Strategy.Appear;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations;
 using DesertRage.ViewModel.Battle.Components.Participation;
+using DesertRage.Model.Helpers;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -41,13 +42,13 @@ namespace DesertRage.ViewModel.Battle
 
         internal void SetFoes(EnemyBestiary[] bestiary)
         {
-            Dictionary<EnemyBestiary, Foe> allEnemies = Bank.Foes();
-            Foe[] foes = new Foe[bestiary.Length];
+            Foe[] foes = Bank.FoeEnumeration;
+            Foe[] stageFoes = new Foe[bestiary.Length];
 
-            for (byte i = 0; i < foes.Length; i++)
+            for (byte i = 0; i < stageFoes.Length; i++)
             {
                 EnemyBestiary id = bestiary[i];
-                foes[i] = allEnemies[id];
+                stageFoes[i] = foes[id.Int()];
             }
 
             _drawStrategy.ResetEnemies(foes);

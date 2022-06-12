@@ -69,11 +69,8 @@ namespace DesertRage
         #region Model Members
         private UserProfile NewGame()
         {
-            string path = "/Resources/Media/Data/Characters/Ray/Beginner.json".ToFull();
-            Character hero = App.Processor.Read<Character>(path);
-            
-            path = "/Resources/Media/Data/Map/SecretTemple.json".ToFull();
-            Location level = App.Processor.Read<Location>(path);
+            Character hero = Bank.LoadHero("Ray");
+            Location level = Bank.LoadLevel("SecretTemple");
             hero.SetPlace(level.Start);
 
             UserProfile user = new UserProfile

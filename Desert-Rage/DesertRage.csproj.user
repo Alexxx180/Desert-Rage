@@ -23,9 +23,6 @@
     <Compile Update="Controls\Menu\Bestiary\BestiaryLayout.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Menu\Bestiary\FoeAnalyze.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Menu\Game\GameItems.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -99,9 +96,6 @@
     <Page Update="Controls\Menu\Bestiary\BestiaryLayout.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Menu\Bestiary\FoeAnalyze.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Controls\Menu\Game\GameItems.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -165,7 +159,16 @@
     <Page Update="Resources\Templates\Animations\Opacity.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Templates\ControlTemplates\Collections\Status.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\ControlTemplates\Status.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Templates\DataTemplates\Hierarchical\Units.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\DataTemplates\Items.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\DataTemplates\Units.xaml">

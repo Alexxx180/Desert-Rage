@@ -1,0 +1,90 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
+                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
+                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
+    <DataTemplate x:Key="ItemTemplate">
+        <DockPanel LastChildFill="True">
+            <StackPanel DataContext="{Binding Path=Effect.Unit}">
+                <StackPanel.Orientation>
+                    Horizontal
+                </StackPanel.Orientation>
+
+                <DockPanel.Dock>
+                    Left
+                </DockPanel.Dock>
+
+                <ContentControl Template="{StaticResource UnitIcon}"/>
+                <ContentControl Template="{StaticResource UnitName}"/>
+            </StackPanel>
+
+            <TextBlock Padding="10,0,10,0">
+                <TextBlock.VerticalAlignment>
+                    Center
+                </TextBlock.VerticalAlignment>
+
+                <TextBlock.HorizontalAlignment>
+                    Right
+                </TextBlock.HorizontalAlignment>
+
+                <TextBlock.Text>
+                    <Binding Path="Subject.Value"/>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <DockPanel.ToolTip>
+                <TextBlock>
+                    <TextBlock.Text>
+                        <Binding Path="Effect.Unit.Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </DockPanel.ToolTip>
+        </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="StatusTemplate">
+        <Grid DataContext="{Binding}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+
+            <ContentControl Template="{StaticResource UnitIcon}"/>
+
+            <ProgressBar Background="#B8000000"
+                         Foreground="#FF00F3FF">
+                <Grid.Column>
+                    1
+                </Grid.Column>
+
+                <ProgressBar.Orientation>
+                    Vertical
+                </ProgressBar.Orientation>
+
+                <ProgressBar.Minimum>
+                    <Binding Path="Time.Minimum"/>
+                </ProgressBar.Minimum>
+
+                <ProgressBar.Value>
+                    <Binding Path="Time.Current"/>
+                </ProgressBar.Value>
+
+                <ProgressBar.Maximum>
+                    <Binding Path="Time.Max"/>
+                </ProgressBar.Maximum>
+            </ProgressBar>
+
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=Time.Current}" Value="0">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

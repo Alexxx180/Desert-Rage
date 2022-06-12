@@ -124,7 +124,7 @@
                             </Setter>
                             <Setter Property="Grid.ColumnSpan">
                                 <Setter.Value>
-                                    <Binding Path="Size.X" >
+                                    <Binding Path="Size.X">
                                         <Binding.Converter>
                                             <converters:MaxConverter/>
                                         </Binding.Converter>
