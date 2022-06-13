@@ -80,7 +80,15 @@
             </Grid.ColumnSpan>
 
             <attach:SvgBox.Source>
-                /Resources/Media/Images/battle/background/AncientTemple.svg
+                <Binding Path="Human.Player.Level.BattleBack">
+                    <Binding.Converter>
+                        <converters:UriConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        /Resources/Media/Images/Total/Transparent.svg
+                    </Binding.ConverterParameter>
+                </Binding>
             </attach:SvgBox.Source>
 
             <attach:SvgBox.Stretch>

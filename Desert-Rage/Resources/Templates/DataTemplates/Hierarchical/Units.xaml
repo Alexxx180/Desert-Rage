@@ -4,8 +4,7 @@
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
-                    xmlns:participant="clr-namespace:DesertRage.ViewModel.Battle.Components.Participation"
-                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
+                    xmlns:participant="clr-namespace:DesertRage.ViewModel.Battle.Components.Participation">
     <DataTemplate x:Key="TargetTemplate">
         <DataTemplate.DataType>
             <x:Type TypeName="participant:Enemy"/>
@@ -77,7 +76,7 @@
         </HierarchicalDataTemplate.ItemsSource>
         
         <DockPanel LastChildFill="True">
-            <StackPanel>
+            <StackPanel DataContext="{Binding Path=Effect.Unit}">
                 <StackPanel.Orientation>
                     Horizontal
                 </StackPanel.Orientation>
@@ -86,33 +85,8 @@
                     Left
                 </DockPanel.Dock>
 
-                <svgc:SvgViewbox DataContext="{Binding}">
-                    <attach:SvgBox.Source>
-                        <Binding Path="Effect.Unit.Icon">
-                            <Binding.Converter>
-                                <converters:UriConverter/>
-                            </Binding.Converter>
-
-                            <Binding.ConverterParameter>
-                                <x:Static Member="total:LocationsTotal.Transparent"/>
-                            </Binding.ConverterParameter>
-                        </Binding>
-                    </attach:SvgBox.Source>
-
-                    <attach:SvgBox.Stretch>
-                        Fill
-                    </attach:SvgBox.Stretch>
-                </svgc:SvgViewbox>
-
-                <TextBlock VerticalAlignment="Center">
-                    <TextBlock.Padding>
-                        10,0,10,0
-                    </TextBlock.Padding>
-
-                    <TextBlock.Text>
-                        <Binding Path="Effect.Unit.Name"/>
-                    </TextBlock.Text>
-                </TextBlock>
+                <ContentControl Template="{StaticResource UnitIcon}"/>
+                <ContentControl Template="{StaticResource UnitName}"/>
             </StackPanel>
 
             <TextBlock>
@@ -138,11 +112,7 @@
             </TextBlock>
 
             <DockPanel.ToolTip>
-                <TextBlock>
-                    <TextBlock.Text>
-                        <Binding Path="Effect.Unit.Description"/>
-                    </TextBlock.Text>
-                </TextBlock>
+                <TextBlock Text="{Binding Path=Effect.Unit.Description}"/>
             </DockPanel.ToolTip>
         </DockPanel>
 

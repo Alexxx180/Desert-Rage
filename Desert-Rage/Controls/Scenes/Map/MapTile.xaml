@@ -6,7 +6,6 @@
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-             xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
              mc:Ignorable="d" 
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
              d:DesignHeight="50" d:DesignWidth="50"  Margin="0" Padding="0">
@@ -26,7 +25,7 @@
                 </Binding.Converter>
 
                 <Binding.ConverterParameter>
-                    <x:Static Member="total:LocationsTotal.Transparent"/>
+                    /Resources/Media/Images/Locations/Total/Transparent.svg
                 </Binding.ConverterParameter>
             </Binding>
         </attach:SvgBox.Source>

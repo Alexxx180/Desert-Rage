@@ -2,8 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total">
+                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators">
     <DataTemplate x:Key="FoeTemplate">
         <Grid>
             <Grid.Resources>
@@ -40,11 +39,7 @@
                         </Grid.Row>
 
                         <attach:SvgBox.Source>
-                            <Binding>
-                                <Binding.Path>
-                                    Unit.Action
-                                </Binding.Path>
-                            </Binding>
+                            <Binding Path="Unit.Action"/>
                         </attach:SvgBox.Source>
 
                         <attach:SvgBox.Stretch>

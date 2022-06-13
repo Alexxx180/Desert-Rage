@@ -47,10 +47,12 @@ namespace DesertRage.ViewModel.Battle
         private protected override void End()
         {
             Scene.RaiseEscape();
+            Human.Player.Peace();
         }
 
         private protected override void Freeze()
         {
+            Human.Player.Stop();
             base.Freeze();
             EndTurns(Human);
         }
@@ -58,6 +60,8 @@ namespace DesertRage.ViewModel.Battle
         public override void Won()
         {
             Human.Player.AddExperience(Experience);
+            Human.Player.Stop();
+            Human.Player.SoundPlayer.PlaySound("/Resources/Media/OST/Sounds/Info/Won.mp3".ToFull());
             End();
         }
 

@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:total="clr-namespace:DesertRage.Resources.Media.Images.Locations.Total"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <ControlTemplate x:Key="UnitName">
@@ -229,7 +228,7 @@
                         </Binding.Converter>
 
                         <Binding.ConverterParameter>
-                            <x:Static Member="total:LocationsTotal.Transparent"/>
+                            /Resources/Media/Images/Locations/Total/Transparent.svg
                         </Binding.ConverterParameter>
                     </Binding>
                 </attach:SvgBox.Source>
@@ -323,7 +322,7 @@
                             </Binding.Converter>
 
                             <Binding.ConverterParameter>
-                                <x:Static Member="total:LocationsTotal.Transparent"/>
+                                /Resources/Media/Images/Locations/Total/Transparent.svg
                             </Binding.ConverterParameter>
                         </Binding>
                     </status:IconStat.Icon>

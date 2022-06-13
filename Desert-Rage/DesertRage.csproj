@@ -38,8 +38,8 @@
     <None Remove="Resources\Media\Data\Characters\Ray\Next.json" />
     <None Remove="Resources\Media\Data\Characters\Sam\Beginner.json" />
     <None Remove="Resources\Media\Data\Map\SecretTemple.json" />
-    <None Remove="Resources\Media\Images\Battle\Background\AncientTemple.svg" />
     <None Remove="Resources\Media\Images\Battle\Background\LavaTemple.svg" />
+    <None Remove="Resources\Media\Images\Battle\Background\SecretTemple.svg" />
     <None Remove="Resources\Media\Images\Battle\Background\WaterTemple.svg" />
     <None Remove="Resources\Media\Images\Battle\Bosses\Friend\Action.svg" />
     <None Remove="Resources\Media\Images\Battle\Bosses\Friend\Idle.svg" />
@@ -80,12 +80,20 @@
     <None Remove="Resources\Media\Images\Battle\Enemies\Worm\Idle.svg" />
     <None Remove="Resources\Media\Images\Battle\Enemies\Zombie\Action.svg" />
     <None Remove="Resources\Media\Images\Battle\Enemies\Zombie\Idle.svg" />
+    <None Remove="Resources\Media\Images\Locations\FireTemple\Artifact.svg" />
+    <None Remove="Resources\Media\Images\Locations\FireTemple\Wall.svg" />
+    <None Remove="Resources\Media\Images\Locations\FireTemple\Way.svg" />
     <None Remove="Resources\Media\Images\Locations\SecretTemple\Artifact.svg" />
     <None Remove="Resources\Media\Images\Locations\SecretTemple\Wall.svg" />
     <None Remove="Resources\Media\Images\Locations\SecretTemple\Way.svg" />
+    <None Remove="Resources\Media\Images\Locations\TheGreatEscape\Wall.svg" />
+    <None Remove="Resources\Media\Images\Locations\TheGreatEscape\Way.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Button.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Chest\Closed.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Chest\Opened.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Key.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Lever\Off.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Lever\On.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Lock.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Down.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Left.svg" />
@@ -100,8 +108,13 @@
     <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Up\1.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Up\2.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\SafeArea.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Spikes.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Surprise.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Table.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Transparent.svg" />
+    <None Remove="Resources\Media\Images\Locations\WaterTemple\Artifact.svg" />
+    <None Remove="Resources\Media\Images\Locations\WaterTemple\Wall.svg" />
+    <None Remove="Resources\Media\Images\Locations\WaterTemple\Way.svg" />
     <None Remove="Resources\Media\Images\MainMenu\Cover.svg" />
     <None Remove="Resources\Media\Images\Menu\Items\Antidote.svg" />
     <None Remove="Resources\Media\Images\Menu\Items\Bandage.svg" />
@@ -274,6 +287,45 @@
     <Resource Include="Resources\Media\Images\Battle\Enemies\Zombie\Idle.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Media\Images\Locations\FireTemple\Artifact.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\FireTemple\Wall.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\FireTemple\Way.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\TheGreatEscape\Wall.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\TheGreatEscape\Way.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Button.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Lever\Off.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Lever\On.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Spikes.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Surprise.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\WaterTemple\Artifact.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\WaterTemple\Wall.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\WaterTemple\Way.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Media\Images\Menu\Skills\Poison.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -316,7 +368,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Media\Images\Battle\Background\AncientTemple.svg">
+    <Resource Include="Resources\Media\Images\Battle\Background\SecretTemple.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Battle\Background\LavaTemple.svg">
@@ -511,31 +563,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\Media\Images\Battle\Background\BattleBackground.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>BattleBackground.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Battle\Bosses\Friend.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Friend.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Battle\Bosses\Pharaoh.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Pharaoh.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Battle\Bosses\TheRuler.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>TheRuler.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Battle\Bosses\UghZan.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>UghZan.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\Media\Images\Battle\Character\Ray\Ray.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -649,26 +676,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Media\Images\Battle\Background\BattleBackground.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BattleBackground.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Battle\Bosses\Friend.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Friend.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Battle\Bosses\Pharaoh.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Pharaoh.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Battle\Bosses\TheRuler.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>TheRuler.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Battle\Bosses\UghZan.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UghZan.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Media\Images\Battle\Character\Ray\Ray.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Ray.Designer.cs</LastGenOutput>
@@ -771,6 +778,39 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\Data\Opponents\Foes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\FireTemple\Fight.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\FireTemple\Peace.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\FireTemple\TheRuler.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\SecretTemple\Fight.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\SecretTemple\Peace.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\SecretTemple\Pharaoh.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\SecretTemple\UghZan.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\TimeChamber-EscapeTheme.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\WaterTemple\Fight.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\WaterTemple\FriendDuel.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\WaterTemple\Peace.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Noises\Actions\Combo.mp3">

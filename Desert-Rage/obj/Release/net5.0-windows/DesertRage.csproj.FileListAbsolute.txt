@@ -340,7 +340,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\Animations\Opacity.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\App.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Autorization.g.cs
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Battle\BattleResults.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\BestiaryLayout.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameItems.g.cs
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameMenu.g.cs
@@ -367,7 +366,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\ref\Desert Rage.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Desert Rage.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Autorization.baml
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Battle\BattleResults.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Bestiary\BestiaryLayout.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameItems.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\GameMenu.baml
@@ -420,34 +418,10 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\b
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\DesertRageDecorators.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\DesertRageResources.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\DesertRageResources.pdb
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Background.BattleBackground.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Bosses.Friend.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Bosses.Pharaoh.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Bosses.TheRuler.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Bosses.UghZan.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Character.Ray.Ray.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Character.Rock.Rock.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Character.Sam.Sam.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Bones.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Ghoul.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.GrimReaper.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Imp.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.KillerMole.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Master.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Mummy.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Scarab.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Spider.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Vulture.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Worm.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Battle.Enemies.Zombie.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.SecretTemple.SecretTemple.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Chest.Chest.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.LocationsTotal.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Person.Static.PersonStand.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Person.Walk.Down.WalkDown.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Person.Walk.Left.WalkLeft.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Person.Walk.Right.WalkRight.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Person.Walk.Up.WalkUp.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.MainMenu.MainMenu.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Skills.Skills.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Stats.Stats.resources
@@ -498,9 +472,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\b
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Defeat\Enemies\Vulture.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Defeat\Enemies\Worm.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Defeat\Enemies\Zombie.mp3
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Info\Chest.mp3
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Info\Door.mp3
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Info\Save.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Sounds\Info\Won.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Processors.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Processors.pdb
@@ -517,3 +488,14 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\ControlTemplates\Collections\Status.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\DataTemplates\Items.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\WaterTemple.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\FireTemple\Fight.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\FireTemple\Peace.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\FireTemple\TheRuler.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\SecretTemple\Fight.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\SecretTemple\Peace.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\SecretTemple\Pharaoh.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\SecretTemple\UghZan.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\TimeChamber-EscapeTheme.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\WaterTemple\Fight.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\WaterTemple\FriendDuel.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Music\WaterTemple\Peace.mp3

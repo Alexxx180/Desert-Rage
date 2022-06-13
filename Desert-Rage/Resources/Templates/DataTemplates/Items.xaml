@@ -41,11 +41,7 @@
             </TextBlock>
 
             <DockPanel.ToolTip>
-                <TextBlock>
-                    <TextBlock.Text>
-                        <Binding Path="Effect.Unit.Description"/>
-                    </TextBlock.Text>
-                </TextBlock>
+                <TextBlock Text="{Binding Path=Effect.Unit.Description}"/>
             </DockPanel.ToolTip>
         </DockPanel>
     </DataTemplate>

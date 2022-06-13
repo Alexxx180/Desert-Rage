@@ -132,12 +132,10 @@ namespace DesertRage.ViewModel
 
         private void AddSkills()
         {
-            List<SkillsID> keys = Hero.Skills;
             Dictionary<SkillsID, ConsumeCommand> skills = Bank.AllSkills();
 
-            for (byte i = 0; i < keys.Count; i++)
+            foreach (SkillsID id in Hero.Skills)
             {
-                SkillsID id = keys[i];
                 AddSkill(skills[id]);
             }
         }
@@ -298,6 +296,21 @@ namespace DesertRage.ViewModel
             //    Bank.SaveCharacter(name);
         }
 
+        public void Stop()
+        {
+            SoundPlayer.Sound1.Stop();
+        }
+
+        public void Peace()
+        {
+            SoundPlayer.PlayMusic(Level.MusicPeace.ToFull());
+        }
+
+        public void Fight()
+        {
+            SoundPlayer.PlayMusic(Level.MusicFight.ToFull());
+        }
+
         private void NextChapter()
         {
             Location next = Bank.LoadLevel(Level.NextChapter);
@@ -314,6 +327,7 @@ namespace DesertRage.ViewModel
                 Hero.SetPlace(Level.Start);
                 OnPropertyChanged(nameof(Level));
                 Battle.SetFoes(Level.StageFoes);
+                Peace();
             }
         }
 
@@ -403,6 +417,7 @@ namespace DesertRage.ViewModel
             {
                 IsFighting = true;
                 SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
+                Fight();
             }
         }
 

@@ -1,23 +1,23 @@
 {
 	"Image": "/Resources/Media/Images/Battle/Character/Ray/Idle.svg",
-	"Skills": [0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11],
 	"Level": 1,
 	"Experience": {
-		"IsMax": false,
+		"IsMax": true,
 		"IsEmpty": true,
-		"IsSealed": false,
+		"IsSealed": true,
 		"Minimum": 0,
 		"Current": 0,
-		"Max": 15
+		"Max": 0
 	},
 	"Ap": {
 		"IsMax": true,
 		"IsEmpty": false,
 		"IsSealed": false,
 		"Minimum": 0,
-		"Current": 40,
-		"Max": 40
+		"Current": 1000,
+		"Max": 1000
 	},
+	"Skills": [0, 1, 3, 2, 4, 5, 6, 7, 8, 9, 10, 11],
 	"Learned": [],
 	"Equipment": [{
 		"Kind": 0,
@@ -70,20 +70,20 @@
 		["/Resources/Media/Images/Locations/Total/Person/Walk/Down/1.svg", "/Resources/Media/Images/Locations/Total/Person/Walk/Down/2.svg"],
 		["/Resources/Media/Images/Locations/Total/Person/Static/Right.svg", "/Resources/Media/Images/Locations/Total/Person/Walk/Right/1.svg", "/Resources/Media/Images/Locations/Total/Person/Static/Right.svg", "/Resources/Media/Images/Locations/Total/Person/Walk/Right/2.svg"]
 	],
-	"WalkThrough": [".", ",", ":", "_", "P"],
+	"WalkThrough": [".", ",", ":", "_", "!", "P", "T"],
 	"Hp": {
 		"IsMax": true,
 		"IsEmpty": false,
 		"IsSealed": false,
 		"Minimum": 0,
-		"Current": 100,
-		"Max": 100
+		"Current": 1000,
+		"Max": 1000
 	},
 	"Stats": {
-		"Attack": 25,
-		"Defence": 150,
-		"Speed": 15,
-		"Special": 25
+		"Attack": 255,
+		"Defence": 255,
+		"Speed": 255,
+		"Special": 255
 	},
 	"Action": "/Resources/Media/Images/Battle/Character/Ray/Action.svg",
 	"Status": {
