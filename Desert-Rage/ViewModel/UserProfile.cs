@@ -8,6 +8,7 @@ using DesertRage.Controls.Menu.Game;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Map;
@@ -290,11 +291,30 @@ namespace DesertRage.ViewModel
         }
 
         #region Map Members
+        private void NewCharacter
+            (string name, bool condition)
+        {
+            //if (condition)
+            //    Bank.SaveCharacter(name);
+        }
+
         private void NextChapter()
         {
-            Level.SetChapter(Bank.LoadLevel(Level.NextChapter));
-            Hero.SetPlace(Level.Start);
-            OnPropertyChanged(nameof(Level));
+            Location next = Bank.LoadLevel(Level.NextChapter);
+            if (next is null)
+            {
+                //NewCharacter("Rock", Hero.Name.Length == 0);
+                //NewCharacter("Sam", Hero.SelectedArmor.Equals
+                //    (new BattleStats(Sets.SERIOUS.ToByte())));
+                Battle.Entry.RaiseEscape();
+            }
+            else
+            {
+                Level.SetChapter(next);
+                Hero.SetPlace(Level.Start);
+                OnPropertyChanged(nameof(Level));
+                Battle.SetFoes(Level.StageFoes);
+            }
         }
 
         private void Gates(Position front, 
@@ -353,13 +373,37 @@ namespace DesertRage.ViewModel
 
         public void Go(Direction move)
         {
-            if (Hero.Go(Level.Map, move.Int()))
+            if (Hero.Hp.IsEmpty)
+                return;
+
+            bool fight = Hero.Go(Level.Map, move.Int());
+            Position current = Hero.Place;
+
+            switch (Level.Map.Tile(current))
+            {
+                case ':':
+                    Hero.Hp.Drain(1);
+                    if (Hero.Hp.IsEmpty)
+                    {
+                        Battle.Entry.RaiseEscape();
+                        return;
+                    }
+                    break;
+                case '_':
+                    Gates(current, '.', '.');
+                    break;
+                case 'T':
+                    Hero.SetPlace(Level.Warps[current.ToString()]);
+                    break;
+                default:
+                    break;
+            }
+
+            if (fight)
             {
                 IsFighting = true;
                 SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
             }
-
-            //UpdateHero();
         }
 
         internal void ResetDanger()

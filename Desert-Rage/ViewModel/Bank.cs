@@ -25,6 +25,7 @@ using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
 using DesertRage.Model.Helpers;
+using System.IO;
 
 namespace DesertRage.ViewModel
 {
@@ -58,7 +59,10 @@ namespace DesertRage.ViewModel
 
         private static T GetData<T>(string path)
         {
-            return App.Processor.Read<T>(path.ToFull());
+            string full = path.ToFull();
+            return File.Exists(full) ?
+                App.Processor.Read<T>(full) :
+                default;
         }
 
         private static T GetItems<T>(string path)
