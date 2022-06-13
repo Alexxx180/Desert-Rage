@@ -516,3 +516,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\b
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\ControlTemplates\Status.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\ControlTemplates\Collections\Status.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\DataTemplates\Items.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\WaterTemple.json

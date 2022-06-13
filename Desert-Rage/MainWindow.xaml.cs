@@ -71,7 +71,8 @@ namespace DesertRage
         {
             Character hero = Bank.LoadHero("Ray");
             Location level = Bank.LoadLevel("SecretTemple");
-            hero.SetPlace(level.Start);
+            //hero.SetPlace(level.Start);
+            hero.SetPlace(new Position(36, 3));
 
             UserProfile user = new UserProfile
             {

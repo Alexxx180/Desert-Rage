@@ -25,7 +25,7 @@
             </ListBox.SelectedItem>
 
             <ListBox.ItemsSource>
-                <Binding Source="{x:Static viewmodel:Bank.FoeEnumeration}"/>
+                <Binding Source="{x:Static viewmodel:Bank.BestiaryEnumeration}"/>
             </ListBox.ItemsSource>
 
             <ListBox.Style>

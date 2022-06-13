@@ -290,6 +290,13 @@ namespace DesertRage.ViewModel
         }
 
         #region Map Members
+        private void NextChapter()
+        {
+            Level.SetChapter(Bank.LoadLevel(Level.NextChapter));
+            Hero.SetPlace(Level.Start);
+            OnPropertyChanged(nameof(Level));
+        }
+
         private void Gates(Position front, 
             char frontTile, char gateTile)
         {
@@ -324,6 +331,8 @@ namespace DesertRage.ViewModel
                     AddEquipment(armor);
                     break;
                 case 'I':
+                    ArmoryElement secret = Chest(front, '.');
+                    AddEquipment(secret);
                     break;
                 case 'K':
                     Gates(front, '.', '.');
@@ -333,6 +342,9 @@ namespace DesertRage.ViewModel
                     break;
                 case '<':
                     Gates(front, '>', 'H');
+                    break;
+                case 'X':
+                    NextChapter();
                     break;
                 default:
                     break;

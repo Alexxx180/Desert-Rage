@@ -764,6 +764,9 @@
     <None Update="Resources\Media\Data\Items\Equipment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\Data\Map\WaterTemple.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\Data\Opponents\Bosses.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
