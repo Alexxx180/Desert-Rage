@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Model.Helpers;
@@ -16,14 +14,9 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         {
             StandImage = new string[4];
             GoingImage = new string[4][];
-
-            int enumLength = Converters.ToValues<EnemyBestiary>().Length;
-            Learned = new BitArray(enumLength);
         }
 
         public string Image { get; set; }
-
-        public List<SkillsID> Skills { get; set; }
 
         #region Ap Management Members
         public void Act(int value)
@@ -50,7 +43,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         #region Status Members
         public void Learn(EnemyBestiary enemy)
         {
-            Learned[enemy.Int()] = true;
+            Learned.Add(enemy);
         }
 
         public byte Level { get; set; }
@@ -58,7 +51,8 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
         public Slider Ap { get; set; }
 
-        public BitArray Learned { get; set; }
+        public HashSet<SkillsID> Skills { get; set; }
+        public HashSet<EnemyBestiary> Learned { get; set; }
         public HashSet<ArmoryElement> Equipment { get; set; }
 
         public BattleStats SelectedArmor { get; set; }
