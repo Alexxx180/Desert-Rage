@@ -11,8 +11,6 @@ namespace DesertRage.Decorators.UI.Bindings.Converters
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            string[] map = values[0] as string[];
-
             Dictionary<string, string>
                 tiles = values[1] as
                 Dictionary<string, string>;
@@ -24,7 +22,7 @@ namespace DesertRage.Decorators.UI.Bindings.Converters
 
             string tile = tiles["."];
 
-            if (map is null)
+            if (values[0] is not char[][] map)
                 return tile;
 
             current += parameter.ToString().ToPosition();
@@ -32,7 +30,7 @@ namespace DesertRage.Decorators.UI.Bindings.Converters
             if (current.IsOverflow(0, map))
                 return tile;
 
-            string code = map.Tile(current);
+            string code = map.Tile(current).ToString();
             if (tiles.ContainsKey(code))
             {
                 tile = tiles[code];
