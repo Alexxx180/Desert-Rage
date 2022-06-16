@@ -4,6 +4,7 @@
         xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
         xmlns:scenes="clr-namespace:DesertRage.Controls.Scenes"
         xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
+        xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
         xmlns:local="clr-namespace:DesertRage"
         xmlns:controls="clr-namespace:DesertRage.Controls"
         Title="Desert rage"
@@ -18,7 +19,23 @@
     </Window.DataContext>
     
     <Grid Background="Black">
-        <controls:SoundGroup x:Name="SoundTrack"/>
+        <controls:SoundGroup x:Name="SoundTrack">
+            <controls:SoundGroup.DataContext>
+                <Binding Path="Adventure.Human.Player.Preferences"/>
+            </controls:SoundGroup.DataContext>
+            
+            <controls:SoundGroup.Music>
+                <Binding Path="Music"/>
+            </controls:SoundGroup.Music>
+
+            <controls:SoundGroup.Sound>
+                <Binding Path="Sound"/>
+            </controls:SoundGroup.Sound>
+            
+            <controls:SoundGroup.Noise>
+                <Binding Path="Sound"/>
+            </controls:SoundGroup.Noise>
+        </controls:SoundGroup>
         
         <Label x:Name="Display">
             <Label.VerticalContentAlignment>
@@ -34,19 +51,27 @@
             </Label.Content>
         </Label>
 
-        <!--<Image x:Name="BrightnessImg" Opacity="0">
-            <Image.IsHitTestVisible>
+        <Border Background="Black">
+            <Border.IsHitTestVisible>
                 False
-            </Image.IsHitTestVisible>
+            </Border.IsHitTestVisible>
 
-            <Image.Stretch>
-                Fill
-            </Image.Stretch>
+            <Border.Opacity>
+                <Binding>
+                    <Binding.Path>
+                        Adventure.Human.Player.Preferences.Brightness.Current
+                    </Binding.Path>
 
-            <Image.Source>
-                /Resources/Media/Images/Locations/Total/Dark.png
-            </Image.Source>
-        </Image>-->
+                    <Binding.Converter>
+                        <converters:InvertConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        100
+                    </Binding.ConverterParameter>
+                </Binding>
+            </Border.Opacity>
+        </Border>
 
         <Grid x:Name="Pause">
             <Grid.Visibility>

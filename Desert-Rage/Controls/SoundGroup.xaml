@@ -3,23 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls"
+             xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="80">
-    <StackPanel>
+             d:DesignHeight="30" d:DesignWidth="80"
+             x:Name="This">
+    <StackPanel DataContext="{Binding ElementName=This}">
         <MediaElement x:Name="Sound1" MediaEnded="OnMusicEnd">
-            <MediaElement.Source>
-                /Resources/OST/Music/MainTitle.mp3
-            </MediaElement.Source>
-            
-            <!--Resources/OST/Music/MainTitle.mp3-->
-            <MediaElement.Visibility>
-                Visible
-            </MediaElement.Visibility>
-
             <MediaElement.Volume>
-                1
-                <!--<Binding ElementName="MusicLoud" Path="Value"/>-->
+                <Binding Path="Music.Current">
+                    <Binding.Converter>
+                        <converters:DoubleConverter/>
+                    </Binding.Converter>
+                </Binding>
             </MediaElement.Volume>
 
             <MediaElement.LoadedBehavior>
@@ -28,17 +23,12 @@
         </MediaElement>
 
         <MediaElement x:Name="Sound2" MediaEnded="OnSoundsEnd">
-            <MediaElement.Source>
-                /Resources/OST/Noises/Punch.mp3
-            </MediaElement.Source>
-
-            <MediaElement.Visibility>
-                Visible
-            </MediaElement.Visibility>
-
             <MediaElement.Volume>
-                1
-                <!--<Binding ElementName="NoiseLoud" Path="Value"/>-->
+                <Binding Path="Noise.Current">
+                    <Binding.Converter>
+                        <converters:DoubleConverter/>
+                    </Binding.Converter>
+                </Binding>
             </MediaElement.Volume>
 
             <MediaElement.LoadedBehavior>
@@ -47,17 +37,12 @@
         </MediaElement>
 
         <MediaElement x:Name="Sound3" MediaEnded="OnSoundsEnd">
-            <MediaElement.Source>
-                /Resources/OST/Sounds/ChestOpened.mp3
-            </MediaElement.Source>
-
-            <MediaElement.Visibility>
-                Visible
-            </MediaElement.Visibility>
-
             <MediaElement.Volume>
-                1
-                <!--<Binding ElementName="SoundsLoud" Path="Value"/>-->
+                <Binding Path="Sound.Current">
+                    <Binding.Converter>
+                        <converters:DoubleConverter/>
+                    </Binding.Converter>
+                </Binding>
             </MediaElement.Volume>
 
             <MediaElement.LoadedBehavior>

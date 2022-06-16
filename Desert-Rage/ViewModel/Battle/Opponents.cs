@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using DesertRage.Model.Locations.Battle.Stats.Enemy;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.ViewModel.Battle.Components.Participation;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 
@@ -14,6 +16,12 @@ namespace DesertRage.ViewModel.Battle
             _enemiesPool = new Stack<Enemy>();
             Enemies = new ObservableCollection<Enemy>();
             _flee = new Random();
+
+            FoeEnumeration = new Dictionary<EnemyBestiary, Foe>();
+            BossesEnumeration = new Dictionary<EnemyBestiary, Boss>();
+
+            SetFoes();
+            SetBosses();
         }
 
         private protected void Setup
@@ -74,7 +82,6 @@ namespace DesertRage.ViewModel.Battle
             for (byte i = 0; i < Enemies.Count; i++)
             {
                 StartTurns(Enemies[i]);
-                //AddStateEvent(Enemies[i].StatusEvents[StatusID.POISON]);
             }
         }
 
@@ -130,6 +137,33 @@ namespace DesertRage.ViewModel.Battle
         public ushort TrapLevel { get; set; }
         
         public const byte Max = 5;
+        #endregion
+
+        #region Foe Data Properties
+        private void SetFoes()
+        {
+            Foe[] foes = Bank.Foes();
+
+            for (byte i = 0; i < foes.Length; i++)
+            {
+                Foe foe = foes[i];
+                FoeEnumeration.Add(foe.ID, foe);
+            }
+        }
+
+        private void SetBosses()
+        {
+            Boss[] bosses = Bank.Bosses();
+
+            for (byte i = 0; i < bosses.Length; i++)
+            {
+                Boss boss = bosses[i];
+                BossesEnumeration.Add(boss.ID, boss);
+            }
+        }
+
+        public Dictionary<EnemyBestiary, Foe> FoeEnumeration { get; }
+        public Dictionary<EnemyBestiary, Boss> BossesEnumeration { get; }
         #endregion
     }
 }

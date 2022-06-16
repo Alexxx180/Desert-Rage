@@ -4,13 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             x:Name="SettingBar"
+             x:Name="This"
              d:DesignHeight="60" d:DesignWidth="800" Height="60">
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-
-    <Grid Style="{StaticResource Impact}">
+    <Grid DataContext="{Binding ElementName=This}" Style="{StaticResource Impact}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition Width="0.5*"/>
@@ -27,13 +23,13 @@
             </TextBlock.Text>
         </TextBlock>
 
-        <Slider Padding="1" x:Name="MainSlider">
+        <Slider Padding="1" DataContext="{Binding Path=SliderSetting}">
             <Grid.Column>
                 1
             </Grid.Column>
 
             <Slider.Minimum>
-                <Binding Path="Slider.Minimum"/>
+                <Binding Path="Minimum"/>
             </Slider.Minimum>
 
             <Slider.Value>
@@ -49,7 +45,7 @@
             </Slider.Value>
             
             <Slider.Maximum>
-                <Binding Path="Slider.Max"/>
+                <Binding Path="Max"/>
             </Slider.Maximum>
 
             <Slider.Height>
@@ -105,7 +101,7 @@
             </Slider.LayoutTransform>
         </Slider>
 
-        <TextBlock>
+        <TextBlock DataContext="{Binding Path=SliderSetting}">
             <Grid.Column>
                 2
             </Grid.Column>
@@ -119,7 +115,7 @@
             </TextBlock.Padding>
 
             <TextBlock.Text>
-                <Binding Path="Slider.Current" StringFormat="{}{0}%"/>
+                <Binding Path="Current" StringFormat="{}{0}%"/>
             </TextBlock.Text>
         </TextBlock>
     </Grid>

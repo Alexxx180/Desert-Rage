@@ -17,39 +17,12 @@ using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
-using DesertRage.Model.Helpers;
 using System.IO;
 
 namespace DesertRage.ViewModel
 {
     internal static class Bank
     {
-        static Bank()
-        {
-            FoeEnumeration = Foes();
-            BossesEnumeration = Bosses();
-
-            int foeCount = FoeEnumeration.Length;
-            int total = foeCount + BossesEnumeration.Length;
-            BestiaryEnumeration = new Foe[total];
-
-            for (byte i = 0; i < foeCount; i++)
-            {
-                BestiaryEnumeration[i] = FoeEnumeration[i];
-            }
-
-            for (byte i = foeCount.ToByte(), j = 0; i < total; i++, j++)
-            {
-                BestiaryEnumeration[i] = BossesEnumeration[j];
-            }
-        }
-
-        public static Foe[] FoeEnumeration { get; set; }
-        public static Boss[] BossesEnumeration { get; set; }
-
-        public static Foe[] BestiaryEnumeration { get; set; }
-
-
         private static T GetData<T>(string path)
         {
             string full = path.ToFull();
@@ -86,6 +59,7 @@ namespace DesertRage.ViewModel
         {
             return GetItems<Equipment[][]>("Items/Equipment.json");
         }
+
 
         internal static Foe[] Foes()
         {

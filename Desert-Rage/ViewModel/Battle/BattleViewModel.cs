@@ -61,7 +61,7 @@ namespace DesertRage.ViewModel.Battle
         {
             Human.Player.AddExperience(Experience);
             Human.Player.Stop();
-            Human.Player.SoundPlayer.PlaySound("/Resources/Media/OST/Sounds/Info/Won.mp3".ToFull());
+            Human.Player.Sound("/Resources/Media/OST/Sounds/Info/Won.mp3");
             End();
         }
 

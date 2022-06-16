@@ -6,7 +6,6 @@ using DesertRage.Resources.Media.OST.Noises.Weapons;
 using DesertRage.ViewModel.Battle.Components.Actions;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
 using System.ComponentModel;
 
@@ -132,7 +131,8 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
         public override void Berserk()
         {
             Act();
-            Fight.Execute(ViewModel.Enemies[0]);
+            if (ViewModel.IsBattle)
+                Fight.Execute(ViewModel.Enemies[0]);
         }
 
         public void Cure(in int value)
@@ -162,9 +162,8 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
 
         public override void WaitForTurn(object sender, object o)
         {
-            if (Time.IsMax)
-                return;
-            base.WaitForTurn(sender, o);
+            if (!Time.IsMax)
+                base.WaitForTurn(sender, o);
         }
     }
 }

@@ -42,13 +42,12 @@ namespace DesertRage.ViewModel.Battle
 
         internal void SetFoes(EnemyBestiary[] bestiary)
         {
-            Foe[] foes = Bank.FoeEnumeration;
             Foe[] stageFoes = new Foe[bestiary.Length];
 
             for (byte i = 0; i < stageFoes.Length; i++)
             {
                 EnemyBestiary id = bestiary[i];
-                stageFoes[i] = foes[id.Int()];
+                stageFoes[i] = FoeEnumeration[id];
             }
 
             _drawStrategy.ResetEnemies(stageFoes);

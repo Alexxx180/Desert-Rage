@@ -214,29 +214,33 @@
         </Grid>
     </ControlTemplate>
 
+    <ControlTemplate x:Key="SvgIcon">
+        <svgc:SvgViewbox DataContext="{Binding}">
+            <DockPanel.Dock>
+                Left
+            </DockPanel.Dock>
+
+            <attach:SvgBox.Source>
+                <Binding>
+                    <Binding.Converter>
+                        <converters:UriConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        /Resources/Media/Images/Locations/Total/Transparent.svg
+                    </Binding.ConverterParameter>
+                </Binding>
+            </attach:SvgBox.Source>
+
+            <attach:SvgBox.Stretch>
+                Fill
+            </attach:SvgBox.Stretch>
+        </svgc:SvgViewbox>
+    </ControlTemplate>
+    
     <ControlTemplate x:Key="UnitIcon">
-        <Grid DataContext="{Binding}">
-            <svgc:SvgViewbox>
-                <DockPanel.Dock>
-                    Left
-                </DockPanel.Dock>
-
-                <attach:SvgBox.Source>
-                    <Binding Path="Icon">
-                        <Binding.Converter>
-                            <converters:UriConverter/>
-                        </Binding.Converter>
-
-                        <Binding.ConverterParameter>
-                            /Resources/Media/Images/Locations/Total/Transparent.svg
-                        </Binding.ConverterParameter>
-                    </Binding>
-                </attach:SvgBox.Source>
-
-                <attach:SvgBox.Stretch>
-                    Fill
-                </attach:SvgBox.Stretch>
-            </svgc:SvgViewbox>
+        <Grid DataContext="{Binding Path=Icon}">
+            <ContentControl Template="{StaticResource SvgIcon}"/>
 
             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
@@ -284,7 +288,7 @@
                 Azure
             </Border.Background>
 
-            <UniformGrid Rows="2" Height="100" Width="200">
+            <UniformGrid Rows="2" Height="100" Width="200" x:Name="StatusPanel">
                 <UniformGrid Rows="2">
                     <ContentControl Template="{StaticResource UnitName}" FontWeight="Bold"/>
                     <ContentControl Template="{StaticResource HpBar}"/>
@@ -295,6 +299,21 @@
                         <Binding Path="Stats"/>
                     </ContentControl.DataContext>
                 </ContentControl>
+
+                <UniformGrid.Style>
+                    <Style TargetType="UniformGrid">
+                        <Style.Triggers>
+                            <DataTrigger Value="False">
+                                <DataTrigger.Binding>
+                                    <Binding Path="IsLearned"/>
+                                </DataTrigger.Binding>
+
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                                <Setter Property="IsEnabled" Value="False"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </UniformGrid.Style>
             </UniformGrid>
         </Border>
     </ControlTemplate>

@@ -1,8 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <DataTemplate x:Key="FoeTemplate">
         <Grid>
             <Grid.Resources>
@@ -33,19 +30,11 @@
                 </Border>
 
                 <Border Opacity="0">
-                    <svgc:SvgViewbox>
-                        <Grid.Row>
-                            1
-                        </Grid.Row>
-
-                        <attach:SvgBox.Source>
+                    <ContentControl Template="{StaticResource SvgIcon}">
+                        <ContentControl.DataContext>
                             <Binding Path="Unit.Action"/>
-                        </attach:SvgBox.Source>
-
-                        <attach:SvgBox.Stretch>
-                            Fill
-                        </attach:SvgBox.Stretch>
-                    </svgc:SvgViewbox>
+                        </ContentControl.DataContext>
+                    </ContentControl>
 
                     <Border.Style>
                         <DynamicResource ResourceKey="ActAnimation2"/>

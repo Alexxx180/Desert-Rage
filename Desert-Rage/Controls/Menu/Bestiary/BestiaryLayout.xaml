@@ -3,9 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Menu.Bestiary"
-             xmlns:viewmodel="clr-namespace:DesertRage.ViewModel"
-             xmlns:status="clr-namespace:DesertRage.Controls.Status"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="This">
@@ -25,7 +22,7 @@
             </ListBox.SelectedItem>
 
             <ListBox.ItemsSource>
-                <Binding Source="{x:Static viewmodel:Bank.BestiaryEnumeration}"/>
+                <Binding Path="Player.Bestiary"/>
             </ListBox.ItemsSource>
 
             <ListBox.Style>
@@ -33,7 +30,7 @@
             </ListBox.Style>
 
             <ListBox.ItemContainerStyle>
-                <StaticResource ResourceKey="RangerItems" />
+                <StaticResource ResourceKey="RangerItems"/>
             </ListBox.ItemContainerStyle>
 
             <ListBox.ItemTemplate>
@@ -86,6 +83,21 @@
                         
                         <ContentControl DataContext="{Binding Path=Stats}" Template="{StaticResource StatsHorizontal}"/>
                     </Grid>
+
+                    <UniformGrid.Style>
+                        <Style TargetType="UniformGrid">
+                            <Style.Triggers>
+                                <DataTrigger Value="{x:Null}">
+                                    <DataTrigger.Binding>
+                                        <Binding/>
+                                    </DataTrigger.Binding>
+
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </UniformGrid.Style>
                 </UniformGrid>
             </Grid>
 

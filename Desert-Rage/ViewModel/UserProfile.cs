@@ -9,6 +9,8 @@ using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Stats.Enemy;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Map;
@@ -63,6 +65,17 @@ namespace DesertRage.ViewModel
             }
         }
 
+        private ObservableCollection<Foe> _bestiary;
+        public ObservableCollection<Foe> Bestiary
+        {
+            get => _bestiary;
+            set
+            {
+                _bestiary = value;
+                OnPropertyChanged();
+            }
+        }
+
         public UserProfile()
         {
             Preferences = new Settings();
@@ -79,6 +92,42 @@ namespace DesertRage.ViewModel
                 new ObservableCollection<Equipment>(),
                 new ObservableCollection<Equipment>()
             };
+        }
+
+        public void AnalyzeFoe(EnemyBestiary id)
+        {
+            if (Hero.Learned.Contains(id))
+                return;
+
+            Hero.Learn(id);
+            AddFoe(id);
+        }
+
+        private void AddFoe(EnemyBestiary id)
+        {
+            if (Battle.FoeEnumeration.ContainsKey(id))
+            {
+                AddFoe(Battle.FoeEnumeration[id]);
+            }
+            else if (Battle.BossesEnumeration.ContainsKey(id))
+            {
+                AddFoe(Battle.BossesEnumeration[id]);
+            }
+        }
+
+        private void AddFoe(Foe foe)
+        {
+            foe.Analyze(true);
+            Bestiary.Add(foe);
+        }
+
+        private void LoadHeroBestiary()
+        {
+            Bestiary = new ObservableCollection<Foe>();
+            foreach (EnemyBestiary id in Hero.Learned)
+            {
+                AddFoe(id);
+            }
         }
 
         public void LoadHeroCommands()
@@ -167,7 +216,7 @@ namespace DesertRage.ViewModel
                 return;
 
             Hero.Equipment.Add(armor);
-            OnPropertyChanged(nameof(Hero));
+            UpdateHero();
 
             AddEquipment(armor, Bank.GetEqupment());
         }
@@ -204,6 +253,7 @@ namespace DesertRage.ViewModel
                 _hero = value;
                 OnPropertyChanged();
                 PlayerEquipment();
+                LoadHeroBestiary();
             }
         }
 
@@ -311,6 +361,11 @@ namespace DesertRage.ViewModel
             SoundPlayer.PlayMusic(Level.MusicFight.ToFull());
         }
 
+        public void Sound(string name)
+        {
+            SoundPlayer.PlaySound(name.ToFull());
+        }
+
         private void NextChapter()
         {
             Location next = Bank.LoadLevel(Level.NextChapter);
@@ -379,6 +434,7 @@ namespace DesertRage.ViewModel
                     break;
                 case 'X':
                     NextChapter();
+                    Sound("/Resources/Media/OST/Sounds/Info/Map/Teleport.mp3");
                     break;
                 default:
                     break;
@@ -396,6 +452,7 @@ namespace DesertRage.ViewModel
             switch (Level.Map.Tile(current))
             {
                 case ':':
+                    Sound("/Resources/Media/OST/Sounds/Info/Map/Wound.mp3");
                     Hero.Hp.Drain(1);
                     if (Hero.Hp.IsEmpty)
                     {
@@ -404,9 +461,11 @@ namespace DesertRage.ViewModel
                     }
                     break;
                 case '_':
+                    Sound("/Resources/Media/OST/Sounds/Info/Map/Door.mp3");
                     Gates(current, '.', '.');
                     break;
                 case 'T':
+                    Sound("/Resources/Media/OST/Sounds/Info/Map/Teleport.mp3");
                     Hero.SetPlace(Level.Warps[current.ToString()]);
                     break;
                 default:

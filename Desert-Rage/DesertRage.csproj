@@ -933,6 +933,24 @@
     <None Update="Resources\Media\OST\Sounds\Info\Door.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Chest.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Door.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Lever.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Save.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Teleport.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Sounds\Info\Map\Wound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Sounds\Info\Save.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

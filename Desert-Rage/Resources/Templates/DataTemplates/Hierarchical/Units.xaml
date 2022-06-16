@@ -1,71 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-                    xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-                    xmlns:status="clr-namespace:DesertRage.Controls.Status"
-                    xmlns:participant="clr-namespace:DesertRage.ViewModel.Battle.Components.Participation">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <DataTemplate x:Key="TargetTemplate">
-        <DataTemplate.DataType>
-            <x:Type TypeName="participant:Enemy"/>
-        </DataTemplate.DataType>
-
-        <Grid MaxHeight="50" MinWidth="200" x:Name="Data">
+        <Grid MaxHeight="50" MinWidth="200" DataContext="{Binding Path=Unit}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="0.8*"/>
             </Grid.ColumnDefinitions>
 
-            <svgc:SvgViewbox>
-                <attach:SvgBox.Source>
-                    <Binding>
-                        <Binding.Path>
-                            Unit.Icon
-                        </Binding.Path>
-                    </Binding>
-                </attach:SvgBox.Source>
+            <ContentControl Template="{StaticResource UnitIcon}"/>
 
-                <attach:SvgBox.Stretch>
-                    Fill
-                </attach:SvgBox.Stretch>
-            </svgc:SvgViewbox>
-
-            <UniformGrid Rows="2">
-                <Grid.Column>
-                    1
-                </Grid.Column>
-
-                <TextBlock Padding="3">
-                    <TextBlock.FontWeight>
-                        Bold
-                    </TextBlock.FontWeight>
-
-                    <TextBlock.Text>
-                        <Binding Path="Unit.Name"/>
-                    </TextBlock.Text>
-                </TextBlock>
-
-                <status:StatBar>
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
-
-                    <status:StatBar.Caption>
-                        ОЗ
-                    </status:StatBar.Caption>
-
-                    <status:StatBar.Bar>
-                        <Binding ElementName="Data" Path="DataContext.Unit.Hp"/>
-                    </status:StatBar.Bar>
-
-                    <status:StatBar.ForeBrush>
-                        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                            <GradientStop Color="#FF3AAC28"/>
-                            <GradientStop Color="#FF00F3FF" Offset="1"/>
-                            <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                        </LinearGradientBrush>
-                    </status:StatBar.ForeBrush>
-                </status:StatBar>
+            <UniformGrid Rows="2" Grid.Column="1">
+                <ContentControl Template="{StaticResource UnitName}"/>
+                <ContentControl Template="{StaticResource HpBar}"/>
             </UniformGrid>
         </Grid>
     </DataTemplate>

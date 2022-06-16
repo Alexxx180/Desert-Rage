@@ -65,8 +65,8 @@ namespace DesertRage
             Adventure.Entry = this;
             Display.Content = user.Location;
             user.Peace();
-            //SoundTrack.PlaySound(user.Level.MusicPeace.ToFull());
-            //System.Diagnostics.Trace.WriteLine(user.Level.MusicPeace.ToFull());
+
+            System.Diagnostics.Trace.WriteLine(user.Preferences.Brightness);
         }
 
         #region Model Members
