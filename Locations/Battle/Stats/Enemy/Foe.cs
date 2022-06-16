@@ -1,6 +1,8 @@
 ﻿using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Things.Storage;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Enemy
 {
@@ -21,6 +23,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Enemy
         {
             base.Set(unit);
             ID = unit.ID;
+            IsLearned = unit.IsLearned;
             Death = unit.Death;
             Size = unit.Size;
             Experience = unit.Experience;
@@ -39,6 +42,11 @@ namespace DesertRage.Model.Locations.Battle.Stats.Enemy
             Hp.Drain(damage.ToUShort());
         }
 
+        public void Analyze(bool setTo)
+        {
+            IsLearned = setTo;
+        }
+
         public EnemyBestiary ID { get; set; }
         public ItemsID Drop { get; set; }
 
@@ -46,6 +54,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Enemy
         public string Death { get; set; }
 
         public byte Experience { get; set; }
+        public bool IsLearned { get; set; }
 
         public FightingMode Strategy { get; set; }
 

@@ -52,7 +52,17 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         public Slider Ap { get; set; }
 
         public HashSet<SkillsID> Skills { get; set; }
-        public HashSet<EnemyBestiary> Learned { get; set; }
+
+        private HashSet<EnemyBestiary> _learned;
+        public HashSet<EnemyBestiary> Learned
+        {
+            get => _learned;
+            set
+            {
+                _learned = value;
+                OnPropertyChanged();
+            }
+        }
         public HashSet<ArmoryElement> Equipment { get; set; }
 
         public BattleStats SelectedArmor { get; set; }

@@ -4,21 +4,21 @@
     {
         public Settings()
         {
-            Music = new Bar(50, 100);
-            Sound = new Bar(50, 100);
-            Noise = new Bar(50, 100);
+            Music = new Slider(50, 100);
+            Sound = new Slider(50, 100);
+            Noise = new Slider(50, 100);
 
-            BattleSpeed = new Bar(25, 100, 200);
-            Brightness = new Bar(50, 100);
+            BattleSpeed = new Slider(25, 100, 200);
+            Brightness = new Slider(10, 50, 100);
         }
 
         #region OST Members
-        public Bar Music { get; set; }
-        public Bar Sound { get; set; }
-        public Bar Noise { get; set; }
+        public Slider Music { get; set; }
+        public Slider Sound { get; set; }
+        public Slider Noise { get; set; }
         #endregion
 
-        public Bar BattleSpeed { get; set; }
-        public Bar Brightness { get; set; }
+        public Slider BattleSpeed { get; set; }
+        public Slider Brightness { get; set; }
     }
 }
