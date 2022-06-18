@@ -3,19 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DesertRage.Controls.Menu"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-             DataContext="{Binding RelativeSource={RelativeSource Self}}"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid DataContext="{Binding Path=ViewModel}">
+             d:DesignHeight="300" d:DesignWidth="300"
+             x:Name="This">
+    <Grid DataContext="{Binding ElementName=This}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
 
         <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop"
-                 SelectionChanged="SelectProfile">
+                 DataContext="{Binding Path=ViewModel}"
+                 SelectedItem="{Binding Path=CurrentProfile}">
             <ListBox.Style>
                 <StaticResource ResourceKey="OrdinaryList"/>
             </ListBox.Style>
@@ -49,16 +49,17 @@
 
             <TextBox TextAlignment="Center" MaxLength="30">
                 <TextBox.Style>
-                    <StaticResource ResourceKey="InputField"/>
+                    <StaticResource ResourceKey="NameField"/>
                 </TextBox.Style>
 
                 <TextBox.Text>
-                    <Binding Path="CurrentProfile">
+                    <Binding Path="ViewModel.CurrentProfile">
                         <Binding.Mode>
                             TwoWay
                         </Binding.Mode>
+                        
                         <Binding.UpdateSourceTrigger>
-                            LostFocus
+                            PropertyChanged
                         </Binding.UpdateSourceTrigger>
                     </Binding>
                 </TextBox.Text>
@@ -71,11 +72,11 @@
                 </Grid.Row>
 
                 <Grid.Column>
-                    2
+                    1
                 </Grid.Column>
 
                 <Button.Content>
-                    ▲
+                    <Binding Path="Arrow"/>
                 </Button.Content>
             </Button>
         </Grid>

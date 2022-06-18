@@ -8,11 +8,11 @@ using DesertRage.Controls.Menu.Game;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
-using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Resources.Media.OST.Noises.Info;
@@ -212,12 +212,10 @@ namespace DesertRage.ViewModel
 
         private void AddEquipment(ArmoryElement armor)
         {
-            if (Hero.Equipment.Contains(armor))
+            if (!Hero.Equipment.Add(armor))
                 return;
 
-            Hero.Equipment.Add(armor);
             UpdateHero();
-
             AddEquipment(armor, Bank.GetEqupment());
         }
 
@@ -230,8 +228,8 @@ namespace DesertRage.ViewModel
         #endregion
 
         #region Model Members
-        public string Name { get; set; }
 
+        #region Serializable Members
         private Location _level;
         public Location Level
         {
@@ -254,10 +252,76 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
                 PlayerEquipment();
                 LoadHeroBestiary();
+                LoadHeroCommands();
             }
         }
 
         public Settings Preferences { get; set; }
+
+        public void SetHeroStart()
+        {
+            Hero.SetPlace(Level.Start);
+        }
+
+        public void SetHero(Character hero)
+        {
+            Hero = hero;
+        }
+
+        public void SetLevel(Location level)
+        {
+            Level = level;
+        }
+
+        public void SetPreferences(Settings preferences)
+        {
+            Preferences.Set(preferences);
+        }
+
+        public void UpdateHero()
+        {
+            OnPropertyChanged(nameof(Hero));
+        }
+
+        public void UpdateLevel()
+        {
+            OnPropertyChanged(nameof(Level));
+        }
+        #endregion
+
+        public void IncreaseItemCount(ItemsID item)
+        {
+            int id = item.Int();
+            if (Hero.Items[id] >= byte.MaxValue)
+                return;
+
+            Items[id].Subject.SetValue(++Hero.Items[id]);
+
+        }
+
+        public void DecreaseItemCount(ItemsID item)
+        {
+            int id = item.Int();
+            if (Hero.Items[id] <= 0)
+                return;
+
+            Items[id].Subject.SetValue(--Hero.Items[id]);
+        }
+
+        internal void SaveGame()
+        {
+            Sound("Info/Map/Save.mp3");
+            Hero.Cure();
+            Hero.Rest();
+
+            string profile = Preferences.Name;
+            if (profile.Equals(string.Empty))
+                return;
+
+            Bank.SaveProfileHero(profile, Hero);
+            Bank.SaveProfileLevel(profile, Level);
+            Bank.SaveProfilePreferences(profile, Preferences);
+        }
 
         public void Hit(int value)
         {
@@ -308,16 +372,13 @@ namespace DesertRage.ViewModel
             Hero.Level++;
         }
 
-        public void UpdateHero()
-        {
-            OnPropertyChanged(nameof(Hero));
-        }
+        
         #endregion
 
-        private ObservableCollection<
-            ObservableCollection<Equipment>> _equip;
-        public ObservableCollection<
-            ObservableCollection<Equipment>> Equip
+        private ObservableCollection
+            <ObservableCollection<Equipment>> _equip;
+        public ObservableCollection
+            <ObservableCollection<Equipment>> Equip
         {
             get => _equip;
             set
@@ -338,14 +399,7 @@ namespace DesertRage.ViewModel
             }
         }
 
-        #region Map Members
-        private void NewCharacter
-            (string name, bool condition)
-        {
-            //if (condition)
-            //    Bank.SaveCharacter(name);
-        }
-
+        #region OST Members
         public void Stop()
         {
             SoundPlayer.Sound1.Stop();
@@ -353,17 +407,32 @@ namespace DesertRage.ViewModel
 
         public void Peace()
         {
-            SoundPlayer.PlayMusic(Level.MusicPeace.ToFull());
+            Music(Level.MusicPeace);
         }
 
         public void Fight()
         {
-            SoundPlayer.PlayMusic(Level.MusicFight.ToFull());
+            Music(Level.MusicFight);
+        }
+
+        public void Music(string name)
+        {
+            SoundPlayer.PlayMusic(name.ToFull());
         }
 
         public void Sound(string name)
         {
-            SoundPlayer.PlaySound(name.ToFull());
+            SoundPlayer.PlaySound
+                ($"/Resources/Media/OST/Sounds/{name}".ToFull());
+        }
+        #endregion
+
+        #region Map Members
+        private void NewCharacter
+            (string name, bool condition)
+        {
+            //if (condition)
+            //    Bank.SaveCharacter(name);
         }
 
         private void NextChapter()
@@ -380,13 +449,13 @@ namespace DesertRage.ViewModel
             {
                 Level.SetChapter(next);
                 Hero.SetPlace(Level.Start);
-                OnPropertyChanged(nameof(Level));
+                UpdateLevel();
                 Battle.SetFoes(Level.StageFoes);
                 Peace();
             }
         }
 
-        private void Gates(Position front, 
+        private void Gates(Position front,
             char frontTile, char gateTile)
         {
             Level.Map.SetTile(front, frontTile);
@@ -398,14 +467,14 @@ namespace DesertRage.ViewModel
                 Level.Map.SetTile(gate, gateTile);
             }
 
-            OnPropertyChanged(nameof(Level));
+            UpdateLevel();
         }
 
         private ArmoryElement Chest
             (Position front, char frontTile)
         {
             Level.Map.SetTile(front, frontTile);
-            OnPropertyChanged(nameof(Level));
+            UpdateLevel();
             return Level.Equipment[front.ToString()];
         }
 
@@ -432,9 +501,12 @@ namespace DesertRage.ViewModel
                 case '<':
                     Gates(front, '>', 'H');
                     break;
+                case 'S':
+                    SaveGame();
+                    break;
                 case 'X':
                     NextChapter();
-                    Sound("/Resources/Media/OST/Sounds/Info/Map/Teleport.mp3");
+                    Sound("Info/Map/Teleport.mp3");
                     break;
                 default:
                     break;
@@ -452,7 +524,7 @@ namespace DesertRage.ViewModel
             switch (Level.Map.Tile(current))
             {
                 case ':':
-                    Sound("/Resources/Media/OST/Sounds/Info/Map/Wound.mp3");
+                    Sound("Info/Map/Wound.mp3");
                     Hero.Hp.Drain(1);
                     if (Hero.Hp.IsEmpty)
                     {
@@ -461,23 +533,29 @@ namespace DesertRage.ViewModel
                     }
                     break;
                 case '_':
-                    Sound("/Resources/Media/OST/Sounds/Info/Map/Door.mp3");
+                    Sound("Info/Map/Door.mp3");
                     Gates(current, '.', '.');
                     break;
                 case 'T':
-                    Sound("/Resources/Media/OST/Sounds/Info/Map/Teleport.mp3");
+                    Sound("Info/Map/Teleport.mp3");
                     Hero.SetPlace(Level.Warps[current.ToString()]);
+                    break;
+                case '!':
+                    EnemyAppearing();
                     break;
                 default:
                     break;
             }
 
             if (fight)
-            {
-                IsFighting = true;
-                SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
-                Fight();
-            }
+                EnemyAppearing();
+        }
+
+        private void EnemyAppearing()
+        {
+            IsFighting = true;
+            SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
+            Fight();
         }
 
         internal void ResetDanger()

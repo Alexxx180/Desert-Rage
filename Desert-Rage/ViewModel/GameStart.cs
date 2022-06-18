@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using System.IO;
+using System;
 
 namespace DesertRage.ViewModel
 {
@@ -10,13 +12,23 @@ namespace DesertRage.ViewModel
         {
             IsListVisible = false;
             Profiles = new ObservableCollection<string>();
+            LoadProfiles();
+        }
 
-            Profiles.Add("АляТополя");
-            Profiles.Add("МистерПерпендыкович");
-            Profiles.Add("СерьезныйСэм");
-            Profiles.Add("Еще");
-            Profiles.Add("И еще");
-            Profiles.Add("И еще один");
+        private void LoadProfiles()
+        {
+            try
+            {
+                string folder = $"{Bank.DataDirectory}/Profiles".ToFull();
+                foreach (string profile in Directory.GetDirectories(folder))
+                {
+                    Profiles.Add(new DirectoryInfo(profile).Name);
+                }
+            }
+            catch // (IOException exception)
+            {
+
+            }
         }
 
         private string _currentProfile;
@@ -27,6 +39,7 @@ namespace DesertRage.ViewModel
             {
                 _currentProfile = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(IsPlayerExists));
             }
         }
 
@@ -51,6 +64,11 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(IsPlayerExists));
             }
+        }
+
+        public bool ResetVisibility()
+        {
+            return IsListVisible = !IsListVisible;
         }
 
         public bool IsPlayerExists => !IsListVisible && Profiles.Contains(CurrentProfile);

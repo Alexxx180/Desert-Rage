@@ -12,7 +12,7 @@ namespace DesertRage.ViewModel.Battle
         private protected Timing()
         {
             _timing = new DispatcherTimer();
-            _timing.Interval = new TimeSpan(0, 0, 0, 0, 50);
+            _timing.Interval = new TimeSpan(0, 0, 0, 0, 100);
         }
 
         #region Event Members

@@ -9,7 +9,7 @@ namespace DesertRage.Controls
     /// </summary>
     public partial class Setting : UserControl
     {
-        #region Setting Members
+        #region Caption Members
         public static readonly DependencyProperty
             CaptionProperty = DependencyProperty.Register
                 (nameof(Caption), typeof(string), typeof(Setting));

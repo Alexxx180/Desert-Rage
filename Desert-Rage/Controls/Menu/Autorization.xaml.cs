@@ -6,15 +6,15 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using DesertRage.ViewModel;
-using System.IO;
 
 namespace DesertRage.Controls.Menu
 {
     /// <summary>
     /// Player autorization
     /// </summary>
-    public partial class Autorization : UserControl, INotifyPropertyChanged
+    public partial class Autorization : UserControl, IDisposable, INotifyPropertyChanged
     {
+        #region ViewModel Members
         public static readonly DependencyProperty
             ViewModelProperty = DependencyProperty.Register(nameof(ViewModel),
                 typeof(GameStart), typeof(Autorization));
@@ -24,6 +24,18 @@ namespace DesertRage.Controls.Menu
             get => GetValue(ViewModelProperty) as GameStart;
             set => SetValue(ViewModelProperty, value);
         }
+        #endregion
+
+        private string _arrow;
+        public string Arrow
+        {
+            get => _arrow;
+            set
+            {
+                _arrow = value;
+                OnPropertyChanged();
+            }
+        }
 
         private readonly HashSet<string> _toDrop;
 
@@ -31,6 +43,7 @@ namespace DesertRage.Controls.Menu
         {
             InitializeComponent();
             _toDrop = new HashSet<string>();
+            Arrow = "▲";
         }
 
         #region ProfilesManagement Members
@@ -67,30 +80,18 @@ namespace DesertRage.Controls.Menu
         #endregion
 
         #region Selection Members
-        private void SelectProfile(object sender, SelectionChangedEventArgs e)
-        {
-            ListBox profileList = sender as ListBox;
-            ViewModel.CurrentProfile = profileList.SelectedItem as string;
-        }
-
         private void UseProfile(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            ViewModel.IsListVisible = !ViewModel.IsListVisible;
-
-            if (ViewModel.IsListVisible)
+            if (ViewModel.ResetVisibility())
             {
-                button.Content = "▼";
+                Arrow = "▼";
             }
             else
             {
-                button.Content = "▲";
-                foreach (string file in _toDrop)
+                Arrow = "▲";
+                foreach (string profile in _toDrop)
                 {
-                    if (File.Exists(file))
-                    {
-                        File.Delete(file);
-                    }
+                    Bank.DropProfile(profile);
                 }
             }
         }
@@ -111,6 +112,11 @@ namespace DesertRage.Controls.Menu
                 PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
                 handler(this, e);
             }
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

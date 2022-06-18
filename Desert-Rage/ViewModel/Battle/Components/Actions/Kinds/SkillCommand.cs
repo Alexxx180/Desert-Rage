@@ -6,7 +6,7 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds
     {
         public SkillCommand(int cost)
         {
-            Value = cost;
+            SetValue(cost);
         }
 
         public SkillCommand() : this(0) { }
@@ -27,6 +27,11 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds
         {
             ViewModel.Human.Player.Hero.Act(Value);
             ViewModel.Human.Player.UpdateHero();
+        }
+
+        public void SetValue(int value)
+        {
+            Value = value;
         }
 
         public bool CanUse => ViewModel.Human.Player.Hero.CanAct(Value);

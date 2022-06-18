@@ -4,40 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
-             xmlns:System="clr-namespace:System;assembly=System.Runtime"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-             xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-             x:Name="DesertMainMenu"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="This">
 
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-    
-    <Grid Grid.ColumnSpan="60" Grid.RowSpan="36" Panel.ZIndex="4" Visibility="Visible">
+    <Grid DataContext="{Binding ElementName=This}">
+        <Grid.Background>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <ContentControl Template="{StaticResource SvgIcon}">
+                        <ContentControl.DataContext>
+                            /Resources/Media/Images/MainMenu/Cover.svg
+                        </ContentControl.DataContext>
+                    </ContentControl>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.25*"/>
             <ColumnDefinition Width="0.75*"/>
         </Grid.ColumnDefinitions>
 
-
-        <svgc:SvgViewbox x:Name="MenuBackground">
-            <Grid.ColumnSpan>
-                2
-            </Grid.ColumnSpan>
-            
-            <attach:SvgBox.Source>
-                /Resources/Media/Images/Background/Cover.svg
-            </attach:SvgBox.Source>
-
-            <attach:SvgBox.Stretch>
-                Fill
-            </attach:SvgBox.Stretch>
-        </svgc:SvgViewbox>
-
-        <menu:Autorization ViewModel="{Binding ElementName=DesertMainMenu, Path=StartViewModel}"/>
+        <menu:Autorization ViewModel="{Binding Path=StartViewModel}" x:Name="ProfileSelect"/>
 
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
@@ -46,55 +36,57 @@
                 <ColumnDefinition Width="0.391*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.03*"/>
-                <RowDefinition Height="0.17*"/>
-                <RowDefinition Height="0.275*"/>
-                <RowDefinition Height="0.125*"/>
-                <RowDefinition Height="0.025*"/>
-                <RowDefinition Height="0.125*"/>
-                <RowDefinition Height="0.05*"/>
-            </Grid.RowDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.03*"/>
+                    <RowDefinition Height="0.17*"/>
+                    <RowDefinition Height="0.275*"/>
+                    <RowDefinition Height="0.125*"/>
+                    <RowDefinition Height="0.025*"/>
+                    <RowDefinition Height="0.125*"/>
+                    <RowDefinition Height="0.05*"/>
+                </Grid.RowDefinitions>
 
-            <Viewbox Grid.Row="1" Grid.Column="1">
-                <TextBlock Text="Desert Rage">
-                    <TextBlock.Style>
-                        <StaticResource ResourceKey="DesertCaption"/>
-                    </TextBlock.Style>
-                </TextBlock>
-            </Viewbox>
-
-            <Button Style="{StaticResource WhiteOption}">
-                <Grid.Row>
-                    3
-                </Grid.Row>
-
-                <Grid.Column>
-                    1
-                </Grid.Column>
-
-                <Button.IsEnabled>
-                    <Binding Path="StartViewModel.IsPlayerExists"/>
-                </Button.IsEnabled>
-
-                <Viewbox>
-                    <TextBlock Text="Продолжить начатое"/>
+                <Viewbox Grid.Row="1">
+                    <TextBlock Text="Desert Rage" Style="{StaticResource DesertCaption}"/>
                 </Viewbox>
-            </Button>
 
-            <Button Style="{StaticResource WhiteOption}" Click="NewGame">
-                <Grid.Row>
-                    5
-                </Grid.Row>
+                <Button Grid.Row="3" Click="Continue">
+                    <Button.DataContext>
+                        <Binding Path="StartViewModel"/>
+                    </Button.DataContext>
 
-                <Grid.Column>
-                    1
-                </Grid.Column>
+                    <Button.Style>
+                        <StaticResource ResourceKey="WhiteOption"/>
+                    </Button.Style>
 
-                <Viewbox>
-                    <TextBlock Text="Новое приключение"/>
-                </Viewbox>
-            </Button>
+                    <Button.IsEnabled>
+                        <Binding Path="IsPlayerExists"/>
+                    </Button.IsEnabled>
+
+                    <Button.Visibility>
+                        <Binding Path="IsPlayerExists">
+                            <Binding.Converter>
+                                <converters:VisibilityConverter/>
+                            </Binding.Converter>
+                        </Binding>
+                    </Button.Visibility>
+
+                    <Viewbox>
+                        <TextBlock Text="Продолжить начатое"/>
+                    </Viewbox>
+                </Button>
+
+                <Button Style="{StaticResource WhiteOption}" Click="NewGame">
+                    <Grid.Row>
+                        5
+                    </Grid.Row>
+
+                    <Viewbox>
+                        <TextBlock Text="Новое приключение"/>
+                    </Viewbox>
+                </Button>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>

@@ -5,6 +5,7 @@ using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
 
 namespace DesertRage.ViewModel.Battle.Components.Participation
@@ -71,6 +72,7 @@ namespace DesertRage.ViewModel.Battle.Components.Participation
 
         public byte Experience => _foe.Experience;
         public EnemyBestiary ID => _foe.ID;
+        public ItemsID Drop => _foe.Drop;
 
         private IParticipantFight _strategy;
 

@@ -789,6 +789,9 @@
     <None Update="Resources\Media\OST\Music\FireTemple\TheRuler.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Music\MainTitle.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Music\SecretTemple\Fight.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -802,6 +805,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Music\TimeChamber-EscapeTheme.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Music\TimeChamber.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Music\WaterTemple\Fight.mp3">

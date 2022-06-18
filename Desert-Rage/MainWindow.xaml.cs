@@ -9,6 +9,7 @@ using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel.Battle;
 using System;
 using System.Text;
+using DesertRage.Controls.Menu;
 
 namespace DesertRage
 {
@@ -52,46 +53,56 @@ namespace DesertRage
         public MainWindow()
         {
             InitializeComponent();
-
-            SetGame(NewGame());
+            Setup();
         }
 
-        private void SetGame(UserProfile user)
+        private void Setup()
         {
-            user.SetSoundPlayer(SoundTrack);
-            user.LoadHeroCommands();
+            UserProfile profile = new UserProfile();
+            profile.SetSoundPlayer(SoundTrack);
 
-            Adventure = user.Battle;
+            Adventure = profile.Battle;
             Adventure.Entry = this;
-            Display.Content = user.Location;
-            user.Peace();
 
-            System.Diagnostics.Trace.WriteLine(user.Preferences.Brightness);
+            profile.Music("/Resources/Media/OST/Music/MainTitle.mp3");
         }
 
         #region Model Members
-        private UserProfile NewGame()
+        internal void NewAdventure(string profile)
         {
-            Character hero = Bank.LoadHero("Ray");
-            Location level = Bank.LoadLevel("SecretTemple");
-            //hero.SetPlace(level.Start);
-            hero.SetPlace(new Position(36, 3));
+            Bank.MakeProfile(profile);
 
-            UserProfile user = new UserProfile
-            {
-                Hero = hero,
-                Level = level
-            };
+            UserProfile user = Adventure.Human.Player;
 
-            return user;
+            user.SetHero(Bank.LoadHero("Ray"));
+            user.SetLevel(Bank.LoadLevel("SecretTemple"));
+            //user.SetPreferences(Bank.LoadProfilePreferences(profile));
+            user.SetHeroStart();
+
+            user.Preferences.Name = profile;
+            
+            user.SaveGame();
+
+            Explore(user);
         }
 
-        private void SaveGame()
+        internal void Continue(string profile)
         {
-            //PlaySound(Paths.OST.Sounds.ControlSave);
             UserProfile user = Adventure.Human.Player;
-            App.Processor.Write($"/Resources/Media/Data/Profiles/{user.Name}/Level.json", user.Level);
-            App.Processor.Write($"/Resources/Media/Data/Profiles/{user.Name}/Character.json", user.Hero);
+
+            user.SetHero(Bank.LoadProfileHero(profile));
+            user.SetLevel(Bank.LoadProfileLevel(profile));
+            user.SetPreferences(Bank.LoadProfilePreferences(profile));
+
+            user.Sound("Info/Map/Teleport.mp3");
+
+            Explore(user);
+        }
+
+        private void Explore(UserProfile user)
+        {
+            Display.Content = user.Location;
+            user.Peace();
         }
         #endregion
 
@@ -101,7 +112,6 @@ namespace DesertRage
             switch (e.Key)
             {
                 case Key.Escape:
-                    //Adventure.SafeFreeze();
                     RaiseEscape();
                     break;
                 default:

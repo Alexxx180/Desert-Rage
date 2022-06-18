@@ -1,8 +1,6 @@
-﻿<Window x:Name="DesertRageEntry" x:Class="DesertRage.MainWindow"
+﻿<Window x:Class="DesertRage.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
-        xmlns:scenes="clr-namespace:DesertRage.Controls.Scenes"
         xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
         xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
         xmlns:local="clr-namespace:DesertRage"
@@ -13,12 +11,9 @@
         WindowState="Maximized"
         ResizeMode="NoResize"
         KeyDown="OnKeyDown"
-        KeyUp="OnKeyUp">
-    <Window.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </Window.DataContext>
-    
-    <Grid Background="Black">
+        KeyUp="OnKeyUp"
+        x:Name="This">
+    <Grid DataContext="{Binding ElementName=This}" Background="Black">
         <controls:SoundGroup x:Name="SoundTrack">
             <controls:SoundGroup.DataContext>
                 <Binding Path="Adventure.Human.Player.Preferences"/>
@@ -33,7 +28,7 @@
             </controls:SoundGroup.Sound>
             
             <controls:SoundGroup.Noise>
-                <Binding Path="Sound"/>
+                <Binding Path="Noise"/>
             </controls:SoundGroup.Noise>
         </controls:SoundGroup>
         
@@ -47,7 +42,7 @@
             </Label.HorizontalContentAlignment>
 
             <Label.Content>
-                <Border/>
+                <menu:MainMenu Main="{Binding ElementName=This}"/>
             </Label.Content>
         </Label>
 

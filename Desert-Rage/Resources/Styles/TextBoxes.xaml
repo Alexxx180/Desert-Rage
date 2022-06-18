@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Class="DesertRage.Controls.EditEvents">
     <Style x:Key="InputField" TargetType="TextBox">
         <Style.BasedOn>
             <StaticResource ResourceKey="GlobalFont"/>
@@ -9,5 +10,14 @@
         <Setter Property="Background" Value="#8A000000"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <Style x:Key="NameField" TargetType="TextBox">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="InputField"/>
+        </Style.BasedOn>
+
+        <EventSetter Event="PreviewTextInput" Handler="Naming"/>
+        <EventSetter Event="DataObject.Pasting" Handler="PastingNaming"/>
     </Style>
 </ResourceDictionary>

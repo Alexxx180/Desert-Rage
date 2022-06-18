@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using DesertRage.Controls.Scenes;
+using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.ViewModel.Battle.Components.Participation;
+using DesertRage.Model.Helpers;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -13,6 +15,8 @@ namespace DesertRage.ViewModel.Battle
         
         private BattleViewModel() : base()
         {
+            _grind = new Bar(1, 3, 6);
+
             Scene = new BattleScene(this);
             Setup(this);
         }
@@ -34,6 +38,16 @@ namespace DesertRage.ViewModel.Battle
                 OnPropertyChanged();
             }
         }
+
+        private void Grind(in Enemy enemy)
+        {
+            if (_chance.From(_grind))
+            {
+                Human.Player.IncreaseItemCount(enemy.Drop);
+            }
+        }
+
+        private readonly Bar _grind;
         #endregion
 
         #region Options
@@ -57,11 +71,17 @@ namespace DesertRage.ViewModel.Battle
             EndTurns(Human);
         }
 
+        internal override void EnemyDefeat(in Enemy enemy)
+        {
+            Grind(enemy);
+            base.EnemyDefeat(enemy);
+        }
+
         public override void Won()
         {
             Human.Player.AddExperience(Experience);
             Human.Player.Stop();
-            Human.Player.Sound("/Resources/Media/OST/Sounds/Info/Won.mp3");
+            Human.Player.Sound("Info/Won.mp3");
             End();
         }
 

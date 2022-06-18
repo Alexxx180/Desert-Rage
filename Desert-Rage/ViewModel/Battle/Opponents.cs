@@ -15,7 +15,7 @@ namespace DesertRage.ViewModel.Battle
             Style = Bank.Fights();
             _enemiesPool = new Stack<Enemy>();
             Enemies = new ObservableCollection<Enemy>();
-            _flee = new Random();
+            _chance = new Random();
 
             FoeEnumeration = new Dictionary<EnemyBestiary, Foe>();
             BossesEnumeration = new Dictionary<EnemyBestiary, Boss>();
@@ -71,7 +71,7 @@ namespace DesertRage.ViewModel.Battle
 
         public void Escape(int barrier)
         {
-            if (_flee.Next(1, barrier + 1) == 1)
+            if (_chance.Next(1, barrier + 1) == 1)
                 RunAway();
         }
         #endregion
@@ -100,7 +100,7 @@ namespace DesertRage.ViewModel.Battle
             TrapLevel -= enemy.Unit.Stats.Speed;
         }
 
-        internal void EnemyDefeat(in Enemy enemy)
+        internal virtual void EnemyDefeat(in Enemy enemy)
         {
             RemoveEnemy(enemy);
 
@@ -131,7 +131,7 @@ namespace DesertRage.ViewModel.Battle
         private protected readonly Stack<Enemy> _enemiesPool;
 
         public bool IsBattle => Enemies.Count > 0;
-        private readonly Random _flee;
+        private protected readonly Random _chance;
 
         public ushort Experience { get; set; }
         public ushort TrapLevel { get; set; }

@@ -23,6 +23,21 @@ namespace DesertRage.ViewModel
 {
     internal static class Bank
     {
+        internal const string DataDirectory = "/Resources/Media/Data";
+
+        internal static void MakeProfile(string name)
+        {
+            string full = $"{DataDirectory}/Profiles/{name}".ToFull();
+            Directory.CreateDirectory(full);
+        }
+
+        internal static void DropProfile(string name)
+        {
+            string full = $"{DataDirectory}/Profiles/{name}".ToFull();
+            Directory.Delete(full, true);
+        }
+
+        #region Get Data Members
         private static T GetData<T>(string path)
         {
             string full = path.ToFull();
@@ -33,10 +48,8 @@ namespace DesertRage.ViewModel
 
         private static T GetItems<T>(string path)
         {
-            System.Diagnostics.Trace.WriteLine($"/Resources/Media/Data/{path}");
-            return GetData<T>($"/Resources/Media/Data/{path}");
+            return GetData<T>($"{DataDirectory}/{path}");
         }
-
 
         internal static Character LoadHero(string name)
         {
@@ -48,7 +61,32 @@ namespace DesertRage.ViewModel
             return GetItems<Location>($"Map/{name}.json");
         }
 
+        internal static Settings LoadSettings()
+        {
+            return GetItems<Settings>($"Settings.json");
+        }
 
+        #region Load Profile Members
+        private static T GetProfileItems<T>(string name)
+        {
+            return GetItems<T>($"Profiles/{name}.json");
+        }
+
+        internal static Character LoadProfileHero(string name)
+        {
+            return GetProfileItems<Character>($"{name}/Hero");
+        }
+
+        internal static Location LoadProfileLevel(string name)
+        {
+            return GetProfileItems<Location>($"{name}/Level");
+        }
+
+        internal static Settings LoadProfilePreferences(string name)
+        {
+            return GetProfileItems<Settings>($"{name}/Preferences");
+        }
+        #endregion
 
         internal static NextStats GetNextStats(string name)
         {
@@ -70,6 +108,48 @@ namespace DesertRage.ViewModel
         {
             return GetItems<Boss[]>("Opponents/Bosses.json");
         }
+        #endregion
+
+        #region Set Data Members
+        private static void SetData<T>(string path, T data)
+        {
+            string full = path.ToFull();
+            System.Diagnostics.Trace.WriteLine(full);
+            App.Processor.Write(full, data);
+        }
+
+        private static void SetItems<T>(string path, T items)
+        {
+            SetData($"{DataDirectory}/{path}", items);
+        }
+
+        #region Save Profile Members
+        private static void
+            SetProfileItems<T>(string name, T profileItems)
+        {
+            SetItems($"Profiles/{name}.json", profileItems);
+        }
+
+        internal static void
+            SaveProfileHero(string name, Character hero)
+        {
+            SetProfileItems($"{name}/Hero", hero);
+        }
+
+        internal static void
+            SaveProfileLevel(string name, Location level)
+        {
+            SetProfileItems($"{name}/Level", level);
+        }
+
+        internal static void
+            SaveProfilePreferences(string name, Settings preferences)
+        {
+            SetProfileItems($"{name}/Preferences", preferences);
+        }
+        #endregion
+
+        #endregion
 
         internal static IParticipantFight[] Fights()
         {
@@ -302,7 +382,7 @@ namespace DesertRage.ViewModel
                             Noise = ActionNoises.Cure
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Bandage)
                 ),
 
                 new ConsumeCommand(
@@ -316,7 +396,7 @@ namespace DesertRage.ViewModel
                             Noise = ActionNoises.Heal
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Antidote)
                 ),
 
                 new ConsumeCommand(
@@ -329,7 +409,7 @@ namespace DesertRage.ViewModel
                             Noise = ActionNoises.Control
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Ether)
                 ),
 
                 new ConsumeCommand(
@@ -342,7 +422,7 @@ namespace DesertRage.ViewModel
                             Noise = ItemNoises.Mixture
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Mixture)
                 ),
 
                 new ConsumeCommand(
@@ -355,7 +435,7 @@ namespace DesertRage.ViewModel
                             Noise = ActionNoises.Cure
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Herbs)
                 ),
 
                 new ConsumeCommand(
@@ -368,7 +448,7 @@ namespace DesertRage.ViewModel
                             Noise = ActionNoises.Control
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.EtherBottle)
                 ),
 
                 new ConsumeCommand(
@@ -380,7 +460,7 @@ namespace DesertRage.ViewModel
                             Noise = ItemNoises.Mixture
                         }
                     ),
-                    new ItemCommand(2)
+                    new ItemCommand(ItemsID.Elixir)
                 )
             };
         }
