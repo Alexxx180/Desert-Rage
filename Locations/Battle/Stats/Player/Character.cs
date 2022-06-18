@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Player
@@ -14,6 +16,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         {
             StandImage = new string[4];
             GoingImage = new string[4][];
+            Items = new byte[Enum.GetValues(typeof(ItemsID)).Length];
         }
 
         public string Image { get; set; }
@@ -52,6 +55,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         public Slider Ap { get; set; }
 
         public HashSet<SkillsID> Skills { get; set; }
+        public byte[] Items { get; set; }
 
         private HashSet<EnemyBestiary> _learned;
         public HashSet<EnemyBestiary> Learned

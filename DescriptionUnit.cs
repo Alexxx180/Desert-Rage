@@ -4,7 +4,10 @@
     {
         public DescriptionUnit() { }
 
-        public DescriptionUnit(string meaning) : base(meaning) { }
+        public DescriptionUnit(string meaning)
+        {
+            Description = meaning;
+        }
 
         public DescriptionUnit(int value, string meaning) :
             this($"+{value} {meaning}") { }
@@ -18,9 +21,11 @@
         {
             base.Set(unit);
             Icon = unit.Icon;
+            Description = unit.Description;
         }
 
         public string Icon { get; set; }
+        public string Description { get; set; }
 
         public override DescriptionUnit Clone()
         {

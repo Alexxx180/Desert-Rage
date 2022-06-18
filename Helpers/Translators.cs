@@ -1,25 +1,25 @@
 ﻿using DesertRage.Model.Locations;
-using System.Text;
+using DesertRage.Model.Locations.Battle.Stats;
+using System;
 
 namespace DesertRage.Model.Helpers
 {
     public static class Translators
     {
-        public static int Boost(this
-            bool status, int min, int max)
+        public static int Boost
+            (this bool status, int min, int max)
         {
             return status ? max : min;
         }
 
-        public static int Boost(this
-            bool status, int multiply)
+        public static int Boost
+            (this bool status, int multiply)
         {
             return status.Boost(1, multiply);
         }
 
         public static char Tile
-            (this char[][] map,
-            Position place)
+            (this char[][] map, Position place)
         {
             return map[place.Y][place.X];
         }
@@ -29,6 +29,13 @@ namespace DesertRage.Model.Helpers
             Position place, char setTo)
         {
             map[place.Y][place.X] = setTo;
+        }
+
+        public static bool From
+            (this Random random, Bar chance)
+        {
+            return random.Next(chance.Minimum,
+                chance.Max) == chance.Current;
         }
     }
 }

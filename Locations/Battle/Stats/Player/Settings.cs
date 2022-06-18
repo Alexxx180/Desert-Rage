@@ -1,6 +1,6 @@
 ﻿namespace DesertRage.Model.Locations.Battle.Stats.Player
 {
-    public class Settings
+    public class Settings : Unit
     {
         public Settings()
         {
@@ -10,6 +10,15 @@
 
             BattleSpeed = new Slider(25, 100, 200);
             Brightness = new Slider(10, 50, 100);
+        }
+
+        public void Set(Settings settings)
+        {
+            Music.Set(settings.Music);
+            Sound.Set(settings.Sound);
+            Noise.Set(settings.Noise);
+            BattleSpeed.Set(settings.BattleSpeed);
+            Brightness.Set(settings.Brightness);
         }
 
         #region OST Members
