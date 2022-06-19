@@ -78,7 +78,12 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             Place = place;
         }
 
-        public bool Go(in char[][] map, int move)
+        public bool IsBattle()
+        {
+            return --ToBattle <= 0;
+        }
+
+        public void Go(in char[][] map, int move)
         {
             Pose = move;
 
@@ -92,9 +97,6 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             {
                 SetPlace(next);
             }
-
-            ToBattle--;
-            return ToBattle <= 0;
         }
 
         public void Stand()

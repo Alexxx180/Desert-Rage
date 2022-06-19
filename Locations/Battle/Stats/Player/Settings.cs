@@ -14,6 +14,7 @@
 
         public void Set(Settings settings)
         {
+            base.Set(settings);
             Music.Set(settings.Music);
             Sound.Set(settings.Sound);
             Noise.Set(settings.Noise);

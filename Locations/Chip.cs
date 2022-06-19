@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace DesertRage.Model.Locations
 {
-    public class Chip : INotifyPropertyChanged
+    public class Chip : IPlaceAble, INotifyPropertyChanged
     {
         public Chip() { }
 
@@ -13,16 +13,27 @@ namespace DesertRage.Model.Locations
             Y = y;
         }
 
-        public void Set(Position place)
+        public void Set(IPlaceAble place)
         {
             X = place.X;
             Y = place.Y;
         }
 
-        public void Increment(Position place)
+        public void Increment(IPlaceAble place)
         {
             X += place.X;
             Y += place.Y;
+        }
+
+        public bool IsZero => X == 0 && Y == 0;
+
+        public void Countdown()
+        {
+            if (--Y <= -1)
+            {
+                X--;
+                Y = 59;
+            }
         }
 
         #region Position Members

@@ -37,5 +37,11 @@ namespace DesertRage.Model.Helpers
             return random.Next(chance.Minimum,
                 chance.Max) == chance.Current;
         }
+
+        public static int Next
+            (this Random random, IPlaceAble chance)
+        {
+            return random.Next(chance.X, chance.Y);
+        }
     }
 }

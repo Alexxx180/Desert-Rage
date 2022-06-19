@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace DesertRage.Model.Locations
+﻿namespace DesertRage.Model.Locations
 {
-    public struct Position
+    public struct Position : IPlaceAble
     {
         public Position(int size)
         {
@@ -36,11 +34,6 @@ namespace DesertRage.Model.Locations
         public bool IsOutBottom(Position mask)
         {
             return X > mask.X || Y > mask.Y;
-        }
-
-        public int Random()
-        {
-            return new Random().Next(Y, X);
         }
 
         #region Static Members

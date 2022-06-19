@@ -6,6 +6,11 @@ namespace DesertRage.Model.Locations
 {
     public class Location
     {
+        public Location()
+        {
+            Danger = new Chip();
+        }
+
         public void SetChapter(Location next)
         {
             Name = next.Name;
@@ -16,7 +21,7 @@ namespace DesertRage.Model.Locations
             MusicPeace = next.MusicPeace;
             MusicFight = next.MusicFight;
             Start = next.Start;
-            Danger = next.Danger;
+            Danger.Set(next.Danger);
             StageFoes = next.StageFoes;
             Bosses = next.Bosses;
             Messages = next.Messages;
@@ -24,6 +29,7 @@ namespace DesertRage.Model.Locations
             Warps = next.Warps;
             Equipment = next.Equipment;
             TileCodes = next.TileCodes;
+            IsTimeChamber = next.IsTimeChamber;
         }
 
         public string Name { get; set; }
@@ -37,8 +43,9 @@ namespace DesertRage.Model.Locations
         public string MusicFight { get; set; }
 
         public Position Start { get; set; }
+        public Chip Danger { get; set; }
+        public bool IsTimeChamber { get; set; }
 
-        public Position Danger { get; set; }
         public EnemyBestiary[] StageFoes { get; set; }
         public Dictionary<string, EnemyBestiary> Bosses { get; set; }
 
