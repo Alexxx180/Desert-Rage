@@ -50,6 +50,17 @@ namespace DesertRage
             }
         }
 
+        private bool _isPaused;
+        public bool IsPaused
+        {
+            get => _isPaused;
+            set
+            {
+                _isPaused = value;
+                OnPropertyChanged();
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -82,6 +93,7 @@ namespace DesertRage
             user.Preferences.Name = profile;
             
             user.SaveGame();
+            
 
             Explore(user);
         }
@@ -114,10 +126,29 @@ namespace DesertRage
                 case Key.Escape:
                     RaiseEscape();
                     break;
+                case Key.P:
+                    Pause();
+                    break;
                 default:
-                    TransferKeyDown(sender, e);
+                    if (!IsPaused)
+                        TransferKeyDown(sender, e);
                     break;
             };
+        }
+
+        private void Pause()
+        {
+            if (Display.Content is not IControllable keyPad)
+                return;
+
+            if (IsPaused = !IsPaused)
+            {
+                keyPad.Pause();
+            }
+            else
+            {
+                keyPad.Resume();
+            }
         }
 
         private void OnKeyUp(object sender, KeyEventArgs e)

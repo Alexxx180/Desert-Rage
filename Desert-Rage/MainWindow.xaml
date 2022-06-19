@@ -68,14 +68,16 @@
             </Border.Opacity>
         </Border>
 
-        <Grid x:Name="Pause">
-            <Grid.Visibility>
-                Hidden
-            </Grid.Visibility>
-
-            <Grid.IsEnabled>
-                False
-            </Grid.IsEnabled>
+        <Grid x:Name="PauseLabel">
+            <Grid.Style>
+                <Style TargetType="FrameworkElement">
+                    <Style.Triggers>
+                        <DataTrigger Value="False" Binding="{Binding Path=IsPaused}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
 
             <Grid.Background>
                 #7F000000

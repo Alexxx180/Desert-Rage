@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Map;
 using DesertRage.ViewModel;
 
@@ -73,6 +74,16 @@ namespace DesertRage.Controls.Scenes.Map
             UserData = user;
         }
 
+        public void Pause()
+        {
+            UserData.Pause();
+        }
+
+        public void Resume()
+        {
+            UserData.Resume();
+        }
+
         public void KeyRelease(object sender, KeyEventArgs e)
         {
             switch (e.Key)
@@ -98,11 +109,14 @@ namespace DesertRage.Controls.Scenes.Map
 
         public void KeyHandle(object sender, KeyEventArgs e)
         {
-            if (UserData.IsFighting)
+            bool peace = UserData.IsFighting == Encounter.PEACE;
+            if (!peace)
                 return;
 
             switch (e.Key)
             {
+                case Key.P:
+                    break;
                 case Key.W:
                 case Key.Up:
                 case Key.NumPad8:
@@ -140,8 +154,10 @@ namespace DesertRage.Controls.Scenes.Map
         private void Move(Direction direction)
         {
             UserData.Go(direction);
-            if (UserData.IsFighting)
-                RaiseBattle();
+            if (UserData.IsFighting == Encounter.PEACE)
+                return;
+
+            RaiseBattle();
         }
 
         private void ContinueAdventure(object sender, EventArgs e)
@@ -151,9 +167,18 @@ namespace DesertRage.Controls.Scenes.Map
 
         private void EnemyApproaches(object sender, EventArgs e)
         {
-            UserData.Battle.Start();
+            switch (UserData.IsFighting)
+            {
+                case Encounter.BOSS:
+                    UserData.BossBattle();
+                    break;
+                default:
+                    UserData.FoesBattle();
+                    break;
+            }
         }
 
+        
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
 

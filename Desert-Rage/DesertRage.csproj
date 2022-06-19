@@ -37,7 +37,6 @@
     <None Remove="Resources\Media\Data\Characters\Ray\Beginner.json" />
     <None Remove="Resources\Media\Data\Characters\Ray\Next.json" />
     <None Remove="Resources\Media\Data\Characters\Sam\Beginner.json" />
-    <None Remove="Resources\Media\Data\Map\SecretTemple.json" />
     <None Remove="Resources\Media\Images\Battle\Background\LavaTemple.svg" />
     <None Remove="Resources\Media\Images\Battle\Background\SecretTemple.svg" />
     <None Remove="Resources\Media\Images\Battle\Background\WaterTemple.svg" />
@@ -210,9 +209,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Media\Data\Characters\Sam\Beginner.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Media\Data\Map\SecretTemple.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Resource Include="Resources\Media\Images\Battle\Enemies\Bones\Action.svg">
@@ -769,6 +765,9 @@
 
   <ItemGroup>
     <None Update="Resources\Media\Data\Items\Equipment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\Data\Map\SecretTemple.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\Data\Map\WaterTemple.json">

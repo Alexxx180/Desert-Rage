@@ -44,7 +44,7 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds
             Value = value;
         }
 
-        public bool CanUse => Value > 0;
+        public bool CanUse => true; //Value > 0
         #endregion
 
         public ItemsID ID { get; set; }

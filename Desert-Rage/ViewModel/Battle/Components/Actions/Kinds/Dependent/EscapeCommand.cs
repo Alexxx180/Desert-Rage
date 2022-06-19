@@ -26,6 +26,6 @@ namespace DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent
             ViewModel.Escape(barrier);
         }
 
-        public virtual bool CanUse => true;
+        public virtual bool CanUse => User.IsFighting != Encounter.BOSS;
     }
 }

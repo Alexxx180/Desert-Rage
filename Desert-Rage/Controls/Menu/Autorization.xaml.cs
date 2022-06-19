@@ -93,6 +93,7 @@ namespace DesertRage.Controls.Menu
                 {
                     Bank.DropProfile(profile);
                 }
+                ViewModel.UpdatePlayers();
             }
         }
         #endregion

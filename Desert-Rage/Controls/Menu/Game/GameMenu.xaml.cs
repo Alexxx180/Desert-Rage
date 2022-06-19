@@ -23,14 +23,23 @@ namespace DesertRage.Controls.Menu.Game
             }
         }
 
+        public void Pause()
+        {
+            User.Pause();
+        }
+
+        public void Resume()
+        {
+            User.Resume();
+        }
+
         public void KeyHandle(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
-                    Label container = Parent as Label;
-                    container.Content = User.Location;
+                    User.Battle.Entry.Display.Content = User.Location;
                     break;
                 default:
                     break;

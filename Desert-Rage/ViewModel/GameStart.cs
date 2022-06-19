@@ -62,13 +62,18 @@ namespace DesertRage.ViewModel
             {
                 _isListVisible = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(IsPlayerExists));
+                UpdatePlayers();
             }
         }
 
         public bool ResetVisibility()
         {
             return IsListVisible = !IsListVisible;
+        }
+
+        public void UpdatePlayers()
+        {
+            OnPropertyChanged(nameof(IsPlayerExists));
         }
 
         public bool IsPlayerExists => !IsListVisible && Profiles.Contains(CurrentProfile);

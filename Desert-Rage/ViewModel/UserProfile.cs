@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Threading;
 using DesertRage.Controls;
 using DesertRage.Controls.Menu.Game;
 using DesertRage.Controls.Scenes.Map;
+using DesertRage.Model;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
@@ -54,6 +57,17 @@ namespace DesertRage.ViewModel
         }
         #endregion
 
+        private string _message;
+        public string Message
+        {
+            get => _message;
+            set
+            {
+                _message = value;
+                OnPropertyChanged();
+            }
+        }
+
         private BattleViewModel _battle;
         public BattleViewModel Battle
         {
@@ -76,8 +90,25 @@ namespace DesertRage.ViewModel
             }
         }
 
+        private DispatcherTimer _deadlyTimer;
+
+        private void PauseLevel()
+        {
+            _deadlyTimer.Stop();
+        }
+
+        private void ResumeLevel()
+        {
+            _deadlyTimer.Start();
+        }
+
         public UserProfile()
         {
+            _deadlyTimer = new DispatcherTimer();
+            _deadlyTimer.Interval = new TimeSpan(0, 0, 1);
+            _deadlyTimer.Tick += Countdown;
+
+            _chance = new Random();
             Preferences = new Settings();
 
             Menu = new GameMenu(this);
@@ -137,6 +168,8 @@ namespace DesertRage.ViewModel
 
             Items = new ObservableCollection<ConsumeCommand>();
             AddItems();
+
+            _itemSurprise = new Position(0, Items.Count);
         }
 
         #region Command Members
@@ -195,6 +228,7 @@ namespace DesertRage.ViewModel
 
             for (byte i = 0; i < items.Count; i++)
             {
+                items[i].Subject.SetValue(Hero.Items[i]);
                 AddItem(items[i]);
             }
         }
@@ -271,6 +305,19 @@ namespace DesertRage.ViewModel
         public void SetLevel(Location level)
         {
             Level = level;
+            Resume();
+        }
+
+        public void Resume()
+        {
+            if (Level.IsTimeChamber)
+                ResumeLevel();
+        }
+
+        public void Pause()
+        {
+            if (Level.IsTimeChamber)
+                PauseLevel();
         }
 
         public void SetPreferences(Settings preferences)
@@ -292,11 +339,13 @@ namespace DesertRage.ViewModel
         public void IncreaseItemCount(ItemsID item)
         {
             int id = item.Int();
-            if (Hero.Items[id] >= byte.MaxValue)
-                return;
+            IncreaseItemCount(id);
+        }
 
-            Items[id].Subject.SetValue(++Hero.Items[id]);
-
+        private void IncreaseItemCount(int id)
+        {
+            if (Hero.Items[id] < byte.MaxValue)
+                Items[id].Subject.SetValue(++Hero.Items[id]);
         }
 
         public void DecreaseItemCount(ItemsID item)
@@ -315,7 +364,11 @@ namespace DesertRage.ViewModel
             Hero.Rest();
 
             string profile = Preferences.Name;
-            if (profile.Equals(string.Empty))
+
+            //System.Diagnostics.Trace.WriteLine(profile);
+            //System.Diagnostics.Trace.WriteLine(Preferences);
+
+            if (profile == string.Empty)
                 return;
 
             Bank.SaveProfileHero(profile, Hero);
@@ -333,7 +386,6 @@ namespace DesertRage.ViewModel
                 [Hero.SelectedArmor.Special].Power;
 
             Hero.Hit(value);
-            //UpdateHero();
         }
 
         public void AddExperience(int experience)
@@ -372,7 +424,7 @@ namespace DesertRage.ViewModel
             Hero.Level++;
         }
 
-        
+        private Position _itemSurprise;
         #endregion
 
         private ObservableCollection
@@ -388,8 +440,8 @@ namespace DesertRage.ViewModel
             }
         }
 
-        private bool _isFighting;
-        public bool IsFighting
+        private Encounter _isFighting;
+        public Encounter IsFighting
         {
             get => _isFighting;
             set
@@ -425,6 +477,12 @@ namespace DesertRage.ViewModel
             SoundPlayer.PlaySound
                 ($"/Resources/Media/OST/Sounds/{name}".ToFull());
         }
+
+        public void Noise(string name)
+        {
+            SoundPlayer.PlayNoise
+                ($"/Resources/Media/OST/Noises/{name}".ToFull());
+        }
         #endregion
 
         #region Map Members
@@ -437,7 +495,9 @@ namespace DesertRage.ViewModel
 
         private void NextChapter()
         {
+            Sound("Info/Map/Teleport.mp3");
             Location next = Bank.LoadLevel(Level.NextChapter);
+
             if (next is null)
             {
                 //NewCharacter("Rock", Hero.Name.Length == 0);
@@ -452,6 +512,8 @@ namespace DesertRage.ViewModel
                 UpdateLevel();
                 Battle.SetFoes(Level.StageFoes);
                 Peace();
+
+                Resume();
             }
         }
 
@@ -470,12 +532,53 @@ namespace DesertRage.ViewModel
             UpdateLevel();
         }
 
+        private void MessageToUser(string prefix, Position place)
+        {
+            MessageToUser(prefix + Level.Messages[place.ToString()]);
+        }
+
+        private void MessageToUser(Position place)
+        {
+            MessageToUser(Level.Messages[place.ToString()]);
+        }
+
+        private void MessageToUser(string message)
+        {
+            Message = message;
+        }
+
         private ArmoryElement Chest
             (Position front, char frontTile)
         {
+            Sound("Info/Map/Chest.mp3");
+            SetTile(front, frontTile);
+            MessageToUser(front);
+            return Level.Equipment[front.ToString()];
+        }
+
+        private void SetTile(Position front, char frontTile)
+        {
             Level.Map.SetTile(front, frontTile);
             UpdateLevel();
-            return Level.Equipment[front.ToString()];
+        }
+
+        private void Surprise(Position front, char frontTile)
+        {
+            Sound("Info/Map/Chest.mp3");
+            SetTile(front, frontTile);
+            IncreaseItemCount(_chance.Next(_itemSurprise));
+        }
+
+        public void Countdown(object sender, object o)
+        {
+            if (Level.Danger.IsZero)
+            {
+                _deadlyTimer.Tick -= Countdown;
+                Battle.Entry.RaiseEscape();
+                return;
+            }
+
+            Level.Danger.Countdown();
         }
 
         public void Interact()
@@ -484,9 +587,18 @@ namespace DesertRage.ViewModel
 
             switch (Level.Map.Tile(front))
             {
+                case '?':
+                    Surprise(front, '.');
+                    break;
+                case '@':
+                    MessageToUser(front);
+                    break;
                 case '$':
                     ArmoryElement armor = Chest(front, 'E');
                     AddEquipment(armor);
+                    break;
+                case 'E':
+                    MessageToUser("Когда-то... ", front);
                     break;
                 case 'I':
                     ArmoryElement secret = Chest(front, '.');
@@ -506,7 +618,6 @@ namespace DesertRage.ViewModel
                     break;
                 case 'X':
                     NextChapter();
-                    Sound("Info/Map/Teleport.mp3");
                     break;
                 default:
                     break;
@@ -518,9 +629,10 @@ namespace DesertRage.ViewModel
             if (Hero.Hp.IsEmpty)
                 return;
 
-            bool fight = Hero.Go(Level.Map, move.Int());
-            Position current = Hero.Place;
+            Hero.Go(Level.Map, move.Int());
+            bool fight = !Level.IsTimeChamber && Hero.IsBattle();
 
+            Position current = Hero.Place;
             switch (Level.Map.Tile(current))
             {
                 case ':':
@@ -541,27 +653,47 @@ namespace DesertRage.ViewModel
                     Hero.SetPlace(Level.Warps[current.ToString()]);
                     break;
                 case '!':
-                    EnemyAppearing();
-                    break;
+                    EnemyAppearing("BossStorm.mp3", Encounter.BOSS);
+                    return;
                 default:
                     break;
             }
 
             if (fight)
-                EnemyAppearing();
+            {
+                EnemyAppearing("EnemyWind.mp3", Encounter.REGULAR);
+                Fight();
+            }
         }
 
-        private void EnemyAppearing()
+        private void EnemyAppearing
+            (string noise, Encounter encounter)
         {
-            IsFighting = true;
-            SoundPlayer.PlayNoise(InfoNoises.EnemyWind);
-            Fight();
+            Noise($"Info/{noise}.mp3");
+            IsFighting = encounter;
         }
 
         internal void ResetDanger()
         {
-            Hero.ToBattle = Level.Danger.Random();
-            IsFighting = false;
+            System.Diagnostics.Trace.WriteLine(Level.Danger);
+            Hero.ToBattle = _chance.Next(Level.Danger);
+            IsFighting = Encounter.PEACE;
+        }
+
+        public void FoesBattle()
+        {
+            Battle.Start();
+        }
+
+        public void BossBattle()
+        {
+            string tile = Hero.Place.ToString();
+            EnemyBestiary id = Level.Bosses[tile];
+
+            Boss boss = Battle.BossesEnumeration[id];
+            Music(boss.Theme);
+
+            Battle.Start(boss);
         }
 
         public void Stand()
@@ -569,6 +701,8 @@ namespace DesertRage.ViewModel
             Hero.Stand();
         }
         #endregion
+
+        private readonly Random _chance;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

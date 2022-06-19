@@ -17,19 +17,7 @@
     </UserControl.Resources>
 
     <Grid DataContext="{Binding ElementName=This}">
-        <UniformGrid>
-            <UniformGrid.Rows>
-                5
-            </UniformGrid.Rows>
-
-            <UniformGrid.Columns>
-                9
-            </UniformGrid.Columns>
-            
-            <UniformGrid.Margin>
-                0
-            </UniformGrid.Margin>
-            
+        <UniformGrid Rows="5" Columns="9" Margin="0">
             <UniformGrid.Background>
                 <VisualBrush TileMode="Tile">
                     <VisualBrush.Viewport>
@@ -45,15 +33,11 @@
                     </VisualBrush.AlignmentX>
 
                     <VisualBrush.Visual>
-                        <svgc:SvgViewbox>
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIcon}">
+                            <ContentControl.DataContext>
                                 <Binding Path="UserData.Level.BackCover" />
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Fill
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </VisualBrush.Visual>
                 </VisualBrush>
             </UniformGrid.Background>
@@ -741,6 +725,51 @@
             </Viewbox>
         </UniformGrid>
 
+        <Grid DataContext="{Binding Path=UserData}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.95*"/>
+                <RowDefinition Height="0.05*"/>
+            </Grid.RowDefinitions>
+
+            <Viewbox>
+                <Border Padding="10,1,10,1">
+                    <Border.Style>
+                        <Style BasedOn="{StaticResource Impact}" TargetType="Border">
+                            <Style.Triggers>
+                                <DataTrigger Value="False" Binding="{Binding Path=Level.IsTimeChamber}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0}:{1:00}">
+                                <Binding Path="Level.Danger.X"/>
+                                <Binding Path="Level.Danger.Y"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </Border>
+            </Viewbox>
+
+            <Viewbox Grid.Row="2">
+                <Border Style="{StaticResource Impact}" Opacity="0" Padding="10,1,10,1">
+                    <TextBlock Text="{Binding Path=Message, NotifyOnTargetUpdated=True}"/>
+
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                            <BeginStoryboard>
+                                <DynamicResource ResourceKey="LongDisappear"/>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+            </Viewbox>
+        </Grid>
+        
         <Border x:Name="Curtain">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">

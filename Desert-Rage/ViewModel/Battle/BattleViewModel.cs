@@ -3,6 +3,8 @@ using DesertRage.Controls.Scenes;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.ViewModel.Battle.Components.Participation;
 using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
+using DesertRage.Model.Locations.Battle.Stats.Enemy;
 
 namespace DesertRage.ViewModel.Battle
 {
@@ -51,10 +53,15 @@ namespace DesertRage.ViewModel.Battle
         #endregion
 
         #region Options
-        public override void Start()
+        private protected override void Prepare()
         {
             Entry.Display.Content = Scene;
-            base.Start();
+            base.Prepare();
+        }
+
+        private protected override void AllowEnemyTurns()
+        {
+            base.AllowEnemyTurns();
             Scene.RaiseEnter();
         }
 

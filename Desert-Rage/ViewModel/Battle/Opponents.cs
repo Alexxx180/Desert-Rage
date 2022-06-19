@@ -77,7 +77,7 @@ namespace DesertRage.ViewModel.Battle
         #endregion
 
         #region Enemy Management
-        private protected void AllowEnemyTurns()
+        private protected virtual void AllowEnemyTurns()
         {
             for (byte i = 0; i < Enemies.Count; i++)
             {

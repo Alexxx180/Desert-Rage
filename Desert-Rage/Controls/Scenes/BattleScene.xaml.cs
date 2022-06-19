@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Locations;
 using DesertRage.ViewModel.Battle;
@@ -13,8 +14,9 @@ namespace DesertRage.Controls.Scenes
     /// <summary>
     /// Логика взаимодействия для BattleScene.xaml
     /// </summary>
-    public partial class BattleScene : UserControl, INotifyPropertyChanged
+    public partial class BattleScene : UserControl, INotifyPropertyChanged, IControllable
     {
+        #region Battle Members
         public static readonly DependencyProperty
             BattleModelProperty = DependencyProperty.Register(
                 nameof(BattleModel), typeof(BattleViewModel),
@@ -25,6 +27,7 @@ namespace DesertRage.Controls.Scenes
             get => GetValue(BattleModelProperty) as BattleViewModel;
             set => SetValue(BattleModelProperty, value);
         }
+        #endregion
 
         #region Escaping Event Members
         public static readonly RoutedEvent
@@ -75,8 +78,7 @@ namespace DesertRage.Controls.Scenes
             };
         }
 
-        public BattleScene
-            (BattleViewModel battle)
+        public BattleScene(BattleViewModel battle)
         {
             InitializeComponent();
             BattleModel = battle;
@@ -107,7 +109,27 @@ namespace DesertRage.Controls.Scenes
 
         private void BattleStart(object sender, EventArgs e)
         {
+            Resume();
+        }
+
+        public void Pause()
+        {
+            BattleModel.Pause();
+        }
+
+        public void Resume()
+        {
             BattleModel.Resume();
+        }
+
+        public void KeyHandle(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        public void KeyRelease(object sender, KeyEventArgs e)
+        {
+
         }
 
         #region INotifyPropertyChanged Members

@@ -59,4 +59,24 @@
             </Storyboard.TargetProperty>
         </DoubleAnimation>
     </Storyboard>
+
+    <Storyboard x:Key="LongDisappear">
+        <DoubleAnimation>
+            <DoubleAnimation.From>
+                1.0
+            </DoubleAnimation.From>
+
+            <DoubleAnimation.To>
+                0.0
+            </DoubleAnimation.To>
+
+            <DoubleAnimation.Duration>
+                0:0:4
+            </DoubleAnimation.Duration>
+
+            <Storyboard.TargetProperty>
+                Opacity
+            </Storyboard.TargetProperty>
+        </DoubleAnimation>
+    </Storyboard>
 </ResourceDictionary>
