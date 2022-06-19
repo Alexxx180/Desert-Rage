@@ -767,6 +767,9 @@
     <None Update="Resources\Media\Data\Items\Equipment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\Data\Items\Preferences.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\Data\Map\SecretTemple.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,0 +1,43 @@
+{
+	"Music": {
+		"IsMax": false,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 50,
+		"Max": 100
+	},
+	"Sound": {
+		"IsMax": false,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 50,
+		"Max": 100
+	},
+	"Noise": {
+		"IsMax": false,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 50,
+		"Max": 100
+	},
+	"BattleSpeed": {
+		"IsMax": false,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 25,
+		"Current": 100,
+		"Max": 200
+	},
+	"Brightness": {
+		"IsMax": false,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 10,
+		"Current": 50,
+		"Max": 100
+	},
+	"Name": ""
+}

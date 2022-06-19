@@ -682,47 +682,6 @@
             </map:MapTile>
 
             <!--#endregion-->
-
-            <Viewbox>
-                <Grid.Row>
-                    5
-                </Grid.Row>
-
-                <Grid.Column>
-                    7
-                </Grid.Column>
-
-                <Grid.ColumnSpan>
-                    2
-                </Grid.ColumnSpan>
-
-
-                <Viewbox.VerticalAlignment>
-                    Bottom
-                </Viewbox.VerticalAlignment>
-
-                <Viewbox.HorizontalAlignment>
-                    Right
-                </Viewbox.HorizontalAlignment>
-
-                <!--<TextBlock Text="1:30">
-                    <TextBlock.Padding>
-                        2,0,2,0
-                    </TextBlock.Padding>
-
-                    <TextBlock.FontFamily>
-                        Stencil
-                    </TextBlock.FontFamily>
-
-                    <TextBlock.Foreground>
-                        White
-                    </TextBlock.Foreground>
-
-                    <TextBlock.Background>
-                        #D8000000
-                    </TextBlock.Background>
-                </TextBlock>-->
-            </Viewbox>
         </UniformGrid>
 
         <Grid DataContext="{Binding Path=UserData}">

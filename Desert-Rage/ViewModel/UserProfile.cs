@@ -109,7 +109,7 @@ namespace DesertRage.ViewModel
             _deadlyTimer.Tick += Countdown;
 
             _chance = new Random();
-            Preferences = new Settings();
+            Preferences = Bank.LoadPreferences();
 
             Menu = new GameMenu(this);
             Location = new LevelMap(this);
@@ -320,9 +320,21 @@ namespace DesertRage.ViewModel
                 PauseLevel();
         }
 
+        private void SaveProfileName()
+        {
+            Bank.SavePreferences(Preferences);
+        }
+
+        public void SetName(string name)
+        {
+            Preferences.Name = name;
+            SaveProfileName();
+        }
+
         public void SetPreferences(Settings preferences)
         {
             Preferences.Set(preferences);
+            SaveProfileName();
         }
 
         public void UpdateHero()

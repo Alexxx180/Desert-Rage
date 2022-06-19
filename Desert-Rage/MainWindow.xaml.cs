@@ -3,12 +3,9 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.ViewModel;
-using DesertRage.Model.Locations;
 using DesertRage.Controls.Scenes;
-using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.ViewModel.Battle;
 using System;
-using System.Text;
 using DesertRage.Controls.Menu;
 
 namespace DesertRage
@@ -76,6 +73,9 @@ namespace DesertRage
             Adventure.Entry = this;
 
             profile.Music("/Resources/Media/OST/Music/MainTitle.mp3");
+
+            MainMenu menu = Display.Content as MainMenu;
+            menu.StartViewModel.SetProfile(profile.Preferences.Name);
         }
 
         #region Model Members
@@ -87,13 +87,10 @@ namespace DesertRage
 
             user.SetHero(Bank.LoadHero("Ray"));
             user.SetLevel(Bank.LoadLevel("SecretTemple"));
-            //user.SetPreferences(Bank.LoadProfilePreferences(profile));
-            user.SetHeroStart();
+            user.SetName(profile);
 
-            user.Preferences.Name = profile;
-            
+            user.SetHeroStart();
             user.SaveGame();
-            
 
             Explore(user);
         }

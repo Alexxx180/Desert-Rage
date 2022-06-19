@@ -51,6 +51,12 @@ namespace DesertRage.ViewModel
             return GetData<T>($"{DataDirectory}/{path}");
         }
 
+        #region Prefab Members
+        internal static Settings LoadPreferences()
+        {
+            return GetItems<Settings>($"Items/Preferences.json");
+        }
+
         internal static Character LoadHero(string name)
         {
             return GetItems<Character>($"Characters/{name}/Beginner.json");
@@ -61,12 +67,28 @@ namespace DesertRage.ViewModel
             return GetItems<Location>($"Map/{name}.json");
         }
 
-        internal static Settings LoadSettings()
+        internal static NextStats GetNextStats(string name)
         {
-            return GetItems<Settings>($"Settings.json");
+            return GetItems<NextStats>($"Characters/{name}/Next.json");
         }
 
-        #region Load Profile Members
+        internal static Equipment[][] GetEqupment()
+        {
+            return GetItems<Equipment[][]>("Items/Equipment.json");
+        }
+
+        internal static Foe[] Foes()
+        {
+            return GetItems<Foe[]>("Opponents/Foes.json");
+        }
+
+        internal static Boss[] Bosses()
+        {
+            return GetItems<Boss[]>("Opponents/Bosses.json");
+        }
+        #endregion
+
+        #region Profile Members
         private static T GetProfileItems<T>(string name)
         {
             return GetItems<T>($"Profiles/{name}.json");
@@ -87,27 +109,7 @@ namespace DesertRage.ViewModel
             return GetProfileItems<Settings>($"{name}/Preferences");
         }
         #endregion
-
-        internal static NextStats GetNextStats(string name)
-        {
-            return GetItems<NextStats>($"Characters/{name}/Next.json");
-        }
-
-        internal static Equipment[][] GetEqupment()
-        {
-            return GetItems<Equipment[][]>("Items/Equipment.json");
-        }
-
-
-        internal static Foe[] Foes()
-        {
-            return GetItems<Foe[]>("Opponents/Foes.json");
-        }
-
-        internal static Boss[] Bosses()
-        {
-            return GetItems<Boss[]>("Opponents/Bosses.json");
-        }
+        
         #endregion
 
         #region Set Data Members
@@ -120,14 +122,21 @@ namespace DesertRage.ViewModel
 
         private static void SetItems<T>(string path, T items)
         {
-            SetData($"{DataDirectory}/{path}", items);
+            SetData($"{DataDirectory}/{path}.json", items);
         }
 
-        #region Save Profile Members
+        #region Prefab Members
+        internal static void SavePreferences(Settings preferences)
+        {
+            SetItems($"Items/Preferences", preferences);
+        }
+        #endregion
+
+        #region Profile Members
         private static void
             SetProfileItems<T>(string name, T profileItems)
         {
-            SetItems($"Profiles/{name}.json", profileItems);
+            SetItems($"Profiles/{name}", profileItems);
         }
 
         internal static void

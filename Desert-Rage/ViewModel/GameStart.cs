@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.IO;
-using System;
 
 namespace DesertRage.ViewModel
 {
@@ -13,6 +12,11 @@ namespace DesertRage.ViewModel
             IsListVisible = false;
             Profiles = new ObservableCollection<string>();
             LoadProfiles();
+        }
+
+        public void SetProfile(string profile)
+        {
+            CurrentProfile = profile;
         }
 
         private void LoadProfiles()
