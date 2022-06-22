@@ -1,14 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <DataTemplate x:Key="TopicTemplate">
-        <DockPanel>
-            <ContentControl Template="{StaticResource UnitIcon}" DockPanel.Dock="Left"/>
-            <ContentControl Template="{StaticResource UnitName}" DockPanel.Dock="Left"/>
-
-            <DockPanel.ToolTip>
-                <Binding Path="Description"/>
-            </DockPanel.ToolTip>
-        </DockPanel>
+        <ContentControl Template="{StaticResource IconName}"/>
     </DataTemplate>
     
     <DataTemplate x:Key="ItemTemplate">

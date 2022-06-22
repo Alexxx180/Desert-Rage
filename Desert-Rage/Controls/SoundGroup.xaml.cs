@@ -50,7 +50,11 @@ namespace DesertRage.Controls
         public SoundGroup()
         {
             InitializeComponent();
-            //
+        }
+
+        public void Stop()
+        {
+            Sound1.Stop();
         }
 
         private void OnMusicEnd(object sender, RoutedEventArgs e)

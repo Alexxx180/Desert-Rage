@@ -4,91 +4,118 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
-             xmlns:bestiary="clr-namespace:DesertRage.Controls.Menu.Bestiary"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             x:Name="GMenu">
-    <UserControl.DataContext>
-        <Binding RelativeSource="{RelativeSource Self}"/>
-    </UserControl.DataContext>
-    
-    <Grid Style="{StaticResource BackAccent}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.75*"/>
-            <ColumnDefinition Width="0.25*"/>
-        </Grid.ColumnDefinitions>
+             x:Name="This">
+    <Grid DataContext="{Binding ElementName=This, Path=Player}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.95*"/>
+            <RowDefinition Height="0.05*"/>
+        </Grid.RowDefinitions>
 
-        <Grid>
+        <Grid Style="{StaticResource Impact}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.95*"/>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.9*"/>
                 <RowDefinition Height="0.05*"/>
             </Grid.RowDefinitions>
 
-            <Grid Style="{StaticResource Impact}">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.05*"/>
-                    <RowDefinition Height="0.9*"/>
-                    <RowDefinition Height="0.05*"/>
-                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.92*"/>
+                <ColumnDefinition Width="0.04*"/>
+            </Grid.ColumnDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.04*"/>
-                    <ColumnDefinition Width="0.92*"/>
-                    <ColumnDefinition Width="0.04*"/>
-                </Grid.ColumnDefinitions>
+            <TabControl Grid.Row="1" Grid.Column="1" Style="{StaticResource BackAccent}">
+                <TabItem Style="{StaticResource WhiteOption}" Height="50">
+                    <TabItem.Header>
+                        <DockPanel>
+                            <ContentControl Template="{StaticResource SvgIconUniform}">
+                                <ContentControl.DataContext>
+                                    /Resources/Media/Images/Battle/Character/Ray/Icon.svg
+                                </ContentControl.DataContext>
+                            </ContentControl>
+                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Статус"/>
+                        </DockPanel>
+                    </TabItem.Header>
 
-                <Label x:Name="SelectedTopic">
-                    <Grid.Row>
-                        1
-                    </Grid.Row>
+                    <TabItem.Content>
+                        <ContentControl Template="{StaticResource GameStatus}"/>
+                    </TabItem.Content>
+                </TabItem>
 
-                    <Grid.Column>
-                        1
-                    </Grid.Column>
+                <TabItem Style="{StaticResource WhiteOption}" Height="50">
+                    <TabItem.Header>
+                        <DockPanel>
+                            <ContentControl Template="{StaticResource SvgIconUniform}">
+                                <ContentControl.DataContext>
+                                    /Resources/Media/Images/Menu/Topics/Actions.svg
+                                </ContentControl.DataContext>
+                            </ContentControl>
+                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Умения"/>
+                        </DockPanel>
+                    </TabItem.Header>
 
-                    <Label.HorizontalContentAlignment>
-                        Stretch
-                    </Label.HorizontalContentAlignment>
+                    <TabItem.Content>
+                        <ContentControl Template="{StaticResource GameSkills}"/>
+                    </TabItem.Content>
+                </TabItem>
 
-                    <Label.VerticalContentAlignment>
-                        Stretch
-                    </Label.VerticalContentAlignment>
+                <TabItem Style="{StaticResource WhiteOption}" Height="50">
+                    <TabItem.Header>
+                        <DockPanel>
+                            <ContentControl Template="{StaticResource SvgIconUniform}">
+                                <ContentControl.DataContext>
+                                    /Resources/Media/Images/Menu/Topics/Items.svg
+                                </ContentControl.DataContext>
+                            </ContentControl>
+                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Предметы"/>
+                        </DockPanel>
+                    </TabItem.Header>
 
-                    <!--<Label.Content>
-                        <bestiary:BestiaryLayout/>
-                    </Label.Content>-->
-                </Label>
-            </Grid>
+                    <TabItem.Content>
+                        <ContentControl Template="{StaticResource GameItems}"/>
+                    </TabItem.Content>
+                </TabItem>
 
-            <Viewbox>
-                <Viewbox.HorizontalAlignment>
-                    Left
-                </Viewbox.HorizontalAlignment>
+                <TabItem Style="{StaticResource WhiteOption}" Height="50">
+                    <TabItem.Header>
+                        <DockPanel>
+                            <ContentControl Template="{StaticResource SvgIconUniform}">
+                                <ContentControl.DataContext>
+                                    /Resources/Media/Images/Menu/Skills/Analyze.svg
+                                </ContentControl.DataContext>
+                            </ContentControl>
+                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Бестиарий"/>
+                        </DockPanel>
+                    </TabItem.Header>
 
-                <Viewbox.Style>
-                    <StaticResource ResourceKey="Impact"/>
-                </Viewbox.Style>
+                    <TabItem.Content>
+                        <local:BestiaryLayout Player="{Binding}"/>
+                    </TabItem.Content>
+                </TabItem>
 
-                <Grid.Row>
-                    2
-                </Grid.Row>
+                <TabItem Style="{StaticResource WhiteOption}" Height="50">
+                    <TabItem.Header>
+                        <DockPanel>
+                            <ContentControl Template="{StaticResource SvgIconUniform}">
+                                <ContentControl.DataContext>
+                                    /Resources/Media/Images/Menu/Topics/Settings.svg
+                                </ContentControl.DataContext>
+                            </ContentControl>
+                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Настройки"/>
+                        </DockPanel>
+                    </TabItem.Header>
 
-                <TextBlock Padding="5,0,5,0" Text="Вот тут пример достаточно длинного совета, они меняются случайно"/>
-            </Viewbox>
+                    <TabItem.Content>
+                        <ContentControl Template="{StaticResource GameSettings}"/>
+                    </TabItem.Content>
+                </TabItem>
+            </TabControl>
         </Grid>
 
-        <local:GameTopics>
-            <Grid.Column>
-                1
-            </Grid.Column>
-
-            <local:GameTopics.MenuTopic>
-                <Binding ElementName="SelectedTopic"/>
-            </local:GameTopics.MenuTopic>
-
-            <local:GameTopics.Player>
-                <Binding ElementName="GMenu" Path="DataContext.User"/>
-            </local:GameTopics.Player>
-        </local:GameTopics>
+        <Viewbox Style="{StaticResource Impact}" Grid.Row="1">
+            <TextBlock Padding="10,1,10,1" Text="Вот тут пример достаточно длинного совета, они меняются случайно"/>
+        </Viewbox>
     </Grid>
 </UserControl>

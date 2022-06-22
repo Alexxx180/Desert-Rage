@@ -1,7 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-                    xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ControlTemplate x:Key="CharacterSide">
         <Grid x:Name="BattleCharacter" DataContext="{Binding}">
             <Grid.Column>
@@ -25,95 +23,55 @@
                 </ContentControl.DataContext>
             </ContentControl>
 
-            <ContentControl Template="{StaticResource TimeBar}">
-                <Grid.Row>
-                    1
-                </Grid.Row>
+            <ContentControl Template="{StaticResource TimeBar}" Grid.Row="1"/>
+
+            <ContentControl Template="{StaticResource SvgIcon}" Grid.Row="2">
+                <ContentControl.DataContext>
+                    <Binding Path="Player.Hero.Image"/>
+                </ContentControl.DataContext>
+
+                <ContentControl.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <DataTrigger Value="True">
+                                <DataTrigger.Binding>
+                                    <Binding ElementName="BattleCharacter" Path="DataContext.IsAct"/>
+                                </DataTrigger.Binding>
+                                
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <DynamicResource ResourceKey="Disappear"/>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ContentControl.Style>
             </ContentControl>
 
-            <svgc:SvgViewbox Grid.Row="2">
-                <attach:SvgBox.Source>
-                    <Binding Path="Player.Hero.Image"/>
-                </attach:SvgBox.Source>
+            <ContentControl Template="{StaticResource SvgIcon}" Grid.Row="2" Opacity="0">
+                <ContentControl.DataContext>
+                    <Binding Path="Player.Hero.Action"/>
+                </ContentControl.DataContext>
 
-                <attach:SvgBox.Stretch>
-                    Fill
-                </attach:SvgBox.Stretch>
-
-                <svgc:SvgViewbox.Style>
+                <ContentControl.Style>
                     <Style>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
+                            <DataTrigger Value="True">
+                                <DataTrigger.Binding>
+                                    <Binding ElementName="BattleCharacter" Path="DataContext.IsAct"/>
+                                </DataTrigger.Binding>
+                                
                                 <DataTrigger.EnterActions>
                                     <BeginStoryboard>
-                                        <Storyboard AutoReverse="True">
-                                            <DoubleAnimation>
-                                                <DoubleAnimation.From>
-                                                    1.0
-                                                </DoubleAnimation.From>
-
-                                                <DoubleAnimation.To>
-                                                    0.0
-                                                </DoubleAnimation.To>
-
-                                                <DoubleAnimation.Duration>
-                                                    0:0:0.2
-                                                </DoubleAnimation.Duration>
-
-                                                <Storyboard.TargetProperty>
-                                                    Opacity
-                                                </Storyboard.TargetProperty>
-                                            </DoubleAnimation>
-                                        </Storyboard>
+                                        <DynamicResource ResourceKey="Appear"/>
                                     </BeginStoryboard>
                                 </DataTrigger.EnterActions>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
-                </svgc:SvgViewbox.Style>
-            </svgc:SvgViewbox>
-
-            <svgc:SvgViewbox Grid.Row="2" Opacity="0">
-                <attach:SvgBox.Source>
-                    <Binding Path="Unit.Action"/>
-                </attach:SvgBox.Source>
-
-                <attach:SvgBox.Stretch>
-                    Fill
-                </attach:SvgBox.Stretch>
-
-                <svgc:SvgViewbox.Style>
-                    <Style>
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding Path=IsAct}" Value="True">
-                                <DataTrigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard AutoReverse="True">
-                                            <DoubleAnimation>
-                                                <DoubleAnimation.From>
-                                                    0.0
-                                                </DoubleAnimation.From>
-
-                                                <DoubleAnimation.To>
-                                                    1.0
-                                                </DoubleAnimation.To>
-
-                                                <DoubleAnimation.Duration>
-                                                    0:0:0.2
-                                                </DoubleAnimation.Duration>
-
-                                                <Storyboard.TargetProperty>
-                                                    Opacity
-                                                </Storyboard.TargetProperty>
-                                            </DoubleAnimation>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </DataTrigger.EnterActions>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </svgc:SvgViewbox.Style>
-            </svgc:SvgViewbox>
+                </ContentControl.Style>
+            </ContentControl>
 
             <Menu x:Name="MOptions" Grid.Row="3">
                 <Menu.ItemsPanel>
@@ -149,15 +107,11 @@
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/menu/stats/Attack.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
 
                     <MenuItem.ItemTemplate>
@@ -203,19 +157,11 @@
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/menu/stats/Special.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
 
                     <MenuItem.ItemTemplate>
@@ -261,19 +207,11 @@
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/Menu/Topics/Items.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
 
                     <MenuItem.HorizontalContentAlignment>
@@ -323,19 +261,11 @@
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/menu/stats/Defence.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
                 </MenuItem>
 
@@ -369,19 +299,11 @@
                     </MenuItem.ToolTip>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <Grid.Row>
-                                1
-                            </Grid.Row>
-
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/menu/stats/Speed.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
                 </MenuItem>
 
@@ -415,15 +337,11 @@
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
-                        <svgc:SvgViewbox>
-                            <attach:SvgBox.Source>
+                        <ContentControl Template="{StaticResource SvgIconUniform}">
+                            <ContentControl.DataContext>
                                 /Resources/Media/Images/Battle/Character/Ray/Icon.svg
-                            </attach:SvgBox.Source>
-
-                            <attach:SvgBox.Stretch>
-                                Uniform
-                            </attach:SvgBox.Stretch>
-                        </svgc:SvgViewbox>
+                            </ContentControl.DataContext>
+                        </ContentControl>
                     </MenuItem.Icon>
                 </MenuItem>
 
@@ -431,8 +349,6 @@
                     <StaticResource ResourceKey="BackAccent"/>
                 </Menu.Style>
             </Menu>
-
-            <!--<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />-->
         </Grid>
     </ControlTemplate>
 </ResourceDictionary>

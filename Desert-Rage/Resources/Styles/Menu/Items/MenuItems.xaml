@@ -26,14 +26,6 @@
                 <Setter Property="Background" Value="#333333"/>
             </Trigger>
 
-            <DataTrigger Value="True">
-                <DataTrigger.Binding>
-                    <Binding Path="Effect.CanUse"/>
-                </DataTrigger.Binding>
-
-                <Setter Property="Visibility" Value="Visible"/>
-            </DataTrigger>
-
             <DataTrigger Value="False">
                 <DataTrigger.Binding>
                     <Binding Path="Effect.CanUse"/>

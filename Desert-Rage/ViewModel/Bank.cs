@@ -5,19 +5,19 @@ using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.Resources.Media.OST.Noises.Actions;
 using DesertRage.Resources.Media.OST.Noises.Actions.Items;
-using DesertRage.ViewModel.Battle.Components.Actions;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Dependent.Dependency;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.Resources.Media.Images.Menu.Skills;
 using DesertRage.Resources.Media.Images.Menu.Items;
 using System;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using DesertRage.Model.Locations.Battle.Stats.Player;
-using DesertRage.ViewModel.Battle.Components.Strategy.Fight;
-using DesertRage.ViewModel.Battle.Components.Actions.Kinds.Independent.Status;
 using System.IO;
+using DesertRage.ViewModel.User.Battle.Components.Strategy.Fight;
+using DesertRage.ViewModel.User.Battle.Components.Actions;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent;
 
 namespace DesertRage.ViewModel
 {

@@ -4,9 +4,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using DesertRage.ViewModel;
 using DesertRage.Controls.Scenes;
-using DesertRage.ViewModel.Battle;
 using System;
 using DesertRage.Controls.Menu;
+using DesertRage.ViewModel.User;
+using DesertRage.ViewModel.User.Battle;
 
 namespace DesertRage
 {
@@ -66,15 +67,18 @@ namespace DesertRage
 
         private void Setup()
         {
-            UserProfile profile = new UserProfile();
+            MapWorker profile = new MapWorker();
             profile.SetSoundPlayer(SoundTrack);
 
-            Adventure = profile.Battle;
-            Adventure.Entry = this;
+            Adventure = profile.ViewModel;
+            Adventure.SetEntryPoint(this);
 
+            //System.Diagnostics.Trace.WriteLine(profile.SoundPlayer is null);
             profile.Music("/Resources/Media/OST/Music/MainTitle.mp3");
 
             MainMenu menu = Display.Content as MainMenu;
+            //System.Diagnostics.Trace.WriteLine(profile.SoundPlayer is null);
+
             menu.StartViewModel.SetProfile(profile.Preferences.Name);
         }
 
@@ -83,7 +87,7 @@ namespace DesertRage
         {
             Bank.MakeProfile(profile);
 
-            UserProfile user = Adventure.Human.Player;
+            MapWorker user = Adventure.Human.Player;
 
             user.SetHero(Bank.LoadHero("Ray"));
             user.SetLevel(Bank.LoadLevel("SecretTemple"));
@@ -97,7 +101,7 @@ namespace DesertRage
 
         internal void Continue(string profile)
         {
-            UserProfile user = Adventure.Human.Player;
+            MapWorker user = Adventure.Human.Player;
 
             user.SetHero(Bank.LoadProfileHero(profile));
             user.SetLevel(Bank.LoadProfileLevel(profile));
@@ -108,7 +112,7 @@ namespace DesertRage
             Explore(user);
         }
 
-        private void Explore(UserProfile user)
+        private void Explore(MapWorker user)
         {
             Display.Content = user.Location;
             user.Peace();

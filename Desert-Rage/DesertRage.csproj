@@ -966,10 +966,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\Battle\Components\Strategy\Statuses\" />
-  </ItemGroup>
   
   <Target Name="AfterResolveReferences">
     <ItemGroup>

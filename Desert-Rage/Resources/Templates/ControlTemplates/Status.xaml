@@ -237,7 +237,31 @@
             </attach:SvgBox.Stretch>
         </svgc:SvgViewbox>
     </ControlTemplate>
-    
+
+    <ControlTemplate x:Key="SvgIconUniform">
+        <svgc:SvgViewbox DataContext="{Binding}">
+            <DockPanel.Dock>
+                Left
+            </DockPanel.Dock>
+
+            <attach:SvgBox.Source>
+                <Binding>
+                    <Binding.Converter>
+                        <converters:UriConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        /Resources/Media/Images/Locations/Total/Transparent.svg
+                    </Binding.ConverterParameter>
+                </Binding>
+            </attach:SvgBox.Source>
+
+            <attach:SvgBox.Stretch>
+                Uniform
+            </attach:SvgBox.Stretch>
+        </svgc:SvgViewbox>
+    </ControlTemplate>
+
     <ControlTemplate x:Key="UnitIcon">
         <Grid DataContext="{Binding Path=Icon}">
             <ContentControl Template="{StaticResource SvgIcon}"/>
@@ -370,5 +394,16 @@
                 </TextBlock>
             </DockPanel>
         </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="IconName">
+        <DockPanel>
+            <ContentControl Template="{StaticResource UnitIcon}" DockPanel.Dock="Left"/>
+            <ContentControl Template="{StaticResource UnitName}" DockPanel.Dock="Left"/>
+
+            <DockPanel.ToolTip>
+                <Binding Path="Description"/>
+            </DockPanel.ToolTip>
+        </DockPanel>
     </ControlTemplate>
 </ResourceDictionary>

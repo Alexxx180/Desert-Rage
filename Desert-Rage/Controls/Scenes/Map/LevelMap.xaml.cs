@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Map;
-using DesertRage.ViewModel;
+using DesertRage.ViewModel.User;
 
 namespace DesertRage.Controls.Scenes.Map
 {
@@ -53,8 +53,8 @@ namespace DesertRage.Controls.Scenes.Map
         }
         #endregion
 
-        private UserProfile _userData;
-        public UserProfile UserData
+        private MapWorker _userData;
+        public MapWorker UserData
         {
             get => _userData;
             set
@@ -69,7 +69,7 @@ namespace DesertRage.Controls.Scenes.Map
             InitializeComponent();
         }
 
-        public LevelMap(UserProfile user) : this()
+        public LevelMap(MapWorker user) : this()
         {
             UserData = user;
         }
@@ -139,7 +139,7 @@ namespace DesertRage.Controls.Scenes.Map
                     break;
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
-                    UserData.Battle.Entry.Display.Content = UserData.Menu;
+                    UserData.ViewModel.Entry.Display.Content = UserData.Menu;
                     break;
                 case Key.E:
                 case Key.Space:

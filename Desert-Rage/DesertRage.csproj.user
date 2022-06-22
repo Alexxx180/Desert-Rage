@@ -17,34 +17,13 @@
     <Compile Update="Controls\Menu\Autorization.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\Menu\Bestiary\BestiaryLayout.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameItems.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\Menu\Game\GameMenu.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameSettings.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameSkills.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameStatus.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Menu\Game\GameTopics.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Menu\MainMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\BattleScene.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\Scenes\CutScene.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\Scenes\Map\LevelMap.xaml.cs">
@@ -78,34 +57,13 @@
     <Page Update="Controls\Menu\Autorization.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\Menu\Bestiary\BestiaryLayout.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameItems.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Controls\Menu\Game\GameMenu.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameSettings.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameSkills.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameStatus.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Menu\Game\GameTopics.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Menu\MainMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\BattleScene.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\Scenes\CutScene.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\Map\LevelMap.xaml">
@@ -142,6 +100,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\ControlTemplates\Collections\Status.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\ControlTemplates\Menu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\ControlTemplates\Status.xaml">

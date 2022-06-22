@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="DesertRage.Controls.Menu.Game.BestiaryLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="This">
+    <Grid DataContext="{Binding ElementName=This}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.75*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Row="1">
+            <ListBox.SelectedItem>
+                <Binding Path="SelectedFoe"/>
+            </ListBox.SelectedItem>
+
+            <ListBox.ItemsSource>
+                <Binding Path="Player.Bestiary"/>
+            </ListBox.ItemsSource>
+
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.ItemContainerStyle>
+                <StaticResource ResourceKey="RangerItems"/>
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="TopicTemplate"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Grid DataContext="{Binding Path=SelectedFoe}">
+            <Grid.Column>
+                1
+            </Grid.Column>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.35*"/>
+                <RowDefinition Height="0.65*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.275*"/>
+                    <ColumnDefinition Width="0.725*"/>
+                </Grid.ColumnDefinitions>
+
+                <ContentControl Template="{StaticResource SlicedIcon}"/>
+
+                <UniformGrid Rows="3" Grid.Column="1">
+                    <Viewbox Style="{StaticResource Impact}">
+                        <Viewbox.HorizontalAlignment>
+                            Left
+                        </Viewbox.HorizontalAlignment>
+
+                        <TextBlock Padding="3" Text="{Binding Path=Name}"/>
+                    </Viewbox>
+
+                    <ContentControl Template="{StaticResource HpBar}"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.575*"/>
+                            <ColumnDefinition Width="0.425*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <ContentControl DataContext="{Binding Path=Stats}" Template="{StaticResource StatsHorizontal}"/>
+                    </Grid>
+
+                    <UniformGrid.Style>
+                        <Style TargetType="UniformGrid">
+                            <Style.Triggers>
+                                <DataTrigger Value="{x:Null}" Binding="{Binding}">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </UniformGrid.Style>
+                </UniformGrid>
+            </Grid>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Style="{StaticResource Impact}">
+                <Grid.Row>
+                    1
+                </Grid.Row>
+
+                <TextBlock FontSize="20" TextWrapping="Wrap" Padding="10,5,10,5">
+                    <TextBlock.Text>
+                        <Binding Path="Description"/>
+                    </TextBlock.Text>
+                </TextBlock>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

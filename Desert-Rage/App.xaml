@@ -24,6 +24,7 @@
                 <ResourceDictionary Source="Resources/Templates/DataTemplates/Hierarchical/Units.xaml"/>
 
                 <ResourceDictionary Source="Resources/Templates/ControlTemplates/Units.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/ControlTemplates/Menu.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

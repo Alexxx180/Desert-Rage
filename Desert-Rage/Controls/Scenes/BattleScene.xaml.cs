@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using DesertRage.Controls.Scenes.Map;
 using DesertRage.Model.Locations;
-using DesertRage.ViewModel.Battle;
+using DesertRage.ViewModel.User.Battle;
 using Range = DesertRage.Model.Locations.Battle.Range;
 
 namespace DesertRage.Controls.Scenes

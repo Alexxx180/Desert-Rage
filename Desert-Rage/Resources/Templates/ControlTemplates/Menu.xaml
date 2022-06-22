@@ -1,0 +1,290 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:DesertRage.Controls">
+    <ControlTemplate x:Key="GameItems">
+        <Grid DataContext="{Binding}" Style="{StaticResource Impact}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.75*"/>
+            </Grid.RowDefinitions>
+
+            <ContentControl Template="{StaticResource StatusPanel}">
+                <ContentControl.DataContext>
+                    <Binding Path="Hero"/>
+                </ContentControl.DataContext>
+            </ContentControl>
+
+            <Menu Style="{StaticResource OrdinaryList}" Grid.Row="1">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <Menu.ItemTemplate>
+                    <StaticResource ResourceKey="ItemTemplate"/>
+                </Menu.ItemTemplate>
+
+                <Menu.ItemsSource>
+                    <Binding Path="Items"/>
+                </Menu.ItemsSource>
+
+                <Menu.ItemContainerStyle>
+                    <StaticResource ResourceKey="PlayerItems"/>
+                </Menu.ItemContainerStyle>
+            </Menu>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="GameSettings">
+        <StackPanel DataContext="{Binding Path=Preferences}">
+            <controls:Setting>
+                <controls:Setting.Caption>
+                    Музыка
+                </controls:Setting.Caption>
+
+                <controls:Setting.SliderSetting>
+                    <Binding Path="Music" Mode="TwoWay">
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </controls:Setting.SliderSetting>
+            </controls:Setting>
+
+            <controls:Setting>
+                <controls:Setting.Caption>
+                    Звуки
+                </controls:Setting.Caption>
+
+                <controls:Setting.SliderSetting>
+                    <Binding Path="Sound" Mode="TwoWay">
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </controls:Setting.SliderSetting>
+            </controls:Setting>
+
+            <controls:Setting>
+                <controls:Setting.Caption>
+                    Шумы
+                </controls:Setting.Caption>
+
+                <controls:Setting.SliderSetting>
+                    <Binding Path="Noise" Mode="TwoWay">
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </controls:Setting.SliderSetting>
+            </controls:Setting>
+
+            <controls:Setting>
+                <controls:Setting.Caption>
+                    Яркость
+                </controls:Setting.Caption>
+
+                <controls:Setting.SliderSetting>
+                    <Binding Path="Brightness" Mode="TwoWay">
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </controls:Setting.SliderSetting>
+            </controls:Setting>
+
+            <controls:Setting>
+                <controls:Setting.Caption>
+                    Скорость боя
+                </controls:Setting.Caption>
+
+                <controls:Setting.SliderSetting>
+                    <Binding Path="BattleSpeed" Mode="TwoWay">
+                        <Binding.UpdateSourceTrigger>
+                            LostFocus
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </controls:Setting.SliderSetting>
+            </controls:Setting>
+        </StackPanel>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="GameSkills">
+        <Grid DataContext="{Binding}" Style="{StaticResource Impact}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.75*"/>
+            </Grid.RowDefinitions>
+
+            <ContentControl Template="{StaticResource StatusPanel}">
+                <ContentControl.DataContext>
+                    <Binding Path="Hero"/>
+                </ContentControl.DataContext>
+            </ContentControl>
+
+            <Menu Style="{StaticResource OrdinaryList}" Grid.Row="1">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical">
+                            <VirtualizingStackPanel.CanVerticallyScroll>
+                                True
+                            </VirtualizingStackPanel.CanVerticallyScroll>
+                        </VirtualizingStackPanel>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <Menu.ItemTemplate>
+                    <StaticResource ResourceKey="SkillTemplate"/>
+                </Menu.ItemTemplate>
+
+                <Menu.ItemsSource>
+                    <Binding Path="Skills"/>
+                </Menu.ItemsSource>
+
+                <Menu.ItemContainerStyle>
+                    <StaticResource ResourceKey="PlayerSkills"/>
+                </Menu.ItemContainerStyle>
+            </Menu>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="GameStatus">
+        <UniformGrid Rows="2" DataContext="{Binding}" Style="{StaticResource Impact}">
+            <UniformGrid Rows="2" DataContext="{Binding Path=Hero}">
+                <ContentControl Template="{StaticResource StatusPanel}"/>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                    <StackPanel>
+                        <TextBox Padding="10" Grid.Row="1">
+                            <TextBox.Style>
+                                <StaticResource ResourceKey="InputField"/>
+                            </TextBox.Style>
+
+                            <TextBox.Text>
+                                <Binding Path="Description" Mode="TwoWay">
+                                    <Binding.UpdateSourceTrigger>
+                                        LostFocus
+                                    </Binding.UpdateSourceTrigger>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+
+                        <ContentControl Template="{StaticResource UnitName}" FontSize="24">
+                            <ContentControl.HorizontalAlignment>
+                                Right
+                            </ContentControl.HorizontalAlignment>
+                        </ContentControl>
+                    </StackPanel>
+                </ScrollViewer>
+            </UniformGrid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="0.9*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid DataContext="{Binding Path=Hero}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ContentControl Template="{StaticResource StatsVertical}" DataContext="{Binding Path=Stats}"/>
+                    <ContentControl Template="{StaticResource ExperienceBar}" Grid.Column="1"/>
+                </Grid>
+
+                <UniformGrid Rows="4" Columns="1" Grid.Column="1">
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <DynamicResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Hero.Equipped.Weapon" Mode="TwoWay">
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Equip[0]"/>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <DynamicResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Hero.Equipped.Torso" Mode="TwoWay">
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Equip[1]"/>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <StaticResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Hero.Equipped.Legs" Mode="TwoWay">
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Equip[2]"/>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+
+                    <ComboBox>
+                        <ComboBox.Style>
+                            <StaticResource ResourceKey="StretchFont"/>
+                        </ComboBox.Style>
+
+                        <ComboBox.ItemTemplate>
+                            <StaticResource ResourceKey="PowerTemplate"/>
+                        </ComboBox.ItemTemplate>
+
+                        <ComboBox.SelectedIndex>
+                            <Binding Path="Hero.Equipped.Feet" Mode="TwoWay">
+                                <Binding.UpdateSourceTrigger>
+                                    PropertyChanged
+                                </Binding.UpdateSourceTrigger>
+                            </Binding>
+                        </ComboBox.SelectedIndex>
+
+                        <ComboBox.ItemsSource>
+                            <Binding Path="Equip[3]"/>
+                        </ComboBox.ItemsSource>
+                    </ComboBox>
+                </UniformGrid>
+            </Grid>
+        </UniformGrid>
+    </ControlTemplate>
+</ResourceDictionary>

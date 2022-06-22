@@ -1,5 +1,5 @@
 ﻿using DesertRage.Controls.Scenes;
-using DesertRage.ViewModel;
+using DesertRage.ViewModel.User;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
@@ -12,25 +12,25 @@ namespace DesertRage.Controls.Menu.Game
     /// </summary>
     public partial class GameMenu : UserControl, INotifyPropertyChanged, IControllable
     {
-        private UserProfile _user;
-        public UserProfile User
+        private MapWorker _player;
+        public MapWorker Player
         {
-            get => _user;
+            get => _player;
             set
             {
-                _user = value;
+                _player = value;
                 OnPropertyChanged();
             }
         }
 
         public void Pause()
         {
-            User.Pause();
+            Player.Pause();
         }
 
         public void Resume()
         {
-            User.Resume();
+            Player.Resume();
         }
 
         public void KeyHandle(object sender, KeyEventArgs e)
@@ -39,7 +39,7 @@ namespace DesertRage.Controls.Menu.Game
             {
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
-                    User.Battle.Entry.Display.Content = User.Location;
+                    Player.ViewModel.Entry.Display.Content = Player.Location;
                     break;
                 default:
                     break;
@@ -51,10 +51,10 @@ namespace DesertRage.Controls.Menu.Game
             
         }
 
-        public GameMenu(UserProfile user)
+        public GameMenu(MapWorker player)
         {
             InitializeComponent();
-            User = user;
+            Player = player;
         }
 
         #region INotifyPropertyChanged Members

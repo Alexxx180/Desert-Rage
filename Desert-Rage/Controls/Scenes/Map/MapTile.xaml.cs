@@ -60,11 +60,11 @@ namespace DesertRage.Controls.Scenes.Map
 
         //public static readonly DependencyProperty
         //    UserProperty = DependencyProperty.Register(
-        //        nameof(User), typeof(UserProfile), typeof(MapTile));
+        //        nameof(User), typeof(MapWorker), typeof(MapTile));
 
-        //public UserProfile User
+        //public MapWorker User
         //{
-        //    get => GetValue(YProperty) as UserProfile;
+        //    get => GetValue(YProperty) as MapWorker;
         //    set => SetValue(YProperty, value);
         //}
 

@@ -23,9 +23,12 @@
         </Setter>
     </Style>
 
-    <Style x:Key="SettingText" TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Style x:Key="TabText" TargetType="TextBlock">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="24"/>
+    </Style>
+    
+    <Style x:Key="SettingText" TargetType="TextBlock" BasedOn="{StaticResource TabText}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 </ResourceDictionary>
