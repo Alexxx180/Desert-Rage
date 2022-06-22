@@ -49,6 +49,41 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             Learned.Add(enemy);
         }
 
+        public byte ChargeExperience(int value)
+        {
+            byte levelUps = 0;
+            int toNext;
+
+            do
+            {
+                toNext = Experience.Max - value;
+
+                Experience.Fill(value.ToUShort());
+
+                if (Experience.IsMax)
+                {
+                    levelUps++;
+                    value = -toNext;
+                }
+            }
+            while (!Experience.IsSealed && toNext < 0);
+
+            return levelUps;
+        }
+
+        public void LevelUp(NextStats bank, byte count)
+        {
+            Level += count;
+            int level = Level - 1;
+
+            Hp.Set(bank.Hp[level]);
+            Ap.Set(bank.Ap[level]);
+            Stats = bank.Stats[level];
+            Experience.Set(bank.Experience[level]);
+
+            OnPropertyChanged(nameof(Stats));
+        }
+
         public byte Level { get; set; }
         public Slider Experience { get; set; }
 
@@ -69,7 +104,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         }
         public HashSet<ArmoryElement> Equipment { get; set; }
 
-        public BattleStats SelectedArmor { get; set; }
+        public Armor Equipped { get; set; }
         #endregion
 
         #region Map Members

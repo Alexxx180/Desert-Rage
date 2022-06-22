@@ -2,16 +2,6 @@
 {
     public class Settings : Unit
     {
-        public Settings()
-        {
-            Music = new Slider(50, 100);
-            Sound = new Slider(50, 100);
-            Noise = new Slider(50, 100);
-
-            BattleSpeed = new Slider(25, 100, 200);
-            Brightness = new Slider(10, 50, 100);
-        }
-
         public void Set(Settings settings)
         {
             base.Set(settings);

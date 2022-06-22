@@ -1,6 +1,8 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace DesertRage.Model.Helpers
 {
