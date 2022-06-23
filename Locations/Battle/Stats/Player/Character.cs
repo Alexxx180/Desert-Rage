@@ -81,7 +81,21 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             Stats = bank.Stats[level];
             Experience.Set(bank.Experience[level]);
 
+            ushort maxTime = Stats.Special;
+            maxTime *= 2;
+            for (byte i = 0; i < StatusInfo.Length; i++)
+            {
+                Slider status = StatusInfo[i].Time;
+                status.Set(0, status.Current, maxTime);
+            }
+
             OnPropertyChanged(nameof(Stats));
+        }
+
+        public override void SetStatus(StatusID id, bool code)
+        {
+            base.SetStatus(id, code);
+            OnPropertyChanged(nameof(Status));
         }
 
         public byte Level { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace DesertRage.Model.Locations.Battle.Stats.Player.Armory
 {
-    public class Equipment : PowerUnit
+    public class Equipment : NoiseUnit
     {
         public Equipment() { }
 

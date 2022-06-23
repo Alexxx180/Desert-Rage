@@ -80,6 +80,11 @@ namespace DesertRage.Model.Locations.Battle.Stats
         }
         #endregion
 
+        public void HealStatus(int id)
+        {
+            StatusInfo[id].Time.Drain();
+        }
+
         public void SetStatus(bool code)
         {
             for (byte i = 0; i < Status.Length; i++)
@@ -93,7 +98,7 @@ namespace DesertRage.Model.Locations.Battle.Stats
             Status[id] = code;
         }
 
-        public void SetStatus(StatusID id, bool code)
+        public virtual void SetStatus(StatusID id, bool code)
         {
             Status[id.Int()] = code;
         }
