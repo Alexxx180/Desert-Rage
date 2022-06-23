@@ -122,15 +122,9 @@ namespace DesertRage.Controls.Scenes
             BattleModel.Resume();
         }
 
-        public void KeyHandle(object sender, KeyEventArgs e)
-        {
-            
-        }
+        public void KeyHandle(object sender, KeyEventArgs e) { }
 
-        public void KeyRelease(object sender, KeyEventArgs e)
-        {
-
-        }
+        public void KeyRelease(object sender, KeyEventArgs e) { }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

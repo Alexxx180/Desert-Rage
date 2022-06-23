@@ -1,5 +1,7 @@
 ﻿using DesertRage.Controls.Scenes;
+using DesertRage.ViewModel;
 using DesertRage.ViewModel.User;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
@@ -12,6 +14,19 @@ namespace DesertRage.Controls.Menu.Game
     /// </summary>
     public partial class GameMenu : UserControl, INotifyPropertyChanged, IControllable
     {
+        private GameMenu()
+        {
+            _randomizer = new Random();
+            _tips = Bank.LoadTips();
+        }
+
+        public GameMenu(MapWorker player) : this()
+        {
+            InitializeComponent();
+            Player = player;
+            MenuTip();
+        }
+
         private MapWorker _player;
         public MapWorker Player
         {
@@ -23,14 +38,21 @@ namespace DesertRage.Controls.Menu.Game
             }
         }
 
-        public void Pause()
+        private string _message;
+        public string Message
         {
-            Player.Pause();
+            get => _message;
+            set
+            {
+                _message = value;
+                OnPropertyChanged();
+            }
         }
 
-        public void Resume()
+        private void MenuTip()
         {
-            Player.Resume();
+            int no = _randomizer.Next(0, _tips.Length);
+            Message = _tips[no];
         }
 
         public void KeyHandle(object sender, KeyEventArgs e)
@@ -40,22 +62,29 @@ namespace DesertRage.Controls.Menu.Game
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
                     Player.ViewModel.Entry.Display.Content = Player.Location;
+                    MenuTip();
                     break;
                 default:
                     break;
             }
         }
 
-        public void KeyRelease(object sender, KeyEventArgs e)
+        public void KeyRelease(object sender, KeyEventArgs e) { }
+
+        #region IPausable Members
+        public void Pause()
         {
-            
+            Player.Pause();
         }
 
-        public GameMenu(MapWorker player)
+        public void Resume()
         {
-            InitializeComponent();
-            Player = player;
+            Player.Resume();
         }
+        #endregion
+
+        private readonly string[] _tips;
+        private readonly Random _randomizer;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

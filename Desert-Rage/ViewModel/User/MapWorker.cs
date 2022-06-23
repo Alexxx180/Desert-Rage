@@ -39,7 +39,7 @@ namespace DesertRage.ViewModel.User
             Location = new LevelMap(this);
             ViewModel = new BattleViewModel(this);
 
-            MessageToUser("'E' для взаимодействия");
+            MessageToUser("E - взаимодействиe. Ctrl - меню");
         }
 
         private Location _level;

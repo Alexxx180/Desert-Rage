@@ -53,6 +53,11 @@ namespace DesertRage.ViewModel
         }
 
         #region Prefab Members
+        internal static string[] LoadTips()
+        {
+            return GetItems<string[]>($"Items/Help.json");
+        }
+
         internal static Settings LoadPreferences()
         {
             return GetItems<Settings>($"Items/Preferences.json");
