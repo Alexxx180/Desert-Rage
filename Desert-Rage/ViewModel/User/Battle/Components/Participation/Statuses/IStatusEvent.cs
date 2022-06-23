@@ -1,4 +1,4 @@
-﻿namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
+﻿namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public interface IStatusEvent : IParticipation
     {

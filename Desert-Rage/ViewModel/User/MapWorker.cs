@@ -38,6 +38,8 @@ namespace DesertRage.ViewModel.User
             Menu = new GameMenu(this);
             Location = new LevelMap(this);
             ViewModel = new BattleViewModel(this);
+
+            MessageToUser("'E' для взаимодействия");
         }
 
         private Location _level;

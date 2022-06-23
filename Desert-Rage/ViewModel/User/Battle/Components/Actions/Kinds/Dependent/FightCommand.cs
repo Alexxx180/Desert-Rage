@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using DesertRage.Model.Helpers;
-using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
@@ -9,6 +8,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
     public class FightCommand : DependentCommand, IAction, INotifyPropertyChanged
     {
+        public FightCommand(IFormula dependency) : base(dependency)
+        {
+            UnitCursor = Targeting.ONE;
+        }
+
         public FightCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {

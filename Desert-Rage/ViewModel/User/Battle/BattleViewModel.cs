@@ -70,6 +70,7 @@ namespace DesertRage.ViewModel.User.Battle
 
         private protected override void End()
         {
+            Interrupt();
             Scene.RaiseEscape();
             Human.Player.Peace();
         }

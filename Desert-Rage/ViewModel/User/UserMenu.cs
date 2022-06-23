@@ -75,7 +75,7 @@ namespace DesertRage.ViewModel.User
         public void AddEquipment(ArmoryElement armor,
             Equipment[][] equipment)
         {
-            int kind = armor.Kind.Int();
+            int kind = armor.Kind.Byte();
             Equipment piece = equipment
                 [kind][armor.Set.Int()];
 
@@ -86,7 +86,6 @@ namespace DesertRage.ViewModel.User
         {
             if (Hero.Equipment.Add(armor))
                 AddEquipment(armor, Bank.GetEqupment());
-            //UpdateHero();
         }
 
         private void PlayerEquipment()
@@ -101,7 +100,7 @@ namespace DesertRage.ViewModel.User
 
         internal byte Resist(ArmoryKind kind, byte set)
         {
-            return Resist(kind.Int(), set);
+            return Resist(kind.Byte(), set);
         }
 
         public override void Hit(int value)

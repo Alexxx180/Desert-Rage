@@ -40,7 +40,6 @@ namespace DesertRage.ViewModel.User.Battle
         #region Option Members
         public void RunAway()
         {
-            base.Pause();
             CleanBattlefield();
             End();
         }
@@ -53,20 +52,20 @@ namespace DesertRage.ViewModel.User.Battle
 
         private protected virtual void Freeze()
         {
-            base.Pause();
+            Interrupt();
             DenyEnemyTurns();
         }
 
-        internal override void Pause()
+        internal void Pause()
         {
             if (IsBattle)
-                base.Pause();
+                Interrupt();
         }
 
-        internal override void Resume()
+        internal void Resume()
         {
             if (IsBattle)
-                base.Resume();
+                Continue();
         }
 
         public void Escape(int barrier)
@@ -88,7 +87,9 @@ namespace DesertRage.ViewModel.User.Battle
         private void DenyEnemyTurns()
         {
             for (byte i = 0; i < Enemies.Count; i++)
+            {
                 EndTurns(Enemies[i]);
+            }
         }
 
         private protected void RemoveEnemy(in Enemy enemy)

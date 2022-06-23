@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
+namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public class Participation : IParticipation, INotifyPropertyChanged
     {

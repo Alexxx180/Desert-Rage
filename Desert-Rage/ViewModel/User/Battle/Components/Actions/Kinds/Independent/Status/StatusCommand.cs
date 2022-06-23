@@ -1,7 +1,5 @@
-﻿using DesertRage.Model.Locations;
-using DesertRage.Model.Locations.Battle;
+﻿using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.ViewModel.User.Battle.Components.Actions;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status

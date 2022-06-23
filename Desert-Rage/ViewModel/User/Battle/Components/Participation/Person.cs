@@ -1,4 +1,5 @@
 ﻿using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Resources.Media.OST.Noises.Actions;
@@ -26,14 +27,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
         private void SetCommands()
         {
             Fight = new InstantCommand(
-                new FightCommand(
-                    new AttackFormula(),
-                    new NoiseUnit("Пустой слот")
-                    {
-                        Name = "Пусто",
-                        Noise = WeaponNoises.Punch
-                    }
-                )
+                new WeaponCommand(new AttackFormula())
             );
 
             Shield = new InstantCommand(

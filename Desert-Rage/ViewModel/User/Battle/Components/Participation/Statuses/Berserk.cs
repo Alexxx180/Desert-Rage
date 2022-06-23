@@ -1,7 +1,6 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.ViewModel.User.Battle.Components.Participation;
 
-namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
+namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public class Berserk : Reinforcement
     {
@@ -16,7 +15,7 @@ namespace DesertRage.ViewModel.Battle.Components.Participation.Statuses
                 Participant.Time.Drain();
                 Participant.Berserk();
             }
-                
+
             base.StateEvent(sender, o);
         }
     }

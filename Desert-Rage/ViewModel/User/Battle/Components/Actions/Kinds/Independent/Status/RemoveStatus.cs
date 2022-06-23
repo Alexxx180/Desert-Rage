@@ -1,5 +1,5 @@
 ﻿using DesertRage.Model.Helpers;
-using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status
@@ -11,10 +11,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
 
         public override void Use(object parameter)
         {
-            if (!Hero.Status[Status.Int()])
+            int id = Status.Int();
+            if (!Hero.Status[id])
                 return;
 
             ViewModel.RemoveStateEvent(Man.StatusEvents[Status]);
+            Hero.HealStatus(id);
             base.Use(parameter);
         }
     }

@@ -18,6 +18,7 @@ using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Depend
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent;
+using DesertRage.Model.Locations.Battle;
 
 namespace DesertRage.ViewModel
 {
@@ -182,8 +183,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Лечение",
                                 Description = "+ ОЗ",
-                                Icon = Skills.Cure,
-                                Noise = ActionNoises.Cure
+                                Icon = "/Resources/Media/Images/Menu/Skills/Cure.svg",
+                                Noise = "Actions/Cure.mp3"
                             }
                         ),
                         new SkillCommand(5)
@@ -198,8 +199,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Лечение 2",
                                 Description = "100% ОЗ",
-                                Icon = Skills.Cure2,
-                                Noise = ActionNoises.Cure2
+                                Icon = "/Resources/Media/Images/Menu/Skills/Cure2.svg",
+                                Noise = "Actions/Cure2.mp3"
                             }
                         ),
                         new SkillCommand(10)
@@ -215,8 +216,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Антидот",
                                 Description = "- Яд",
-                                Icon = Skills.Heal,
-                                Noise = ActionNoises.Heal
+                                Icon = "/Resources/Media/Images/Menu/Skills/Heal.svg",
+                                Noise = "Actions/Heal.mp3"
                             }
                         ),
                         new SkillCommand(3)
@@ -231,8 +232,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Анализ",
                                 Description = "Изучить врага как следует",
-                                Icon = Skills.Analyze,
-                                Noise = ActionNoises.Scan
+                                Icon = "/Resources/Media/Images/Menu/Skills/Analyze.svg",
+                                Noise = "Actions/Scan.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -248,8 +249,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Усиление",
                                 Description = "Сконцентрировать всю силу",
-                                Icon = Skills.AttackUp,
-                                Noise = ActionNoises.PowerBoost
+                                Icon = "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+                                Noise = "Actions/PowerBoost.mp3"
                             }
                         ),
                         new SkillCommand(20)
@@ -265,8 +266,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Охрана",
                                 Description = "Повысить бдительность",
-                                Icon = Skills.DefenceUp,
-                                Noise = ActionNoises.DefenceBoost
+                                Icon = "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+                                Noise = "Actions/DefenceBoost.mp3"
                             }
                         ),
                         new SkillCommand(15)
@@ -282,8 +283,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Факел",
                                 Description = "Хорошо поджигает",
-                                Icon = Skills.Torch,
-                                Noise = ActionNoises.Torch
+                                Icon = "/Resources/Media/Images/Menu/Skills/Torch.svg",
+                                Noise = "Actions/Torch.mp3"
                             }
                         ),
                         new SkillCommand(5)
@@ -299,8 +300,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Кнут",
                                 Description = "Дробит кости",
-                                Icon = Skills.Whip,
-                                Noise = ActionNoises.Whip
+                                Icon = "/Resources/Media/Images/Menu/Skills/Whip.svg",
+                                Noise = "Actions/Whip.mp3"
                             }
                         ),
                         new SkillCommand(7)
@@ -316,8 +317,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Рогатка",
                                 Description = "От нее не скрыться",
-                                Icon = Skills.Slingshot,
-                                Noise = ActionNoises.Sling
+                                Icon = "/Resources/Media/Images/Menu/Skills/Slingshot.svg",
+                                Noise = "Actions/Sling.mp3"
                             }
                         ),
                         new SkillCommand(13)
@@ -333,8 +334,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Комбо",
                                 Description = "Град ударов по врагам",
-                                Icon = Skills.Combo,
-                                Noise = ActionNoises.Combo
+                                Icon = "/Resources/Media/Images/Menu/Skills/Combo.svg",
+                                Noise = "Actions/Combo.mp3"
                             }
                         ),
                         new SkillCommand(10)
@@ -350,8 +351,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Буря",
                                 Description = "Неистовый порыв ветра",
-                                Icon = Skills.Storm,
-                                Noise = ActionNoises.Wind
+                                Icon = "/Resources/Media/Images/Menu/Skills/Storm.svg",
+                                Noise = "Actions/Wind.mp3"
                             }
                         ),
                         new SkillCommand(18)
@@ -367,8 +368,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Обвал",
                                 Description = "Усыпать противников камнями",
-                                Icon = Skills.Slide,
-                                Noise = ActionNoises.Quake
+                                Icon = "/Resources/Media/Images/Menu/Skills/Slide.svg",
+                                Noise = "Actions/Quake.mp3"
                             }
                         ),
                         new SkillCommand(25)
@@ -384,11 +385,12 @@ namespace DesertRage.ViewModel
                 new ConsumeCommand(
                     new CureCommand(
                         new ItemFormula(50),
-                        new NoiseUnit(50, "ОЗ")
+                        new NoiseUnit()
                         {
                             Name = "Бинт",
-                            Icon = Items.Bandage,
-                            Noise = ActionNoises.Cure
+                            Description = "+50 ОЗ",
+                            Icon = "/Resources/Media/Images/Menu/Items/Bandage.svg",
+                            Noise = "Actions/Cure.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Bandage)
@@ -401,8 +403,8 @@ namespace DesertRage.ViewModel
                         {
                             Name = "Антидот",
                             Description = "- Яд",
-                            Icon = Items.Antidote,
-                            Noise = ActionNoises.Heal
+                            Icon = "/Resources/Media/Images/Menu/Items/Antidote.svg",
+                            Noise = "Actions/Heal.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Antidote)
@@ -411,11 +413,12 @@ namespace DesertRage.ViewModel
                 new ConsumeCommand(
                     new RestCommand(
                         new ItemFormula(50),
-                        new NoiseUnit(50, "ОД")
+                        new NoiseUnit()
                         {
                             Name = "Эфир",
-                            Icon = Items.Ether,
-                            Noise = ActionNoises.Control
+                            Description = "50 ОД",
+                            Icon = "/Resources/Media/Images/Menu/Items/Ether.svg",
+                            Noise = "Actions/Control.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Ether)
@@ -424,11 +427,12 @@ namespace DesertRage.ViewModel
                 new ConsumeCommand(
                     new RecoverCommand(
                         new ItemFormula(80),
-                        new NoiseUnit(80, "ОЗ-ОД")
+                        new NoiseUnit()
                         {
                             Name = "Смесь",
-                            Icon = Items.Mixture,
-                            Noise = ItemNoises.Mixture
+                            Description = "+80 ОЗ-ОД",
+                            Icon = "/Resources/Media/Images/Menu/Items/Mixture.svg",
+                            Noise = "Actions/Items/Mixture.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Mixture)
@@ -437,11 +441,12 @@ namespace DesertRage.ViewModel
                 new ConsumeCommand(
                     new CureCommand(
                         new ItemFormula(350),
-                        new NoiseUnit(350, "ОЗ")
+                        new NoiseUnit()
                         {
                             Name = "Травы",
-                            Icon = Items.Herbs,
-                            Noise = ActionNoises.Cure
+                            Description = "+350 ОЗ",
+                            Icon = "/Resources/Media/Images/Menu/Items/Herbs.svg",
+                            Noise = "Actions/Cure.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Herbs)
@@ -450,11 +455,12 @@ namespace DesertRage.ViewModel
                 new ConsumeCommand(
                     new RestCommand(
                         new ItemFormula(300),
-                        new NoiseUnit(300, "ОД")
+                        new NoiseUnit()
                         {
                             Name = "Бутыль эфира",
-                            Icon = Items.EtherBottle,
-                            Noise = ActionNoises.Control
+                            Description = "+300 ОД",
+                            Icon = "/Resources/Media/Images/Menu/Items/EtherBottle.svg",
+                            Noise = "Actions/Control.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.EtherBottle)
@@ -462,11 +468,12 @@ namespace DesertRage.ViewModel
 
                 new ConsumeCommand(
                     new RecoverMaxCommand(
-                        new NoiseUnit("100% ОЗ-ОД")
+                        new NoiseUnit()
                         {
                             Name = "Эликсир",
-                            Icon = Items.Elixir,
-                            Noise = ItemNoises.Mixture
+                            Description = "100% ОЗ-ОД",
+                            Icon = "/Resources/Media/Images/Menu/Items/Elixir.svg",
+                            Noise = "Actions/Items/Mixture.mp3"
                         }
                     ),
                     new ItemCommand(ItemsID.Elixir)

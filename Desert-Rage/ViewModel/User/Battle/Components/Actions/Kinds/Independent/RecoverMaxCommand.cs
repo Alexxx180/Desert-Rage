@@ -1,5 +1,4 @@
-﻿using DesertRage.Model;
-using DesertRage.Model.Locations;
+﻿using DesertRage.Model.Locations.Battle;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Helpers;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;

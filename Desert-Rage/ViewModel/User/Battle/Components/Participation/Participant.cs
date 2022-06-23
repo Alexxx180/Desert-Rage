@@ -1,7 +1,7 @@
 ﻿using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.ViewModel.Battle.Components.Participation.Statuses;
+using DesertRage.ViewModel.User.Battle.Components.Participation.Statuses;
 using System.Collections.Generic;
 using System.ComponentModel;
 

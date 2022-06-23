@@ -2,8 +2,8 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Threading;
-using DesertRage.ViewModel.Battle.Components.Participation.Statuses;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
+using DesertRage.ViewModel.User.Battle.Components.Participation.Statuses;
 
 namespace DesertRage.ViewModel.User.Battle
 {
@@ -46,12 +46,12 @@ namespace DesertRage.ViewModel.User.Battle
         #endregion
 
         #region Timing Members
-        internal virtual void Pause()
+        private protected void Interrupt()
         {
             _timing.Stop();
         }
 
-        internal virtual void Resume()
+        private protected void Continue()
         {
             _timing.Start();
         }
