@@ -25,6 +25,21 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             };
         }
 
+        protected internal void SavedEvents()
+        {
+            AddEvent(StatusID.POISON);
+            AddEvent(StatusID.REINFORCEMENT);
+            AddEvent(StatusID.SHIELD);
+            AddEvent(StatusID.DEFENCE);
+            AddEvent(StatusID.BERSERK);
+        }
+
+        private void AddEvent(StatusID id)
+        {
+            if (Unit.Status[id.Int()])
+                ViewModel.AddStateEvent(StatusEvents[id]);
+        }
+
         #region Timing Members
         private Slider _time;
         public Slider Time

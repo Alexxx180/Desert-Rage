@@ -231,6 +231,7 @@ namespace DesertRage.ViewModel.User
             PlayerEquipment();
             LoadHeroBestiary();
             LoadHeroCommands();
+            ViewModel.Human.SavedEvents();
         }
         #endregion
     }

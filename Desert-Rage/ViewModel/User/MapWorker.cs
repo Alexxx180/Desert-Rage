@@ -51,6 +51,7 @@ namespace DesertRage.ViewModel.User
                 _level = value;
                 OnPropertyChanged();
                 ViewModel.SetFoes(value.StageFoes);
+                Resume();
             }
         }
 

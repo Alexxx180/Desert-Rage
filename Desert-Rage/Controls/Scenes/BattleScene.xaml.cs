@@ -109,7 +109,7 @@ namespace DesertRage.Controls.Scenes
 
         private void BattleStart(object sender, EventArgs e)
         {
-            Resume();
+            BattleModel.Continue();
         }
 
         public void Pause()

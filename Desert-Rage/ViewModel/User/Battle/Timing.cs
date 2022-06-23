@@ -51,7 +51,7 @@ namespace DesertRage.ViewModel.User.Battle
             _timing.Stop();
         }
 
-        private protected void Continue()
+        protected internal void Continue()
         {
             _timing.Start();
         }
