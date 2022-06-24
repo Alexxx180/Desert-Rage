@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using DesertRage.ViewModel;
+using Serilog;
 
 namespace DesertRage.Controls.Menu
 {
@@ -60,12 +61,19 @@ namespace DesertRage.Controls.Menu
                     ListBox profileList = sender as ListBox;
                     string selectedItem = profileList.SelectedItem as string;
 
+                    if (selectedItem is null ||
+                        selectedItem == string.Empty)
+                        return;
+
                     _ = ViewModel.Profiles.Remove(selectedItem);
                     _ = _toDrop.Add(selectedItem);
 
                     DragDrop.DoDragDrop(this, new DataObject(DataFormats.FileDrop, selectedItem), DragDropEffects.Move);
                 }
-                catch { }
+                catch (ArgumentNullException exception)
+                {
+                    Log.Error("Failed to do Drag-N-Drop:" + exception.Message);
+                }
             }
         }
 
@@ -74,7 +82,7 @@ namespace DesertRage.Controls.Menu
             if (e.Data.GetData(DataFormats.FileDrop) is string item)
             {
                 ViewModel.Profiles.Add(item);
-                _ = _toDrop.Remove(item);
+                _toDrop.Remove(item);
             }
         }
         #endregion
