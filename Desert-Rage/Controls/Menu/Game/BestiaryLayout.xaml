@@ -8,40 +8,14 @@
              x:Name="This">
     <Grid DataContext="{Binding ElementName=This}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.25*"/>
             <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Row="1">
-            <ListBox.SelectedItem>
-                <Binding Path="SelectedFoe"/>
-            </ListBox.SelectedItem>
-
-            <ListBox.ItemsSource>
-                <Binding Path="Player.Bestiary"/>
-            </ListBox.ItemsSource>
-
-            <ListBox.Style>
-                <StaticResource ResourceKey="OrdinaryList"/>
-            </ListBox.Style>
-
-            <ListBox.ItemContainerStyle>
-                <StaticResource ResourceKey="RangerItems"/>
-            </ListBox.ItemContainerStyle>
-
-            <ListBox.ItemTemplate>
-                <StaticResource ResourceKey="TopicTemplate"/>
-            </ListBox.ItemTemplate>
-        </ListBox>
-
         <Grid DataContext="{Binding Path=SelectedFoe}">
-            <Grid.Column>
-                1
-            </Grid.Column>
-
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.35*"/>
-                <RowDefinition Height="0.65*"/>
+                <RowDefinition Height="0.375*"/>
+                <RowDefinition Height="0.625*"/>
             </Grid.RowDefinitions>
 
             <Grid>
@@ -63,14 +37,13 @@
 
                     <ContentControl Template="{StaticResource HpBar}"/>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.575*"/>
-                            <ColumnDefinition Width="0.425*"/>
-                        </Grid.ColumnDefinitions>
-                        
-                        <ContentControl DataContext="{Binding Path=Stats}" Template="{StaticResource StatsHorizontal}"/>
-                    </Grid>
+                    <UniformGrid Columns="2">
+                        <ContentControl Template="{StaticResource StatsHorizontal}">
+                            <ContentControl.DataContext>
+                                <Binding Path="Stats"/>
+                            </ContentControl.DataContext>
+                        </ContentControl>
+                    </UniformGrid>
 
                     <UniformGrid.Style>
                         <Style TargetType="UniformGrid">
@@ -97,5 +70,33 @@
                 </TextBlock>
             </ScrollViewer>
         </Grid>
+
+        <ListBox Grid.Column="1">
+            <ListBox.Template>
+                <StaticResource ResourceKey="ScrollablePanel"/>
+            </ListBox.Template>
+            
+            <ListBox.SelectedItem>
+                <Binding Path="SelectedFoe"/>
+            </ListBox.SelectedItem>
+
+            <ListBox.ItemsSource>
+                <Binding Path="Player.Bestiary"/>
+            </ListBox.ItemsSource>
+
+            <ListBox.Style>
+                <StaticResource ResourceKey="OrdinaryList"/>
+            </ListBox.Style>
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem" BasedOn="{StaticResource RangerItems}">
+                    <Setter Property="Height" Value="50"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+            <ListBox.ItemTemplate>
+                <StaticResource ResourceKey="TopicTemplate"/>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>

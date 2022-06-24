@@ -93,16 +93,31 @@
     <Page Update="Resources\Styles\ContentControls.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Styles\RepeatButtons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Styles\Scrolls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Templates\Animations\Motion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\Animations\Opacity.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Templates\Brushes\Linear.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\Brushes\Solid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Templates\ControlTemplates\Collections\Status.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\ControlTemplates\Menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\Templates\ControlTemplates\Scrolls.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Templates\ControlTemplates\Status.xaml">

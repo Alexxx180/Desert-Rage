@@ -23,83 +23,66 @@
             </TextBlock.Text>
         </TextBlock>
 
-        <Slider Padding="1" DataContext="{Binding Path=SliderSetting}">
+        <Viewbox>
             <Grid.Column>
                 1
             </Grid.Column>
 
-            <Slider.Minimum>
-                <Binding Path="Minimum"/>
-            </Slider.Minimum>
+            <Slider Padding="1" DataContext="{Binding Path=SliderSetting}">
+                <Slider.Minimum>
+                    <Binding Path="Minimum"/>
+                </Slider.Minimum>
 
-            <Slider.Value>
-                <Binding Path="Current">
-                    <Binding.Mode>
-                        TwoWay
-                    </Binding.Mode>
+                <Slider.Value>
+                    <Binding Path="Current">
+                        <Binding.Mode>
+                            TwoWay
+                        </Binding.Mode>
 
-                    <Binding.UpdateSourceTrigger>
-                        PropertyChanged
-                    </Binding.UpdateSourceTrigger>
-                </Binding>
-            </Slider.Value>
-            
-            <Slider.Maximum>
-                <Binding Path="Max"/>
-            </Slider.Maximum>
+                        <Binding.UpdateSourceTrigger>
+                            PropertyChanged
+                        </Binding.UpdateSourceTrigger>
+                    </Binding>
+                </Slider.Value>
 
-            <Slider.Height>
-                22
-            </Slider.Height>
+                <Slider.Maximum>
+                    <Binding Path="Max"/>
+                </Slider.Maximum>
 
-            <Slider.Width>
-                225
-            </Slider.Width>
+                <Slider.Height>
+                    22
+                </Slider.Height>
 
-            <Slider.IsSnapToTickEnabled>
-                True
-            </Slider.IsSnapToTickEnabled>
+                <Slider.Width>
+                    225
+                </Slider.Width>
 
-            <Slider.TickFrequency>
-                1
-            </Slider.TickFrequency>
-            
-            <Slider.SmallChange>
-                1
-            </Slider.SmallChange>
+                <Slider.IsSnapToTickEnabled>
+                    True
+                </Slider.IsSnapToTickEnabled>
 
-            <Slider.LargeChange>
-                10
-            </Slider.LargeChange>
+                <Slider.TickFrequency>
+                    1
+                </Slider.TickFrequency>
 
-            <Slider.VerticalAlignment>
-                Center
-            </Slider.VerticalAlignment>
-            
-            <Slider.HorizontalAlignment>
-                Center
-            </Slider.HorizontalAlignment>
-            
-            <Slider.LayoutTransform>
-                <ScaleTransform>
-                    <ScaleTransform.ScaleX>
-                        1.75
-                    </ScaleTransform.ScaleX>
-                    
-                    <ScaleTransform.ScaleY>
-                        1.75
-                    </ScaleTransform.ScaleY>
+                <Slider.SmallChange>
+                    1
+                </Slider.SmallChange>
 
-                    <ScaleTransform.CenterX>
-                        15
-                    </ScaleTransform.CenterX>
+                <Slider.LargeChange>
+                    10
+                </Slider.LargeChange>
 
-                    <ScaleTransform.CenterY>
-                        15
-                    </ScaleTransform.CenterY>
-                </ScaleTransform>
-            </Slider.LayoutTransform>
-        </Slider>
+                <Slider.VerticalAlignment>
+                    Center
+                </Slider.VerticalAlignment>
+
+                <Slider.HorizontalAlignment>
+                    Center
+                </Slider.HorizontalAlignment>
+            </Slider>
+        </Viewbox>
+        
 
         <TextBlock DataContext="{Binding Path=SliderSetting}">
             <Grid.Column>

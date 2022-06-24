@@ -500,3 +500,8 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\FireTemple.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\TimeChamber.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Help.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\Brushes\Linear.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\Brushes\Solid.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Styles\Scrolls.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Templates\ControlTemplates\Scrolls.baml
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\Resources\Styles\RepeatButtons.baml

@@ -43,6 +43,11 @@
         <Setter Property="Panel.Background" Value="#B8000000"/>
     </Style>
 
+    <Style x:Key="GrayAccent">
+        <Setter Property="Control.Background" Value="#3F3F3F"/>
+        <Setter Property="Control.Foreground" Value="#EAEAEA"/>
+    </Style>
+
     <Style x:Key="Impact">
         <Setter Property="Control.Background" Value="#B8000000"/>
         <Setter Property="Control.FontWeight" Value="Bold"/>

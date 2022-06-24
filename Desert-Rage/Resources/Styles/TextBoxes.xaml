@@ -20,4 +20,12 @@
         <EventSetter Event="PreviewTextInput" Handler="Naming"/>
         <EventSetter Event="DataObject.Pasting" Handler="PastingNaming"/>
     </Style>
+
+    <Style x:Key="WideField" TargetType="TextBox">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="InputField"/>
+        </Style.BasedOn>
+
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
 </ResourceDictionary>

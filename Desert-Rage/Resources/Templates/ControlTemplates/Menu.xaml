@@ -1,11 +1,21 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:DesertRage.Controls">
+    <ControlTemplate x:Key="ScrollablePanel">
+        <ScrollViewer>
+            <ScrollViewer.Style>
+                <DynamicResource ResourceKey="FavsScrollViewer"/>
+            </ScrollViewer.Style>
+            
+            <ItemsPresenter />
+        </ScrollViewer>
+    </ControlTemplate>
+    
     <ControlTemplate x:Key="GameItems">
         <Grid DataContext="{Binding}" Style="{StaticResource Impact}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.25*"/>
-                <RowDefinition Height="0.75*"/>
+                <RowDefinition Height="0.27*"/>
+                <RowDefinition Height="0.73*"/>
             </Grid.RowDefinitions>
 
             <ContentControl Template="{StaticResource StatusPanel}">
@@ -21,6 +31,10 @@
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
 
+                <Menu.Template>
+                    <StaticResource ResourceKey="ScrollablePanel"/>
+                </Menu.Template>
+                
                 <Menu.ItemTemplate>
                     <StaticResource ResourceKey="ItemTemplate"/>
                 </Menu.ItemTemplate>
@@ -37,84 +51,76 @@
     </ControlTemplate>
 
     <ControlTemplate x:Key="GameSettings">
-        <StackPanel DataContext="{Binding Path=Preferences}">
-            <controls:Setting>
-                <controls:Setting.Caption>
-                    Музыка
-                </controls:Setting.Caption>
+        <ScrollViewer>
+            <ScrollViewer.Style>
+                <DynamicResource ResourceKey="FavsScrollViewer"/>
+            </ScrollViewer.Style>
 
-                <controls:Setting.SliderSetting>
-                    <Binding Path="Music" Mode="TwoWay">
-                        <Binding.UpdateSourceTrigger>
-                            LostFocus
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </controls:Setting.SliderSetting>
-            </controls:Setting>
+            <StackPanel DataContext="{Binding Path=Preferences}">
+                <controls:Setting>
+                    <controls:Setting.Caption>
+                        Музыка
+                    </controls:Setting.Caption>
 
-            <controls:Setting>
-                <controls:Setting.Caption>
-                    Звуки
-                </controls:Setting.Caption>
+                    <controls:Setting.SliderSetting>
+                        <Binding Path="Music" Mode="TwoWay">
+                            <Binding.UpdateSourceTrigger>
+                                LostFocus
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </controls:Setting.SliderSetting>
+                </controls:Setting>
 
-                <controls:Setting.SliderSetting>
-                    <Binding Path="Sound" Mode="TwoWay">
-                        <Binding.UpdateSourceTrigger>
-                            LostFocus
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </controls:Setting.SliderSetting>
-            </controls:Setting>
+                <controls:Setting>
+                    <controls:Setting.Caption>
+                        Звуки
+                    </controls:Setting.Caption>
 
-            <controls:Setting>
-                <controls:Setting.Caption>
-                    Шумы
-                </controls:Setting.Caption>
+                    <controls:Setting.SliderSetting>
+                        <Binding Path="Sound" Mode="TwoWay">
+                            <Binding.UpdateSourceTrigger>
+                                LostFocus
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </controls:Setting.SliderSetting>
+                </controls:Setting>
 
-                <controls:Setting.SliderSetting>
-                    <Binding Path="Noise" Mode="TwoWay">
-                        <Binding.UpdateSourceTrigger>
-                            LostFocus
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </controls:Setting.SliderSetting>
-            </controls:Setting>
+                <controls:Setting>
+                    <controls:Setting.Caption>
+                        Шумы
+                    </controls:Setting.Caption>
 
-            <controls:Setting>
-                <controls:Setting.Caption>
-                    Яркость
-                </controls:Setting.Caption>
+                    <controls:Setting.SliderSetting>
+                        <Binding Path="Noise" Mode="TwoWay">
+                            <Binding.UpdateSourceTrigger>
+                                LostFocus
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </controls:Setting.SliderSetting>
+                </controls:Setting>
 
-                <controls:Setting.SliderSetting>
-                    <Binding Path="Brightness" Mode="TwoWay">
-                        <Binding.UpdateSourceTrigger>
-                            LostFocus
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </controls:Setting.SliderSetting>
-            </controls:Setting>
+                <controls:Setting>
+                    <controls:Setting.Caption>
+                        Яркость
+                    </controls:Setting.Caption>
 
-            <controls:Setting>
-                <controls:Setting.Caption>
-                    Скорость боя
-                </controls:Setting.Caption>
-
-                <controls:Setting.SliderSetting>
-                    <Binding Path="BattleSpeed" Mode="TwoWay">
-                        <Binding.UpdateSourceTrigger>
-                            LostFocus
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </controls:Setting.SliderSetting>
-            </controls:Setting>
-        </StackPanel>
+                    <controls:Setting.SliderSetting>
+                        <Binding Path="Brightness" Mode="TwoWay">
+                            <Binding.UpdateSourceTrigger>
+                                LostFocus
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </controls:Setting.SliderSetting>
+                </controls:Setting>
+            </StackPanel>
+        </ScrollViewer>
     </ControlTemplate>
 
     <ControlTemplate x:Key="GameSkills">
         <Grid DataContext="{Binding}" Style="{StaticResource Impact}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.25*"/>
-                <RowDefinition Height="0.75*"/>
+                <RowDefinition Height="0.27*"/>
+                <RowDefinition Height="0.73*"/>
             </Grid.RowDefinitions>
 
             <ContentControl Template="{StaticResource StatusPanel}">
@@ -134,6 +140,10 @@
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
 
+                <Menu.Template>
+                    <StaticResource ResourceKey="ScrollablePanel"/>
+                </Menu.Template>
+
                 <Menu.ItemTemplate>
                     <StaticResource ResourceKey="SkillTemplate"/>
                 </Menu.ItemTemplate>
@@ -150,15 +160,29 @@
     </ControlTemplate>
 
     <ControlTemplate x:Key="GameStatus">
-        <UniformGrid Rows="2" DataContext="{Binding}" Style="{StaticResource Impact}">
-            <UniformGrid Rows="2" DataContext="{Binding Path=Hero}">
+        <Grid DataContext="{Binding}" Style="{StaticResource Impact}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.45*"/>
+                <RowDefinition Height="0.55*"/>
+            </Grid.RowDefinitions>
+
+            <Grid DataContext="{Binding Path=Hero}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.6*"/>
+                    <RowDefinition Height="0.4*"/>
+                </Grid.RowDefinitions>
+                
                 <ContentControl Template="{StaticResource StatusPanel}"/>
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                    <ScrollViewer.Style>
+                        <DynamicResource ResourceKey="FavsScrollViewer"/>
+                    </ScrollViewer.Style>
+                    
                     <StackPanel>
                         <TextBox Padding="10" Grid.Row="1">
                             <TextBox.Style>
-                                <StaticResource ResourceKey="InputField"/>
+                                <StaticResource ResourceKey="WideField"/>
                             </TextBox.Style>
 
                             <TextBox.Text>
@@ -177,9 +201,9 @@
                         </ContentControl>
                     </StackPanel>
                 </ScrollViewer>
-            </UniformGrid>
+            </Grid>
 
-            <Grid>
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="0.9*"/>
@@ -196,11 +220,15 @@
                 </Grid>
 
                 <UniformGrid Rows="4" Columns="1" Grid.Column="1">
+                    <UniformGrid.Resources>
+                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource StretchFont}">
+                            <Setter Property="Background" Value="#3F3F3F"/>
+                            <Setter Property="Foreground" Value="#EAEAEA"/>
+                            <Setter Property="ItemContainerStyle" Value="{StaticResource GrayAccent}"/>
+                        </Style>
+                    </UniformGrid.Resources>
+                    
                     <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
                         <ComboBox.ItemTemplate>
                             <DynamicResource ResourceKey="PowerTemplate"/>
                         </ComboBox.ItemTemplate>
@@ -219,10 +247,6 @@
                     </ComboBox>
 
                     <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
                         <ComboBox.ItemTemplate>
                             <DynamicResource ResourceKey="PowerTemplate"/>
                         </ComboBox.ItemTemplate>
@@ -241,10 +265,6 @@
                     </ComboBox>
 
                     <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
                         <ComboBox.ItemTemplate>
                             <StaticResource ResourceKey="PowerTemplate"/>
                         </ComboBox.ItemTemplate>
@@ -263,10 +283,6 @@
                     </ComboBox>
 
                     <ComboBox>
-                        <ComboBox.Style>
-                            <StaticResource ResourceKey="StretchFont"/>
-                        </ComboBox.Style>
-
                         <ComboBox.ItemTemplate>
                             <StaticResource ResourceKey="PowerTemplate"/>
                         </ComboBox.ItemTemplate>
@@ -285,6 +301,6 @@
                     </ComboBox>
                 </UniformGrid>
             </Grid>
-        </UniformGrid>
+        </Grid>
     </ControlTemplate>
 </ResourceDictionary>
