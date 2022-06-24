@@ -13,33 +13,39 @@
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
 
-        <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop"
+        <ScrollViewer Style="{DynamicResource FavsScrollViewer}">
+            <ScrollViewer.VerticalScrollBarVisibility>
+                Auto
+            </ScrollViewer.VerticalScrollBarVisibility>
+            
+            <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop"
                  DataContext="{Binding Path=ViewModel}"
                  SelectedItem="{Binding Path=CurrentProfile}">
-            <ListBox.Style>
-                <StaticResource ResourceKey="OrdinaryList"/>
-            </ListBox.Style>
+                <ListBox.Style>
+                    <StaticResource ResourceKey="OrdinaryList"/>
+                </ListBox.Style>
 
-            <ListBox.ItemContainerStyle>
-                <StaticResource ResourceKey="RangerItems" />
-            </ListBox.ItemContainerStyle>
+                <ListBox.ItemContainerStyle>
+                    <StaticResource ResourceKey="RangerItems" />
+                </ListBox.ItemContainerStyle>
 
-            <ListBox.AllowDrop>
-                True
-            </ListBox.AllowDrop>
+                <ListBox.AllowDrop>
+                    True
+                </ListBox.AllowDrop>
 
-            <ListBox.Visibility>
-                <Binding Path="IsListVisible">
-                    <Binding.Converter>
-                        <converters:VisibilityConverter/>
-                    </Binding.Converter>
-                </Binding>
-            </ListBox.Visibility>
+                <ListBox.Visibility>
+                    <Binding Path="IsListVisible">
+                        <Binding.Converter>
+                            <converters:VisibilityConverter/>
+                        </Binding.Converter>
+                    </Binding>
+                </ListBox.Visibility>
 
-            <ListBox.ItemsSource>
-                <Binding Path="Profiles" Mode="OneWay"/>
-            </ListBox.ItemsSource>
-        </ListBox>
+                <ListBox.ItemsSource>
+                    <Binding Path="Profiles" Mode="OneWay"/>
+                </ListBox.ItemsSource>
+            </ListBox>
+        </ScrollViewer>
 
         <Grid Grid.Row="1" Style="{StaticResource BackAccent}">
             <Grid.ColumnDefinitions>
