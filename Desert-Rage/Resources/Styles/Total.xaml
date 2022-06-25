@@ -142,9 +142,10 @@
 
     <Style x:Key="MenuOption">
         <Style.BasedOn>
-            <StaticResource ResourceKey="WhiteOption"/>
+            <StaticResource ResourceKey="OptionAccent"/>
         </Style.BasedOn>
 
+        <Setter Property="Control.Foreground" Value="White"/>
         <Setter Property="Control.VerticalContentAlignment" Value="Center"/>
     </Style>
 

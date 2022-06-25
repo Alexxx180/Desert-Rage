@@ -96,9 +96,9 @@
                             <Run Text="Использовать оружие по назначению"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
-
+                    
                     <MenuItem.Header>
-                        <TextBlock Text="Бой" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="Бой" Style="{StaticResource VerticalCenter}" />
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
