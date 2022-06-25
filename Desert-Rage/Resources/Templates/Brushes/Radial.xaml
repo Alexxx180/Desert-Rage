@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <RadialGradientBrush x:Key="DarkDesertBrush" RadiusX="1" RadiusY="0.5">
+        <RadialGradientBrush.Center>
+            0.5, 1
+        </RadialGradientBrush.Center>
+        
+        <RadialGradientBrush.GradientOrigin>
+            1, 1
+        </RadialGradientBrush.GradientOrigin>
+
+        <RadialGradientBrush.GradientStops>
+            <GradientStop Color="#B8000000" Offset="1"/>
+            <GradientStop Color="#FFD47C11" Offset="0"/>
+        </RadialGradientBrush.GradientStops>
+    </RadialGradientBrush>
+</ResourceDictionary>

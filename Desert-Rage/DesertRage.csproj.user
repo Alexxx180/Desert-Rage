@@ -108,6 +108,9 @@
     <Page Update="Resources\Templates\Brushes\Linear.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Resources\Templates\Brushes\Radial.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Resources\Templates\Brushes\Solid.xaml">
       <SubType>Designer</SubType>
     </Page>

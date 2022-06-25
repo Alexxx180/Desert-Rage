@@ -5,7 +5,8 @@
         <Style.BasedOn>
             <StaticResource ResourceKey="GlobalFont"/>
         </Style.BasedOn>
-        
+
+        <Setter Property="Padding" Value="10, 2, 10, 2"/>
         <Setter Property="BorderBrush" Value="#8A000000"/>
         <Setter Property="Background" Value="#8A000000"/>
         <Setter Property="Foreground" Value="White"/>
@@ -17,6 +18,8 @@
             <StaticResource ResourceKey="InputField"/>
         </Style.BasedOn>
 
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
         <EventSetter Event="PreviewTextInput" Handler="Naming"/>
         <EventSetter Event="DataObject.Pasting" Handler="PastingNaming"/>
     </Style>
@@ -25,7 +28,7 @@
         <Style.BasedOn>
             <StaticResource ResourceKey="InputField"/>
         </Style.BasedOn>
-
+        
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 </ResourceDictionary>

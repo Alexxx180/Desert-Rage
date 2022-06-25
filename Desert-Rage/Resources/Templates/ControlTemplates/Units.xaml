@@ -81,29 +81,24 @@
                 </Menu.ItemsPanel>
 
                 <MenuItem>
-                    <MenuItem.VerticalAlignment>
-                        Center
-                    </MenuItem.VerticalAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">Бой</Run>
+                            <Run FontWeight="Bold">
+                                Бой
+                            </Run>
+                            
                             <LineBreak/>
+                            
                             <Run Text="Использовать оружие по назначению"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-                                Бой
-                        </TextBlock>
+                        <TextBlock Text="Бой" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -131,29 +126,24 @@
                 </MenuItem>
 
                 <MenuItem>
-                    <MenuItem.VerticalContentAlignment>
-                        Center
-                    </MenuItem.VerticalContentAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">Прием</Run>
+                            <Run FontWeight="Bold">
+                                Прием
+                            </Run>
+                            
                             <LineBreak/>
+                            
                             <Run Text="Применить умения на практике"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-                                Прием
-                        </TextBlock>
+                        <TextBlock Text="Прием" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -178,32 +168,24 @@
                 </MenuItem>
 
                 <MenuItem>
-                    <MenuItem.VerticalContentAlignment>
-                        Center
-                    </MenuItem.VerticalContentAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">Сумка</Run>
+                            <Run FontWeight="Bold">
+                                Сумка
+                            </Run>
+                            
                             <LineBreak/>
+                            
                             <Run Text="Использовать предметы"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-
-                            <TextBlock.Text>
-                                Сумка
-                            </TextBlock.Text>
-                        </TextBlock>
+                        <TextBlock Text="Сумка" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -213,10 +195,6 @@
                             </ContentControl.DataContext>
                         </ContentControl>
                     </MenuItem.Icon>
-
-                    <MenuItem.HorizontalContentAlignment>
-                        Stretch
-                    </MenuItem.HorizontalContentAlignment>
 
                     <MenuItem.ItemTemplate>
                         <StaticResource ResourceKey="ItemTemplate"/>
@@ -232,32 +210,24 @@
                 </MenuItem>
 
                 <MenuItem Command="{Binding Shield}">
-                    <MenuItem.VerticalContentAlignment>
-                        Center
-                    </MenuItem.VerticalContentAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                        <Run FontWeight="Bold">Щит</Run>
-                        <LineBreak/>
-                        <Run Text="Принять оборонительную позицию"/>
+                            <Run FontWeight="Bold">
+                                Щит
+                            </Run>
+                            
+                            <LineBreak/>
+                            
+                            <Run Text="Принять оборонительную позицию"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-
-                            <TextBlock.Text>
-                                Щит
-                            </TextBlock.Text>
-                        </TextBlock>
+                        <TextBlock Text="Щит" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -270,31 +240,23 @@
                 </MenuItem>
 
                 <MenuItem Command="{Binding Flee}">
-                    <MenuItem.VerticalContentAlignment>
-                        Center
-                    </MenuItem.VerticalContentAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-
-                            <TextBlock.Text>
-                                Побег
-                            </TextBlock.Text>
-                        </TextBlock>
+                        <TextBlock Text="Побег" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                        <Run FontWeight="Bold">Побег</Run>
-                        <LineBreak/>
-                        <Run Text="Сбежать..."/>
+                            <Run FontWeight="Bold">
+                                Побег
+                            </Run>
+                            
+                            <LineBreak/>
+                            
+                            <Run Text="Сбежать..."/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
@@ -308,32 +270,24 @@
                 </MenuItem>
 
                 <MenuItem Command="{Binding Auto}">
-                    <MenuItem.VerticalContentAlignment>
-                        Center
-                    </MenuItem.VerticalContentAlignment>
-
                     <MenuItem.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
+                        <StaticResource ResourceKey="MenuOption"/>
                     </MenuItem.Style>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                        <Run FontWeight="Bold">Бойня</Run>
-                        <LineBreak/>
-                        <Run Text="Горячо поприветствовать оппонентов"/>
+                            <Run FontWeight="Bold">
+                                Бойня
+                            </Run>
+                            
+                            <LineBreak/>
+                            
+                            <Run Text="Горячо поприветствовать оппонентов"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock>
-                            <TextBlock.VerticalAlignment>
-                                Center
-                            </TextBlock.VerticalAlignment>
-
-                            <TextBlock.Text>
-                                Бойня
-                            </TextBlock.Text>
-                        </TextBlock>
+                        <TextBlock Text="Бойня" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>

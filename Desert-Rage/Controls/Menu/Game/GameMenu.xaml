@@ -27,6 +27,16 @@
             </Grid.ColumnDefinitions>
 
             <TabControl Grid.Row="1" Grid.Column="1" Style="{StaticResource BackAccent}">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Style.BasedOn>
+                            <StaticResource ResourceKey="TabText"/>
+                        </Style.BasedOn>
+                        
+                        <Setter Property="Padding" Value="5,0"/>
+                    </Style>
+                </TabControl.Resources>
+                
                 <TabItem Style="{StaticResource WhiteOption}" Height="50">
                     <TabItem.Header>
                         <DockPanel>
@@ -35,7 +45,8 @@
                                     /Resources/Media/Images/Battle/Character/Ray/Icon.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Статус"/>
+                            
+                            <TextBlock Text="Статус"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -52,7 +63,8 @@
                                     /Resources/Media/Images/Menu/Topics/Actions.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Умения"/>
+                            
+                            <TextBlock Text="Умения"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -69,7 +81,8 @@
                                     /Resources/Media/Images/Menu/Topics/Items.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Предметы"/>
+                            
+                            <TextBlock Text="Предметы"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -86,7 +99,8 @@
                                     /Resources/Media/Images/Menu/Skills/Analyze.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Бестиарий"/>
+                            
+                            <TextBlock Text="Бестиарий"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -103,7 +117,8 @@
                                     /Resources/Media/Images/Menu/Topics/Settings.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            <TextBlock Style="{StaticResource TabText}" Padding="5,0" Text="Настройки"/>
+                            
+                            <TextBlock Text="Настройки"/>
                         </DockPanel>
                     </TabItem.Header>
 

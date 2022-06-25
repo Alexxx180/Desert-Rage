@@ -63,7 +63,7 @@
                     1
                 </Grid.Row>
 
-                <TextBlock FontSize="20" TextWrapping="Wrap" Padding="10,5,10,5">
+                <TextBlock Style="{StaticResource DescriptionBlock}">
                     <TextBlock.Text>
                         <Binding Path="Description"/>
                     </TextBlock.Text>

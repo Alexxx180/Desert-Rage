@@ -36,57 +36,61 @@
                 <ColumnDefinition Width="0.391*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.03*"/>
-                    <RowDefinition Height="0.17*"/>
-                    <RowDefinition Height="0.275*"/>
-                    <RowDefinition Height="0.125*"/>
-                    <RowDefinition Height="0.025*"/>
-                    <RowDefinition Height="0.125*"/>
-                    <RowDefinition Height="0.05*"/>
-                </Grid.RowDefinitions>
+            <UniformGrid Rows="2" Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.085*"/>
+                        <RowDefinition Height="0.415*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
 
-                <Viewbox Grid.Row="1">
-                    <TextBlock Text="Desert Rage" Style="{StaticResource DesertCaption}"/>
-                </Viewbox>
-
-                <Button Grid.Row="3" Click="Continue">
-                    <Button.DataContext>
-                        <Binding Path="StartViewModel"/>
-                    </Button.DataContext>
-
-                    <Button.Style>
-                        <StaticResource ResourceKey="WhiteOption"/>
-                    </Button.Style>
-
-                    <Button.IsEnabled>
-                        <Binding Path="IsPlayerExists"/>
-                    </Button.IsEnabled>
-
-                    <Button.Visibility>
-                        <Binding Path="IsPlayerExists">
-                            <Binding.Converter>
-                                <converters:VisibilityConverter/>
-                            </Binding.Converter>
-                        </Binding>
-                    </Button.Visibility>
-
-                    <Viewbox>
-                        <TextBlock Text="Продолжить начатое"/>
+                    <Viewbox Grid.Row="1">
+                        <TextBlock Text="Desert Rage" Style="{StaticResource DesertCaption}"/>
                     </Viewbox>
-                </Button>
+                </Grid>
 
-                <Button Style="{StaticResource WhiteOption}" Click="NewGame">
-                    <Grid.Row>
-                        5
-                    </Grid.Row>
+                <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource WhiteOption}"/>
+                    </Grid.Resources>
 
-                    <Viewbox>
-                        <TextBlock Text="Новое приключение"/>
-                    </Viewbox>
-                </Button>
-            </Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.35*"/>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.35*"/>
+                        <RowDefinition Height="0.15*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="1" Click="Continue">
+                        <Button.DataContext>
+                            <Binding Path="StartViewModel"/>
+                        </Button.DataContext>
+
+                        <Button.IsEnabled>
+                            <Binding Path="IsPlayerExists"/>
+                        </Button.IsEnabled>
+
+                        <Button.Visibility>
+                            <Binding Path="IsPlayerExists">
+                                <Binding.Converter>
+                                    <converters:VisibilityConverter/>
+                                </Binding.Converter>
+                            </Binding>
+                        </Button.Visibility>
+
+                        <Viewbox>
+                            <TextBlock Text="Продолжить начатое"/>
+                        </Viewbox>
+                    </Button>
+
+                    <Button Grid.Row="3" Click="NewGame">
+                        <Viewbox>
+                            <TextBlock Text="Новое приключение"/>
+                        </Viewbox>
+                    </Button>
+                </Grid>
+            </UniformGrid>
         </Grid>
     </Grid>
 </UserControl>

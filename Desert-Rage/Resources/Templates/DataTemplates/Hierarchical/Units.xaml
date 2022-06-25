@@ -20,38 +20,15 @@
         <HierarchicalDataTemplate.ItemsSource>
             <Binding Path="Effect.ViewModel.Enemies"/>
         </HierarchicalDataTemplate.ItemsSource>
-        
-        <DockPanel LastChildFill="True">
-            <StackPanel DataContext="{Binding Path=Effect.Unit}">
-                <StackPanel.Orientation>
-                    Horizontal
-                </StackPanel.Orientation>
 
-                <DockPanel.Dock>
-                    Left
-                </DockPanel.Dock>
+        <DockPanel LastChildFill="True" Height="50">
+            <ContentControl Template="{StaticResource IconNameStack}">
+                <ContentControl.DataContext>
+                    <Binding Path="Effect.Unit"/>
+                </ContentControl.DataContext>
+            </ContentControl>
 
-                <ContentControl Template="{StaticResource UnitIcon}"/>
-                <ContentControl Template="{StaticResource UnitName}"/>
-            </StackPanel>
-
-            <TextBlock>
-                <DockPanel.Dock>
-                    Right
-                </DockPanel.Dock>
-
-                <TextBlock.VerticalAlignment>
-                    Center
-                </TextBlock.VerticalAlignment>
-
-                <TextBlock.HorizontalAlignment>
-                    Right
-                </TextBlock.HorizontalAlignment>
-
-                <TextBlock.Padding>
-                    10,0,10,0
-                </TextBlock.Padding>
-
+            <TextBlock Style="{StaticResource ValueBlock}" Margin="10,0">
                 <TextBlock.Text>
                     <Binding Path="Subject.Value"/>
                 </TextBlock.Text>

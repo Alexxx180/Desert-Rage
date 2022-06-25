@@ -7,6 +7,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Templates/Brushes/Solid.xaml"/>
                 <ResourceDictionary Source="Resources/Templates/Brushes/Linear.xaml"/>
+                <ResourceDictionary Source="Resources/Templates/Brushes/Radial.xaml"/>
 
                 <ResourceDictionary Source="Resources/Styles/Total.xaml"/>
                 <ResourceDictionary Source="Resources/Styles/ToolTips.xaml"/>

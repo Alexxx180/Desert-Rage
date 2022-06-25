@@ -5,15 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              x:Name="This"
-             d:DesignHeight="60" d:DesignWidth="800" Height="60">
+             d:DesignHeight="60" d:DesignWidth="800" Height="120">
+    <!--Height="60"-->
     <Grid DataContext="{Binding ElementName=This}" Style="{StaticResource Impact}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.3*"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.85*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Padding="1">
+        <TextBlock>
             <TextBlock.Style>
                 <StaticResource ResourceKey="SettingText"/>
             </TextBlock.Style>
@@ -23,83 +23,69 @@
             </TextBlock.Text>
         </TextBlock>
 
-        <Viewbox>
-            <Grid.Column>
-                1
-            </Grid.Column>
+        <Grid Grid.Column="1" DataContext="{Binding Path=SliderSetting}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
 
-            <Slider Padding="1" DataContext="{Binding Path=SliderSetting}">
-                <Slider.Minimum>
-                    <Binding Path="Minimum"/>
-                </Slider.Minimum>
+            <Viewbox>
+                <Slider Margin="2" Style="{StaticResource HorizontalSlider}">
+                    <Slider.Minimum>
+                        <Binding Path="Minimum"/>
+                    </Slider.Minimum>
 
-                <Slider.Value>
-                    <Binding Path="Current">
-                        <Binding.Mode>
-                            TwoWay
-                        </Binding.Mode>
+                    <Slider.Value>
+                        <Binding Path="Current">
+                            <Binding.Mode>
+                                TwoWay
+                            </Binding.Mode>
 
-                        <Binding.UpdateSourceTrigger>
-                            PropertyChanged
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                </Slider.Value>
+                            <Binding.UpdateSourceTrigger>
+                                PropertyChanged
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </Slider.Value>
 
-                <Slider.Maximum>
-                    <Binding Path="Max"/>
-                </Slider.Maximum>
+                    <Slider.Maximum>
+                        <Binding Path="Max"/>
+                    </Slider.Maximum>
 
-                <Slider.Height>
-                    22
-                </Slider.Height>
+                    <Slider.Height>
+                        22
+                    </Slider.Height>
 
-                <Slider.Width>
-                    225
-                </Slider.Width>
+                    <Slider.Width>
+                        225
+                    </Slider.Width>
 
-                <Slider.IsSnapToTickEnabled>
-                    True
-                </Slider.IsSnapToTickEnabled>
+                    <Slider.IsSnapToTickEnabled>
+                        True
+                    </Slider.IsSnapToTickEnabled>
 
-                <Slider.TickFrequency>
-                    1
-                </Slider.TickFrequency>
+                    <Slider.TickFrequency>
+                        1
+                    </Slider.TickFrequency>
 
-                <Slider.SmallChange>
-                    1
-                </Slider.SmallChange>
+                    <Slider.SmallChange>
+                        1
+                    </Slider.SmallChange>
 
-                <Slider.LargeChange>
-                    10
-                </Slider.LargeChange>
+                    <Slider.LargeChange>
+                        10
+                    </Slider.LargeChange>
+                </Slider>
+            </Viewbox>
 
-                <Slider.VerticalAlignment>
-                    Center
-                </Slider.VerticalAlignment>
+            <TextBlock Grid.Column="1">
+                <TextBlock.Style>
+                    <StaticResource ResourceKey="SettingText"/>
+                </TextBlock.Style>
 
-                <Slider.HorizontalAlignment>
-                    Center
-                </Slider.HorizontalAlignment>
-            </Slider>
-        </Viewbox>
-        
-
-        <TextBlock DataContext="{Binding Path=SliderSetting}">
-            <Grid.Column>
-                2
-            </Grid.Column>
-
-            <TextBlock.Style>
-                <StaticResource ResourceKey="SettingText"/>
-            </TextBlock.Style>
-
-            <TextBlock.Padding>
-                1
-            </TextBlock.Padding>
-
-            <TextBlock.Text>
-                <Binding Path="Current" StringFormat="{}{0}%"/>
-            </TextBlock.Text>
-        </TextBlock>
+                <TextBlock.Text>
+                    <Binding Path="Current" StringFormat="{}{0}%"/>
+                </TextBlock.Text>
+            </TextBlock>
+        </Grid>
     </Grid>
 </UserControl>

@@ -13,14 +13,24 @@
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer Style="{DynamicResource FavsScrollViewer}">
-            <ScrollViewer.VerticalScrollBarVisibility>
-                Auto
-            </ScrollViewer.VerticalScrollBarVisibility>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ScrollViewer.DataContext>
+                <Binding Path="ViewModel"/>
+            </ScrollViewer.DataContext>
+
+            <ScrollViewer.Style>
+                <DynamicResource ResourceKey="FavsScrollViewer"/>
+            </ScrollViewer.Style>
+
+            <ScrollViewer.Visibility>
+                <Binding Path="IsListVisible">
+                    <Binding.Converter>
+                        <converters:VisibilityConverter/>
+                    </Binding.Converter>
+                </Binding>
+            </ScrollViewer.Visibility>
             
-            <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop"
-                 DataContext="{Binding Path=ViewModel}"
-                 SelectedItem="{Binding Path=CurrentProfile}">
+            <ListBox MouseMove="ProfilesMove" Drop="ProfilesDrop">
                 <ListBox.Style>
                     <StaticResource ResourceKey="OrdinaryList"/>
                 </ListBox.Style>
@@ -33,17 +43,13 @@
                     True
                 </ListBox.AllowDrop>
 
-                <ListBox.Visibility>
-                    <Binding Path="IsListVisible">
-                        <Binding.Converter>
-                            <converters:VisibilityConverter/>
-                        </Binding.Converter>
-                    </Binding>
-                </ListBox.Visibility>
-
                 <ListBox.ItemsSource>
                     <Binding Path="Profiles" Mode="OneWay"/>
                 </ListBox.ItemsSource>
+
+                <ListBox.SelectedItem>
+                    <Binding Path="CurrentProfile"/>
+                </ListBox.SelectedItem>
             </ListBox>
         </ScrollViewer>
 
@@ -53,7 +59,7 @@
                 <ColumnDefinition Width="35"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox TextAlignment="Center" MaxLength="30">
+            <TextBox MaxLength="30">
                 <TextBox.Style>
                     <StaticResource ResourceKey="NameField"/>
                 </TextBox.Style>
@@ -71,15 +77,14 @@
                 </TextBox.Text>
             </TextBox>
 
-            <Button Style="{StaticResource BlackOption}"
-                    FontSize="24" Click="UseProfile">
-                <Grid.Row>
-                    1
-                </Grid.Row>
+            <Button Grid.Column="1" Click="UseProfile">
+                <Button.FontSize>
+                    24
+                </Button.FontSize>
 
-                <Grid.Column>
-                    1
-                </Grid.Column>
+                <Button.Style>
+                    <StaticResource ResourceKey="BlackOption"/>
+                </Button.Style>
 
                 <Button.Content>
                     <Binding Path="Arrow"/>

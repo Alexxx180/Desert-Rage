@@ -5,15 +5,7 @@
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <ControlTemplate x:Key="UnitName">
-        <TextBlock>
-            <TextBlock.Padding>
-                10,0,10,0
-            </TextBlock.Padding>
-            
-            <TextBlock.VerticalAlignment>
-                Center
-            </TextBlock.VerticalAlignment>
-
+        <TextBlock Style="{StaticResource NameBlock}">
             <TextBlock.Text>
                 <Binding Path="Name"/>
             </TextBlock.Text>
@@ -32,15 +24,9 @@
                 </status:StatBar.Bar>
 
                 <status:StatBar.ForeBrush>
-                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                        <GradientStop Color="#FF3AAC28"/>
-                        <GradientStop Color="#FF00F3FF" Offset="1"/>
-                        <GradientStop Color="#FF0EDEAF" Offset="0.512"/>
-                    </LinearGradientBrush>
+                    <StaticResource ResourceKey="HealthPointsBrush"/>
                 </status:StatBar.ForeBrush>
             </status:StatBar>
-
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </ControlTemplate>
 
@@ -56,14 +42,9 @@
                 </status:StatBar.Bar>
 
                 <status:StatBar.ForeBrush>
-                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                        <GradientStop Color="#FFFFEDED"/>
-                        <GradientStop Color="#FF00EDED" Offset="1"/>
-                        <GradientStop Color="#FF00ADED" Offset="0.512"/>
-                    </LinearGradientBrush>
+                    <StaticResource ResourceKey="ActionPointsBrush"/>
                 </status:StatBar.ForeBrush>
             </status:StatBar>
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </ControlTemplate>
 
@@ -79,14 +60,9 @@
                 </status:StatBar.Bar>
 
                 <status:StatBar.ForeBrush>
-                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
-                        <GradientStop Color="#FFBB835C"/>
-                        <GradientStop Color="#FFC7FF1D" Offset="0.512"/>
-                        <GradientStop Color="#FFC7631D" Offset="1"/>
-                    </LinearGradientBrush>
+                    <StaticResource ResourceKey="TimeBrush"/>
                 </status:StatBar.ForeBrush>
             </status:StatBar>
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </ControlTemplate>
 
@@ -186,15 +162,15 @@
                 </Grid.Column>
 
                 <ProgressBar.Minimum>
-                    <Binding Path="Experience.Minimum"/>
+                    <Binding Path="Minimum"/>
                 </ProgressBar.Minimum>
                 
                 <ProgressBar.Value>
-                    <Binding Path="Experience.Current"/>
+                    <Binding Path="Current"/>
                 </ProgressBar.Value>
 
                 <ProgressBar.Maximum>
-                    <Binding Path="Experience.Max"/>
+                    <Binding Path="Max"/>
                 </ProgressBar.Maximum>
 
                 <ProgressBar.Orientation>
@@ -202,15 +178,9 @@
                 </ProgressBar.Orientation>
 
                 <ProgressBar.Foreground>
-                    <LinearGradientBrush EndPoint="0.75,0.5" StartPoint="0,0.75">
-                        <GradientStop Color="#FFEDEDED"/>
-                        <GradientStop Color="#FFED00ED" Offset="1"/>
-                        <GradientStop Color="#FFAD00ED" Offset="0.512"/>
-                    </LinearGradientBrush>
+                    <StaticResource ResourceKey="ExperienceBrush"/>
                 </ProgressBar.Foreground>
             </ProgressBar>
-
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </ControlTemplate>
 
@@ -293,16 +263,14 @@
                     <Binding Path="Size.X"/>
                 </Grid.ColumnSpan>
             </ContentControl>
-
-            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
         </Grid>
     </ControlTemplate>
 
     <ControlTemplate x:Key="FoeStatus">
-        <Border DataContext="{Binding Path=Unit}">
-            <Border.BorderThickness>
-                2
-            </Border.BorderThickness>
+        <Border BorderThickness="2">
+            <Border.DataContext>
+                <Binding Path="Unit"/>
+            </Border.DataContext>
             
             <Border.BorderBrush>
                 Black
@@ -343,7 +311,7 @@
     </ControlTemplate>
 
     <ControlTemplate x:Key="EquipPower">
-        <Border BorderThickness="2" DataContext="{Binding}">
+        <Border BorderThickness="2">
             <Border.BorderBrush>
                 Black
             </Border.BorderBrush>
@@ -375,18 +343,10 @@
                     </status:IconStat.Stat>
                 </status:IconStat>
 
-                <TextBlock>
+                <TextBlock Style="{StaticResource NameBlock}">
                     <DockPanel.Dock>
                         Left
                     </DockPanel.Dock>
-
-                    <TextBlock.VerticalAlignment>
-                        Center
-                    </TextBlock.VerticalAlignment>
-
-                    <TextBlock.Padding>
-                        10,0,10,0
-                    </TextBlock.Padding>
 
                     <TextBlock.Text>
                         <Binding Path="Description"/>
@@ -396,14 +356,18 @@
         </Border>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="IconName">
-        <DockPanel>
-            <ContentControl Template="{StaticResource UnitIcon}" DockPanel.Dock="Left"/>
-            <ContentControl Template="{StaticResource UnitName}" DockPanel.Dock="Left"/>
+    <ControlTemplate x:Key="IconNameStack">
+        <StackPanel DataContext="{Binding}">
+            <StackPanel.Orientation>
+                Horizontal
+            </StackPanel.Orientation>
 
-            <DockPanel.ToolTip>
-                <Binding Path="Description"/>
-            </DockPanel.ToolTip>
-        </DockPanel>
+            <DockPanel.Dock>
+                Left
+            </DockPanel.Dock>
+
+            <ContentControl Template="{StaticResource UnitIcon}" />
+            <ContentControl Template="{StaticResource UnitName}" Margin="10,0"/>
+        </StackPanel>
     </ControlTemplate>
 </ResourceDictionary>

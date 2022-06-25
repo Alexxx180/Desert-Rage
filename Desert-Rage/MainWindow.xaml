@@ -31,26 +31,14 @@
                 <Binding Path="Noise"/>
             </controls:SoundGroup.Noise>
         </controls:SoundGroup>
-        
-        <Label x:Name="Display">
-            <Label.VerticalContentAlignment>
-                Stretch
-            </Label.VerticalContentAlignment>
-            
-            <Label.HorizontalContentAlignment>
-                Stretch
-            </Label.HorizontalContentAlignment>
 
+        <Label x:Name="Display" Style="{StaticResource StretchAll}">
             <Label.Content>
                 <menu:MainMenu Main="{Binding ElementName=This}"/>
             </Label.Content>
         </Label>
 
-        <Border Background="Black">
-            <Border.IsHitTestVisible>
-                False
-            </Border.IsHitTestVisible>
-
+        <Border Background="Black" IsHitTestVisible="False">
             <Border.Opacity>
                 <Binding>
                     <Binding.Path>
@@ -70,7 +58,7 @@
 
         <Grid x:Name="PauseLabel">
             <Grid.Style>
-                <Style TargetType="FrameworkElement">
+                <Style TargetType="FrameworkElement" BasedOn="{StaticResource BackAccent}">
                     <Style.Triggers>
                         <DataTrigger Value="False" Binding="{Binding Path=IsPaused}">
                             <Setter Property="Visibility" Value="Collapsed"/>
@@ -79,34 +67,7 @@
                 </Style>
             </Grid.Style>
 
-            <Grid.Background>
-                #7F000000
-            </Grid.Background>
-
-            <TextBlock Text="Pause | Пауза" FontSize="96">
-                <TextBlock.FontWeight>
-                    Bold
-                </TextBlock.FontWeight>
-
-                <TextBlock.FontFamily>
-                    Cambria
-                </TextBlock.FontFamily>
-
-                <TextBlock.VerticalAlignment>
-                    Center
-                </TextBlock.VerticalAlignment>
-
-                <TextBlock.HorizontalAlignment>
-                    Center
-                </TextBlock.HorizontalAlignment>
-
-                <TextBlock.Foreground>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFFB9809" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
+            <TextBlock Text="Pause | Пауза" FontSize="96" Style="{StaticResource DesertUnicode}"/>
         </Grid>
 
         <Border x:Name="Curtain" IsHitTestVisible="False">

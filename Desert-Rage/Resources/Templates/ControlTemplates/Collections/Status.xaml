@@ -9,9 +9,9 @@
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="12" Rows="1">
-                        <UniformGrid.VerticalAlignment>
-                            Stretch
-                        </UniformGrid.VerticalAlignment>
+                        <UniformGrid.Style>
+                            <StaticResource ResourceKey="VerticalCenter"/>
+                        </UniformGrid.Style>
 
                         <UniformGrid.IsItemsHost>
                             True

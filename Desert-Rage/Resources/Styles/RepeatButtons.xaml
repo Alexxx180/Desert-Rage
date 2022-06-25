@@ -1,10 +1,31 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="SnapsOverriding">
+        <Setter Property="Control.SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Control.OverridesDefaultStyle" Value="true"/>
+    </Style>
+
+    <Style x:Key="FocusableOverriding" BasedOn="{StaticResource SnapsOverriding}">
+        <Setter Property="Control.Focusable" Value="false"/>
+    </Style>
+
+    <Style x:Key="NotTabStop" BasedOn="{StaticResource FocusableOverriding}">
+        <Setter Property="Control.IsTabStop" Value="false"/>
+    </Style>
+
+    <Style x:Key="ScrollButtonsOverriding">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="FocusableOverriding"/>
+        </Style.BasedOn>
+
+        <Setter Property="Control.Visibility" Value="Hidden"/>
+    </Style>
+
     <Style x:Key="ScrollBarLineButton" TargetType="{x:Type RepeatButton}">
-        <Setter Property="Visibility" Value="Hidden"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="Focusable" Value="false"/>
+        <Style.BasedOn>
+            <StaticResource ResourceKey="ScrollButtonsOverriding"/>
+        </Style.BasedOn>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
@@ -17,15 +38,7 @@
                             <StaticResource ResourceKey="NormalBorderBrush"/>
                         </Border.BorderBrush>
 
-                        <Path Fill="{StaticResource GlyphBrush}">
-                            <Path.VerticalAlignment>
-                                Center
-                            </Path.VerticalAlignment>
-
-                            <Path.HorizontalAlignment>
-                                Center
-                            </Path.HorizontalAlignment>
-
+                        <Path Fill="{StaticResource GlyphBrush}" Style="{StaticResource CenterAll}">
                             <Path.Data>
                                 <Binding Path="Content">
                                     <Binding.RelativeSource>
@@ -44,6 +57,7 @@
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
+                        
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Foreground">
                                 <Setter.Value>
@@ -58,11 +72,12 @@
     </Style>
 
     <Style x:Key="ScrollBarPageButton" TargetType="{x:Type RepeatButton}">
-        <Setter Property="Visibility" Value="Hidden"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Style.BasedOn>
+            <StaticResource ResourceKey="ScrollButtonsOverriding"/>
+        </Style.BasedOn>
+        
         <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Focusable" Value="false"/>
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
@@ -73,10 +88,10 @@
     </Style>
 
     <Style x:Key="ScrollBarThumbHorizontal" TargetType="{x:Type Thumb}">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Focusable" Value="false"/>
+        <Style.BasedOn>
+            <StaticResource ResourceKey="NotTabStop"/>
+        </Style.BasedOn>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
@@ -99,10 +114,10 @@
     </Style>
     
     <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="OverridesDefaultStyle" Value="true"/>
-        <Setter Property="IsTabStop" Value="false"/>
-        <Setter Property="Focusable" Value="false"/>
+        <Style.BasedOn>
+            <StaticResource ResourceKey="NotTabStop"/>
+        </Style.BasedOn>
+        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
@@ -119,6 +134,64 @@
                             <TemplateBinding Property="BorderBrush"/>
                         </Border.BorderBrush>
                     </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderIncreaseButton" TargetType="RepeatButton">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="NotTabStop"/>
+        </Style.BasedOn>
+        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border BorderThickness="1" Height="3">
+                        <Border.BorderBrush>
+                            Black
+                        </Border.BorderBrush>
+
+                        <Border.Background>
+                            Black
+                        </Border.Background>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderDecreaseButton" TargetType="RepeatButton">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="SnapsOverriding"/>
+        </Style.BasedOn>
+        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border SnapsToDevicePixels="True" BorderThickness="1" Height="3">
+                        <Border.BorderBrush>
+                            #7F7F7F
+                        </Border.BorderBrush>
+
+                        <Border.Background>
+                            #EAEAEA
+                        </Border.Background>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderThumb" TargetType="Thumb">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="SnapsOverriding"/>
+        </Style.BasedOn>
+        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Ellipse Height="10" Width="10" Fill="#EAEAEA"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
