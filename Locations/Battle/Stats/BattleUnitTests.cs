@@ -10,7 +10,7 @@ namespace DesertRage.Tests.Locations.Battle.Stats
     public class BattleUnitTests
     {
         [TestMethod]
-        public void SetStatusBattleUnitReturnOne()
+        public void SetStatusTimingBattleUnitReturnOne()
         {
             BattleUnit unit = new BattleUnit();
 
