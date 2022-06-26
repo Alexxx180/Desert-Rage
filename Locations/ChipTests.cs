@@ -22,6 +22,8 @@ namespace DesertRage.Tests.Locations
             Chip tile = new Chip(5, 3);
 
             Assert.AreEqual(true, tile.IsOverflow(0, TestMap()));
+            tile.Set(new Position(-1, 2));
+            Assert.AreEqual(true, tile.IsOverflow(0, TestMap()));
         }
 
         [TestMethod]
@@ -29,6 +31,8 @@ namespace DesertRage.Tests.Locations
         {
             Chip tile = new Chip(4, 2);
 
+            Assert.AreEqual(false, tile.IsOverflow(0, TestMap()));
+            tile.Set(new Position(0, 0));
             Assert.AreEqual(false, tile.IsOverflow(0, TestMap()));
         }
 
