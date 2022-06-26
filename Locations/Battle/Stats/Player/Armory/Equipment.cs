@@ -12,13 +12,5 @@
         }
 
         public ArmoryKind Type { get; set; }
-
-        public override string ToString()
-        {
-            return $"Name: { Name }\n" +
-                $"Description: { Description }\n" +
-                $"Power: { Power }\n" + 
-                $"Type: { Type }";
-        }
     }
 }

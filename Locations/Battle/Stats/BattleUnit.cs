@@ -25,12 +25,16 @@ namespace DesertRage.Model.Locations.Battle.Stats
 
         public BattleUnit(BattleUnit unit)
         {
+            Hp = new Slider();
             Set(unit);
         }
 
         public void SetStatusTiming()
         {
-            SetStatusTiming(Stats.Special);
+            ushort duration = Stats.Special;
+            duration *= 2;
+
+            SetStatusTiming(duration);
         }
 
         public void SetStatusTiming(ushort max)
@@ -49,6 +53,7 @@ namespace DesertRage.Model.Locations.Battle.Stats
             Stats = unit.Stats;
             Action = unit.Action;
             Status = unit.Status;
+            StatusInfo = unit.StatusInfo;
             SetStatusTiming();
         }
 

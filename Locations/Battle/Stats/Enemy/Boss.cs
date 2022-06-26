@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace DesertRage.Model.Locations.Battle.Stats.Enemy
+﻿namespace DesertRage.Model.Locations.Battle.Stats.Enemy
 {
     public class Boss : Foe, ICloneable<Boss>
     {
@@ -15,11 +13,9 @@ namespace DesertRage.Model.Locations.Battle.Stats.Enemy
         {
             base.Set(unit);
             Theme = unit.Theme;
-            ActionsLock = unit.ActionsLock;
         }
 
         public string Theme { get; set; }
-        public BitArray ActionsLock { get; set; }
 
         public override Boss Clone()
         {

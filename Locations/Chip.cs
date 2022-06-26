@@ -54,12 +54,12 @@ namespace DesertRage.Model.Locations
             return overFlow;
         }
 
-        public bool IsOutTop(Position mask)
+        public bool IsOutTop(IPlaceAble mask)
         {
             return X < mask.X || Y < mask.Y;
         }
 
-        public bool IsOutBottom(Position mask)
+        public bool IsOutBottom(IPlaceAble mask)
         {
             return X > mask.X || Y > mask.Y;
         }

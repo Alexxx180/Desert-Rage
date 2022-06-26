@@ -4,14 +4,6 @@
     {
         public DescriptionUnit() { }
 
-        public DescriptionUnit(string meaning)
-        {
-            Description = meaning;
-        }
-
-        public DescriptionUnit(int value, string meaning) :
-            this($"+{value} {meaning}") { }
-
         public DescriptionUnit(DescriptionUnit unit)
         {
             Set(unit);

@@ -51,7 +51,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
         public byte ChargeExperience(int value)
         {
-            byte levelUps = 0;
+            byte level = (Level - 1).ToByte();
             int toNext;
 
             do
@@ -62,32 +62,26 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
                 if (Experience.IsMax)
                 {
-                    levelUps++;
+                    level++;
+                    Experience.Set(ToNextLevel[level]);
                     value = -toNext;
                 }
             }
             while (!Experience.IsSealed && toNext < 0);
 
-            return levelUps;
+            return ++level;
         }
 
-        public void LevelUp(NextStats bank, byte count)
+        public void LevelUp(NextStats bank, byte nextLevel)
         {
-            Level += count;
+            Level = nextLevel;
             int level = Level - 1;
 
             Hp.Set(bank.Hp[level]);
             Ap.Set(bank.Ap[level]);
             Stats = bank.Stats[level];
-            Experience.Set(bank.Experience[level]);
 
-            ushort maxTime = Stats.Special;
-            maxTime *= 2;
-            for (byte i = 0; i < StatusInfo.Length; i++)
-            {
-                Slider status = StatusInfo[i].Time;
-                status.Set(0, status.Current, maxTime);
-            }
+            SetStatusTiming();
 
             OnPropertyChanged(nameof(Stats));
         }
@@ -100,6 +94,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
         public byte Level { get; set; }
         public Slider Experience { get; set; }
+        public Bar[] ToNextLevel { get; set; }
 
         public Slider Ap { get; set; }
 

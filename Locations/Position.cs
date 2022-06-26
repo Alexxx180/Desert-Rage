@@ -26,22 +26,15 @@
             return overFlow;
         }
 
-        public bool IsOutTop(Position mask)
+        public bool IsOutTop(IPlaceAble mask)
         {
             return X < mask.X || Y < mask.Y;
         }
 
-        public bool IsOutBottom(Position mask)
+        public bool IsOutBottom(IPlaceAble mask)
         {
             return X > mask.X || Y > mask.Y;
         }
-
-        #region Static Members
-        public static Position Linear(int y, int scatter)
-        {
-            return new Position(y * scatter, y);
-        }
-        #endregion
 
         #region Override Methods Members
         public override string ToString()
@@ -62,17 +55,7 @@
         }
 
         public static Position operator +
-            (Position start, Position increment)
-        {
-            return new Position
-            {
-                X = start.X + increment.X,
-                Y = start.Y + increment.Y
-            };
-        }
-
-        public static Position operator +
-            (Chip start, Position increment)
+            (IPlaceAble start, Position increment)
         {
             return new Position
             {
@@ -92,7 +75,7 @@
         }
 
         public static Position operator -
-            (Position end, Position decrement)
+            (IPlaceAble end, Position decrement)
         {
             return new Position
             {

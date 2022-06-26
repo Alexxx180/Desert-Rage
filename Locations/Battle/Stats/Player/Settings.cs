@@ -8,7 +8,6 @@
             Music.Set(settings.Music);
             Sound.Set(settings.Sound);
             Noise.Set(settings.Noise);
-            BattleSpeed.Set(settings.BattleSpeed);
             Brightness.Set(settings.Brightness);
         }
 
@@ -18,7 +17,6 @@
         public Slider Noise { get; set; }
         #endregion
 
-        public Slider BattleSpeed { get; set; }
         public Slider Brightness { get; set; }
     }
 }
