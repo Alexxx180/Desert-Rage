@@ -17,6 +17,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
 
             ViewModel.RemoveStateEvent(Man.StatusEvents[Status]);
             Hero.HealStatus(id);
+
+            System.Diagnostics.Trace.WriteLine("ANTIDOTE! " + Hero.Ap);
             base.Use(parameter);
         }
     }

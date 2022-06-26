@@ -634,16 +634,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Topics.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Media\OST\Noises\Actions\ActionNoises.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ActionNoises.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\OST\Noises\Actions\Items\ItemNoises.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ItemNoises.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\Media\OST\Noises\Info\InfoNoises.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -732,14 +722,6 @@
     <EmbeddedResource Update="Resources\Media\Images\Menu\Topics\Topics.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Topics.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Noises\Actions\ActionNoises.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ActionNoises.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Noises\Actions\Items\ItemNoises.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ItemNoises.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Media\OST\Noises\Info\InfoNoises.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

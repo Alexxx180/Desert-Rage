@@ -412,8 +412,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\o
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Skills.Skills.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Stats.Stats.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Topics.Topics.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Actions.ActionNoises.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Actions.Items.ItemNoises.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Info.InfoNoises.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Weapons.WeaponNoises.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Desert-Rage\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Sounds.Defeat.Bosses.BossesDefeat.resources

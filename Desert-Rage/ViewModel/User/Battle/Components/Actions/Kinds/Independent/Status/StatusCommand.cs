@@ -27,6 +27,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
         public StatusID Status { get; set; }
         public bool State { get; set; }
 
-        public bool CanUse => true;
+        public virtual bool CanUse => true;
     }
 }

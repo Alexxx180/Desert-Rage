@@ -2,8 +2,6 @@
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.Resources.Media.OST.Noises.Actions;
-using DesertRage.Resources.Media.OST.Noises.Weapons;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
@@ -35,7 +33,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
                     StatusID.DEFENCE,
                     new NoiseUnit()
                     {
-                        Noise = ActionNoises.DefenceBoost
+                        Noise = "Actions/DefenceBoost.mp3"
                     }
                 )
             );
@@ -45,7 +43,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
                     new SpeedFormula(),
                     new NoiseUnit()
                     {
-                        Noise = ActionNoises.Flee
+                        Noise = "Actions/Flee.mp3"
                     }
                 )
             );
@@ -55,7 +53,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
                     StatusID.BERSERK,
                     new NoiseUnit()
                     {
-                        Noise = ActionNoises.PowerBoost
+                        Noise = "Actions/PowerBoost.mp3"
                     }
                 )
             );

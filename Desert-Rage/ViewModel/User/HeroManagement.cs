@@ -3,6 +3,7 @@ using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 
 namespace DesertRage.ViewModel.User
 {
@@ -63,9 +64,9 @@ namespace DesertRage.ViewModel.User
             if (Hero.Experience.IsSealed)
                 return;
 
-            byte ups = Hero.ChargeExperience(experience);
-            if (ups > 0)
-                LevelUp(ups);
+            byte nextLevel = Hero.ChargeExperience(experience);
+            if (nextLevel != Hero.Level)
+                LevelUp(nextLevel);
         }
 
         private void LevelUp(byte count)
