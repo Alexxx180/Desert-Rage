@@ -55,7 +55,7 @@
         }
 
         public static Position operator +
-            (IPlaceAble start, Position increment)
+            (Position start, Position increment)
         {
             return new Position
             {
@@ -75,7 +75,7 @@
         }
 
         public static Position operator -
-            (IPlaceAble end, Position decrement)
+            (Position end, Position decrement)
         {
             return new Position
             {
