@@ -119,7 +119,7 @@ namespace DesertRage.ViewModel.User
             Skills.Add(skill);
         }
 
-        private void AddSkills()
+        private protected override void AddSkills(HashSet<SkillsID> ramSkills)
         {
             Dictionary<SkillsID, ConsumeCommand>
                 skills = Bank.AllSkills();
@@ -220,7 +220,7 @@ namespace DesertRage.ViewModel.User
         public virtual void LoadHeroCommands()
         {
             Skills = new ObservableCollection<ConsumeCommand>();
-            AddSkills();
+            AddSkills(Hero.Skills);
 
             Items = new ObservableCollection<ConsumeCommand>();
             AddItems();

@@ -1,9 +1,11 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.ViewModel.User
 {
@@ -71,8 +73,17 @@ namespace DesertRage.ViewModel.User
 
         private void LevelUp(byte count)
         {
-            Hero.LevelUp(Bank.GetNextStats("Ray"), count);
+            HashSet<SkillsID> ramSkills = new HashSet<SkillsID>();
+            ramSkills.UnionWith(Hero.Skills);
+
+            NextStats bank = Bank.GetNextStats("Ray");
+            Hero.LevelUp(bank, count);
+
+            ramSkills.ExceptWith(Hero.Skills);
+            AddSkills(ramSkills);
         }
+
+        private protected abstract void AddSkills(HashSet<SkillsID> ramSkills);
         #endregion
 
         #region Map Members

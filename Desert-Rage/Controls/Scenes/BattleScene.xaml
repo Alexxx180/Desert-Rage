@@ -109,8 +109,8 @@
                 </Grid.Row>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.75*"/>
-                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.7*"/>
+                    <ColumnDefinition Width="0.3*"/>
                 </Grid.ColumnDefinitions>
 
                 <ItemsControl ItemsSource="{Binding Path=Enemies}">

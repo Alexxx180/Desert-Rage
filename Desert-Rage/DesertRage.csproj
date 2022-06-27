@@ -140,7 +140,6 @@
     <None Remove="Resources\Media\Images\Menu\Stats\Special.svg" />
     <None Remove="Resources\Media\Images\Menu\Stats\Speed.svg" />
     <None Remove="Resources\Media\Images\Menu\Topics\Actions.svg" />
-    <None Remove="Resources\Media\Images\Menu\Topics\Info.svg" />
     <None Remove="Resources\Media\Images\Menu\Topics\Items.svg" />
     <None Remove="Resources\Media\Images\Menu\Topics\Settings.svg" />
     <None Remove="SafeArea.png" />
@@ -326,9 +325,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Menu\Topics\Actions.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Menu\Topics\Info.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Menu\Topics\Items.svg">

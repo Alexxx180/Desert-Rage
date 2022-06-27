@@ -9,8 +9,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.125*"/>
                 <RowDefinition Height="0.05*"/>
-                <RowDefinition Height="0.6*"/>
-                <RowDefinition Height="0.225*"/>
+                <RowDefinition Height="0.675*"/>
+                <RowDefinition Height="0.15*"/>
             </Grid.RowDefinitions>
 
             <ContentControl Template="{StaticResource StatusPanel}">
@@ -76,7 +76,7 @@
             <Menu x:Name="MOptions" Grid.Row="3">
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid Columns="3" Rows="3"/>
+                        <UniformGrid Columns="3" Rows="2"/>
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
 
