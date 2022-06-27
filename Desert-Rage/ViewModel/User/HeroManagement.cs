@@ -4,7 +4,6 @@ using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
-using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.ViewModel.User

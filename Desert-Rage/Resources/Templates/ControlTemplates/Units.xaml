@@ -73,7 +73,7 @@
                 </ContentControl.Style>
             </ContentControl>
 
-            <Menu x:Name="MOptions" Grid.Row="3">
+            <Menu x:Name="MOptions" Grid.Row="3" Visibility="Collapsed">
                 <Menu.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="3" Rows="2"/>
@@ -304,5 +304,19 @@
                 </Menu.Style>
             </Menu>
         </Grid>
+
+        <ControlTemplate.Triggers>
+            <DataTrigger>
+                <DataTrigger.Binding>
+                    <Binding Path="Time.Current"/>
+                </DataTrigger.Binding>
+
+                <DataTrigger.Value>
+                    1000
+                </DataTrigger.Value>
+
+                <Setter TargetName="MOptions" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 </ResourceDictionary>

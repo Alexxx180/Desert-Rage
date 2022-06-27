@@ -52,6 +52,17 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             }
         }
 
+        private bool _isTurn;
+        public bool IsTurn
+        {
+            get => _isTurn;
+            set
+            {
+                _isTurn = value;
+                OnPropertyChanged();
+            }
+        }
+
         private bool _isHit;
         public bool IsHit
         {
@@ -144,6 +155,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             speed += Unit.Stats.Speed;
 
             Time.Fill(speed);
+            if (Time.IsMax)
+                IsTurn = true;
         }
         #endregion
 

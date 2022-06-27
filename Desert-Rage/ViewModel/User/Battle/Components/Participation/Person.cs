@@ -117,6 +117,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
         public void Act()
         {
             IsAct = true;
+            Time.Drain();
             IsAct = false;
         }
 
