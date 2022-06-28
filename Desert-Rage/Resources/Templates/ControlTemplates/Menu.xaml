@@ -114,6 +114,20 @@
                         </Binding>
                     </controls:Setting.SliderSetting>
                 </controls:Setting>
+              
+              <controls:Setting>
+                    <controls:Setting.Caption>
+                        Сражение
+                    </controls:Setting.Caption>
+
+                    <controls:Setting.SliderSetting>
+                        <Binding Path="BattleSpeed" Mode="TwoWay">
+                            <Binding.UpdateSourceTrigger>
+                                LostFocus
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </controls:Setting.SliderSetting>
+                </controls:Setting>
             </StackPanel>
         </ScrollViewer>
     </ControlTemplate>
