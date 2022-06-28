@@ -9,6 +9,7 @@
             Sound.Set(settings.Sound);
             Noise.Set(settings.Noise);
             Brightness.Set(settings.Brightness);
+            BattleSpeed.Set(settings.BattleSpeed);
         }
 
         #region OST Members
@@ -18,5 +19,6 @@
         #endregion
 
         public Slider Brightness { get; set; }
+        public Slider BattleSpeed| { get; set; }
     }
 }
