@@ -118,7 +118,7 @@
 		"Current": 40,
 		"Max": 40
 	},
-	"Skills": [],
+	"Skills": [6],
 	"Items": "AAAAAAAAAA==",
 	"Learned": [],
 	"Equipment": [{
@@ -183,8 +183,8 @@
 	},
 	"Stats": {
 		"Attack": 25,
-		"Defence": 15,
-		"Speed": 15,
+		"Defence": 20,
+		"Speed": 20,
 		"Special": 25
 	},
 	"Action": "/Resources/Media/Images/Battle/Character/Ray/Action.svg",
