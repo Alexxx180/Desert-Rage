@@ -27,7 +27,7 @@
 		"IsMax": false,
 		"IsEmpty": false,
 		"IsSealed": false,
-		"Minimum": 25,
+		"Minimum": 10,
 		"Current": 100,
 		"Max": 200
 	},

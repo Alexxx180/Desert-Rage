@@ -7,12 +7,12 @@
 		"IsSealed": false,
 		"Minimum": 0,
 		"Current": 0,
-		"Max": 15
+		"Max": 10
 	},
 	"ToNextLevel": [{
 		"Minimum": 0,
 		"Current": 0,
-		"Max": 15
+		"Max": 10
 	}, {
 		"Minimum": 0,
 		"Current": 0,
@@ -161,7 +161,7 @@
 		"X": 1,
 		"Y": 0
 	}],
-	"ToBattle": 0,
+	"ToBattle": 27,
 	"Pose": 0,
 	"Walk": 0,
 	"MapImage": "/Resources/Media/Images/Locations/Total/Person/Static/Down.svg",

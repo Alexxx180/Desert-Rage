@@ -20,7 +20,7 @@
 	"Stats": {
 		"Attack": 25,
 		"Defence": 3,
-		"Speed": 13,
+		"Speed": 7,
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Spider/Action.svg",
@@ -114,7 +114,7 @@
 	"Stats": {
 		"Attack": 32,
 		"Defence": 7,
-		"Speed": 11,
+		"Speed": 4,
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Mummy/Action.svg",
@@ -208,7 +208,7 @@
 	"Stats": {
 		"Attack": 35,
 		"Defence": 5,
-		"Speed": 11,
+		"Speed": 3,
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Zombie/Action.svg",
@@ -302,7 +302,7 @@
 	"Stats": {
 		"Attack": 40,
 		"Defence": 15,
-		"Speed": 15,
+		"Speed": 5,
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",

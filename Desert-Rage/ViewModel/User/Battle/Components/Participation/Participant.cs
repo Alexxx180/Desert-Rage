@@ -151,10 +151,16 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             if (Time.IsMax)
                 return;
 
-            ushort speed = ViewModel.Human.Player.Preferences.BattleSpeed;
-            speed -= (Unit.BattleSpeed * speed * 0.8).ToUShort();
+            float totalSpeed = ViewModel.Human.Player.Preferences.BattleSpeed.Current;
 
-            Time.Fill(speed);
+            float speed = 0.8f;
+            speed *= Unit.BattleSpeed;
+            speed *= totalSpeed;
+
+            totalSpeed *= 0.2f;
+            totalSpeed += speed;
+
+            Time.Fill(totalSpeed.ToUShort());
             if (Time.IsMax)
                 IsTurn = true;
         }
