@@ -1,10 +1,12 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Helpers;
 using System.Collections;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace DesertRage.Model.Locations.Battle.Stats
 {
-    public class BattleUnit : DescriptionUnit, ICloneable<BattleUnit>
+    public class BattleUnit : DescriptionUnit, ICloneable<BattleUnit>, INotifyPropertyChanged
     {
         public BattleUnit()
         {
@@ -125,8 +127,18 @@ namespace DesertRage.Model.Locations.Battle.Stats
 
         public Slider Hp { get; set; }
 
-        public BattleStats Stats { get; set; }
-        public float BattleSpeed => Stats.Speed / byte.MaxValue;
+        private BattleStats _stats;
+        public BattleStats Stats
+        {
+            get => _stats;
+            set
+            {
+                _stats = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(BattleSpeed));
+            }
+        }
+        public float BattleSpeed => Stats.Speed / 255.0f;
         
         public string Action { get; set; }
 
@@ -137,5 +149,23 @@ namespace DesertRage.Model.Locations.Battle.Stats
         {
             return new BattleUnit(this);
         }
+
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Raises this object's PropertyChanged event.
+        /// </summary>
+        /// <param name="propertyName">The property that has a new value.</param>
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
+                handler(this, e);
+            }
+        }
+        #endregion
     }
 }

@@ -1,8 +1,6 @@
 ﻿using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace DesertRage.Model.Locations.Battle.Stats.Enemy
 {

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
@@ -72,14 +71,16 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             return ++level;
         }
 
-        public void LevelUp(NextStats bank, byte nextLevel)
+        public HashSet<SkillsID> LevelUp(NextStats bank, byte nextLevel)
         {
+            HashSet<SkillsID> skills = new HashSet<SkillsID>();
             for (int i = Level + 1; i <= nextLevel; i++)
             {
                 string id = i.ToString();
                 if (bank.Skills.TryGetValue(id, out SkillsID skill))
                 {
                     Skills.Add(skill);
+                    skills.Add(skill);
                 }
             }
 
@@ -92,9 +93,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
             SetStatusTiming();
 
-            
-
-            OnPropertyChanged(nameof(Stats));
+            return skills;
         }
 
         public override void SetStatus(StatusID id, bool code)
@@ -193,24 +192,6 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         public string[][] GoingImage { get; set; }
 
         public HashSet<char> WalkThrough { get; set; }
-        #endregion
-
-        #region INotifyPropertyChanged Members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises this object's PropertyChanged event.
-        /// </summary>
-        /// <param name="propertyName">The property that has a new value.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                PropertyChangedEventArgs e = new PropertyChangedEventArgs(propertyName);
-                handler(this, e);
-            }
-        }
         #endregion
     }
 }
