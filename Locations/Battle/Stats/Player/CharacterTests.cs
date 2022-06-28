@@ -1,11 +1,12 @@
-﻿using DesertRage.Model.Locations;
+﻿using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things.Storage;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
-using DesertRage.Model.Helpers;
+using DesertRage.Model.Menu.Things.Logic;
 
 namespace DesertRage.Tests.Locations.Battle.Stats.Player
 {
@@ -123,6 +124,10 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
                 Hp = new Slider(100),
                 Ap = new Slider(100),
                 Stats = new BattleStats(10),
+                Skills = new HashSet<SkillsID>
+                {
+                    { SkillsID.Torch }
+                },
                 Experience = new Slider(0, 100),
                 Learned = new HashSet<EnemyBestiary>()
             };
@@ -146,11 +151,15 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
                     new BattleStats(10),
                     new BattleStats(20),
                     new BattleStats(30),
+                },
+                Skills = new Dictionary<string, SkillsID>
+                {
+                    { "3", SkillsID.Cure2 }
                 }
             };
 
             byte nextLevel = 3;
-            hero.LevelUp(bank, nextLevel);
+            HashSet<SkillsID> provisionToUser = hero.LevelUp(bank, nextLevel);
 
             nextLevel--;
             Assert.AreEqual(bank.Hp[nextLevel].Minimum, hero.Hp.Minimum);
@@ -162,6 +171,12 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
             Assert.AreEqual(bank.Ap[nextLevel].Max, hero.Ap.Max);
 
             Assert.AreEqual(bank.Stats[nextLevel], hero.Stats);
+
+            Assert.IsTrue(hero.Skills.Contains(SkillsID.Torch));
+            Assert.IsTrue(hero.Skills.Contains(SkillsID.Cure2));
+
+            Assert.IsTrue(!provisionToUser.Contains(SkillsID.Torch));
+            Assert.IsTrue(provisionToUser.Contains(SkillsID.Cure2));
         }
 
         [TestMethod]
