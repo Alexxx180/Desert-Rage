@@ -151,7 +151,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             if (Time.IsMax)
                 return;
 
-            ushort speed = 100;
+            ushort speed = ViewModel.Human.Player.Preferences.BattleSpeed;
             speed -= (Unit.BattleSpeed * speed * 0.8).ToUShort();
 
             Time.Fill(speed);
