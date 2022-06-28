@@ -19,6 +19,6 @@
         #endregion
 
         public Slider Brightness { get; set; }
-        public Slider BattleSpeed| { get; set; }
+        public Slider BattleSpeed { get; set; }
     }
 }

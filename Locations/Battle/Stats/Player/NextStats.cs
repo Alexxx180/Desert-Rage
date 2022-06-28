@@ -1,4 +1,7 @@
-﻿namespace DesertRage.Model.Locations.Battle.Stats.Player
+﻿using DesertRage.Model.Menu.Things.Logic;
+using System.Collections.Generic;
+
+namespace DesertRage.Model.Locations.Battle.Stats.Player
 {
     public class NextStats
     {
@@ -6,5 +9,6 @@
         public Bar[] Ap { get; set; }
 
         public BattleStats[] Stats { get; set; }
+        public Dictionary<string, SkillsID> Skills { get; set; }
     }
 }

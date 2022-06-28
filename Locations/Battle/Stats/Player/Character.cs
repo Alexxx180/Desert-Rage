@@ -74,6 +74,15 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
 
         public void LevelUp(NextStats bank, byte nextLevel)
         {
+            for (int i = Level + 1; i <= nextLevel; i++)
+            {
+                string id = i.ToString();
+                if (bank.Skills.TryGetValue(id, out SkillsID skill))
+                {
+                    Skills.Add(skill);
+                }
+            }
+
             Level = nextLevel;
             int level = Level - 1;
 
@@ -82,6 +91,8 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             Stats = bank.Stats[level];
 
             SetStatusTiming();
+
+            
 
             OnPropertyChanged(nameof(Stats));
         }
