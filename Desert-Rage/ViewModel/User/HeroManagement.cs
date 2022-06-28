@@ -72,14 +72,11 @@ namespace DesertRage.ViewModel.User
 
         private void LevelUp(byte count)
         {
-            HashSet<SkillsID> ramSkills = new HashSet<SkillsID>();
-            ramSkills.UnionWith(Hero.Skills);
-
             NextStats bank = Bank.GetNextStats("Ray");
-            Hero.LevelUp(bank, count);
+            HashSet<SkillsID> newSkills = Hero.LevelUp(bank, count);
 
-            ramSkills.ExceptWith(Hero.Skills);
-            AddSkills(ramSkills);
+            if (newSkills.Count > 0)
+                AddSkills(newSkills);
         }
 
         private protected abstract void AddSkills(HashSet<SkillsID> ramSkills);

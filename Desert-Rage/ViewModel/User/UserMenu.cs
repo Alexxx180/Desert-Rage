@@ -119,12 +119,13 @@ namespace DesertRage.ViewModel.User
             Skills.Add(skill);
         }
 
-        private protected override void AddSkills(HashSet<SkillsID> ramSkills)
+        private protected override void AddSkills
+            (HashSet<SkillsID> ramSkills)
         {
             Dictionary<SkillsID, ConsumeCommand>
                 skills = Bank.AllSkills();
 
-            foreach (SkillsID id in Hero.Skills)
+            foreach (SkillsID id in ramSkills)
             {
                 AddSkill(skills[id]);
             }
