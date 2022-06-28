@@ -16,7 +16,8 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
                 Music = new Slider(100),
                 Sound = new Slider(100),
                 Noise = new Slider(100),
-                Brightness = new Slider(1, 50, 100)
+                Brightness = new Slider(1, 50, 100),
+                BattleSpeed = new Slider(10, 100, 200)
             };
 
             Settings clone = new Settings
@@ -24,7 +25,8 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
                 Music = new Slider(),
                 Sound = new Slider(),
                 Noise = new Slider(),
-                Brightness = new Slider()
+                Brightness = new Slider(),
+                BattleSpeed = new Slider()
             };
             clone.Set(item);
 
