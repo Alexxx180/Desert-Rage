@@ -126,6 +126,8 @@ namespace DesertRage.Model.Locations.Battle.Stats
         public Slider Hp { get; set; }
 
         public BattleStats Stats { get; set; }
+        public float BattleSpeed => Stats.Speed / byte.MaxValue;
+        
         public string Action { get; set; }
 
         public BitArray Status { get; set; }
