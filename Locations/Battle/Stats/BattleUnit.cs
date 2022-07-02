@@ -1,6 +1,5 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Helpers;
-using System.Collections;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -14,7 +13,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
 
             int enumLength = Converters.ToValues<StatusID>().Length;
 
-            Status = new BitArray(enumLength);
             StatusInfo = new Status[enumLength];
             for (byte i = 0; i < StatusInfo.Length; i++)
             {
@@ -54,7 +52,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
             Hp.Set(unit.Hp);
             Stats = unit.Stats;
             Action = unit.Action;
-            Status = unit.Status;
             StatusInfo = unit.StatusInfo;
             SetStatusTiming();
         }
@@ -87,32 +84,25 @@ namespace DesertRage.Model.Locations.Battle.Stats
         }
         #endregion
 
+        public bool NoStatus(int id)
+        {
+            return StatusInfo[id].Time.IsEmpty;
+        }
+
         public void HealStatus(int id)
         {
             StatusInfo[id].Time.Drain();
         }
 
-        public void SetStatus(bool code)
+        public void MakeStatus(int id)
         {
-            for (byte i = 0; i < Status.Length; i++)
-            {
-                Status[i] = code;
-            }
-        }
-
-        public void SetStatus(int id, bool code)
-        {
-            Status[id] = code;
-        }
-
-        public virtual void SetStatus(StatusID id, bool code)
-        {
-            Status[id.Int()] = code;
+            StatusInfo[id].Time.Fill();
         }
 
         public int Boost(StatusID id)
         {
-            return Status[id.Int()].Boost(2);
+            bool isActive = !NoStatus(id.Int());
+            return isActive.Boost(2);
         }
 
         public int Boost(params StatusID[] ids)
@@ -142,7 +132,6 @@ namespace DesertRage.Model.Locations.Battle.Stats
         
         public string Action { get; set; }
 
-        public BitArray Status { get; set; }
         public Status[] StatusInfo { get; set; }
 
         public override BattleUnit Clone()

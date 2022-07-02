@@ -16,6 +16,49 @@
         
         Combo,
         Whirl,
-        Quake
+        Quake,
+
+
+        LargeAidKit,
+        SuperAidKit,
+        AmmoPack,
+
+        Invulnerability,
+        SuperDamage,
+        SuperSpeed,
+        
+        Schofield45,
+        SingleShotgun,
+        DoubleShotgun,
+        CannonSBC,
+
+        TommyGun,
+        LaserGunXL2,
+        RocketLauncherXPML21,
+        GrenadeLauncherMKIII,
+
+        SeriousBomb,
+        Encounter,
+
+
+        Drain,
+        Osmose,
+        GreedyDrain,
+        GreedyOsmose,
+
+        Stab,
+        SlashV,
+        SlashZ,
+        BackSlash,
+        Slices,
+
+        FireSword,
+        ThunderSword,
+
+        Kata1,
+        Kata2,
+        Kata3,
+
+        CalmDown
     }
 }

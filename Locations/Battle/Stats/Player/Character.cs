@@ -96,12 +96,6 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             return skills;
         }
 
-        public override void SetStatus(StatusID id, bool code)
-        {
-            base.SetStatus(id, code);
-            OnPropertyChanged(nameof(Status));
-        }
-
         public byte Level { get; set; }
         public Slider Experience { get; set; }
         public Bar[] ToNextLevel { get; set; }
