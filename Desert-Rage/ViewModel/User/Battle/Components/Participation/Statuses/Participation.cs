@@ -1,4 +1,4 @@
-﻿using DesertRage.ViewModel.User.Battle.Components.Participation;
+﻿using DesertRage.Model.Locations.Battle.Stats;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -27,6 +27,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
         {
             Participant = model;
         }
+
+        private protected BattleUnit Unit => Participant.Unit;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

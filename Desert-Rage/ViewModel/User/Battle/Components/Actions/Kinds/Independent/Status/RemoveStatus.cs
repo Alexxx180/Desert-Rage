@@ -6,19 +6,18 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
 {
     public class RemoveStatus : StatusCommand
     {
-        public RemoveStatus(StatusID status, NoiseUnit thing)
-            : base(status, false, thing) { }
+        public RemoveStatus
+            (StatusID status, NoiseUnit thing) : base(status, thing) { }
 
         public override void Use(object parameter)
         {
             int id = Status.Int();
-            if (!Hero.Status[id])
+            if (Hero.NoStatus(id))
                 return;
 
             ViewModel.RemoveStateEvent(Man.StatusEvents[Status]);
             Hero.HealStatus(id);
 
-            System.Diagnostics.Trace.WriteLine("ANTIDOTE! " + Hero.Ap);
             base.Use(parameter);
         }
     }

@@ -36,7 +36,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
 
         private void AddEvent(StatusID id)
         {
-            if (Unit.Status[id.Int()])
+            if (!Unit.NoStatus(id.Int()))
+                ViewModel.AddStateEvent(StatusEvents[id]);
+        }
+
+        internal void ApplyEvent(StatusID id)
+        {
+            if (Unit.NoStatus(id.Int()))
                 ViewModel.AddStateEvent(StatusEvents[id]);
         }
 

@@ -32,15 +32,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Fight
         private void Venom()
         {
             StatusID poison = StatusID.POISON;
-            int poisonId = poison.Int();
 
-            Victim.Unit.StatusInfo[poisonId].Time.Fill();
-
-            if (!Victim.Unit.Status[poisonId])
-            {
-                Victim.Unit.SetStatus(poisonId, true);
-                ViewModel.AddStateEvent(Victim.StatusEvents[poison]);
-            }
+            Victim.ApplyEvent(poison);
+            Target.MakeStatus(poison.Int());
         }
 
         public override void Dispose()

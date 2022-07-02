@@ -11,17 +11,15 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
             UnitCursor = Targeting.HERO;
         }
 
-        public StatusCommand(StatusID status, bool state,
-            NoiseUnit thing) : this(thing)
+        public StatusCommand
+            (StatusID status, NoiseUnit thing) : this(thing)
         {
             Status = status;
-            State = state;
         }
 
         public virtual void Use(object parameter)
         {
             Act();
-            Hero.SetStatus(Status, State);
         }
 
         public StatusID Status { get; set; }

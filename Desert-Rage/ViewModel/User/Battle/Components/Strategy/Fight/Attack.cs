@@ -36,6 +36,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Fight
             };
         }
 
+        public BattleUnit Target => Victim.Unit;
         public Participant Victim => ViewModel.Human;
         public BattleStats Stats => Unit.Stats;
 

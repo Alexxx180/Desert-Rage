@@ -1,4 +1,5 @@
-﻿using DesertRage.Model.Locations.Battle.Things.Storage;
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
@@ -11,7 +12,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
             if (Participant.IsDead ||
                 Participant.NoStatus(Status))
             {
-                Participant.Unit.SetStatus(Status, false);
+                Unit.HealStatus(Status.Int());
                 RemoveEvent();
             }
         }
