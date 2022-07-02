@@ -180,52 +180,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Player
         }
 
         [TestMethod]
-        public void SetStatusStatusIDCharacterReturnTrue()
-        {
-            Character unit = new Character
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            StatusID id = StatusID.POISON;
-            unit.SetStatus(id, true);
-            Assert.AreEqual(true, unit.Status[id.Int()]);
-        }
-
-        [TestMethod]
-        public void SetStatusStatusIDCharacterReturnFalse()
-        {
-            Character unit = new Character
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            StatusID id = StatusID.POISON;
-            unit.SetStatus(id, false);
-            Assert.AreEqual(false, unit.Status[id.Int()]);
-        }
-
-        [TestMethod]
         public void SetPlaceCharacterReturnFiveAndTen()
         {
             Character hero = new Character

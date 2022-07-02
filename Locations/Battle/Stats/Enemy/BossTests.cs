@@ -23,8 +23,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Enemy
                 Hp = new Slider(1, 500, 999),
                 Stats = new BattleStats(50),
                 Action = "Action",
-                Status = new BitArray
-                    (new bool[] { true, false }),
                 StatusInfo = new Status[]
                 {
                     new Status
@@ -58,9 +56,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Enemy
             Assert.AreEqual(foe.Stats, clone.Stats);
             Assert.AreEqual(foe.Action, clone.Action);
 
-            Assert.AreEqual(foe.Status[0], clone.Status[0]);
-            Assert.AreEqual(foe.Status[1], clone.Status[1]);
-
             Slider time = foe.StatusInfo[0].Time;
             Slider cloneTime = foe.StatusInfo[0].Time;
 
@@ -89,8 +84,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Enemy
                 Hp = new Slider(1, 500, 999),
                 Stats = new BattleStats(50),
                 Action = "Action",
-                Status = new BitArray
-                    (new bool[] { true, false }),
                 StatusInfo = new Status[]
                 {
                     new Status
@@ -122,9 +115,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats.Enemy
 
             Assert.AreEqual(foe.Stats, clone.Stats);
             Assert.AreEqual(foe.Action, clone.Action);
-
-            Assert.AreEqual(foe.Status[0], clone.Status[0]);
-            Assert.AreEqual(foe.Status[1], clone.Status[1]);
 
             Slider time = foe.StatusInfo[0].Time;
             Slider cloneTime = foe.StatusInfo[0].Time;

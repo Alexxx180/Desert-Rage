@@ -2,7 +2,6 @@
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections;
 
 namespace DesertRage.Tests.Locations.Battle.Stats
 {
@@ -35,8 +34,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats
                 Hp = new Slider(1, 500, 999),
                 Stats = new BattleStats(50),
                 Action = "Action",
-                Status = new BitArray
-                    (new bool[] { true, false }),
                 StatusInfo = new Status[]
                 {
                     new Status
@@ -62,9 +59,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats
             Assert.AreEqual(item.Stats, clone.Stats);
             Assert.AreEqual(item.Action, clone.Action);
 
-            Assert.AreEqual(item.Status[0], clone.Status[0]);
-            Assert.AreEqual(item.Status[1], clone.Status[1]);
-
             Slider time = item.StatusInfo[0].Time;
             Slider cloneTime = item.StatusInfo[0].Time;
 
@@ -84,8 +78,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats
                 Hp = new Slider(1, 500, 999),
                 Stats = new BattleStats(50),
                 Action = "Action",
-                Status = new BitArray
-                    (new bool[] { true, false }),
                 StatusInfo = new Status[]
                 {
                     new Status
@@ -109,9 +101,6 @@ namespace DesertRage.Tests.Locations.Battle.Stats
 
             Assert.AreEqual(item.Stats, clone.Stats);
             Assert.AreEqual(item.Action, clone.Action);
-
-            Assert.AreEqual(item.Status[0], clone.Status[0]);
-            Assert.AreEqual(item.Status[1], clone.Status[1]);
 
             Slider time = item.StatusInfo[0].Time;
             Slider cloneTime = item.StatusInfo[0].Time;
@@ -158,10 +147,34 @@ namespace DesertRage.Tests.Locations.Battle.Stats
                 Stats = new BattleStats
                 {
                     Defence = 50
+                },
+                StatusInfo = new Status[]
+                {
+                    new Status
+                    {
+                        Time = new Slider(0, 100),
+                    },
+                    new Status
+                    {
+                        Time = new Slider(0, 100),
+                    },
+                    new Status
+                    {
+                        Time = new Slider(0, 100),
+                    },
+                    new Status
+                    {
+                        Time = new Slider(0, 100),
+                    },
+                    new Status
+                    {
+                        Time = new Slider(0, 100),
+                    }
                 }
             };
-            unit.SetStatus(StatusID.DEFENCE, true);
-            unit.SetStatus(StatusID.SHIELD, true);
+
+            unit.MakeStatus(StatusID.DEFENCE.Int());
+            unit.MakeStatus(StatusID.SHIELD.Int());
 
             unit.Hit(75);
             Assert.AreEqual(94, unit.Hp.Current);
@@ -192,25 +205,7 @@ namespace DesertRage.Tests.Locations.Battle.Stats
         }
 
         [TestMethod]
-        public void HealStatusBattleUnitReturnZero()
-        {
-            BattleUnit unit = new BattleUnit
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            unit.HealStatus(0);
-            Assert.AreEqual(0, unit.StatusInfo[0].Time.Current);
-        }
-
-        [TestMethod]
-        public void SetStatusBattleUnitReturnTrue()
+        public void MakeStatusBattleUnitReturnFalse()
         {
             BattleUnit unit = new BattleUnit
             {
@@ -227,13 +222,13 @@ namespace DesertRage.Tests.Locations.Battle.Stats
                 }
             };
 
-            unit.SetStatus(true);
-            for (byte i = 0; i < unit.Status.Length; i++)
-                Assert.AreEqual(true, unit.Status[i]);
+            int id = StatusID.POISON.Int();
+            unit.MakeStatus(id);
+            Assert.AreEqual(false, unit.NoStatus(id));
         }
 
         [TestMethod]
-        public void SetStatusBattleUnitReturnFalse()
+        public void HealStatusBattleUnitReturnTrue()
         {
             BattleUnit unit = new BattleUnit
             {
@@ -250,99 +245,28 @@ namespace DesertRage.Tests.Locations.Battle.Stats
                 }
             };
 
-            unit.SetStatus(false);
-            for (byte i = 0; i < unit.Status.Length; i++)
-                Assert.AreEqual(false, unit.Status[i]);
+            int id = StatusID.POISON.Int();
+            unit.HealStatus(id);
+            Assert.AreEqual(true, unit.NoStatus(id));
         }
 
         [TestMethod]
-        public void SetStatusIntBattleUnitReturnTrue()
+        public void BoostBattleUnitReturnOne()
         {
             BattleUnit unit = new BattleUnit
             {
                 StatusInfo = new Status[]
                 {
-                    new Status
+                    new Status()
                     {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
+                        Time = new Slider(0, 100)
                     }
                 }
             };
 
-            unit.SetStatus(0, true);
-            Assert.AreEqual(true, unit.Status[0]);
-        }
-
-        [TestMethod]
-        public void SetStatusIntBattleUnitReturnFalse()
-        {
-            BattleUnit unit = new BattleUnit
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            unit.SetStatus(0, false);
-            Assert.AreEqual(false, unit.Status[0]);
-        }
-
-        [TestMethod]
-        public void SetStatusStatusIDBattleUnitReturnTrue()
-        {
-            BattleUnit unit = new BattleUnit
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            StatusID id = StatusID.POISON;
-            unit.SetStatus(id, true);
-            Assert.AreEqual(true, unit.Status[id.Int()]);
-        }
-
-        [TestMethod]
-        public void SetStatusStatusIDBattleUnitReturnFalse()
-        {
-            BattleUnit unit = new BattleUnit
-            {
-                StatusInfo = new Status[]
-                {
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    },
-                    new Status
-                    {
-                        Time = new Slider(50, 100)
-                    }
-                }
-            };
-
-            StatusID id = StatusID.POISON;
-            unit.SetStatus(id, false);
-            Assert.AreEqual(false, unit.Status[id.Int()]);
+            StatusID poison = StatusID.POISON;
+            
+            Assert.AreEqual(1, unit.Boost(poison));
         }
 
         [TestMethod]
@@ -350,26 +274,47 @@ namespace DesertRage.Tests.Locations.Battle.Stats
         {
             BattleUnit unit = new BattleUnit
             {
-                Status = new BitArray(2)
+                StatusInfo = new Status[]
+                {
+                    new Status()
+                    {
+                        Time = new Slider(0, 100)
+                    },
+                    new Status()
+                    {
+                        Time = new Slider(0, 100)
+                    }
+                }
             };
 
-            StatusID id = StatusID.POISON;
-            unit.SetStatus(id, true);
-            Assert.AreEqual(2, unit.Boost(id));
+            StatusID poison = StatusID.POISON;
+            unit.MakeStatus(poison.Int());
+            Assert.AreEqual(2, unit.Boost(poison));
         }
 
         [TestMethod]
-        public void BoostArrayBattleUnitReturnTwo()
+        public void BoostArrayBattleUnitReturnFour()
         {
             BattleUnit unit = new BattleUnit
             {
-                Status = new BitArray(2)
+                StatusInfo = new Status[]
+                {
+                    new Status()
+                    {
+                        Time = new Slider(0, 100)
+                    },
+                    new Status()
+                    {
+                        Time = new Slider(0, 100)
+                    }
+                }
             };
 
             StatusID id1 = StatusID.POISON;
-            unit.SetStatus(id1, true);
             StatusID id2 = StatusID.REINFORCEMENT;
-            unit.SetStatus(id2, true);
+
+            unit.MakeStatus(id1.Int());
+            unit.MakeStatus(id2.Int());
             Assert.AreEqual(4, unit.Boost(id1, id2));
         }
     }
