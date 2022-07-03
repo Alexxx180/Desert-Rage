@@ -4,10 +4,10 @@
 	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
 <style type="text/css">
 	.st0{opacity:0.01;fill:#1B1917;stroke:#1B1917;stroke-miterlimit:10;}
-	.st1{fill:#BB524C;stroke:#0E0F0F;stroke-miterlimit:10;}
-	.st2{fill:#323845;stroke:#0E0F0F;stroke-miterlimit:10;}
-	.st3{fill:#33404F;}
-	.st4{fill:#D5B587;stroke:#0E0F0F;stroke-miterlimit:10;}
+	.st1{fill:#D5B587;stroke:#0E0F0F;stroke-miterlimit:10;}
+	.st2{fill:#BB524C;stroke:#0E0F0F;stroke-miterlimit:10;}
+	.st3{fill:#323845;stroke:#0E0F0F;stroke-miterlimit:10;}
+	.st4{fill:#33404F;}
 	.st5{opacity:0.9;fill:url(#SVGID_1_);}
 	.st6{fill:#FFFFFF;stroke:#0E0F0F;stroke-miterlimit:10;}
 	.st7{fill:#EEE764;stroke:#BD544D;stroke-width:0.1;stroke-miterlimit:10;}
@@ -20,68 +20,66 @@
 	.st14{fill:#EFEEEF;stroke:#0E0F0F;stroke-miterlimit:10;}
 </style>
 <rect x="0.5" y="0.5" class="st0" width="31" height="29"/>
+<circle class="st1" cx="10.75" cy="17.7" r="1.75"/>
+<circle class="st1" cx="21.25" cy="17.7" r="1.75"/>
 <g>
-	<rect x="15.93" y="26" class="st1" width="3.5" height="2"/>
-	<rect x="15.93" y="18.97" class="st2" width="3.5" height="7"/>
-	<rect x="16.47" y="21.47" class="st3" width="0.93" height="4"/>
+	<rect x="16" y="25.98" class="st2" width="3.5" height="2"/>
+	<rect x="16" y="18.95" class="st3" width="3.5" height="7"/>
+	<rect x="16.54" y="21.45" class="st4" width="0.93" height="4"/>
 </g>
 <g>
-	<rect x="12.43" y="23.78" class="st1" width="3.5" height="2"/>
-	<rect x="12.43" y="18.97" class="st2" width="3.5" height="4.63"/>
-	<rect x="13.01" y="20.97" class="st3" width="0.93" height="2"/>
+	<rect x="12.5" y="23.76" class="st2" width="3.5" height="2"/>
+	<rect x="12.5" y="18.95" class="st3" width="3.5" height="4.63"/>
+	<rect x="13.08" y="20.95" class="st4" width="0.93" height="2"/>
 </g>
+<circle class="st1" cx="16.04" cy="6.44" r="3.5"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="16.0426" y1="8.5605" x2="16.0426" y2="3.3417">
+	<stop  offset="0.2" style="stop-color:#654832"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<ellipse class="st5" cx="16.04" cy="5.95" rx="3" ry="2.61"/>
+<rect x="12.5" y="9.95" class="st6" width="7" height="9"/>
 <g>
-	<circle class="st4" cx="10.64" cy="17.67" r="1.75"/>
-	<circle class="st4" cx="21.14" cy="17.67" r="1.75"/>
-	<circle class="st4" cx="15.93" cy="6.4" r="3.5"/>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="15.9297" y1="8.5255" x2="15.9297" y2="3.3068">
-		<stop  offset="0.2" style="stop-color:#654832"/>
-		<stop  offset="1" style="stop-color:#000000"/>
-	</linearGradient>
-	<ellipse class="st5" cx="15.93" cy="5.92" rx="3" ry="2.61"/>
-	<rect x="12.39" y="9.92" class="st6" width="7" height="9"/>
+	<polygon class="st7" points="17.87,13.96 18.02,13.42 17.63,13.02 17.51,12.51 17,12.37 16.6,11.95 16.04,12.09 15.54,11.95 
+		15.16,12.32 14.62,12.45 14.47,12.99 14.07,13.38 14.21,13.91 14.06,14.42 14.43,14.8 14.57,15.36 15.13,15.51 15.49,15.89 
+		15.99,15.76 16.54,15.92 16.95,15.52 17.47,15.38 17.61,14.87 18.01,14.49 	"/>
 	<g>
-		<polygon class="st7" points="17.76,13.93 17.91,13.38 17.52,12.98 17.39,12.48 16.89,12.33 16.49,11.92 15.93,12.06 15.43,11.92 
-			15.05,12.28 14.5,12.42 14.35,12.96 13.96,13.34 14.09,13.87 13.95,14.39 14.32,14.77 14.46,15.32 15.01,15.48 15.37,15.85 
-			15.87,15.73 16.42,15.88 16.84,15.48 17.36,15.35 17.5,14.84 17.89,14.46 		"/>
+		<g>
+			<circle class="st8" cx="16.48" cy="13.95" r="1.08"/>
+			<g>
+				<g>
+					<circle class="st9" cx="16.09" cy="13.83" r="0.14"/>
+					<line class="st10" x1="15.95" y1="13.35" x2="16.37" y2="13.59"/>
+				</g>
+				<g>
+					<circle class="st9" cx="16.87" cy="13.83" r="0.14"/>
+					<line class="st10" x1="17.01" y1="13.35" x2="16.59" y2="13.59"/>
+				</g>
+			</g>
+			<polygon class="st9" points="15.86,14.42 16.96,14.32 16.95,14.52 			"/>
+		</g>
 		<g>
 			<g>
-				<circle class="st8" cx="16.36" cy="13.91" r="1.08"/>
-				<g>
-					<g>
-						<circle class="st9" cx="15.97" cy="13.8" r="0.14"/>
-						<line class="st10" x1="15.84" y1="13.32" x2="16.25" y2="13.56"/>
-					</g>
-					<g>
-						<circle class="st9" cx="16.76" cy="13.8" r="0.14"/>
-						<line class="st10" x1="16.89" y1="13.32" x2="16.48" y2="13.56"/>
-					</g>
-				</g>
-				<polygon class="st9" points="15.75,14.39 16.85,14.29 16.84,14.48 				"/>
+				
+					<rect x="15.54" y="12.71" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.514 11.0743)" class="st11" width="0.53" height="0.37"/>
+				
+					<rect x="15.89" y="12.66" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.4212 11.1266)" class="st12" width="0.08" height="0.22"/>
 			</g>
 			<g>
-				<g>
-					
-						<rect x="15.43" y="12.68" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.5139 11.005)" class="st11" width="0.53" height="0.37"/>
-					
-						<rect x="15.78" y="12.63" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.421 11.0573)" class="st12" width="0.08" height="0.22"/>
-				</g>
-				<g>
-					<path class="st13" d="M14.52,14.01c0,0.01-0.02,0.13,0.07,0.19c0.03,0.03,0.07,0.03,0.09,0.03c0.06-0.01,0.13-0.04,0.17-0.1
-						c0.02-0.02,0.03-0.05,0.03-0.07c0.09-0.43,0.19-0.86,0.29-1.29c0-0.02,0.02-0.09,0.1-0.14c0.06-0.03,0.11-0.03,0.13-0.03
-						c0.03,0.01,0.06,0.02,0.09,0.03c0.08,0.04,0.12,0.09,0.15,0.12"/>
-					<line class="st13" x1="14.58" y1="13.94" x2="14.69" y2="13.84"/>
-					<line class="st13" x1="14.45" y1="13.93" x2="14.34" y2="13.82"/>
-					<line class="st13" x1="14.43" y1="14.04" x2="14.31" y2="14.13"/>
-					<line class="st13" x1="14.52" y1="13.75" x2="14.52" y2="13.9"/>
-					<line class="st13" x1="14.43" y1="13.99" x2="14.28" y2="13.99"/>
-					<line class="st13" x1="14.69" y1="14.14" x2="14.58" y2="14.03"/>
-					<line class="st13" x1="14.76" y1="13.98" x2="14.61" y2="13.98"/>
-				</g>
+				<path class="st13" d="M14.63,14.04c0,0.01-0.02,0.13,0.07,0.19c0.03,0.03,0.07,0.03,0.09,0.03c0.06-0.01,0.13-0.04,0.17-0.1
+					c0.02-0.02,0.03-0.05,0.03-0.07c0.09-0.43,0.19-0.86,0.29-1.29c0-0.02,0.02-0.09,0.1-0.14c0.06-0.03,0.11-0.03,0.13-0.03
+					c0.03,0.01,0.06,0.02,0.09,0.03c0.08,0.04,0.12,0.09,0.15,0.12"/>
+				<line class="st13" x1="14.69" y1="13.97" x2="14.81" y2="13.87"/>
+				<line class="st13" x1="14.56" y1="13.96" x2="14.46" y2="13.86"/>
+				<line class="st13" x1="14.54" y1="14.07" x2="14.42" y2="14.17"/>
+				<line class="st13" x1="14.63" y1="13.78" x2="14.63" y2="13.94"/>
+				<line class="st13" x1="14.54" y1="14.02" x2="14.4" y2="14.02"/>
+				<line class="st13" x1="14.8" y1="14.17" x2="14.7" y2="14.06"/>
+				<line class="st13" x1="14.88" y1="14.02" x2="14.73" y2="14.02"/>
 			</g>
 		</g>
 	</g>
-	<rect x="8.89" y="10.43" class="st14" width="3.5" height="7"/>
-	<rect x="19.39" y="10.43" class="st14" width="3.5" height="7"/>
 </g>
+<rect x="9" y="10.47" class="st14" width="3.5" height="7"/>
+<rect x="19.5" y="10.47" class="st14" width="3.5" height="7"/>
 </svg>

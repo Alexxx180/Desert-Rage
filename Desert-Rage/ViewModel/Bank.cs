@@ -377,6 +377,7 @@ namespace DesertRage.ViewModel
                     )
                 },
 
+
                 {
                     SkillsID.LargeAidKit,
                     new ConsumeCommand(
@@ -629,6 +630,7 @@ namespace DesertRage.ViewModel
                     )
                 },
 
+
                 {
                     SkillsID.Drain,
                     new ConsumeCommand(
@@ -656,7 +658,7 @@ namespace DesertRage.ViewModel
                                 Name = "Осмос",
                                 Description = "Отнять силы противника",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Drain.svg",
-                                Noise = "Actions/Cure.mp3"
+                                Noise = "Actions/Control.mp3"
                             }
                         ),
                         new SkillCommand(10)
@@ -707,7 +709,7 @@ namespace DesertRage.ViewModel
                                 Name = "Протыкание",
                                 Description = "Сделать мощный выпад",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Stab.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Punch.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -724,7 +726,7 @@ namespace DesertRage.ViewModel
                                 Name = "V-Порез",
                                 Description = "Сделать глубокий надрез, схожий с ударом топора",
                                 Icon = "/Resources/Media/Images/Menu/Skills/SlashV.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Sword.mp3"
                             }
                         ),
                         new SkillCommand(3)
@@ -758,7 +760,7 @@ namespace DesertRage.ViewModel
                                 Name = "Обратка",
                                 Description = "Удар с разворота",
                                 Icon = "/Resources/Media/Images/Menu/Skills/BackSlash.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Sword.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -774,7 +776,7 @@ namespace DesertRage.ViewModel
                                 Name = "Шинковка",
                                 Description = "Не оставить противнику права на существование",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Slices.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Knife.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -791,7 +793,7 @@ namespace DesertRage.ViewModel
                                 Name = "Пламя",
                                 Description = "Раскалить меч до адского пекла",
                                 Icon = "/Resources/Media/Images/Menu/Skills/FireSword.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Actions/Torch.mp3"
                             }
                         ),
                         new SkillCommand(25)
@@ -825,7 +827,7 @@ namespace DesertRage.ViewModel
                                 Name = "Ката - 1",
                                 Description = "Провести серию техник с мечом",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Kata1.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Actions/Combo.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -842,7 +844,7 @@ namespace DesertRage.ViewModel
                                 Name = "Ката - 2",
                                 Description = "Провести серию техник с мечом",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Kata2.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Sword.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -859,7 +861,7 @@ namespace DesertRage.ViewModel
                                 Name = "Ката - 3",
                                 Description = "Провести серию техник с мечом",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Kata3.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Weapons/Knife.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -876,7 +878,7 @@ namespace DesertRage.ViewModel
                                 Name = "Успокоение",
                                 Description = "Сконцентрироваться на дыхании",
                                 Icon = "/Resources/Media/Images/Menu/Skills/CalmDown.svg",
-                                Noise = "Actions/Whip.mp3"
+                                Noise = "Actions/Control.mp3"
                             }
                         ),
                         new SkillCommand(0)

@@ -72,7 +72,7 @@ namespace DesertRage.ViewModel.User
 
         private void LevelUp(byte count)
         {
-            NextStats bank = Bank.GetNextStats("Ray");
+            NextStats bank = Bank.GetNextStats(Preferences.Description);
             HashSet<SkillsID> newSkills = Hero.LevelUp(bank, count);
 
             if (newSkills.Count > 0)
