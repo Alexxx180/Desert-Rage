@@ -14,13 +14,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
             _class = ArmoryKind.Hands;
         }
 
-        private static readonly ArmoryKind _class;
+        private protected static readonly ArmoryKind _class;
         protected int Boost => Hero.Boost(StatusID.REINFORCEMENT);
 
         protected MapWorker User => ViewModel.Human.Player;
         protected Character Hero => User.Hero;
 
-        public int Power
+        public virtual int Power
         {
             get
             {

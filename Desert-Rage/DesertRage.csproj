@@ -24,12 +24,24 @@
   <ItemGroup>
     <Compile Remove="bin\**" />
     <Compile Remove="Resources\Database\**" />
+    <Compile Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
+    <Compile Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
     <EmbeddedResource Remove="bin\**" />
     <EmbeddedResource Remove="Resources\Database\**" />
+    <EmbeddedResource Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
+    <EmbeddedResource Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
     <None Remove="bin\**" />
     <None Remove="Resources\Database\**" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
     <Page Remove="bin\**" />
     <Page Remove="Resources\Database\**" />
+    <Page Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
+    <Page Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Media\Images\Menu\Skills\Skills.resx" />
   </ItemGroup>
   
   <ItemGroup>
@@ -52,8 +64,10 @@
     <None Remove="Resources\Media\Images\Battle\Character\Ray\Icon.svg" />
     <None Remove="Resources\Media\Images\Battle\Character\Ray\Idle.svg" />
     <None Remove="Resources\Media\Images\Battle\Character\Rock\Action.svg" />
+    <None Remove="Resources\Media\Images\Battle\Character\Rock\Icon.svg" />
     <None Remove="Resources\Media\Images\Battle\Character\Rock\Idle.svg" />
     <None Remove="Resources\Media\Images\Battle\Character\Sam\Action.svg" />
+    <None Remove="Resources\Media\Images\Battle\Character\Sam\Icon.svg" />
     <None Remove="Resources\Media\Images\Battle\Character\Sam\Idle.svg" />
     <None Remove="Resources\Media\Images\Battle\Enemies\Bones\Action.svg" />
     <None Remove="Resources\Media\Images\Battle\Enemies\Bones\Idle.svg" />
@@ -94,18 +108,42 @@
     <None Remove="Resources\Media\Images\Locations\Total\Lever\Off.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Lever\On.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Lock.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Down.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Left.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Right.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Static\Up.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Down\1.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Down\2.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Left\1.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Left\2.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Right\1.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Right\2.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Up\1.svg" />
-    <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\Up\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Static\Down.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Static\Left.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Static\Right.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Static\Up.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Down\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Down\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Left\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Left\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Right\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Right\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Up\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Up\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Static\Down.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Static\Left.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Static\Right.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Static\Up.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Down\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Down\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Left\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Left\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Right\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Right\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Up\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Up\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Static\Down.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Static\Left.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Static\Right.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Static\Up.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Down\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Down\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Left\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Left\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Right\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Right\2.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Up\1.svg" />
+    <None Remove="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Up\2.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\SafeArea.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Spikes.svg" />
     <None Remove="Resources\Media\Images\Locations\Total\Surprise.svg" />
@@ -122,17 +160,48 @@
     <None Remove="Resources\Media\Images\Menu\Items\EtherBottle.svg" />
     <None Remove="Resources\Media\Images\Menu\Items\Herbs.svg" />
     <None Remove="Resources\Media\Images\Menu\Items\Mixture.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\AmmoPack.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Analyze.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\AttackUp.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\BackSlash.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\CalmDown.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Combo.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Cure.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Cure2.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\DefenceUp.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Drain.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\FireSword.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\GreedyDrain.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\GreedyOsmose.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\GrenadeLauncher.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Heal.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Invulnerability.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Kata1.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Kata2.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Kata3.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\LargeAidKit.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\LaserGun.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Osmose.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Poison.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\RocketLauncher.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Schofield.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Schofield45.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SeriousBomb.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SeriouslyBigCannon.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Shotgun.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\ShotgunX2.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SlashV.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SlashZ.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Slices.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Slide.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Slingshot.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SpeedUp.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\Stab.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Storm.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SuperAidKit.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\SuperDamage.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\ThunderSword.svg" />
+    <None Remove="Resources\Media\Images\Menu\Skills\TommyGun.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Torch.svg" />
     <None Remove="Resources\Media\Images\Menu\Skills\Whip.svg" />
     <None Remove="Resources\Media\Images\Menu\Stats\Attack.svg" />
@@ -210,6 +279,12 @@
     <EmbeddedResource Include="Resources\Media\Data\Characters\Sam\Beginner.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Resource Include="Resources\Media\Images\Battle\Character\Rock\Icon.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Battle\Character\Sam\Icon.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Media\Images\Battle\Enemies\Bones\Action.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -306,6 +381,114 @@
     <Resource Include="Resources\Media\Images\Locations\Total\Lever\On.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Static\Down.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Static\Left.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Static\Right.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Static\Up.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Down\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Down\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Left\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Left\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Right\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Right\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Up\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Ray\Walk\Up\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Static\Down.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Static\Left.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Static\Right.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Static\Up.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Down\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Down\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Left\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Left\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Right\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Right\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Up\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Rock\Walk\Up\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Static\Down.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Static\Left.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Static\Right.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Static\Up.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Down\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Down\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Left\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Left\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Right\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Right\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Up\1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Locations\Total\Person\Sam\Walk\Up\2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Media\Images\Locations\Total\Spikes.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -321,7 +504,102 @@
     <Resource Include="Resources\Media\Images\Locations\WaterTemple\Way.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\AmmoPack.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\BackSlash.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\CalmDown.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Drain.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\FireSword.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\GreedyDrain.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\GreedyOsmose.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\GrenadeLauncher.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Invulnerability.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Kata1.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Kata2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Kata3.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\LargeAidKit.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\LaserGun.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Osmose.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Media\Images\Menu\Skills\Poison.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\RocketLauncher.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Schofield45.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SeriousBomb.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SeriouslyBigCannon.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Shotgun.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\ShotgunX2.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Skills.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Skills.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SlashV.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SlashZ.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Slices.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SpeedUp.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\Stab.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SuperAidKit.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\SuperDamage.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\ThunderSword.svg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Media\Images\Menu\Skills\TommyGun.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Media\Images\Menu\Topics\Actions.svg">
@@ -435,42 +713,6 @@
     <Resource Include="Resources\Media\Images\Locations\Total\Lock.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Static\Down.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Static\Left.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Static\Right.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Static\Up.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Down\1.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Down\2.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Left\1.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Left\2.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Right\1.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Right\2.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Up\1.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\Media\Images\Locations\Total\Person\Walk\Up\2.svg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\Media\Images\Locations\Total\SafeArea.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -580,31 +822,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>LocationsTotal.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Media\Images\Locations\Total\Person\Static\PersonStand.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>PersonStand.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Locations\Total\Person\Walk\Down\WalkDown.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WalkDown.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Locations\Total\Person\Walk\Left\WalkLeft.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WalkLeft.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Locations\Total\Person\Walk\Right\WalkRight.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WalkRight.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Locations\Total\Person\Walk\Up\WalkUp.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WalkUp.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\Media\Images\MainMenu\MainMenu.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -678,26 +895,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LocationsTotal.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Locations\Total\Person\Static\PersonStand.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>PersonStand.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Locations\Total\Person\Walk\Down\WalkDown.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WalkDown.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Locations\Total\Person\Walk\Left\WalkLeft.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WalkLeft.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Locations\Total\Person\Walk\Right\WalkRight.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WalkRight.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Locations\Total\Person\Walk\Up\WalkUp.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WalkUp.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Media\Images\MainMenu\MainMenu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainMenu.Designer.cs</LastGenOutput>
@@ -706,10 +903,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Items.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Menu\Skills\Skills.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Skills.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\Media\Images\Menu\Stats\Stats.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -742,6 +935,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Resources\Media\Data\Characters\Rock\Next.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\Data\Characters\Sam\Next.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\Data\Items\Equipment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

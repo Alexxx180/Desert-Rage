@@ -1,10 +1,13 @@
-﻿using DesertRage.ViewModel.User.Battle.Components.Actions;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
 {
     public class SkillCommand : Battle, INotifyPropertyChanged, IThing
     {
+        /// <summary>
+        /// Consume hero AP's when used
+        /// </summary>
+        /// <param name="cost">Skill AP cost</param>
         public SkillCommand(int cost)
         {
             SetValue(cost);

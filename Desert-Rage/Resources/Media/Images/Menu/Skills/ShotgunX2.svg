@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:#979695;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#473421;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#676462;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="Back">
+	<rect y="0" class="st0" width="60" height="60"/>
+	<path class="st1" d="M49.22,26.53"/>
+</g>
+<g id="Body">
+	<path class="st2" d="M58.24,33.78c-4.05-0.27-8.11-0.55-12.16-0.82c0.01-1.59,0.02-3.18,0.03-4.78l12.17-0.54
+		C58.26,29.69,58.25,31.74,58.24,33.78z"/>
+</g>
+<g id="Nab">
+	<g>
+		<path class="st3" d="M40.87,33.65h-2.98c-0.33,0-0.6-0.27-0.6-0.6v-1.52c0-0.33,0.27-0.6,0.6-0.6h2.98c0.33,0,0.6,0.27,0.6,0.6
+			v1.52C41.48,33.38,41.21,33.65,40.87,33.65z"/>
+		<line class="st3" x1="40.36" y1="30.9" x2="39.64" y2="32.99"/>
+	</g>
+</g>
+<g id="Volume">
+	<path class="st2" d="M43.94,32.13c-1.44-0.42-2.88-0.83-4.31-1.25c-3.09,0.65-4.06,0.32-4.31-0.15c-0.14-0.26-0.04-0.52,0-1.78
+		c0.02-0.71,0.01-1.3,0-1.69c0.09-0.59,0.06-1.05,0-1.38c-0.06-0.35-0.16-0.66,0-0.83c0.12-0.12,0.33-0.12,0.49-0.1c0,0,0,0,0,0
+		c0,0,0.04-0.07,0.19-0.06c0.17,0,3.09,0.66,3.23,0.7c1.91,0.35,3.1,0.87,3.85,1.3c0.39,0.23,1.02,0.63,2,0.94
+		c0.8,0.25,1.04,0.17,1.31,0.36c0.48,0.36,0.73,1.41-0.26,4.45C45.38,32.46,44.66,32.29,43.94,32.13z"/>
+</g>
+<g id="Barrel">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="19.051" y1="27.9533" x2="19.051" y2="25.0403">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+	<rect x="2.79" y="25.04" class="st4" width="32.52" height="2.91"/>
+	
+		<rect x="27.83" y="23.24" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 58.554 0.1204)" class="st2" width="2.77" height="12.19"/>
+</g>
+<g id="Aim">
+	<path class="st5" d="M10.08,22.53L10.08,22.53H6v2.31h4.08h3.33C12.3,24.08,11.19,23.31,10.08,22.53z"/>
+</g>
+</svg>

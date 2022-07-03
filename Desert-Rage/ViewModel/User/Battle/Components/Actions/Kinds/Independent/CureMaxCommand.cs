@@ -1,12 +1,14 @@
 ﻿using DesertRage.Model.Locations.Battle;
 using System.ComponentModel;
-using DesertRage.Model.Locations;
-using DesertRage.ViewModel.User.Battle.Components.Actions;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
 {
     public class CureMaxCommand : ActCommand, IAction, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Fully refill hero HP
+        /// </summary>
+        /// <param name="thing">Skill info</param>
         public CureMaxCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.HERO;

@@ -1,5 +1,4 @@
 ﻿using DesertRage.Model.Locations.Battle.Things.Storage;
-using DesertRage.ViewModel.User.Battle.Components.Actions;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
@@ -18,6 +17,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
             ID = id;
         }
 
+        /// <summary>
+        /// Consume specified item count when used
+        /// </summary>
+        /// <param name="id">Item ID</param>
         public ItemCommand(ItemsID id) : this()
         {
             ID = id;

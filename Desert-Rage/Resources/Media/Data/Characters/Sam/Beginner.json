@@ -1,7 +1,7 @@
 {
    "Image":"/Resources/Media/Images/Battle/Character/Sam/Idle.svg",
    "Skills":[
-      18
+      3, 18
    ],
    "Level":1,
    "Experience":{
@@ -203,7 +203,7 @@
    "ToBattle":0,
    "Pose":0,
    "Walk":0,
-   "MapImage":"/Resources/Media/Images/Locations/Total/Person/Static/Down.svg",
+   "MapImage":"/Resources/Media/Images/Locations/Total/Person/Sam/Static/Down.svg",
    "StandImage":[
       "/Resources/Media/Images/Locations/Total/Person/Sam/Static/Up.svg",
       "/Resources/Media/Images/Locations/Total/Person/Sam/Static/Left.svg",
@@ -253,7 +253,7 @@
       "Attack":30,
       "Defence":25,
       "Speed":25,
-      "Special":45
+      "Special":50
    },
    "Action":"/Resources/Media/Images/Battle/Character/Sam/Action.svg",
    "StatusInfo":[
@@ -323,7 +323,7 @@
          "Name":"\u0411\u0435\u0440\u0441\u0435\u0440\u043A"
       }
    ],
-   "Icon":"/Resources/Media/Images/Battle/Character/Ray/Icon.svg",
+   "Icon":"/Resources/Media/Images/Battle/Character/Sam/Icon.svg",
    "Name":"Сэм",
    "Description":"Профессиональный истребитель монстров"
 }

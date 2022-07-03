@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:#979695;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#473421;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:#676462;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="Back">
+	<rect y="0" class="st0" width="60" height="60"/>
+	<path class="st1" d="M49.22,26.53"/>
+</g>
+<g id="Body">
+	
+		<rect x="45.66" y="32.62" transform="matrix(0.1012 0.9949 -0.9949 0.1012 79.8549 -17.6415)" class="st2" width="8.06" height="5.5"/>
+	
+		<rect x="26.89" y="31.4" transform="matrix(0.1012 0.9949 -0.9949 0.1012 61.7642 -0.0671)" class="st2" width="8.06" height="5.5"/>
+	
+		<rect x="31.5" y="21.76" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 62.5115 -3.55)" class="st2" width="3.05" height="15.44"/>
+</g>
+<g id="Nab">
+	<g>
+		<path class="st3" d="M45.94,33.76h-2.98c-0.33,0-0.6-0.27-0.6-0.6v-1.52c0-0.33,0.27-0.6,0.6-0.6h2.98c0.33,0,0.6,0.27,0.6,0.6
+			v1.52C46.55,33.49,46.28,33.76,45.94,33.76z"/>
+		<line class="st3" x1="45.43" y1="31.01" x2="44.71" y2="33.1"/>
+	</g>
+</g>
+<g id="Volume">
+	<path class="st4" d="M50.88,27.94c-5.04,0.02-6.62,0-9.4,0c-0.4,0-0.72-0.14-0.72-0.32V25.1c0-0.09,0.08-0.17,0.21-0.23
+		c0.18-0.08,0.41-0.09,0.51-0.09c0.49-0.02,4-0.02,8.81,0c0.66,0,2.55,0.17,4.34,0.61c0.53,0.13,1.23,0.33,1.69,0.77
+		c0.28,0.27,0.37,0.54,0.41,0.72c-0.03,0.15-0.11,0.36-0.35,0.54c-0.5,0.36-1.35,0.35-2.3,0.37C53,27.81,51.94,27.94,50.88,27.94z"
+		/>
+	<rect x="38.71" y="28.85" class="st4" width="3.08" height="13.75"/>
+	<rect x="41.79" y="27.95" class="st4" width="10.46" height="3.05"/>
+</g>
+<g id="Barrel">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="21.7692" y1="27.9533" x2="21.7692" y2="25.0403">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+	<rect x="2.79" y="25.04" class="st5" width="37.96" height="2.91"/>
+	<rect x="2.51" y="24.62" class="st4" width="6.3" height="3.83"/>
+</g>
+<g id="Aim">
+	<path class="st4" d="M7.13,22.63L7.13,22.63h1.68v1.76H7.13H5.75C6.21,23.81,6.67,23.22,7.13,22.63z"/>
+</g>
+</svg>

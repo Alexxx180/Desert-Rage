@@ -1,5 +1,4 @@
-﻿using DesertRage.Model.Locations;
-using DesertRage.Model.Locations.Battle;
+﻿using DesertRage.Model.Locations.Battle;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
 using System.Collections.ObjectModel;
@@ -9,6 +8,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
     public class FightAllCommand : FightCommand, IAction, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Damage all enemies on the field
+        /// </summary>
+        /// <param name="dependency">Damage power formula</param>
+        /// <param name="thing">Skill info</param>
         public FightAllCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {

@@ -4,6 +4,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
 {
     public class ItemFormula : Battle, IFormula, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Power dependency, based on fixed value
+        /// </summary>
+        /// <param name="power">Fixed value of power</param>
         public ItemFormula(int power)
         {
             Power = power;

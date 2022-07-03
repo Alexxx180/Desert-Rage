@@ -661,7 +661,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Locations.Total.Chest.Chest.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.MainMenu.MainMenu.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Items.Items.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Skills.Skills.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Stats.Stats.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Topics.Topics.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Info.InfoNoises.resources
@@ -679,3 +678,5 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\ref\Desert Rage.dll
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\Desert Rage.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.genruntimeconfig.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Rock\Next.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Sam\Next.json

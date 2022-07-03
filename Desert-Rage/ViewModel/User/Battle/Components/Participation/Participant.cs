@@ -141,6 +141,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
                 Defeat();
             }
         }
+
+        public void Annihilate()
+        {
+            Unit.Annihilate();
+            Defeat();
+        }
         #endregion
 
         #region Time Events

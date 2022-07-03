@@ -6,6 +6,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
     public class RestCommand : RecoverCommand, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Refill some amount of hero AP
+        /// </summary>
+        /// <param name="dependency">Rest power formula</param>
+        /// <param name="thing">Skill info</param>
         public RestCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing) { }
 

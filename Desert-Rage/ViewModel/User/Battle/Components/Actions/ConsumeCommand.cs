@@ -1,12 +1,15 @@
 ﻿using DesertRage.Model;
-using DesertRage.ViewModel.User.Battle;
-using DesertRage.ViewModel.User.Battle.Components.Actions;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions
 {
     public class ConsumeCommand : InstantCommand, INotifyPropertyChanged, IModel<BattleViewModel>
     {
+        /// <summary>
+        /// Call consuming behaviour then action used
+        /// </summary>
+        /// <param name="action">What need to be done</param>
+        /// <param name="subject">What and how it will be consumed</param>
         public ConsumeCommand(IAction action, IThing subject) : base(action)
         {
             Subject = subject;
