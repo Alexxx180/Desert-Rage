@@ -38,7 +38,6 @@
         GrenadeLauncherMKIII,
 
         SeriousBomb,
-        Encounter,
 
 
         Drain,

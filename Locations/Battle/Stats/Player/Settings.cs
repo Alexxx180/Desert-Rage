@@ -1,6 +1,6 @@
 ﻿namespace DesertRage.Model.Locations.Battle.Stats.Player
 {
-    public class Settings : Unit
+    public class Settings : DescriptionUnit
     {
         public void Set(Settings settings)
         {
