@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6B5CA2;stroke:#7F7E7C;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#706E6C;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#DAB786;stroke:#000000;stroke-miterlimit:10;}
+	.st3{font-family:'Enemy-Crusher';}
+	.st4{font-size:2px;}
+	.st5{stroke:#000000;stroke-miterlimit:10;}
+</style>
+<rect x="1" y="1" class="st0" width="58" height="58"/>
+<polygon class="st1" points="0.41,53.46 0.41,59.46 6.99,59.46 6.99,53.46 6.99,51.94 "/>
+<rect x="23.09" y="47.88" class="st2" width="16.73" height="5.03"/>
+<rect x="6.99" y="51.61" class="st1" width="46.96" height="7.85"/>
+<polygon class="st1" points="53.95,51.61 53.95,53.2 53.95,59.46 59.59,59.46 59.59,53.2 59.59,52.14 "/>
+<text transform="matrix(0.9978 0 0 1 29.4929 57.1317)" class="st3 st4">...</text>
+<path class="st5" d="M25.52,12.82h11.85c7.09,0,12.84,5.75,12.84,12.84v10.83c0,7.09-5.75,12.84-12.84,12.84H25.52
+	c-7.09,0-12.84-5.75-12.84-12.84V25.66C12.69,18.57,18.43,12.82,25.52,12.82z"/>
+<rect x="18.99" y="10.68" class="st1" width="24.91" height="7.96"/>
+<path class="st1" d="M37.37,12.82H25.52c-7.09,0-12.84,5.75-12.84,12.84v10.83c0,7.09,5.75,12.84,12.84,12.84h11.85
+	c7.09,0,12.84-5.75,12.84-12.84V25.66C50.21,18.57,44.46,12.82,37.37,12.82z M41.94,40.18H20.95v-2.13h20.99V40.18z M41.94,28.88
+	H20.95v-2.13h20.99V28.88z"/>
+</svg>

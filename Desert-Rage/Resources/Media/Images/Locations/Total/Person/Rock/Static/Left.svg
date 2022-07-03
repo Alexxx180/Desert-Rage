@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.01;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#B7576B;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#35312B;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#4D5A96;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:#DAB786;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#706E6B;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+</style>
+<rect x="0.5" y="0.5" class="st0" width="31" height="29"/>
+<rect x="14.25" y="19" transform="matrix(-1 -4.573465e-11 4.573465e-11 -1 32 45)" class="st1" width="3.5" height="7"/>
+<rect x="13.75" y="26" transform="matrix(-1 -4.547486e-11 4.547486e-11 -1 31.5 54)" class="st2" width="4" height="2"/>
+<polygon class="st3" points="14.25,10 14.25,10.73 13.55,10.73 13.55,15.73 14.25,15.73 14.25,19 17.75,19 17.75,10 "/>
+<rect x="15.78" y="10.51" transform="matrix(-1 -4.469548e-11 4.469548e-11 -1 35.0625 28.0153)" class="st3" width="3.5" height="7"/>
+<circle class="st4" cx="17.53" cy="17.74" r="1.75"/>
+<g>
+	<path class="st5" d="M17.11,2.3h-2.36c-1.41,0-2.56,1.15-2.56,2.56v2.16c0,1.41,1.15,2.56,2.56,2.56h2.36
+		c1.41,0,2.56-1.15,2.56-2.56V4.86C19.67,3.45,18.52,2.3,17.11,2.3z"/>
+	
+		<rect x="15.63" y="2.37" transform="matrix(0.8044 0.5941 -0.5941 0.8044 5.4249 -10.142)" class="st5" width="4.97" height="1.59"/>
+</g>
+<line class="st6" x1="12.34" y1="5.19" x2="13.75" y2="5.19"/>
+<line class="st6" x1="12.34" y1="6.94" x2="13.75" y2="6.94"/>
+</svg>

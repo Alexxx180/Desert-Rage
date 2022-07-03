@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.01;fill:#201600;stroke:#201600;stroke-miterlimit:10;}
+	.st1{fill:#C34E48;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#2D3445;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#D9B786;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:#293B4E;}
+	.st5{opacity:0.9;fill:url(#SVGID_1_);}
+	.st6{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:#F6ED57;stroke:#C65049;stroke-width:0.1;stroke-miterlimit:10;}
+	.st8{fill:#000105;stroke:#000105;stroke-width:0.1;stroke-miterlimit:10;}
+	.st9{fill:#F6ED57;stroke:#F6ED57;stroke-width:0.1;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#F6ED57;stroke-width:0.1;stroke-miterlimit:10;}
+	.st11{fill:#000105;}
+	.st12{fill:#F6ED57;}
+	.st13{fill:none;stroke:#000105;stroke-width:0.1;stroke-miterlimit:10;}
+	.st14{fill:#EFEFEF;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<rect x="0.5" y="0.5" class="st0" width="31" height="29"/>
+<rect x="12.5" y="26" class="st1" width="3.5" height="2"/>
+<rect x="16" y="23.81" class="st1" width="3.5" height="2"/>
+<rect x="16" y="19" class="st2" width="3.5" height="4.63"/>
+<circle class="st3" cx="10.75" cy="17.7" r="1.75"/>
+<circle class="st3" cx="21.25" cy="17.7" r="1.75"/>
+<rect x="12.5" y="18.97" class="st2" width="3.5" height="7"/>
+<rect x="13.04" y="21.47" class="st4" width="0.93" height="4"/>
+<rect x="16.58" y="21" class="st4" width="0.93" height="2"/>
+<circle class="st3" cx="16.04" cy="6.44" r="3.5"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="16.0426" y1="8.5605" x2="16.0426" y2="3.3417">
+	<stop  offset="0.2" style="stop-color:#67482E"/>
+	<stop  offset="1" style="stop-color:#000000"/>
+</linearGradient>
+<ellipse class="st5" cx="16.04" cy="5.95" rx="3" ry="2.61"/>
+<rect x="12.5" y="9.95" class="st6" width="7" height="9"/>
+<g>
+	<polygon class="st7" points="17.87,13.96 18.02,13.42 17.63,13.02 17.51,12.51 17,12.37 16.6,11.95 16.04,12.09 15.54,11.95 
+		15.16,12.32 14.62,12.45 14.47,12.99 14.07,13.38 14.21,13.91 14.06,14.42 14.43,14.8 14.57,15.36 15.13,15.51 15.49,15.89 
+		15.99,15.76 16.54,15.92 16.95,15.52 17.47,15.38 17.61,14.87 18.01,14.49 	"/>
+	<g>
+		<g>
+			<circle class="st8" cx="16.48" cy="13.95" r="1.08"/>
+			<g>
+				<g>
+					<circle class="st9" cx="16.09" cy="13.83" r="0.14"/>
+					<line class="st10" x1="15.95" y1="13.35" x2="16.37" y2="13.59"/>
+				</g>
+				<g>
+					<circle class="st9" cx="16.87" cy="13.83" r="0.14"/>
+					<line class="st10" x1="17.01" y1="13.35" x2="16.59" y2="13.59"/>
+				</g>
+			</g>
+			<polygon class="st9" points="15.86,14.42 16.96,14.32 16.95,14.52 			"/>
+		</g>
+		<g>
+			<g>
+				
+					<rect x="15.54" y="12.71" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.514 11.0743)" class="st11" width="0.53" height="0.37"/>
+				
+					<rect x="15.89" y="12.66" transform="matrix(0.8281 -0.5605 0.5605 0.8281 -4.4212 11.1266)" class="st12" width="0.08" height="0.22"/>
+			</g>
+			<g>
+				<path class="st13" d="M14.63,14.04c0,0.01-0.02,0.13,0.07,0.19c0.03,0.03,0.07,0.03,0.09,0.03c0.06-0.01,0.13-0.04,0.17-0.1
+					c0.02-0.02,0.03-0.05,0.03-0.07c0.09-0.43,0.19-0.86,0.29-1.29c0-0.02,0.02-0.09,0.1-0.14c0.06-0.03,0.11-0.03,0.13-0.03
+					c0.03,0.01,0.06,0.02,0.09,0.03c0.08,0.04,0.12,0.09,0.15,0.12"/>
+				<line class="st13" x1="14.69" y1="13.97" x2="14.81" y2="13.87"/>
+				<line class="st13" x1="14.56" y1="13.96" x2="14.46" y2="13.86"/>
+				<line class="st13" x1="14.54" y1="14.07" x2="14.42" y2="14.17"/>
+				<line class="st13" x1="14.63" y1="13.78" x2="14.63" y2="13.94"/>
+				<line class="st13" x1="14.54" y1="14.02" x2="14.4" y2="14.02"/>
+				<line class="st13" x1="14.8" y1="14.17" x2="14.7" y2="14.06"/>
+				<line class="st13" x1="14.88" y1="14.02" x2="14.73" y2="14.02"/>
+			</g>
+		</g>
+	</g>
+</g>
+<rect x="9" y="10.47" class="st14" width="3.5" height="7"/>
+<rect x="19.5" y="10.47" class="st14" width="3.5" height="7"/>
+</svg>

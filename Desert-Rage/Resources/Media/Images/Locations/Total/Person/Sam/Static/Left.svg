@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.01;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#DAB786;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#2E3545;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#C44F48;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st7{clip-path:url(#SVGID_2_);fill:#4F3F29;}
+	.st8{fill:#293B4E;}
+	.st9{opacity:0.7;fill:none;stroke:#D76446;stroke-width:0.25;stroke-miterlimit:10;}
+	.st10{opacity:0.95;fill:#D76446;stroke:#D76446;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<rect x="0.5" y="0.5" class="st0" width="31" height="29"/>
+<circle class="st1" cx="16" cy="6.5" r="3.5"/>
+<rect x="14.25" y="19" transform="matrix(-1 -4.573465e-11 4.573465e-11 -1 32 45)" class="st2" width="3.5" height="7"/>
+<rect x="13.75" y="26" transform="matrix(-1 -4.547486e-11 4.547486e-11 -1 31.5 54)" class="st3" width="4" height="2"/>
+<path class="st4" d="M14.25,8.29c-0.15,0.07-0.39,0.16-0.71,0.17c-0.4,0.02-0.71-0.1-0.87-0.17"/>
+<polygon class="st5" points="14.25,10 14.25,10.73 13.55,10.73 13.55,15.73 14.25,15.73 14.25,19 17.75,19 17.75,10 "/>
+<line class="st6" x1="14.25" y1="10.88" x2="14.25" y2="15.56"/>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="16" cy="6.5" r="3"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st7" points="17.95,2.3 19.95,7.73 12.51,4.25 	"/>
+</g>
+<rect x="14.82" y="21.42" class="st8" width="0.93" height="4"/>
+<rect x="15.78" y="10.51" transform="matrix(-1 -4.469548e-11 4.469548e-11 -1 35.0625 28.0153)" class="st5" width="3.5" height="7"/>
+<circle class="st1" cx="17.53" cy="17.74" r="1.75"/>
+<g>
+	<line class="st9" x1="13" y1="6.44" x2="13.56" y2="6.44"/>
+	<rect x="13.56" y="6.34" class="st10" width="0.47" height="0.75"/>
+</g>
+</svg>

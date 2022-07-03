@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.5, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 30" style="enable-background:new 0 0 32 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.01;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#DAB786;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#2E3545;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#C44F48;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st7{clip-path:url(#SVGID_2_);fill:#4F3F29;}
+	.st8{fill:#293B4E;}
+	.st9{opacity:0.7;fill:none;stroke:#D76446;stroke-width:0.25;stroke-miterlimit:10;}
+	.st10{opacity:0.95;fill:#D76446;stroke:#D76446;stroke-width:0.25;stroke-miterlimit:10;}
+</style>
+<rect x="0.5" y="0.6" transform="matrix(-1 -4.482959e-11 4.482959e-11 -1 32 30.2005)" class="st0" width="31" height="29"/>
+<circle class="st1" cx="16" cy="6.6" r="3.5"/>
+<rect x="14.25" y="19.1" class="st2" width="3.5" height="7"/>
+<rect x="14.25" y="26.1" class="st3" width="4" height="2"/>
+<path class="st4" d="M17.75,8.39c0.15,0.07,0.39,0.16,0.71,0.17c0.4,0.02,0.71-0.1,0.87-0.17"/>
+<polygon class="st5" points="17.75,10.1 17.75,10.83 18.45,10.83 18.45,15.83 17.75,15.83 17.75,19.1 14.25,19.1 14.25,10.1 "/>
+<line class="st6" x1="17.75" y1="10.98" x2="17.75" y2="15.66"/>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="16" cy="6.6" r="3"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st7" points="14.05,2.4 12.05,7.83 19.49,4.35 	"/>
+</g>
+<rect x="16.25" y="21.52" class="st8" width="0.93" height="4"/>
+<rect x="12.72" y="10.61" class="st5" width="3.5" height="7"/>
+<circle class="st1" cx="14.47" cy="17.84" r="1.75"/>
+<g>
+	<line class="st9" x1="19" y1="6.54" x2="18.44" y2="6.54"/>
+	
+		<rect x="17.97" y="6.44" transform="matrix(-1 -4.484647e-11 4.484647e-11 -1 36.4039 13.638)" class="st10" width="0.47" height="0.75"/>
+</g>
+</svg>
