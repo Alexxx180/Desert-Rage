@@ -680,3 +680,12 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.genruntimeconfig.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Rock\Next.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Sam\Next.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Boom.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Cannon.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\DoubleShotgun.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\GrenadeLauncher.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Laser.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\RocketLauncher.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Schofield45.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\SingleShotgun.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\TommyGun.mp3

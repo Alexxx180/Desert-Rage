@@ -488,7 +488,7 @@ namespace DesertRage.ViewModel
                                 Name = "Шофилд .45",
                                 Description = "Ого-го, мне сегодня везет!",
                                 Icon = "/Resources/Media/Images/Menu/Skills/Schofield45.svg",
-                                Noise = "Actions/Torch.mp3"
+                                Noise = "Actions/Schofield45.mp3"
                             }
                         ),
                         new SkillCommand(0)
@@ -504,8 +504,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Дробовик",
                                 Description = "Ха, мой старый друг!",
-                                Icon = "/Resources/Media/Images/Menu/Skills/SingleShotgun.svg",
-                                Noise = "Actions/Torch.mp3"
+                                Icon = "/Resources/Media/Images/Menu/Skills/Shotgun.svg",
+                                Noise = "Actions/SingleShotgun.mp3"
                             }
                         ),
                         new SkillCommand(10)
@@ -521,8 +521,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Двустволка",
                                 Description = "Вот это вещь!",
-                                Icon = "/Resources/Media/Images/Menu/Skills/DoubleShotgun.svg",
-                                Noise = "Actions/Torch.mp3"
+                                Icon = "/Resources/Media/Images/Menu/Skills/ShotgunX2.svg",
+                                Noise = "Actions/DoubleShotgun.mp3"
                             }
                         ),
                         new SkillCommand(20)
@@ -538,8 +538,8 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Двустволка",
                                 Description = "Вот это вещь!",
-                                Icon = "/Resources/Media/Images/Menu/Skills/DoubleShotgun.svg",
-                                Noise = "Actions/Torch.mp3"
+                                Icon = "/Resources/Media/Images/Menu/Skills/SeriouslyBigCannon.svg",
+                                Noise = "Actions/Cannon.mp3"
                             }
                         ),
                         new SkillCommand(50)
@@ -556,7 +556,7 @@ namespace DesertRage.ViewModel
                                 Name = "Томпсон M1A2",
                                 Description = "Сейчас немного подогреем!",
                                 Icon = "/Resources/Media/Images/Menu/Skills/TommyGun.svg",
-                                Noise = "Actions/Combo.mp3"
+                                Noise = "Actions/TommyGun.mp3"
                             }
                         ),
                         new SkillCommand(10)
@@ -573,7 +573,7 @@ namespace DesertRage.ViewModel
                                 Name = "Лазер XL2",
                                 Description = "Ребята, бесплатные билеты в ад обеспечены!",
                                 Icon = "/Resources/Media/Images/Menu/Skills/LaserGunXL2.svg",
-                                Noise = "Actions/Combo.mp3"
+                                Noise = "Actions/LaserGun.mp3"
                             }
                         ),
                         new SkillCommand(15)
@@ -590,7 +590,7 @@ namespace DesertRage.ViewModel
                                 Name = "Ракетомет XPML21",
                                 Description = "Вот это я понимаю, круто!",
                                 Icon = "/Resources/Media/Images/Menu/Skills/RocketLauncherXPML21.svg",
-                                Noise = "Actions/Combo.mp3"
+                                Noise = "Actions/RocketLauncher.mp3"
                             }
                         ),
                         new SkillCommand(20)
@@ -607,7 +607,7 @@ namespace DesertRage.ViewModel
                                 Name = "Гранатомет MK3",
                                 Description = "Надежный пехотный гранатомет с регулировкой скорости стрельбы",
                                 Icon = "/Resources/Media/Images/Menu/Skills/GrenadeLauncherMKIII.svg",
-                                Noise = "Actions/Combo.mp3"
+                                Noise = "Actions/GrenadeLauncher.mp3"
                             }
                         ),
                         new SkillCommand(35)
@@ -623,7 +623,7 @@ namespace DesertRage.ViewModel
                                 Name = "Серьезная бомба",
                                 Description = "Время для серьезного бума!",
                                 Icon = "/Resources/Media/Images/Menu/Skills/SeriousBomb.svg",
-                                Noise = "Actions/Combo.mp3"
+                                Noise = "Actions/Boom.mp3"
                             }
                         ),
                         new SkillCommand(500)

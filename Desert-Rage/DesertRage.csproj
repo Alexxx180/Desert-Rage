@@ -1007,6 +1007,12 @@
     <None Update="Resources\Media\OST\Music\WaterTemple\Peace.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Noises\Actions\Boom.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Noises\Actions\Cannon.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\Combo.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1022,7 +1028,13 @@
     <None Update="Resources\Media\OST\Noises\Actions\DefenceBoost.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Noises\Actions\DoubleShotgun.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\Flee.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Noises\Actions\GrenadeLauncher.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Noises\Actions\Heal.mp3">
@@ -1031,16 +1043,31 @@
     <None Update="Resources\Media\OST\Noises\Actions\Items\Mixture.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Noises\Actions\Laser.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\PowerBoost.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Noises\Actions\Quake.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Noises\Actions\RocketLauncher.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\Scan.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\OST\Noises\Actions\Schofield45.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Noises\Actions\SingleShotgun.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\OST\Noises\Actions\Sling.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Noises\Actions\TommyGun.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Noises\Actions\Torch.mp3">
