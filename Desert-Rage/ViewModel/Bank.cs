@@ -465,7 +465,7 @@ namespace DesertRage.ViewModel
                     SkillsID.SuperSpeed,
                     new ConsumeCommand(
                         new ApplyStatus(
-                            StatusID.REINFORCEMENT,
+                            StatusID.SPEEDUP,
                             new NoiseUnit
                             {
                                 Name = "СуперСкорость",
