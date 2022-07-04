@@ -204,10 +204,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Zombie/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -298,10 +294,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -392,10 +384,6 @@
 		"Special": 30
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Vulture/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
