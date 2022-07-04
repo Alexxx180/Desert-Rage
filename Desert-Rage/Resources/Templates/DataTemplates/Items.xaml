@@ -29,8 +29,8 @@
     </DataTemplate>
 
     <DataTemplate x:Key="PowerTemplate">
-        <Border x:Name="Status">
-            <Border.Resources>
+        <Viewbox x:Name="Status">
+            <Viewbox.Resources>
                 <ToolTip x:Key="AttributeTip">
                     <ToolTip.Style>
                         <Style TargetType="ToolTip" BasedOn="{StaticResource BindableTip}">
@@ -39,7 +39,7 @@
                         </Style>
                     </ToolTip.Style>
                 </ToolTip>
-            </Border.Resources>
+            </Viewbox.Resources>
 
             <ContentControl Template="{StaticResource UnitName}">
                 <DockPanel.Dock>
@@ -51,10 +51,10 @@
                 </ContentControl.Style>
             </ContentControl>
 
-            <Border.ToolTip>
+            <Viewbox.ToolTip>
                 <StaticResource ResourceKey="AttributeTip"/>
-            </Border.ToolTip>
-        </Border>
+            </Viewbox.ToolTip>
+        </Viewbox>
     </DataTemplate>
     
     <DataTemplate x:Key="StatusTemplate">

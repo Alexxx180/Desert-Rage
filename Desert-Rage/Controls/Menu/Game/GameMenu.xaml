@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesertRage.Controls.Menu.Game"
+             xmlns:locale="clr-namespace:DesertRage.Resources.Localization;assembly=DesertRageResources"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="This">
@@ -45,8 +46,8 @@
                                     /Resources/Media/Images/Battle/Character/Ray/Icon.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            
-                            <TextBlock Text="Статус"/>
+
+                            <TextBlock Text="{x:Static locale:Words.Status}"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -63,8 +64,8 @@
                                     /Resources/Media/Images/Menu/Topics/Actions.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            
-                            <TextBlock Text="Умения"/>
+
+                            <TextBlock Text="{x:Static locale:Words.Skills}"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -81,8 +82,8 @@
                                     /Resources/Media/Images/Menu/Topics/Items.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            
-                            <TextBlock Text="Предметы"/>
+
+                            <TextBlock Text="{x:Static locale:Words.Items}"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -99,8 +100,8 @@
                                     /Resources/Media/Images/Menu/Skills/Analyze.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            
-                            <TextBlock Text="Бестиарий"/>
+
+                            <TextBlock Text="{x:Static locale:Words.Bestiary}"/>
                         </DockPanel>
                     </TabItem.Header>
 
@@ -117,8 +118,8 @@
                                     /Resources/Media/Images/Menu/Topics/Settings.svg
                                 </ContentControl.DataContext>
                             </ContentControl>
-                            
-                            <TextBlock Text="Настройки"/>
+
+                            <TextBlock Text="{x:Static locale:Words.Settings}"/>
                         </DockPanel>
                     </TabItem.Header>
 

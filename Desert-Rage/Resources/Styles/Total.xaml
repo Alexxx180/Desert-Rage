@@ -36,7 +36,7 @@
         <Style.BasedOn>
             <StaticResource ResourceKey="GlobalFont"/>
         </Style.BasedOn>
-        
+
         <Setter Property="Control.FontSize">
             <Setter.Value>
                 <Binding>
@@ -44,6 +44,30 @@
                         <RelativeSource Mode="Self"/>
                     </Binding.RelativeSource>
 
+                    <Binding.Path>
+                        ActualHeight
+                    </Binding.Path>
+
+                    <Binding.Converter>
+                        <converters:ProcentualHeightConverter/>
+                    </Binding.Converter>
+
+                    <Binding.ConverterParameter>
+                        1,6
+                    </Binding.ConverterParameter>
+                </Binding>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="StretchContext">
+        <Style.BasedOn>
+            <StaticResource ResourceKey="GlobalFont"/>
+        </Style.BasedOn>
+
+        <Setter Property="Control.FontSize">
+            <Setter.Value>
+                <Binding>
                     <Binding.Path>
                         ActualHeight
                     </Binding.Path>

@@ -626,7 +626,7 @@ namespace DesertRage.ViewModel
                             {
                                 Name = "Гранатомет MK3",
                                 Description = "Надежный пехотный гранатомет с регулировкой скорости стрельбы",
-                                Icon = "/Resources/Media/Images/Menu/Skills/GrenadeLauncherMKIII.svg",
+                                Icon = "/Resources/Media/Images/Menu/Skills/GrenadeLauncher.svg",
                                 Noise = "Actions/GrenadeLauncher.mp3"
                             }
                         ),

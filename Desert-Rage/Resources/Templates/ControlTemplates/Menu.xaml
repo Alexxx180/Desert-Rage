@@ -235,12 +235,15 @@
                 <UniformGrid Rows="4" Columns="1" Grid.Column="1">
                     <UniformGrid.Resources>
                         <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource StretchFont}">
+                            <!--BasedOn="{StaticResource StretchFont}"-->
+                            <Setter Property="FontSize" Value="24"/>
+                            <Setter Property="Padding" Value="5"/>
                             <Setter Property="Background" Value="#3F3F3F"/>
                             <Setter Property="Foreground" Value="#EAEAEA"/>
                             <Setter Property="ItemContainerStyle" Value="{StaticResource GrayAccent}"/>
                         </Style>
                     </UniformGrid.Resources>
-                    
+
                     <ComboBox>
                         <ComboBox.ItemTemplate>
                             <DynamicResource ResourceKey="PowerTemplate"/>
