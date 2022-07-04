@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -9,7 +9,9 @@ namespace DesertRage.ViewModel
     {
         public GameStart()
         {
+            _unlock = Bank.LoadHeroKeys();
             IsListVisible = false;
+            
             Profiles = new ObservableCollection<string>();
             LoadProfiles();
         }
@@ -81,6 +83,9 @@ namespace DesertRage.ViewModel
         }
 
         public bool IsPlayerExists => !IsListVisible && Profiles.Contains(CurrentProfile);
+        public bool CanCharacterSelect => _unlock.Count > 1 && !IsPlayerExists;
+
+        private HashSet<string> _unlock;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
