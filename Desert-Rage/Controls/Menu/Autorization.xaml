@@ -61,6 +61,18 @@
 
             <DockPanel>
               <ItemsControl DockPanel.Dock="Left">
+                <ItemsControl.HorizontalAlignment>
+                    Left
+                </ItemsControl.HorizontalAlignment>
+                
+                <ItemsControl.SelectedItem>
+                    <Binding Path="CurrentHero"/>
+                </ItemsControl.SelectedItem>
+                
+                <ItemsControl.ItemsSource>
+                    <Binding Path="CharactersList"/>
+                </ItemsControl.ItemsSource>
+                
                 <ItemsControl.Visibility>
                     <Binding Path="CanCharacterSelect">
                         <Binding.Converter>
@@ -73,10 +85,18 @@
                     <ItemsPanelTemplate>
                         <ComboBox/>
                     </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>  
+                </ItemsControl.ItemsPanel>
+                
+                <ItemsControl.ItemTemplate>
+                    <StaticResource ResourceKey="IconTemplate"/>
+                </ItemsControl.ItemTemplate>
               </ItemsControl>
               
               <TextBox MaxLength="30" DockPanel.Dock="Right">
+                <TextBox.HorizontalAlignment>
+                    Right
+                </TextBox.HorizontalAlignment>
+                
                 <TextBox.Style>
                     <StaticResource ResourceKey="NameField"/>
                 </TextBox.Style>
