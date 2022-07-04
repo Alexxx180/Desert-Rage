@@ -171,6 +171,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
 
             totalSpeed *= 0.2f;
             totalSpeed += speed;
+            totalSpeed *= Unit.Boost(StatusID.SPEEDUP);
 
             Time.Fill(totalSpeed.ToUShort());
             if (Time.IsMax)
