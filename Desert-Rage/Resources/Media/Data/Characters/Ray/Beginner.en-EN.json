@@ -1,0 +1,255 @@
+{
+	"Image": "/Resources/Media/Images/Battle/Character/Ray/Idle.svg",
+	"Level": 1,
+	"Experience": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"ToNextLevel": [{
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 24
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 38
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 61
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 98
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 112
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 150
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 177
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 200
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 250
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 420
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 770
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 1170
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 1595
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 2045
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 2520
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 3020
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 3620
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 4320
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 5080
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 6020
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 7500
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 8750
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10000
+	}, {
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 0
+	}],
+	"Ap": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 40,
+		"Max": 40
+	},
+	"Skills": [6],
+	"Items": "AAAAAAAAAA==",
+	"Learned": [],
+	"Equipment": [{
+		"Kind": 0,
+		"Set": 0
+	}, {
+		"Kind": 1,
+		"Set": 0
+	}, {
+		"Kind": 2,
+		"Set": 0
+	}, {
+		"Kind": 3,
+		"Set": 0
+	}],
+	"Equipped": {
+		"Weapon": 0,
+		"Torso": 0,
+		"Legs": 0,
+		"Feet": 0
+	},
+	"Front": {
+		"X": 0,
+		"Y": -1
+	},
+	"Place": {
+		"X": 0,
+		"Y": 0
+	},
+	"Step": [{
+		"X": 0,
+		"Y": -1
+	}, {
+		"X": -1,
+		"Y": 0
+	}, {
+		"X": 0,
+		"Y": 1
+	}, {
+		"X": 1,
+		"Y": 0
+	}],
+	"ToBattle": 27,
+	"Pose": 0,
+	"Walk": 0,
+	"MapImage": "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Down.svg",
+	"StandImage": ["/Resources/Media/Images/Locations/Total/Person/Ray/Static/Up.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Left.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Down.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Right.svg"],
+	"GoingImage": [
+		["/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Up/1.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Up/2.svg"],
+		["/Resources/Media/Images/Locations/Total/Person/Ray/Static/Left.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Left/1.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Left.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Left/2.svg"],
+		["/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Down/1.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Down/2.svg"],
+		["/Resources/Media/Images/Locations/Total/Person/Ray/Static/Right.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Right/1.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Static/Right.svg", "/Resources/Media/Images/Locations/Total/Person/Ray/Walk/Right/2.svg"]
+	],
+	"WalkThrough": [".", ",", ":", "_", "!", "P", "T"],
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 100,
+		"Max": 100
+	},
+	"Stats": {
+		"Attack": 25,
+		"Defence": 20,
+		"Speed": 20,
+		"Special": 25
+	},
+	"Action": "/Resources/Media/Images/Battle/Character/Ray/Action.svg",
+	"StatusInfo": [{
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 50
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/Poison.svg",
+	"Name": "Poison",
+	"Description": "Ugly goo, flowing through the veins. Slowly drains strength."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 50
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+	"Name": "Power UP",
+	"Description": "Focusing helps you hit much more effectively."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 50
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+	"Name": "Guard",
+	"Description": "Being vigilant is one of the components of invulnerability."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 50
+	},
+	"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+	"Name": "Shield",
+	"Description": "With a good stance and a block, everything is on the shoulder."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 50
+	},
+	"Icon": "/Resources/Media/Images/Menu/Stats/Speed.svg",
+	"Name": "Berserk",
+	"Description": "No one knows what leads him into endless battles."
+}],
+	"Icon": "/Resources/Media/Images/Battle/Character/Ray/Icon.svg",
+	"Description": "Adventurer",
+	"Name": "Ray"
+}
