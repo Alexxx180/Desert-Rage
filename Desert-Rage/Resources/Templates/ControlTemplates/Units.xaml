@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:locale="clr-namespace:DesertRage.Resources.Localization;assembly=DesertRageResources">
     <ControlTemplate x:Key="CharacterSide">
         <Grid x:Name="BattleCharacter" DataContext="{Binding}">
             <Grid.Column>
@@ -87,18 +88,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Бой
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Fight}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Использовать оружие по назначению"/>
+                            <Run Text="{x:Static locale.Words.FightDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
                     
                     <MenuItem.Header>
-                        <TextBlock Text="Бой" Style="{StaticResource VerticalCenter}" />
+                        <TextBlock Text="{x:Static locale.Words.Fight}" Style="{StaticResource VerticalCenter}" />
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -132,18 +131,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Прием
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Skills}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Применить умения на практике"/>
+                            <Run Text="{x:Static locale.Words.SkillDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="Прием" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale.Words.Skills}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -174,18 +171,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Сумка
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Items}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Использовать предметы"/>
+                            <Run Text="{x:Static locale.Words.ItemsDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="Сумка" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale.Words.Items}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -216,18 +211,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Щит
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Shield}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Принять оборонительную позицию"/>
+                            <Run Text="{x:Static locale.Words.ShieldDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="Щит" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale.Words.Shield}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -245,18 +238,16 @@
                     </MenuItem.Style>
 
                     <MenuItem.Header>
-                        <TextBlock Text="Побег" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale.Words.Escape}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Побег
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Escape}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Сбежать..."/>
+                            <Run Text="{x:Static locale.Words.EscapeDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
@@ -276,18 +267,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold">
-                                Бойня
-                            </Run>
+                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Berserk}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="Горячо поприветствовать оппонентов"/>
+                            <Run Text="{x:Static locale.Words.BerserkDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="Бойня" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale.Words.Berserk}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
