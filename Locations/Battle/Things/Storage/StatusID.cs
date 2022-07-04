@@ -6,6 +6,7 @@
         REINFORCEMENT,
         SHIELD,
         DEFENCE,
-        BERSERK
+        BERSERK,
+        SPEEDUP
     }
 }
