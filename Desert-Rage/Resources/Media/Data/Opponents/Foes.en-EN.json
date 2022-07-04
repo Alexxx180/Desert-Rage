@@ -1,0 +1,1093 @@
+[{
+	"ID": 0,
+	"Drop": 1,
+	"Size": {
+		"X": 1,
+		"Y": 1
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Spider.mp3",
+	"Experience": 5,
+	"IsLearned": false,
+	"Strategy": 1,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 65,
+		"Max": 65
+	},
+	"Stats": {
+		"Attack": 25,
+		"Defence": 3,
+		"Speed": 7,
+		"Special": 0
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Spider/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Spider/Idle.svg",
+	"Description": "This spider has been feeding on rot for so long that it has become a carrier of infection itself. And I don’t want to check at all that he can take on something fresher ...",
+	"Name": "Spider"
+}, {
+	"ID": 1,
+	"Drop": 0,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Mummy.mp3",
+	"Experience": 7,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 83,
+		"Max": 83
+	},
+	"Stats": {
+		"Attack": 32,
+		"Defence": 7,
+		"Speed": 4,
+		"Special": 0
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Mummy/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Mummy/Idle.svg",
+	"Description": "It doesn't look like anyone told this poor fellow how to remove the bandages. But wait... It's a walking bandage!",
+	"Name": "Mummy"
+}, {
+	"ID": 2,
+	"Drop": 2,
+	"Size": {
+		"X": 2,
+		"Y": 1
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Zombie.mp3",
+	"Experience": 11,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 83,
+		"Max": 83
+	},
+	"Stats": {
+		"Attack": 35,
+		"Defence": 5,
+		"Speed": 3,
+		"Special": 0
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Zombie/Action.svg",
+	"Status": {
+		"Bytes": "AA==",
+		"Length": 5
+	},
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Zombie/Idle.svg",
+	"Description": "Did many people really consider zombies to be dead, capable of chasing people like a cheetah? Come on, it's almost a completely decomposed corpse. He begs to be beaten.",
+	"Name": "Zombie"
+}, {
+	"ID": 3,
+	"Drop": 3,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Bones.mp3",
+	"Experience": 15,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 125,
+		"Max": 125
+	},
+	"Stats": {
+		"Attack": 40,
+		"Defence": 15,
+		"Speed": 5,
+		"Special": 0
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
+	"Status": {
+		"Bytes": "AA==",
+		"Length": 5
+	},
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
+	"Description": "He doesn't seem so harmless. After such a length of service, he will have a serious conversation with you.",
+	"Name": "Guardian"
+}, {
+	"ID": 4,
+	"Drop": 3,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Vulture.mp3",
+	"Experience": 35,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 250,
+		"Max": 250
+	},
+	"Stats": {
+		"Attack": 60,
+		"Defence": 25,
+		"Speed": 50,
+		"Special": 30
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Vulture/Action.svg",
+	"Status": {
+		"Bytes": "AA==",
+		"Length": 5
+	},
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Vulture/Idle.svg",
+	"Description": "Is it a bird? Is it a rotorcraft? No, this is a tame goose Gosha, which the owners left hungry again alone.",
+	"Name": "Vulture"
+}, {
+	"ID": 5,
+	"Drop": 1,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Ghoul.mp3",
+	"Experience": 75,
+	"IsLearned": false,
+	"Strategy": 1,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 306,
+		"Max": 306
+	},
+	"Stats": {
+		"Attack": 80,
+		"Defence": 35,
+		"Speed": 35,
+		"Special": 25
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Ghoul/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Ghoul/Idle.svg",
+	"Description": "Terrible type. It’s better not to get caught in the eye of such a thing.",
+	"Name": "Ghoul"
+}, {
+	"ID": 6,
+	"Drop": 5,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/GrimReaper.mp3",
+	"Experience": 100,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 272,
+		"Max": 272
+	},
+	"Stats": {
+		"Attack": 85,
+		"Defence": 20,
+		"Speed": 45,
+		"Special": 60
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Idle.svg",
+	"Description": "He has a good scythe behind his shoulders, but not a single field with wheat is visible in the middle of the desert ...",
+	"Name": "Reaper"
+}, {
+	"ID": 7,
+	"Drop": 4,
+	"Size": {
+		"X": 1,
+		"Y": 1
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Scarab.mp3",
+	"Experience": 60,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 100,
+		"Max": 100
+	},
+	"Stats": {
+		"Attack": 75,
+		"Defence": 75,
+		"Speed": 75,
+		"Special": 75
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Scarab/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Scarab/Idle.svg",
+	"Description": "This scarab decided to rise, doing a job that was harder than his bug duties.",
+	"Name": "Scarab"
+}, {
+	"ID": 8,
+	"Drop": 1,
+	"Size": {
+		"X": 1,
+		"Y": 1
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/KillerMole.mp3",
+	"Experience": 175,
+	"IsLearned": false,
+	"Strategy": 1,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 400,
+		"Max": 400
+	},
+	"Stats": {
+		"Attack": 150,
+		"Defence": 100,
+		"Speed": 100,
+		"Special": 75
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/KillerMole/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/KillerMole/Idle.svg",
+	"Description": "You will definitely not want to find such charm in your closet.",
+	"Name": "Moth-Killer"
+}, {
+	"ID": 9,
+	"Drop": 5,
+	"Size": {
+		"X": 1,
+		"Y": 1
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Imp.mp3",
+	"Experience": 180,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 600,
+		"Max": 600
+	},
+	"Stats": {
+		"Attack": 125,
+		"Defence": 110,
+		"Speed": 90,
+		"Special": 140
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Imp/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Imp/Idle.svg",
+	"Description": "Insidious, ruthless, this demon clearly does not want uninvited guests.",
+	"Name": "Servant"
+}, {
+	"ID": 10,
+	"Drop": 4,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Worm.mp3",
+	"Experience": 200,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 950,
+		"Max": 950
+	},
+	"Stats": {
+		"Attack": 180,
+		"Defence": 180,
+		"Speed": 80,
+		"Special": 100
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Worm/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Worm/Idle.svg",
+	"Description": "This devourer is so huge that only its tail sticks out. It's time to shorten it a little...",
+	"Name": "Sandworm"
+}, {
+	"ID": 11,
+	"Drop": 6,
+	"Size": {
+		"X": 2,
+		"Y": 2
+	},
+	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Master.mp3",
+	"Experience": 255,
+	"IsLearned": false,
+	"Strategy": 0,
+	"Hp": {
+		"IsMax": true,
+		"IsEmpty": false,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 760,
+		"Max": 760
+	},
+	"Stats": {
+		"Attack": 160,
+		"Defence": 160,
+		"Speed": 160,
+		"Special": 160
+	},
+	"Action": "/Resources/Media/Images/Battle/Enemies/Master/Action.svg",
+	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}],
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Master/Idle.svg",
+	"Description": "An expert in his field can be seen immediately. But, unfortunately, he definitely does not stand out for accommodating.",
+	"Name": "Master"
+}]
