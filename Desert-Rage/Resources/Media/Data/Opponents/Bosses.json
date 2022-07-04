@@ -317,8 +317,8 @@
          "Max":350
       },
       "Stats":{
-         "Attack":100,
-         "Defence":100,
+         "Attack":60,
+         "Defence":60,
          "Speed":50,
          "Special":50
       },
