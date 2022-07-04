@@ -24,10 +24,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Spider/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -118,10 +114,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Mummy/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -212,10 +204,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Zombie/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -306,10 +294,6 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -400,10 +384,6 @@
 		"Special": 30
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Vulture/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -494,10 +474,6 @@
 		"Special": 25
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Ghoul/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -588,10 +564,6 @@
 		"Special": 60
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -682,10 +654,6 @@
 		"Special": 75
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Scarab/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -776,10 +744,6 @@
 		"Special": 75
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/KillerMole/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -870,10 +834,6 @@
 		"Special": 140
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Imp/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -964,10 +924,6 @@
 		"Special": 100
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Worm/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
@@ -1058,10 +1014,6 @@
 		"Special": 160
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Master/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
 		"Time": {
 			"IsMax": true,
