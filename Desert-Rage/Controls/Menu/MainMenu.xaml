@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+             xmlns:locale="clr-namespace:DesertRage.Resources.Localization;assembly=DesertRageResources"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              x:Name="This">
@@ -80,13 +81,13 @@
                         </Button.Visibility>
 
                         <Viewbox>
-                            <TextBlock Text="Продолжить начатое"/>
+                            <TextBlock Text="{x:Static locale:Words.Continue}"/>
                         </Viewbox>
                     </Button>
 
                     <Button Grid.Row="3" Click="NewGame">
                         <Viewbox>
-                            <TextBlock Text="Новое приключение"/>
+                            <TextBlock Text="{x:Static locale:Words.NewGame}"/>
                         </Viewbox>
                     </Button>
                 </Grid>
