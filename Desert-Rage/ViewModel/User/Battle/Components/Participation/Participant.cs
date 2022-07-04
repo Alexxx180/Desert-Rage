@@ -21,7 +21,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
                     (this, StatusID.SHIELD) },
                 { StatusID.DEFENCE, new Reinforcement
                     (this, StatusID.DEFENCE) },
-                { StatusID.BERSERK, new Berserk(this) }
+                { StatusID.BERSERK, new Berserk(this) },
+                { StatusID.SPEEDUP, new Reinforcement
+                    (this, StatusID.SPEEDUP) }
             };
         }
 
@@ -32,6 +34,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             AddEvent(StatusID.SHIELD);
             AddEvent(StatusID.DEFENCE);
             AddEvent(StatusID.BERSERK);
+            AddEvent(StatusID.SPEEDUP);
         }
 
         private void AddEvent(StatusID id)
