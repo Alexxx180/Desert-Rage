@@ -116,19 +116,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Beginner" xml:space="preserve">
+    <value>Beginner.ru-RU</value>
+  </data>
   <data name="Foes" xml:space="preserve">
-    <value>Foes</value>
+    <value>Foes.ru-RU</value>
   </data>
   <data name="Bosses" xml:space="preserve">
-    <value>Bosses</value>
+    <value>Bosses.ru-RU</value>
   </data>
   <data name="Equipment" xml:space="preserve">
-    <value>Equipment</value>
+    <value>Equipment.ru-RU</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Help</value>
+    <value>Help.ru-RU</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status.ru-RU</value>
   </data>
   <data name="SecretTemple" xml:space="preserve">
-    <value>SecretTemple</value>
+    <value>SecretTemple.ru-RU</value>
+  </data>
+  <data name="WaterTemple" xml:space="preserve">
+    <value>WaterTemple.ru-RU</value>
+  </data>
+  <data name="FireTemple" xml:space="preserve">
+    <value>FireTemple.ru-RU</value>
+  </data>
+  <data name="TimeChamber" xml:space="preserve">
+    <value>TimeChamber.ru-RU</value>
   </data>
 </root>
