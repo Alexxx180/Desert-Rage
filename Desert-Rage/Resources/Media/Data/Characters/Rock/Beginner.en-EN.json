@@ -263,7 +263,7 @@
         "IsSealed": false,
         "Minimum": 0,
         "Current": 0,
-        "Max": 10
+        "Max": 30
       },
       "Icon": "/Resources/Media/Images/Menu/Skills/Poison.svg",
       "Name": "Poison",
@@ -275,7 +275,7 @@
         "IsSealed": false,
         "Minimum": 0,
         "Current": 0,
-        "Max": 10
+        "Max": 30
       },
       "Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
       "Name": "Power UP",
@@ -287,7 +287,7 @@
         "IsSealed": false,
         "Minimum": 0,
         "Current": 0,
-        "Max": 10
+        "Max": 30
       },
       "Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
       "Name": "Guard",
@@ -299,7 +299,7 @@
         "IsSealed": false,
         "Minimum": 0,
         "Current": 0,
-        "Max": 10
+        "Max": 30
       },
       "Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
       "Name": "Shield",
@@ -311,13 +311,13 @@
         "IsSealed": false,
         "Minimum": 0,
         "Current": 0,
-        "Max": 10
+        "Max": 30
       },
       "Icon": "/Resources/Media/Images/Menu/Stats/Speed.svg",
       "Name": "Berserk",
       "Description": "No one knows what leads him into endless battles."
     }],
    "Icon":"/Resources/Media/Images/Battle/Character/Rock/Icon.svg",
-   "Name":"Рок",
+   "Name":"Rock",
    "Description":"????"
 }
