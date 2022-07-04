@@ -9,16 +9,27 @@ namespace DesertRage.ViewModel
     {
         public GameStart()
         {
-            _unlock = Bank.LoadHeroKeys();
             IsListVisible = false;
-            
             Profiles = new ObservableCollection<string>();
+            CharactersList = new ObservableCollection<IconUnit>();
             LoadProfiles();
+            LoadCharacters();
         }
 
         public void SetProfile(string profile)
         {
             CurrentProfile = profile;
+        }
+
+        private void LoadCharacters()
+        {
+            HashSet<string> unlock = Bank.LoadHeroKeys();
+            foreach (string hero in unlock)
+            {
+                IconUnit unit = Bank.LoadHeroInitials(hero);
+                unit.Description = hero;
+                CharactersList.Add(unit);
+            }
         }
 
         private void LoadProfiles()
@@ -59,6 +70,29 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
             }
         }
+        
+        private IconUnit _currentHero;
+        public IconUnit CurrentHero
+        {
+            get => _currentHero;
+            set
+            {
+                _currentHero = value;
+                OnPropertyChanged();
+            }
+        }
+        
+        private ObservableCollection<IconUnit> _charactersList
+        public ObservableCollection<IconUnit> CharactersList
+        {
+            get => _charactersList;
+            set
+            {
+                _charactersList = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(CanCharacterSelect));
+            }
+        }
 
         private bool _isListVisible;
         public bool IsListVisible
@@ -83,9 +117,7 @@ namespace DesertRage.ViewModel
         }
 
         public bool IsPlayerExists => !IsListVisible && Profiles.Contains(CurrentProfile);
-        public bool CanCharacterSelect => _unlock.Count > 1 && !IsPlayerExists;
-
-        private HashSet<string> _unlock;
+        public bool CanCharacterSelect => CharactersList.Count > 1 && !IsPlayerExists;
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
