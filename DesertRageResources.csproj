@@ -112,25 +112,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Chests.resx</DependentUpon>
     </Compile>
-    <Compile Update="Localization\MainMenu\MainMenu.Designer.cs">
+    <Compile Update="Localization\Paths.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>MainMenu.resx</DependentUpon>
+      <DependentUpon>Paths.resx</DependentUpon>
     </Compile>
-    <Compile Update="Localization\Menu\Items.Designer.cs">
+    <Compile Update="Localization\Words.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Items.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Localization\Menu\Skills.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Skills.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Localization\Menu\Topics.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Topics.resx</DependentUpon>
+      <DependentUpon>Words.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -219,21 +209,19 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Chests.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Localization\MainMenu\MainMenu.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MainMenu.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Menu\Items.resx">
+    <EmbeddedResource Update="Localization\Paths.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Items.Designer.cs</LastGenOutput>
+      <LastGenOutput>Paths.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Menu\Skills.resx">
+    <EmbeddedResource Update="Localization\Paths.ru-RU.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Skills.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Menu\Topics.resx">
+    <EmbeddedResource Update="Localization\Words.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Topics.Designer.cs</LastGenOutput>
+      <LastGenOutput>Words.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Words.ru-RU.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

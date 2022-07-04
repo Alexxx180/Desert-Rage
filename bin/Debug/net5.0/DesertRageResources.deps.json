@@ -9,6 +9,11 @@
       "DesertRageResources/1.0.0": {
         "runtime": {
           "DesertRageResources.dll": {}
+        },
+        "resources": {
+          "ru-RU/DesertRageResources.resources.dll": {
+            "locale": "ru-RU"
+          }
         }
       }
     }

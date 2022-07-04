@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DesertRage.Resources.Localization.Battle.Character {
+namespace DesertRage.Resources.Localization {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace DesertRage.Resources.Localization.Battle.Character {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Ray {
+    public class Paths {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Ray() {
+        internal Paths() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DesertRage.Resources.Localization.Battle.Character {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesertRage.Resources.Localization.Battle.Character.Ray", typeof(Ray).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesertRage.Resources.Localization.Paths", typeof(Paths).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,29 +61,92 @@ namespace DesertRage.Resources.Localization.Battle.Character {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Media/Images/Battle/Character/Ray/Action.svg.
+        ///   Ищет локализованную строку, похожую на Beginner.
         /// </summary>
-        public static string Action {
+        public static string Beginner {
             get {
-                return ResourceManager.GetString("Action", resourceCulture);
+                return ResourceManager.GetString("Beginner", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Media/Images/Battle/Character/Ray/Icon.svg.
+        ///   Ищет локализованную строку, похожую на Bosses.
         /// </summary>
-        public static string Icon {
+        public static string Bosses {
             get {
-                return ResourceManager.GetString("Icon", resourceCulture);
+                return ResourceManager.GetString("Bosses", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на /Media/Images/Battle/Character/Ray/Idle.svg.
+        ///   Ищет локализованную строку, похожую на Equipment.
         /// </summary>
-        public static string Idle {
+        public static string Equipment {
             get {
-                return ResourceManager.GetString("Idle", resourceCulture);
+                return ResourceManager.GetString("Equipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на FireTemple.
+        /// </summary>
+        public static string FireTemple {
+            get {
+                return ResourceManager.GetString("FireTemple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Foes.
+        /// </summary>
+        public static string Foes {
+            get {
+                return ResourceManager.GetString("Foes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Help.
+        /// </summary>
+        public static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SecretTemple.
+        /// </summary>
+        public static string SecretTemple {
+            get {
+                return ResourceManager.GetString("SecretTemple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на TimeChamber.
+        /// </summary>
+        public static string TimeChamber {
+            get {
+                return ResourceManager.GetString("TimeChamber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на WaterTemple.
+        /// </summary>
+        public static string WaterTemple {
+            get {
+                return ResourceManager.GetString("WaterTemple", resourceCulture);
             }
         }
     }
