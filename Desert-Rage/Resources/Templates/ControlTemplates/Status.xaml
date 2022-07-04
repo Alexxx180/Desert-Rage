@@ -3,6 +3,7 @@
                     xmlns:status="clr-namespace:DesertRage.Controls.Status"
                     xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
                     xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
+                    xmlns:locale="clr-namespace:DesertRage.Resources.Localization;assembly=DesertRageResources"
                     xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf">
     <ControlTemplate x:Key="UnitName">
         <TextBlock Style="{StaticResource NameBlock}">
@@ -16,7 +17,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    ОЗ
+                    <x:Static Member="locale.Words.HealthPoints"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>
@@ -34,7 +35,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    ОД
+                    <x:Static Member="locale.Words.ActionPoints"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>
@@ -52,7 +53,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    Время
+                    <x:Static Member="locale.Words.Time"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>
