@@ -1,0 +1,146 @@
+[
+	[{
+		"Type": 0,
+		"Noise": "Weapons/Punch.mp3",
+		"Power": 0,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Attack.svg",
+		"Description": "Who needs a weapon anyway?",
+		"Name": "Empty"
+	}, {
+		"Type": 0,
+		"Noise": "Weapons/Punch.mp3",
+		"Power": 10,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Attack.svg",
+		"Description": "It's time to show your power!",
+		"Name": "Bone brass knuckles"
+	}, {
+		"Type": 0,
+		"Noise": "Weapons/Knife.mp3",
+		"Power": 50,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Attack.svg",
+		"Description": "Breaks through rocks. This is not your toy.",
+		"Name": "Ancient dagger"
+	}, {
+		"Type": 0,
+		"Noise": "Weapons/Sword.mp3",
+		"Power": 200,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Attack.svg",
+		"Description": "Dream sword cutting through the air",
+		"Name": "Sword of Legends"
+	}, {
+		"Type": 0,
+		"Noise": "Weapons/Minigun.mp3",
+		"Power": 255,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Attack.svg",
+		"Description": "You are still beautiful...",
+		"Name": "XM214-A"
+	}],
+	[{
+		"Type": 1,
+		"Noise": null,
+		"Power": 0,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "A clean jersey is everything",
+		"Name": "Empty"
+	}, {
+		"Type": 1,
+		"Noise": null,
+		"Power": 5,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Helps to endure bad weather",
+		"Name": "Black leather jacket"
+	}, {
+		"Type": 1,
+		"Noise": null,
+		"Power": 25,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "For the sake of good things, gold was not spared",
+		"Name": "Ancient armor"
+	}, {
+		"Type": 1,
+		"Noise": null,
+		"Power": 90,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "In the reflection you can see the approach of enemies",
+		"Name": "Armor of legend"
+	}, {
+		"Type": 1,
+		"Noise": null,
+		"Power": 115,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "For true connoisseurs",
+		"Name": "Serious T-shirt"
+	}],
+	[{
+		"Type": 2,
+		"Noise": null,
+		"Power": 0,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Jeans in the middle of the heat has not been canceled",
+		"Name": "Empty
+	}, {
+		"Type": 2,
+		"Noise": null,
+		"Power": 4,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Looks like someone dropped...",
+		"Name": "Vulture Pants"
+	}, {
+		"Type": 2,
+		"Noise": null,
+		"Power": 15,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "According to the latest peep of ancient fashion!",
+		"Name": "Warrior Leggings"
+	}, {
+		"Type": 2,
+		"Noise": null,
+		"Power": 65,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Now the arrows are definitely not scary",
+		"Name": "Leggings of Legend"
+	}, {
+		"Type": 2,
+		"Noise": null,
+		"Power": 85,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "For true connoisseurs",
+		"Name": "Cool Pants"
+	}],
+	[{
+		"Type": 3,
+		"Noise": null,
+		"Power": 0,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Just don't pierce...",
+		"Name": "Empty
+	}, {
+		"Type": 3,
+		"Noise": null,
+		"Power": 1,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Protects from hot rocks",
+		"Name": "Bandages"
+	}, {
+		"Type": 3,
+		"Noise": null,
+		"Power": 10,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Boots of the Born Soldiers",
+		"Name": "Boots of Courage"
+	}, {
+		"Type": 3,
+		"Noise": null,
+		"Power": 45,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Weightless boots made of the most durable material",
+		"Name": "Boots of Legend"
+	}, {
+		"Type": 3,
+		"Noise": null,
+		"Power": 55,
+		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+		"Description": "Know ours!",
+		"Name": "Army boots"
+	}]
+]
