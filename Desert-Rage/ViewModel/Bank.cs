@@ -15,6 +15,7 @@ using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.Model.Locations.Battle;
+using DesertRage.Resources.Localization;
 
 namespace DesertRage.ViewModel
 {
@@ -56,7 +57,7 @@ namespace DesertRage.ViewModel
         #region Prefab Members
         internal static string[] LoadTips()
         {
-            return GetItems<string[]>($"Items/Help.json");
+            return GetItems<string[]>($"Items/{Paths.Help}.json");
         }      
 
         internal static Settings LoadPreferences()
@@ -71,12 +72,12 @@ namespace DesertRage.ViewModel
         
         internal static IconUnit LoadHeroInitials(string name)
         {
-            return GetCharacterData<IconUnit>($"{name}/Beginner");
+            return GetCharacterData<IconUnit>($"{name}/{Paths.Beginner}");
         }
         
         internal static Character LoadHero(string name)
         {
-            return GetCharacterData<Character>($"{name}/Beginner");
+            return GetCharacterData<Character>($"{name}/{Paths.Beginner}");
         }
 
         internal static Location LoadLevel(string name)
@@ -91,17 +92,17 @@ namespace DesertRage.ViewModel
 
         internal static Equipment[][] GetEqupment()
         {
-            return GetItems<Equipment[][]>("Items/Equipment.json");
+            return GetItems<Equipment[][]>("Items/{Paths.Equipment}.json");
         }
 
         internal static Foe[] Foes()
         {
-            return GetItems<Foe[]>("Opponents/Foes.json");
+            return GetItems<Foe[]>("Opponents/{Paths.Foes}.json");
         }
 
         internal static Boss[] Bosses()
         {
-            return GetItems<Boss[]>("Opponents/Bosses.json");
+            return GetItems<Boss[]>("Opponents/{Paths.Bosses}.json");
         }
         #endregion
 
