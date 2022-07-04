@@ -62,7 +62,7 @@
             <StackPanel DataContext="{Binding Path=Preferences}">
                 <controls:Setting>
                     <controls:Setting.Caption>
-                        <x:Static Member="locale.Words.Music"/>
+                        <x:Static Member="locale:Words.Music"/>
                     </controls:Setting.Caption>
 
                     <controls:Setting.SliderSetting>
@@ -76,7 +76,7 @@
 
                 <controls:Setting>
                     <controls:Setting.Caption>
-                        <x:Static Member="locale.Words.Sound"/>
+                        <x:Static Member="locale:Words.Sound"/>
                     </controls:Setting.Caption>
 
                     <controls:Setting.SliderSetting>
@@ -90,7 +90,7 @@
 
                 <controls:Setting>
                     <controls:Setting.Caption>
-                        <x:Static Member="locale.Words.Noise"/>
+                        <x:Static Member="locale:Words.Noise"/>
                     </controls:Setting.Caption>
 
                     <controls:Setting.SliderSetting>
@@ -104,7 +104,7 @@
 
                 <controls:Setting>
                     <controls:Setting.Caption>
-                        <x:Static Member="locale.Words.Brightness"/>
+                        <x:Static Member="locale:Words.Brightness"/>
                     </controls:Setting.Caption>
 
                     <controls:Setting.SliderSetting>
@@ -118,7 +118,7 @@
               
               <controls:Setting>
                     <controls:Setting.Caption>
-                        <x:Static Member="locale.Words.Fighting"/>
+                        <x:Static Member="locale:Words.Fighting"/>
                     </controls:Setting.Caption>
 
                     <controls:Setting.SliderSetting>

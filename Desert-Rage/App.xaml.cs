@@ -8,6 +8,7 @@ using System.Windows;
 using Processors;
 using System.Text.Json;
 using Processors.Converters.Json;
+using System.Globalization;
 
 namespace DesertRage
 {
@@ -31,6 +32,10 @@ namespace DesertRage
         public App()
         {
             AppDomain.CurrentDomain.AssemblyResolve += OnResolveAssembly;
+
+            var culture = new CultureInfo("en-US");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)

@@ -8,6 +8,7 @@ using System;
 using DesertRage.Controls.Menu;
 using DesertRage.ViewModel.User;
 using DesertRage.ViewModel.User.Battle;
+using DesertRage.Resources.Localization;
 
 namespace DesertRage
 {
@@ -73,25 +74,23 @@ namespace DesertRage
             Adventure = profile.ViewModel;
             Adventure.SetEntryPoint(this);
 
-            //System.Diagnostics.Trace.WriteLine(profile.SoundPlayer is null);
             profile.Music("/Resources/Media/OST/Music/MainTitle.mp3");
 
             MainMenu menu = Display.Content as MainMenu;
-            //System.Diagnostics.Trace.WriteLine(profile.SoundPlayer is null);
 
             menu.StartViewModel.SetProfile(profile.Preferences.Name);
         }
 
         #region Model Members
-        internal void NewAdventure(string profile)
+        internal void NewAdventure(string profile, string hero)
         {
             Bank.MakeProfile(profile);
 
             MapWorker user = Adventure.Human.Player;
 
-            user.SetHero(Bank.LoadHero("Ray"));
-            user.SetLevel(Bank.LoadLevel("SecretTemple"));
-            user.SetName(profile);
+            user.SetHero(Bank.LoadHero(hero));
+            user.SetLevel(Bank.LoadLevel(Paths.SecretTemple));
+            user.SetName(profile, hero);
 
             user.SetHeroStart();
             user.SaveGame();

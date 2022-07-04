@@ -47,6 +47,11 @@ namespace DesertRage.Controls.Menu
             Arrow = "▲";
         }
 
+        private void NextHero(object sender, RoutedEventArgs e)
+        {
+            ViewModel.Next();
+        }
+
         #region ProfilesManagement Members
         private void ProfilesMove(object sender, MouseEventArgs e)
         {
@@ -101,6 +106,7 @@ namespace DesertRage.Controls.Menu
                 {
                     Bank.DropProfile(profile);
                 }
+                _toDrop.Clear();
                 ViewModel.UpdatePlayers();
             }
         }

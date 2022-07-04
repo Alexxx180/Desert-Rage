@@ -316,7 +316,20 @@
       "Icon": "/Resources/Media/Images/Menu/Stats/Speed.svg",
       "Name": "Berserk",
       "Description": "No one knows what leads him into endless battles."
-    }],
+    },
+      {
+         "Time": {
+            "IsMax": false,
+            "IsEmpty": true,
+            "IsSealed": false,
+            "Minimum": 0,
+            "Current": 0,
+            "Max": 30
+         },
+         "Icon": "/Resources/Media/Images/Menu/Skills/SpeedUp.svg",
+         "Description": "Woo-Hoo, SuperSpeed!",
+         "Name": "Speed UP"
+      }],
    "Icon":"/Resources/Media/Images/Battle/Character/Rock/Icon.svg",
    "Name":"Rock",
    "Description":"????"

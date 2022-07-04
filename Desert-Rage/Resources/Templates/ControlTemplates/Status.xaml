@@ -17,7 +17,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    <x:Static Member="locale.Words.HealthPoints"/>
+                    <x:Static Member="locale:Words.HealthPoints"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>
@@ -35,7 +35,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    <x:Static Member="locale.Words.ActionPoints"/>
+                    <x:Static Member="locale:Words.ActionPoints"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>
@@ -53,7 +53,7 @@
         <Grid DataContext="{Binding}">
             <status:StatBar>
                 <status:StatBar.Caption>
-                    <x:Static Member="locale.Words.Time"/>
+                    <x:Static Member="locale:Words.Time"/>
                 </status:StatBar.Caption>
 
                 <status:StatBar.Bar>

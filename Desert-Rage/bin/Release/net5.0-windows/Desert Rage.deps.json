@@ -96,6 +96,11 @@
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
+        },
+        "resources": {
+          "ru-RU/DesertRageResources.resources.dll": {
+            "locale": "ru-RU"
+          }
         }
       },
       "Processors/1.0.0.0": {

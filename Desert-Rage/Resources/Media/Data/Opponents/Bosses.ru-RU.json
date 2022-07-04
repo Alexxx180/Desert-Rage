@@ -92,6 +92,19 @@
             "Icon":null,
             "Description":null,
             "Name":null
+         },
+         {
+            "Time":{
+               "IsMax":true,
+               "IsEmpty":true,
+               "IsSealed":true,
+               "Minimum":0,
+               "Current":0,
+               "Max":0
+            },
+            "Icon":null,
+            "Description":null,
+            "Name":null
          }
       ],
       "Icon":"/Resources/Media/Images/Battle/Bosses/Pharaoh/Idle.svg",
@@ -127,6 +140,19 @@
       "BattleSpeed":0.3529412,
       "Action":"/Resources/Media/Images/Battle/Bosses/Friend/Action.svg",
       "StatusInfo":[
+         {
+            "Time":{
+               "IsMax":true,
+               "IsEmpty":true,
+               "IsSealed":true,
+               "Minimum":0,
+               "Current":0,
+               "Max":0
+            },
+            "Icon":null,
+            "Description":null,
+            "Name":null
+         },
          {
             "Time":{
                "IsMax":true,
@@ -290,6 +316,19 @@
             "Icon":null,
             "Description":null,
             "Name":null
+         },
+         {
+            "Time":{
+               "IsMax":true,
+               "IsEmpty":true,
+               "IsSealed":true,
+               "Minimum":0,
+               "Current":0,
+               "Max":0
+            },
+            "Icon":null,
+            "Description":null,
+            "Name":null
          }
       ],
       "Icon":"/Resources/Media/Images/Battle/Bosses/TheRuler/Idle.svg",
@@ -325,6 +364,19 @@
       "BattleSpeed":0.19607843,
       "Action":"/Resources/Media/Images/Battle/Bosses/UghZan/Action.svg",
       "StatusInfo":[
+         {
+            "Time":{
+               "IsMax":true,
+               "IsEmpty":true,
+               "IsSealed":true,
+               "Minimum":0,
+               "Current":0,
+               "Max":0
+            },
+            "Icon":null,
+            "Description":null,
+            "Name":null
+         },
          {
             "Time":{
                "IsMax":true,

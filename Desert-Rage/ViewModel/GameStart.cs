@@ -2,6 +2,10 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Collections.Generic;
+using DesertRage.Model;
+using DesertRage.Model.Locations.Battle.Stats.Player;
+using System.Windows;
 
 namespace DesertRage.ViewModel
 {
@@ -9,9 +13,10 @@ namespace DesertRage.ViewModel
     {
         public GameStart()
         {
+            _heroIndex = 0;
             IsListVisible = false;
             Profiles = new ObservableCollection<string>();
-            CharactersList = new ObservableCollection<IconUnit>();
+            CharactersList = new ObservableCollection<DescriptionUnit>();
             LoadProfiles();
             LoadCharacters();
         }
@@ -26,10 +31,11 @@ namespace DesertRage.ViewModel
             HashSet<string> unlock = Bank.LoadHeroKeys();
             foreach (string hero in unlock)
             {
-                IconUnit unit = Bank.LoadHeroInitials(hero);
+                DescriptionUnit unit = Bank.LoadHeroInitials(hero);
                 unit.Description = hero;
                 CharactersList.Add(unit);
             }
+            CurrentHero = CharactersList[_heroIndex];
         }
 
         private void LoadProfiles()
@@ -57,6 +63,7 @@ namespace DesertRage.ViewModel
                 _currentProfile = value;
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(IsPlayerExists));
+                OnPropertyChanged(nameof(CanCharacterSelect));
             }
         }
 
@@ -70,9 +77,9 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
             }
         }
-        
-        private IconUnit _currentHero;
-        public IconUnit CurrentHero
+
+        private DescriptionUnit _currentHero;
+        public DescriptionUnit CurrentHero
         {
             get => _currentHero;
             set
@@ -81,9 +88,9 @@ namespace DesertRage.ViewModel
                 OnPropertyChanged();
             }
         }
-        
-        private ObservableCollection<IconUnit> _charactersList
-        public ObservableCollection<IconUnit> CharactersList
+
+        private ObservableCollection<DescriptionUnit> _charactersList;
+        public ObservableCollection<DescriptionUnit> CharactersList
         {
             get => _charactersList;
             set
@@ -103,6 +110,7 @@ namespace DesertRage.ViewModel
                 _isListVisible = value;
                 OnPropertyChanged();
                 UpdatePlayers();
+                OnPropertyChanged(nameof(CanCharacterSelect));
             }
         }
 
@@ -116,8 +124,27 @@ namespace DesertRage.ViewModel
             OnPropertyChanged(nameof(IsPlayerExists));
         }
 
+        public void Next()
+        {
+            CurrentHero = CharactersList[_heroIndex];
+            _heroIndex++;
+            _heroIndex %= CharactersList.Count;
+        }
+
+        private int _heroIndex;
+
         public bool IsPlayerExists => !IsListVisible && Profiles.Contains(CurrentProfile);
-        public bool CanCharacterSelect => CharactersList.Count > 1 && !IsPlayerExists;
+        
+        public bool CanCharacterSelect
+        {
+            get
+            {
+                bool isAble = CharactersList.Count > 1;
+                isAble &= !IsListVisible;
+                isAble &= !Profiles.Contains(CurrentProfile);
+                return isAble;
+            }
+        }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

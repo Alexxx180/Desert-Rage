@@ -16,6 +16,7 @@ using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Stat
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Resources.Localization;
+using DesertRage.Model;
 
 namespace DesertRage.ViewModel
 {
@@ -39,6 +40,8 @@ namespace DesertRage.ViewModel
         private static T GetData<T>(string path)
         {
             string full = path.ToFull();
+            System.Diagnostics.Trace.WriteLine(full);
+
             return File.Exists(full) ?
                 App.Processor.Read<T>(full) :
                 default;
@@ -49,7 +52,7 @@ namespace DesertRage.ViewModel
             return GetData<T>($"{DataDirectory}/{path}");
         }
         
-        private static T GetCharacterData(string name)
+        private static T GetCharacterData<T>(string name)
         {
             return GetItems<T>($"Characters/{name}.json");
         }
@@ -70,9 +73,10 @@ namespace DesertRage.ViewModel
             return GetCharacterData<HashSet<string>>("Unlock");
         }
         
-        internal static IconUnit LoadHeroInitials(string name)
+        internal static DescriptionUnit LoadHeroInitials(string name)
         {
-            return GetCharacterData<IconUnit>($"{name}/{Paths.Beginner}");
+            System.Diagnostics.Trace.WriteLine(Paths.Beginner);
+            return GetCharacterData<DescriptionUnit>($"{name}/{Paths.Beginner}");
         }
         
         internal static Character LoadHero(string name)
@@ -92,17 +96,17 @@ namespace DesertRage.ViewModel
 
         internal static Equipment[][] GetEqupment()
         {
-            return GetItems<Equipment[][]>("Items/{Paths.Equipment}.json");
+            return GetItems<Equipment[][]>($"Items/{Paths.Equipment}.json");
         }
 
         internal static Foe[] Foes()
         {
-            return GetItems<Foe[]>("Opponents/{Paths.Foes}.json");
+            return GetItems<Foe[]>($"Opponents/{Paths.Foes}.json");
         }
 
         internal static Boss[] Bosses()
         {
-            return GetItems<Boss[]>("Opponents/{Paths.Bosses}.json");
+            return GetItems<Boss[]>($"Opponents/{Paths.Bosses}.json");
         }
         #endregion
 

@@ -88,16 +88,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Fight}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Fight}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.FightDescription}"/>
+                            <Run Text="{x:Static locale:Words.FightDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
                     
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Fight}" Style="{StaticResource VerticalCenter}" />
+                        <TextBlock Text="{x:Static locale:Words.Fight}" Style="{StaticResource VerticalCenter}" />
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -131,16 +131,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Skills}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Skills}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.SkillDescription}"/>
+                            <Run Text="{x:Static locale:Words.SkillDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Skills}" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale:Words.Skills}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -171,16 +171,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Items}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Items}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.ItemsDescription}"/>
+                            <Run Text="{x:Static locale:Words.ItemsDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Items}" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale:Words.Items}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -211,16 +211,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Shield}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Shield}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.ShieldDescription}"/>
+                            <Run Text="{x:Static locale:Words.ShieldDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Shield}" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale:Words.Shield}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>
@@ -238,16 +238,16 @@
                     </MenuItem.Style>
 
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Escape}" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale:Words.Escape}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Escape}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Escape}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.EscapeDescription}"/>
+                            <Run Text="{x:Static locale:Words.EscapeDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
@@ -267,16 +267,16 @@
 
                     <MenuItem.ToolTip>
                         <TextBlock>
-                            <Run FontWeight="Bold" Text="{x:Static locale.Words.Berserk}"/>
+                            <Run FontWeight="Bold" Text="{x:Static locale:Words.Berserk}"/>
                             
                             <LineBreak/>
                             
-                            <Run Text="{x:Static locale.Words.BerserkDescription}"/>
+                            <Run Text="{x:Static locale:Words.BerserkDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
 
                     <MenuItem.Header>
-                        <TextBlock Text="{x:Static locale.Words.Berserk}" Style="{StaticResource VerticalCenter}"/>
+                        <TextBlock Text="{x:Static locale:Words.Berserk}" Style="{StaticResource VerticalCenter}"/>
                     </MenuItem.Header>
 
                     <MenuItem.Icon>

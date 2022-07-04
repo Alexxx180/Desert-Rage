@@ -101,9 +101,10 @@ namespace DesertRage.ViewModel.User
             Bank.SavePreferences(Preferences);
         }
 
-        public void SetName(string name)
+        public void SetName(string name, string hero)
         {
             Preferences.Name = name;
+            Preferences.Description = hero;
             SaveProfileName();
         }
 

@@ -599,7 +599,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\DesertRageResources.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Processors.pdb
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\ru-RU\Processors.resources.dll
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Autorization.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\Controls\Menu\Game\BestiaryLayout.baml
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\Controls\Scenes\Map\MapTile.baml
@@ -689,3 +688,19 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Schofield45.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\SingleShotgun.mp3
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\TommyGun.mp3
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\ru-RU\DesertRageResources.resources.dll
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Unlock.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.AssemblyReference.cache
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Ray\Beginner.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Rock\Beginner.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Sam\Beginner.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Equipment.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Help.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Status.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\FireTemple.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\SecretTemple.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\TimeChamber.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\WaterTemple.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Opponents\Bosses.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Opponents\Foes.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Rock\Beginner.json

@@ -24,11 +24,19 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Spider/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -90,8 +98,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Spider/Idle.svg",
-	"Description": "\u042D\u0442\u043E\u0442 \u043F\u0430\u0443\u043A \u0442\u0430\u043A \u0434\u043E\u043B\u0433\u043E \u043F\u0438\u0442\u0430\u043B\u0441\u044F \u0433\u043D\u0438\u043B\u044C\u0435\u043C, \u0447\u0442\u043E \u0441\u0430\u043C \u0441\u0442\u0430\u043B \u0440\u0430\u0437\u043D\u043E\u0441\u0447\u0438\u043A\u043E\u043C \u0437\u0430\u0440\u0430\u0437\u044B. \u0418 \u0432\u043E\u0432\u0441\u0435 \u043D\u0435 \u0445\u043E\u0447\u0435\u0442\u0441\u044F \u043F\u0440\u043E\u0432\u0435\u0440\u044F\u0442\u044C, \u0447\u0442\u043E \u043E\u043D \u043C\u043E\u0436\u0435\u0442 \u0432\u0437\u044F\u0442\u044C\u0441\u044F \u0437\u0430 \u0447\u0442\u043E-\u0442\u043E \u043F\u043E\u0441\u0432\u0435\u0436\u0435\u0435...",
-	"Name": "\u041F\u0430\u0443\u043A"
+	"Description": "This spider has been feeding on rot for so long that it has become a carrier of infection itself. And I don’t want to check at all that he can take on something fresher ...",
+	"Name": "Spider"
 }, {
 	"ID": 1,
 	"Drop": 0,
@@ -118,11 +126,19 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Mummy/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -184,8 +200,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Mummy/Idle.svg",
-	"Description": "\u041D\u0435\u043F\u043E\u0445\u043E\u0436\u0435, \u0447\u0442\u043E \u043A\u0442\u043E-\u0442\u043E \u0440\u0430\u0441\u0441\u043A\u0430\u0437\u0430\u043B \u044D\u0442\u043E\u043C\u0443 \u0431\u0435\u0434\u043E\u043B\u0430\u0433\u0435 \u043A\u0430\u043A \u0441\u043D\u044F\u0442\u044C \u0431\u0438\u043D\u0442\u044B. \u0425\u043E\u0442\u044F \u0441\u0442\u043E\u0439\u0442\u0435... \u042D\u0442\u043E \u0436\u0435 \u0445\u043E\u0434\u044F\u0447\u0438\u0439 \u0431\u0438\u043D\u0442!",
-	"Name": "\u041C\u0443\u043C\u0438\u044F"
+	"Description": "It doesn't look like anyone told this poor fellow how to remove the bandages. But wait... It's a walking bandage!",
+	"Name": "Mummy"
 }, {
 	"ID": 2,
 	"Drop": 2,
@@ -212,11 +228,19 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Zombie/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -278,8 +302,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Zombie/Idle.svg",
-	"Description": "\u041C\u043D\u043E\u0433\u0438\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E \u0441\u0447\u0438\u0442\u0430\u043B\u0438 \u0437\u043E\u043C\u0431\u0438 \u043C\u0435\u0440\u0442\u0432\u0435\u0446\u043E\u043C, \u0441\u043F\u043E\u0441\u043E\u0431\u043D\u044B\u043C \u0441\u043B\u043E\u0432\u043D\u043E \u0433\u0435\u043F\u0430\u0440\u0434 \u0433\u043E\u043D\u044F\u0442\u044C\u0441\u044F \u0437\u0430 \u043B\u044E\u0434\u044C\u043C\u0438? \u0411\u0440\u043E\u0441\u044C\u0442\u0435, \u044D\u0442\u043E \u0436\u0435 \u043F\u043E\u0447\u0442\u0438 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0440\u0430\u0437\u043B\u043E\u0436\u0438\u0432\u0448\u0438\u0439\u0441\u044F \u0442\u0440\u0443\u043F. \u041E\u043D \u0443\u043C\u043E\u043B\u044F\u0435\u0442 \u043E \u0442\u043E\u043C, \u0447\u0442\u043E\u0431\u044B \u0435\u0433\u043E \u0434\u043E\u0431\u0438\u043B\u0438.",
-	"Name": "\u0417\u043E\u043C\u0431\u0438"
+	"Description": "Did many people really consider zombies to be dead, capable of chasing people like a cheetah? Come on, it's almost a completely decomposed corpse. He begs to be beaten.",
+	"Name": "Zombie"
 }, {
 	"ID": 3,
 	"Drop": 3,
@@ -306,11 +330,19 @@
 		"Special": 0
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -372,8 +404,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
-	"Description": "\u041E\u043D \u043D\u0435 \u043A\u0430\u0436\u0435\u0442\u0441\u044F \u0442\u0430\u043A\u0438\u043C \u0443\u0436 \u0431\u0435\u0437\u043E\u0431\u0438\u0434\u043D\u044B\u043C. \u0421\u043F\u0443\u0441\u0442\u044F \u0442\u0430\u043A\u043E\u0439 \u0441\u0442\u0430\u0436 \u043E\u0445\u0440\u0430\u043D\u044B \u0443 \u043D\u0435\u0433\u043E \u0431\u0443\u0434\u0435\u0442 \u043A \u0432\u0430\u043C \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u0439 \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440.",
-	"Name": "\u0421\u0442\u0440\u0430\u0436"
+	"Description": "He doesn't seem so harmless. After such a length of service, he will have a serious conversation with you.",
+	"Name": "Guardian"
 }, {
 	"ID": 4,
 	"Drop": 3,
@@ -400,11 +432,19 @@
 		"Special": 30
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Vulture/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -466,8 +506,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Vulture/Idle.svg",
-	"Description": "\u042D\u0442\u043E \u043F\u0442\u0438\u0446\u0430? \u042D\u0442\u043E \u0432\u0438\u043D\u0442\u043E\u043A\u0440\u044B\u043B? \u041D\u0435\u0442, \u044D\u0442\u043E \u0440\u0443\u0447\u043D\u043E\u0439 \u0433\u0443\u0441\u044C \u0413\u043E\u0448\u0430, \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0445\u043E\u0437\u044F\u0435\u0432\u0430 \u0441\u043D\u043E\u0432\u0430 \u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0438 \u0433\u043E\u043B\u043E\u0434\u043D\u044B\u043C \u043E\u0434\u043D\u043E\u0433\u043E.",
-	"Name": "\u0421\u0442\u0435\u0440\u0432\u044F\u0442\u043D\u0438\u043A"
+	"Description": "Is it a bird? Is it a rotorcraft? No, this is a tame goose Gosha, which the owners left hungry again alone.",
+	"Name": "Vulture"
 }, {
 	"ID": 5,
 	"Drop": 1,
@@ -494,11 +534,19 @@
 		"Special": 25
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Ghoul/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -560,8 +608,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Ghoul/Idle.svg",
-	"Description": "\u0421\u0442\u0440\u0430\u0448\u043D\u044B\u0439 \u0442\u0438\u043F. \u041D\u0430 \u0433\u043B\u0430\u0437\u0430 \u043A \u0442\u0430\u043A\u043E\u043C\u0443 \u043B\u0443\u0447\u0448\u0435 \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u043F\u043E\u043F\u0430\u0434\u0430\u0442\u044C\u0441\u044F.",
-	"Name": "\u0413\u0443\u043B\u044C"
+	"Description": "Terrible type. It’s better not to get caught in the eye of such a thing.",
+	"Name": "Ghoul"
 }, {
 	"ID": 6,
 	"Drop": 5,
@@ -588,11 +636,19 @@
 		"Special": 60
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -654,8 +710,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Idle.svg",
-	"Description": "\u0423 \u043D\u0435\u0433\u043E \u0445\u043E\u0440\u043E\u0448\u0430\u044F \u043A\u043E\u0441\u0430 \u0437\u0430 \u043F\u043B\u0435\u0447\u0430\u043C\u0438, \u0432\u043E\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u043D\u0435 \u0432\u0438\u0434\u043D\u043E \u043D\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u043F\u043E\u043B\u044F \u0441 \u043F\u0448\u0435\u043D\u0438\u0446\u0435\u0439 \u043F\u043E\u0441\u0440\u0435\u0434\u0438 \u043F\u0443\u0441\u0442\u044B\u043D\u0438...",
-	"Name": "\u0416\u043D\u0435\u0446"
+	"Description": "He has a good scythe behind his shoulders, but not a single field with wheat is visible in the middle of the desert ...",
+	"Name": "Reaper"
 }, {
 	"ID": 7,
 	"Drop": 4,
@@ -682,11 +738,19 @@
 		"Special": 75
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Scarab/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -748,8 +812,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Scarab/Idle.svg",
-	"Description": "\u042D\u0442\u043E\u0442 \u0441\u043A\u0430\u0440\u0430\u0431\u0435\u0439 \u0440\u0435\u0448\u0438\u043B \u043F\u043E\u0434\u043D\u044F\u0442\u044C\u0441\u044F, \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u044F \u0440\u0430\u0431\u043E\u0442\u0435\u043D\u043A\u0443 \u043F\u043E\u0441\u043B\u043E\u0436\u043D\u0435\u0435 \u0441\u0432\u043E\u0438\u0445 \u0436\u0443\u0447\u044C\u0438\u0445 \u043E\u0431\u044F\u0437\u0430\u043D\u043D\u043E\u0441\u0442\u0435\u0439.",
-	"Name": "\u0421\u043A\u0430\u0440\u0430\u0431\u0435\u0439"
+	"Description": "This scarab decided to rise, doing a job that was harder than his bug duties.",
+	"Name": "Scarab"
 }, {
 	"ID": 8,
 	"Drop": 1,
@@ -776,11 +840,19 @@
 		"Special": 75
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/KillerMole/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -842,8 +914,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/KillerMole/Idle.svg",
-	"Description": "\u0422\u0430\u043A\u0443\u044E \u043F\u0440\u0435\u043B\u0435\u0441\u0442\u044C \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u0437\u0430\u0445\u043E\u0447\u0435\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u0432 \u0441\u0432\u043E\u0435\u043C \u0448\u043A\u0430\u0444\u0443.",
-	"Name": "\u041C\u043E\u043B\u044C-\u0443\u0431\u0438\u0439\u0446\u0430"
+	"Description": "You will definitely not want to find such charm in your closet.",
+	"Name": "Moth-Killer"
 }, {
 	"ID": 9,
 	"Drop": 5,
@@ -870,11 +942,19 @@
 		"Special": 140
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Imp/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -936,8 +1016,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Imp/Idle.svg",
-	"Description": "\u041A\u043E\u0432\u0430\u0440\u043D\u044B\u0439, \u0431\u0435\u0437\u0436\u0430\u043B\u043E\u0441\u0442\u043D\u044B\u0439, \u044D\u0442\u043E\u0442 \u0431\u0435\u0441 \u044F\u0432\u043D\u043E \u043D\u0435 \u0445\u043E\u0447\u0435\u0442 \u043D\u0435 \u0437\u0432\u0430\u043D\u044B\u0445 \u0433\u043E\u0441\u0442\u0435\u0439.",
-	"Name": "\u041F\u0440\u0438\u0441\u043B\u0443\u0436\u043D\u0438\u043A"
+	"Description": "Insidious, ruthless, this demon clearly does not want uninvited guests.",
+	"Name": "Servant"
 }, {
 	"ID": 10,
 	"Drop": 4,
@@ -964,11 +1044,19 @@
 		"Special": 100
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Worm/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -1030,8 +1118,8 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Worm/Idle.svg",
-	"Description": "\u042D\u0442\u043E\u0442 \u043F\u043E\u0436\u0438\u0440\u0430\u0442\u0435\u043B\u044C \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0433\u0440\u043E\u043C\u043D\u044B\u0439, \u0447\u0442\u043E \u0442\u043E\u0440\u0447\u0438\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0435\u0433\u043E \u0445\u0432\u043E\u0441\u0442. \u0421\u0430\u043C\u043E\u0435 \u0432\u0440\u0435\u043C\u044F \u043C\u0430\u043B\u043E\u0441\u0442\u044C \u0435\u0433\u043E \u0443\u043A\u043E\u0440\u043E\u0442\u0438\u0442\u044C...",
-	"Name": "\u041F\u0435\u0441\u0447\u0430\u043D\u044B\u0439 \u0447\u0435\u0440\u0432\u044C"
+	"Description": "This devourer is so huge that only its tail sticks out. It's time to shorten it a little...",
+	"Name": "Sandworm"
 }, {
 	"ID": 11,
 	"Drop": 6,
@@ -1058,11 +1146,19 @@
 		"Special": 160
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Master/Action.svg",
-	"Status": {
-		"Bytes": "AA==",
-		"Length": 5
-	},
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -1124,6 +1220,6 @@
 		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Master/Idle.svg",
-	"Description": "\u0417\u043D\u0430\u0442\u043E\u043A\u0430 \u0441\u0432\u043E\u0435\u0433\u043E \u0434\u0435\u043B\u0430 \u0432\u0438\u0434\u043D\u043E \u0441\u0440\u0430\u0437\u0443. \u041D\u043E, \u043A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E, \u0441\u0433\u043E\u0432\u043E\u0440\u0447\u0438\u0432\u043E\u0441\u0442\u044C\u044E \u043E\u043D \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u0432\u044B\u0434\u0435\u043B\u044F\u0435\u0442\u0441\u044F.",
-	"Name": "\u041C\u0430\u0441\u0442\u0435\u0440"
+	"Description": "An expert in his field can be seen immediately. But, unfortunately, he definitely does not stand out for accommodating.",
+	"Name": "Master"
 }]

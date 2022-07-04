@@ -59,60 +59,44 @@
                 <ColumnDefinition Width="35"/>
             </Grid.ColumnDefinitions>
 
-            <DockPanel>
-              <ItemsControl DockPanel.Dock="Left">
-                <ItemsControl.HorizontalAlignment>
-                    Left
-                </ItemsControl.HorizontalAlignment>
-                
-                <ItemsControl.SelectedItem>
-                    <Binding Path="CurrentHero"/>
-                </ItemsControl.SelectedItem>
-                
-                <ItemsControl.ItemsSource>
-                    <Binding Path="CharactersList"/>
-                </ItemsControl.ItemsSource>
-                
-                <ItemsControl.Visibility>
-                    <Binding Path="CanCharacterSelect">
-                        <Binding.Converter>
-                            <converters:VisibilityConverter/>
-                        </Binding.Converter>
-                    </Binding>
-                </ItemsControl.Visibility>
-                
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <ComboBox/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                
-                <ItemsControl.ItemTemplate>
-                    <StaticResource ResourceKey="IconTemplate"/>
-                </ItemsControl.ItemTemplate>
-              </ItemsControl>
-              
-              <TextBox MaxLength="30" DockPanel.Dock="Right">
-                <TextBox.HorizontalAlignment>
-                    Right
-                </TextBox.HorizontalAlignment>
-                
-                <TextBox.Style>
-                    <StaticResource ResourceKey="NameField"/>
-                </TextBox.Style>
+            <DockPanel DataContext="{Binding Path=ViewModel}">
+                <Border Width="35">
+                    <Border.Visibility>
+                        <Binding Path="CanCharacterSelect">
+                            <Binding.Converter>
+                                <converters:VisibilityConverter/>
+                            </Binding.Converter>
+                        </Binding>
+                    </Border.Visibility>
 
-                <TextBox.Text>
-                    <Binding Path="ViewModel.CurrentProfile">
-                        <Binding.Mode>
-                            TwoWay
-                        </Binding.Mode>
+                    <Button Click="NextHero">
+                        <Button.DataContext>
+                            <Binding Path="CurrentHero"/>
+                        </Button.DataContext>
 
-                        <Binding.UpdateSourceTrigger>
-                            PropertyChanged
-                        </Binding.UpdateSourceTrigger>
-                    </Binding>
-                  </TextBox.Text>
-              </TextBox>
+                        <Button.Template>
+                            <StaticResource ResourceKey="UnitIcon"/>
+                        </Button.Template>
+                    </Button>
+                </Border>
+
+                <TextBox MaxLength="30" DockPanel.Dock="Right">
+                    <TextBox.Style>
+                        <StaticResource ResourceKey="NameField"/>
+                    </TextBox.Style>
+
+                    <TextBox.Text>
+                        <Binding Path="CurrentProfile">
+                            <Binding.Mode>
+                                TwoWay
+                            </Binding.Mode>
+
+                            <Binding.UpdateSourceTrigger>
+                                PropertyChanged
+                            </Binding.UpdateSourceTrigger>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
             </DockPanel>
 
             <Button Grid.Column="1" Click="UseProfile">

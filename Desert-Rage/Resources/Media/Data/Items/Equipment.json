@@ -77,7 +77,7 @@
 		"Power": 0,
 		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
 		"Description": "Jeans in the middle of the heat has not been canceled",
-		"Name": "Empty
+		"Name": "Empty"
 	}, {
 		"Type": 2,
 		"Noise": null,
@@ -113,7 +113,7 @@
 		"Power": 0,
 		"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
 		"Description": "Just don't pierce...",
-		"Name": "Empty
+		"Name": "Empty"
 	}, {
 		"Type": 3,
 		"Noise": null,

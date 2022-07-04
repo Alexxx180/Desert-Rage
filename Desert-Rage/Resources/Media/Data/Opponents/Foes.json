@@ -84,6 +84,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Spider/Idle.svg",
 	"Description": "This spider has been feeding on rot for so long that it has become a carrier of infection itself. And I don’t want to check at all that he can take on something fresher ...",
@@ -115,6 +127,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Mummy/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -264,6 +288,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Zombie/Idle.svg",
 	"Description": "Did many people really consider zombies to be dead, capable of chasing people like a cheetah? Come on, it's almost a completely decomposed corpse. He begs to be beaten.",
@@ -295,6 +331,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -444,6 +492,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Vulture/Idle.svg",
 	"Description": "Is it a bird? Is it a rotorcraft? No, this is a tame goose Gosha, which the owners left hungry again alone.",
@@ -475,6 +535,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Ghoul/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -624,6 +696,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/GrimReaper/Idle.svg",
 	"Description": "He has a good scythe behind his shoulders, but not a single field with wheat is visible in the middle of the desert ...",
@@ -655,6 +739,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Scarab/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -804,6 +900,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/KillerMole/Idle.svg",
 	"Description": "You will definitely not want to find such charm in your closet.",
@@ -835,6 +943,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Imp/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,
@@ -984,6 +1104,18 @@
 		"Icon": null,
 		"Description": null,
 		"Name": null
+	}, {
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
 	}],
 	"Icon": "/Resources/Media/Images/Battle/Enemies/Worm/Idle.svg",
 	"Description": "This devourer is so huge that only its tail sticks out. It's time to shorten it a little...",
@@ -1015,6 +1147,18 @@
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Master/Action.svg",
 	"StatusInfo": [{
+		"Time": {
+			"IsMax": true,
+			"IsEmpty": true,
+			"IsSealed": true,
+			"Minimum": 0,
+			"Current": 0,
+			"Max": 0
+		},
+		"Icon": null,
+		"Description": null,
+		"Name": null
+	}, {
 		"Time": {
 			"IsMax": true,
 			"IsEmpty": true,

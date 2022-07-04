@@ -42,7 +42,9 @@ namespace DesertRage.Controls.Menu
 
         private void NewGame(object sender, RoutedEventArgs e)
         {
-            Main.NewAdventure(StartViewModel.CurrentProfile);
+            string profile = StartViewModel.CurrentProfile;
+            string hero = StartViewModel.CurrentHero.Description;
+            Main.NewAdventure(profile, hero);
         }
 
         private void Continue(object sender, RoutedEventArgs e)
