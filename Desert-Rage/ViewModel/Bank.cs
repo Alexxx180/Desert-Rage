@@ -47,21 +47,31 @@ namespace DesertRage.ViewModel
         {
             return GetData<T>($"{DataDirectory}/{path}");
         }
+        
+        private static T GetCharacterData(string name)
+        {
+            return GetItems<T>($"Characters/{name}.json");
+        }
 
         #region Prefab Members
         internal static string[] LoadTips()
         {
             return GetItems<string[]>($"Items/Help.json");
-        }
+        }      
 
         internal static Settings LoadPreferences()
         {
             return GetItems<Settings>($"Items/Preferences.json");
         }
 
+        internal static HashSet<string> LoadHeroKeys()
+        {
+            return GetCharacterData<HashSet<string>>("Unlock");
+        }
+        
         internal static Character LoadHero(string name)
         {
-            return GetItems<Character>($"Characters/{name}/Beginner.json");
+            return GetCharacterData<Character>($"{name}/Beginner");
         }
 
         internal static Location LoadLevel(string name)
