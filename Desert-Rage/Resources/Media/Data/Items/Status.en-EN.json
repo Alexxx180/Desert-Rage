@@ -1,0 +1,61 @@
+[{
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/Poison.svg",
+	"Name": "Poison",
+	"Description": "Ugly goo, flowing through the veins. Slowly drains strength."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+	"Name": "Power UP",
+	"Description": "Focusing helps you hit much more effectively."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+	"Name": "Guard",
+	"Description": "Being vigilant is one of the components of invulnerability."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+	"Name": "Shield",
+	"Description": "With a good stance and a block, everything is on the shoulder."
+}, {
+	"Time": {
+		"IsMax": false,
+		"IsEmpty": true,
+		"IsSealed": false,
+		"Minimum": 0,
+		"Current": 0,
+		"Max": 10
+	},
+	"Icon": "/Resources/Media/Images/Menu/Stats/Speed.svg",
+	"Name": "Berserk",
+	"Description": "No one knows what leads him into endless battles."
+}]
