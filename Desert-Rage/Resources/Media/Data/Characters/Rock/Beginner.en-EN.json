@@ -1,0 +1,323 @@
+{
+   "Image":"/Resources/Media/Images/Battle/Character/Rock/Idle.svg",
+   "Skills":[
+      0
+   ],
+   "Level":1,
+   "Experience":{
+      "IsMax":false,
+      "IsEmpty":true,
+      "IsSealed":false,
+      "Minimum":0,
+      "Current":0,
+      "Max":25
+   },
+   "ToNextLevel":[
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":25
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":50
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":100
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":200
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":300
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":400
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":500
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":1000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":1200
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":1400
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":1600
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":1800
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":2000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":3000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":4000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":5000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":6000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":7500
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":9000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":11000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":13000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":15000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":20000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":25000
+      },
+      {
+         "Minimum":0,
+         "Current":0,
+         "Max":0
+      }
+   ],
+   "Ap":{
+      "IsMax":true,
+      "IsEmpty":false,
+      "IsSealed":false,
+      "Minimum":0,
+      "Current":50,
+      "Max":50
+   },
+   "Equipment":[
+      {
+         "Kind":0,
+         "Set":0
+      },
+      {
+         "Kind":1,
+         "Set":0
+      },
+      {
+         "Kind":2,
+         "Set":0
+      },
+      {
+         "Kind":3,
+         "Set":0
+      }
+   ],
+   "Equipped":{
+      "Weapon":0,
+      "Torso":0,
+      "Legs":0,
+      "Feet":0
+   },
+   "Learned":[
+      
+   ],
+   "Front":{
+      "X":0,
+      "Y":-1
+   },
+   "Place":{
+      "X":0,
+      "Y":0
+   },
+   "Step":[
+      {
+         "X":0,
+         "Y":-1
+      },
+      {
+         "X":-1,
+         "Y":0
+      },
+      {
+         "X":0,
+         "Y":1
+      },
+      {
+         "X":1,
+         "Y":0
+      }
+   ],
+   "ToBattle":0,
+   "Pose":0,
+   "Walk":0,
+   "MapImage":"/Resources/Media/Images/Locations/Total/Person/Rock/Static/Down.svg",
+   "StandImage":[
+      "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Up.svg",
+      "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Left.svg",
+      "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Down.svg",
+      "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Right.svg"
+   ],
+   "GoingImage":[
+      [
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Up/1.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Up/2.svg"
+      ],
+      [
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Left.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Left/1.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Left.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Left/2.svg"
+      ],
+      [
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Down/1.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Down/2.svg"
+      ],
+      [
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Right.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Right/1.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Static/Right.svg",
+         "/Resources/Media/Images/Locations/Total/Person/Rock/Walk/Right/2.svg"
+      ]
+   ],
+   "WalkThrough":[
+      ".",
+      ",",
+      ":",
+      "_",
+      "P",
+      "T",
+      "!"
+   ],
+   "Hp":{
+      "IsMax":true,
+      "IsEmpty":false,
+      "IsSealed":false,
+      "Minimum":0,
+      "Current":200,
+      "Max":200
+   },
+   "Stats":{
+      "Attack":45,
+      "Defence":35,
+      "Speed":20,
+      "Special":15
+   },
+   "Action":"/Resources/Media/Images/Battle/Character/Rock/Action.svg",
+   "StatusInfo":[{
+      "Time": {
+        "IsMax": false,
+        "IsEmpty": true,
+        "IsSealed": false,
+        "Minimum": 0,
+        "Current": 0,
+        "Max": 10
+      },
+      "Icon": "/Resources/Media/Images/Menu/Skills/Poison.svg",
+      "Name": "Poison",
+      "Description": "Ugly goo, flowing through the veins. Slowly drains strength."
+    }, {
+      "Time": {
+        "IsMax": false,
+        "IsEmpty": true,
+        "IsSealed": false,
+        "Minimum": 0,
+        "Current": 0,
+        "Max": 10
+      },
+      "Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+      "Name": "Power UP",
+      "Description": "Focusing helps you hit much more effectively."
+    }, {
+      "Time": {
+        "IsMax": false,
+        "IsEmpty": true,
+        "IsSealed": false,
+        "Minimum": 0,
+        "Current": 0,
+        "Max": 10
+      },
+      "Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+      "Name": "Guard",
+      "Description": "Being vigilant is one of the components of invulnerability."
+    }, {
+      "Time": {
+        "IsMax": false,
+        "IsEmpty": true,
+        "IsSealed": false,
+        "Minimum": 0,
+        "Current": 0,
+        "Max": 10
+      },
+      "Icon": "/Resources/Media/Images/Menu/Stats/Defence.svg",
+      "Name": "Shield",
+      "Description": "With a good stance and a block, everything is on the shoulder."
+    }, {
+      "Time": {
+        "IsMax": false,
+        "IsEmpty": true,
+        "IsSealed": false,
+        "Minimum": 0,
+        "Current": 0,
+        "Max": 10
+      },
+      "Icon": "/Resources/Media/Images/Menu/Stats/Speed.svg",
+      "Name": "Berserk",
+      "Description": "No one knows what leads him into endless battles."
+    }],
+   "Icon":"/Resources/Media/Images/Battle/Character/Rock/Icon.svg",
+   "Name":"Рок",
+   "Description":"????"
+}
