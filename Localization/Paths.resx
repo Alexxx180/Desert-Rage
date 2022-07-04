@@ -116,6 +116,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Beginner" xml:space="preserve">
+    <value>Beginner</value>
+  </data>
   <data name="Foes" xml:space="preserve">
     <value>Foes</value>
   </data>
@@ -130,5 +133,14 @@
   </data>
   <data name="SecretTemple" xml:space="preserve">
     <value>SecretTemple</value>
+  </data>
+  <data name="WaterTemple" xml:space="preserve">
+    <value>WaterTemple</value>
+  </data>
+  <data name="FireTemple" xml:space="preserve">
+    <value>FireTemple</value>
+  </data>
+  <data name="TimeChamber" xml:space="preserve">
+    <value>TimeChamber</value>
   </data>
 </root>
