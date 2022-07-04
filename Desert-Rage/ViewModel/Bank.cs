@@ -69,6 +69,11 @@ namespace DesertRage.ViewModel
             return GetCharacterData<HashSet<string>>("Unlock");
         }
         
+        internal static IconUnit LoadHeroInitials(string name)
+        {
+            return GetCharacterData<IconUnit>($"{name}/Beginner");
+        }
+        
         internal static Character LoadHero(string name)
         {
             return GetCharacterData<Character>($"{name}/Beginner");
