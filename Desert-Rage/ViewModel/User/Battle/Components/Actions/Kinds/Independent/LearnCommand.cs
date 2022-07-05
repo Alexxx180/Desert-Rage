@@ -8,6 +8,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
 {
     public class LearnCommand : ActCommand, IAction, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Reveal selected enemy in the bestiary
+        /// </summary>
+        /// <param name="thing">Thing info</param>
         public LearnCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.ONE;
