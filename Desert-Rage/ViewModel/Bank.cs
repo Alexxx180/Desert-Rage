@@ -98,6 +98,16 @@ namespace DesertRage.ViewModel
         {
             return GetItems<Equipment[][]>($"Items/{Paths.Equipment}.json");
         }
+        
+        internal static List<ConsumeCommand> GetInventory()
+        {
+            return GetItems<List<ConsumeCommand>>($"Items/{Paths.Inventory}.json");
+        }
+        
+        internal static Dictionary<SkillsID, ConsumeCommand> GetSkills()
+        {
+            return GetItems<Dictionary<SkillsID, ConsumeCommand>>($"Items/{Paths.Skills}.json");
+        }
 
         internal static Foe[] Foes()
         {
@@ -193,7 +203,7 @@ namespace DesertRage.ViewModel
 
         internal static Dictionary<SkillsID, ConsumeCommand> AllSkills()
         {
-            return new Dictionary<SkillsID, ConsumeCommand>
+            return GetSkills();/*new Dictionary<SkillsID, ConsumeCommand>
             {
                 {
                     SkillsID.Cure,
@@ -904,12 +914,12 @@ namespace DesertRage.ViewModel
                         new SkillCommand(0)
                     )
                 }
-            };
+            };*/
         }
 
         internal static List<ConsumeCommand> AllItems()
         {
-            return new List<ConsumeCommand>()
+            return GetInventory();/*new List<ConsumeCommand>()
             {
                 new ConsumeCommand(
                     new CureCommand(
@@ -1007,7 +1017,7 @@ namespace DesertRage.ViewModel
                     ),
                     new ItemCommand(ItemsID.Elixir)
                 )
-            };
+            };*/
         }
 
         public static string ToFull(this string path)
