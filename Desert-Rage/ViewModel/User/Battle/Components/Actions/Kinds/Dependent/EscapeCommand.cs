@@ -13,7 +13,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// Escape from battle
         /// </summary>
         /// <param name="dependency">Escape success formula</param>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public EscapeCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
