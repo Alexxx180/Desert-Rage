@@ -10,7 +10,14 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         {
             StatUnit = statUnit;
         }
-
+        
+        /// <summary>
+        /// Used for creating game
+        /// environment dependent
+        /// battle commands
+        /// </summary>
+        /// <param name="statUnit">Dependency formula</param>
+        /// <param name="unit">Skill info</param>
         public DependentCommand(IFormula statUnit,
             NoiseUnit unit) : base(unit)
         {
