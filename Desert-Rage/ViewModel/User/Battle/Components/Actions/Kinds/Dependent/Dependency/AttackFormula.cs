@@ -8,7 +8,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
     public class AttackFormula : Battle, IFormula, INotifyPropertyChanged
     {
         /// <summary>
-        /// Power dependency, based on hero attack stat
+        /// Power dependency, based on hero equipment and attack stat
         /// </summary>
         public AttackFormula() { }
 
