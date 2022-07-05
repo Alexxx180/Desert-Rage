@@ -12,6 +12,9 @@ namespace DesertRage.ViewModel.User
 {
     public class UserMedia : IBattle, INotifyPropertyChanged
     {
+        /// <summary>
+        /// User profile preferences container
+        /// </summary>
         public UserMedia()
         {
             Preferences = Bank.LoadPreferences();
