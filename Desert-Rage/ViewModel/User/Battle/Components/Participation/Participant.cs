@@ -9,6 +9,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
 {
     public abstract class Participant : Battle, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Battle participant logic:
+        /// timing and statuses
+        /// </summary>
         private protected Participant()
         {
             Time = new Slider(0, 1000);
