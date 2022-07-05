@@ -6,6 +6,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public class Participation : IParticipation, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Battle participant and unit data container
+        /// <param name="participant">Battle participant</param>
         public Participation
             (Participant participant)
         {
