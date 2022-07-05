@@ -147,4 +147,10 @@
   <data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Skills</value>
+  </data>
 </root>
