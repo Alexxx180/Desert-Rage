@@ -4,6 +4,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public class Berserk : Reinforcement
     {
+        /// <summary>
+        /// Make participant take decesions each turn indepently
+        /// <param name="participant">Battle participant</param>
         public Berserk(Participant participant)
             : base(participant, StatusID.BERSERK)
         { }
