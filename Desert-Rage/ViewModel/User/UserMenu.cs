@@ -13,6 +13,9 @@ namespace DesertRage.ViewModel.User
 {
     public class UserMenu : HeroManagement, INotifyPropertyChanged
     {
+        /// <summary>
+        /// User profile menu commands container
+        /// </summary>
         public UserMenu()
         {
             Equip = new ObservableCollection
