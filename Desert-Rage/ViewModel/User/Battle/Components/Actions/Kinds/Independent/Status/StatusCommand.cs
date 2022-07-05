@@ -11,6 +11,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
             UnitCursor = Targeting.HERO;
         }
 
+        /// <summary>
+        /// Status container
+        /// </summary>
+        /// <param name="status">Required status</param>
+        /// <param name="thing">Thing info</param>
         public StatusCommand
             (StatusID status, NoiseUnit thing) : this(thing)
         {
@@ -23,7 +28,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
         }
 
         public StatusID Status { get; set; }
-        public bool State { get; set; }
 
         public virtual bool CanUse => true;
     }
