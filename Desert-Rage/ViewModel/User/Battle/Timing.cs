@@ -9,6 +9,9 @@ namespace DesertRage.ViewModel.User.Battle
 {
     public class Timing : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Timing battle events attachment logic
+        /// </summary>
         private protected Timing()
         {
             _timing = new DispatcherTimer
