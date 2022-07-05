@@ -5,6 +5,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation.Statuses
 {
     public class StatusEvent : Participation, IStatusEvent
     {
+        /// <summary>
+        /// Status event to be attached to battle partiticipant
+        /// <param name="participant">Battle participant</param>
         public StatusEvent(Participant participant) : base(participant) { }
 
         public virtual void StateEvent(object sender, object o)
