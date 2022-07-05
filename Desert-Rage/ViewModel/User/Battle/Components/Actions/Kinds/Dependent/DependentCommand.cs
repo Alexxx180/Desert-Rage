@@ -17,7 +17,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// battle commands
         /// </summary>
         /// <param name="statUnit">Dependency formula</param>
-        /// <param name="unit">Skill info</param>
+        /// <param name="unit">Unit info</param>
         public DependentCommand(IFormula statUnit,
             NoiseUnit unit) : base(unit)
         {
