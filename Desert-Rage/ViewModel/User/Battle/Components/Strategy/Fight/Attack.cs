@@ -6,6 +6,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Fight
 {
     public class Attack : Battle, IParticipantFight, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Hit specified victim each turn
+        /// </summary>
         public Attack() { }
 
         public void SetUnit(BattleUnit unit)
