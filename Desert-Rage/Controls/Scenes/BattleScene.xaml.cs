@@ -12,7 +12,7 @@ using Range = DesertRage.Model.Locations.Battle.Range;
 namespace DesertRage.Controls.Scenes
 {
     /// <summary>
-    /// Логика взаимодействия для BattleScene.xaml
+    /// In game battle scene
     /// </summary>
     public partial class BattleScene : UserControl, INotifyPropertyChanged, IControllable
     {
