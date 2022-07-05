@@ -11,6 +11,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
             UnitCursor = Targeting.ONE;
         }
 
+        /// <summary>
+        /// Hit selected enemy and
+        /// give its lost HPs to hero
+        /// </summary>
+        /// <param name="dependency">Damage power formula</param>
+        /// <param name="thing">Skill info</param>
         public DrainCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
