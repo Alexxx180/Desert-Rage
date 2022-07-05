@@ -10,6 +10,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
             UnitCursor = Targeting.ONE;
         }
 
+        /// <summary>
+        /// Hit selected enemy and
+        /// fill with its lost HPs
+        /// hero APs
+        /// </summary>
+        /// <param name="dependency">Damage power formula</param>
+        /// <param name="thing">Skill info</param>
         public OsmoseCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
