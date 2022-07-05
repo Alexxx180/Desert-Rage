@@ -25,6 +25,9 @@ namespace DesertRage.ViewModel.User
             base.SaveGame(profile);
         }
 
+        /// <summary>
+        /// Location map interaction logic
+        /// </summary>
         public MapWorker()
         {
             _collapse = new DispatcherTimer
