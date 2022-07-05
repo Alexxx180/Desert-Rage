@@ -6,6 +6,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
 {
     public class ApplyStatus : StatusCommand
     {
+        /// <summary>
+        /// Apply specified status
+        /// </summary>
+        /// <param name="status">Required status</param>
+        /// <param name="thing">Thing info</param>
         public ApplyStatus
             (StatusID status, NoiseUnit thing) : base(status, thing) { }
 
