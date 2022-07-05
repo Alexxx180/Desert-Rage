@@ -22,6 +22,10 @@ namespace DesertRage.ViewModel
 {
     internal static class Bank
     {
+        /// <summary>
+        /// Game data total storage
+        /// </summary>
+        
         internal const string DataDirectory = "/Resources/Media/Data";
 
         internal static void MakeProfile(string name)
