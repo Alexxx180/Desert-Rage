@@ -9,6 +9,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
     public class EscapeCommand : DependentCommand, IAction, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Escape from battle
+        /// </summary>
+        /// <param name="dependency">Escape success formula</param>
+        /// <param name="thing">Skill info</param>
         public EscapeCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
