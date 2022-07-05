@@ -24,6 +24,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Appear
             _keySizes = new List<Position>();
         }
 
+        /// <summary>
+        /// Divide the battle field on four parts and fill
+        /// it with the random enemies from largest to 
+        /// smallest size recursively in such order:
+        /// left -> top -> bottom -> right
+        /// </summary>
+        /// <param name="totalArea">Total area of battlefield</param>
         public DockStrategy(Range totalArea) : this()
         {
             _startArea = totalArea;
