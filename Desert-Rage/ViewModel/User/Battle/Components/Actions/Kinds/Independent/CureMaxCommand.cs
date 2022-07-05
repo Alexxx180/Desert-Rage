@@ -8,7 +8,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         /// <summary>
         /// Fully refill hero HP
         /// </summary>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public CureMaxCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.HERO;
