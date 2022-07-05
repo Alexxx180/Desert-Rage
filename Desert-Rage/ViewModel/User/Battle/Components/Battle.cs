@@ -5,6 +5,10 @@ namespace DesertRage.ViewModel.User.Battle.Components
 {
     public class Battle : IBattle, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Battle field logic container
+        /// </summary>
+    
         private BattleViewModel _viewModel;
         public BattleViewModel ViewModel
         {
