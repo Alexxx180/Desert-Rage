@@ -7,6 +7,10 @@ namespace DesertRage.Controls
 {
     public static class EditHelper
     {
+        /// <summary>
+        /// General editing helping methods 
+        /// </summary>
+        
         private static string GetProposedText(TextBox textBox, string newText)
         {
             string text = textBox.Text;
