@@ -3,9 +3,7 @@
     public interface IFormula : IBattle
     {
         /// <summary>
-        /// Used for creating game
-        /// environment dependent
-        /// battle commands
+        /// Power dependency abstraction
         /// </summary>
         
         public int Power { get; }
