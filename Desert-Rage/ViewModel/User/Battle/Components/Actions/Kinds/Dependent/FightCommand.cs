@@ -13,6 +13,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
             UnitCursor = Targeting.ONE;
         }
 
+        /// <summary>
+        /// Hit selected enemy
+        /// </summary>
+        /// <param name="dependency">Damage power formula</param>
+        /// <param name="thing">Skill info</param>
         public FightCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
