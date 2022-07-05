@@ -207,7 +207,11 @@
                             </TextBox.Text>
                         </TextBox>
 
-                        <ContentControl Template="{StaticResource UnitName}" FontSize="24">
+                        <ContentControl FontSize="24" Margin="10pt,5">
+                            <ContentControl.Template>
+                                <StaticResource ResourceKey="UnitName"/>
+                            </ContentControl.Template>
+                            
                             <ContentControl.HorizontalAlignment>
                                 Right
                             </ContentControl.HorizontalAlignment>
@@ -234,9 +238,8 @@
 
                 <UniformGrid Rows="4" Columns="1" Grid.Column="1">
                     <UniformGrid.Resources>
-                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource StretchFont}">
-                            <!--BasedOn="{StaticResource StretchFont}"-->
-                            <Setter Property="FontSize" Value="24"/>
+                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource GlobalFont}">
+                            <Setter Property="FontSize" Value="40"/>
                             <Setter Property="Padding" Value="5"/>
                             <Setter Property="Background" Value="#3F3F3F"/>
                             <Setter Property="Foreground" Value="#EAEAEA"/>

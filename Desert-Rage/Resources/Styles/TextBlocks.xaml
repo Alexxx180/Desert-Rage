@@ -38,5 +38,6 @@
     <Style x:Key="DescriptionBlock">
         <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
         <Setter Property="Control.FontSize" Value="20"/>
+        <Setter Property="TextBlock.Padding" Value="10"/>
     </Style>
 </ResourceDictionary>
