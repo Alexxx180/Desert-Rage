@@ -146,4 +146,10 @@
   <data name="TimeChamber" xml:space="preserve">
     <value>TimeChamber.ru-RU</value>
   </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventory.ru-RU</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Skills.ru-RU</value>
+  </data>
 </root>
