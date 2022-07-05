@@ -7,6 +7,10 @@ namespace DesertRage.Controls
 {
     public partial class EditEvents
     {
+        /// <summary>
+        /// Events attached to editing fields
+        /// </summary>
+        
         #region Naming Members
         private static readonly Regex _naming = new Regex(@"^[A-Za-zА-Яа-я0-9\s-_]*$");
 
