@@ -10,6 +10,10 @@ namespace DesertRage.ViewModel.User
 {
     public abstract class HeroManagement : UserMedia, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Hero interaction logic
+        /// </summary>
+    
         private protected override void SaveGame(string profile)
         {
             Hero.Cure();
@@ -90,7 +94,6 @@ namespace DesertRage.ViewModel.User
 
         public void Warp(Position place)
         {
-            //
             Sound("Info/Map/Teleport.mp3");
             Hero.SetPlace(place);
         }
