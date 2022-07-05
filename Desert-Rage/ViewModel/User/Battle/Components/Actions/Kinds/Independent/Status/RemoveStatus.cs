@@ -6,6 +6,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
 {
     public class RemoveStatus : StatusCommand
     {
+        /// <summary>
+        /// Remove specified status
+        /// </summary>
+        /// <param name="status">Required status</param>
+        /// <param name="thing">Thing info</param>
         public RemoveStatus
             (StatusID status, NoiseUnit thing) : base(status, thing) { }
 
