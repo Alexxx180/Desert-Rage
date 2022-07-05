@@ -95,21 +95,6 @@
       "Value": 15
     }
   },
-  "Cure2": {
-    "Action": 
-    {
-      "Unit" : {
-        "Name": "Лечение 2",
-        "Description" : "100% ОЗ",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Cure2.svg",
-        "Noise": "Actions/Cure2.mp3"
-      }
-    },
-    "Subject": 
-    {
-      "Value": 10
-    }
-  },
   "Torch": {
     "Action": 
     {
