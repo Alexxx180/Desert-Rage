@@ -8,7 +8,7 @@ using System.Windows.Controls;
 namespace DesertRage.Controls.Menu.Game
 {
     /// <summary>
-    /// Логика взаимодействия для BestiaryLayout.xaml
+    /// Foes bestiary
     /// </summary>
     public partial class BestiaryLayout : UserControl
     {
