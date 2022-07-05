@@ -4,6 +4,11 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
 {
     public class SpecialFormula : Battle, IFormula
     {
+        /// <summary>
+        /// Power dependency, based on hero
+        /// special stat and fixed multiplier
+        /// </summary>
+        /// <param name="multiplier">Fixed multiplier value</param>
         public SpecialFormula(float multiplier)
         {
             _multiplier = multiplier;
