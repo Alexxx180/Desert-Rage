@@ -1,0 +1,723 @@
+{
+  "Cure": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.8
+      },
+      "Unit" : {
+        "Name": "Лечение",
+        "Description" : "+ ОЗ",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Cure.svg",
+        "Noise": "Actions/Cure.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 5
+    }
+  },
+  "Cure2": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Лечение 2",
+        "Description" : "100% ОЗ",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Cure2.svg",
+        "Noise": "Actions/Cure2.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "Antidote": {
+    "Action": 
+    {
+      "Status" : 0,
+      "Unit" : {
+        "Name": "Антидот",
+        "Description" : "- Яд",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Heal.svg",
+        "Noise": "Actions/Heal.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 3
+    }
+  },
+  "Learn": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Анализ",
+        "Description" : "Изучить врага как следует",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Analyze.svg",
+        "Noise": "Actions/Scan.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "BuffUp": {
+    "Action": 
+    {
+      "Status" : 1,
+      "Unit" : {
+        "Name": "Усиление",
+        "Description" : "Сконцентрировать всю силу",
+        "Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+        "Noise": "Actions/PowerBoost.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 20
+    }
+  },
+  "Shield": {
+    "Action": 
+    {
+      "Status" : 2,
+      "Unit" : {
+        "Name": "Охрана",
+        "Description" : "Повысить бдительность",
+        "Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+        "Noise": "Actions/DefenceBoost.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 15
+    }
+  },
+  "Cure2": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Лечение 2",
+        "Description" : "100% ОЗ",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Cure2.svg",
+        "Noise": "Actions/Cure2.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "Torch": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 2.0
+      },
+      "Unit" : {
+        "Name": "Факел",
+        "Description" : "Хорошо поджигает",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Torch.svg",
+        "Noise": "Actions/Torch.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 5
+    }
+  },
+  "Whip": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 3.5
+      },
+      "Unit" : {
+        "Name": "Кнут",
+        "Description" : "Дробит кости",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Whip.svg",
+        "Noise": "Actions/Whip.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 7
+    }
+  },
+  "Sling": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 5.0
+      },
+      "Unit" : {
+        "Name": "Рогатка",
+        "Description" : "От нее не скрыться",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Slingshot.svg",
+        "Noise": "Actions/Sling.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 13
+    }
+  },
+  "Combo": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 3.0
+      },
+      "Unit" : {
+        "Name": "Комбо",
+        "Description" : "Град ударов по врагам",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Combo.svg",
+        "Noise": "Actions/Combo.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "Whirl": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 4.0
+      },
+      "Unit" : {
+        "Name": "Буря",
+        "Description" : "Неистовый порыв ветра",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Storm.svg",
+        "Noise": "Actions/Wind.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 18
+    }
+  },
+  "LargeAidKit": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 100
+      },
+      "Unit" : {
+        "Name": "Аптечка",
+        "Description" : "+ ОЗ",
+        "Icon": "/Resources/Media/Images/Menu/Skills/LargeAidKit.svg",
+        "Noise": "Actions/Cure.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "SuperAidKit": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Серьезная аптечка",
+        "Description" : "100% ОЗ",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SuperAidKit.svg",
+        "Noise": "Actions/Cure2.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "AmmoPack": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Припасы",
+        "Description" : "100% ОД",
+        "Icon": "/Resources/Media/Images/Menu/Skills/AmmoPack.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Invulnerability": {
+    "Action": 
+    {
+      "Status" : 2,
+      "Unit" : {
+        "Name": "Неуязвимость",
+        "Description" : "Резко повысить защиту",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Invulnerability.svg",
+        "Noise": "Actions/DefenceBoost.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "SuperDamage": {
+    "Action": 
+    {
+      "Status" : 1,
+      "Unit" : {
+        "Name": "СуперУрон",
+        "Description" : "Стать серьезнее",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SuperDamage.svg",
+        "Noise": "Actions/PowerBoost.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "SuperSpeed": {
+    "Action": 
+    {
+      "Status" : 4,
+      "Unit" : {
+        "Name": "СуперСкорость",
+        "Description" : "Разогреться...",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SuperSpeed.svg",
+        "Noise": "Actions/PowerBoost.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Schofield45": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.2
+      },
+      "Unit" : {
+        "Name": "Шофилд .45",
+        "Description" : "Ого-го, мне сегодня везет!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Schofield45.svg",
+        "Noise": "Actions/Schofield45.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "SingleShotgun": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 2.5
+      },
+      "Unit" : {
+        "Name": "Дробовик",
+        "Description" : "Ха, мой старый друг!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Shotgun.svg",
+        "Noise": "Actions/SingleShotgun.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "DoubleShotgun": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 5.0
+      },
+      "Unit" : {
+        "Name": "Двустволка",
+        "Description" : "Вот это вещь!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/ShotgunX2.svg",
+        "Noise": "Actions/DoubleShotgun.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 20
+    }
+  },
+  "CannonSBC": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 10.0
+      },
+      "Unit" : {
+        "Name": "Пушка SBC",
+        "Description" : "Хо-хо, поиграем в боулинг!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SeriouslyBigCannon.svg",
+        "Noise": "Actions/Cannon.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 50
+    }
+  },
+  "TommyGun": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 2.0
+      },
+      "Unit" : {
+        "Name": "Томпсон M1A2",
+        "Description" : "Сейчас немного подогреем!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/TommyGun.svg",
+        "Noise": "Actions/TommyGun.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "LaserGunXL2": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 2.5
+      },
+      "Unit" : {
+        "Name": "Лазер XL2",
+        "Description" : "Ребята, бесплатные билеты в ад обеспечены!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/LaserGunXL2.svg",
+        "Noise": "Actions/LaserGun.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 15
+    }
+  },
+  "RocketLauncherXPML21": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 4.0
+      },
+      "Unit" : {
+        "Name": "Ракетомет XPML21",
+        "Description" : "Вот это я понимаю, круто!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/RocketLauncherXPML21.svg",
+        "Noise": "Actions/RocketLauncher.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 20
+    }
+  },
+  "GrenadeLauncherMKIII": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 6.0
+      },
+      "Unit" : {
+        "Name": "Гранатомет MK3",
+        "Description" : "Надежный пехотный гранатомет с регулировкой скорости стрельбы",
+        "Icon": "/Resources/Media/Images/Menu/Skills/GrenadeLauncher.svg",
+        "Noise": "Actions/GrenadeLauncher.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 35
+    }
+  },
+  "SeriousBomb": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Серьезная бомба",
+        "Description" : "Время для серьезного бума!",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SeriousBomb.svg",
+        "Noise": "Actions/Boom.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 500
+    }
+  },
+  "Drain": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.5
+      },
+      "Unit" : {
+        "Name": "Поглощение",
+        "Description" : "Восполнить здоровье за счет врага",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Drain.svg",
+        "Noise": "Actions/Cure.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 10
+    }
+  },
+  "Osmose": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.5
+      },
+      "Unit" : {
+        "Name": "Осмос",
+        "Description" : "Отнять силы противника",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Osmose.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "GreedyDrain": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.5
+      },
+      "Unit" : {
+        "Name": "Жадность",
+        "Description" : "Присвоить здоровье всех врагов",
+        "Icon": "/Resources/Media/Images/Menu/Skills/GreedyDrain.svg",
+        "Noise": "Actions/Cure2.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 25
+    }
+  },
+  "GreedyOsmose": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.5
+      },
+      "Unit" : {
+        "Name": "Жажда",
+        "Description" : "Выпить врагов до нитки",
+        "Icon": "/Resources/Media/Images/Menu/Skills/GreedyOsmose.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Stab": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 1.0
+      },
+      "Unit" : {
+        "Name": "Протыкание",
+        "Description" : "Сделать мощный выпад",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Stab.svg",
+        "Noise": "Actions/Punch.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "SlashV": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 2.0
+      },
+      "Unit" : {
+        "Name": "V-Порез",
+        "Description" : "Сделать глубокий надрез, схожий с ударом топора",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SlashV.svg",
+        "Noise": "Actions/Sword.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 3
+    }
+  },
+  "SlashZ": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 3.0
+      },
+      "Unit" : {
+        "Name": "Z-Порез",
+        "Description" : "Сделать красивую татуировку противнику...",
+        "Icon": "/Resources/Media/Images/Menu/Skills/SlashZ.svg",
+        "Noise": "Actions/Sword.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 5
+    }
+  },
+  "BackSlash": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 6.0
+      },
+      "Unit" : {
+        "Name": "Обратка",
+        "Description" : "Удар с разворота",
+        "Icon": "/Resources/Media/Images/Menu/Skills/BackSlash.svg",
+        "Noise": "Actions/Whip.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Slices": {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Шинковка",
+        "Description" : "Не оставить противнику права на существование",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Slices.svg",
+        "Noise": "Actions/Knife.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "FireSword": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 5.0
+      },
+      "Unit" : {
+        "Name": "Пламя",
+        "Description" : "Раскалить меч до адского пекла",
+        "Icon": "/Resources/Media/Images/Menu/Skills/FireSword.svg",
+        "Noise": "Actions/Torch.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 25
+    }
+  },
+  "ThunderSword": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 10.0
+      },
+      "Unit" : {
+        "Name": "Молния",
+        "Description" : "Использовать меч как молниеотвод",
+        "Icon": "/Resources/Media/Images/Menu/Skills/ThunderSword.svg",
+        "Noise": "Actions/Whip.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 50
+    }
+  },
+  "Kata1": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 3.0
+      },
+      "Unit" : {
+        "Name": "Ката - 1",
+        "Description" : "Провести серию техник с мечом",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Kata1.svg",
+        "Noise": "Actions/Combo.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Kata2": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 5.0
+      },
+      "Unit" : {
+        "Name": "Ката - 2",
+        "Description" : "Провести серию техник с мечом",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Kata2.svg",
+        "Noise": "Actions/Sword.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "Kata3": {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 7.0
+      },
+      "Unit" : {
+        "Name": "Ката - 3",
+        "Description" : "Провести серию техник с мечом",
+        "Icon": "/Resources/Media/Images/Menu/Skills/Kata3.svg",
+        "Noise": "Actions/Knife.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  "CalmDown": {
+    "Action": 
+    {
+      "Status" : 0,
+      "Unit" : {
+        "Name": "Успокоение",
+        "Description" : "Сконцентрироваться на дыхании",
+        "Icon": "/Resources/Media/Images/Menu/Skills/CalmDown.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  }
+}
