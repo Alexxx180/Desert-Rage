@@ -11,7 +11,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// Refill some amount of hero HP
         /// </summary>
         /// <param name="dependency">Cure power formula</param>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public CureCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
