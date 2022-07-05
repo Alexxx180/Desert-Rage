@@ -18,6 +18,7 @@ namespace DesertRage.ViewModel.User.Battle
             Entry = entry;
         }
 
+        
         private BattleViewModel() : base()
         {
             _grind = new Bar(1, 3, 6);
@@ -26,6 +27,10 @@ namespace DesertRage.ViewModel.User.Battle
             Setup(this);
         }
 
+        /// <summary>
+        /// Battle user interaction options
+        /// </summary>
+        /// <param name="profile">User profile</param>
         public BattleViewModel(MapWorker profile) : this()
         {
             Human = new Person(this, profile);
