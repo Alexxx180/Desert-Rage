@@ -7,7 +7,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Fight
     public interface IParticipantFight : IBattle, IDisposable, ICloneable<IParticipantFight>
     {
         /// <summary>
-        /// Determines how enemy will
+        /// Determines how participant will
         /// be acting during the battle
         /// </summary>
     
