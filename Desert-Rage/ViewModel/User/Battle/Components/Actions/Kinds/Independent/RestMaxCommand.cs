@@ -7,7 +7,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         /// <summary>
         /// Fully refills hero AP
         /// </summary>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public RestMaxCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.HERO;
