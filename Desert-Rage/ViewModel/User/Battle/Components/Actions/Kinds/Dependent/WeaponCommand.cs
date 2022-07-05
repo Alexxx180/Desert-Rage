@@ -18,7 +18,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// Hit selected enemy with a weapon
         /// </summary>
         /// <param name="dependency">Damage power formula</param>
-        /// <param name="thing">Skill info</param>
         public WeaponCommand(IFormula dependency) : base(dependency) { }
 
         public override NoiseUnit Unit
