@@ -10,6 +10,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
 {
     public abstract class Action : ICommand, INotifyPropertyChanged, IModel<BattleViewModel>
     {
+        /// <summary>
+        /// Thing behaviour unit
+        /// </summary>
+        /// <param name="action">What need to be done</param>
         public Action(IAction action)
         {
             Effect = action;
