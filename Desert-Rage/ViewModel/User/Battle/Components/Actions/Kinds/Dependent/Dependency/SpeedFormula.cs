@@ -4,6 +4,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
 {
     public class SpeedFormula : Battle, IFormula, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Power dependency, based on hero speed stat
+        /// </summary>
+        
         public int Power => ViewModel.Human.Unit.Stats.Speed;
     }
 }
