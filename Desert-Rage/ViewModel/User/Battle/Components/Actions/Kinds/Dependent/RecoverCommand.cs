@@ -11,7 +11,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// HP and AP at the same time
         /// </summary>
         /// <param name="dependency">Recover power formula</param>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public RecoverCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing) { }
 
