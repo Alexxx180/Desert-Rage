@@ -1,0 +1,123 @@
+[
+  {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 50
+      },
+      "Unit" : {
+        "Name": "Bandage",
+        "Description" : "+50 HP",
+        "Icon": "/Resources/Media/Images/Menu/Items/Bandage.svg",
+        "Noise": "Actions/Cure.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 0
+    }
+  },
+  {
+    "Action": 
+    {
+      "Status" : 0,
+      "Unit" : {
+        "Name": "Antidote",
+        "Description" : "- Poison",
+        "Icon": "/Resources/Media/Images/Menu/Items/Antidote.svg",
+        "Noise": "Actions/Heal.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 1
+    }
+  },
+  {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 50
+      },
+      "Unit" : {
+        "Name": "Ether",
+        "Description" : "+50 AP",
+        "Icon": "/Resources/Media/Images/Menu/Items/Ether.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 2
+    }
+  },
+  {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 80
+      },
+      "Unit" : {
+        "Name": "Mixture",
+        "Description" : "+80 HP-AP",
+        "Icon": "/Resources/Media/Images/Menu/Items/Mixture.svg",
+        "Noise": "Actions/Items/Mixture.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 3
+    }
+  },
+  {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 350
+      },
+      "Unit" : {
+        "Name": "Herbs",
+        "Description" : "+350 HP",
+        "Icon": "/Resources/Media/Images/Menu/Items/Herbs.svg",
+        "Noise": "Actions/Cure.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 4
+    }
+  },
+  {
+    "Action": 
+    {
+      "StatUnit" : {
+        "Power": 300
+      },
+      "Unit" : {
+        "Name": "Ether bottle",
+        "Description" : "+300 AP",
+        "Icon": "/Resources/Media/Images/Menu/Items/EtherBottle.svg",
+        "Noise": "Actions/Control.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 5
+    }
+  },
+  {
+    "Action": 
+    {
+      "Unit" : {
+        "Name": "Elixir",
+        "Description" : "100% HP-AP",
+        "Icon": "/Resources/Media/Images/Menu/Items/Elixir.svg",
+        "Noise": "Actions/Items/Mixture.mp3"
+      }
+    },
+    "Subject": 
+    {
+      "Value": 6
+    }
+  }
+]
