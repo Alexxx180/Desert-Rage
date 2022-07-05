@@ -12,6 +12,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
 {
     public class Enemy : Participant, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Enemy logic: fight strategy
+        /// </summary>
         private Enemy() : base()
         {
             _foe = new Foe();
