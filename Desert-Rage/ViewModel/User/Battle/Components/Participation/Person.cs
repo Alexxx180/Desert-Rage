@@ -11,6 +11,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
 {
     public class Person : Participant, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Hero logic: options
+        /// and player profile
+        /// </summary>
         public Person(BattleViewModel viewModel,
             MapWorker player) : base()
         {
