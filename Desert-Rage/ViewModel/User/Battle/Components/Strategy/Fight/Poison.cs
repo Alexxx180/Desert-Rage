@@ -12,6 +12,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Strategy.Fight
             _poison = new Random();
         }
 
+        /// <summary>
+        /// Poison victim with specified chance
+        /// </summary>
+        /// <param name="chance">
+        /// Chance to poison after each turn
+        /// </param>
         public Poison(Position chance) : this()
         {
             _chance = chance;
