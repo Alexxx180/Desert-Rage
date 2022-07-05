@@ -11,6 +11,10 @@ namespace DesertRage.ViewModel
 {
     public class GameStart : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Game start screen 
+        /// profiles selection
+        /// </summary>
         public GameStart()
         {
             _heroIndex = 0;
