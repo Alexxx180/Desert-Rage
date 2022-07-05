@@ -6,6 +6,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
 {
     public class AnnihilateCommand : ActCommand, IAction, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Instantly defeat selected enemy
+        /// </summary>
+        /// <param name="thing">Thing info</param>
         public AnnihilateCommand(NoiseUnit thing) : base(thing)
         {
             UnitCursor = Targeting.ONE;
