@@ -10,6 +10,9 @@ namespace DesertRage.ViewModel.User.Battle
 {
     public abstract class Opponents : Timing
     {
+        /// <summary>
+        /// Options of enemies battle side 
+        /// </summary>
         private protected Opponents() : base()
         {
             Style = Bank.Fights();
