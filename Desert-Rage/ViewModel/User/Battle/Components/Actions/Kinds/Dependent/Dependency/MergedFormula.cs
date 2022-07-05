@@ -4,6 +4,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
 {
     public class MergedFormula : AttackFormula
     {
+        /// <summary>
+        /// Power dependency, based on hero
+        /// equipment, attack, special stat
+        /// and fixed multiplier
+        /// </summary>
+        /// <param name="multiplier">Fixed multiplier value</param>
         public MergedFormula(float multiplier)
         {
             _multiplier = multiplier;
