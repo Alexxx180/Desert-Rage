@@ -12,7 +12,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// Damage all enemies on the field
         /// </summary>
         /// <param name="dependency">Damage power formula</param>
-        /// <param name="thing">Skill info</param>
+        /// <param name="thing">Thing info</param>
         public FightAllCommand(IFormula dependency,
             NoiseUnit thing) : base(dependency, thing)
         {
