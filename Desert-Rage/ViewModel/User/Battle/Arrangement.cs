@@ -11,6 +11,9 @@ namespace DesertRage.ViewModel.User.Battle
 {
     public abstract class Arrangement : Opponents
     {
+        /// <summary>
+        /// Opponents battle field arrangement 
+        /// </summary>
         private protected Arrangement() : base()
         {
             _drawStrategy = new DockStrategy
