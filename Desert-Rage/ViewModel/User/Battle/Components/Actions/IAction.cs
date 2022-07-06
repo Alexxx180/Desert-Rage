@@ -1,4 +1,5 @@
 using DesertRage.Model;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.ViewModel.User.Battle;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
 using System;
@@ -12,5 +13,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
     {
         public void Use(object parameter);
         public bool CanUse { get; }
+        
+        public void SetUnit(AttributeUnit unit);
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                        
