@@ -8,9 +8,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
         /// <summary>
         /// Call consuming behaviour then action used
         /// </summary>
-        /// <param name="action">What need to be done</param>
         /// <param name="subject">What and how it will be consumed</param>
-        public ConsumeCommand(IAction action, IThing subject) : base(action)
+        public ConsumeCommand(IThing subject)
         {
             Subject = subject;
         }
@@ -25,6 +24,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
                 OnPropertyChanged();
             }
         }
+        
+        private protected override SetUnit(string commandName, AttributeUnit unit)
+        {
+            base.SetUnit(commandName, unit);
+            Subject.SetValue(unit.Attributes["Value"].Value);
+        }
 
         public override void SetModel(BattleViewModel model)
         {
@@ -36,6 +41,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
         {
             Subject.Use();
             base.Execute(parameter);
+        }
+        
+        public ConsumeCommand FromUnit(IThing subject, AttributeUnit unit)
+        {
+            ConsumeCommand command = new ConsumeCommand(subject);
+            command.SetUnit(unit);
+            return command;
         }
 
         public override bool CanExecute(object parameter) => Subject.CanUse && base.CanExecute(parameter);
