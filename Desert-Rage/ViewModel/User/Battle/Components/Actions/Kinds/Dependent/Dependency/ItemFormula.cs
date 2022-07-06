@@ -10,7 +10,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
 
         public void SetAttributes(Dictionary<string, Attribute> attributes)
         {
-            Power = attributes["Value"].Value;
+            Power = attributes["Power"].Value;
         }
 
         public int Power { get; private set; }
