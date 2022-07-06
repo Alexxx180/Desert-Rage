@@ -6,22 +6,29 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
     public class DependentCommand : ActCommand, INotifyPropertyChanged
     {
-        public DependentCommand(IFormula statUnit)
-        {
-            StatUnit = statUnit;
-        }
-        
         /// <summary>
         /// Used for creating game
         /// environment dependent
         /// battle commands
         /// </summary>
-        /// <param name="statUnit">Dependency formula</param>
-        /// <param name="unit">Unit info</param>
-        public DependentCommand(IFormula statUnit,
-            NoiseUnit unit) : base(unit)
+    
+        private static readonly string _formulaSpace;
+    
+        static DependentCommand()
         {
-            StatUnit = statUnit;
+            Type formula = typeof(DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency.IFormula);
+            _formulaSpace = formula.NameSpace;
+        }
+
+        public void SetUnit(AttributeUnit unit)
+        {
+            base.SetUnit(unit);
+            string name = unit.Attributes["Dependency"];
+            string full = $"{_formulaSpace}.{name}";
+            
+            IFormula formula = (IFormula)Activator.CreateInstance(full);
+            formula.SetAttributes(unit.Attributes);
+            StatUnit = formula;
         }
 
         private IFormula _statUnit;
