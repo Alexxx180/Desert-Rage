@@ -11,8 +11,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         /// <summary>
         /// Reveal selected enemy in the bestiary
         /// </summary>
-        /// <param name="thing">Thing info</param>
-        public LearnCommand(NoiseUnit thing) : base(thing)
+        public LearnCommand()
         {
             UnitCursor = Targeting.ONE;
         }
