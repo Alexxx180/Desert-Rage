@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using DesertRage.Model.Locations.Battle;
+using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
@@ -23,7 +24,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         public void SetUnit(AttributeUnit unit)
         {
             base.SetUnit(unit);
-            string name = unit.Attributes["Dependency"];
+            DependencyID id = (DependencyID)unit.Attributes["Dependency"].Value
+            string name = id.ToString();
             string full = $"{_formulaSpace}.{name}";
             
             IFormula formula = (IFormula)Activator.CreateInstance(full);
