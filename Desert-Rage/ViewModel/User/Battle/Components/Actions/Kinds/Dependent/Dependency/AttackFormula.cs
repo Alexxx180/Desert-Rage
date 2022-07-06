@@ -1,7 +1,10 @@
 ﻿using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System.ComponentModel;
+using System.Collections.Generic;
+
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency
 {
@@ -10,12 +13,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// <summary>
         /// Power dependency, based on hero equipment and attack stat
         /// </summary>
-        public AttackFormula() { }
-
+        
         static AttackFormula()
         {
             _class = ArmoryKind.Hands;
         }
+        
+        public void SetAttributes(Dictionary<string, Attribute> attributes) { }
 
         private protected static readonly ArmoryKind _class;
         protected int Boost => Hero.Boost(StatusID.REINFORCEMENT);
