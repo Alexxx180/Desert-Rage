@@ -9,8 +9,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         /// Fully refills hero HP
         /// and AP at the same time
         /// </summary>
-        /// <param name="thing">Thing info</param>
-        public RecoverMaxCommand(NoiseUnit thing) : base(thing) { }
+        public RecoverMaxCommand() : base() { }
 
         protected void Rest()
         {
