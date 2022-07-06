@@ -9,12 +9,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
     {
         /// <summary>
         /// Defeat all enemies on the field
-        /// </summary>
-        /// <param name="thing">Thing info</param>
-        public AnnihilateAllCommand(NoiseUnit thing) : base(thing)
-        {
-            UnitCursor = Targeting.ALL;
-        }
+        /// </summary>        
 
         public override void Use(object parameter)
         {
