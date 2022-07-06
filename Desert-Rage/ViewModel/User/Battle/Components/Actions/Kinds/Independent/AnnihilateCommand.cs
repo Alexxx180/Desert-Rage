@@ -9,12 +9,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         /// <summary>
         /// Instantly defeat selected enemy
         /// </summary>
-        /// <param name="thing">Thing info</param>
-        public AnnihilateCommand(NoiseUnit thing) : base(thing)
-        {
-            UnitCursor = Targeting.ONE;
-        }
-
+        
         protected void Defeat(in Enemy unit)
         {
             unit.Annihilate();
