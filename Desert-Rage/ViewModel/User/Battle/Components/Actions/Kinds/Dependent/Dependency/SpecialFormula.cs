@@ -11,7 +11,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         
         public void SetAttributes(Dictionary<string, Attribute> attributes)
         {
-            _multiplier = attributes["Value"].Power;
+            _multiplier = attributes["Power"].Power;
         }
 
         private readonly float _multiplier;
