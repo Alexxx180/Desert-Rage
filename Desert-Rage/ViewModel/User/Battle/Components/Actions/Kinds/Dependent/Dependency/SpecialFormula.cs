@@ -8,15 +8,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// Power dependency, based on hero
         /// special stat and fixed multiplier
         /// </summary>
-        /// <param name="multiplier">Fixed multiplier value</param>
-        public SpecialFormula(float multiplier)
+        
+        public void SetAttributes(Dictionary<string, Attribute> attributes)
         {
-            _multiplier = multiplier;
-        }
-
-        public SpecialFormula(float multiplier, BattleViewModel battle) : this(multiplier)
-        {
-            SetModel(battle);
+            _multiplier = attributes["Value"].Power;
         }
 
         private readonly float _multiplier;
