@@ -13,7 +13,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
         
         public AnnihilateAllCommand()
         {
-            UnitCursor = Targeting.HERO;
+            UnitCursor = Targeting.ALL;
         }
 
         public override void Use(object parameter)
