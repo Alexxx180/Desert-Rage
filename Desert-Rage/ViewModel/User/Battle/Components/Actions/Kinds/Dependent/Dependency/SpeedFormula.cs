@@ -8,6 +8,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// Power dependency, based on hero speed stat
         /// </summary>
         
+        public void SetAttributes(Dictionary<string, Attribute> attributes) { }
+        
         public int Power => ViewModel.Human.Unit.Stats.Speed;
     }
 }
