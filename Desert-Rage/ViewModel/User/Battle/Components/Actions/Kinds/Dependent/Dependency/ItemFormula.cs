@@ -7,12 +7,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// <summary>
         /// Power dependency, based on fixed value
         /// </summary>
-        /// <param name="power">Fixed value of power</param>
-        public ItemFormula(int power)
+
+        public void SetAttributes(Dictionary<string, Attribute> attributes)
         {
-            Power = power;
+            Power = attributes["Value"].Value;
         }
 
-        public int Power { get; }
+        public int Power { get; private set; }
     }
 }
