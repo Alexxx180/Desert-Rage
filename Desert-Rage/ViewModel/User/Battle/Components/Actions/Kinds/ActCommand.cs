@@ -7,14 +7,13 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
 {
     public class ActCommand : Target, INotifyPropertyChanged
     {
-        public ActCommand() { }
-
         /// <summary>
         /// Create action command,
         /// associated with thing
         /// </summary>
-        /// <param name="thing">Thing info</param>
-        public ActCommand(NoiseUnit unit)
+        public ActCommand() { }      
+
+        private protected void SetUnit(NoiseUnit unit)
         {
             Unit = unit;
         }
