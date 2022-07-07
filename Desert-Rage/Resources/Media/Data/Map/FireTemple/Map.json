@@ -40,8 +40,8 @@
 	],
 	"BackCover": "/Resources/Media/Images/Locations/FireTemple/Way.svg",
 	"BattleBack": "/Resources/Media/Images/Battle/Background/LavaTemple.svg",
-	"MusicPeace": "/Resources/Media/OST/Music/FireTemple/Peace.mp3",
-	"MusicFight": "/Resources/Media/OST/Music/FireTemple/Fight.mp3",
+	"MusicPeace": "FireTemple/Peace.mp3",
+	"MusicFight": "FireTemple/Fight.mp3",
 	"Start": {
 		"X": 28,
 		"Y": 19
