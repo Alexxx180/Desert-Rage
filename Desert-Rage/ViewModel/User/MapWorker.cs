@@ -103,6 +103,7 @@ namespace DesertRage.ViewModel.User
         private void NewCharacter
             (string name, bool condition)
         {
+            Log.Debug($"Loading new character: {name}");
             if (condition)
                 Bank.SaveCharacter(name);
         }
@@ -131,6 +132,7 @@ namespace DesertRage.ViewModel.User
             }
             else
             {
+                Log.Debug($"Loading chapter: {next}");
                 SetChapter(next);
                 Warp(Level.Start);
                 UpdateLevel();
