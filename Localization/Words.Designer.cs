@@ -115,6 +115,15 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Some time ago....
+        /// </summary>
+        public static string EmptyPresequence {
+            get {
+                return ResourceManager.GetString("EmptyPresequence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Escape.
         /// </summary>
         public static string Escape {
@@ -183,6 +192,15 @@ namespace DesertRage.Resources.Localization {
         public static string ItemsDescription {
             get {
                 return ResourceManager.GetString("ItemsDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на E - to interact. Ctrl - open menu.
+        /// </summary>
+        public static string MapHint {
+            get {
+                return ResourceManager.GetString("MapHint", resourceCulture);
             }
         }
         

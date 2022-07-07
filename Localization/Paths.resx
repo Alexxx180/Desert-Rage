@@ -132,9 +132,6 @@
   <data name="Help" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="SecretTemple" xml:space="preserve">
-    <value>SecretTemple</value>
-  </data>
   <data name="WaterTemple" xml:space="preserve">
     <value>WaterTemple</value>
   </data>
@@ -154,6 +151,6 @@
     <value>Skills</value>
   </data>
   <data name="LocalePrefix" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
 </root>

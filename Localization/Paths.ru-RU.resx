@@ -53,6 +53,7 @@
     value   : The object must be serialized with 
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
+
     mimetype: application/x-microsoft.net.object.bytearray.base64
     value   : The object must be serialized into a byte array 
             : using a System.ComponentModel.TypeConverter
@@ -134,9 +135,6 @@
   <data name="Status" xml:space="preserve">
     <value>Status.ru-RU</value>
   </data>
-  <data name="SecretTemple" xml:space="preserve">
-    <value>SecretTemple.ru-RU</value>
-  </data>
   <data name="WaterTemple" xml:space="preserve">
     <value>WaterTemple.ru-RU</value>
   </data>
@@ -153,6 +151,6 @@
     <value>Skills.ru-RU</value>
   </data>
   <data name="LocalePrefix" xml:space="preserve">
-    <value></value>
+    <value>.ru-RU</value>
   </data>
 </root>

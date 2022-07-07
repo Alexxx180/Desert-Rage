@@ -115,11 +115,29 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на SecretTemple.
+        ///   Ищет локализованную строку, похожую на Inventory.
         /// </summary>
-        public static string SecretTemple {
+        public static string Inventory {
             get {
-                return ResourceManager.GetString("SecretTemple", resourceCulture);
+                return ResourceManager.GetString("Inventory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string LocalePrefix {
+            get {
+                return ResourceManager.GetString("LocalePrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Skills.
+        /// </summary>
+        public static string Skills {
+            get {
+                return ResourceManager.GetString("Skills", resourceCulture);
             }
         }
         
