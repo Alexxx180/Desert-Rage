@@ -114,12 +114,12 @@ namespace DesertRage.ViewModel.User
         private void SetChapter(Location chapter)
         {
             Level.SetChapter(chapter);
-            ViewModel.SetFoes(Level.StageFoes);
+            ViewModel.SetFoes(Level.Area.StageFoes);
         }
 
         private void NextChapter()
         {
-            Location next = Bank.LoadLevel(Level.NextChapter);
+            Location next = Bank.LoadLevel(Level.Area.NextChapter);
 
             if (next is null)
             {
@@ -132,7 +132,7 @@ namespace DesertRage.ViewModel.User
             {
                 Log.Debug($"Loading chapter: {next}");
                 SetChapter(next);
-                Warp(Level.Start);
+                Warp(Level.Area.Start);
                 UpdateLevel();
                 SaveGame();
 
@@ -182,11 +182,11 @@ namespace DesertRage.ViewModel.User
 
             Log.Debug("Opening gate with key at: " + next);
 
-            Position gate = Level.Gates[next];
+            Position gate = Level.Area.Gates[next];
 
             Log.Debug("Gate at: " + gate);
 
-            Level.Map.SetTile(gate, gateTile);
+            Level.Area.Map.SetTile(gate, gateTile);
 
             UpdateLevel();
         }
@@ -201,12 +201,12 @@ namespace DesertRage.ViewModel.User
             Log.Debug("Opening chest at: " + info);
 
             MessageToUser(LevelText(info));
-            AddEquipment(Level.Equipment[info]);
+            AddEquipment(Level.Area.Equipment[info]);
         }
 
         private void SetTile(Position front, char frontTile)
         {
-            Level.Map.SetTile(front, frontTile);
+            Level.Area.Map.SetTile(front, frontTile);
             UpdateLevel();
         }
 
@@ -302,12 +302,12 @@ namespace DesertRage.ViewModel.User
         #region Audio Members
         public void Peace()
         {
-            Music(Level.MusicPeace);
+            Music(Level.Area.MusicPeace);
         }
 
         public void Fight()
         {
-            Music(Level.MusicFight);
+            Music(Level.Area.MusicFight);
         }
         #endregion
 
@@ -315,7 +315,7 @@ namespace DesertRage.ViewModel.User
         public void BossBattle()
         {
             string tile = Hero.Place.ToString();
-            BossBattle(Level.Bosses[tile]);
+            BossBattle(Level.Area.Bosses[tile]);
         }
 
         private void EnemyEncounter(string noise, Encounter encounter)
@@ -326,33 +326,33 @@ namespace DesertRage.ViewModel.User
 
         internal void ResetDanger()
         {
-            Hero.ToBattle = _chance.Next(Level.Danger);
+            Hero.ToBattle = _chance.Next(Level.Area.Danger);
             IsFighting = Encounter.PEACE;
         }
 
         public void Countdown(object sender, object o)
         {
-            if (Level.Danger.IsZero)
+            if (Level.Area.Danger.IsZero)
             {
                 _collapse.Tick -= Countdown;
                 ViewModel.Entry.RaiseEscape();
                 return;
             }
 
-            Level.Danger.Countdown();
+            Level.Area.Danger.Countdown();
         }
         #endregion
 
         #region IPauseable Members
         public void Resume()
         {
-            if (Level.IsTimeChamber)
+            if (Level.Area.IsTimeChamber)
                 _collapse.Start();
         }
 
         public void Pause()
         {
-            if (Level.IsTimeChamber)
+            if (Level.Area.IsTimeChamber)
                 _collapse.Stop();
         }
         #endregion
