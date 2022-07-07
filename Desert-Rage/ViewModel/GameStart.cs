@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using DesertRage.Model;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using System.Windows;
+using Serilog;
 
 namespace DesertRage.ViewModel
 {
@@ -32,6 +33,7 @@ namespace DesertRage.ViewModel
 
         private void LoadCharacters()
         {
+            Log.Debug("Loading characters...");
             HashSet<string> unlock = Bank.LoadHeroKeys();
             foreach (string hero in unlock)
             {
@@ -44,17 +46,19 @@ namespace DesertRage.ViewModel
 
         private void LoadProfiles()
         {
+            Log.Debug("Loading player profiles...");
+            string folder;
             try
             {
-                string folder = $"{Bank.DataDirectory}/Profiles".ToFull();
+                folder = $"{Bank.DataDirectory}/Profiles".ToFull();
                 foreach (string profile in Directory.GetDirectories(folder))
                 {
                     Profiles.Add(new DirectoryInfo(profile).Name);
                 }
             }
-            catch // (IOException exception)
+            catch (IOException exception)
             {
-
+                Log.Error($"Can't find profiles in: {folder}\n{exception.Message}");
             }
         }
 
