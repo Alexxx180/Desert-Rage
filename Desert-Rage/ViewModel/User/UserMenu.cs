@@ -10,6 +10,7 @@ using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds;
+using Serilog;
 
 namespace DesertRage.ViewModel.User
 {
@@ -127,13 +128,12 @@ namespace DesertRage.ViewModel.User
         private protected override void AddSkills
             (HashSet<SkillsID> ramSkills)
         {
+            Log.Debug($"Loading hero skills...");
             Dictionary<string, AttributeUnit>
                 skills = Bank.AllSkills();
 
             foreach (SkillsID id in ramSkills)
             {
-                System.Diagnostics.Trace.WriteLine(skills is null);
-                System.Diagnostics.Trace.WriteLine(id.ToString());
                 AttributeUnit skill = skills[id.ToString()];
 
                 ConsumeCommand command = ConsumeCommand.FromUnit
@@ -152,6 +152,7 @@ namespace DesertRage.ViewModel.User
 
         private void AddItems()
         {
+            Log.Debug($"Loading hero items...");
             List<AttributeUnit> items = Bank.AllItems();
 
             for (byte i = 0; i < items.Count; i++)
@@ -223,6 +224,7 @@ namespace DesertRage.ViewModel.User
         #region HeroSetup Members
         private void LoadHeroBestiary()
         {
+            Log.Debug($"Loading bestiary...");
             Bestiary = new ObservableCollection<Foe>();
             foreach (EnemyBestiary id in Hero.Learned)
             {
