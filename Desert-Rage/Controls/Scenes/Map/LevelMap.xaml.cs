@@ -139,7 +139,7 @@ namespace DesertRage.Controls.Scenes.Map
                     break;
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
-                    UserData.ViewModel.Entry.Display.Content = UserData.Menu;
+                    UserData.ViewModel.Entry.SetView(UserData.Menu);
                     break;
                 case Key.E:
                 case Key.Space:
