@@ -40,8 +40,8 @@
 	],
 	"BackCover": "/Resources/Media/Images/Locations/WaterTemple/Way.svg",
 	"BattleBack": "/Resources/Media/Images/Battle/Background/WaterTemple.svg",
-	"MusicPeace": "/Resources/Media/OST/Music/WaterTemple/Peace.mp3",
-	"MusicFight": "/Resources/Media/OST/Music/WaterTemple/Fight.mp3",
+	"MusicPeace": "WaterTemple/Peace.mp3",
+	"MusicFight": "WaterTemple/Fight.mp3",
 	"Start": {
 		"X": 51,
 		"Y": 34
