@@ -1,6 +1,4 @@
-﻿using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
-using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
-using DesertRage.Model.Locations.Map;
+﻿using DesertRage.Model.Locations.Map;
 using System.Collections.Generic;
 
 namespace DesertRage.Model.Locations
@@ -11,6 +9,7 @@ namespace DesertRage.Model.Locations
         {
             base.Set(next);
             Messages = next.Messages;
+            Area.Set(next.Area);
         }
 
         public Floor Area { get; set; }

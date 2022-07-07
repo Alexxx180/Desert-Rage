@@ -11,7 +11,7 @@ namespace DesertRage.Model.Locations.Map
             Danger = new Chip();
         }
 
-        public void SetChapter(Floor next)
+        public void Set(Floor next)
         {
             NextChapter = next.NextChapter;
             Map = next.Map;
