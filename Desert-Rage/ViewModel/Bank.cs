@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DesertRage.Model.Locations;
+using DesertRage.Model.Locations.Map;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
@@ -96,7 +97,13 @@ namespace DesertRage.ViewModel
 
         internal static Location LoadLevel(string name)
         {
-            return GetItems<Location>($"Map/{name}.json");
+            string path = $"Map/{name}";
+            
+            Floor area = GetItems<Location>($"{path}/Map.json");
+            Location map = GetItems<Location>($"{path}/Info{Paths.LocalePrefix}.json");
+            map.Area = area;
+            
+            return map;
         }
 
         internal static NextStats GetNextStats(string name)
