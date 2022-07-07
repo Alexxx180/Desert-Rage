@@ -191,4 +191,7 @@
   <data name="BerserkDescription" xml:space="preserve">
     <value>Горячо поприветствовать оппонентов</value>
   </data>
+  <data name="MapHint" xml:space="preserve">
+    <value>E - взаимодействиe. Ctrl - меню</value>
+  </data>
 </root>
