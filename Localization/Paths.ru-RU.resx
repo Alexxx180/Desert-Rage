@@ -152,4 +152,7 @@
   <data name="Skills" xml:space="preserve">
     <value>Skills.ru-RU</value>
   </data>
+  <data name="LocalePrefix" xml:space="preserve">
+    <value></value>
+  </data>
 </root>
