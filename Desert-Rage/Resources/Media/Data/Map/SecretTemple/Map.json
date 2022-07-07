@@ -40,8 +40,8 @@
 	],
 	"BackCover": "/Resources/Media/Images/Locations/SecretTemple/Way.svg",
 	"BattleBack": "/Resources/Media/Images/Battle/Background/SecretTemple.svg",
-	"MusicPeace": "/Resources/Media/OST/Music/SecretTemple/Peace.mp3",
-	"MusicFight": "/Resources/Media/OST/Music/SecretTemple/Fight.mp3",
+	"MusicPeace": "SecretTemple/Peace.mp3",
+	"MusicFight": "SecretTemple/Fight.mp3",
 	"Start": {
 		"X": 18,
 		"Y": 34
