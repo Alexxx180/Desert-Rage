@@ -2,7 +2,7 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 using System.Collections.Generic;
 
-namespace DesertRage.Model.Locations
+namespace DesertRage.Model.Locations.Map
 {
     public class Floor
     {
