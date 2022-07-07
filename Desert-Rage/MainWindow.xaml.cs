@@ -59,10 +59,31 @@ namespace DesertRage
                 OnPropertyChanged();
             }
         }
+        
+        private IControllable _view;
+        public IControllable View
+        {
+            get => _view;
+            set
+            {
+                _view = value;
+                OnPropertyChanged();
+            }
+        }
+        
+        public void SetView(IControllable view)
+        {
+            View = view;
+        }
 
         public MainWindow()
         {
             InitializeComponent();
+            MainMenu menu = new MainMenu
+            {
+                Main = this
+            };
+            SetView(menu);
             Setup();
         }
 
@@ -158,18 +179,12 @@ namespace DesertRage
 
         private void TransferKeyDown(object sender, KeyEventArgs e)
         {
-            if (Display.Content is IControllable keyPad)
-            {
-                keyPad.KeyHandle(sender, e);
-            }
+            View.KeyHandle(sender, e);
         }
 
         private void TransferKeyUp(object sender, KeyEventArgs e)
         {
-            if (Display.Content is IControllable keyPad)
-            {
-                keyPad.KeyRelease(sender, e);
-            }
+            View.KeyRelease(sender, e);
         }
 
         private void Exit(object sender, EventArgs e)
