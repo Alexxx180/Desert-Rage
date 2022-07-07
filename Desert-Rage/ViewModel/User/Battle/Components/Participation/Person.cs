@@ -2,13 +2,15 @@
 using DesertRage.Model.Locations.Battle.Stats;
 using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
+using DesertRage.ViewModel;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status;
+using DesertRage.Model.Helpers;
 using System.ComponentModel;
 using System.Collections.Generic;
-using DesertRage.Model.Helpers;
+using Serilog;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Participation
 {
@@ -30,44 +32,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
         #region Battle Commands
         private void SetCommands()
         {
-            Fight = InstantCommand.FromUnit(new AttributeUnit
-            {
-                Command = "Dependent.WeaponCommand",
-                Attributes = new Dictionary<string, float>
-                {
-                    { "Dependency", 2 }
-                }
-            });
-
-            Shield = InstantCommand.FromUnit(new AttributeUnit
-            {
-                Command = "Independent.Status.ApplyStatus",
-                Noise = "Actions/DefenceBoost.mp3",
-                Attributes = new Dictionary<string, float>
-                {
-                    { "Status", StatusID.DEFENCE.Int() }
-                }
-            });
-
-            Flee = InstantCommand.FromUnit(new AttributeUnit
-            {
-                Command = "Dependent.EscapeCommand",
-                Noise = "Actions/Flee.mp3",
-                Attributes = new Dictionary<string, float>
-                {
-                    { "Dependency", 1 }
-                }
-            });
-
-            Auto = InstantCommand.FromUnit(new AttributeUnit
-            {
-                Command = "Independent.Status.ApplyStatus",
-                Noise = "Actions/PowerBoost.mp3",
-                Attributes = new Dictionary<string, float>
-                {
-                    { "Status", StatusID.BERSERK.Int() }
-                }
-            });
+            Log.Debug("Loading battle options...");
+            Dictionary<string, AttributeUnit> options = Bank.GetBattleOptions();
+            Fight = InstantCommand.FromUnit(options["Fight"]);
+            Shield = InstantCommand.FromUnit(options["Shield"]);
+            Flee = InstantCommand.FromUnit(options["Flee"]);
+            Auto = InstantCommand.FromUnit(options["Auto"]);
 
             Shield.SetModel(ViewModel);
             Fight.SetModel(ViewModel);
