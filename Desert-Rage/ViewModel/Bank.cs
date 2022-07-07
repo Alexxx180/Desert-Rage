@@ -114,6 +114,11 @@ namespace DesertRage.ViewModel
             return GetItems<List<AttributeUnit>>($"Items/{Paths.Inventory}.json");
         }
         
+        internal static Dictionary<string, AttributeUnit> GetBattleOptions()
+        {
+            return GetItems<Dictionary<string, AttributeUnit>>($"Items/Options.json");
+        }
+        
         internal static Dictionary<string, AttributeUnit> GetSkills()
         {
             return GetItems<Dictionary<string, AttributeUnit>>($"Items/{Paths.Skills}.json");
