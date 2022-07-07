@@ -45,5 +45,10 @@ namespace DesertRage.Model.Helpers
         {
             return random.Next(chance.X, chance.Y);
         }
+        
+        public static bool IsNA(this string parameter)
+        {
+            return string.IsNullOrEmpty(parameter);
+        }
     }
 }
