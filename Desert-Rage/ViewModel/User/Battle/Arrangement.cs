@@ -6,6 +6,7 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations;
 using DesertRage.ViewModel.User.Battle.Components.Strategy.Appear;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
+using Serilog;
 
 namespace DesertRage.ViewModel.User.Battle
 {
@@ -64,6 +65,7 @@ namespace DesertRage.ViewModel.User.Battle
 
         internal void SetFoes(EnemyBestiary[] bestiary)
         {
+            Log.Debug("Loading stage enemies...");
             Foe[] stageFoes = new Foe[bestiary.Length];
 
             for (byte i = 0; i < stageFoes.Length; i++)
