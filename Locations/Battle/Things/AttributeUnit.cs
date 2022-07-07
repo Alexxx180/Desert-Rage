@@ -4,7 +4,7 @@ namespace DesertRage.Model.Locations.Battle.Things
 {
     public class AttributeUnit : NoiseUnit
     {
-        public CommandID Command { get; set; }
-        public Dictionary<string, Attribute> Attributes { get; set; }
+        public string Command { get; set; }
+        public Dictionary<string, float> Attributes { get; set; }
     }
 }
