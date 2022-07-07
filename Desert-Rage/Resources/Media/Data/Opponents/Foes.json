@@ -5,7 +5,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Spider.mp3",
+	"Death": "Defeat/Enemies/Spider.mp3",
 	"Experience": 5,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -107,7 +107,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Mummy.mp3",
+	"Death": "Defeat/Enemies/Mummy.mp3",
 	"Experience": 7,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -209,7 +209,7 @@
 		"X": 2,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Zombie.mp3",
+	"Death": "Defeat/Enemies/Zombie.mp3",
 	"Experience": 11,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -311,7 +311,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Bones.mp3",
+	"Death": "Defeat/Enemies/Bones.mp3",
 	"Experience": 15,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -403,7 +403,7 @@
 		"Description": null,
 		"Name": null
 	}],
-	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Idle.svg",
 	"Description": "He doesn't seem so harmless. After such a length of service, he will have a serious conversation with you.",
 	"Name": "Guardian"
 }, {
@@ -413,7 +413,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Vulture.mp3",
+	"Death": "Defeat/Enemies/Vulture.mp3",
 	"Experience": 35,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -515,7 +515,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Ghoul.mp3",
+	"Death": "Defeat/Enemies/Ghoul.mp3",
 	"Experience": 75,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -617,7 +617,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/GrimReaper.mp3",
+	"Death": "Defeat/Enemies/GrimReaper.mp3",
 	"Experience": 100,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -719,7 +719,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Scarab.mp3",
+	"Death": "Defeat/Enemies/Scarab.mp3",
 	"Experience": 60,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -821,7 +821,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/KillerMole.mp3",
+	"Death": "Defeat/Enemies/KillerMole.mp3",
 	"Experience": 175,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -923,7 +923,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Imp.mp3",
+	"Death": "Defeat/Enemies/Imp.mp3",
 	"Experience": 180,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -1025,7 +1025,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Worm.mp3",
+	"Death": "Defeat/Enemies/Worm.mp3",
 	"Experience": 200,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -1127,7 +1127,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Master.mp3",
+	"Death": "Defeat/Enemies/Master.mp3",
 	"Experience": 255,
 	"IsLearned": false,
 	"Strategy": 0,
