@@ -1,0 +1,29 @@
+{
+  "Fight": {
+    "Command": "Dependent.WeaponCommand",
+    "Attributes": {
+      "Dependency": 2
+    }
+  },
+  "Shield": {
+    "Command": "Independent.Status.ApplyStatus",
+    "Noise": "Actions/DefenceBoost.mp3",
+    "Attributes": {
+      "Status": 3
+    }
+  },
+  "Flee": {
+    "Command": "Dependent.EscapeCommand",
+    "Noise": "Actions/Flee.mp3",
+    "Attributes": {
+      "Dependency": 1
+    }
+  },
+  "Auto": {
+    "Command": "Independent.Status.ApplyStatus",
+    "Noise": "Actions/PowerBoost.mp3",
+    "Attributes": {
+      "Status": 4
+    }
+  }
+}
