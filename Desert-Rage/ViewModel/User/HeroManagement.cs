@@ -5,6 +5,7 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player;
 using DesertRage.Model.Menu.Things.Logic;
+using Serilog;
 
 namespace DesertRage.ViewModel.User
 {
@@ -76,6 +77,7 @@ namespace DesertRage.ViewModel.User
 
         private void LevelUp(byte count)
         {
+            Log.Debug("Level Up to: " + count);
             NextStats bank = Bank.GetNextStats(Preferences.Description);
             HashSet<SkillsID> newSkills = Hero.LevelUp(bank, count);
 
@@ -106,6 +108,7 @@ namespace DesertRage.ViewModel.User
 
         protected void BossBattle(EnemyBestiary id)
         {
+            Log.Debug($"Boss battle! Vs: {id}");
             Boss boss = ViewModel.BossesEnumeration[id];
             Music(boss.Theme);
 
