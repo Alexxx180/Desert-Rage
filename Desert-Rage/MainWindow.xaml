@@ -34,7 +34,7 @@
 
         <Label x:Name="Display" Style="{StaticResource StretchAll}">
             <Label.Content>
-                <menu:MainMenu Main="{Binding ElementName=This}"/>
+                <Binding Path="View"/>
             </Label.Content>
         </Label>
 
