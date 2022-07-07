@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map.Area"
+             xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
              xmlns:menu="clr-namespace:DesertRage.Controls.Menu.Game"
              xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
@@ -50,7 +50,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -64,7 +64,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -78,7 +78,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -92,7 +92,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -106,7 +106,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -120,7 +120,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -134,7 +134,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -148,7 +148,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -162,7 +162,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -180,7 +180,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -194,7 +194,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -208,7 +208,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -222,7 +222,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -236,7 +236,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -250,7 +250,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -264,7 +264,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -278,7 +278,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -292,7 +292,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -310,7 +310,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -324,7 +324,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -338,7 +338,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -352,7 +352,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -372,7 +372,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -386,7 +386,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -400,7 +400,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -414,7 +414,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -432,7 +432,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -446,7 +446,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -460,7 +460,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -474,7 +474,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -488,7 +488,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -502,7 +502,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -516,7 +516,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -530,7 +530,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -544,7 +544,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -562,7 +562,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -576,7 +576,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -590,7 +590,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -604,7 +604,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -618,7 +618,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -632,7 +632,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -646,7 +646,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -660,7 +660,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
@@ -674,7 +674,7 @@
                             <StaticResource ResourceKey="MapConverter"/>
                         </MultiBinding.Converter>
 
-                        <Binding Path="UserData.Level.Map.Area"/>
+                        <Binding Path="UserData.Level.Area.Map"/>
                         <Binding Path="UserData.Level.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
