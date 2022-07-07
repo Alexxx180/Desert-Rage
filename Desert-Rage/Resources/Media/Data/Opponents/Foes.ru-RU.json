@@ -5,7 +5,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Spider.mp3",
+	"Death": "Defeat/Enemies/Spider.mp3",
 	"Experience": 5,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -107,7 +107,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Mummy.mp3",
+	"Death": "Defeat/Enemies/Mummy.mp3",
 	"Experience": 7,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -209,7 +209,7 @@
 		"X": 2,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Zombie.mp3",
+	"Death": "Defeat/Enemies/Zombie.mp3",
 	"Experience": 11,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -311,7 +311,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Bones.mp3",
+	"Death": "Defeat/Enemies/Bones.mp3",
 	"Experience": 15,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -403,7 +403,7 @@
 		"Description": null,
 		"Name": null
 	}],
-	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Action.svg",
+	"Icon": "/Resources/Media/Images/Battle/Enemies/Bones/Idle.svg",
 	"Description": "\u041E\u043D \u043D\u0435 \u043A\u0430\u0436\u0435\u0442\u0441\u044F \u0442\u0430\u043A\u0438\u043C \u0443\u0436 \u0431\u0435\u0437\u043E\u0431\u0438\u0434\u043D\u044B\u043C. \u0421\u043F\u0443\u0441\u0442\u044F \u0442\u0430\u043A\u043E\u0439 \u0441\u0442\u0430\u0436 \u043E\u0445\u0440\u0430\u043D\u044B \u0443 \u043D\u0435\u0433\u043E \u0431\u0443\u0434\u0435\u0442 \u043A \u0432\u0430\u043C \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u0439 \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440.",
 	"Name": "\u0421\u0442\u0440\u0430\u0436"
 }, {
@@ -413,7 +413,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Vulture.mp3",
+	"Death": "Defeat/Enemies/Vulture.mp3",
 	"Experience": 35,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -515,7 +515,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Ghoul.mp3",
+	"Death": "Defeat/Enemies/Ghoul.mp3",
 	"Experience": 75,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -617,7 +617,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/GrimReaper.mp3",
+	"Death": "Defeat/Enemies/GrimReaper.mp3",
 	"Experience": 100,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -719,7 +719,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Scarab.mp3",
+	"Death": "Defeat/Enemies/Scarab.mp3",
 	"Experience": 60,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -821,7 +821,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/KillerMole.mp3",
+	"Death": "Defeat/Enemies/KillerMole.mp3",
 	"Experience": 175,
 	"IsLearned": false,
 	"Strategy": 1,
@@ -923,7 +923,7 @@
 		"X": 1,
 		"Y": 1
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Imp.mp3",
+	"Death": "Defeat/Enemies/Imp.mp3",
 	"Experience": 180,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -1025,7 +1025,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Worm.mp3",
+	"Death": "Defeat/Enemies/Worm.mp3",
 	"Experience": 200,
 	"IsLearned": false,
 	"Strategy": 0,
@@ -1127,7 +1127,7 @@
 		"X": 2,
 		"Y": 2
 	},
-	"Death": "/Resources/Media/OST/Sounds/Defeat/Enemies/Master.mp3",
+	"Death": "Defeat/Enemies/Master.mp3",
 	"Experience": 255,
 	"IsLearned": false,
 	"Strategy": 0,
