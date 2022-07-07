@@ -61,7 +61,7 @@ namespace DesertRage.Controls.Menu.Game
             {
                 case Key.LeftCtrl:
                 case Key.RightCtrl:
-                    Player.ViewModel.Entry.Display.Content = Player.Location;
+                    Player.ViewModel.Entry.SetView(Player.Location);
                     MenuTip();
                     break;
                 default:
