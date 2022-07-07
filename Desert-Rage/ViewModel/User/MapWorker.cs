@@ -7,6 +7,7 @@ using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Map;
 using DesertRage.ViewModel.User.Battle;
+using DesertRage.Resources.Localization;
 using Serilog;
 
 namespace DesertRage.ViewModel.User
@@ -42,7 +43,7 @@ namespace DesertRage.ViewModel.User
             Location = new LevelMap(this);
             ViewModel = new BattleViewModel(this);
 
-            MessageToUser("E - взаимодействиe. Ctrl - меню");
+            MessageToUser(Words.MapHint);
         }
 
         private Location _level;
@@ -99,12 +100,12 @@ namespace DesertRage.ViewModel.User
         #region Location Members
 
         #region Chapter Members
-        //private void NewCharacter
-        //    (string name, bool condition)
-        //{
-        //    if (condition)
-        //        Bank.SaveCharacter(name);
-        //}
+        private void NewCharacter
+            (string name, bool condition)
+        {
+            if (condition)
+                Bank.SaveCharacter(name);
+        }
 
         public void SetHeroStart()
         {
@@ -123,9 +124,9 @@ namespace DesertRage.ViewModel.User
 
             if (next is null)
             {
-                //NewCharacter("Rock", Hero.Name.Length == 0);
-                //NewCharacter("Sam", Hero.SelectedArmor.Equals
-                //    (new BattleStats(Sets.SERIOUS.ToByte())));
+                Armor serious = new Armor(Sets.SERIOUS.Byte());
+                NewCharacter("Rock", Preferences.Name.Length == 0);
+                NewCharacter("Sam", Hero.Equipped.Equals(serious));
                 ViewModel.Entry.RaiseEscape();
             }
             else
@@ -235,7 +236,7 @@ namespace DesertRage.ViewModel.User
                     Chest(front, 'E');
                     break;
                 case 'E':
-                    MessageToUser("Когда-то... ", front);
+                    MessageToUser(Words.EmptyPresequence, front);
                     break;
                 case 'I':
                     Chest(front, '.');
