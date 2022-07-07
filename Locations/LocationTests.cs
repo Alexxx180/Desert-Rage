@@ -1,6 +1,7 @@
 ﻿using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Map;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -12,11 +13,13 @@ namespace DesertRage.Tests.Locations
         [TestMethod]
         public void SetChapterLocationReturnChapter()
         {
-            Location current = new Location();
-
-            Location next = new Location
+            Location current = new Location
             {
-                Name = "Name",
+                Area = new Floor()
+            };
+
+            Floor floor = new Floor
+            {
                 NextChapter = "NextChapter",
                 Map = new char[][] { "...".ToCharArray() },
                 BackCover = "BackCover",
@@ -29,10 +32,6 @@ namespace DesertRage.Tests.Locations
                 Bosses = new Dictionary<string, EnemyBestiary>
                 {
                     { "1:0", EnemyBestiary.Pharaoh }
-                },
-                Messages = new Dictionary<string, string>
-                {
-                    { "2:0", "Message" }
                 },
                 Gates = new Dictionary<string, Position>
                 {
@@ -53,26 +52,36 @@ namespace DesertRage.Tests.Locations
                 IsTimeChamber = true,
             };
 
-            current.SetChapter(next);
+            Location next = new Location
+            {
+                Name = "Name",
+                Area = floor,
+                Messages = new Dictionary<string, string>
+                {
+                    { "2:0", "Message" }
+                }
+            };
+
+            current.Set(next);
 
             Assert.AreEqual(next.Name, current.Name);
-            Assert.AreEqual(next.NextChapter, current.NextChapter);
-            Assert.AreEqual(next.Map, current.Map);
-            Assert.AreEqual(next.BackCover, current.BackCover);
-            Assert.AreEqual(next.BattleBack, current.BattleBack);
-            Assert.AreEqual(next.MusicPeace, current.MusicPeace);
-            Assert.AreEqual(next.MusicFight, current.MusicFight);
-            Assert.AreEqual(next.Start, current.Start);
-            Assert.AreEqual(next.Danger.X, current.Danger.X);
-            Assert.AreEqual(next.Danger.Y, current.Danger.Y);
-            Assert.AreEqual(next.StageFoes[0], current.StageFoes[0]);
-            Assert.AreEqual(next.Bosses["1:0"], current.Bosses["1:0"]);
+            Assert.AreEqual(next.Area.NextChapter, current.Area.NextChapter);
+            Assert.AreEqual(next.Area.Map, current.Area.Map);
+            Assert.AreEqual(next.Area.BackCover, current.Area.BackCover);
+            Assert.AreEqual(next.Area.BattleBack, current.Area.BattleBack);
+            Assert.AreEqual(next.Area.MusicPeace, current.Area.MusicPeace);
+            Assert.AreEqual(next.Area.MusicFight, current.Area.MusicFight);
+            Assert.AreEqual(next.Area.Start, current.Area.Start);
+            Assert.AreEqual(next.Area.Danger.X, current.Area.Danger.X);
+            Assert.AreEqual(next.Area.Danger.Y, current.Area.Danger.Y);
+            Assert.AreEqual(next.Area.StageFoes[0], current.Area.StageFoes[0]);
+            Assert.AreEqual(next.Area.Bosses["1:0"], current.Area.Bosses["1:0"]);
             Assert.AreEqual(next.Messages["2:0"], current.Messages["2:0"]);
-            Assert.AreEqual(next.Gates["3:0"], current.Gates["3:0"]);
-            Assert.AreEqual(next.Warps["4:0"], current.Warps["4:0"]);
-            Assert.AreEqual(next.Equipment["5:0"], current.Equipment["5:0"]);
-            Assert.AreEqual(next.TileCodes["."], current.TileCodes["."]);
-            Assert.AreEqual(next.IsTimeChamber, current.IsTimeChamber);
+            Assert.AreEqual(next.Area.Gates["3:0"], current.Area.Gates["3:0"]);
+            Assert.AreEqual(next.Area.Warps["4:0"], current.Area.Warps["4:0"]);
+            Assert.AreEqual(next.Area.Equipment["5:0"], current.Area.Equipment["5:0"]);
+            Assert.AreEqual(next.Area.TileCodes["."], current.Area.TileCodes["."]);
+            Assert.AreEqual(next.Area.IsTimeChamber, current.Area.IsTimeChamber);
         }
     }
 }
