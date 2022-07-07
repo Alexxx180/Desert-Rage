@@ -63,6 +63,11 @@ namespace DesertRage.ViewModel
         }
 
         #region Prefab Members
+        internal static Dictionary<string, string> LoadConfig()
+        {
+            return GetItems<Dictionary<string, string>>($"Items/Config.json");
+        }
+            
         internal static string[] LoadTips()
         {
             return GetItems<string[]>($"Items/{Paths.Help}.json");
