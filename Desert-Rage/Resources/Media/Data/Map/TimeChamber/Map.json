@@ -39,7 +39,7 @@
 	],
 	"BackCover": "/Resources/Media/Images/Locations/TheGreatEscape/Way.svg",
 	"BattleBack": "/Resources/Media/Images/Locations/Total/Transparent.svg",
-	"MusicPeace": "/Resources/Media/OST/Music/TimeChamber.mp3",
+	"MusicPeace": "TimeChamber.mp3",
 	"MusicFight": "",
 	"Start": {
 		"X": 30,
