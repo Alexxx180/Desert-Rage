@@ -106,7 +106,7 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Continue....
+        ///   Ищет локализованную строку, похожую на Continue.
         /// </summary>
         public static string Continue {
             get {
@@ -214,7 +214,7 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на New Adventure.
+        ///   Ищет локализованную строку, похожую на New Game.
         /// </summary>
         public static string NewGame {
             get {

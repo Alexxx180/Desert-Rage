@@ -133,10 +133,10 @@
     <value>Settings</value>
   </data>
   <data name="Continue" xml:space="preserve">
-    <value>Continue...</value>
+    <value>Continue</value>
   </data>
   <data name="NewGame" xml:space="preserve">
-    <value>New Adventure</value>
+    <value>New Game</value>
   </data>
   <data name="Music" xml:space="preserve">
     <value>Music</value>
