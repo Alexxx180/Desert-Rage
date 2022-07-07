@@ -1,13 +1,13 @@
 [
    {
-      "Theme":"/Resources/Media/OST/Music/SecretTemple/Pharaoh.mp3",
+      "Theme":"SecretTemple/Pharaoh.mp3",
       "ID":12,
       "Drop":6,
       "Size":{
          "X":3,
          "Y":3
       },
-      "Death":"/Resources/Media/OST/Sounds/Defeat/Bosses/Pharaoh.mp3",
+      "Death":"Defeat/Bosses/Pharaoh.mp3",
       "Experience":100,
       "IsLearned":false,
       "Strategy":0,
@@ -112,14 +112,14 @@
       "Name":"Pharaoh"
    },
    {
-      "Theme":"/Resources/Media/OST/Music/WaterTemple/FriendDuel.mp3",
+      "Theme":"WaterTemple/FriendDuel.mp3",
       "ID":13,
       "Drop":6,
       "Size":{
          "X":2,
          "Y":2
       },
-      "Death":"/Resources/Media/OST/Sounds/Defeat/Bosses/Friend.mp3",
+      "Death":"Defeat/Bosses/Friend.mp3",
       "Experience":200,
       "IsLearned":false,
       "Strategy":0,
@@ -224,14 +224,14 @@
       "Name":"Rock"
    },
    {
-      "Theme":"/Resources/Media/OST/Music/FireTemple/TheRuler.mp3",
+      "Theme":"FireTemple/TheRuler.mp3",
       "ID":14,
       "Drop":6,
       "Size":{
          "X":3,
          "Y":3
       },
-      "Death":"/Resources/Media/OST/Sounds/Defeat/Bosses/TheRuler.mp3",
+      "Death":"Defeat/Bosses/TheRuler.mp3",
       "Experience":255,
       "IsLearned":false,
       "Strategy":0,
@@ -336,14 +336,14 @@
       "Name":"The Ruler"
    },
    {
-      "Theme":"/Resources/Media/OST/Music/SecretTemple/UghZan.mp3",
+      "Theme":"SecretTemple/UghZan.mp3",
       "ID":15,
       "Drop":6,
       "Size":{
          "X":3,
          "Y":3
       },
-      "Death":"/Resources/Media/OST/Sounds/Defeat/Bosses/UghZan.mp3",
+      "Death":"Defeat/Bosses/UghZan.mp3",
       "Experience":150,
       "IsLearned":false,
       "Strategy":0,

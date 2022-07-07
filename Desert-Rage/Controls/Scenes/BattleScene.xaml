@@ -80,7 +80,7 @@
             </Grid.ColumnSpan>
 
             <attach:SvgBox.Source>
-                <Binding Path="Human.Player.Level.BattleBack">
+                <Binding Path="Human.Player.Level.Area.BattleBack">
                     <Binding.Converter>
                         <converters:UriConverter/>
                     </Binding.Converter>

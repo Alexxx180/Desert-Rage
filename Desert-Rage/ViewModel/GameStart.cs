@@ -47,10 +47,9 @@ namespace DesertRage.ViewModel
         private void LoadProfiles()
         {
             Log.Debug("Loading player profiles...");
-            string folder;
+            string folder = $"{Bank.DataDirectory}/Profiles".ToFull();
             try
             {
-                folder = $"{Bank.DataDirectory}/Profiles".ToFull();
                 foreach (string profile in Directory.GetDirectories(folder))
                 {
                     Profiles.Add(new DirectoryInfo(profile).Name);

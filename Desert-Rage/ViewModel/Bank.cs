@@ -99,7 +99,7 @@ namespace DesertRage.ViewModel
         {
             string path = $"Map/{name}";
             
-            Floor area = GetItems<Location>($"{path}/Map.json");
+            Floor area = GetItems<Floor>($"{path}/Map.json");
             Location map = GetItems<Location>($"{path}/Info{Paths.LocalePrefix}.json");
             map.Area = area;
             

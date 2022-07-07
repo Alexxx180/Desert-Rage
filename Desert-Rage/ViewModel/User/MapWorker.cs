@@ -9,6 +9,8 @@ using DesertRage.Model.Locations.Map;
 using DesertRage.ViewModel.User.Battle;
 using DesertRage.Resources.Localization;
 using Serilog;
+using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
 
 namespace DesertRage.ViewModel.User
 {
@@ -53,7 +55,10 @@ namespace DesertRage.ViewModel.User
             {
                 _level = value;
                 OnPropertyChanged();
-                ViewModel.SetFoes(value.StageFoes);
+                System.Diagnostics.Trace.WriteLine("AREA IS: " + value.Area is null);
+                System.Diagnostics.Trace.WriteLine("VIEWMODEL IS: " + ViewModel is null);
+
+                ViewModel.SetFoes(value.Area.StageFoes);
                 Resume();
             }
         }
@@ -108,12 +113,12 @@ namespace DesertRage.ViewModel.User
 
         public void SetHeroStart()
         {
-            Hero.SetPlace(Level.Start);
+            Hero.SetPlace(Level.Area.Start);
         }
 
         private void SetChapter(Location chapter)
         {
-            Level.SetChapter(chapter);
+            Level.Set(chapter);
             ViewModel.SetFoes(Level.Area.StageFoes);
         }
 
@@ -177,7 +182,7 @@ namespace DesertRage.ViewModel.User
         {
             Sound($"Info/Map/{audio}");
 
-            Level.Map.SetTile(front, frontTile);
+            Level.Area.Map.SetTile(front, frontTile);
             string next = front.ToString();
 
             Log.Debug("Opening gate with key at: " + next);
@@ -224,7 +229,7 @@ namespace DesertRage.ViewModel.User
         {
             Position front = Hero.Front;
 
-            switch (Level.Map.Tile(front))
+            switch (Level.Area.Map.Tile(front))
             {
                 case '?':
                     Surprise(front, '.');
@@ -266,11 +271,11 @@ namespace DesertRage.ViewModel.User
             if (Hero.Hp.IsEmpty)
                 return;
 
-            Hero.Go(Level.Map, move.Int());
-            bool fight = !Level.IsTimeChamber && Hero.IsBattle();
+            Hero.Go(Level.Area.Map, move.Int());
+            bool fight = !Level.Area.IsTimeChamber && Hero.IsBattle();
 
             Position current = Hero.Place;
-            switch (Level.Map.Tile(current))
+            switch (Level.Area.Map.Tile(current))
             {
                 case ':':
                     Wound(1);
@@ -279,7 +284,7 @@ namespace DesertRage.ViewModel.User
                     Gates(current, '.', '.', "Door.mp3");
                     break;
                 case 'T':
-                    Warp(Level.Warps[current.ToString()]);
+                    Warp(Level.Area.Warps[current.ToString()]);
                     break;
                 case '!':
                     SetTile(current, '.');

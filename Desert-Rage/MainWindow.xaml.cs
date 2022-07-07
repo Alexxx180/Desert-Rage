@@ -8,7 +8,6 @@ using System;
 using DesertRage.Controls.Menu;
 using DesertRage.ViewModel.User;
 using DesertRage.ViewModel.User.Battle;
-using DesertRage.Resources.Localization;
 
 namespace DesertRage
 {
@@ -79,11 +78,6 @@ namespace DesertRage
         public MainWindow()
         {
             InitializeComponent();
-            MainMenu menu = new MainMenu
-            {
-                Main = this
-            };
-            SetView(menu);
             Setup();
         }
 
@@ -95,11 +89,13 @@ namespace DesertRage
             Adventure = profile.ViewModel;
             Adventure.SetEntryPoint(this);
 
-            profile.Music("/Resources/Media/OST/Music/MainTitle.mp3");
-
-            MainMenu menu = Display.Content as MainMenu;
-
+            profile.Music("MainTitle.mp3");
+            MainMenu menu = new MainMenu
+            {
+                Main = this
+            };
             menu.StartViewModel.SetProfile(profile.Preferences.Name);
+            SetView(menu);
         }
 
         #region Model Members
@@ -110,7 +106,7 @@ namespace DesertRage
             MapWorker user = Adventure.Human.Player;
 
             user.SetHero(Bank.LoadHero(hero));
-            user.SetLevel(Bank.LoadLevel(Paths.SecretTemple));
+            user.SetLevel(Bank.LoadLevel("SecretTemple"));
             user.SetName(profile, hero);
 
             user.SetHeroStart();
@@ -134,7 +130,7 @@ namespace DesertRage
 
         private void Explore(MapWorker user)
         {
-            Display.Content = user.Location;
+            SetView(user.Location);
             user.Peace();
         }
         #endregion
@@ -159,16 +155,13 @@ namespace DesertRage
 
         private void Pause()
         {
-            if (Display.Content is not IControllable keyPad)
-                return;
-
             if (IsPaused = !IsPaused)
             {
-                keyPad.Pause();
+                View.Pause();
             }
             else
             {
-                keyPad.Resume();
+                View.Resume();
             }
         }
 

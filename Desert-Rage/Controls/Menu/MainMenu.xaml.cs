@@ -3,13 +3,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using DesertRage.Controls.Scenes;
+using System.Windows.Input;
 
 namespace DesertRage.Controls.Menu
 {
     /// <summary>
     /// Menu with adventure options
     /// </summary>
-    public partial class MainMenu : UserControl, INotifyPropertyChanged
+    public partial class MainMenu : UserControl, IControllable, INotifyPropertyChanged
     {
         #region MainWindow Members
         public static readonly DependencyProperty
@@ -51,6 +53,14 @@ namespace DesertRage.Controls.Menu
         {
             Main.Continue(StartViewModel.CurrentProfile);
         }
+
+        public void KeyRelease(object sender, KeyEventArgs e) { }
+
+        public void KeyHandle(object sender, KeyEventArgs e) { }
+
+        public void Pause() { }
+
+        public void Resume() { }
 
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;

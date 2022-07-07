@@ -63,7 +63,7 @@ namespace DesertRage.ViewModel.User.Battle
         #region Options
         private protected override void Prepare()
         {
-            Entry.Display.Content = Scene;
+            Entry.SetView(Scene);
             base.Prepare();
         }
 

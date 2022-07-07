@@ -78,13 +78,11 @@ namespace DesertRage.ViewModel.User
         }
 
         #region Equipment Members
-        public void AddEquipment(ArmoryElement armor,
-            Equipment[][] equipment)
+        public void AddEquipment(ArmoryElement armor, Equipment[][] equipment)
         {
-            int kind = armor.Kind.Byte();
-            Equipment piece = equipment
-                [kind][armor.Set.Int()];
-
+            byte kind = armor.Kind.Byte();
+            byte set = armor.Set.Byte();
+            Equipment piece = equipment[kind][set];
             Equip[kind].Add(piece);
         }
 
@@ -130,7 +128,7 @@ namespace DesertRage.ViewModel.User
         {
             Log.Debug($"Loading hero skills...");
             Dictionary<string, AttributeUnit>
-                skills = Bank.AllSkills();
+                skills = Bank.GetSkills();
 
             foreach (SkillsID id in ramSkills)
             {
@@ -153,7 +151,7 @@ namespace DesertRage.ViewModel.User
         private void AddItems()
         {
             Log.Debug($"Loading hero items...");
-            List<AttributeUnit> items = Bank.AllItems();
+            List<AttributeUnit> items = Bank.GetInventory();
 
             for (byte i = 0; i < items.Count; i++)
             {

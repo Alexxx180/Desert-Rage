@@ -35,7 +35,7 @@
                     <VisualBrush.Visual>
                         <ContentControl Template="{StaticResource SvgIcon}">
                             <ContentControl.DataContext>
-                                <Binding Path="UserData.Level.BackCover" />
+                                <Binding Path="UserData.Level.Area.BackCover" />
                             </ContentControl.DataContext>
                         </ContentControl>
                     </VisualBrush.Visual>
@@ -51,7 +51,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -65,7 +65,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -79,7 +79,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -93,7 +93,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -107,7 +107,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -121,7 +121,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -135,7 +135,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -149,7 +149,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -163,7 +163,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -181,7 +181,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -195,7 +195,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -209,7 +209,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -223,7 +223,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -237,7 +237,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -251,7 +251,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -265,7 +265,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -279,7 +279,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -293,7 +293,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -311,7 +311,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -325,7 +325,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -339,7 +339,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -353,7 +353,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -373,7 +373,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -387,7 +387,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -401,7 +401,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -415,7 +415,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -433,7 +433,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -447,7 +447,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -461,7 +461,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -475,7 +475,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -489,7 +489,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -503,7 +503,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -517,7 +517,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -531,7 +531,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -545,7 +545,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -563,7 +563,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -577,7 +577,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -591,7 +591,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -605,7 +605,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -619,7 +619,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -633,7 +633,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -647,7 +647,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -661,7 +661,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -675,7 +675,7 @@
                         </MultiBinding.Converter>
 
                         <Binding Path="UserData.Level.Area.Map"/>
-                        <Binding Path="UserData.Level.TileCodes"/>
+                        <Binding Path="UserData.Level.Area.TileCodes"/>
                         <Binding Path="UserData.Hero.Place"/>
                     </MultiBinding>
                 </map:MapTile.Path>
@@ -696,7 +696,7 @@
                     <Border.Style>
                         <Style BasedOn="{StaticResource Impact}" TargetType="Border">
                             <Style.Triggers>
-                                <DataTrigger Value="False" Binding="{Binding Path=Level.IsTimeChamber}">
+                                <DataTrigger Value="False" Binding="{Binding Path=Level.Area.IsTimeChamber}">
                                     <Setter Property="Visibility" Value="Collapsed"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -706,8 +706,8 @@
                     <TextBlock>
                         <TextBlock.Text>
                             <MultiBinding StringFormat="{}{0}:{1:00}">
-                                <Binding Path="Level.Danger.X"/>
-                                <Binding Path="Level.Danger.Y"/>
+                                <Binding Path="Level.Area.Danger.X"/>
+                                <Binding Path="Level.Area.Danger.Y"/>
                             </MultiBinding>
                         </TextBlock.Text>
                     </TextBlock>

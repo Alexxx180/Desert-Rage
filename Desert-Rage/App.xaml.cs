@@ -30,11 +30,11 @@ namespace DesertRage
 
         public App()
         {
-            Dictionary<string, string> config = Bank.LoadConfig()
+            Dictionary<string, string> config = Bank.LoadConfig();
             if (config is null)
                 return;
                 
-            if (config.TryGetValue("Culture", string name) && !name.IsNA())
+            if (config.TryGetValue("Culture", out string name) && !name.IsNA())
             {
                 CultureInfo culture = new CultureInfo(name);
                 CultureInfo.DefaultThreadCurrentCulture = culture;
