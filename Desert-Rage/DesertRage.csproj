@@ -956,6 +956,9 @@
     <None Update="Resources\Media\Data\Characters\Unlock.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Media\Data\Items\Config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Media\Data\Items\Equipment.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -44,9 +44,6 @@
     <Compile Update="Controls\Status\StatBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Reload.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Resources\Media\Images\Menu\Items\Items.resx">
@@ -85,9 +82,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\Scenes\Map\MapTile.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Reload.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\ContentControls.xaml">
