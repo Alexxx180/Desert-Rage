@@ -1,122 +1,82 @@
 [
   {
-    "Action": 
-    {
-      "StatUnit" : {
-        "Power": 50
-      },
-      "Unit" : {
-        "Name": "Bandage",
-        "Description" : "+50 HP",
-        "Icon": "/Resources/Media/Images/Menu/Items/Bandage.svg",
-        "Noise": "Actions/Cure.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Dependent.CureCommand",
+    "Name": "Bandage",
+    "Description": "+50 HP",
+    "Icon": "/Resources/Media/Images/Menu/Items/Bandage.svg",
+    "Noise": "Actions/Cure.mp3",
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 50,
       "Value": 0
     }
   },
   {
-    "Action": 
-    {
-      "Status" : 0,
-      "Unit" : {
-        "Name": "Antidote",
-        "Description" : "- Poison",
-        "Icon": "/Resources/Media/Images/Menu/Items/Antidote.svg",
-        "Noise": "Actions/Heal.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Independent.Status.RemoveStatus",
+    "Name": "Antidote",
+    "Description": "- Poison",
+    "Icon": "/Resources/Media/Images/Menu/Items/Antidote.svg",
+    "Noise": "Actions/Heal.mp3",
+    "Attributes": {
+      "Status": 0,
       "Value": 1
     }
   },
   {
-    "Action": 
-    {
-      "StatUnit" : {
-        "Power": 50
-      },
-      "Unit" : {
-        "Name": "Ether",
-        "Description" : "+50 AP",
-        "Icon": "/Resources/Media/Images/Menu/Items/Ether.svg",
-        "Noise": "Actions/Control.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Dependent.RestCommand",
+    "Name": "Ether",
+    "Description": "+50 AP",
+    "Icon": "/Resources/Media/Images/Menu/Items/Ether.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 50,
       "Value": 2
     }
   },
   {
-    "Action": 
-    {
-      "StatUnit" : {
-        "Power": 80
-      },
-      "Unit" : {
-        "Name": "Mixture",
-        "Description" : "+80 HP-AP",
-        "Icon": "/Resources/Media/Images/Menu/Items/Mixture.svg",
-        "Noise": "Actions/Items/Mixture.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Dependent.RecoverCommand",
+    "Name": "Mixture",
+    "Description": "+80 HP-AP",
+    "Icon": "/Resources/Media/Images/Menu/Items/Mixture.svg",
+    "Noise": "Actions/Items/Mixture.mp3",
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 80,
       "Value": 3
     }
   },
   {
-    "Action": 
-    {
-      "StatUnit" : {
-        "Power": 350
-      },
-      "Unit" : {
-        "Name": "Herbs",
-        "Description" : "+350 HP",
-        "Icon": "/Resources/Media/Images/Menu/Items/Herbs.svg",
-        "Noise": "Actions/Cure.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Dependent.CureCommand",
+    "Name": "Herbs",
+    "Description": "+350 HP",
+    "Icon": "/Resources/Media/Images/Menu/Items/Herbs.svg",
+    "Noise": "Actions/Cure.mp3",
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 350,
       "Value": 4
     }
   },
   {
-    "Action": 
-    {
-      "StatUnit" : {
-        "Power": 300
-      },
-      "Unit" : {
-        "Name": "Ether bottle",
-        "Description" : "+300 AP",
-        "Icon": "/Resources/Media/Images/Menu/Items/EtherBottle.svg",
-        "Noise": "Actions/Control.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Dependent.RestCommand",
+    "Name": "Ether bottle",
+    "Description": "+300 AP",
+    "Icon": "/Resources/Media/Images/Menu/Items/EtherBottle.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 300,
       "Value": 5
     }
   },
   {
-    "Action": 
-    {
-      "Unit" : {
-        "Name": "Elixir",
-        "Description" : "100% HP-AP",
-        "Icon": "/Resources/Media/Images/Menu/Items/Elixir.svg",
-        "Noise": "Actions/Items/Mixture.mp3"
-      }
-    },
-    "Subject": 
-    {
+    "Command": "Independent.RecoverMaxCommand",
+    "Name": "Elixir",
+    "Description": "100% HP-AP",
+    "Icon": "/Resources/Media/Images/Menu/Items/Elixir.svg",
+    "Noise": "Actions/Items/Mixture.mp3",
+    "Attributes": {
       "Value": 6
     }
   }

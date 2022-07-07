@@ -1,6 +1,4 @@
-﻿using DesertRage.Model.Locations.Battle;
-using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
@@ -9,10 +7,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// <summary>
         /// Refill some amount of hero AP
         /// </summary>
-        /// <param name="dependency">Rest power formula</param>
-        /// <param name="thing">Thing info</param>
-        public RestCommand(IFormula dependency,
-            NoiseUnit thing) : base(dependency, thing) { }
+        public RestCommand() : base() { }
 
         public override void Use(object parameter)
         {

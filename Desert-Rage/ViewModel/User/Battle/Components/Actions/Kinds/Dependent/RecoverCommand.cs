@@ -1,6 +1,4 @@
-﻿using DesertRage.Model.Locations.Battle;
-using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
@@ -10,10 +8,8 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// Refill some amount of hero
         /// HP and AP at the same time
         /// </summary>
-        /// <param name="dependency">Recover power formula</param>
-        /// <param name="thing">Thing info</param>
-        public RecoverCommand(IFormula dependency,
-            NoiseUnit thing) : base(dependency, thing) { }
+        
+        public RecoverCommand() : base() { }
 
         protected void Rest()
         {

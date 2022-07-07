@@ -3,7 +3,6 @@ using System.ComponentModel;
 using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations;
 using DesertRage.Model.Locations.Battle;
-using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
@@ -12,10 +11,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// <summary>
         /// Escape from battle
         /// </summary>
-        /// <param name="dependency">Escape success formula</param>
-        /// <param name="thing">Thing info</param>
-        public EscapeCommand(IFormula dependency,
-            NoiseUnit thing) : base(dependency, thing)
+        public EscapeCommand() : base()
         {
             UnitCursor = Targeting.HERO;
         }

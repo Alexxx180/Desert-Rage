@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
-using DesertRage.Model.Locations.Battle;
+﻿using System;
+using System.ComponentModel;
+using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 
@@ -17,18 +19,20 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
     
         static DependentCommand()
         {
-            Type formula = typeof(DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency.IFormula);
-            _formulaSpace = formula.NameSpace;
+            Type formula = typeof(IFormula);
+            _formulaSpace = formula.Namespace;
         }
 
-        public void SetUnit(AttributeUnit unit)
+        public override void SetUnit(AttributeUnit unit)
         {
             base.SetUnit(unit);
-            DependencyID id = (DependencyID)unit.Attributes["Dependency"].Value
-            string name = id.ToString();
-            string full = $"{_formulaSpace}.{name}";
-            
-            IFormula formula = (IFormula)Activator.CreateInstance(full);
+            DependencyID id = (DependencyID)unit.Attributes["Dependency"].ToInt();
+
+            string full = $"{_formulaSpace}.{id}";
+            System.Diagnostics.Trace.WriteLine(full);
+
+            Type type = Type.GetType(full);
+            IFormula formula = (IFormula)Activator.CreateInstance(type);
             formula.SetAttributes(unit.Attributes);
             StatUnit = formula;
         }

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using DesertRage.Model.Locations.Battle.Things;
+using System;
+using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions
 {
@@ -12,25 +14,34 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
     
         static InstantCommand()
         {
-            Type command = typeof(DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.ActCommand);
-            _commandSpace = command.NameSpace;
+            Type command = typeof(Kinds.ActCommand);
+            _commandSpace = command.Namespace;
         }
         
-        private protected virtual SetUnit(string commandName, AttributeUnit unit)
+        private protected virtual void SetUnit(Type command, AttributeUnit unit)
         {
-            IAction action = (IAction)Activator.CreateInstance(commandName);
+            IAction action = (IAction)Activator.CreateInstance(command);
             action.SetUnit(unit);
             Effect = action;
         }
 
         public void SetUnit(AttributeUnit unit)
         {
-            SetUnit($"{_commandSpace}.{unit.Command}", unit);
+            System.Diagnostics.Trace.WriteLine($"{_commandSpace}.{unit.Command}");
+            Type type = Type.GetType($"{_commandSpace}.{unit.Command}");
+            SetUnit(type, unit);
         }
 
         public override void Execute(object parameter)
         {
             Effect.Use(parameter);
+        }
+
+        public static InstantCommand FromUnit(AttributeUnit unit)
+        {
+            InstantCommand command = new InstantCommand();
+            command.SetUnit(unit);
+            return command;
         }
 
         public override bool CanExecute(object parameter) => Effect.CanUse;

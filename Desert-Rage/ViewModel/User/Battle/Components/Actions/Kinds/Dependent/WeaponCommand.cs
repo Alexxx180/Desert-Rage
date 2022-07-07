@@ -1,7 +1,6 @@
 ﻿using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
-using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 {
@@ -17,8 +16,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
         /// <summary>
         /// Hit selected enemy with a weapon
         /// </summary>
-        /// <param name="dependency">Damage power formula</param>
-        public WeaponCommand(IFormula dependency) : base(dependency) { }
+        public WeaponCommand() : base() { }
 
         public override NoiseUnit Unit
         {

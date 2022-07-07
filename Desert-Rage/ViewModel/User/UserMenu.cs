@@ -5,9 +5,11 @@ using DesertRage.Model.Helpers;
 using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.Model.Locations.Battle.Stats.Player.Armory;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.Model.Menu.Things.Logic;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
+using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds;
 
 namespace DesertRage.ViewModel.User
 {
@@ -125,12 +127,18 @@ namespace DesertRage.ViewModel.User
         private protected override void AddSkills
             (HashSet<SkillsID> ramSkills)
         {
-            Dictionary<SkillsID, ConsumeCommand>
+            Dictionary<string, AttributeUnit>
                 skills = Bank.AllSkills();
 
             foreach (SkillsID id in ramSkills)
             {
-                AddSkill(skills[id]);
+                System.Diagnostics.Trace.WriteLine(skills is null);
+                System.Diagnostics.Trace.WriteLine(id.ToString());
+                AttributeUnit skill = skills[id.ToString()];
+
+                ConsumeCommand command = ConsumeCommand.FromUnit
+                    (new SkillCommand(), skill);
+                AddSkill(command);
             }
         }
         #endregion
@@ -144,11 +152,12 @@ namespace DesertRage.ViewModel.User
 
         private void AddItems()
         {
-            List<ConsumeCommand> items = Bank.AllItems();
+            List<AttributeUnit> items = Bank.AllItems();
 
             for (byte i = 0; i < items.Count; i++)
             {
-                ConsumeCommand item = items[i];
+                ConsumeCommand item = ConsumeCommand.FromUnit
+                    (new ItemCommand(), items[i]);
                 item.Subject.SetValue(Hero.Items[i]);
                 AddItem(item);
             }

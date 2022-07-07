@@ -1,11 +1,14 @@
 ﻿using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using DesertRage.ViewModel.User.Battle.Components.Actions;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency;
 using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status;
 using System.ComponentModel;
+using System.Collections.Generic;
+using DesertRage.Model.Helpers;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Participation
 {
@@ -27,39 +30,44 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
         #region Battle Commands
         private void SetCommands()
         {
-            Fight = new InstantCommand(
-                new WeaponCommand(new AttackFormula())
-            );
+            Fight = InstantCommand.FromUnit(new AttributeUnit
+            {
+                Command = "Dependent.WeaponCommand",
+                Attributes = new Dictionary<string, float>
+                {
+                    { "Dependency", 2 }
+                }
+            });
 
-            Shield = new InstantCommand(
-                new ApplyStatus(
-                    StatusID.DEFENCE,
-                    new NoiseUnit()
-                    {
-                        Noise = "Actions/DefenceBoost.mp3"
-                    }
-                )
-            );
+            Shield = InstantCommand.FromUnit(new AttributeUnit
+            {
+                Command = "Independent.Status.ApplyStatus",
+                Noise = "Actions/DefenceBoost.mp3",
+                Attributes = new Dictionary<string, float>
+                {
+                    { "Status", StatusID.DEFENCE.Int() }
+                }
+            });
 
-            Flee = new InstantCommand(
-                new EscapeCommand(
-                    new SpeedFormula(),
-                    new NoiseUnit()
-                    {
-                        Noise = "Actions/Flee.mp3"
-                    }
-                )
-            );
+            Flee = InstantCommand.FromUnit(new AttributeUnit
+            {
+                Command = "Dependent.EscapeCommand",
+                Noise = "Actions/Flee.mp3",
+                Attributes = new Dictionary<string, float>
+                {
+                    { "Dependency", 1 }
+                }
+            });
 
-            Auto = new InstantCommand(
-                new ApplyStatus(
-                    StatusID.BERSERK,
-                    new NoiseUnit()
-                    {
-                        Noise = "Actions/PowerBoost.mp3"
-                    }
-                )
-            );
+            Auto = InstantCommand.FromUnit(new AttributeUnit
+            {
+                Command = "Independent.Status.ApplyStatus",
+                Noise = "Actions/PowerBoost.mp3",
+                Attributes = new Dictionary<string, float>
+                {
+                    { "Status", StatusID.BERSERK.Int() }
+                }
+            });
 
             Shield.SetModel(ViewModel);
             Fight.SetModel(ViewModel);

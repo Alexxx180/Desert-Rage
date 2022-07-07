@@ -1,4 +1,5 @@
 ﻿using DesertRage.Model.Helpers;
+using System.Collections.Generic;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency
 {
@@ -10,12 +11,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// and fixed multiplier
         /// </summary>
         
-        public void SetAttributes(Dictionary<string, Attribute> attributes)
+        public override void SetAttributes(Dictionary<string, float> attributes)
         {
-            _multiplier = attributes["Power"].Power;
+            _multiplier = attributes["Power"];
         }
 
-        private readonly float _multiplier;
+        private float _multiplier;
 
         public override int Power
         {

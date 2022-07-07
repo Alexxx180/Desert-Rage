@@ -704,3 +704,7 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Opponents\Bosses.ru-RU.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Opponents\Foes.ru-RU.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Characters\Rock\Beginner.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Inventory.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Inventory.ru-RU.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Skills.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Skills.ru-RU.json

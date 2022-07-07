@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency
 {
@@ -8,7 +9,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// Power dependency, based on hero speed stat
         /// </summary>
         
-        public void SetAttributes(Dictionary<string, Attribute> attributes) { }
+        public void SetAttributes(Dictionary<string, float> attributes) { }
         
         public int Power => ViewModel.Human.Unit.Stats.Speed;
     }

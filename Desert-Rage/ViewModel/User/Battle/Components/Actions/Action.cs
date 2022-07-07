@@ -1,6 +1,4 @@
 ﻿using DesertRage.Model;
-using DesertRage.ViewModel.User.Battle;
-using DesertRage.ViewModel.User.Battle.Components.Actions;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -13,11 +11,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
         /// <summary>
         /// Thing behaviour unit
         /// </summary>
-        /// <param name="action">What need to be done</param>
-        public Action(IAction action)
-        {
-            Effect = action;
-        }
 
         private IAction _effect;
         public IAction Effect

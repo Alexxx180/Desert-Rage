@@ -7,13 +7,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
         /// <summary>
         /// Consume hero AP's when used
         /// </summary>
-        /// <param name="cost">Skill AP cost</param>
-        public SkillCommand(int cost)
-        {
-            SetValue(cost);
-        }
-
-        public SkillCommand() : this(0) { }
 
         #region IThing Members
         private int _value;

@@ -17,6 +17,7 @@ using DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent;
 using DesertRage.Model.Locations.Battle;
 using DesertRage.Resources.Localization;
 using DesertRage.Model;
+using DesertRage.Model.Locations.Battle.Things;
 
 namespace DesertRage.ViewModel
 {
@@ -103,14 +104,14 @@ namespace DesertRage.ViewModel
             return GetItems<Equipment[][]>($"Items/{Paths.Equipment}.json");
         }
         
-        internal static List<ConsumeCommand> GetInventory()
+        internal static List<AttributeUnit> GetInventory()
         {
-            return GetItems<List<ConsumeCommand>>($"Items/{Paths.Inventory}.json");
+            return GetItems<List<AttributeUnit>>($"Items/{Paths.Inventory}.json");
         }
         
-        internal static Dictionary<SkillsID, ConsumeCommand> GetSkills()
+        internal static Dictionary<string, AttributeUnit> GetSkills()
         {
-            return GetItems<Dictionary<SkillsID, ConsumeCommand>>($"Items/{Paths.Skills}.json");
+            return GetItems<Dictionary<string, AttributeUnit>>($"Items/{Paths.Skills}.json");
         }
 
         internal static Foe[] Foes()
@@ -205,7 +206,7 @@ namespace DesertRage.ViewModel
             };
         }
 
-        internal static Dictionary<SkillsID, ConsumeCommand> AllSkills()
+        internal static Dictionary<string, AttributeUnit> AllSkills()
         {
             return GetSkills();/*new Dictionary<SkillsID, ConsumeCommand>
             {
@@ -921,7 +922,7 @@ namespace DesertRage.ViewModel
             };*/
         }
 
-        internal static List<ConsumeCommand> AllItems()
+        internal static List<AttributeUnit> AllItems()
         {
             return GetInventory();/*new List<ConsumeCommand>()
             {

@@ -1,11 +1,13 @@
-﻿using DesertRage.Model.Locations.Battle;
+﻿using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.Model.Locations.Battle.Things.Storage;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.Status
 {
     public class StatusCommand : ActCommand, IAction, INotifyPropertyChanged
-    {        
+    {
         /// <summary>
         /// Status container
         /// </summary>
@@ -14,10 +16,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent.
             UnitCursor = Targeting.HERO;
         }
 
-        public void SetUnit(AttributeUnit unit)
+        public override void SetUnit(AttributeUnit unit)
         {
             base.SetUnit(unit);
-            Status = unit.Attributes["Status"];
+            Status = (StatusID)unit.Attributes["Status"].ToInt();
         }
 
         public virtual void Use(object parameter)

@@ -1,5 +1,6 @@
 ﻿using DesertRage.Model.Locations.Battle;
 using DesertRage.Model.Locations.Battle.Stats.Player;
+using DesertRage.Model.Locations.Battle.Things;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
 using System.ComponentModel;
 
@@ -11,9 +12,9 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
         /// Create action command,
         /// associated with thing
         /// </summary>
-        public ActCommand() { }      
+        public ActCommand() { }
 
-        private protected void SetUnit(NoiseUnit unit)
+        public virtual void SetUnit(AttributeUnit unit)
         {
             Unit = unit;
         }
@@ -28,6 +29,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
         protected MapWorker User => Man.Player;
         protected Character Hero => User.Hero;
 
-        public virtual NoiseUnit Unit { get; }
+        public virtual NoiseUnit Unit { get; private set; }
     }
 }

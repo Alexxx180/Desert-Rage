@@ -1,4 +1,7 @@
 ﻿using DesertRage.Model;
+using DesertRage.Model.Helpers;
+using DesertRage.Model.Locations.Battle.Things;
+using System;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions
@@ -25,10 +28,10 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
             }
         }
         
-        private protected override SetUnit(string commandName, AttributeUnit unit)
+        private protected override void SetUnit(Type command, AttributeUnit unit)
         {
-            base.SetUnit(commandName, unit);
-            Subject.SetValue(unit.Attributes["Value"].Value);
+            base.SetUnit(command, unit);
+            Subject.SetValue(unit.Attributes["Value"].ToInt());
         }
 
         public override void SetModel(BattleViewModel model)
@@ -43,7 +46,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
             base.Execute(parameter);
         }
         
-        public ConsumeCommand FromUnit(IThing subject, AttributeUnit unit)
+        public static ConsumeCommand FromUnit(IThing subject, AttributeUnit unit)
         {
             ConsumeCommand command = new ConsumeCommand(subject);
             command.SetUnit(unit);

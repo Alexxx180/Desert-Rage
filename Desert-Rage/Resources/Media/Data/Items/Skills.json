@@ -2,742 +2,486 @@
   "Cure": {
     "Command": "Dependent.CureCommand",
     "Name": "Cure",
-    "Description" : "+ HP",
+    "Description": "+ HP",
     "Icon": "/Resources/Media/Images/Menu/Skills/Cure.svg",
     "Noise": "Actions/Cure.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 1.8
-      },
-      "Value" : {
-        "Power": 5
-      }
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 1.8,
+      "Value": 5
     }
   },
   "Cure2": {
     "Command": "Independent.CureMaxCommand",
     "Name": "Cure 2",
-    "Description" : "100% HP",
+    "Description": "100% HP",
     "Icon": "/Resources/Media/Images/Menu/Skills/Cure2.svg",
     "Noise": "Actions/Cure2.mp3",
-    "Attributes": 
-    {
-      "Value" : {
-        "Power": 10
-      }
+    "Attributes": {
+      "Value": 10
     }
   },
   "Antidote": {
     "Command": "Independent.Status.RemoveStatus",
     "Name": "Antidote",
-    "Description" : "- Poison",
+    "Description": "- Poison",
     "Icon": "/Resources/Media/Images/Menu/Skills/Heal.svg",
     "Noise": "Actions/Heal.mp3",
-    "Attributes": 
-    {
-      "Status" : {
-        "Power": 0
-      },
-        "Value" : {
-            "Power": 3
-        }
+    "Attributes": {
+      "Status": 0,
+      "Value": 3
     }
   },
   "Learn": {
     "Command": "Independent.LearnCommand",
     "Name": "Analyze",
-"Description" : "Study the enemy properly",
-"Icon": "/Resources/Media/Images/Menu/Skills/Analyze.svg",
-"Noise": "Actions/Scan.mp3",
-"Attributes": 
-{
-    "Value" : {
-        "Power": 0
+    "Description": "Study the enemy properly",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Analyze.svg",
+    "Noise": "Actions/Scan.mp3",
+    "Attributes": {
+      "Value": 0
     }
-}
-},
-"BuffUp": {
-"Command": "Independent.Status.ApplyStatus",
-"Name": "Power UP",
-"Description" : "Concentrate all power",
-"Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
-"Noise": "Actions/PowerBoost.mp3",
-"Attributes": 
-{
-  "Status" : {
-    "Power": 1
   },
-    "Value" : {
-        "Power": 20
+  "BuffUp": {
+    "Command": "Independent.Status.ApplyStatus",
+    "Name": "Power UP",
+    "Description": "Concentrate all power",
+    "Icon": "/Resources/Media/Images/Menu/Skills/AttackUp.svg",
+    "Noise": "Actions/PowerBoost.mp3",
+    "Attributes": {
+      "Status": 1,
+      "Value": 20
     }
-}
-},
-"Shield": {
-"Command": "Independent.Status.ApplyStatus",
-"Name": "Guard",
-"Description" : "Increase vigilance",
-"Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
-"Noise": "Actions/DefenceBoost.mp3",
-"Attributes": 
-{
-  "Status" : {
-    "Power": 2
   },
-    "Value" : {
-        "Power": 15
+  "Shield": {
+    "Command": "Independent.Status.ApplyStatus",
+    "Name": "Guard",
+    "Description": "Increase vigilance",
+    "Icon": "/Resources/Media/Images/Menu/Skills/DefenceUp.svg",
+    "Noise": "Actions/DefenceBoost.mp3",
+    "Attributes": {
+      "Status": 2,
+      "Value": 15
     }
-}
-},
-"Torch": {
-  "Command": "Dependent.FightCommand",
+  },
+  "Torch": {
+    "Command": "Dependent.FightCommand",
     "Name": "Torch",
-    "Description" : "Good on fire",
+    "Description": "Good on fire",
     "Icon": "/Resources/Media/Images/Menu/Skills/Torch.svg",
     "Noise": "Actions/Torch.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 2.0
-      },
-      "Value" : {
-        "Power": 5
-      }
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 2.0,
+      "Value": 5
     }
   },
   "Whip": {
-      "Command": "Dependent.FightCommand",
-      "Name": "Whip",
-        "Description" : "Crushes the bones",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Whip.svg",
-        "Noise": "Actions/Whip.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 3.5
-      },
-      "Value" : {
-        "Power": 7
-      }
+    "Command": "Dependent.FightCommand",
+    "Name": "Whip",
+    "Description": "Crushes the bones",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Whip.svg",
+    "Noise": "Actions/Whip.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 3.5,
+      "Value": 7
     }
   },
   "Sling": {
     "Command": "Dependent.FightCommand",
     "Name": "Slingshot",
-        "Description" : "Can't hide from it",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Slingshot.svg",
-        "Noise": "Actions/Sling.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 5.0
-      },
-      "Value" : {
-        "Power": 13
-      }
+    "Description": "Can't hide from it",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Slingshot.svg",
+    "Noise": "Actions/Sling.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 5.0,
+      "Value": 13
     }
   },
   "Combo": {
-      "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Combo",
-    "Description" : "A hail of blows against enemies",
+    "Description": "A hail of blows against enemies",
     "Icon": "/Resources/Media/Images/Menu/Skills/Combo.svg",
     "Noise": "Actions/Combo.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 3.0
-      },
-      "Value" : {
-        "Power": 10
-      }
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 3.0,
+      "Value": 10
     }
   },
   "Whirl": {
-      "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Storm",
-        "Description" : "Furious gust of wind",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Storm.svg",
-        "Noise": "Actions/Wind.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 4.0
-      },
-      "Value" : {
-        "Power": 18
-      }
+    "Description": "Furious gust of wind",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Storm.svg",
+    "Noise": "Actions/Wind.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 4.0,
+      "Value": 18
     }
   },
-"Quake": {
-      "Command": "Dependent.FightAllCommand",
+  "Quake": {
+    "Command": "Dependent.FightAllCommand",
     "Name": "Quake",
-        "Description" : "Throw rocks at enemies",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Quake.svg",
-        "Noise": "Actions/Quake.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 5.0
-      },
-      "Value" : {
-        "Power": 25
-      }
+    "Description": "Throw rocks at enemies",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Quake.svg",
+    "Noise": "Actions/Quake.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 5.0,
+      "Value": 25
     }
   },
   "LargeAidKit": {
     "Command": "Dependent.CureCommand",
     "Name": "First Aid",
-    "Description" : "+ HP",
+    "Description": "+ HP",
     "Icon": "/Resources/Media/Images/Menu/Skills/LargeAidKit.svg",
     "Noise": "Actions/Cure.mp3",
-      "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 0
-      },
-      "Power" : {
-        "Power": 100
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Attributes": {
+      "Dependency": 0,
+      "Power": 100,
+      "Value": 0
     }
   },
   "SuperAidKit": {
     "Command": "Independent.CureMaxCommand",
     "Name": "Serious Aid",
-    "Description" : "100% HP",
+    "Description": "100% HP",
     "Icon": "/Resources/Media/Images/Menu/Skills/SuperAidKit.svg",
     "Noise": "Actions/Cure2.mp3",
-    "Attributes": 
-    {
-        "Value" : {
-            "Power": 0
-        }
+    "Attributes": {
+      "Value": 0
     }
   },
   "AmmoPack": {
     "Command": "Independent.RestMaxCommand",
     "Name": "Ammo",
-        "Description" : "100% AP",
-        "Icon": "/Resources/Media/Images/Menu/Skills/AmmoPack.svg",
-        "Noise": "Actions/Control.mp3",
-    "Attributes": 
-    {
-        "Value" : {
-            "Power": 0
-        }
+    "Description": "100% AP",
+    "Icon": "/Resources/Media/Images/Menu/Skills/AmmoPack.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Value": 0
     }
   },
   "Invulnerability": {
     "Command": "Independent.Status.ApplyStatus",
     "Name": "Invulnerability",
-        "Description" : "Dramatically increase protection",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Invulnerability.svg",
-        "Noise": "Actions/DefenceBoost.mp3",
-    "Attributes": 
-    {
-      "Status" : {
-        "Power": 2
-      },
-        "Value" : {
-            "Power": 0
-        }
+    "Description": "Dramatically increase protection",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Invulnerability.svg",
+    "Noise": "Actions/DefenceBoost.mp3",
+    "Attributes": {
+      "Status": 2,
+      "Value": 0
     }
   },
   "SuperDamage": {
     "Command": "Independent.Status.ApplyStatus",
     "Name": "SuperDamage",
-        "Description" : "Get serious",
-        "Icon": "/Resources/Media/Images/Menu/Skills/SuperDamage.svg",
-        "Noise": "Actions/PowerBoost.mp3",
-    "Attributes": 
-    {
-      "Status" : {
-        "Power": 1
-      },
-        "Value" : {
-            "Power": 0
-        }
+    "Description": "Get serious",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SuperDamage.svg",
+    "Noise": "Actions/PowerBoost.mp3",
+    "Attributes": {
+      "Status": 1,
+      "Value": 0
     }
   },
   "SuperSpeed": {
     "Command": "Independent.Status.ApplyStatus",
     "Name": "SuperSpeed",
-        "Description" : "Warm up...",
-        "Icon": "/Resources/Media/Images/Menu/Skills/SuperSpeed.svg",
-        "Noise": "Actions/PowerBoost.mp3",
-    "Attributes": 
-    {
-      "Status" : {
-        "Power": 4
-      },
-        "Value" : {
-            "Power": 0
-        }
+    "Description": "Warm up...",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SuperSpeed.svg",
+    "Noise": "Actions/PowerBoost.mp3",
+    "Attributes": {
+      "Status": 4,
+      "Value": 0
     }
   },
   "Schofield45": {
     "Command": "Dependent.FightCommand",
     "Name": "Schofield .45",
-        "Description" : "Wow, I'm lucky today!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Schofield45.svg",
-        "Noise": "Actions/Schofield45.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 1.2
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Wow, I'm lucky today!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Schofield45.svg",
+    "Noise": "Actions/Schofield45.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 1.2,
+      "Value": 0
     }
   },
   "SingleShotgun": {
     "Command": "Dependent.FightCommand",
     "Name": "Shotgun",
-        "Description" : "Ha, my old friend!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Shotgun.svg",
-        "Noise": "Actions/SingleShotgun.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 2.5
-      },
-      "Value" : {
-        "Power": 10
-      }
+    "Description": "Ha, my old friend!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Shotgun.svg",
+    "Noise": "Actions/SingleShotgun.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 2.5,
+      "Value": 10
     }
   },
   "DoubleShotgun": {
     "Command": "Dependent.FightCommand",
     "Name": "Double shotgun",
-        "Description" : "Here is the thing!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/ShotgunX2.svg",
-        "Noise": "Actions/DoubleShotgun.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 5.0
-      },
-      "Value" : {
-        "Power": 20
-      }
+    "Description": "Here is the thing!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/ShotgunX2.svg",
+    "Noise": "Actions/DoubleShotgun.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 5.0,
+      "Value": 20
     }
   },
   "CannonSBC": {
     "Command": "Dependent.FightCommand",
     "Name": "Cannon SBC",
-        "Description" : "Ho-ho, let's go bowling!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/SeriouslyBigCannon.svg",
-        "Noise": "Actions/Cannon.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 10.0
-      },
-      "Value" : {
-        "Power": 50
-      }
+    "Description": "Ho-ho, let's go bowling!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SeriouslyBigCannon.svg",
+    "Noise": "Actions/Cannon.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 10.0,
+      "Value": 50
     }
   },
   "TommyGun": {
     "Command": "Dependent.FightAllCommand",
     "Name": "TommyGun M1A2",
-        "Description" : "Let's warm it up a bit!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/TommyGun.svg",
-        "Noise": "Actions/TommyGun.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 1.6
-      },
-      "Value" : {
-        "Power": 10
-      }
+    "Description": "Let's warm it up a bit!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/TommyGun.svg",
+    "Noise": "Actions/TommyGun.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 1.6,
+      "Value": 10
     }
   },
   "LaserGunXL2": {
     "Command": "Dependent.FightAllCommand",
     "Name": "Laser XL2",
-        "Description" : "Guys, free tickets to hell are guaranteed!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/LaserGunXL2.svg",
-        "Noise": "Actions/LaserGun.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 2.5
-      },
-      "Value" : {
-        "Power": 15
-      }
+    "Description": "Guys, free tickets to hell are guaranteed!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/LaserGunXL2.svg",
+    "Noise": "Actions/LaserGun.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 2.5,
+      "Value": 15
     }
   },
   "RocketLauncherXPML21": {
     "Command": "Dependent.FightAllCommand",
     "Name": "Rocket-L XPML21",
-        "Description" : "That's what I understand, cool!",
-        "Icon": "/Resources/Media/Images/Menu/Skills/RocketLauncherXPML21.svg",
-        "Noise": "Actions/RocketLauncher.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 4.0
-      },
-      "Value" : {
-        "Power": 20
-      }
+    "Description": "That's what I understand, cool!",
+    "Icon": "/Resources/Media/Images/Menu/Skills/RocketLauncherXPML21.svg",
+    "Noise": "Actions/RocketLauncher.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 4.0,
+      "Value": 20
     }
   },
   "GrenadeLauncherMKIII": {
     "Command": "Dependent.FightAllCommand",
     "Name": "Grenade-L MK3",
-        "Description" : "Reliable infantry grenade launcher with adjustable rate of fire",
-        "Icon": "/Resources/Media/Images/Menu/Skills/GrenadeLauncher.svg",
-        "Noise": "Actions/GrenadeLauncher.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 3
-      },
-      "Power" : {
-        "Power": 6.0
-      },
-      "Value" : {
-        "Power": 35
-      }
+    "Description": "Reliable infantry grenade launcher with adjustable rate of fire",
+    "Icon": "/Resources/Media/Images/Menu/Skills/GrenadeLauncher.svg",
+    "Noise": "Actions/GrenadeLauncher.mp3",
+    "Attributes": {
+      "Dependency": 3,
+      "Power": 6.0,
+      "Value": 35
     }
   },
   "SeriousBomb": {
     "Command": "Independent.AnnihilateAllCommand",
     "Name": "Serious Bomb",
-    "Description" : "Time for a serious boom!",
+    "Description": "Time for a serious boom!",
     "Icon": "/Resources/Media/Images/Menu/Skills/SeriousBomb.svg",
     "Noise": "Actions/Boom.mp3",
-    "Attributes": 
-    {
-      "Value" : {
-        "Power": 500
-      }
+    "Attributes": {
+      "Value": 500
     }
   },
   "Drain": {
     "Command": "Dependent.DrainCommand",
     "Name": "Drain",
-        "Description" : "Restore health at the expense of the enemy",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Drain.svg",
-        "Noise": "Actions/Cure.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 1.5
-      },
-      "Value" : {
-        "Power": 10
-      }
+    "Description": "Restore health at the expense of the enemy",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Drain.svg",
+    "Noise": "Actions/Cure.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 1.5,
+      "Value": 10
     }
   },
   "Osmose": {
     "Command": "Dependent.OsmoseCommand",
     "Name": "Osmose",
-        "Description" : "Take away enemy vitality",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Osmose.svg",
-        "Noise": "Actions/Control.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 1.5
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Take away enemy vitality",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Osmose.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 1.5,
+      "Value": 0
     }
   },
   "GreedyDrain": {
     "Command": "Dependent.DrainAllCommand",
     "Name": "Greed",
-        "Description" : "Assign the health of all enemies",
-        "Icon": "/Resources/Media/Images/Menu/Skills/GreedyDrain.svg",
-        "Noise": "Actions/Cure2.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 1.5
-      },
-      "Value" : {
-        "Power": 25
-      }
+    "Description": "Assign the health of all enemies",
+    "Icon": "/Resources/Media/Images/Menu/Skills/GreedyDrain.svg",
+    "Noise": "Actions/Cure2.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 1.5,
+      "Value": 25
     }
   },
   "GreedyOsmose": {
     "Command": "Dependent.OsmoseAllCommand",
     "Name": "Thirst",
-        "Description" : "Drink your enemies to the bone",
-        "Icon": "/Resources/Media/Images/Menu/Skills/GreedyOsmose.svg",
-        "Noise": "Actions/Control.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 1.5
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Drink your enemies to the bone",
+    "Icon": "/Resources/Media/Images/Menu/Skills/GreedyOsmose.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 1.5,
+      "Value": 0
     }
   },
   "Stab": {
     "Command": "Dependent.FightCommand",
     "Name": "Stab",
-        "Description" : "Make a powerful lunge",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Stab.svg",
-        "Noise": "Actions/Punch.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 1.0
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Make a powerful lunge",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Stab.svg",
+    "Noise": "Actions/Punch.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 1.0,
+      "Value": 0
     }
   },
   "SlashV": {
     "Command": "Dependent.FightCommand",
     "Name": "V-Slash",
-        "Description" : "Make a deep incision similar to an ax blow",
-        "Icon": "/Resources/Media/Images/Menu/Skills/SlashV.svg",
-        "Noise": "Actions/Sword.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 2.0
-      },
-      "Value" : {
-        "Power": 3
-      }
+    "Description": "Make a deep incision similar to an ax blow",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SlashV.svg",
+    "Noise": "Actions/Sword.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 2.0,
+      "Value": 3
     }
   },
   "SlashZ": {
     "Command": "Dependent.FightCommand",
     "Name": "Z-Slash",
-        "Description" : "Make a beautiful tattoo to the enemy...",
-        "Icon": "/Resources/Media/Images/Menu/Skills/SlashZ.svg",
-        "Noise": "Actions/Sword.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 3.0
-      },
-      "Value" : {
-        "Power": 5
-      }
+    "Description": "Make a beautiful tattoo to the enemy...",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SlashZ.svg",
+    "Noise": "Actions/Sword.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 3.0,
+      "Value": 5
     }
   },
   "BackSlash": {
-          "Command": "Dependent.FightCommand",
+    "Command": "Dependent.FightCommand",
     "Name": "Back Slash",
-        "Description" : "Roundhouse slash",
-        "Icon": "/Resources/Media/Images/Menu/Skills/BackSlash.svg",
-        "Noise": "Actions/Whip.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 6.0
-      },
-      "Value" : {
-        "Power": 5
-      }
+    "Description": "Roundhouse slash",
+    "Icon": "/Resources/Media/Images/Menu/Skills/BackSlash.svg",
+    "Noise": "Actions/Whip.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 6.0,
+      "Value": 5
     }
   },
   "Slices": {
     "Command": "Independent.AnnihilateCommand",
     "Name": "Slices",
-        "Description" : "Do not leave the enemy the right to exist",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Slices.svg",
-        "Noise": "Actions/Knife.mp3",
-    "Attributes": 
-    {
-      "Value" : {
-        "Power": 5
-      }
+    "Description": "Do not leave the enemy the right to exist",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Slices.svg",
+    "Noise": "Actions/Knife.mp3",
+    "Attributes": {
+      "Value": 5
     }
   },
   "FireSword": {
-          "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Flame",
-        "Description" : "To heat the sword to hellish inferno",
-        "Icon": "/Resources/Media/Images/Menu/Skills/FireSword.svg",
-        "Noise": "Actions/Torch.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 3.5
-      },
-      "Value" : {
-        "Power": 25
-      }
+    "Description": "To heat the sword to hellish inferno",
+    "Icon": "/Resources/Media/Images/Menu/Skills/FireSword.svg",
+    "Noise": "Actions/Torch.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 3.5,
+      "Value": 25
     }
   },
   "ThunderSword": {
-          "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Lightning",
-        "Description" : "Use the sword as a lightning rod",
-        "Icon": "/Resources/Media/Images/Menu/Skills/ThunderSword.svg",
-        "Noise": "Actions/Whip.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 6.5
-      },
-      "Value" : {
-        "Power": 50
-      }
+    "Description": "Use the sword as a lightning rod",
+    "Icon": "/Resources/Media/Images/Menu/Skills/ThunderSword.svg",
+    "Noise": "Actions/Whip.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 6.5,
+      "Value": 50
     }
   },
   "Kata1": {
-          "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Kata - 1",
-        "Description" : "Perform a series of sword techniques",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Kata1.svg",
-        "Noise": "Actions/Combo.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 3.0
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Perform a series of sword techniques",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Kata1.svg",
+    "Noise": "Actions/Combo.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 3.0,
+      "Value": 0
     }
   },
   "Kata2": {
-          "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Kata - 2",
-        "Description" : "Perform a series of sword techniques",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Kata2.svg",
-        "Noise": "Actions/Sword.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 5.0
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Perform a series of sword techniques",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Kata2.svg",
+    "Noise": "Actions/Sword.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 5.0,
+      "Value": 0
     }
   },
   "Kata3": {
-          "Command": "Dependent.FightAllCommand",
+    "Command": "Dependent.FightAllCommand",
     "Name": "Kata - 3",
-        "Description" : "Perform a series of sword techniques",
-        "Icon": "/Resources/Media/Images/Menu/Skills/Kata3.svg",
-        "Noise": "Actions/Knife.mp3",
-    "Attributes": 
-    {
-      "Dependency" : {
-        "Power": 4
-      },
-      "Power" : {
-        "Power": 7.0
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Perform a series of sword techniques",
+    "Icon": "/Resources/Media/Images/Menu/Skills/Kata3.svg",
+    "Noise": "Actions/Knife.mp3",
+    "Attributes": {
+      "Dependency": 4,
+      "Power": 7.0,
+      "Value": 0
     }
   },
   "CalmDown": {
     "Command": "Independent.Status.RemoveStatus",
     "Name": "Calmdown",
-        "Description" : "Concentrate on breathing",
-        "Icon": "/Resources/Media/Images/Menu/Skills/CalmDown.svg",
-        "Noise": "Actions/Control.mp3",
-    "Attributes": 
-    {
-      "Status" : {
-        "Power": 4
-      },
-      "Value" : {
-        "Power": 0
-      }
+    "Description": "Concentrate on breathing",
+    "Icon": "/Resources/Media/Images/Menu/Skills/CalmDown.svg",
+    "Noise": "Actions/Control.mp3",
+    "Attributes": {
+      "Status": 4,
+      "Value": 0
     }
   }
 }

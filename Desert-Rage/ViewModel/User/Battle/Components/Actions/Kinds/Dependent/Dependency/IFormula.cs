@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using DesertRage.Model.Locations.Battle.Things;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.Dependency
 {
@@ -10,6 +9,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent.De
         /// </summary>
         
         public int Power { get; }
-        public void SetAttributes(Dictionary<string, Attribute> attributes);
+        public void SetAttributes(Dictionary<string, float> attributes);
     }
 }
