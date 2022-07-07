@@ -5,6 +5,7 @@ using DesertRage.Model.Locations.Battle.Stats.Enemy;
 using DesertRage.Model.Locations.Battle.Stats.Enemy.Storage;
 using DesertRage.ViewModel.User.Battle.Components.Participation;
 using DesertRage.ViewModel.User.Battle.Components.Strategy.Fight;
+using Serilog;
 
 namespace DesertRage.ViewModel.User.Battle
 {
@@ -146,6 +147,7 @@ namespace DesertRage.ViewModel.User.Battle
         #region Foe Data Properties
         private void SetFoes()
         {
+            Log.Debug("Loading foes...");
             Foe[] foes = Bank.Foes();
 
             for (byte i = 0; i < foes.Length; i++)
@@ -157,6 +159,7 @@ namespace DesertRage.ViewModel.User.Battle
 
         private void SetBosses()
         {
+            Log.Debug("Loading bosses...");
             Boss[] bosses = Bank.Bosses();
 
             for (byte i = 0; i < bosses.Length; i++)
