@@ -18,8 +18,7 @@ namespace DesertRage.ViewModel.User
         {
             string profile = Preferences.Name;
             Log.Information("Player profile: " + profile);
-
-            if (profile == string.Empty)
+            if (profile.IsNA())
                 return;
 
             Bank.SaveProfileLevel(profile, Level);
@@ -100,8 +99,7 @@ namespace DesertRage.ViewModel.User
         #region Location Members
 
         #region Chapter Members
-        private void NewCharacter
-            (string name, bool condition)
+        private void NewCharacter(string name, bool condition)
         {
             Log.Debug($"Loading new character: {name}");
             if (condition)
@@ -126,7 +124,7 @@ namespace DesertRage.ViewModel.User
             if (next is null)
             {
                 Armor serious = new Armor(Sets.SERIOUS.Byte());
-                NewCharacter("Rock", Preferences.Name.Length == 0);
+                NewCharacter("Rock", Preferences.Name.IsNA());
                 NewCharacter("Sam", Hero.Equipped.Equals(serious));
                 ViewModel.Entry.RaiseEscape();
             }
