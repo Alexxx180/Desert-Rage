@@ -59,7 +59,8 @@ namespace DesertRage.ViewModel.User
 
         public void Music(string name)
         {
-            SoundPlayer.PlayMusic(name.ToFull());
+            SoundPlayer.PlayMusic
+                ($"/Resources/Media/OST/Music/{name}".ToFull());
         }
 
         public void Sound(string name)
