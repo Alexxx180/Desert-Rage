@@ -194,4 +194,7 @@
   <data name="MapHint" xml:space="preserve">
     <value>E - взаимодействиe. Ctrl - меню</value>
   </data>
+  <data name="EmptyPresequence" xml:space="preserve">
+    <value>Когда-то...</value>
+  </data>
 </root>
