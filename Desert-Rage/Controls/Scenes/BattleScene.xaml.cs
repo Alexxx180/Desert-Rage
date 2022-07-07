@@ -98,7 +98,7 @@ namespace DesertRage.Controls.Scenes
         public void ReturnToMap()
         {
             LevelMap map = BattleModel.Human.Player.Location;
-            BattleModel.Entry.Display.Content = map;
+            BattleModel.Entry.SetView(map);
             map.RaiseEnter();
         }
 
