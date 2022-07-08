@@ -21,6 +21,9 @@ namespace DesertRage.ViewModel.User
         /// </summary>
         public UserMenu()
         {
+            Bestiary = new ObservableCollection<Foe>();
+            Items = new ObservableCollection<ConsumeCommand>();
+            Skills = new ObservableCollection<ConsumeCommand>();
             Equip = new ObservableCollection
                 <ObservableCollection<Equipment>>
             {
@@ -29,52 +32,6 @@ namespace DesertRage.ViewModel.User
                 new ObservableCollection<Equipment>(),
                 new ObservableCollection<Equipment>()
             };
-        }
-
-        private ObservableCollection<Foe> _bestiary;
-        public ObservableCollection<Foe> Bestiary
-        {
-            get => _bestiary;
-            set
-            {
-                _bestiary = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private ObservableCollection<ConsumeCommand> _skills;
-        public ObservableCollection<ConsumeCommand> Skills
-        {
-            get => _skills;
-            set
-            {
-                _skills = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private ObservableCollection<ConsumeCommand> _items;
-        public ObservableCollection<ConsumeCommand> Items
-        {
-            get => _items;
-            set
-            {
-                _items = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private ObservableCollection
-            <ObservableCollection<Equipment>> _equip;
-        public ObservableCollection
-            <ObservableCollection<Equipment>> Equip
-        {
-            get => _equip;
-            set
-            {
-                _equip = value;
-                OnPropertyChanged();
-            }
         }
 
         #region Equipment Members
@@ -120,11 +77,14 @@ namespace DesertRage.ViewModel.User
         private void AddSkill(ConsumeCommand skill)
         {
             skill.SetModel(ViewModel);
-            Skills.Add(skill);
+            this.Skills.Add(skill);
+            foreach (ConsumeCommand id in Skills)
+            {
+                System.Diagnostics.Trace.WriteLine(id.Subject.Value);
+            }
         }
 
-        private protected override void AddSkills
-            (HashSet<SkillsID> ramSkills)
+        private protected override void AddSkills(HashSet<SkillsID> ramSkills)
         {
             Log.Debug($"Loading hero skills...");
             Dictionary<string, AttributeUnit>
@@ -132,12 +92,18 @@ namespace DesertRage.ViewModel.User
 
             foreach (SkillsID id in ramSkills)
             {
+                //System.Diagnostics.Trace.WriteLine(id.ToString());
+                
                 AttributeUnit skill = skills[id.ToString()];
+                System.Diagnostics.Trace.WriteLine("OK? " + skill is null);
 
                 ConsumeCommand command = ConsumeCommand.FromUnit
                     (new SkillCommand(), skill);
+
+                //System.Diagnostics.Trace.WriteLine(command.Subject.Value);
                 AddSkill(command);
             }
+            //Skills.CollectionChanged
         }
         #endregion
 
@@ -223,7 +189,7 @@ namespace DesertRage.ViewModel.User
         private void LoadHeroBestiary()
         {
             Log.Debug($"Loading bestiary...");
-            Bestiary = new ObservableCollection<Foe>();
+            
             foreach (EnemyBestiary id in Hero.Learned)
             {
                 AddFoe(id);
@@ -232,10 +198,10 @@ namespace DesertRage.ViewModel.User
 
         public virtual void LoadHeroCommands()
         {
-            Skills = new ObservableCollection<ConsumeCommand>();
+            
             AddSkills(Hero.Skills);
 
-            Items = new ObservableCollection<ConsumeCommand>();
+            
             AddItems();
         }
 
@@ -247,5 +213,10 @@ namespace DesertRage.ViewModel.User
             ViewModel.Human.SavedEvents();
         }
         #endregion
+
+        public ObservableCollection<Foe> Bestiary { get; }
+        public ObservableCollection<ConsumeCommand> Skills { get; }
+        public ObservableCollection<ConsumeCommand> Items { get; }
+        public ObservableCollection<ObservableCollection<Equipment>> Equip { get; }
     }
 }

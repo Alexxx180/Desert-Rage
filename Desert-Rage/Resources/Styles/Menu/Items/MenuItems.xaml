@@ -26,14 +26,6 @@
                 <Setter Property="Background" Value="#333333"/>
             </Trigger>
 
-            <DataTrigger Value="False">
-                <DataTrigger.Binding>
-                    <Binding Path="Effect.CanUse"/>
-                </DataTrigger.Binding>
-
-                <Setter Property="Visibility" Value="Collapsed"/>
-            </DataTrigger>
-
             <DataTrigger Value="{x:Static battle:Targeting.HERO}">
                 <DataTrigger.Binding>
                     <Binding Path="Effect.UnitCursor"/>
