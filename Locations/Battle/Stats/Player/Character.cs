@@ -77,11 +77,11 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             for (int i = Level + 1; i <= nextLevel; i++)
             {
                 string id = i.ToString();
-                if (bank.Skills.TryGetValue(id, out SkillsID skill))
-                {
-                    Skills.Add(skill);
+                if (!bank.Skills.TryGetValue(id, out SkillsID skill))
+                    return;
+                
+                if (Skills.Add(skill))
                     skills.Add(skill);
-                }
             }
 
             Level = nextLevel;
