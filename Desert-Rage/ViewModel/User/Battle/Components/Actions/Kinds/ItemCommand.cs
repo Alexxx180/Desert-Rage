@@ -1,4 +1,4 @@
-﻿using DesertRage.Model.Locations.Battle.Things.Storage;
+﻿using DesertRage.Model.Helpers;
 using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
@@ -10,30 +10,29 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds
         /// </summary>
 
         #region IThing Members
-        private int _value;
         public int Value
         {
-            get => _value;
+            get => ViewModel.Human.Player.Hero.Items[Item];
             set
             {
-                _value = value;
+                ViewModel.Human.Player.Hero.Items[Item] = value.ToByte();
                 OnPropertyChanged();
             }
         }
 
         public void Use()
         {
-            ViewModel.Human.Player.DecreaseItemCount(ID);
+            Value--;
         }
 
         public void SetValue(int value)
         {
-            Value = value;
+            Item = value;
         }
 
-        public bool CanUse => true; //Value > 0
+        public bool CanUse => true;
         #endregion
 
-        public ItemsID ID { get; set; }
+        public int Item { get; set; }
     }
 }

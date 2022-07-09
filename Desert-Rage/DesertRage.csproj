@@ -39,10 +39,6 @@
     <Page Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
     <Page Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
   </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Resources\Media\Images\Menu\Skills\Skills.resx" />
-  </ItemGroup>
   
   <ItemGroup>
     <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -570,11 +566,6 @@
     <Resource Include="Resources\Media\Images\Menu\Skills\ShotgunX2.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\Media\Images\Menu\Skills\Skills.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Skills.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\Media\Images\Menu\Skills\SlashV.svg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -827,26 +818,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>MainMenu.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Media\Images\Menu\Items\Items.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Items.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Menu\Skills\Skills.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Skills.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Menu\Stats\Stats.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Stats.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\Images\Menu\Topics\Topics.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Topics.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -873,19 +844,6 @@
     <EmbeddedResource Update="Resources\Media\Images\MainMenu\MainMenu.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainMenu.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Menu\Items\Items.resx">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Items.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Menu\Stats\Stats.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Stats.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\Images\Menu\Topics\Topics.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Topics.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

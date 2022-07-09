@@ -114,7 +114,6 @@ namespace DesertRage.ViewModel.User
             {
                 ConsumeCommand item = ConsumeCommand.FromUnit
                     (new ItemCommand(), items[i]);
-                item.Subject.SetValue(Hero.Items[i]);
                 AddItem(item);
             }
         }
@@ -129,19 +128,7 @@ namespace DesertRage.ViewModel.User
         private protected void IncreaseItemCount(int id)
         {
             if (Hero.Items[id] < byte.MaxValue)
-                Items[id].Subject.SetValue(++Hero.Items[id]);
-        }
-
-        public void DecreaseItemCount(ItemsID item)
-        {
-            int id = item.Int();
-            DecreaseItemCount(id);
-        }
-
-        private protected void DecreaseItemCount(int id)
-        {
-            if (Hero.Items[id] > 0)
-                Items[id].Subject.SetValue(--Hero.Items[id]);
+                Items[id].Subject.Value++;
         }
         #endregion
 

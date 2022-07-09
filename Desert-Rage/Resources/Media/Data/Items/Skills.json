@@ -194,10 +194,10 @@
     "Command": "Independent.Status.ApplyStatus",
     "Name": "SuperSpeed",
     "Description": "Warm up...",
-    "Icon": "/Resources/Media/Images/Menu/Skills/SuperSpeed.svg",
+    "Icon": "/Resources/Media/Images/Menu/Skills/SpeedUp.svg",
     "Noise": "Actions/PowerBoost.mp3",
     "Attributes": {
-      "Status": 4,
+      "Status": 5,
       "Value": 0
     }
   },
@@ -265,8 +265,8 @@
     "Command": "Dependent.FightAllCommand",
     "Name": "Laser XL2",
     "Description": "Guys, free tickets to hell are guaranteed!",
-    "Icon": "/Resources/Media/Images/Menu/Skills/LaserGunXL2.svg",
-    "Noise": "Actions/LaserGun.mp3",
+    "Icon": "/Resources/Media/Images/Menu/Skills/LaserGun.svg",
+    "Noise": "Actions/Laser.mp3",
     "Attributes": {
       "Dependency": 3,
       "Power": 2.5,
@@ -277,7 +277,7 @@
     "Command": "Dependent.FightAllCommand",
     "Name": "Rocket-L XPML21",
     "Description": "That's what I understand, cool!",
-    "Icon": "/Resources/Media/Images/Menu/Skills/RocketLauncherXPML21.svg",
+    "Icon": "/Resources/Media/Images/Menu/Skills/RocketLauncher.svg",
     "Noise": "Actions/RocketLauncher.mp3",
     "Attributes": {
       "Dependency": 3,

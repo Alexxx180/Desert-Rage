@@ -1,6 +1,4 @@
-﻿using DesertRage.ViewModel.User.Battle.Components;
-
-namespace DesertRage.ViewModel.User.Battle.Components.Actions
+﻿namespace DesertRage.ViewModel.User.Battle.Components.Actions
 {
     public interface IThing : IBattle
     {

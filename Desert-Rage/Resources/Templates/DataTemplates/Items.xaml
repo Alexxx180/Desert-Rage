@@ -34,6 +34,7 @@
                 <ToolTip x:Key="AttributeTip">
                     <ToolTip.Style>
                         <Style TargetType="ToolTip" BasedOn="{StaticResource BindableTip}">
+                            <Setter Property="Padding" Value="5,0"/>
                             <Setter Property="FontSize" Value="14"/>
                             <Setter Property="Template" Value="{StaticResource EquipPower}"/>
                         </Style>
