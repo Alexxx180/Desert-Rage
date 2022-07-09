@@ -74,7 +74,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
         public HashSet<SkillsID> LevelUp(NextStats bank, byte nextLevel)
         {
             HashSet<SkillsID> skills = new HashSet<SkillsID>();
-            for (int i = Level + 1; i <= nextLevel; i++)
+            for (int i = Level + 1; i < nextLevel + 1; i++)
             {
                 string id = i.ToString();
                 if (bank.Skills.TryGetValue(id, out SkillsID skill))
@@ -94,6 +94,14 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             SetStatusTiming();
 
             return skills;
+        }
+
+        public bool HasEquipmentSet(Sets set)
+        {
+            return Equipment.Contains(new ArmoryElement(ArmoryKind.Hands, set)) &&
+                Equipment.Contains(new ArmoryElement(ArmoryKind.Torso, set)) &&
+                Equipment.Contains(new ArmoryElement(ArmoryKind.Legs, set)) &&
+                Equipment.Contains(new ArmoryElement(ArmoryKind.Feet, set));
         }
 
         public byte Level { get; set; }
