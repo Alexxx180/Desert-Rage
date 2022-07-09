@@ -78,10 +78,6 @@ namespace DesertRage.ViewModel.User
         {
             skill.SetModel(ViewModel);
             this.Skills.Add(skill);
-            foreach (ConsumeCommand id in Skills)
-            {
-                System.Diagnostics.Trace.WriteLine(id.Subject.Value);
-            }
         }
 
         private protected override void AddSkills(HashSet<SkillsID> ramSkills)
@@ -92,18 +88,13 @@ namespace DesertRage.ViewModel.User
 
             foreach (SkillsID id in ramSkills)
             {
-                //System.Diagnostics.Trace.WriteLine(id.ToString());
-                
                 AttributeUnit skill = skills[id.ToString()];
-                System.Diagnostics.Trace.WriteLine("OK? " + skill is null);
 
                 ConsumeCommand command = ConsumeCommand.FromUnit
                     (new SkillCommand(), skill);
 
-                //System.Diagnostics.Trace.WriteLine(command.Subject.Value);
                 AddSkill(command);
             }
-            //Skills.CollectionChanged
         }
         #endregion
 

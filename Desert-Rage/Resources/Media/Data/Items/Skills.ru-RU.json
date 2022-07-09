@@ -163,7 +163,7 @@
     "Name": "\u041f\u0440\u0438\u043f\u0430\u0441\u044b",
     "Description": "100% \u0041\u0050",
     "Icon": "/Resources/Media/Images/Menu/Skills/AmmoPack.svg",
-    "Noise": "Actions/Control.mp3",
+    "Noise": "Actions/Ammo.mp3",
     "Attributes": {
       "Value": 0
     }

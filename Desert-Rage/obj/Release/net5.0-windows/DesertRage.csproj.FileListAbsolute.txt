@@ -656,11 +656,6 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Items.Items.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Stats.Stats.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.Images.Menu.Topics.Topics.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Info.InfoNoises.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Noises.Weapons.WeaponNoises.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Sounds.Defeat.Bosses.BossesDefeat.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Sounds.Defeat.Enemies.EnemyDefeat.resources
-D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.Resources.Media.OST.Sounds.Info.InfoSounds.resources
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.csproj.GenerateResource.cache
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.GeneratedMSBuildEditorConfig.editorconfig
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\obj\Release\net5.0-windows\DesertRage.AssemblyInfoInputs.cache
@@ -712,3 +707,4 @@ D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Re
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\WaterTemple\Info.ru-RU.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Map\WaterTemple\Map.json
 D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\Data\Items\Config.json
+D:\Aleksandr\misc\Game development\Desktop\Desert-Rage\Master\Desert-Rage\bin\Release\net5.0-windows\Resources\Media\OST\Noises\Actions\Ammo.mp3

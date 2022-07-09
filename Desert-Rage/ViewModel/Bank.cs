@@ -46,8 +46,6 @@ namespace DesertRage.ViewModel
         private static T GetData<T>(string path)
         {
             string full = path.ToFull();
-            System.Diagnostics.Trace.WriteLine(full);
-
             return File.Exists(full) ?
                 App.Processor.Read<T>(full) :
                 default;
@@ -86,7 +84,6 @@ namespace DesertRage.ViewModel
         
         internal static DescriptionUnit LoadHeroInitials(string name)
         {
-            System.Diagnostics.Trace.WriteLine(Paths.Beginner);
             return GetCharacterData<DescriptionUnit>($"{name}/{Paths.Beginner}");
         }
         
@@ -170,7 +167,6 @@ namespace DesertRage.ViewModel
         private static void SetData<T>(string path, T data)
         {
             string full = path.ToFull();
-            System.Diagnostics.Trace.WriteLine(full);
             App.Processor.Write(full, data);
         }
 

@@ -847,31 +847,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Topics.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Media\OST\Noises\Info\InfoNoises.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>InfoNoises.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\OST\Noises\Weapons\WeaponNoises.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>WeaponNoises.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\OST\Sounds\Defeat\Bosses\BossesDefeat.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>BossesDefeat.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\OST\Sounds\Defeat\Enemies\EnemyDefeat.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>EnemyDefeat.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Media\OST\Sounds\Info\InfoSounds.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>InfoSounds.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -911,26 +886,6 @@
     <EmbeddedResource Update="Resources\Media\Images\Menu\Topics\Topics.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Topics.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Noises\Info\InfoNoises.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>InfoNoises.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Noises\Weapons\WeaponNoises.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>WeaponNoises.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Sounds\Defeat\Bosses\BossesDefeat.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>BossesDefeat.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Sounds\Defeat\Enemies\EnemyDefeat.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>EnemyDefeat.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Media\OST\Sounds\Info\InfoSounds.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>InfoSounds.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
@@ -1101,6 +1056,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Music\WaterTemple\Peace.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Media\OST\Noises\Actions\Ammo.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\OST\Noises\Actions\Boom.mp3">

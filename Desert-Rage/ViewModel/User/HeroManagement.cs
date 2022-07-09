@@ -81,11 +81,6 @@ namespace DesertRage.ViewModel.User
             NextStats bank = Bank.GetNextStats(Preferences.Description);
             HashSet<SkillsID> newSkills = Hero.LevelUp(bank, count);
 
-            foreach(SkillsID skill in newSkills)
-            {
-                System.Diagnostics.Trace.WriteLine(skill);
-            }
-
             if (newSkills.Count > 0)
                 AddSkills(newSkills);
         }

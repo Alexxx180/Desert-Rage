@@ -5,10 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:map="clr-namespace:DesertRage.Controls.Scenes.Map"
              xmlns:converters="clr-namespace:DesertRage.Decorators.UI.Bindings.Converters;assembly=DesertRageDecorators"
-             xmlns:menu="clr-namespace:DesertRage.Controls.Menu.Game"
-             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
-             xmlns:attach="clr-namespace:DesertRage.Decorators.UI.Bindings.Attach;assembly=DesertRageDecorators"
-             xmlns:info="clr-namespace:DesertRage.Resources.Media.OST.Noises.Info"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920"
              x:Name="This">

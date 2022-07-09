@@ -55,9 +55,6 @@ namespace DesertRage.ViewModel.User
             {
                 _level = value;
                 OnPropertyChanged();
-                System.Diagnostics.Trace.WriteLine("AREA IS: " + value.Area is null);
-                System.Diagnostics.Trace.WriteLine("VIEWMODEL IS: " + ViewModel is null);
-
                 ViewModel.SetFoes(value.Area.StageFoes);
                 Resume();
             }

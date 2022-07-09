@@ -27,7 +27,6 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions
 
         public void SetUnit(AttributeUnit unit)
         {
-            System.Diagnostics.Trace.WriteLine($"{_commandSpace}.{unit.Command}");
             Type type = Type.GetType($"{_commandSpace}.{unit.Command}");
             SetUnit(type, unit);
         }
