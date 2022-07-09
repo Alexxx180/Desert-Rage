@@ -78,6 +78,7 @@ namespace DesertRage.ViewModel.User
         private void LevelUp(byte count)
         {
             Log.Debug("Level Up to: " + count);
+            Noise("Info/LevelUp.mp3");
             NextStats bank = Bank.GetNextStats(Preferences.Description);
             HashSet<SkillsID> newSkills = Hero.LevelUp(bank, count);
 

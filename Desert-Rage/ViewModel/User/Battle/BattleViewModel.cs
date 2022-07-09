@@ -89,6 +89,7 @@ namespace DesertRage.ViewModel.User.Battle
 
         internal override void EnemyDefeat(in Enemy enemy)
         {
+            Human.Player.Sound(enemy.Death);
             Grind(enemy);
             base.EnemyDefeat(enemy);
         }

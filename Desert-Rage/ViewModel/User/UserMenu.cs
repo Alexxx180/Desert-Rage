@@ -77,7 +77,7 @@ namespace DesertRage.ViewModel.User
         private void AddSkill(ConsumeCommand skill)
         {
             skill.SetModel(ViewModel);
-            this.Skills.Add(skill);
+            Skills.Add(skill);
         }
 
         private protected override void AddSkills(HashSet<SkillsID> ramSkills)

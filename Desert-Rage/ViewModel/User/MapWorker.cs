@@ -125,9 +125,8 @@ namespace DesertRage.ViewModel.User
 
             if (next is null)
             {
-                Armor serious = new Armor(Sets.SERIOUS.Byte());
                 NewCharacter("Rock", Preferences.Name.IsNA());
-                NewCharacter("Sam", Hero.Equipped.Equals(serious));
+                NewCharacter("Sam", Hero.HasEquipmentSet(Sets.SERIOUS));
                 ViewModel.Entry.RaiseEscape();
             }
             else
@@ -285,7 +284,7 @@ namespace DesertRage.ViewModel.User
                     break;
                 case '!':
                     SetTile(current, '.');
-                    EnemyEncounter("BossStorm.mp3", Encounter.BOSS);
+                    EnemyEncounter("BossStorm", Encounter.BOSS);
                     return;
                 default:
                     break;
@@ -293,7 +292,7 @@ namespace DesertRage.ViewModel.User
 
             if (fight)
             {
-                EnemyEncounter("EnemyWind.mp3", Encounter.REGULAR);
+                EnemyEncounter("EnemyWind", Encounter.REGULAR);
                 Fight();
             }
         }

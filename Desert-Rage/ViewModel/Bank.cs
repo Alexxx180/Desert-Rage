@@ -19,6 +19,7 @@ using DesertRage.Model.Locations.Battle;
 using DesertRage.Resources.Localization;
 using DesertRage.Model;
 using DesertRage.Model.Locations.Battle.Things;
+using DesertRage.Model.Helpers;
 
 namespace DesertRage.ViewModel
 {
@@ -94,6 +95,8 @@ namespace DesertRage.ViewModel
 
         internal static Location LoadLevel(string name)
         {
+            if (name.IsNA())
+                return null;
             string path = $"Map/{name}";
             
             Floor area = GetItems<Floor>($"{path}/Map.json");
@@ -167,6 +170,7 @@ namespace DesertRage.ViewModel
         private static void SetData<T>(string path, T data)
         {
             string full = path.ToFull();
+            System.Diagnostics.Trace.WriteLine(full);
             App.Processor.Write(full, data);
         }
 

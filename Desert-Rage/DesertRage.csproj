@@ -867,7 +867,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\Data\Characters\Unlock.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Media\Data\Items\Config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -76,6 +76,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
         public byte Experience => _foe.Experience;
         public EnemyBestiary ID => _foe.ID;
         public ItemsID Drop => _foe.Drop;
+        public string Death => _foe.Death;
 
         private IParticipantFight _strategy;
 
