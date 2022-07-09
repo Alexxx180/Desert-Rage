@@ -45,7 +45,17 @@ namespace DesertRage.Controls.Menu
         private void NewGame(object sender, RoutedEventArgs e)
         {
             string profile = StartViewModel.CurrentProfile;
-            string hero = StartViewModel.CurrentHero.Description;
+            string hero;
+
+            if (StartViewModel.IsPlayerExists)
+            {
+                hero = Bank.LoadProfilePreferences(profile).Description;
+            }
+            else
+            {
+                hero = StartViewModel.CurrentHero.Description;
+            }
+             
             Main.NewAdventure(profile, hero);
         }
 

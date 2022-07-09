@@ -360,7 +360,7 @@
     "Name": "Stab",
     "Description": "Make a powerful lunge",
     "Icon": "/Resources/Media/Images/Menu/Skills/Stab.svg",
-    "Noise": "Actions/Punch.mp3",
+    "Noise": "Weapons/Punch.mp3",
     "Attributes": {
       "Dependency": 4,
       "Power": 1.0,
@@ -372,7 +372,7 @@
     "Name": "V-Slash",
     "Description": "Make a deep incision similar to an ax blow",
     "Icon": "/Resources/Media/Images/Menu/Skills/SlashV.svg",
-    "Noise": "Actions/Sword.mp3",
+    "Noise": "Weapons/Sword.mp3",
     "Attributes": {
       "Dependency": 4,
       "Power": 2.0,
@@ -384,7 +384,7 @@
     "Name": "Z-Slash",
     "Description": "Make a beautiful tattoo to the enemy...",
     "Icon": "/Resources/Media/Images/Menu/Skills/SlashZ.svg",
-    "Noise": "Actions/Sword.mp3",
+    "Noise": "Weapons/Sword.mp3",
     "Attributes": {
       "Dependency": 4,
       "Power": 3.0,
@@ -408,7 +408,7 @@
     "Name": "Slices",
     "Description": "Do not leave the enemy the right to exist",
     "Icon": "/Resources/Media/Images/Menu/Skills/Slices.svg",
-    "Noise": "Actions/Knife.mp3",
+    "Noise": "Weapons/Knife.mp3",
     "Attributes": {
       "Value": 5
     }
@@ -454,7 +454,7 @@
     "Name": "Kata - 2",
     "Description": "Perform a series of sword techniques",
     "Icon": "/Resources/Media/Images/Menu/Skills/Kata2.svg",
-    "Noise": "Actions/Sword.mp3",
+    "Noise": "Weapons/Sword.mp3",
     "Attributes": {
       "Dependency": 4,
       "Power": 5.0,
@@ -466,7 +466,7 @@
     "Name": "Kata - 3",
     "Description": "Perform a series of sword techniques",
     "Icon": "/Resources/Media/Images/Menu/Skills/Kata3.svg",
-    "Noise": "Actions/Knife.mp3",
+    "Noise": "Weapons/Knife.mp3",
     "Attributes": {
       "Dependency": 4,
       "Power": 7.0,
