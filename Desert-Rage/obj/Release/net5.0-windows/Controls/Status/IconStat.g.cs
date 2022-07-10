@@ -60,7 +60,7 @@ namespace DesertRage.Controls.Status {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.1.0;component/controls/status/iconstat.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.5.5;component/controls/status/iconstat.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Controls\Status\IconStat.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

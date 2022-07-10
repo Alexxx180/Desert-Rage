@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Desert Rage/1.0.0": {
+      "Desert Rage/1.0.5": {
         "dependencies": {
           "Serilog.Sinks.File": "5.0.0",
           "SharpVectors": "1.7.7",
@@ -119,7 +119,7 @@
     }
   },
   "libraries": {
-    "Desert Rage/1.0.0": {
+    "Desert Rage/1.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

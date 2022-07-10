@@ -104,7 +104,7 @@ namespace DesertRage.Controls.Scenes {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.1.0;component/controls/scenes/battlescene.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.5.5;component/controls/scenes/battlescene.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Controls\Scenes\BattleScene.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

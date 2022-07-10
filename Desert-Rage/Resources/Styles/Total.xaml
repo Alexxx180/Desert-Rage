@@ -117,6 +117,7 @@
         <Style.Triggers>
             <Trigger Property="Control.IsMouseOver" Value="True">
                 <Setter Property="Control.Background" Value="{StaticResource ActivePlankBrush}"/>
+                <Setter Property="Control.Foreground" Value="Black"/>
             </Trigger>
         </Style.Triggers>
     </Style>

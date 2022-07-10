@@ -62,7 +62,7 @@ namespace DesertRage.Controls.Menu.Game {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.1.0;component/controls/menu/game/gamemenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.5.5;component/controls/menu/game/gamemenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Controls\Menu\Game\GameMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

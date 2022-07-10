@@ -344,7 +344,7 @@
                     </status:IconStat.Stat>
                 </status:IconStat>
 
-                <TextBlock Style="{StaticResource NameBlock}">
+                <TextBlock Style="{StaticResource NameBlock}" Padding="5,0">
                     <DockPanel.Dock>
                         Left
                     </DockPanel.Dock>

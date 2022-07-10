@@ -5,13 +5,27 @@
 <style type="text/css">
 	.st0{fill:#99C45A;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
 	.st1{fill:#74B65F;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
-	.st2{font-family:'Enemy-Crusher';}
-	.st3{font-size:3px;}
-	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
 </style>
 <circle class="st0" cx="16" cy="15" r="12"/>
 <circle class="st1" cx="16" cy="15" r="10"/>
-<text transform="matrix(1 0 0 1 9.5198 14.2245)"><tspan x="0" y="0" class="st2 st3">..тот,</tspan><tspan x="0" y="3.6" class="st2 st3">кто...</tspan></text>
-<line class="st4" x1="12" y1="10" x2="20" y2="10"/>
-<line class="st4" x1="12" y1="20" x2="19.44" y2="20"/>
+<g>
+	<path d="M10.38,14.22v-0.86h0.86v0.86H10.38z"/>
+	<path d="M12.52,14.22v-0.86h0.86v0.86H12.52z"/>
+	<path d="M14.23,14.22v-0.86H13.8v-0.86h1.71v0.86h-0.43v-0.43h-0.43v0.43h0.43v0.86H14.23z"/>
+	<path d="M15.94,13.8v-0.86h0.43v0.86H15.94z M16.37,12.94v-0.43h0.86v0.43H16.37z M16.37,14.22V13.8h0.86v0.43H16.37z M17.23,13.8
+		v-0.86h0.43v0.86H17.23z"/>
+	<path d="M18.51,14.22v-0.86h-0.43v-0.86h1.71v0.86h-0.43v-0.43h-0.43v0.43h0.43v0.86H18.51z"/>
+	<path d="M21.51,14.65v-0.43h-0.43v-0.86h0.86v1.28H21.51z"/>
+	<path d="M9.52,17.82v-1.71h0.43v0.43h0.86v0.43h0.43v0.86H10.8V17.4h-0.43v-0.43H9.95v0.86H9.52z M10.8,16.54v-0.43h0.43v0.43H10.8
+		z"/>
+	<path d="M12.09,17.82v-0.86h-0.43v-0.86h1.71v0.86h-0.43v-0.43h-0.43v0.43h0.43v0.86H12.09z"/>
+	<path d="M13.8,17.4v-0.86h0.43v0.86H13.8z M14.23,16.54v-0.43h0.86v0.43H14.23z M14.23,17.82V17.4h0.86v0.43H14.23z M15.09,17.4
+		v-0.86h0.43v0.86H15.09z"/>
+	<path d="M16.8,17.82v-0.86h0.86v0.86H16.8z"/>
+	<path d="M18.94,17.82v-0.86h0.86v0.86H18.94z"/>
+	<path d="M21.08,17.82v-0.86h0.86v0.86H21.08z"/>
+</g>
+<line class="st2" x1="12" y1="10" x2="20" y2="10"/>
+<line class="st2" x1="12" y1="20" x2="19.44" y2="20"/>
 </svg>

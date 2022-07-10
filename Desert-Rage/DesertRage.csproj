@@ -7,14 +7,19 @@
     
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <AssemblyName>Desert Rage</AssemblyName>
-    <Authors>Татаринцев Александр</Authors>
+    <Authors>Tatarintsev Aleksandr</Authors>
     <Company>XEtreme Team</Company>
-    <Copyright>©2021, XEtreme Team. Все права защищены</Copyright>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Copyright>©2022, XEtreme Team. All rights reserved.</Copyright>
+    <AssemblyVersion>1.0.5.5</AssemblyVersion>
+    <FileVersion>1.0.5.5</FileVersion>
     <NeutralLanguage>ru</NeutralLanguage>
     <PackageIcon>favicon.ico</PackageIcon>
     <StartupObject>DesertRage.App</StartupObject>
+    <Version>1.0.5</Version>
+    <Description>Role playing game with Active Time Battle system.
+You play as a gifted adventurer Ray who is looking for the great knowledge of the ancients.</Description>
+    <RepositoryUrl>https://github.com/Alexxx180/Desert-Rage</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -34,6 +39,10 @@
     <None Remove="Resources\Database\**" />
     <None Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />
     <None Remove="Resources\Media\Images\Locations\Total\Person\Walk\**" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <Page Remove="bin\**" />
     <Page Remove="Resources\Database\**" />
     <Page Remove="Resources\Media\Images\Locations\Total\Person\Static\**" />

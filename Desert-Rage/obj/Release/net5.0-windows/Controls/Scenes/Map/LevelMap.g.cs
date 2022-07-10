@@ -94,7 +94,7 @@ namespace DesertRage.Controls.Scenes.Map {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.1.0;component/controls/scenes/map/levelmap.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Desert Rage;V1.0.5.5;component/controls/scenes/map/levelmap.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Controls\Scenes\Map\LevelMap.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
