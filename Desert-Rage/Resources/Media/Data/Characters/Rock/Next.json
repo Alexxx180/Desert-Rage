@@ -339,8 +339,8 @@
          "Special":160
       },
       {
-         "Attack":210,
-         "Defence":200,
+         "Attack":255,
+         "Defence":255,
          "Speed":160,
          "Special":170
       },
