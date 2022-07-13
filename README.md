@@ -1,3 +1,3 @@
-# Desert Rage
+# Desert Rage Unit Tests
 
-Game model unit tests
+Game model unit tests project
