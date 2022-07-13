@@ -1,3 +1,3 @@
-# Desert-Rage Customing
+# Desert Rage Customing
 
 Project helper-classes
