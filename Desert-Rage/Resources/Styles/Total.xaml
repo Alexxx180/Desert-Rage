@@ -64,14 +64,17 @@
         <Setter Property="Panel.Background" Value="#B8000000"/>
     </Style>
 
-    <Style x:Key="GrayAccent">
-        <Setter Property="Control.Background" Value="#3F3F3F"/>
-        <Setter Property="Control.Foreground" Value="#EAEAEA"/>
+    <Style x:Key="GrayAccent" BasedOn="{StaticResource GlobalFont}">
+        <Setter Property="Control.Background" Value="#7F7F7F"/>
+        <Setter Property="Control.Foreground" Value="#000000"/>
     </Style>
 
-    <Style x:Key="Impact">
+    <Style x:Key="BlackImpact">
         <Setter Property="Control.Background" Value="#B8000000"/>
         <Setter Property="Control.FontWeight" Value="Bold"/>
+    </Style>
+   
+    <Style x:Key="Impact" BasedOn="{StaticResource BlackImpact}">
         <Setter Property="Control.Foreground" Value="WhiteSmoke"/>
     </Style>
 

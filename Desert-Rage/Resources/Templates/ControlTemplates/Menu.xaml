@@ -238,11 +238,9 @@
 
                 <UniformGrid Rows="4" Columns="1" Grid.Column="1">
                     <UniformGrid.Resources>
-                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource GlobalFont}">
+                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource GrayAccent}">
                             <Setter Property="FontSize" Value="40"/>
                             <Setter Property="Padding" Value="5"/>
-                            <Setter Property="Background" Value="#7F7F7F"/>
-                            <Setter Property="Foreground" Value="#000000"/>
                             <Setter Property="ItemContainerStyle" Value="{StaticResource GrayAccent}"/>
                         </Style>
                     </UniformGrid.Resources>
