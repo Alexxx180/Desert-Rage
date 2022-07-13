@@ -1,3 +1,3 @@
-# Desert-Rage Resources
+# Desert Rage Model
 
 Game model logic
