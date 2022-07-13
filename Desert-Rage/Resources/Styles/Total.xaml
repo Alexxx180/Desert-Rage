@@ -69,9 +69,12 @@
         <Setter Property="Control.Foreground" Value="#EAEAEA"/>
     </Style>
 
-    <Style x:Key="Impact">
+    <Style x:Key="BlackImpact">
         <Setter Property="Control.Background" Value="#B8000000"/>
         <Setter Property="Control.FontWeight" Value="Bold"/>
+    </Style>
+   
+    <Style x:Key="Impact" BasedOn="{StaticResource BlackImpact}">
         <Setter Property="Control.Foreground" Value="WhiteSmoke"/>
     </Style>
 
