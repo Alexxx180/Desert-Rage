@@ -9,14 +9,18 @@
     </DataTemplate>
     
     <DataTemplate x:Key="ItemTemplate">
-        <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="False">
             <ContentControl Template="{StaticResource IconNameStack}">
                 <ContentControl.DataContext>
                     <Binding Path="Effect.Unit"/>
                 </ContentControl.DataContext>
             </ContentControl>
 
-            <TextBlock Style="{StaticResource ValueBlock}" Margin="10,0">
+            <TextBlock Margin="10,0">               
+                <TextBlock.Style>
+                    <StaticResource ResourceKey="ValueBlock"/>
+                </TextBlock.Style>
+                
                 <TextBlock.Text>
                     <Binding Path="Subject.Value"/>
                 </TextBlock.Text>
