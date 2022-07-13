@@ -1,6 +1,6 @@
 # Repository basics
 
-[Читать на русском](https://github.com/Alexxx180/Desert-Rage/blob/help/READMEru.md)
+[Читать на русском](https://github.com/Alexxx180/Desert-Rage/blob/help/Repositories/README.ru-RU.md)
 
 [Full quick start GitHub documentation](https://docs.github.com/en/get-started/quickstart/hello-world)
 
@@ -14,7 +14,7 @@
 
 ---
 
-## Who is this git and why do they make crafts from branches there too?
+## Who is this Git and why do they make crafts from branches there too?
 
 [X] Alexxx180/Tatarintsev_8901 repository, master branch.
 
