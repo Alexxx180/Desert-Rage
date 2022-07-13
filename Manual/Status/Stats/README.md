@@ -2,6 +2,26 @@
 
 The Stat term in Role-Playing-Game is an aspect of a game entity.
 
+## HP, Health Points
+
+Determine how much damage entity will devour before death.
+
+## AP, Action Points
+
+Determine how long different skills can be used.
+
+## Time
+
+Provides a turn after full refilling.
+
+### For Character
+
+Available options will be shown.
+
+### For Enemy
+
+Will act, according its strategy.
+
 ## [Attack](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Stats/Attack.svg)
 
 Provides power of each physical hit made per round.
