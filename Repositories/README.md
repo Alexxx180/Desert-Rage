@@ -8,7 +8,7 @@
 
 - [?] - Question.
 - |X| - Location.
-- (i) - Material.
+- ( i ) - Material.
 - /!\ - Important.
 - (@) - Situation.
 
@@ -16,17 +16,17 @@
 
 ## Who is this git and why do they make crafts from branches there too?
 
-|X| Alexxx180/Tatarintsev_8901 repository, master branch.
+[X] Alexxx180/Tatarintsev_8901 repository, master branch.
 
 [?] You don't know basics? We come here to fix that.
 
 ### Header
 
-(i) It's same user interface to sign in, search and so on.
+( i ) It's same user interface to sign in, search and so on.
 
 ### Search line
 
-(i) There we could type path to someone repo:
+( i ) There we could type path to someone repo:
   github.com/[repo address]
 
 /!\ So, full path is:
@@ -44,7 +44,7 @@ always should have one main - constantly working master branch.
     __\_features___/_/_/
     __|_bugfixes____/_/
 
-(i) As a rule, each branch symbolize section of developers
+( i ) As a rule, each branch symbolize section of developers
 working at something.
 
 ---
@@ -55,9 +55,9 @@ working at something.
 
     Main workplace presented as rectangle, rounded at the edges. 
 
-(i) In the left top corner are repo creator icon and login.  
+( i ) In the left top corner are repo creator icon and login.  
 
-(i) To change branches you can use combobox above workspace.
+( i ) To change branches you can use combobox above workspace.
   
   It's pretty simple: files are placed in directories like in
 file systems.
@@ -89,7 +89,7 @@ Lots of speech? Now you will see everything.
 
 Click on the "History" in the right top corner.
 
-(i) In front of you all versions from last to the first. 
+( i ) In front of you all versions from last to the first. 
 
 /!\ Here you can click on any version. After version was
 selected you can browse files.
