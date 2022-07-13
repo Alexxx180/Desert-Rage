@@ -1,3 +1,3 @@
-# Help branch
+# Desert Rage Help
 
-Here you can take some brief course from repository basics
+Here you can take some brief course of repository basics and read game manual
