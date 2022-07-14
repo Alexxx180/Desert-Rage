@@ -1,4 +1,4 @@
-# Control
+# Controls
 
 Desert Rage use keyboard and mouse as user input
 
@@ -25,3 +25,5 @@ Usual
 
 Num Pad
 - ^-&lt;-v-&gt; + Space
+
+[Contents](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.md)
