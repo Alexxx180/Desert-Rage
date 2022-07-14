@@ -28,3 +28,5 @@
 ## [Ускорение](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Skills/SpeedUp.svg)
 
 Вдвое увеличивает скорость.
+
+[Статус](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/README.ru-RU.md)
