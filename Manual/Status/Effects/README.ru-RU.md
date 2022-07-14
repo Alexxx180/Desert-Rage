@@ -7,7 +7,7 @@
 
 ## [Яд](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Skills/Poison.svg)
 
-Уменьшает ОЗ существа на 1, со скоростью, равной заполнению шкалы времени.
+Уменьшает [ОЗ](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.ru-RU.md#%D0%BE%D0%B7-%D0%BE%D1%87%D0%BA%D0%B8-%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D1%8F) существа на 1, со скоростью, равной заполнению шкалы времени.
 
 ## [Усиление](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Skills/AttackUp.svg)
 
