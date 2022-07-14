@@ -14,7 +14,7 @@ Temporarily boost your [defence](https://github.com/Alexxx180/Desert-Rage/blob/h
 
 ## Skill
 
-Use special move, this one will cost some amount of AP.
+Use special move, this one will cost some amount of [AP](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.md#ap-action-points).
 
 ### Targeting kinds
 
