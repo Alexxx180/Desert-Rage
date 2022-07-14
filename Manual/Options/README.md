@@ -6,11 +6,11 @@ Provide you the way to interact in battle.
 
 Physically attack the selected enemy.
 
-It can be determined as: ([Attack](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#attack) + Weapon) * Boosts
+It can be determined as: ([Attack](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#attack) + Weapon) * [Boosts](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Effects/README.md)
 
-## Shield
+## [Shield](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Effects#shield)
 
-Temporarily boost your defence by two.
+Temporarily boost your [defence](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.md#defence) by two.
 
 ## Skill
 
@@ -31,3 +31,5 @@ Use item to replenish status or for other useful effects.
 Flee from battle.
 
 It can be determined as: 1 / (Total Enemies [Speed](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#speed) / Hero [Speed](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#speed))
+
+[Contents](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.md)
