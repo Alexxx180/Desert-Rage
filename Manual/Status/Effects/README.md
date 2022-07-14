@@ -7,7 +7,7 @@ formula: [Special](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Sta
 
 ## [Poison](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Skills/Poison.svg)
 
-Reduces entity hit points by 1 with speed equal time bar filling.
+Reduces entity [HP](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.md#hp-health-points) by 1 with speed equal time bar filling.
 
 ## [Reinforcement](https://github.com/Alexxx180/Desert-Rage/blob/master/Desert-Rage/Resources/Media/Images/Menu/Skills/AttackUp.svg)
 
