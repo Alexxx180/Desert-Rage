@@ -26,3 +26,5 @@ It allows you to keep your own progress in safety.
 7. [Go to game directory](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Progress#go-to-game-directory) of new build
 8. Go to Resources &gt; Media &gt; Data &gt; Profiles
 9. Paste there saved folder with your profile name
+
+[Contents](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.md)
