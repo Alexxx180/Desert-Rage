@@ -43,3 +43,5 @@
 ### Для Противника
 
 Уменьшает общую силу каждого удара по существу. (Работает как барьер)
+
+[Статус](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/README.ru-RU.md)
