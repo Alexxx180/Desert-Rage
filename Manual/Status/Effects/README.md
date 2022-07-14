@@ -1,6 +1,6 @@
 # Effects
 
-Determine buffs/debuffs attached to entity in battle.
+Determine buffs / debuffs attached to entity in battle.
 
 All effects are time events dependent from following
 formula: [Special](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#special) * 2
