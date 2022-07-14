@@ -6,7 +6,7 @@
 
 Атаковать выбранного противника грубой силой.
 
-Определяется как: ([Атака](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#attack) + Оружие) * Бонусы
+Определяется как: ([Атака](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.ru-RU.md#%D0%B0%D1%82%D0%B0%D0%BA%D0%B0) + Оружие) * Бонусы
 
 ## Щит
 
@@ -30,4 +30,6 @@
 
 Сбежать из битвы.
 
-Определяется как: 1 / ([Скорость](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#speed) Всех Противников / [Скорость](https://github.com/Alexxx180/Desert-Rage/tree/help/Manual/Status/Stats#speed) Героя)
+Определяется как: 1 / ([Скорость](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.ru-RU.md#%D1%81%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C) Всех Противников / [Скорость](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/Stats/README.ru-RU.md#%D1%81%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C) Героя)
+
+[Содержание](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.ru-RU.md)
