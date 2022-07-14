@@ -43,3 +43,5 @@ Determine power of special moves (skills).
 ### For Enemy
 
 Decrease total attack power of each hit. (Works like a barrier)
+
+[Status](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/Status/README.md)
