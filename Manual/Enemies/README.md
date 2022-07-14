@@ -31,3 +31,5 @@ More serious enemies called bosses. You can't escape in battle against them.
 - When your HP is extremely low it's better to run away or cure as fast as you can
 - Analyze foes to build more effective individual strategies
 - It's not necessary to always heal poison, sometimes cure will work better
+
+[Contents](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.md)
