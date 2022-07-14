@@ -25,3 +25,5 @@
 
 Числовая
 - ^-&lt;-v-&gt; + Space
+
+[Содержание](https://github.com/Alexxx180/Desert-Rage/blob/help/Manual/README.ru-RU.md)
