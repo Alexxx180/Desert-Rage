@@ -120,8 +120,6 @@
                         <Style TargetType="MenuItem" BasedOn="{StaticResource Impact}">
                             <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext.Fight}"/>
                             <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
-
-
                         </Style>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>

@@ -186,6 +186,18 @@ namespace DesertRage
         }
         #endregion
 
+        #region Menu
+        private void Resume(object sender, RoutedEventArgs e)
+        {
+            Pause();
+        }
+
+        private void Escape(object sender, RoutedEventArgs e)
+        {
+            RaiseEscape();
+        }
+        #endregion
+
         #region INotifyPropertyChanged Members
         public event PropertyChangedEventHandler PropertyChanged;
 
