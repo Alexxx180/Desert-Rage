@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Master\\Desert-Rage\\DesertRage.csproj": {}
+    "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\DesertRage.csproj": {}
   },
   "projects": {
-    "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Master\\Desert-Rage\\DesertRage.csproj": {
+    "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\DesertRage.csproj": {
       "version": "1.0.5",
       "restore": {
-        "projectUniqueName": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Master\\Desert-Rage\\DesertRage.csproj",
+        "projectUniqueName": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\DesertRage.csproj",
         "projectName": "Desert Rage",
-        "projectPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Master\\Desert-Rage\\DesertRage.csproj",
+        "projectPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\DesertRage.csproj",
         "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-        "outputPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Master\\Desert-Rage\\obj\\",
+        "outputPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Desert-Rage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",

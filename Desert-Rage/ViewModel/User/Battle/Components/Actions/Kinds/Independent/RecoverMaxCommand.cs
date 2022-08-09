@@ -1,5 +1,4 @@
-﻿using DesertRage.Model.Locations.Battle;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
 {
@@ -13,7 +12,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Independent
 
         protected void Rest()
         {
-            Hero.Rest();
+            Man.Rest();
         }
 
         public override void Use(object parameter)

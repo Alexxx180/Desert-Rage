@@ -120,6 +120,12 @@ namespace DesertRage.ViewModel.User.Battle.Components.Participation
             Player.Hero.Rest(value);
             Player.UpdateHero();
         }
+
+        public void Rest()
+        {
+            Player.Hero.Rest();
+            Player.UpdateHero();
+        }
         #endregion
 
         #region Participant Members

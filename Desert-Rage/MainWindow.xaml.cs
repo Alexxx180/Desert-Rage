@@ -141,10 +141,10 @@ namespace DesertRage
             switch (e.Key)
             {
                 case Key.Escape:
-                    RaiseEscape();
-                    break;
-                case Key.P:
-                    Pause();
+                    if (e.KeyboardDevice.Modifiers == ModifierKeys.Shift)
+                        RaiseEscape();
+                    else
+                        Pause();
                     break;
                 default:
                     if (!IsPaused)
