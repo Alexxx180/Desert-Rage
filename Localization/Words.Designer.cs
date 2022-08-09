@@ -97,11 +97,29 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на We&apos;ll break up.
+        /// </summary>
+        public static string BreakUp {
+            get {
+                return ResourceManager.GetString("BreakUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Brightness.
         /// </summary>
         public static string Brightness {
             get {
                 return ResourceManager.GetString("Brightness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Check cases.
+        /// </summary>
+        public static string Cases {
+            get {
+                return ResourceManager.GetString("Cases", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Exit.
+        /// </summary>
+        public static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Fight.
         /// </summary>
         public static string Fight {
@@ -174,6 +201,15 @@ namespace DesertRage.Resources.Localization {
         public static string HealthPoints {
             get {
                 return ResourceManager.GetString("HealthPoints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hints.
+        /// </summary>
+        public static string Hints {
+            get {
+                return ResourceManager.GetString("Hints", resourceCulture);
             }
         }
         
@@ -228,6 +264,24 @@ namespace DesertRage.Resources.Localization {
         public static string Noise {
             get {
                 return ResourceManager.GetString("Noise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pause.
+        /// </summary>
+        public static string Pause {
+            get {
+                return ResourceManager.GetString("Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Resume.
+        /// </summary>
+        public static string Resume {
+            get {
+                return ResourceManager.GetString("Resume", resourceCulture);
             }
         }
         
@@ -295,11 +349,29 @@ namespace DesertRage.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на They&apos;ll tear us up.
+        /// </summary>
+        public static string Tears {
+            get {
+                return ResourceManager.GetString("Tears", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Time.
         /// </summary>
         public static string Time {
             get {
                 return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Get the antidote.
+        /// </summary>
+        public static string UseAntidote {
+            get {
+                return ResourceManager.GetString("UseAntidote", resourceCulture);
             }
         }
     }

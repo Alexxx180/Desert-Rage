@@ -198,4 +198,28 @@
   <data name="EmptyPresequence" xml:space="preserve">
     <value>Когда-то...</value>
   </data>
+  <data name="BreakUp" xml:space="preserve">
+    <value>Прорвемся!</value>
+  </data>
+  <data name="Cases" xml:space="preserve">
+    <value>Смотрим кейсы</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="Tears" xml:space="preserve">
+    <value>Нас порвут...</value>
+  </data>
+  <data name="UseAntidote" xml:space="preserve">
+    <value>Достаем антидот</value>
+  </data>
 </root>
