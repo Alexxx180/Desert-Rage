@@ -13,7 +13,7 @@ namespace DesertRage.ViewModel.User.Battle.Components.Actions.Kinds.Dependent
 
         protected void Rest()
         {
-            Hero.Rest(Power);
+            Man.Rest(Power);
         }
 
         public override void Use(object parameter)

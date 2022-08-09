@@ -38,7 +38,7 @@
                                 <DataTrigger.Binding>
                                     <Binding ElementName="BattleCharacter" Path="DataContext.IsAct"/>
                                 </DataTrigger.Binding>
-                                
+
                                 <DataTrigger.EnterActions>
                                     <BeginStoryboard>
                                         <DynamicResource ResourceKey="Disappear"/>
@@ -62,7 +62,7 @@
                                 <DataTrigger.Binding>
                                     <Binding ElementName="BattleCharacter" Path="DataContext.IsAct"/>
                                 </DataTrigger.Binding>
-                                
+
                                 <DataTrigger.EnterActions>
                                     <BeginStoryboard>
                                         <DynamicResource ResourceKey="Appear"/>
@@ -95,7 +95,7 @@
                             <Run Text="{x:Static locale:Words.FightDescription}"/>
                         </TextBlock>
                     </MenuItem.ToolTip>
-                    
+
                     <MenuItem.Header>
                         <TextBlock Text="{x:Static locale:Words.Fight}" Style="{StaticResource VerticalCenter}" />
                     </MenuItem.Header>
@@ -120,8 +120,6 @@
                         <Style TargetType="MenuItem" BasedOn="{StaticResource Impact}">
                             <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=MenuItem}, Path=DataContext.Fight}"/>
                             <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
-
-                            
                         </Style>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>

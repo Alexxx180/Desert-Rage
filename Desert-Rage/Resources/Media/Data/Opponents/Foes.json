@@ -630,7 +630,7 @@
 		"Max": 272
 	},
 	"Stats": {
-		"Attack": 85,
+		"Attack": 75,
 		"Defence": 20,
 		"Speed": 45,
 		"Special": 60
@@ -732,10 +732,10 @@
 		"Max": 100
 	},
 	"Stats": {
-		"Attack": 75,
-		"Defence": 75,
-		"Speed": 75,
-		"Special": 75
+		"Attack": 70,
+		"Defence": 70,
+		"Speed": 70,
+		"Special": 70
 	},
 	"Action": "/Resources/Media/Images/Battle/Enemies/Scarab/Action.svg",
 	"StatusInfo": [{

@@ -624,16 +624,16 @@ You play as a gifted adventurer Ray who is looking for the great knowledge of th
 
   <ItemGroup>
     <Reference Include="DesertRageDecorators">
-      <HintPath>..\..\Customing\DesertRageDecorators\bin\Debug\net5.0-windows\DesertRageDecorators.dll</HintPath>
+      <HintPath>..\..\Customing\bin\Debug\net5.0-windows\DesertRageDecorators.dll</HintPath>
     </Reference>
     <Reference Include="DesertRageModel">
-      <HintPath>..\..\Model\DesertRageModel\bin\Debug\net5.0\DesertRageModel.dll</HintPath>
+      <HintPath>..\..\Model\bin\Debug\net5.0\DesertRageModel.dll</HintPath>
     </Reference>
     <Reference Include="DesertRageResources">
-      <HintPath>..\..\Resources\DesertRageResources\bin\Debug\net5.0\DesertRageResources.dll</HintPath>
+      <HintPath>..\..\Resources\bin\Debug\net5.0\DesertRageResources.dll</HintPath>
     </Reference>
     <Reference Include="Processors">
-      <HintPath>..\..\..\..\..\Tombstones\PL-Projects\C#\Serializers\Processors\bin\Debug\net5.0\Processors.dll</HintPath>
+      <HintPath>..\..\Processors\bin\Debug\net5.0\Processors.dll</HintPath>
     </Reference>
   </ItemGroup>
 
