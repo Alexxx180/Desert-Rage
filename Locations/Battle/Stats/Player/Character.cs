@@ -78,7 +78,7 @@ namespace DesertRage.Model.Locations.Battle.Stats.Player
             {
                 string id = i.ToString();
                 if (!bank.Skills.TryGetValue(id, out SkillsID skill))
-                    return;
+                    continue;
                 
                 if (Skills.Add(skill))
                     skills.Add(skill);

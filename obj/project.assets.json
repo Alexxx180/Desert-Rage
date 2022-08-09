@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Model\\DesertRageModel\\DesertRageModel.csproj",
+      "projectUniqueName": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Model\\DesertRageModel.csproj",
       "projectName": "DesertRageModel",
-      "projectPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Model\\DesertRageModel\\DesertRageModel.csproj",
+      "projectPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Model\\DesertRageModel.csproj",
       "packagesPath": "C:\\Users\\Администратор\\.nuget\\packages\\",
-      "outputPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Desert-Rage\\Model\\DesertRageModel\\obj\\",
+      "outputPath": "D:\\Aleksandr\\misc\\Game development\\Desktop\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Администратор\\AppData\\Roaming\\NuGet\\NuGet.Config",
