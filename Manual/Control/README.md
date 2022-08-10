@@ -2,13 +2,17 @@
 
 Desert Rage use keyboard and mouse as user input
 
-## Exit
+## Pause
 
 - Esc
 
-## Pause
+## Exit
 
-- P
+- Shift + Esc
+
+### /!\ Warning
+
+When you quit the game, your progress will be truncated till last save.
 
 ## Open Menu
 
