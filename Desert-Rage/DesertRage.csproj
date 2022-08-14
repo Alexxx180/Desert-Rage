@@ -20,6 +20,10 @@
 You play as a gifted adventurer Ray who is looking for the great knowledge of the ancients.</Description>
     <RepositoryUrl>https://github.com/Alexxx180/Desert-Rage</RepositoryUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>DESERT-SECRET.pfx</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
