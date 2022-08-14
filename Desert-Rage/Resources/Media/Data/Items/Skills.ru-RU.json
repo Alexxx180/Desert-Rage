@@ -161,7 +161,7 @@
   "AmmoPack": {
     "Command": "Independent.RestMaxCommand",
     "Name": "\u041f\u0440\u0438\u043f\u0430\u0441\u044b",
-    "Description": "100% \u041e\u0417",
+    "Description": "100% \u041e\u0414",
     "Icon": "/Resources/Media/Images/Menu/Skills/AmmoPack.svg",
     "Noise": "Actions/Ammo.mp3",
     "Attributes": {
